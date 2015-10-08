@@ -7,7 +7,7 @@
     * [Setting up the environment](commerce-2/contributing/environment.md)
     * [Executing the automated tests](commerce-2/contributing/testing.md)
     * [Developing](commerce-2/contributing/start_developing.md)
-  * [Installing](commerce-2/install/README.md)
+  * [Installing](commerce-2/install.md)
   * [Dependencies](commerce-2/dependencies/README.md)
     * [Address](commerce-2/dependencies/address/README.md)
       * [Zones](commerce-2/dependencies/address/zones.md)

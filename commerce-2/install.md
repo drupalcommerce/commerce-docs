@@ -17,4 +17,4 @@
    ```
 
 Notes:
-- * Find out more about composer_manager usage [here](https://www.drupal.org/node/2405811).
+* Find out more about composer_manager usage [here](https://www.drupal.org/node/2405811).
