@@ -7,6 +7,10 @@
         "url": "https://github.com/commerceguys/commerce-docs"
     },
     "styles": {
-        "website": "styles/website.css"
+        "website": "styles/all.css",
+        "ebook": "styles/all.css",
+        "pdf": "styles/all.css",
+        "mobi": "styles/all.css",
+        "epub": "styles/all.css"
     }
 }
