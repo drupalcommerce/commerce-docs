@@ -18,8 +18,7 @@ Drupal Commerce is an open source eCommerce framework that is designed to enable
 * [Store](store/README.md)
 * [Product](product/README.md)
 
-Related Libraries
-------------------
+## Related Libraries
 
 For the 2.x branch of Drupal Commerce, Commerce Guys has moved some of the logic
 out of the Drupal world and into the greater PHP community.
