@@ -1,6 +1,6 @@
-# Drupal Commerce 2.x Documentation
+# Commerce 2.x Documentation
 
-Drupal Commerce is an open source eCommerce framework that is designed to enable flexible eCommerce for websites and applications based on Drupal.
+Commerce is an open source eCommerce framework that is designed to enable flexible eCommerce for websites and applications based on Drupal.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ Drupal Commerce is an open source eCommerce framework that is designed to enable
 
 ## Related Libraries
 
-For the 2.x branch of Drupal Commerce, Commerce Guys has moved some of the logic
+For the 2.x branch of Commerce, Commerce Guys has moved some of the logic
 out of the Drupal world and into the greater PHP community.
 
 ###[Intl](https://github.com/commerceguys/intl)
