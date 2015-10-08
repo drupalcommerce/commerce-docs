@@ -5,7 +5,7 @@ Once you verified everything's working properly by [running the tests](testing.m
 
 ### Taking a look at the issue queue
 
-While the coding is done on github, the issue queue is still taken care of on drupal.org: you can take a look at [the open issues](https://www.drupal.org/project/issues/search/rules?assigned=&submitted=&project_issue_followers=&status[0]=Open&version[0]=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
+While the coding is done on github, the issue queue is still taken care of on drupal.org: you can take a look at [the open issues](https://www.drupal.org/project/issues/search/commerce?assigned=&submitted=&project_issue_followers=&status[0]=Open&version[0]=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
 ), pick one you like and **assign it to you**.
 
 ### Coding and Pull Request-ing
@@ -18,23 +18,22 @@ After your code has been reviewed, you might be asked to perform some changes an
 
 ### Keeping your fork up to date
 
-After some time your forked repository and the original one(called *upstream*) will eventually get out of sync leaving you with an old, unsupported version. In order to keep that up to date, you'll need to *fetch* (i.e: downloading without touching the code on your computer) the latest commits and then *merge* them in the branch you need, which most likely will be **8.x-3.x**. So enter your Rules module's directory and type:
+After some time your forked repository and the original one(called *upstream*) will eventually get out of sync leaving you with an old, unsupported version. In order to keep that up to date, you'll need to *fetch* (i.e: downloading without touching the code on your computer) the latest commits and then *merge* them in the branch you need, which most likely will be **8.x-3.x**. So enter your Commerce module's directory and type:
 
-    git remote add upstream git@github.com:fago/rules.git
+    git remote add upstream git@github.com:commerceguys/commerce.git
 
-
-This command will add the original Rules' repository reference to your local repository(you don't have to repeat it all the time, just the first one will do).
+This command will add the original Commerce repository reference to your local repository(you don't have to repeat it all the time, just the first one will do).
 Then you can proceed with the download and merge on the wanted branch:
 
     git fetch upstream
-    git checkout 8.x-3.x
-    git merge upstream/8.x-3.x
+    git checkout 8.x-2.x
+    git merge upstream/8.x-2.x
 
 And that's it! Your repository is up to date again so that you can start developing a new feature right away! Please check [Github's guide on how to sync a fork](https://help.github.com/articles/syncing-a-fork) for more information
 
 ### Keep the conventions in mind
 
-* Always create an issue in the [drupal.org Rules issue queue](http://drupal.org/project/issues/rules)
+* Always create an issue in the [drupal.org Commerce issue queue](http://drupal.org/project/issues/commerce)
   for every pull request you are working on.
 * Always cross-reference the Issue in the Pull Request and the Pull Request in
   the Issue.
