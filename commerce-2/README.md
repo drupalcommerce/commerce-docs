@@ -45,8 +45,7 @@ A tax library with a flexible data model, predefined tax rates, powerful resolvi
 
 A component for managing prices, taxes, discounts, fees.
 
-Maintainers
------------
+## Maintainers
 
 Maintained by [Ryan Szrama](https://www.drupal.org/u/rszrama) and
 [Bojan Zivanovic](https://www.drupal.org/u/bojanz) of
