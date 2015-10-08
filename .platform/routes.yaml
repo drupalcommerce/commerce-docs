@@ -1,10 +1,7 @@
 http://www.{default}/:
-  to: https://{default}/
+  to: http://{default}/
   type: redirect
 http://{default}/:
-  to: https://{default}/
-  type: redirect
-https://{default}/:
   cache:
     cookies:
     - '*'
