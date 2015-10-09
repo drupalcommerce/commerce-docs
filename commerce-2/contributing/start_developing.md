@@ -8,6 +8,8 @@ Once you verified everything's working properly by [running the tests](testing.m
 While the coding is done on github, the issue queue is still taken care of on drupal.org: you can take a look at [the open issues](https://www.drupal.org/project/issues/search/commerce?assigned=&submitted=&project_issue_followers=&status[0]=Open&version[0]=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
 ), pick one you like and **assign it to you**.
 
+Additionally you can view the issue queue as a kanban board for additional visibility. The [kanban board on ContribKanban.com](https://contribkanban.com/board/commerce2x) mirrors the Drupal.org issue queue and is an alternate way to work on issues.
+
 ### Coding and Pull Request-ing
 
 Remember to create a branch before start developing! It's name should contain the issue id and a slug to tell what the thing you're working on is about, for example: **2276369-readme**.
