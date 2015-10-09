@@ -6,6 +6,15 @@
         "type": "git",
         "url": "https://github.com/commerceguys/commerce-docs"
     },
+    "plugins": [
+        "edit-link"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+           "base": "https://github.com/platformsh/platformsh-docs/edit/master",
+           "label": "Edit This Page"
+       }
+    },
     "styles": {
         "website": "styles/all.css",
         "ebook": "styles/all.css",
