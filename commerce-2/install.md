@@ -7,25 +7,36 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
 
 1. You must have composer installed in your system. ([Why?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How?](#installing-composer))
 
-2. Download and install Drupal 8 ([How to install Drupal 8](#installing-drupal-8))
+2. Download Drupal 8
 
  ```sh
  # Using Drupal Console can make this super easy
  drupal site:new commerce2
- 
- # Sad panda, you have to install Drupal using the UI for now
  ```
 
-3. Download (and extract) the _**-dev**_ version of [composer_manager](https://drupal.org/project/composer_manager) into your `modules` directory.
+3. Install Drupal 8 ([How to install Drupal 8](#installing-drupal-8))
 
-3. From the Drupal root directory, initialize composer_manager,* and run it for the first time:
+4. Download the latest release of [commerce](https://drupal.org/project/commerce) into your `modules` directory.
+
+ ```sh
+ drupal module:download commerce
+ ```
+
+
+5. Download (and extract) the latest release of [composer_manager](https://drupal.org/project/composer_manager) into your `modules` directory.
+
+ ```sh
+ drupal module:download composer_manager
+ ```
+
+6. From the Drupal root directory, initialize composer_manager,* and run it for the first time:
 
  ```sh
    php modules/composer_manager/scripts/init.php
    composer drupal-update
  ```
 
-4. Enable the Commerce modules, e.g.:
+7. Enable the Commerce modules, e.g.:
 
  ```sh
    drupal module:install commerce commerce_order commerce_product commerce_tax
