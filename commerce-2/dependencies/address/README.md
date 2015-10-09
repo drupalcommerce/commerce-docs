@@ -12,6 +12,8 @@ We gain a much richer dataset and greatly improved support for countries such as
 
 ## Address formats
 
+![Address Module Example](images/address-brazil.png)
+
 Each country has a different address format that tells us:
 
 * Which fields are used in which order (Is there a state field? Does the zip code come before the city? After the state?)
