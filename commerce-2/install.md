@@ -1,47 +1,57 @@
 # Installing Drupal Commerce 2.x
 [Composer Manager Module](https://drupal.org/project/composer_manager) &nbsp; | &nbsp; [Composer on Drupal Intro](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) &nbsp; | &nbsp; [Community Docs](https://www.drupal.org/node/2405811)
 
-## Install Commerce 2
-
 _Note: Command-line examples use [Drupal Console](#installing-drupal-console) with the common alias "drupal", not Drush._
 
-1. You must have composer installed in your system. ([Why?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How?](#installing-composer))
+## Install Commerce 2
 
-2. Download Drupal 8
+1. **Install Composer -** You must have composer installed in your system. ([Why?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How?](#installing-composer))
+
+2. **Download Drupal 8 -** Download and extract the latest release of [Drupal 8](https://drupal.org/project/drupal).
 
  ```sh
  # Using Drupal Console can make this super easy
  drupal site:new commerce2
+ cd commerce2
+ cp sites/default/default.settings.php sites/default/settings.php
  ```
 
-3. Install Drupal 8 ([How to install Drupal 8](#installing-drupal-8))
+3. **Install Drupal 8** ([How to install Drupal 8](#installing-drupal-8))
 
-4. Download the latest release of [commerce](https://drupal.org/project/commerce) into your `modules` directory.
+4. **Download Commerce 2 -** Acquire the latest _**DEV**_ releases of Commerce 2 and dependencies: [commerce](https://drupal.org/project/commerce), [composer_manager](https://drupal.org/project/composer_manager), [address](https://drupal.org/project/address), [inline_entity_form](https://drupal.org/project/address), and [profile](https://github.com/fago/profile2)
 
  ```sh
- drupal module:download commerce
+ # These two are required before proceeding to the next step
+ drupal module:download commerce;
+ drupal module:download composer_manager;
+ drupal module:download address;
+ drupal module:download inline_entity_form;
+ # The profile module needs a bit more help
+ cd modules/contrib;
+ wget https://github.com/fago/profile2/archive/8.x-1.x.zip;
+ unzip 8.x-1.x.zip;
+ mv profile2-8.x-1.x profile;
  ```
 
-
-5. Download (and extract) the latest release of [composer_manager](https://drupal.org/project/composer_manager) into your `modules` directory.
+5. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
 
  ```sh
- drupal module:download composer_manager
+   # Move back down to the Drupal root
+   cd ../../;
+   php modules/contrib/composer_manager/scripts/init.php;
+   composer drupal-update;
+   drupal module:install composer_manager;
  ```
 
-6. From the Drupal root directory, initialize composer_manager,* and run it for the first time:
+6. **Install Commerce -** Enable the Commerce modules, e.g.:
 
  ```sh
-   php modules/composer_manager/scripts/init.php
-   composer drupal-update
+ # This line installs all commerce
+ drupal module:install commerce commerce_order commerce_product commerce_tax commerce_cart commerce_payment profile;
+ # This command is sometimes necessary to force the menu to rebuild;
+ drupal cache:rebuild;
  ```
-
-7. Enable the Commerce modules, e.g.:
-
- ```sh
-   drupal module:install commerce commerce_order commerce_product commerce_tax
- ```
-
+![Install Commerce 2 Screenshot](images/install-commerce2.png)
 
 ## Installing Drupal Console
 
