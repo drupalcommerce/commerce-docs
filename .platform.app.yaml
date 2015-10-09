@@ -51,4 +51,6 @@ hooks:
     build: |
       gitbook install
       gitbook build
+    # We run deploy hook after your application has been deployed and started.
+    deploy: |
       cp -f /app/images/favicon.ico /app/_book/gitbook/images/favicon.ico
