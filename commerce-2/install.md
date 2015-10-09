@@ -1,5 +1,4 @@
 # Installing Drupal Commerce 2.x
-[Composer Manager Module](https://drupal.org/project/composer_manager) &nbsp; | &nbsp; [Composer on Drupal Intro](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) &nbsp; | &nbsp; [Community Docs](https://www.drupal.org/node/2405811)
 
 _Note: Command-line examples use [Drupal Console](#installing-drupal-console) with the common alias "drupal", not Drush._
 
@@ -80,6 +79,11 @@ You can go to [GetComposer.com](https://getcomposer.org/doc/00-intro.md) for mor
 ```sh
 curl -sS https://getcomposer.org/installer | php
 ```
+
+See Also:
+* [Composer Manager Module](https://drupal.org/project/composer_manager)
+* [Composer on Drupal Intro](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)
+* [Community Docs](https://www.drupal.org/node/2405811)
 
 ## Installing Drupal 8
 
