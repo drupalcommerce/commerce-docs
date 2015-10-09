@@ -16,7 +16,21 @@ This is a dependency and once you have successfully installed commerce, you will
 
 ## Configure and Customize
 
-To configure or customize address formats, navigate to the Configuration page and click on "Address Formats" under "Regional and Language".
+![Address Module location](images/address-configure.png)
+
+To configure or customize address formats, navigate to the Configuration page (1) and click on (2) "Address Formats" under "Regional and Language".
+
+```
+admin/config/regional/address-formats
+```
+
+![Address Module landing page](images/address-landingpage.png)
+
+The landing page for the address module shows all the default configurations by country. You can edit the postal formatting (order of fields, locality dependencies, and many many other things) just by clicking "Edit." 
+
+![Address Module format configuration](images/address-configureformat.png)
+
+The default values are based on opensource 3rd party that has the best coverage of all regions in the world. The formatting of the addresses is for both the form and the display.
 
 ## More information on Address formats
 
