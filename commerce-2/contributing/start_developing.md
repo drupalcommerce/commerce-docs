@@ -18,7 +18,7 @@ After your code has been reviewed, you might be asked to perform some changes an
 
 ### Keeping your fork up to date
 
-After some time your forked repository and the original one(called *upstream*) will eventually get out of sync leaving you with an old, unsupported version. In order to keep that up to date, you'll need to *fetch* (i.e: downloading without touching the code on your computer) the latest commits and then *merge* them in the branch you need, which most likely will be **8.x-3.x**. So enter your Commerce module's directory and type:
+After some time your forked repository and the original one(called *upstream*) will eventually get out of sync leaving you with an old, unsupported version. In order to keep that up to date, you'll need to *fetch* (i.e: downloading without touching the code on your computer) the latest commits and then *merge* them in the branch you need, which most likely will be **8.x-2.x**. So enter your Commerce module's directory and type:
 
     git remote add upstream git@github.com:commerceguys/commerce.git
 
