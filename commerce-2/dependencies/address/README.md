@@ -10,7 +10,15 @@ Commerce 2.x will depend on the [Address 1.x module](https://www.drupal.org/proj
 
 We gain a much richer dataset and greatly improved support for countries such as China, Korea, Brazil, and others. Best of all, our efforts benefit the whole wider PHP community.
 
-## Address formats
+## Install
+
+This is a dependency and once you have successfully installed commerce, you will have the address module available. See [Installation Instructions for Commerce 2.x](../../install.md).
+
+## Configure and Customize
+
+To configure or customize address formats, navigate to the Configuration page and click on "Address Formats" under "Regional and Language".
+
+## More information on Address formats
 
 ![Address Module Example](images/address-brazil.png)
 
