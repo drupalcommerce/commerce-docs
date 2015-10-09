@@ -51,3 +51,4 @@ hooks:
     build: |
       gitbook install
       gitbook build
+      cp -f /app/images/favicon.ico /app/_book/gitbook/images/favicon.ico

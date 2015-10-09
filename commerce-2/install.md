@@ -7,7 +7,7 @@
 
    ```sh
    php modules/composer_manager/scripts/init.php
-   composer drupal-install
+   composer drupal-update
    ```
 
 3. Enable the Commerce modules, e.g.:
