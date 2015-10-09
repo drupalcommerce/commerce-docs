@@ -38,6 +38,9 @@ web:
       # robots.txt.
       - /robots\.txt$
 
+      # gitbook ico
+      - \.ico$
+
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
