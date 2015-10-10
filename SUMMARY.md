@@ -8,6 +8,7 @@
     * [Executing the automated tests](commerce-2/contributing/testing.md)
     * [Developing](commerce-2/contributing/start_developing.md)
   * [Installing](commerce-2/install.md)
+  * [Getting Started](commerce-2/getting-started.md)
   * [Dependencies](commerce-2/dependencies/README.md)
     * [Address](commerce-2/dependencies/address/README.md)
       * [Zones](commerce-2/dependencies/address/zones.md)
