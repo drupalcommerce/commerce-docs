@@ -1,5 +1,5 @@
 # Profile
-[Module on Github](https://github.com/fago/profile2) &nbsp; | &nbsp; [Drupal 8 Issue](https://www.drupal.org/node/1726822)
+See Also: [Module on Github](https://github.com/fago/profile2) &nbsp; | &nbsp; [Drupal 8 Issue](https://www.drupal.org/node/1726822)
 
 Provides the profile entity type used to collect customer information. In Commerce 1.x, we called these entities "Customer Profiles" and for Commerce 2.x we have moved to where the community has extended user profiles to include fieldable entity bundles. Customer profiles in Commerce 2.x will be entities and orders will link to revisions, avoiding the duplication we had in Commerce 1.x.
 

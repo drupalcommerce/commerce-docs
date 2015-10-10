@@ -3,11 +3,11 @@
 This module comes with PHPUnit and SimpleTest tests. You need a working Drupal 8
 installation and a checkout of the Commerce module in the modules folder.
 
-#### PHPUnit
+## PHPUnit
 
     ./core/vendor/phpunit/phpunit/phpunit -c ./core/phpunit.xml.dist ./modules/commerce
 
-#### Simpletest
+## Simpletest
 
 Make sure simpletest is enabled:
 

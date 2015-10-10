@@ -3,14 +3,14 @@
 Once you verified everything's working properly by [running the tests](testing.md), you're ready to go!
 
 
-### Taking a look at the issue queue
+## Taking a look at the issue queue
 
 While the coding is done on github, the issue queue is still taken care of on drupal.org: you can take a look at [the open issues](https://www.drupal.org/project/issues/search/commerce?assigned=&submitted=&project_issue_followers=&status[0]=Open&version[0]=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
 ), pick one you like and **assign it to you**.
 
 Additionally you can view the issue queue as a kanban board for additional visibility. The [kanban board on ContribKanban.com](https://contribkanban.com/board/commerce2x) mirrors the Drupal.org issue queue and is an alternate way to work on issues.
 
-### Coding and Pull Request-ing
+## Coding and Pull Request-ing
 
 Remember to create a branch before start developing! It's name should contain the issue id and a slug to tell what the thing you're working on is about, for example: **2276369-readme**.
 
@@ -18,7 +18,7 @@ Once you're done with the development, push your commits and [create a Pull Requ
 
 After your code has been reviewed, you might be asked to perform some changes and then have them reviewed again. After a number of iterations, you should get your code merged into the main repository. Hurray!
 
-### Keeping your fork up to date
+## Keeping your fork up to date
 
 After some time your forked repository and the original one(called *upstream*) will eventually get out of sync leaving you with an old, unsupported version. In order to keep that up to date, you'll need to *fetch* (i.e: downloading without touching the code on your computer) the latest commits and then *merge* them in the branch you need, which most likely will be **8.x-2.x**. So enter your Commerce module's directory and type:
 
@@ -33,7 +33,7 @@ Then you can proceed with the download and merge on the wanted branch:
 
 And that's it! Your repository is up to date again so that you can start developing a new feature right away! Please check [Github's guide on how to sync a fork](https://help.github.com/articles/syncing-a-fork) for more information
 
-### Keep the conventions in mind
+## Keep the conventions in mind
 
 * Always create an issue in the [drupal.org Commerce issue queue](http://drupal.org/project/issues/commerce)
   for every pull request you are working on.
