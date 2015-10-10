@@ -20,16 +20,11 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
 4. **Download Commerce 2 -** Acquire the latest _**DEV**_ releases of Commerce 2 and dependencies: [commerce](https://drupal.org/project/commerce), [composer_manager](https://drupal.org/project/composer_manager), [address](https://drupal.org/project/address), [inline_entity_form](https://drupal.org/project/address), and [profile](https://github.com/fago/profile2)
 
  ```sh
- # These two are required before proceeding to the next step
  drupal module:download commerce;
  drupal module:download composer_manager;
  drupal module:download address;
  drupal module:download inline_entity_form;
- # The profile module needs a bit more help
- cd modules/contrib;
- wget https://github.com/fago/profile2/archive/8.x-1.x.zip;
- unzip 8.x-1.x.zip;
- mv profile2-8.x-1.x profile;
+ git clone https://github.com/fago/profile2.git --branch=8.x-1.x modules/contrib/profile;
  ```
 
 5. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
@@ -39,7 +34,6 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
    cd ../../;
    php modules/contrib/composer_manager/scripts/init.php;
    composer drupal-update;
-   drupal module:install composer_manager;
  ```
 
 6. **Install Commerce -** Enable the Commerce modules, e.g.:
