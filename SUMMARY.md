@@ -13,7 +13,7 @@
       * [Zones](commerce-2/dependencies/address/zones.md)
     * [Profile](commerce-2/dependencies/profile.md)
     * [Inline Entity Form](commerce-2/dependencies/ief.md)
-  * [Currency](commerce-2/currency/README.md)
-  * [Store](commerce-2/store/README.md)
+  * [Currency](commerce-2/currency.md)
+  * [Store](commerce-2/store.md)
   * [Product](commerce-2/product/README.md)
   
