@@ -7,7 +7,7 @@
         "url": "https://github.com/commerceguys/commerce-docs"
     },
     "plugins": [
-        "edit-link"
+        "edit-link", "ga"
     ],
     "pluginsConfig": {
         "ga": {
