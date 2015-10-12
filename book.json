@@ -10,6 +10,9 @@
         "edit-link"
     ],
     "pluginsConfig": {
+        "ga": {
+            "token": "ADD-THE-TOKEN-HERE"
+        },
         "edit-link": {
            "base": "https://github.com/commerceguys/commerce-docs/edit/master",
            "label": "Edit This Page"
