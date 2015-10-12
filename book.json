@@ -7,9 +7,12 @@
         "url": "https://github.com/commerceguys/commerce-docs"
     },
     "plugins": [
-        "edit-link"
+        "edit-link", "ga"
     ],
     "pluginsConfig": {
+        "ga": {
+            "token": "ADD-THE-TOKEN-HERE"
+        },
         "edit-link": {
            "base": "https://github.com/commerceguys/commerce-docs/edit/master",
            "label": "Edit This Page"
