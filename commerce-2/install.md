@@ -24,7 +24,7 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
  drupal module:download composer_manager;
  drupal module:download address;
  drupal module:download inline_entity_form;
- git clone https://github.com/fago/profile2.git --branch=8.x-1.x modules/contrib/profile;
+ drupal module:download profile2;
  ```
 
 5. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:

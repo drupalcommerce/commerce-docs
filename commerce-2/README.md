@@ -9,16 +9,17 @@ Commerce is an open source eCommerce framework that is designed to enable flexib
   * [Executing the automated tests](contributing/testing.md)
   * [Developing](contributing/start_developing.md)
 * [Installing](install.md)
+* [Getting Started](getting-started.md)
 * [Dependencies](dependencies/README.md)
   * [Address](dependencies/address/README.md)
     * [Zones](dependencies/address/zones.md)
   * [Profile](dependencies/profile.md)
   * [Inline Entity Form](dependencies/ief.md)
-* [Currency](currency/README.md)
-* [Store](store/README.md)
+* [Currency](currency.md)
+* [Store](store.md)
 * [Product](product/README.md)
 
-## Related Libraries
+## External PHP Libraries
 
 For the 2.x branch of Commerce, Commerce Guys has moved some of the logic
 out of the Drupal world and into the greater PHP community.
