@@ -11,12 +11,14 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
  ```sh
  # Using Drupal Console can make this super easy
  drupal site:new commerce2
- cd commerce2
- cp sites/default/default.settings.php sites/default/settings.php
  ```
 
-3. **Install Drupal 8** ([How to install Drupal 8](#installing-drupal-8))
+3. **Install Drupal 8**
 
+ ```sh
+ cd commerce2
+ drupal site:install
+ ```
 4. **Download Commerce 2 -** Acquire the latest _**DEV**_ releases of Commerce 2 and dependencies: [commerce](https://drupal.org/project/commerce), [composer_manager](https://drupal.org/project/composer_manager), [address](https://drupal.org/project/address), [inline_entity_form](https://drupal.org/project/address), and [profile](https://github.com/fago/profile2)
 
  ```sh
@@ -62,8 +64,11 @@ php -r "readfile('http://drupalconsole.com/installer');" | php
 # For example: move console.phar and rename it, 'drupal':
 mv console.phar /usr/local/bin/drupal
 
+# Copy configuration files.
+drupal init
+
 # Show all available Drupal Console commands.
-drupal
+drupal list
 ```
 
 ## Installing Composer
@@ -78,11 +83,5 @@ See Also:
 * [Composer Manager Module](https://drupal.org/project/composer_manager)
 * [Composer on Drupal Intro](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)
 * [Community Docs](https://www.drupal.org/node/2405811)
-
-## Installing Drupal 8
-
-Unforunately, Drupal 8 has to be installed manually. Feel free to pull request update this page with any drush or drupal console commands that have been recently added.
-
-![Install Drupal 8 Screenshot](images/install-drupal8.png)
 
 There is a big long list of requirements and steps including downloading the project, setting up a server, and making sure you have a database. Currently, the best place for accurate installation notes is the [INSTALL.txt file that comes with Drupal 8](https://api.drupal.org/api/drupal/core!INSTALL.txt/8). We expect drupal.org will have a much nicer step-by-step screenshot installation process posted soon.
