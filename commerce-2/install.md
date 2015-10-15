@@ -13,11 +13,7 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
  drupal site:new commerce2
  ```
 
-3. **Install Drupal 8** ([How to install Drupal 8](#installing-drupal-8))
-```sh
-cd commerce2
-drupal site:install
-```
+3. **Install Drupal 8**
 
 4. **Download Commerce 2 -** Acquire the latest _**DEV**_ releases of Commerce 2 and dependencies: [commerce](https://drupal.org/project/commerce), [composer_manager](https://drupal.org/project/composer_manager), [address](https://drupal.org/project/address), [inline_entity_form](https://drupal.org/project/address), and [profile](https://github.com/fago/profile2)
 
