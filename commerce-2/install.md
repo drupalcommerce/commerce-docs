@@ -64,8 +64,11 @@ php -r "readfile('http://drupalconsole.com/installer');" | php
 # For example: move console.phar and rename it, 'drupal':
 mv console.phar /usr/local/bin/drupal
 
+# Copy configuration files.
+drupal init
+
 # Show all available Drupal Console commands.
-drupal
+drupal list
 ```
 
 ## Installing Composer
