@@ -1,12 +1,14 @@
 # Installing Drupal Commerce 2.x
 
-_Note: Command-line examples use [Drupal Console](#installing-drupal-console) with the common alias "drupal", not Drush._
+_Note: Command-line examples use  with the common alias "drupal", not Drush._
+
+## Requirements
+
+We recommend the command-line tool [Drupal Console](#installing-drupal-console), all of our documentation uses Drupal Console syntax. We require Composter to be installed since Commerce 2 relies on many powerful open sourced PHP libraries. ([Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How do I install it?](#installing-composer))
 
 ## Install Commerce 2
 
-1. **Install Composer -** You must have composer installed in your system. ([Why?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How?](#installing-composer))
-
-2. **Download & Install Drupal 8 -** Download and extract the latest release of [Drupal 8](https://drupal.org/project/drupal).
+1. **Download & Install Drupal 8 -** Download and extract the latest release of [Drupal 8](https://drupal.org/project/drupal).
 
  ```sh
  # Using Drupal Console can make this super easy
@@ -14,21 +16,21 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
  cd commerce2
  drupal site:install
  ```
-3. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and [Composer Manager](https://drupal.org/project/composer_manager)
+2. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and [Composer Manager](https://drupal.org/project/composer_manager)
 
  ```sh
  drupal module:download commerce;
  drupal module:download composer_manager;
  ```
 
-4. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
+3. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
 
  ```sh
    php modules/contrib/composer_manager/scripts/init.php;
    composer drupal-update;
  ```
 
-5. **Install Commerce -** Enable the Commerce modules, e.g.:
+4. **Install Commerce -** Enable the Commerce modules, e.g.:
 
  ```sh
  # This line installs all commerce
