@@ -17,14 +17,11 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
 
 3. **Install Drupal 8** ([How to install Drupal 8](#installing-drupal-8))
 
-4. **Download Commerce 2 -** Acquire the latest _**DEV**_ releases of Commerce 2 and dependencies: [commerce](https://drupal.org/project/commerce), [composer_manager](https://drupal.org/project/composer_manager), [address](https://drupal.org/project/address), [inline_entity_form](https://drupal.org/project/address), and [profile](https://github.com/fago/profile2)
+4. **Download Commerce 2 -** Acquire the latest _**DEV**_ releases of Commerce 2 and dependencies: [commerce](https://drupal.org/project/commerce), [composer_manager](https://drupal.org/project/composer_manager)
 
  ```sh
  drupal module:download commerce;
  drupal module:download composer_manager;
- drupal module:download address;
- drupal module:download inline_entity_form;
- drupal module:download profile2;
  ```
 
 5. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
