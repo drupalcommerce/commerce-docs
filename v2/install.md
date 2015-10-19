@@ -6,34 +6,29 @@ _Note: Command-line examples use [Drupal Console](#installing-drupal-console) wi
 
 1. **Install Composer -** You must have composer installed in your system. ([Why?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How?](#installing-composer))
 
-2. **Download Drupal 8 -** Download and extract the latest release of [Drupal 8](https://drupal.org/project/drupal).
+2. **Download & Install Drupal 8 -** Download and extract the latest release of [Drupal 8](https://drupal.org/project/drupal).
 
  ```sh
  # Using Drupal Console can make this super easy
  drupal site:new commerce2
- ```
-
-3. **Install Drupal 8**
-
- ```sh
  cd commerce2
  drupal site:install
  ```
-4. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and [Composer Manager](https://drupal.org/project/composer_manager)
+3. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and [Composer Manager](https://drupal.org/project/composer_manager)
 
  ```sh
  drupal module:download commerce;
  drupal module:download composer_manager;
  ```
 
-5. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
+4. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
 
  ```sh
    php modules/contrib/composer_manager/scripts/init.php;
    composer drupal-update;
  ```
 
-6. **Install Commerce -** Enable the Commerce modules, e.g.:
+5. **Install Commerce -** Enable the Commerce modules, e.g.:
 
  ```sh
  # This line installs all commerce
