@@ -16,11 +16,15 @@ We recommend the command-line tool [Drupal Console](#installing-drupal-console),
  cd commerce2
  drupal site:install
  ```
-2. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and [Composer Manager](https://drupal.org/project/composer_manager)
+2. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and dependencies.
 
  ```sh
  drupal module:download commerce;
  drupal module:download composer_manager;
+ # Soon we won't need to download these, Composer will grab them for us
+ drupal module:download address;
+ drupal module:download inline_entity_form;
+ drupal module:download profile2;
  ```
 
 3. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
