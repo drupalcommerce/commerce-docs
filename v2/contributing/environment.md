@@ -46,7 +46,4 @@ the name of your GitHub user):
 Once you did all of that, symlink the cloned commerce directory under the Drupal's ``modules``
 directory.
 
-**NOTE: directly cloning Drupal Commerce within Drupal's ``modules`` directory is discouraged for development.**
-
-The only thing left to do now is to head to the module page clicking on the
-**Extend** button in the top menu and enable Drupal Commerce.
+The rest of the installation process can happen as described in our [standard installation instructions](../install.md).
