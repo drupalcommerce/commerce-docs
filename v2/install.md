@@ -1,10 +1,9 @@
 # Installing Drupal Commerce 2.x
 
-_Note: Command-line examples use  with the common alias "drupal", not Drush._
-
 ## Requirements
 
-We recommend the command-line tool [Drupal Console](#installing-drupal-console), all of our documentation uses Drupal Console syntax. We require Composter to be installed since Commerce 2 relies on many powerful open sourced PHP libraries. ([Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How do I install it?](#installing-composer))
+We recommend using the command-line tool [Drupal Console](#installing-drupal-console) for quicker setup.
+We require Composter to be installed since Commerce 2 relies on many powerful open sourced PHP libraries. ([Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How do I install it?](#installing-composer))
 
 ## Install Commerce 2
 
@@ -24,7 +23,7 @@ We recommend the command-line tool [Drupal Console](#installing-drupal-console),
  # Soon we won't need to download these, Composer will grab them for us
  drupal module:download address;
  drupal module:download inline_entity_form;
- drupal module:download profile2;
+ drupal module:download profile;
  ```
 
 3. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
