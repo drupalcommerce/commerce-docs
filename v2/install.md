@@ -36,6 +36,8 @@ We require Composter to be installed since Commerce 2 relies on many powerful op
 4. **Install Commerce -** Enable the Commerce modules, e.g.:
 
  ```sh
+ # If you don't clear cache now, you will get an error.
+ drupal cache:rebuild;
  # This line installs all commerce
  drupal module:install commerce commerce_order commerce_product commerce_tax commerce_cart commerce_payment profile;
  # This command is sometimes necessary to force the menu to rebuild;
