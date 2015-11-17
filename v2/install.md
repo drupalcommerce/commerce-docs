@@ -3,7 +3,7 @@
 ## Requirements
 
 We recommend using the command-line tool [Drupal Console](#installing-drupal-console) for quicker setup.
-We require Composter to be installed since Commerce 2 relies on many powerful open sourced PHP libraries. ([Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How do I install it?](#installing-composer))
+We require Composer to be installed since Commerce 2 relies on many powerful open sourced PHP libraries. ([Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How do I install it?](#installing-composer))
 
 ## Install Commerce 2
 
