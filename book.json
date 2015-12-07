@@ -24,5 +24,10 @@
         "pdf": "styles/all.css",
         "mobi": "styles/all.css",
         "epub": "styles/all.css"
+    },
+    "links": {
+      "sidebar": {
+        "DrupalCommerce.org": "https://drupalcommerce.org"
+      }
     }
 }
