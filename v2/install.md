@@ -22,6 +22,7 @@ We require Composer to be installed since Commerce 2 relies on many powerful ope
  drupal module:download composer_manager;
  # Soon we won't need to download these, Composer will grab them for us
  drupal module:download address;
+ drupal module:download entity
  drupal module:download inline_entity_form;
  drupal module:download profile;
  ```
