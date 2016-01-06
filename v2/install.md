@@ -6,7 +6,7 @@
 composer create-project drupalcommerce/project-base some-dir --stability dev --no-interaction
 ```
 
-The above command downloads Drupal core, Commerce, all [dependencies and libraries](requirements.md) to "some-dir." Feel free to read more about the best practices on the github page for the project template: [drupalcommerce/project-base](https://github.com/drupalcommerce/project-base).
+The above command downloads Drupal core, Commerce, all [dependencies and libraries](dependencies/README.md) to "some-dir." Feel free to read more about the best practices on the github page for the project template: [drupalcommerce/project-base](https://github.com/drupalcommerce/project-base).
 
 ## Adding Commerce 2 to an existing Drupal 8 site
 
