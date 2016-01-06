@@ -8,6 +8,7 @@ Commerce is an open source eCommerce framework that is designed to enable flexib
   * [Setting up the environment](contributing/environment.md)
   * [Executing the automated tests](contributing/testing.md)
   * [Developing](contributing/start_developing.md)
+* [Requirements](requirements.md)
 * [Installing](install.md)
 * [Getting Started](getting-started.md)
 * [Dependencies](dependencies/README.md)
