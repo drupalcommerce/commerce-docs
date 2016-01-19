@@ -12,7 +12,7 @@ and especially at its [System requirements section](https://drupal.org/requireme
 Installing the powerful Drupal Shell is not mandatory but it can definitely be helpful during development. You can go to [Drupal Console's website](http://drupalconsole.com/) for more documentation and support.
 So fire the following in your terminal:
 
-```sh
+````sh
 # Run this in your terminal to get the latest Console version:
 curl -LSs http://drupalconsole.com/installer | php
 
@@ -26,6 +26,7 @@ mv console.phar /usr/local/bin/drupal
 
 # Copy configuration files.
 drupal init
+````
 
 ## Drupal 8
 
