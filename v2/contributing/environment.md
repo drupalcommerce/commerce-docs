@@ -7,12 +7,25 @@ The very first step for starting contributing to Drupal Commerce is to setup a c
 take a look at [Drupal Installation Guide](https://drupal.org/documentation/install)
 and especially at its [System requirements section](https://drupal.org/requirements).
 
-## Drush
+## Drupal Console
 
-Installing the powerful Drupal Shell is not mandatory but it can definitely be helpful during development. The recommended way to install it is through composer. Unfortunately, due to a (temporary?) dependency-clash between Drupal 8 and Drush 7, it's not possible to just install it within your Drupal 8's vendors directory.
+Installing the powerful Drupal Shell is not mandatory but it can definitely be helpful during development. You can go to [Drupal Console's website](http://drupalconsole.com/) for more documentation and support.
 So fire the following in your terminal:
 
-    composer global require drush/drush=dev-master
+```sh
+# Run this in your terminal to get the latest Console version:
+curl -LSs http://drupalconsole.com/installer | php
+
+# Or if you don't have curl:
+php -r "readfile('http://drupalconsole.com/installer');" | php
+
+# You can place this file anywhere you wish.
+# If you put it in your PATH, you can access it globally.
+# For example: move console.phar and rename it, 'drupal':
+mv console.phar /usr/local/bin/drupal
+
+# Copy configuration files.
+drupal init
 
 ## Drupal 8
 
