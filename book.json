@@ -4,7 +4,7 @@
     "description": "Drupal Commerce is an open source eCommerce framework that is designed to enable flexible eCommerce for websites and applications based on Drupal.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/commerceguys/commerce-docs"
+        "url": "https://github.com/drupalcommerce/commerce-docs"
     },
     "plugins": [
         "edit-link", "ga"
@@ -14,7 +14,7 @@
             "token": "UA-12478122-2"
         },
         "edit-link": {
-           "base": "https://github.com/commerceguys/commerce-docs/edit/master",
+           "base": "https://github.com/drupalcommerce/commerce-docs/edit/master",
            "label": "Edit This Page"
        }
     },
