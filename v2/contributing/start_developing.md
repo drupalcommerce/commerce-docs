@@ -1,47 +1,56 @@
 # Developing
 
-Once you verified everything's working properly by [running the tests](testing.md), you're ready to go!
+## Choosing an issue
 
-
-## Taking a look at the issue queue
-
-While the coding is done on github, the issue queue is still taken care of on drupal.org: you can take a look at [the open issues](https://www.drupal.org/project/issues/search/commerce?assigned=&submitted=&project_issue_followers=&status[0]=Open&version[0]=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
+Commerce uses GitHub for code and drupal.org for tracking issues.
+To choose an issue, go through [the open issues](https://www.drupal.org/project/issues/search/commerce?assigned=&submitted=&project_issue_followers=&status[0]=Open&version[0]=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
 ), pick one you like and **assign it to you**.
 
-Additionally you can view the issue queue as a kanban board for additional visibility. The [kanban board on ContribKanban.com](https://contribkanban.com/board/commerce2x) mirrors the Drupal.org issue queue and is an alternate way to work on issues.
+If you need help choosing an issue or working on one, join the Commerce 2.x office hours. <br>
+They are held every wednesday at 3PM GMT+1 on the *#drupal-commerce* [IRC channel](https://www.drupal.org/irc).
 
-## Coding and Pull Request-ing
+**Tip:** You can also view the issue queue as a [kanban board](https://contribkanban.com/board/commerce2x).
 
-Remember to create a branch before start developing! It's name should contain the issue id and a slug to tell what the thing you're working on is about, for example: **2276369-readme**.
+## Creating a pull request
 
-Once you're done with the development, push your commits and [create a Pull Request](https://help.github.com/articles/using-pull-requests#initiating-the-pull-request) on github.
+Start by creating a branch for your work. <br>
+The branch name should contain a brief summary of the ticket and its issue id, e.g **2276369-fix-product-form-notice**:
 
-After your code has been reviewed, you might be asked to perform some changes and then have them reviewed again. After a number of iterations, you should get your code merged into the main repository. Hurray!
+    cd web/modules/contrib/commerce
+    git checkout -b 2276369-fix-product-form-notice
 
-## Keeping your fork up to date
+Once you're done with development, push your commits to your fork:
 
-After some time your forked repository and the original one(called *upstream*) will eventually get out of sync leaving you with an old, unsupported version. In order to keep that up to date, you'll need to *fetch* (i.e: downloading without touching the code on your computer) the latest commits and then *merge* them in the branch you need, which most likely will be **8.x-2.x**. So enter your Commerce module's directory and type:
+    git commit -a -m "Issue 2276369: Fix notice in the product form."
+    git push fork 2276369-fix-product-form-notice
+  
+You can now go to your fork's GitHub page and [create a pull request](https://help.github.com/articles/using-pull-requests#initiating-the-pull-request).
+Your pull request should link to the drupal.org issue, and vice-versa. 
 
-    git remote add upstream git@github.com:commerceguys/commerce.git
+After your code has been reviewed, you might be asked to perform some changes and then have them reviewed again:
 
-This command will add the original Commerce repository reference to your local repository(you don't have to repeat it all the time, just the first one will do).
-Then you can proceed with the download and merge on the wanted branch:
+    # Change the desired files.
+    git commit -a -m "Addressed feedback."
+    git push -f fork 2276369-fix-product-form-notice
 
-    git fetch upstream
+Updating the branch will automatically update the related pull request.
+
+## Keeping up to date
+
+Your forked repository and the original one (called *origin*) will eventually out of sync. <br>
+Periodically update your fork by doing:
+
+    # Update your local branch.
     git checkout 8.x-2.x
-    git merge upstream/8.x-2.x
+    git pull origin/8.x-2.x
+    # Push the update to your GitHub fork.
+    git push fork 8.x-2.x
 
-And that's it! Your repository is up to date again so that you can start developing a new feature right away! Please check [Github's guide on how to sync a fork](https://help.github.com/articles/syncing-a-fork) for more information
+Your pull request will also often need rebasing, so that the changes are applied to the latest version of the code. <br>
+Once you've updated the master branch (8.x-2.x), rebase your branch:
 
-## Keep the conventions in mind
+    git checkout 2276369-fix-product-form-notice
+    git rebase 8.x-2.x
+    git push -f fork 2276369-fix-product-form-notice
 
-* Always create an issue in the [drupal.org Commerce issue queue](http://drupal.org/project/issues/commerce)
-  for every pull request you are working on.
-* Always cross-reference the Issue in the Pull Request and the Pull Request in
-  the Issue.
-* Always create a new branch for every pull request: its name should contain a
-  brief summary of the ticket and its issue id, e.g **2276369-readme**.
-* Try to keep the history of your pull request as clean as possible by squashing
-  your commits: you can look at the [Symfony documentation](http://symfony.com/doc/current/cmf/contributing/commits.html)
-  or at the [Git book](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages)
-  for more information on how to do that.
+That's it! Happy contributing!

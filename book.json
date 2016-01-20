@@ -7,7 +7,7 @@
         "url": "https://github.com/drupalcommerce/commerce-docs"
     },
     "plugins": [
-        "edit-link", "ga"
+        "edit-link", "ga", "ungrey", "toggle-chapters"
     ],
     "pluginsConfig": {
         "ga": {
