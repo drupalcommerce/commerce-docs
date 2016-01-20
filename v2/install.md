@@ -1,85 +1,63 @@
-# Installing Drupal Commerce 2.x
+# Installing
 
 ## Requirements
 
-We recommend using the command-line tool [Drupal Console](#installing-drupal-console) for quicker setup.
-We require Composer to be installed since Commerce 2 relies on many powerful open sourced PHP libraries. ([Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/) [How do I install it?](#installing-composer))
+If you already have a web server, make sure it satisfies [Drupal 8's requirements](https://www.drupal.org/requirements). <br>
+The recommended memory limit is 256MB or more.
 
-## Install Commerce 2
+For local development we recommend [Drupal VM](http://www.drupalvm.com/) (advanced users) or [Acquia Dev Desktop](https://www.acquia.com/products-services/dev-desktop) (beginners). <br>
+You will also need [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
-1. **Download & Install Drupal 8 -** Download and extract the latest release of [Drupal 8](https://drupal.org/project/drupal).
+[Why must we use Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)
 
- ```sh
- # Using Drupal Console can make this super easy
- drupal site:new commerce2
- cd commerce2
- drupal site:install
- ```
-2. **Download Commerce 2 -** Acquire the latest _**DEV**_ release of [Commerce 2](https://drupal.org/project/commerce) and dependencies.
+## New site
+
+The following command will download Drupal 8 + Commerce 2.x with all dependencies to the `mystore` folder:
+
+    composer create-project drupalcommerce/project-base mystore --stability dev
+
+Install it just like a regular Drupal site. Commerce will be automatically enabled for you.
+
+Tips:
+
+- The `vendor/bin` folder contains [Drupal Console](https://drupalconsole.com). <br>
+- The `web` folder represents the document root. <br>
+- Composer commands are always run from the site root (`mystore` in this case). <br>
+- Downloading additional modules: `composer require "drupal/devel:8.1.x-dev"` <br>
+- Updating an existing module: `composer update drupal/address`
+
+See the [project-base README](https://github.com/drupalcommerce/project-base/blob/8.x/README.md) for more details.
+
+## Existing site
+
+Download Commerce and its Drupal dependencies manually, then use [Composer Manager](https://drupal.org/project/composer_manager) to download the libraries.
+
+The instructions below use [Drupal Console](https://drupalconsole.com). 
+
+1. Download the modules
 
  ```sh
  drupal module:download commerce;
- drupal module:download composer_manager;
- # Soon we won't need to download these, Composer will grab them for us
  drupal module:download address;
  drupal module:download entity
+ drupal module:download state_machine;
  drupal module:download inline_entity_form;
  drupal module:download profile;
  ```
 
-3. **Initialize Composer -** From the Drupal root directory, initialize composer_manager ([Why Composer?](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)), and run it for the first time:
+2. Initialize Composer Manager and download the libraries
 
  ```sh
-   php modules/contrib/composer_manager/scripts/init.php;
-   composer drupal-update;
+ drupal module:download composer_manager;
+ php modules/contrib/composer_manager/scripts/init.php;
+ composer drupal-update;
+ composer dump-autoload;
  ```
 
-4. **Install Commerce -** Enable the Commerce modules, e.g.:
+  For more information see the [Composer Manager documentation](https://www.drupal.org/node/2405811).
+
+3. Enable Commerce
 
  ```sh
- # If you don't clear cache now, you will get an error.
- drupal cache:rebuild;
- # This line installs all commerce
- drupal module:install commerce commerce_order commerce_product commerce_tax commerce_cart commerce_payment profile;
- # This command is sometimes necessary to force the menu to rebuild;
- drupal cache:rebuild;
+ drupal module:install commerce_product commerce_order commerce_cart commerce_tax
  ```
-![Install Commerce 2 Screenshot](images/install-commerce2.png)
-
-## Installing Drupal Console
-
-You can go to [Drupal Console's website](http://drupalconsole.com/) for more documentation and support.
-
-```sh
-# Run this in your terminal to get the latest Console version:
-curl -LSs http://drupalconsole.com/installer | php
-
-# Or if you don't have curl:
-php -r "readfile('http://drupalconsole.com/installer');" | php
-
-# You can place this file anywhere you wish.
-# If you put it in your PATH, you can access it globally.
-# For example: move console.phar and rename it, 'drupal':
-mv console.phar /usr/local/bin/drupal
-
-# Copy configuration files.
-drupal init
-
-# Show all available Drupal Console commands.
-drupal list
-```
-
-## Installing Composer
-
-You can go to [GetComposer.com](https://getcomposer.org/doc/00-intro.md) for more documentation and support.
-
-```sh
-curl -sS https://getcomposer.org/installer | php
-```
-
-See Also:
-* [Composer Manager Module](https://drupal.org/project/composer_manager)
-* [Composer on Drupal Intro](https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/)
-* [Community Docs](https://www.drupal.org/node/2405811)
-
-There is a big long list of requirements and steps including downloading the project, setting up a server, and making sure you have a database. Currently, the best place for accurate installation notes is the [INSTALL.txt file that comes with Drupal 8](https://api.drupal.org/api/drupal/core!INSTALL.txt/8). We expect drupal.org will have a much nicer step-by-step screenshot installation process posted soon.

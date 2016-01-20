@@ -55,7 +55,7 @@ You will now be able to push new branches to your fork and create [pull requests
     # Run only PHPUnit tests
     ../vendor/bin/phpunit -c core/ modules/contrib/commerce
     # Install the simpletest module to run all tests.
-    ../vendor/bin/console module:install simpletest
+    ../vendor/bin/drupal module:install simpletest
     # Run all tests
     php core/scripts/run-tests.sh --verbose --concurrency 4 --url http://d8.d.dev "commerce"
     
