@@ -8,7 +8,7 @@
     * [Developing](v2/contributing/developing.md)
   * [Installing](v2/install.md)
   * [Getting Started](v2/getting-started.md)
-  * [Dependencies](v2/dependencies/README.md)
+  * Dependencies
     * [Address](v2/dependencies/address/README.md)
       * [Zones](v2/dependencies/address/zones.md)
     * [Profile](v2/dependencies/profile.md)
