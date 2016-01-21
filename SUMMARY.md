@@ -12,6 +12,7 @@
     * [Address](v2/dependencies/address/README.md)
       * [Zones](v2/dependencies/address/zones.md)
     * [Profile](v2/dependencies/profile.md)
+    * [State Machine](v2/dependencies/state-machine.md)
     * [Inline Entity Form](v2/dependencies/ief.md)
   * [Currency](v2/currency.md)
   * [Store](v2/store.md)
