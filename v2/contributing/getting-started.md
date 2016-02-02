@@ -60,3 +60,7 @@ You will now be able to push new branches to your fork and create [pull requests
     php core/scripts/run-tests.sh --verbose --concurrency 4 --url http://d8.d.dev "commerce"
     
 Replace `http://d8.d.dev` with the url to your installation.
+
+To be able to run individual PHPUnit test (using command line or your IDE), [this article](https://www.drupal.org/node/2116263#skipped-tests) will give more information on how to run specific tests, and setup variables.
+
+For a basic configuration of PHPStorm, [this article](https://www.drupal.org/node/2288559) will explain how to create the basic configuration.
