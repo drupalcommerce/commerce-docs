@@ -2,6 +2,8 @@
 
 ## Requirements
 
+Commerce 2.x requires Drupal 8.1.0-rc1 or newer.
+
 If you already have a web server, make sure it satisfies [Drupal 8's requirements](https://www.drupal.org/requirements). <br>
 The recommended memory limit is 256MB or more.
 
@@ -30,33 +32,25 @@ See the [project-base README](https://github.com/drupalcommerce/project-base/blo
 
 ## Existing site
 
-Download Commerce and its Drupal dependencies manually, then use [Composer Manager](https://drupal.org/project/composer_manager) to download the libraries.
+Run these commands in the root of your website:
 
-The instructions below use [Drupal Console](https://drupalconsole.com). 
-
-1. Download the modules
+1. Add the Drupal Packagist repository
 
  ```sh
- drupal module:download commerce;
- drupal module:download address;
- drupal module:download entity
- drupal module:download state_machine;
- drupal module:download inline_entity_form;
- drupal module:download profile;
+ composer config repositories.drupal composer https://packagist.drupal-composer.org
  ```
 
-2. Initialize Composer Manager and download the libraries
+ This allows Composer to find Commerce and the other Drupal modules.
+
+2. Download Commerce
 
  ```sh
- drupal module:download composer_manager;
- php modules/contrib/composer_manager/scripts/init.php;
- composer drupal-update;
- composer dump-autoload;
+ composer require "drupal/commerce 8.2.x-dev"
  ```
 
-  For more information see the [Composer Manager documentation](https://www.drupal.org/node/2405811).
+ This will also download the required libraries and modules (Address, Entity, State Machine, Inline Entity Form, Profile).
 
-3. Enable Commerce
+3. Enable Commerce (instructions below use [Drupal Console](https://drupalconsole.com))
 
  ```sh
  drupal module:install commerce_product commerce_order commerce_cart commerce_tax
