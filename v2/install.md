@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Commerce 2.x requires Drupal 8.1.0-rc1 or newer.
+Commerce 2.x requires Drupal 8.1.0 or newer.
 
 If you already have a web server, make sure it satisfies [Drupal 8's requirements](https://www.drupal.org/requirements). <br>
 The recommended memory limit is 256MB or more.
