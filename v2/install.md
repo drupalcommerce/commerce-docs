@@ -53,5 +53,5 @@ Run these commands in the root of your website:
 3. Enable Commerce (instructions below use [Drupal Console](https://drupalconsole.com))
 
  ```sh
- drupal module:install commerce_product commerce_order commerce_cart commerce_tax
+ drupal module:install commerce_product commerce_checkout commerce_cart commerce_tax
  ```
