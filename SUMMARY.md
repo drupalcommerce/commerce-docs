@@ -16,8 +16,7 @@
     * [Inline Entity Form](v2/dependencies/ief.md)
   * [Currency](v2/currency.md)
   * [Store](v2/store.md)
-  * [Product](v2/product/index.md)
+  * [Products](v2/product/index.md)
       * [Attributes](v2/product/product-attributes.md)
       * [Variations](v2/product/products.md)
       * [Purchasable Entities](v2/product/purchasable-entities.md)
-
