@@ -1,13 +1,19 @@
 # Product Attributes
 
-Attributes are now entity reference fields. Referencing field-able entities allows the usage of fields to hold things
-such as the image representation of the attribute, the color value for a color swatch, etc.
+Products variations have attributes (color, size, etc) and each attribute has a optimized management mode that lets you 
+add many fieldable attribute values at one time (all colors are entities, or all sizes are entities).
 
-## Creating Attributes
+![Product chart](../images/product-chart.png)
 
-There are two entity types used for Product Attributes and their values: commerce_product_attribute, and
-commerce_product_attribute_value. We're featuring a more optimized UI, which allows creating and re-ordering
-multiple values at the same time:
+Product variations are not required to have attributes, but if they do, each attribute must have at least one attribute 
+value. Product attributes (`commerce_product_attribute`) is actually a config entity and is not fieldable, but the
+attribute values (`commerce_product_attribute_value`) are fieldable and can be rendered using display modes on the add
+to cart form and other areas.
+
+## Creating Attributes and their Values
+
+The product attribute values user interface allows creating and re-ordering multiple values at the same time and a very
+powerful translation capability:
 
 ... needs screenshot ...
 
