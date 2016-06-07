@@ -14,7 +14,7 @@ They are held every wednesday at 3PM GMT+1 on the *#drupal-commerce* [IRC channe
 ## Creating a pull request
 
 Start by creating a branch for your work. <br>
-The branch name should contain a brief summary of the issue and its id, e.g **2276369-fix-product-form-notice**:
+The branch name should contain a brief summary of its id and the issue, e.g **2276369-fix-product-form-notice**:
 
     cd web/modules/contrib/commerce
     git checkout -b 2276369-fix-product-form-notice
@@ -31,13 +31,13 @@ After your code has been reviewed, you might be asked to perform some changes an
 
     # Change the desired files.
     git commit -a -m "Addressed feedback."
-    git push -f fork 2276369-fix-product-form-notice
+    git push fork 2276369-fix-product-form-notice
 
 Updating the branch will automatically update the related pull request.
 
 ## Keeping up to date
 
-Your forked repository and the original one (called *origin*) will eventually out of sync. <br>
+Your forked repository and the original one (called *origin*) will eventually get out of sync. <br>
 Periodically update your fork by doing:
 
     # Update your local branch.
