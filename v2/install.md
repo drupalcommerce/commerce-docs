@@ -1,5 +1,7 @@
 # Installing
 
+> **Installing Commerce to contribute back?** Check out our [installation instructions for contributors](contributing/getting-started.html).
+
 ## Requirements
 
 Commerce 2.x requires Drupal 8.1.0 or newer.
