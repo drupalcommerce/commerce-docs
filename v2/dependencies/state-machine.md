@@ -64,7 +64,8 @@ The group argument allows the guard factory to only instantiate the guards relev
 to a specific workflow group.
 
 The current state is stored in a [StateItem](https://github.com/bojanz/state_machine/blob/8.x-1.x/src/Plugin/Field/FieldType/StateItem.php) field.
-A field setting specifies the used workflow, or a value callback that allows
-the workflow to be resolved at runtime (checkout workflow based on the used plugin, etc.
-A validator is provided that ensures that the specified state is valid (exists in the
-workflow and is in the allowed transitions).
+A field setting specifies the used workflow, or a value callback that allows the workflow to be resolved at runtime 
+(checkout workflow based on the used plugin, etc.).
+
+A validator is provided that ensures that the specified state is valid (exists in the workflow and is in the allowed 
+transitions).
