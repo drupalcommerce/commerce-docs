@@ -99,13 +99,3 @@ product variation type by following these steps:
 3. Un-select the "required" checkbox to make the attribute optional.
 
 ![Un-select the required checkbox](images/attribute_optional.png)
-
-## Product Variations that don't have Attributes
-
-![Product without attribute](images/attributes_are_not_required.png)
-
-Product Variations do not require attributes (pictured above is a product with two variations that have no attributes).
-Products may have one or many product variations with or without attributes. Any variations that do not have attributes
-will simply be listed without a selection widget. 
-
-*The way non-attributed products are listed may change before a beta version of Commerce is released.*
