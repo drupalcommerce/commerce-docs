@@ -1,7 +1,6 @@
 # Installing
 
-> **Note for contributors:** If you want to install Commerce to contribute back to the project, you have your [own set of
-> getting started/installation instructions](contributing/getting-started).
+> **Installing Commerce to contribute back?** Check out our[installation instructions for contributors](contributing/getting-started).
 
 ## Requirements
 
