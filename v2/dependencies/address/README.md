@@ -30,7 +30,7 @@ The landing page for the address module shows all the default configurations by 
 
 ![Address Module format configuration](images/address-configureformat.png)
 
-The default values are based on opensource 3rd party that has the best coverage of all regions in the world. The formatting of the addresses is for both the form and the display.
+The default values are based on an opensource 3rd party that has the best coverage of all regions in the world. The formatting of the addresses is for both the form and the display.
 
 ## More information on Address formats
 
