@@ -51,23 +51,61 @@ created entity referenced fields as needed:
 
 ## Adding fields to Attributes
 
+Product attributes are so much more than a word. Often times they represent a differentiation between products that is
+useful to call out visually for customers. The fieldable attribute value lets the information architect decide what kind of
+best describes this attribute (does it need an image field and three text fields? Good, because we can do that). Like 
+any other fieldable entity, you can locate the list of attribute bundles and click edit fields:
+
+`/admin/commerce/product-attributes`
+
+![Locating list of attributes](images/attribute_create_01.png)
+
+Add a field as you would expect. Most fields are supported and will automatically show up when you go to add attribute
+values:
+
+![Example of attribute with more than one attribute](images/attribute_create_03.png)
 
 
 ## Editing Attributes
 
-... needs description ...
+![How do you edit the attribute values?](images/attribute_edit_01.png)
 
-... needs screenshot ...
+Editing the attribute values is pretty easy. Simply locate the attribute type that has the values you want to edit:
+
+`/admin/commerce/product-attributes`
+
+![Locating list of attributes](images/attribute_create_01.png)
+
+And click "edit" and you will be taken to a screen to edit all the attributes of that type.
+
+![Example of attribute with more than one attribute](images/attribute_create_03.png)
 
 ## Optional Attributes
 
-... needs description ... Optional attributes can be made by making them “not required”
+After creating attributes, the product variation type needs to know that it uses the attribute. The product variations are at 
+`/admin/commerce/config/product-variation-types` and once you've clicked on the attribute you want...
 
-... needs screenshot ...
+![Adding Product Attribute to Product Variation](images/attribute_create_04.png)
 
-## Products that don't have Attributes
+Fields are added to the variation type that can then be modified. By default, the field is required. If your attribute is
+optional (not all shirts have embroidery options, but some do), then you need to locate the manage fields of your particular
+product variation type by following these steps:
 
-But what happens if a variation type has no attributes? For example, a product is only selling a single file. In that
-case, the Inline Entity Form widget will render the variation form as a regular fieldset on the product. 
+1. Go to `/admin/commerce/config/product-variation-types`
+2. Click the drop down next to the variation type you want and click "manage fields"
 
-... needs screenshot ...
+![Click manage fields](images/product_variation_manage_fields.gif)
+
+3. Un-select the "required" checkbox to make the attribute optional.
+
+![Un-select the required checkbox](images/attribute_optional.png)
+
+## Product Variations that don't have Attributes
+
+![Product without attribute](images/attributes_are_not_required.png)
+
+Product Variations do not require attributes (pictured above is a product with two variations that have no attributes).
+Products may have one or many product variations with or without attributes. Any variations that do not have attributes
+will simply be listed without a selection widget. 
+
+*The way non-attributed products are listed may change before a beta version of Commerce is released.*
