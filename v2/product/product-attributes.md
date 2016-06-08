@@ -1,37 +1,30 @@
 # Product Attributes
 
-![Product Attribute Visualization](images/attribute_visualization.png)
+![Product Attribute Entity Relationships](images/tshirt_drupalcon.png)
 
-Most products have attributes (pictured on the left, above) that differentiate the Stock Keeping Units (SKUs) and prices 
-(pictured above, right). Each type of differentiating attribute in Drupal Commerce has a
-screen that lets you manage every possible value and a separate screen to help you manage the kinds of fields and
-rendered display modes you want to use. 
-
-> **For example:** A `Color` attribute may include a hexadecimal field for rendering a
-> color swatch and/or an image field. You could add both kinds of fields to the `Color` attribute and modify the 
-> attribute's display mode to render a swatch instead of text-representation.
-
-## Technical Relationships
+Imagine you need to sell a DrupalCon t-shirt. This t-shirt comes in different sizes and colors. Each combination of size
+and color has its own SKU, so you know which color and size the customer has purchased and you can track exactly how
+many of each combination you have in stock.
 
 ![Product Attribute Entity Relationships](images/attribute_entity_relationships.png)
 
-The product attributes are their own kind of fieldable entity. Each attribute can belong to one or more product variation
-bundles. The above diagram depicts `Attributes` that have `Attribute Values` (which are fieldable) and how they relate to
-Products. In one sentence: A product can have one or many variations and a variation can have zero or more attribute values,
-but only one attribute value per attribute.
+Color and size are product attributes. Blue and small are product attribute values, belonging to the mentioned
+attributes. The combination of attribute values (with a SKU and a price) is called a product variation.
+These variations are grouped inside a product.
 
 ## Creating Attributes and their Values
 
 ![Product Attribute List](images/attribute_create_01.png)
 
-The first step in adding an attribute to a product, is to create the type of attribute. Often this is a very obvious 
-designation falling into the category of a differentiation. Common examples include: Color, Size, Capacity, Complexity.
+The first step in adding an attribute to a product, is to create the type of attribute. For our Drupalcon t-shirt example
+we are working with two different kinds of attributes: color and size. An attribute can be anything that makes one specific
+version of a product different from another specific version.
 
 ![Product Attribute Creation](images/attribute_create_02.png)
 
-After you have created an attribute, we need to define at least one value. By default, the attribute value screen will
-only display a label for the attribute. In the next section, we describe how to manage the fields that show up for each
-attribute value. 
+After you have created the color attribute, we need to define at least one value. Normally we would simply say the color
+is "blue" or "red" but sometimes you might need to further define the attribute using fields. Adding fields is covered
+in detail later on in the documentation.
 
 The product attribute values user interface allows creating and re-ordering multiple values at the same time and a very
 powerful translation capability:
@@ -87,14 +80,13 @@ After creating attributes, the product variation type needs to know that it uses
 
 ![Adding Product Attribute to Product Variation](images/attribute_create_04.png)
 
-Fields are added to the variation type that can then be modified. By default, the field is required. If your attribute is
-optional (not all shirts have embroidery options, but some do), then you need to locate the manage fields of your particular
-product variation type by following these steps:
+Fields are added to the variation type that can then be modified. By default, all attribute fields are required. If your
+attribute is optional (perhaps some of the drupalcon t-shirts only come in blue), then you can locate the manage fields
+of your particular product variation type and make the `color` attribute optional by following these steps:
 
 1. Go to `/admin/commerce/config/product-variation-types`
-2. Click the drop down next to the variation type you want and click "manage fields"
+2. Click the drop down next to the variation type you want and click "manage fields" ![Click manage fields](images/product_variation_manage_fields.gif)
 
-![Click manage fields](images/product_variation_manage_fields.gif)
 
 3. Un-select the "required" checkbox to make the attribute optional.
 
