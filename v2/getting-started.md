@@ -1,9 +1,17 @@
 # Getting Started with Commerce 2
 
-_Note: These are the steps immediately following the new [installation of the Commerce 2](install.md) module._
+_Note: These are the steps immediately following the [installation process](install.md) and assumes your site is installed
+and ready to be configured._
 
-Congratulations! You have downloaded Commerce and are now ready to start creating and selling products. YAY! There are just
-a few steps you need to follow before you can create products. Below we detail them out.
+Congratulations! You have downloaded and installed Commerce and are now ready to start creating and selling products. 
+YAY! There are just a few steps you need to follow before you can create products. Below we detail them out.
+
+----
+**Shortcut!** - The getting started process can be quickly done using Drupal Console command:
+
+>`drupal commerce:create:store`<br>
+>![example workflow](images/drupal-commerce-create-store.gif)<br>
+>_You are welcome to ignore this shortcut if you prefer the user interface and proceed to step 1._
 
 ## Step 1: Import the currency(s) your store will use.
 
