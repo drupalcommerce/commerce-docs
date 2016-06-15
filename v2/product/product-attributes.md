@@ -14,11 +14,8 @@ These variations are grouped inside a product.
 
 ## Creating Attributes and their Values
 
-![Product Attribute List](images/attribute_create_01.png)
-
-The first step in adding an attribute to a product, is to create the type of attribute. For our Drupalcon t-shirt example
-we are working with two different kinds of attributes: color and size. An attribute can be anything that makes one specific
-version of a product different from another specific version.
+For our t-shirt we need two attributes: color and size. Let's start by creating the color attribute. Go to 
+`admin/commerce/product-attributes` and click the Add attribute link.
 
 ![Product Attribute Creation](images/attribute_create_02.png)
 
