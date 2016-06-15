@@ -39,6 +39,13 @@ page.
 
 ### Adding a Product Field
 
+Product types, for example, our tshirt product type, can be found at `admin/commerce/config/product-types` (under the 
+configuration menu option) and clicking on the arrow next to the Edit button will reveal all the management tasks for 
+product variation types. Click on the `Manage Fields` option.
+
+Once on the manage fields screen for our product type, you can add as many types of fields as you like by clicking the 
+`+ Add Field` button. 
+
 ## Variation Fields
 
 Products variations can have attributes and other kinds of fields. Going back to our t-shirt analogy from above, if our
@@ -70,20 +77,30 @@ Finally, you should have your new field showing up in your product add form loca
 
 ![Variation Field Example](images/product_variation_field_success.gif)
 
-Once the product fields and the  variation fields are set up, the product page may not look as clean as the one
-presented above. It's likely that there are a number of labels for fields (like price, product image, SKU, etc) that you
-would rather not display. There are two different `Manage Display` locations you will need to manage in order to get the
-desired output on your product page.
+Once the tshirt has important content fields and the t-shirt variation fields have differentiating fields figured out,
+the product page may not look as clean as the one presented above. It's likely that there are a number of labels for
+fields (like price, product image, SKU, etc) that you would rather not display. There are two different `Manage Display`
+locations you will need to manage in order to get the desired output on your product page.
 
 > **NOTE**: It's recommended that if you are using display modes to effect the product pages, that you use the "show
 > weights" check box. The reason for this is that when a product is rendered, all fields, from the variation to the
 > actual product get sorted based on weight. So if you just use the drag and drop methods, you will not get the granular
 > control you might expect.
 
-The first `Manage Display` page we will use to tweak the visual output of the product is the `Product Type` display
-`admin/commerce/config/product-types` (this screen only controls product-level fields and the product selector (which 
-is usually an add to cart button and an attribute selection)).
+To fully control the display of all the fields it's helpful to think of the fields as being a part of one big group.
 
-![Manage Display for Product Types](images/product_variation_manage_display_01.png)
+![Manage Display field weight graphic](images/product_display_visual.png)
 
-The second `Manage Display` page we will use 
+Above, our T-shirt Product fields (body, variations) are rendered with our T-shirt Product Variation fields (Price, 
+Image). In order to achieve this order, the field weights must be manually set to go in order, as if they were in a
+large group.
+
+Product field weight can be managed here: `admin/commerce/config/product-types`
+
+Product Variation field weight can be managed here: `admin/commerce/config/product-variation-types`
+
+> **FANCY FEATURE ALERT**: You may have noticed that product variation fields can be displayed INDEPENDENTLY of the 
+> variations field. Lots of work has gone in to making sure these fields get replaced easily and consistently when a 
+> new product is selected on the add-to-cart form. This was developed specifically to allow fine-tuned control of how
+> a store would want to present different pieces of information. Perhaps you really need the picture of the selected 
+> t-shirt to appear before the body field of the product. Just change the weight :)
