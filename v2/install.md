@@ -1,6 +1,6 @@
 # Installing
 
-> **Installing Commerce to contribute back?** Check out our [installation instructions for contributors](contributing/getting-started).
+> **Installing Commerce to contribute back?** Check out our [installation instructions for contributors](contributing/getting-started.html).
 
 ## Requirements
 
