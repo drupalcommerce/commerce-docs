@@ -1,20 +1,22 @@
 # Products and Product Variations
 
+Every product has one or more variations. In the event that a product has more than one variation, each variation is
+differentiated by some aspect of the product, whether it’s the product’s color, size, fabric, etc.
+
 ![Product Entity Relationships](images/product_entity_relationships.png)
 
-Imagine you sell t-shirts (Product Type) and you have new shipment of a particular Drupalcon t-shirt (Product). This
-Drupalcon t-shirt comes in different sizes and colors. Each combination of size and color (Small Red, Large Blue)
-represents a physical version of the t-shirt (Product Variation). If a product does not have attributes or unique
-combinations of of attributes, you always need at least one variation per product.
+For example, you sell t-shirts (Product Type) and you have a new shipment of a particular Drupalcon t-shirt (Product).
+This Drupalcon t-shirt comes in different sizes and colors. Each combination of size and color (Small Red, Large Blue)
+represents a physical version of the t-shirt (Product Variation).
 
 > **NOTE**: In order to create your first product, you will need to have a store and a currency already set up. If you 
 > don't have this, there's a [Getting Started](../getting-started.md) section that will walk you through the steps.
 
 ## Managing Products and their Variations
 
-Variations are only manageable from the parent product, using Inline Entity Form. Variations do not have labels or 
-titles. Labels, by default, are dynamically constructed from the attribute labels. To create or update a product
-variation, you must go to the product screen and either choose an existing product or create a new one. 
+By default, variations are only manageable from the parent product, using Inline Entity Form. Variations do not have
+labels or titles. Labels, by default, are dynamically constructed from the attribute labels. To create or update a
+product variation, you must go to the product screen and either choose an existing product or create a new one.
 
 You can simply go to `admin/commerce/products` and click "Add Product."
 
@@ -75,10 +77,8 @@ Finally, you should have your new field showing up in your product add form loca
 
 ## Managing the display of the product
 
-![Variation Field Example](images/product_variation_field_success.gif)
-
 Once the tshirt has important content fields and the t-shirt variation fields have differentiating fields figured out,
-the product page may not look as clean as the one presented above. It's likely that there are a number of labels for
+the product page may not look as clean the designer envisioned. It's likely that there are a number of labels for
 fields (like price, product image, SKU, etc) that you would rather not display. There are two different `Manage Display`
 locations you will need to manage in order to get the desired output on your product page.
 
