@@ -26,8 +26,8 @@ Tips:
 - The `vendor/bin` folder contains [Drupal Console](https://drupalconsole.com) and [PHPUnit](https://phpunit.de/). <br>
 - The `web` folder represents the document root. <br>
 - Composer commands are always run from the site root (`mystore` in this case). <br>
-- Downloading additional modules: `composer require "drupal/devel:8.1.x-dev"` <br>
-- Updating an existing module: `composer update drupal/address`
+- Downloading additional modules: `composer require "drupal/devel:1.x-dev"` <br>
+- Updating an existing module: `composer update drupal/address` --with-dependencies
 
 See the [project-base README](https://github.com/drupalcommerce/project-base/blob/8.x/README.md) for more details.
 

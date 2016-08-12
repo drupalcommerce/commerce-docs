@@ -27,8 +27,8 @@ Tips:
 - The `vendor/bin` folder contains [Drupal Console](https://drupalconsole.com). <br>
 - The `web` folder represents the document root. <br>
 - Composer commands are always run from the site root (`mystore` in this case). <br>
-- Downloading additional modules: `composer require "drupal/devel:8.1.x-dev"` <br>
-- Updating an existing module: `composer update drupal/address`
+- Downloading additional modules: `composer require "drupal/devel:1.x-dev"` <br>
+- Updating an existing module: `composer update drupal/address` --with-dependencies
 
 See the [project-base README](https://github.com/drupalcommerce/project-base/blob/8.x/README.md) for more details.
 
@@ -39,7 +39,7 @@ Run these commands in the root of your website:
 1. Add the Drupal Packagist repository
 
  ```sh
- composer config repositories.drupal composer https://packagist.drupal-composer.org
+ composer config repositories.drupal composer https://packages.drupal.org/8
  ```
 
  This allows Composer to find Commerce and the other Drupal modules.
@@ -47,7 +47,7 @@ Run these commands in the root of your website:
 2. Download Commerce
 
  ```sh
- composer require "drupal/commerce 8.2.x-dev"
+ composer require "drupal/commerce 2.x-dev"
  ```
 
  This will also download the required libraries and modules (Address, Entity, State Machine, Inline Entity Form, Profile).
