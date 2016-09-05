@@ -24,7 +24,7 @@ Install it just like a regular Drupal site. Commerce will be automatically enabl
 
 Tips:
 
-- The `vendor/bin` folder contains [Drupal Console](https://drupalconsole.com). <br>
+- The `bin` folder contains [Drupal Console](https://drupalconsole.com). <br>
 - The `web` folder represents the document root. <br>
 - Composer commands are always run from the site root (`mystore` in this case). <br>
 - Downloading additional modules: `composer require "drupal/devel:1.x-dev"` <br>
