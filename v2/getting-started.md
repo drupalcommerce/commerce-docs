@@ -3,7 +3,7 @@
 _Note: These are the steps immediately following the [installation process](install.md) and assumes your site is installed
 and ready to be configured._
 
-Congratulations! You have downloaded and installed Commerce and are now ready to start creating and selling products. 
+Congratulations! You have downloaded and installed Commerce and are now ready to start creating and selling products.
 YAY! There are just a few steps you need to follow before you can create products. Below we detail them out.
 
 ----
@@ -15,16 +15,16 @@ YAY! There are just a few steps you need to follow before you can create product
 
 ## Step 1: Import the currency(s) your store will use.
 
-The most basic piece of information that defines your store is the currency(s) you want to use. The vast majority of 
+The most basic piece of information that defines your store is the currency(s) you want to use. The vast majority of
 Commerce stores will simply have one currency and one store. To set this up, first you need to locate the currencies
 page at `admin/commerce/config/currencies`
 
 ![Currency Landing Page](images/currency-landing-page.png)
 
-Next, click the `Import` tab (`admin/commerce/config/currency/import`). The reason currencies need to be imported is 
+Next, click the `Import` tab (`admin/commerce/config/currency/import`). The reason currencies need to be imported is
 because we don't want to store all the world's currencies in your database if we don't have to, so we make no
 assumptions and let each store request specific access to specific currencies. The dataset is coming from the intl
-library which generates its dataset from an international and frequently updated standards body. 
+library which generates its dataset from an international and frequently updated standards body.
 
 ![Currency Import Page](images/currency-import.png)
 
