@@ -1,9 +1,9 @@
 # Orders
 
-Orders - Orders contain a list of order items and customer information.
+Orders contain a list of order items and customer information. Orders have states that are controlled through State Machine.
 
-Order Items - Orders contain order items.
+[Order Items](order-itemds.md) - Orders contain order items.
 
-Order Types - You can have different order types.
+[Order Types](order-types.md) - You can have different order types. Order types have their own settings when it comes to cart, checkout, and its processing.
 
-Order Processing - Allows you to process an order, when the system recalculates order item prices and availability.
+[Order Processing](order-processing.md) - Allows you to process an order, when the system recalculates order item prices and availability.
