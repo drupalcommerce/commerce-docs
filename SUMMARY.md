@@ -4,6 +4,7 @@
 * [Commerce 1.x](v1/README.md)
 * [Commerce 2.x](v2/README.md)
   * [Installing](v2/install.md)
+  * [Updating](v2/update.md)
   * [Getting Started](v2/getting-started.md)
   * Dependencies
     * [Address](v2/dependencies/address/README.md)
