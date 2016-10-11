@@ -11,6 +11,7 @@ type: php
 web:
     # The public directory of the app, relative to its root.
     document_root: "/_book"
+    passthru: index.html
     index_files:
       - index.html
     expires: 300
