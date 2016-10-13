@@ -16,6 +16,6 @@ Each order type can control its refresh settings to control how often order draf
 
 The cart module allows each order type to control the default view used when rendering carts in the cart block or cart form.
 
-![Order type checkout settings](../order-types-checkout.png)
+![Order type checkout settings](../images/order-types-checkout.png)
 
 You can use a different checkout flow for each order type. In this case you would have a physical order use a multiple step checkout flow that requires shipping information. A digital order could have a more simplified checkout flow that has one step (i.e.: payment.)
