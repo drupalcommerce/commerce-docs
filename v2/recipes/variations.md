@@ -3,7 +3,7 @@ Product variations are the purchasable parts of products, thus products need at 
 
 ## Creating variation types.
 ```
-// Integer - Enabled is 1, disabled is 0.
+// [OPTIONAL] Integer - Enabled is 1, disabled is 0. Default is 1.
 $statusEnabled = 1;
 
 // String - The primary key for the variation type.
@@ -40,17 +40,23 @@ $variationTypeId = 'my_custom_variation_type';
 // String - The variation sku.
 $sku = 'test-product-01';
 
-// Integer - Enabled is 1, disabled is 0.
+// [OPTIONAL] Integer - Enabled is 1, disabled is 0. Default is 1.
 $statusEnabled = 1;
 
-// The price of the variation.
+// [OPTIONAL] The price of the variation.
 $price = new \Drupal\commerce_price\Price('24.99', 'USD');
+
+// [POTENTIALLY NOT NEEDED] The title for the product variation.
+// If the variation type is set to generate a title, this is not used.
+// Otherwise, a title must be given.
+$title = 'My product variation";
 
 $variation = \Drupal\commerce_product\Entity\ProductVariation::create([
   'type' => $variationTypeId,
   'sku' => $sku,
   'status' => $statusEnabled,
   'price' => $price,
+  'title' => $title,
 ]);
 $variation->save();
 ```

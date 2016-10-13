@@ -3,7 +3,7 @@ A list of code samples/examples outlining how to create and load commerce entiti
 <br><br>
 [Stores](stores.md) - Stores and types.
 
-[Variations](products.md) - Product variations and types.
+[Variations](variations.md) - Product variations and types.
 
 [Attributes](attributes.md) - Product attributes and values.
 
