@@ -10,4 +10,4 @@ Order items have their unit price calculated during the [order refresh process](
 
 The add to cart form is actually the create form for an order item entity. It is a specific form display. Selecting attributes on the add to cart form identifies the proper reference purchased entity to reference.
 
-![Order item add to cart form](images/order-item-add-to-cart-form.png)
+![Order item add to cart form](../images/order-item-add-to-cart-form.png)
