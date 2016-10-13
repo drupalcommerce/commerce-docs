@@ -55,5 +55,8 @@ Run these commands in the root of your website:
 3. Enable Commerce (instructions below use [Drupal Console](https://drupalconsole.com))
 
  ```sh
- drupal module:install commerce_product commerce_checkout commerce_cart commerce_tax
+ cd web
+ drupal module:install commerce_product commerce_checkout commerce_cart
  ```
+ 
+ Depending on your exact environment you may have to/want to use ../vendor/bin/drupal instead of the unqualified drupal to get the site installed Drupal Console.
