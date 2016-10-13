@@ -27,7 +27,7 @@
     * [Developing](v2/contributing/developing.md)
   * [Code Recipes](v2/recipes/index.md)
       * [Stores](v2/recipes/stores.md)
-      * [Attributes](v2/recipes/attributes.md)
       * [Variations](v2/recipes/variations.md)
+      * [Attributes](v2/recipes/attributes.md)
       * [Products](v2/recipes/products.md)
       * [Orders](v2/recipes/orders.md)
