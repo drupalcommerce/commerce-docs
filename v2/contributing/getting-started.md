@@ -49,14 +49,8 @@ You will now be able to push new branches to your fork and create [pull requests
 
 ## Running tests
 
-**Note:** You will need to install Drupal before running tests.
+All of the Drupal Commerce tests are based on the PHPUnit framework. In order to run the tests you will need to copy the `phpunit.xml.dist` from the core directory and modify it for your environment. An in depth article on getting ready to run the tests can be found here: https://drupalcommerce.org/blog/45322/commerce-2x-unit-kernel-and-functional-tests-oh-my
 
     cd mystore/web
-    # Run only PHPUnit tests
-    ../bin/phpunit -c core/ modules/contrib/commerce
-    # Install the simpletest module to run all tests.
-    ../bin/drupal module:install simpletest
-    # Run all tests
-    php core/scripts/run-tests.sh --verbose --concurrency 4 --url http://d8.d.dev "commerce"
-
-Replace `http://d8.d.dev` with the url to your installation.
+    # Run PHPUnit tests
+    ../bin/phpunit -c core/phpunit.xml modules/contrib/commerce
