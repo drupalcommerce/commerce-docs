@@ -17,6 +17,10 @@
       * [Attributes](v2/product/product-attributes.md)
       * [Variations](v2/product/products.md)
       * [Purchasable Entities](v2/product/purchasable-entities.md)
+  * [Orders](/v2/orders/index.md)
+	  * [Order Types](v2/orders/order-types.md)
+	  * [Order Items](v2/orders/order-items.md)
+	  * [Order Processing](v2/orders/order-processing.md)
   * Contributing
     * [Getting started](v2/contributing/getting-started.md)
     * [Developing](v2/contributing/developing.md)
