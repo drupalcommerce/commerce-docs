@@ -6,7 +6,7 @@ An order item represents a purchasable entity inside of an order. It contains a 
 
 The order total is based off the unit price of order items multiplied by their quantity and the sum of all order item totals.
 
-Order items have their unit price calculated during the [order refresh process](order-process.md). This synchronizes the price with the current purchasable entity’s price while the order is still in a draft state.
+Order items have their unit price calculated during the [order refresh process](order-processing.md). This synchronizes the price with the current purchasable entity’s price while the order is still in a draft state.
 
 The add to cart form is actually the create form for an order item entity. It is a specific form display. Selecting attributes on the add to cart form identifies the proper reference purchased entity to reference.
 
