@@ -34,7 +34,7 @@ $attributeFieldManager->createField($colorAttribute, $variationTypeId);
 $attributeFieldManager->createField($sizeAttribute, $variationTypeId);
 ```
 
-## Creating values.
+## Creating values for an attribute.
 ```
 // String - The attribute id that we just made.
 $colorAttributeId = 'color';
@@ -70,4 +70,28 @@ $large = \Drupal\commerce_product\Entity\ProductAttributeValue::create([
   'name' => $largeName,
 ]);
 $large->save();
+```
+
+## Assigning attributes to a variation.
+Let's say we want our hypothetical product to have two variations. One will be the color red and size medium, and the other will be the color blue and size large.
+```
+// [IMPORTANT] - If a Product Variation Type has fields for attributes (as we added above), then variations of that type MUST have those attributes.
+
+$variationRedMedium = \Drupal\commerce_product\Entity\ProductVariation::create([
+  'type' => 'my_custom_variation_type',
+  'sku' => 'product-red-medium',
+  'price' => new \Drupal\commerce_price\Price('10.00', 'USD'),
+  'attribute_color' => $red,
+  'attribute_size' => $medium,
+]);
+$variationRedMedium->save();
+
+$variationBlueLarge = \Drupal\commerce_product\Entity\ProductVariation::create([
+  'type' => 'my_custom_variation_type',
+  'sku' => 'product-blue-large',
+  'price' => new \Drupal\commerce_price\Price('10.00', 'USD'),
+  'attribute_color' => $blue,
+  'attribute_size' => $large;
+]);
+$variationBlueLarge->save();
 ```
