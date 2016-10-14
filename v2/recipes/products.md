@@ -1,78 +1,78 @@
 # Products and types
 
 ## Creating product types.
-```
-// String - Primary key for product type.
-$productTypeId = 'my_custom_product_type';
-
-// String - Label for the product type.
-$label = "My custom product type";
-
-// [OPTIONAL] Integer - Enabled is 1, disabled is 0. Default is 1.
-$statusEnabled = 1;
-
-// String - The description.
-$description = 'My custom product type with color and size variations.';
-
-// String - The variation type id to use for this product type. Default is 'default'.
-$variationTypeId = 'default';
-// We can use the new variation type we created previously here.
-$variationTypeId = 'my_custom_variation_type';
-
-// [OPTIONAL] Bool - Whether or not to inject the variation fields. Defaults to TRUE.
-$injectVariationFields = TRUE;
+```php
+/**
+ * id [String]
+ *   Primary key for this product type.
+ *
+ * label [String]
+ *   Label for this product type
+ *
+ * status [Integer] - [OPTIONAL, DEFAULTS TO 1]
+ *   [AVAILABLE = 0, 1]
+ *   Whether or not it's enabled or disabled. 1 for enabled.
+ *
+ * description [String]
+ *   Description for this product.
+ *
+ * variationType [String] - [DEFAULT = default]
+ *   Foreign key for the variation type used.
+ *
+ * injectVariationFields [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+ *   Whether or not to inject the variation fields.
+ */
 
 // Create the product type.
-$productType = \Drupal\commerce_product\Entity\ProductType::create([
-  'id' => $productTypeId,
-  'label' => $label,
-  'status' => $statusEnabled,
-  'description' => $description,
-  'variationType' => $variationTypeId,
-  'injectVariationFields' => $injectVariationFields,
+$product_type = \Drupal\commerce_product\Entity\ProductType::create([
+  'id' => 'my_custom_product_type',
+  'label' => "My custom product type",
+  'description' => '',
+  'variationType' => 'my_custom_variation_type',
+  'injectVariationFields' => TRUE,
 ]);
-$productType->save();
+$product_type->save();
 
 // These three functions must be called to add the appropriate fields to the type
-commerce_product_add_variations_field($productType);
-commerce_product_add_stores_field($productType);
-commerce_product_add_body_field($productType);
+commerce_product_add_variations_field($product_type);
+commerce_product_add_stores_field($product_type);
+commerce_product_add_body_field($product_type);
 ```
 
-## Creating products.
-```
-// Integer|String - The id of the user that created the product.
-$uid = 1;
-
-// String - The product type id to use. Default is 'default'.
-$orderTypeId = 'default';
-// We can use the product type we just created.
-$orderTypeId = 'my_custom_product_type';
-
-// String - The product title.
-$title = 'My Custom Product';
-
-// Array - The stores that the product belongs to. (Using the one we made previously here.)
-$stores = [
-  $store,
-];
-
-// Array - The variations that belong to the product.
+## Creating products.    
+```php
+/**
+ * uid [Integer]
+ *   Foreign key of the user that created the product.
+ *
+ * type [String] - [DEFAULT = default]
+ *   Foreign key of the product type being used.
+ *
+ * title [String]
+ *   The product title.
+ *
+ * stores [Array(\Drupal\commerce_store\Entity\StoreInterface)]
+ *   Array of stores this product belongs to.
+ *
+ * variations [Array(\Drupal\commerce_product\Entity\ProductVariationInterface)]
+ *   Array of variations that belong to this product.
+ */
+     
+// The variations that belong to this product.
 $variations = [
-  $variationRedMedium,
-  $variationBlueLarge,
+  $variation_blue_large,
 ];
 
 $product = \Drupal\commerce_product\Entity\Product::create([
-  'uid' => $uid,
-  'type' => $orderTypeId,
-  'title' => $title,
-  'stores' => $stores,
+  'uid' => 1,
+  'type' => 'my_custom_product_type',
+  'title' => 'My Custom Product',
+  'stores' => [$store],
   'variations' => $variations,
 ]);
 $product->save();
 
 // You can also add a variation to a product using the addVariation() method.
-$product->addVariation($variationRedMedium);
+$product->addVariation($variation_red_medium);
 $product->save();
 ```
