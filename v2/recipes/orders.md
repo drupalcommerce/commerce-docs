@@ -1,6 +1,6 @@
 # Orders and order items
 
-## Creating order types.
+## Creating order types
 ```php
 /**
  * id [String]
@@ -9,8 +9,8 @@
  * label [String]
  *   The label for this order type.
  *
- * status [Integer] - [OPTIONAL, DEFAULTS TO 1]
- *   [AVAILABLE = 0, 1]
+ * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+ *   [AVAILABLE = FALSE, TRUE]
  *   Whether or not it's enabled or disabled. 1 for enabled.
  *
  * workflow [String] - [DEFAULT = order_default]
@@ -25,7 +25,7 @@
  *   The refresh freuency in seconds.
  */
 $order_type = \Drupal\commerce_order\Entity\OrderType::create([
-  'status' => 1,
+  'status' => TRUE,
   'id' => 'custom_order_type',
   'label' => 'My custom order type',
   'workflow' => 'order_default',
@@ -38,7 +38,13 @@ $order_type->save();
 commerce_order_add_order_items_field($order_type);
 ```
 
-## Creating order item types.
+## Loading an order type
+```php
+// Loading is based off of the primary key [String] that was defined when creating it.
+$order_type = \Drupal\commerce_order\Entity\OrderType::load('custom_order_type');
+```
+
+## Creating order item types
 ```php
 /**
  * id [String]
@@ -47,8 +53,8 @@ commerce_order_add_order_items_field($order_type);
  * label [String]
  *   The label for this order item type.
  *
- * status [Integer] - [OPTIONAL, DEFAULTS TO 1]
- *   [AVAILABLE = 0, 1]
+ * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+ *   [AVAILABLE = FALSE, TRUE]
  *   Whether or not it's enabled or disabled. 1 for enabled.
  *
  * purchasableEntityType [String] - [DEFAULT = commerce_product_variation]
@@ -60,15 +66,21 @@ commerce_order_add_order_items_field($order_type);
 $order_item_type = \Drupal\commerce_order\Entity\OrderItemType::create([
   'id' => 'custom_order_item_type',
   'label' => 'My custom order item type',
-  'status' => 1,
+  'status' => TRUE,
   'purchasableEntityType' => 'commerce_product_variation',
   'orderType' => 'custom_order_type',
 ]);
 $order_item_type->save();
 ```
 
+## Loading an order item type
+```php
+// Loading is based off of the primary key [String] that was defined when creating it.
+$order_item_type = \Drupal\commerce_order\Entity\OrderItemType::load('custom_order_item_type');
+```
 
-## Creating order items.
+
+## Creating order items
 ```php
 /**
  * type [String] - [DEFAULT = product_variation]
@@ -104,7 +116,14 @@ $order_item->setUnitPrice($unit_price);
 $order_item->save();
 ```
 
-## Creating orders.
+## Loading an order item
+```php
+// Loading is based off of the primary key [Integer]
+//   1 would be the first one saved, 2 the next, etc.
+$order_item = \Drupal\commerce_order\Entity\OrderItem::load(1);
+```
+
+## Creating orders
 ```php
 /**
  * type [String] - [DEFAULT = default]
@@ -166,4 +185,11 @@ $order = \Drupal\commerce_order\Entity\Order::create([
   'placed' => time(),
 ]);
 $order->save();
+```
+
+## Loading an order
+```php
+// Loading is based off of the primary key [Integer]
+//   1 would be the first one saved, 2 the next, etc.
+$order = \Drupal\commerce_order\Entity\Order::load(1);
 ```

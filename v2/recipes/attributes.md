@@ -3,7 +3,7 @@ Product variation types can have certain attributes (ex. color) and those attrib
 <br>
 In this example, we will create two attributes (color and size) and add them to the variation type we made previously.
 
-## Creating attributes.
+## Creating attributes
 ```php
 /**
  * id [String]
@@ -31,7 +31,13 @@ $attribute_field_manager->createField($color_attribute, 'my_custom_variation_typ
 $attribute_field_manager->createField($size_attribute, 'my_custom_variation_type');
 ```
 
-## Creating values for an attribute.
+## Loading an attribute
+```php
+// Loading is based off of the primary key [String] that was defined when creating it.
+$size_attribute = \Drupal\commerce_product\Entity\ProductAttribute::load('size');
+```
+
+## Creating values for an attribute
 ```php
 /**
  * attribute [String]
@@ -65,7 +71,14 @@ $large = \Drupal\commerce_product\Entity\ProductAttributeValue::create([
 $large->save();
 ```
 
-## Assigning attributes to a variation.
+## Loading an attribute value
+```php
+// Loading is based off of the primary key [Integer]
+//   1 would be the first one saved, 2 the next, etc.
+$red = \Drupal\commerce_product\Entity\ProductAttributeValue::load(1);
+```
+
+## Assigning attributes to a variation
 Let's say we want our hypothetical product to have two variations. One will be the color red and size medium, and the other will be the color blue and size large.
     // [IMPORTANT] - If a Product Variation Type has fields for attributes (as we added above), then variations of that type MUST have those attributes.
 

@@ -1,7 +1,7 @@
 # Product Variations and types
 Product variations are the purchasable parts of products, thus products need at least one variation.
 
-## Creating variation types.
+## Creating variation types
 ```php
 /**
  * id [String]
@@ -10,8 +10,8 @@ Product variations are the purchasable parts of products, thus products need at 
  * label [String]
  *   The label for this variation type.
  *
- * status [Integer] - [OPTIONAL, DEFAULTS TO 1]
- *   [AVAILABLE = 0, 1]
+ * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+ *   [AVAILABLE = FALSE, TRUE]
  *   Whether or not it's enabled or disabled. 1 for enabled.
  *
  * orderItemType [String] - [DEFAULT = default]
@@ -23,14 +23,20 @@ Product variations are the purchasable parts of products, thus products need at 
 $variation_type = \Drupal\commerce_product\Entity\ProductVariationType::create([
   'id' => 'my_custom_variation_type',
   'label' => 'Variation Type With Color',
-  'status' => 1,
+  'status' => TRUE,
   'orderItemType' => 'default',
   'generateTitle' => TRUE,
 ]);
 $variation_type->save();
 ```
 
-## Creating variations.    
+## Loading a variation type
+```php
+// Loading is based off of the primary key [String] that was defined when creating it.
+$variation_type = \Drupal\commerce_product\Entity\ProductVariationType::load('my_custom_variation_type');
+```
+
+## Creating variations
 ```php
 /**
  * type [String] - [DEFAULT = default]
@@ -39,8 +45,8 @@ $variation_type->save();
  * sku [String]
  *   The sku for this variation.
  *
- * status [Integer] - [OPTIONAL, DEFAULTS TO 1]
- *   [AVAILABLE = 0, 1]
+ * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+ *   [AVAILABLE = FALSE, TRUE]
  *   Whether or not it's enabled or disabled. 1 for enabled.
  *
  * price [\Drupal\commerce_price\Price] - [OPTIONAL]
@@ -54,8 +60,15 @@ $variation_type->save();
 $variation = \Drupal\commerce_product\Entity\ProductVariation::create([
   'type' => 'my_custom_variation_type',
   'sku' => 'test-product-01',
-  'status' => 1,
+  'status' => TRUE,
   'price' => new \Drupal\commerce_price\Price('24.99', 'USD'),
 ]);
 $variation->save();
+```
+
+## Loading a variation
+```php
+// Loading is based off of the primary key [Integer]
+//   1 would be the first one saved, 2 the next, etc.
+$variation = \Drupal\commerce_product\Entity\ProductVariation::load(1);
 ```

@@ -21,6 +21,12 @@ $store_type = \Drupal\commerce_store\Entity\StoreType::create([
 $store_type->save();
 ```
 
+## Loading a store type
+```php
+// Loading is based off of the primary key [String] that was defined when creating it.
+$store_type = \Drupal\commerce_store\Entity\StoreType::load('custom_store_type');
+```
+
 ## Creating a store
 ```php
 /**
@@ -76,4 +82,11 @@ $store->save();
 // If needed, this sets the store as the default store.
 $store_storage = \Drupal::service('entity_type.manager')->getStorage('commerce_store');
 $store_storage->markAsDefault($store);
+```
+
+## Loading a store
+```php
+// Loading is based off of the primary key [Integer]
+//   1 would be the first one saved, 2 the next, etc.
+$store = \Drupal\commerce_store\Entity\Store::load(1);
 ```

@@ -1,6 +1,6 @@
 # Products and types
 
-## Creating product types.
+## Creating product types
 ```php
 /**
  * id [String]
@@ -9,8 +9,8 @@
  * label [String]
  *   Label for this product type
  *
- * status [Integer] - [OPTIONAL, DEFAULTS TO 1]
- *   [AVAILABLE = 0, 1]
+ * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+ *   [AVAILABLE = FALSE, TRUE]
  *   Whether or not it's enabled or disabled. 1 for enabled.
  *
  * description [String]
@@ -39,7 +39,13 @@ commerce_product_add_stores_field($product_type);
 commerce_product_add_body_field($product_type);
 ```
 
-## Creating products.    
+## Loading a product type
+```php
+// Loading is based off of the primary key [String] that was defined when creating it.
+$product_type = \Drupal\commerce_product\Entity\ProductType::load('my_custom_product_type');
+```
+
+## Creating products
 ```php
 /**
  * uid [Integer]
@@ -75,4 +81,11 @@ $product->save();
 // You can also add a variation to a product using the addVariation() method.
 $product->addVariation($variation_red_medium);
 $product->save();
+```
+
+## Loading a product
+```php
+// Loading is based off of the primary key [Integer]
+//   1 would be the first one saved, 2 the next, etc.
+$product = \Drupal\commerce_product\Entity\Product::load(1);
 ```
