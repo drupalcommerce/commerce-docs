@@ -53,7 +53,11 @@ Run these commands in the root of your website:
  This will also download the required libraries and modules (Address, Entity, State Machine, Inline Entity Form, Profile).
 
 3. Enable Commerce (instructions below use [Drupal Console](https://drupalconsole.com))
+ You must run this from the webroot rather than the site root. If you used the [Composer Template for Drupal Projects](https://github.com/drupal-composer/drupal-project) it will be `web`, if you've used a custom folder cd to that instead.
 
  ```sh
- drupal module:install commerce_product commerce_checkout commerce_cart commerce_tax
+ cd web
+ drupal module:install commerce_product commerce_checkout commerce_cart
  ```
+ 
+ Depending on your exact environment you may have to/want to use `../vendor/bin/drupal` instead of the unqualified `drupal` to use the site specific Drupal Console.
