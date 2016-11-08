@@ -31,3 +31,4 @@
       * [Attributes](v2/recipes/attributes.md)
       * [Products](v2/recipes/products.md)
       * [Orders](v2/recipes/orders.md)
+      * [State Machine Transitions](v2/recipes/state-machine-transitions.md)

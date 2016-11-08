@@ -1,5 +1,9 @@
 # State Machine Transitions
 
+For an actual example being used in Drupal Commerce, check out the state machine transition event subscriber being used in commerce_order to set an order's placed timestamp:
+* [commerce_order.services.yml](https://github.com/drupalcommerce/commerce/blob/080ca52fbb9ec73b9eeece5487a62d221e75ed04/modules/order/commerce_order.services.yml#L29)
+* [TimestampEventSubscriber.php](https://github.com/drupalcommerce/commerce/blob/080ca52fbb9ec73b9eeece5487a62d221e75ed04/modules/order/src/EventSubscriber/TimestampEventSubscriber.php)
+
 ## Finding Transitions
 Transition information can be found in a `{module}.workflows.yml`.
 
@@ -26,93 +30,6 @@ order_default:
       label: 'Cancel order'
       from: [draft]
       to:   canceled
-
-order_default_validation:
-  id: order_default_validation
-  group: commerce_order
-  label: 'Default, with validation'
-  states:
-    draft:
-      label: Draft
-    validation:
-      label: Validation
-    completed:
-      label: Completed
-    canceled:
-      label: Canceled
-  transitions:
-    place:
-      label: 'Place order'
-      from: [draft]
-      to:   validation
-    validate:
-      label: 'Validate order'
-      from: [validation]
-      to: completed
-    cancel:
-      label: 'Cancel order'
-      from: [draft, validation]
-      to:   canceled
-
-order_fulfillment:
-  id: order_fulfillment
-  group: commerce_order
-  label: 'Fulfillment'
-  states:
-    draft:
-      label: Draft
-    fulfillment:
-      label: Fulfillment
-    completed:
-      label: Completed
-    canceled:
-      label: Canceled
-  transitions:
-    place:
-      label: 'Place order'
-      from: [draft]
-      to:   fulfillment
-    fulfill:
-      label: 'Fulfill order'
-      from: [fulfillment]
-      to: completed
-    cancel:
-      label: 'Cancel order'
-      from: [draft, fulfillment]
-      to:   canceled
-
-order_fulfillment_validation:
-  id: order_fulfillment_validation
-  group: commerce_order
-  label: 'Fulfillment, with validation'
-  states:
-    draft:
-      label: Draft
-    validation:
-      label: Validation
-    fulfillment:
-      label: Fulfillment
-    completed:
-      label: Completed
-    canceled:
-      label: Canceled
-  transitions:
-    place:
-      label: 'Place order'
-      from: [draft]
-      to:   validation
-    validate:
-      label: 'Validate order'
-      from: [validation]
-      to:   fulfillment
-    fulfill:
-      label: 'Fulfill order'
-      from: [fulfillment]
-      to: completed
-    cancel:
-      label: 'Cancel order'
-      from: [draft, validation, fulfillment]
-      to:   canceled
 ```
 
 ## Reacting to Transitions
@@ -136,7 +53,21 @@ class MyModuleEventSubscriber implements EventSubscriberInterface {
   }
 
   public function onOrderPlace(WorkflowTransitionEvent $event) {
-    do_stuff();
+    // @todo Write code that will run when the subscribed event fires.
   }
 }
+```
+
+## Telling Drupal About Your Event Subscriber
+
+Your event subscriber should be added to `{module}.services.yml` in the base directory of your module.
+
+The following would register the event subscriber in the previous section:
+
+```yaml
+services:
+  rmf_user_affiliate_event_subscriber:
+    class: '\Drupal\my_module\EventSubscriber\MyModuleEventSubscriber'
+    tags:
+      - { name: 'event_subscriber' }
 ```
