@@ -66,7 +66,7 @@ The following would register the event subscriber in the previous section:
 
 ```yaml
 services:
-  rmf_user_affiliate_event_subscriber:
+  my_module_event_subscriber:
     class: '\Drupal\my_module\EventSubscriber\MyModuleEventSubscriber'
     tags:
       - { name: 'event_subscriber' }
