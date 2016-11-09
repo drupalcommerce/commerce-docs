@@ -12,3 +12,5 @@ These recipes are all designed to work off of each other, so try it out - you ca
 [Products](products.md) - Products and types.
 
 [Orders](orders.md) - Orders, order items, and their types.
+
+[State Machine Transitions](state-machine-transitions.md) - Finding and reacting to state_machine transitions.
