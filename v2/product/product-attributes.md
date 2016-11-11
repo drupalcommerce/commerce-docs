@@ -1,4 +1,4 @@
-# Product Attributes
+# Using product attributes
 
 ![Product Attribute Entity Relationships](images/tshirt_drupalcon.png)
 
