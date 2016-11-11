@@ -8,7 +8,7 @@
     * [Installing](v2/getting-started/install.md)
     * [Updating](v2/update.md)
     * Contributing
-        * [Getting started](v2/contributing/getting-started.md)
+        * [Setting up an environment](v2/contributing/development-environment.md)
         * [Developing](v2/contributing/developing.md)
 
   * Dependencies
