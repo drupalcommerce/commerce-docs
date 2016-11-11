@@ -11,7 +11,7 @@
         * [Setting up an environment](v2/contributing/development-environment.md)
         * [Get started with contributing](v2/contributing/developing.md)
 
-  * Building blocks
+  * [Building blocks](v2/building-blocks/index.md)
     * [Address](v2/building-blocks/address/README.md)
       * [Zones](v2/building-blocks/address/zones.md)
     * [Profile](v2/building-blocks/profile.md)
