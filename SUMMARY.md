@@ -4,6 +4,7 @@
 * [Commerce 1.x](v1/README.md)
 * [Commerce 2.x](v2/README.md)
   * [Getting started](v2/getting-started.md)
+    * Introduction to Composer
     * [Installing](v2/getting-started/install.md)
     * [Updating](v2/update.md)
   * Dependencies
