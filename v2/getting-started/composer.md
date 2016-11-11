@@ -1,1 +1,1 @@
-# Introduction to Composer
+# Composer: the what, why, and how
