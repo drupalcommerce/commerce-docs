@@ -41,10 +41,10 @@
         * Advanced topics
             * [Creating a checkout pane plugin](v2/checkout/checkout-pane-plugin.md)
             * [Creating a checkout flow plugin](v2/checkout/creating-a-checkout-flow-plugin.md)
-    * [Setting up payments](v2/setting-up-payments.md)
+    * [Payments](v2/setting-up-payments.md)
         * [Install a payment gateway](v2/install-a-payment-gateway.md)
         * [Managing order payments](v2/managing-order-payments.md)
-    * [Code Recipes](v2/recipes/index.md)
+    * [Code recipes](v2/recipes/index.md)
         * [Stores](v2/recipes/stores.md)
         * [Variations](v2/recipes/variations.md)
         * [Attributes](v2/recipes/attributes.md)
