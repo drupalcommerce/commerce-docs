@@ -38,7 +38,7 @@
     * [Setting up payments](v2/setting-up-payments.md)
         * [Install a payment gateway](v2/install-a-payment-gateway.md)
         * [Managing order payments](v2/managing-order-payments.md)
-    * [Using promotions](v2/using-promotions.md)
+    * [Product merchandising](v2/using-promotions.md)
         * [Creating a promotion](v2/creating-a-promotion.md)
     * [Code Recipes](v2/recipes/index.md)
         * [Stores](v2/recipes/stores.md)

@@ -1,2 +1,2 @@
-# Using promotions
+# Product merchandising
 
