@@ -19,7 +19,7 @@
         * [Currency](v2/building-blocks/currency.md)
     * [Setting up stores](v2/store.md)
     * [Managing products](v2/product/index.md)
-        * [Using product attributes](v2/product/product-attributes.md)
+        * [Setup product attributes](v2/product/product-attributes.md)
         * [Making a product](v2/product/products.md)
         * [Creating a new product type](v2/product/product-type.md)
         * [Purchasable Entities](v2/product/purchasable-entities.md)
