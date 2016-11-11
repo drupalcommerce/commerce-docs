@@ -1,4 +1,4 @@
-# Making a product
+# Make a product
 
 Every product has one or more variations. In the event that a product has more than one variation, each variation is
 differentiated by some aspect of the product, whether it’s the product’s color, size, fabric, etc.
