@@ -35,7 +35,7 @@
         * Advanced topics
             * [Creating a checkout pane plugin](v2/checkout/checkout-pane-plugin.md)
             * Creating a checkout flow plugin
-    * Setting up payments
+    * [Setting up payments](v2/setting-up-payments.md)
         * [Install a payment gateway](v2/install-a-payment-gateway.md)
         * [Managing order payments](v2/managing-order-payments.md)
     * Using promotions
