@@ -37,7 +37,7 @@
     * [Allowing guest checkout, or account login](v2/checkout/guest.md)
     * [Customizing your checkout](v2/checkout/customize.md)
     * Advanced topics
-        * Creating a checkout pane plugin
+        * [Creating a checkout pane plugin](v2/checkout/checkout-pane-plugin.md)
         * Creating a checkout flow plugin
 
   * Setting up payments
