@@ -24,7 +24,7 @@
   * [Managing products](v2/product/index.md)
     * [Creating and using product attributes](v2/product/product-attributes.md)
     * [Making a product](v2/product/products.md)
-    * Creating a new product type
+    * [Creating a new product type](v2/product/product-type.md)
     * [Purchasable Entities](v2/product/purchasable-entities.md)
 
   * [Working with orders](v2/orders/index.md)
