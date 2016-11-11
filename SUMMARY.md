@@ -23,6 +23,7 @@
         * [Making a product](v2/product/products.md)
         * [Creating a new product type](v2/product/product-type.md)
         * [Purchasable Entities](v2/product/purchasable-entities.md)
+        * [Catalog and product pages](v2/product/catalog-and-product-pages.md)
     * [Working with orders](v2/orders/index.md)
         * [Understanding order types](v2/orders/order-types.md)
         * [Orders and order items](v2/orders/order-items.md)
