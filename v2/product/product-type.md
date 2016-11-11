@@ -1,1 +1,1 @@
-# Creating a new product type
+# Create a product type

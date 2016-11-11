@@ -21,7 +21,7 @@
     * [Managing products](v2/product/index.md)
         * [Setup product attributes](v2/product/product-attributes.md)
         * [Making a product](v2/product/products.md)
-        * [Creating a new product type](v2/product/product-type.md)
+        * [Create a product type](v2/product/product-type.md)
         * [Purchasable Entities](v2/product/purchasable-entities.md)
     * [Catalog and product pages](v2/product/catalog-and-product-pages.md)
         * [Create a product catalog](v2/product/create-a-product-catalog.md)
