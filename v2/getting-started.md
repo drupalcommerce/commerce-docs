@@ -10,7 +10,7 @@ YAY! There are just a few steps you need to follow before you can create product
 **Shortcut!** - The getting started process can be quickly done using Drupal Console command:
 
 >`drupal commerce:create:store`<br>
->![example workflow](images/drupal-commerce-create-store.gif)<br>
+>![example workflow](images/drupal-commerce-create-store.gif)
 >_You are welcome to ignore this shortcut if you prefer the user interface and proceed to step 1._
 
 ## Step 1: Import the currency(s) your store will use.
@@ -19,14 +19,14 @@ The most basic piece of information that defines your store is the currency(s) y
 Commerce stores will simply have one currency and one store. To set this up, first you need to locate the currencies
 page at `admin/commerce/config/currencies`
 
-![Currency Landing Page](images/currency-landing-page.png)
+![Currency Landing Page](building-blocks/images/currency-landing-page.png)
 
 Next, click the `Import` tab (`admin/commerce/config/currency/import`). The reason currencies need to be imported is
 because we don't want to store all the world's currencies in your database if we don't have to, so we make no
 assumptions and let each store request specific access to specific currencies. The dataset is coming from the intl
 library which generates its dataset from an international and frequently updated standards body.
 
-![Currency Import Page](images/currency-import.png)
+![Currency Import Page](building-blocks/images/currency-import.png)
 
 Once you've imported one or more currencies, you can move on to creating a store.
 

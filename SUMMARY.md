@@ -17,7 +17,7 @@
         * [State Machine](v2/building-blocks/state-machine.md)
         * [Inline Entity Form](v2/building-blocks/ief.md)
         * [Currency](v2/building-blocks/currency.md)
-    * [Store](v2/store.md)
+    * [Setting up stores](v2/store.md)
     * [Managing products](v2/product/index.md)
         * [Using product attributes](v2/product/product-attributes.md)
         * [Making a product](v2/product/products.md)
