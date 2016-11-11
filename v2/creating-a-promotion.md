@@ -1,2 +1,2 @@
-# Creating a promotion
+# Create a promotion
 
