@@ -1,5 +1,4 @@
-# Getting started
-
+# Getting ready for development
 ## Preparing the local environment
 
 Start by setting up a web server, PHP and MySQL. <br>

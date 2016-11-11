@@ -16,5 +16,3 @@ Run your Drupal updates once all of the dependencies are updated. We recommend r
 drupal update:debug
 drupal update:execute
 ```
-
-For more information about using Composer with Drupal, see the (Managing Your Drupal Project with Composer)[https://glamanate.com/blog/managing-your-drupal-project-composer] blog post.
