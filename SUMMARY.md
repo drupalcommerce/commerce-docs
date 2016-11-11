@@ -6,10 +6,10 @@
   * [Getting started](v2/getting-started.md)
     * [Composer: the what, why, and how](v2/getting-started/composer.md)
     * [Installing Drupal Commerce](v2/getting-started/install.md)
-    * [Keeping a Drupal Commerce site up to date](v2/update.md)
+    * [Keeping a Drupal Commerce site up to date](v2/getting-started/update.md)
     * Contributing
-        * [Setting up an environment](v2/contributing/development-environment.md)
-        * [Get started with contributing](v2/contributing/developing.md)
+        * [Setting up an environment](v2/getting-started/contributing/development-environment.md)
+        * [Get started with contributing](v2/getting-started/contributing/developing.md)
 
   * [Building blocks](v2/building-blocks/index.md)
     * [Address](v2/building-blocks/address/README.md)
