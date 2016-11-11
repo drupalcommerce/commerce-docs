@@ -7,6 +7,10 @@
     * Introduction to Composer
     * [Installing](v2/getting-started/install.md)
     * [Updating](v2/update.md)
+    * Contributing
+        * [Getting started](v2/contributing/getting-started.md)
+        * [Developing](v2/contributing/developing.md)
+
   * Dependencies
     * [Address](v2/dependencies/address/README.md)
       * [Zones](v2/dependencies/address/zones.md)
@@ -26,10 +30,6 @@
     * [Order Types](v2/orders/order-types.md)
     * [Order Items](v2/orders/order-items.md)
     * [Order Processing](v2/orders/order-processing.md)
-
-  * Contributing
-    * [Getting started](v2/contributing/getting-started.md)
-    * [Developing](v2/contributing/developing.md)
 
 
 
