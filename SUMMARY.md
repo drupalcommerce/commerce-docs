@@ -37,7 +37,7 @@
             * Creating a checkout flow plugin
     * Setting up payments
         * [Install a payment gateway](v2/install-a-payment-gateway.md)
-        * Managing order payments
+        * [Managing order payments](v2/managing-order-payments.md)
     * Using promotions
         * Creating a promotion
     * [Code Recipes](v2/recipes/index.md)
