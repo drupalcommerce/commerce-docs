@@ -10,7 +10,7 @@
         * Contributing
             * [Setting up an environment](v2/getting-started/contributing/development-environment.md)
             * [Get started with contributing](v2/getting-started/contributing/developing.md)
-    * [Building blocks](v2/building-blocks/index.md)
+    * [Libraries and dependencies](v2/building-blocks/index.md)
         * [Address](v2/building-blocks/address/README.md)
             * [Zones](v2/building-blocks/address/zones.md)
         * [Profile](v2/building-blocks/profile.md)
