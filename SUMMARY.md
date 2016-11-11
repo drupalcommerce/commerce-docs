@@ -21,15 +21,35 @@
 
   * [Store](v2/store.md)
 
-  * [Products](v2/product/index.md)
-    * [Attributes](v2/product/product-attributes.md)
-    * [Variations](v2/product/products.md)
+  * [Managing products](v2/product/index.md)
+    * [Creating and using product attributes](v2/product/product-attributes.md)
+    * [Making a product](v2/product/products.md)
+    * Creating a new product type
     * [Purchasable Entities](v2/product/purchasable-entities.md)
 
-  * [Orders](v2/orders/index.md)
-    * [Order Types](v2/orders/order-types.md)
-    * [Order Items](v2/orders/order-items.md)
-    * [Order Processing](v2/orders/order-processing.md)
+  * [Working with orders](v2/orders/index.md)
+    * [Understanding order types](v2/orders/order-types.md)
+    * [Orders and order items](v2/orders/order-items.md)
+    * Advanced topics
+        * [Order Processing](v2/orders/order-processing.md)
+        * Code recipes
+  * Configuring your checkout
+    * Allowing guest checkout, or account login
+    * Customizing your checkout
+    * Advanced topics
+        * Creating a checkout pane plugin
+        * Creating a checkout flow plugin
 
+  * Setting up payments
+    * Install a payment gateway
+    * Managing order payments
 
+  * Using promotions
+    * Creating a promotion
 
+  * [Code Recipes](v2/recipes/index.md) 
+    * [Stores](v2/recipes/stores.md)
+    * [Variations](v2/recipes/variations.md)
+    * [Attributes](v2/recipes/attributes.md) 
+    * [Products](v2/recipes/products.md) 
+    * [Orders](v2/recipes/orders.md)
