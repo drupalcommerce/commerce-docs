@@ -34,7 +34,7 @@
         * [Order Processing](v2/orders/order-processing.md)
         * Code recipes
   * [Configuring your checkout](v2/checkout/index.md)
-    * Allowing guest checkout, or account login
+    * [Allowing guest checkout, or account login](v2/checkout/guest.md)
     * Customizing your checkout
     * Advanced topics
         * Creating a checkout pane plugin
