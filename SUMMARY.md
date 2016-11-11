@@ -25,6 +25,7 @@
         * [Purchasable Entities](v2/product/purchasable-entities.md)
     * [Catalog and product pages](v2/product/catalog-and-product-pages.md)
         * [Create a product catalog](v2/product/create-a-product-catalog.md)
+        * [Customize the add to cart form](v2/product/customize-the-add-to-cart-form.md)
     * [Working with orders](v2/orders/index.md)
         * [Understanding order types](v2/orders/order-types.md)
         * [Orders and order items](v2/orders/order-items.md)
