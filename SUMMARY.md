@@ -5,11 +5,11 @@
 * [Commerce 2.x](v2/README.md)
   * [Getting started](v2/getting-started.md)
     * Introduction to Composer
-    * [Installing](v2/getting-started/install.md)
-    * [Updating](v2/update.md)
+    * [Installing Drupal Commerce](v2/getting-started/install.md)
+    * [Updating Drupal and Drupal Commerce](v2/update.md)
     * Contributing
         * [Setting up an environment](v2/contributing/development-environment.md)
-        * [Developing](v2/contributing/developing.md)
+        * [Get started with contributing](v2/contributing/developing.md)
 
   * Building blocks
     * [Address](v2/building-blocks/address/README.md)
