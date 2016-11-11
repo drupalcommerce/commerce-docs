@@ -33,7 +33,7 @@
     * Advanced topics
         * [Order Processing](v2/orders/order-processing.md)
         * Code recipes
-  * Configuring your checkout
+  * [Configuring your checkout](v2/checkout/index.md)
     * Allowing guest checkout, or account login
     * Customizing your checkout
     * Advanced topics
