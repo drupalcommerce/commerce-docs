@@ -11,16 +11,16 @@
         * [Setting up an environment](v2/contributing/development-environment.md)
         * [Developing](v2/contributing/developing.md)
 
-  * Dependencies
+  * Building blocks
     * [Address](v2/dependencies/address/README.md)
       * [Zones](v2/dependencies/address/zones.md)
-
     * [Profile](v2/dependencies/profile.md)
     * [State Machine](v2/dependencies/state-machine.md)
     * [Inline Entity Form](v2/dependencies/ief.md)
+    * [Currency](v2/currency.md)
 
-  * [Currency](v2/currency.md)
   * [Store](v2/store.md)
+
   * [Products](v2/product/index.md)
     * [Attributes](v2/product/product-attributes.md)
     * [Variations](v2/product/products.md)
