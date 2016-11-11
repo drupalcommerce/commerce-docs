@@ -1,17 +1,9 @@
-# Getting Started with Commerce 2
+# Getting Started with Drupal Commerce 2
 
-_Note: These are the steps immediately following the [installation process](install.md) and assumes your site is installed
-and ready to be configured._
+Drupal Commerce requires using Composer with Drupal. If you are new to Composer, or new to managing Drupal with Composer, see [Composer: the what, why, and how](composer.md).
 
-Congratulations! You have downloaded and installed Commerce and are now ready to start creating and selling products.
-YAY! There are just a few steps you need to follow before you can create products. Below we detail them out.
+To get Drupal Commerce installed, see the [Installing Drupal Commerce](install.md) guide.
+
+For keeping Drupal Commerce up to date, review the [Keeping a Drupal Commerce site up to date](update.md) guide.
 
 
-
-## Step 3: Create a product.
-
-![Product create](images/product-add.png)
-
-Now you're ready to create your first product. You can simply go to `admin/commerce/products` and click "Add Product."
-
-![Product create](images/product-add-fullpage.png)
