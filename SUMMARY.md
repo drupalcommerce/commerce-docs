@@ -32,9 +32,9 @@
     * [Configuring your checkout](v2/checkout/index.md)
         * [Allowing guest checkout, or account login](v2/checkout/guest.md)
         * [Customizing your checkout](v2/checkout/customize.md)
-        * Advanced topics
+        * [Advanced topics](v2/checkout/advanced-topics.md)
             * [Creating a checkout pane plugin](v2/checkout/checkout-pane-plugin.md)
-            * Creating a checkout flow plugin
+            * [Creating a checkout flow plugin](v2/checkout/creating-a-checkout-flow-plugin.md)
     * [Setting up payments](v2/setting-up-payments.md)
         * [Install a payment gateway](v2/install-a-payment-gateway.md)
         * [Managing order payments](v2/managing-order-payments.md)
