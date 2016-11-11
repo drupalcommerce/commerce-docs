@@ -10,7 +10,7 @@ For Commerce 2, we have native support for stores. Stores are used for invoicing
 
 >`drupal commerce:create:store`
 >![example workflow](images/drupal-commerce-create-store.gif)
-
+>_You are welcome to ignore this shortcut if you prefer the user interface._
 
 ## Overview & Architecture
 
