@@ -6,8 +6,9 @@ For Commerce 2, we have native support for stores. Stores are used for invoicing
 
 ## Create a store
 
-**Shortcut!** - The getting started process can be quickly done using Drupal Console command:
+To create a store you will need to have at least one currency imported, and then you can create a store.
 
+> **Shortcut!** - The getting started process can be quickly done using Drupal Console command:
 >`drupal commerce:create:store`
 >![example workflow](images/drupal-commerce-create-store.gif)
 >_You are welcome to ignore this shortcut if you prefer the user interface._
