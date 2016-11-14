@@ -6,7 +6,7 @@
     * [Getting started](v2/getting-started.md)
         * [Composer: the what, why, and how](v2/getting-started/composer.md)
         * [Installing Drupal Commerce](v2/getting-started/install.md)
-        * [Keeping a Drupal Commerce site up to date](v2/getting-started/update.md)
+        * [Applying updates](v2/getting-started/update.md)
         * Contributing
             * [Setting up an environment](v2/getting-started/contributing/development-environment.md)
             * [Get started with contributing](v2/getting-started/contributing/developing.md)

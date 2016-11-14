@@ -1,4 +1,4 @@
-# Updating
+# Keeping a Drupal Commerce site up to date
 
 > Note: Drupal Commerce 2 has now hit beta which supports upgrades. If you have an alpha installation, you will need to implement an upgrade path manually.
 
