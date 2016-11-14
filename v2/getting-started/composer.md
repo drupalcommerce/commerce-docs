@@ -10,30 +10,29 @@
 ## Basics
 
 ### [composer.json](https://getcomposer.org/doc/04-schema.md)
-defines metadata about the project and dependencies for the project
+The `composer.json` file defines metadata about the project and dependencies for the project.
 
 ### [composer.lock](https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file)
-computed information about dependencies and expected install state
+The `composer.lock` file contains computed information about dependencies and expected install state.
 
 ### [composer install](https://getcomposer.org/doc/03-cli.md#install)
-* downloads and installs dependencies
-* will install off of lock file
-* if no lock file, acts as update
+The `composer install` command will download and install dependencies. The install command will install off of lock file. However, if no lock file is available it will act as the update command.
+
+The command will regenerate the class autoloader.
 
 ### [composer update](https://getcomposer.org/doc/03-cli.md#update)
-* updates defined dependencies
-* rebuilds the lock file
-* generates autoloader
+The `composer update` command resolves dependencies and generates the `composer.lock` file. The update command will update dependencies to their latest versions.
 
+The command will regenerate the class autoloader.
 ### [composer require](https://getcomposer.org/doc/03-cli.md#require)
-* adds a new dependency
-* updates the JSON and .lock file.
-* updates autoloader
+The `composer require` command adds a new dependency to your project. This will update the `composer.json` and `composer.lock` files and regenerate the class autoloader.
+
+If the new dependency has any conflicts with other dependencies, such as incompatible shared dependencies, it will not install.
 
 ### [composer remove](https://getcomposer.org/doc/03-cli.md#remove)
-* removes a dependency
-* updates the JSON and .lock file
-* updates autoloader
+The `composer remove` command removes a new dependency to your project. This will update the `composer.json` and `composer.lock` files and regenerate the class autoloader.
+
+If the dependency is required by another package, it will not be removed.
 
 ## Links and resources
 
