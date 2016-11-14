@@ -7,11 +7,11 @@
 
 > Dependency management is not a new concept and not alone to PHP. NPM for NodeJS, Bower for front end libraries, Bundler/Gems for Ruby, PIP for Python, Maven for Java and so forth. 
 
-## Why does Drupal Commerce need it?
+## Why does Commerce need it?
 
-Drupal Commerce utilizes various [libraries and dependencies](v2/building-blocks/index.md).
+Commerce utilizes various [libraries and dependencies](v2/building-blocks/index.md).
 
-Drupal Commerce 2 was started first as shared libraries that solve  the common problems of selling online — regardless the platform you are using. This covers addressing, internationalization, and taxes. These libraries are then integrated into Drupal.
+Commerce 2 was started first as shared libraries that solve  the common problems of selling online — regardless the platform you are using. This covers addressing, internationalization, and taxes. These libraries are then integrated into Drupal.
 
 ## How to use it
 
