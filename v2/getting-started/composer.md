@@ -7,7 +7,13 @@
 
 > Dependency management is not a new concept and not alone to PHP. NPM for NodeJS, Bower for front end libraries, Bundler/Gems for Ruby, PIP for Python, Maven for Java and so forth. 
 
-## Basics
+## Why does Drupal Commerce need it?
+
+Drupal Commerce utilizes various [libraries and dependencies](v2/building-blocks/index.md).
+
+Drupal Commerce 2 was started first as shared libraries that solve  the common problems of selling online — regardless the platform you are using. This covers addressing, internationalization, and taxes. These libraries are then integrated into Drupal.
+
+## How to use it
 
 ### [composer.json](https://getcomposer.org/doc/04-schema.md)
 The `composer.json` file defines metadata about the project and dependencies for the project.
@@ -42,3 +48,4 @@ If the dependency is required by another package, it will not be removed.
 * [Platform.sh Drupal 8 + Composer template example](https://github.com/platformsh/platformsh-example-drupal8)
 * [Amazee Labs Composer recipes](https://www.amazeelabs.com/en/blog/drupalcomposerrecipes)
 * [Using Drupal + Composer project templates with Pantheon sites](https://pantheon.io/blog/using-composer-relocated-document-root-pantheon)
+* [Using Composer - Drupal.org](https://www.drupal.org/docs/develop/using-composer)
