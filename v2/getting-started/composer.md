@@ -9,6 +9,8 @@ If you’ve ever used [Drush](http://www.drush.org/en/master/) Make to download 
 
 ## Why does Commerce need it?
 
+Modern applications such as Drupal 8 consist of many classes, so it would be impractical and costly to manually include each one. Instead, the application includes one special class, called the autoloader which then automatically includes other classes when they are first needed. When Composer runs, it regenerates the autoloader, giving it the locations of the newly downloaded dependencies.
+
 Commerce utilizes various [libraries and dependencies](v2/building-blocks/index.md). Without Composer and the generated class autoloader you cannot use Commerce. The libraries we depend on will not be available, even if manually installed.
 
 Composer also enables version constraints and prevents dependency conflicts. Without Composer there is no way to tell our users “make sure you also update this dependency as well.” 
