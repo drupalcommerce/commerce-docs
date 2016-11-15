@@ -1,17 +1,19 @@
 # Composer: the what, why, and how
 
 ## What is Composer?
-**[Composer](https://getcomposer.org/)** is the de facto dependency management tool for PHP. Composer allows PHP developers to easily build standalone distributable libraries that can be shared and integrated by others. This is possible in part by the PHP Framework Interoperability Group (FIG) and [PSR-4](http://www.php-fig.org/psr/psr-4/) for autoloading of class files. 
-
-[PEAR](http://pear.php.net/) is another management tool, however it installs PHP libraries in a global context via `include` and `require`. Composer supports both per-project and global usages. PEAR also does not handle dependency management.
+**[Composer](https://getcomposer.org/)** is a tool for managing dependencies on the project level, a project being your site or web application. It has become the de facto dependency management tool for PHP. Composer allows PHP developers to easily build standalone distributable libraries that can be shared and integrated by others. This is possible in part by the PHP Framework Interoperability Group (FIG) and [PSR-4](http://www.php-fig.org/psr/psr-4/) for autoloading of class files. 
 
 > Dependency management is not a new concept and not alone to PHP. NPM for NodeJS, Bower for front end libraries, Bundler/Gems for Ruby, PIP for Python, Maven for Java and so forth. 
 
+If you’ve ever used [Drush](http://www.drush.org/en/master/) Make to download Drupal modules and themes, then all of this sounds familiar. You can think of Composer as the more advanced Drush Make that works for all PHP projects and packages. Compared to Drush Make, Composer has the benefit of being able to recursively resolve dependencies (downloading the dependencies of each dependency) and being able to detect conflicts.
+
 ## Why does Commerce need it?
 
-Commerce utilizes various [libraries and dependencies](v2/building-blocks/index.md).
+Commerce utilizes various [libraries and dependencies](v2/building-blocks/index.md). Without Composer and the generated class autoloader you cannot use Commerce. The libraries we depend on will not be available, even if manually installed.
 
-Commerce 2 was started first as shared libraries that solve  the common problems of selling online — regardless the platform you are using. This covers addressing, internationalization, and taxes. These libraries are then integrated into Drupal.
+Composer also enables version constraints and prevents dependency conflicts. Without Composer there is no way to tell our users “make sure you also update this dependency as well.” 
+
+This also means less work for you.
 
 ## How to use it
 
