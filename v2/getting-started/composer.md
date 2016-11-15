@@ -20,7 +20,28 @@ This also means less work for you.
 ## How to use it
 
 ### [composer.json](https://getcomposer.org/doc/04-schema.md)
-The `composer.json` file defines metadata about the project and dependencies for the project.
+The `composer.json` file defines required libraries, modules, themes, and Drupal core to download. It allows you to run commands when Composer finishes an operation, and more.
+
+Here is an example from the `commerce_authnet` module.
+
+```
+{
+  "name": "drupal/commerce_authnet",
+  "type": "drupal-module",
+  "description": "Provides Commerce integration for Authorize.net.",
+  "homepage": "http://drupal.org/project/commerce_authnet",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/commerce": "^2",
+    "commerceguys/authnet": "dev-master"
+  }
+
+```
+
+This specifies the project as being a Drupal module available at `drupal/commerce_authnet` with information about its license and homepage. It requires `commerce` of any satisfiable version 2 release, and the development version of the `commerceguys/authnet` library.
+
+> Composer relies on semantic versioning, using `~` and `^` operators, or direct release names (`2.0-beta3`.) 
+> Check out the Packagist Semver Checker to explore how version constraints work. This link is for `drupal/core: ^8.2` https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.2&minimum-stability=beta
 
 ### [composer.lock](https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file)
 The `composer.lock` file contains computed information about dependencies and expected install state.
