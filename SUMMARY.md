@@ -4,8 +4,8 @@
 * [Commerce 1.x](v1/README.md)
 * [Commerce 2.x](v2/README.md)
     * [Getting started](v2/getting-started.md)
-        * [Composer: the what, why, and how](v2/getting-started/composer.md)
-        * [Installing Drupal Commerce](v2/getting-started/install.md)
+        * [Using Composer](v2/getting-started/composer.md)
+        * [Installing Commerce](v2/getting-started/install.md)
         * [Applying updates](v2/getting-started/update.md)
         * Contributing
             * [Setting up an environment](v2/getting-started/contributing/development-environment.md)
