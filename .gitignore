@@ -17,3 +17,7 @@ _book
 
 .DS_Store
 .idea
+
+/_build/doctrees
+/_build/html
+*.pyc
