@@ -11,4 +11,6 @@ These recipes are all designed to work off of each other, so try it out - you ca
 
 [Products](products.md) - Products and types.
 
+[Multiprice](multiprice.md) - Multiprice and multicurrency.
+
 [Orders](orders.md) - Orders, order items, and their types.
