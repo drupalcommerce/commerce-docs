@@ -8,58 +8,156 @@ Enable language module and add French and Japanese languages.
 
 ## Creating field
 
-We need a new multiple commerce_price field in product variation in place of default price field.
+We need as many commerce_price fields as currency in product variation in place of default price field.
 
-Add following field in a custom module or add your own multiple commerce_price field to product variation.
+Add following fields in a custom module or add your own commerce_price fields to product variation.
 
 ```yaml
-# config/install/field.field.commerce_product_variation.default.multiprice.yml
+# config/install/field.field.commerce_product_variation.default.price_eur.yml
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
-    - field.storage.commerce_product_variation.multiprice
+    - field.storage.commerce_product_variation.price_eur
   module:
     - commerce_price
-id: commerce_product_variation.default.multiprice
-field_name: multiprice
+id: commerce_product_variation.default.price_eur
+field_name: price_eur
 entity_type: commerce_product_variation
 bundle: default
-label: Multiprice
-description: 'Define differents prices depending of currency'
+label: Price EUR
+description: 'Define price for EUR currency'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  available_currencies:
+    - 'EUR'
 field_type: commerce_price
 ```
 
 ```yaml
-# config/install/field.storage.commerce_product_variation.multiprice.yml
+# config/install/field.storage.commerce_product_variation.price_eur.yml
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_price
     - commerce_product
-id: commerce_product_variation.multiprice
-field_name: multiprice
+id: commerce_product_variation.price_eur
+field_name: price_eur
 entity_type: commerce_product_variation
 type: commerce_price
 settings: {  }
 module: commerce_price
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
 ```
 
-* Hide default price field from product variation form display and display mode.
-* Display multiprice field in form display and display mode.
+```yaml
+# config/install/field.field.commerce_product_variation.default.price_usd.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.storage.commerce_product_variation.price_usd
+  module:
+    - commerce_price
+id: commerce_product_variation.default.price_usd
+field_name: price_usd
+entity_type: commerce_product_variation
+bundle: default
+label: Price USD
+description: 'Define price for USD currency'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - 'USD'
+field_type: commerce_price
+```
+
+```yaml
+# config/install/field.storage.commerce_product_variation.price_usd.yml
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_price
+    - commerce_product
+id: commerce_product_variation.price_usd
+field_name: price_usd
+entity_type: commerce_product_variation
+type: commerce_price
+settings: {  }
+module: commerce_price
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
+```
+
+```yaml
+# config/install/field.field.commerce_product_variation.default.price_jpy.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.storage.commerce_product_variation.price_jpy
+  module:
+    - commerce_price
+id: commerce_product_variation.default.price_jpy
+field_name: price_jpy
+entity_type: commerce_product_variation
+bundle: default
+label: Price JPY
+description: 'Define price for JPY currency'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - 'JPY'
+field_type: commerce_price
+```
+
+```yaml
+# config/install/field.storage.commerce_product_variation.price_jpy.yml
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_price
+    - commerce_product
+id: commerce_product_variation.price_jpy
+field_name: price_jpy
+entity_type: commerce_product_variation
+type: commerce_price
+settings: {  }
+module: commerce_price
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
+```
+
+* Hide default price field from product variation form display.
+* Display default price field format to 'Calculated price' in display mode.
  
 ## Creating resolver
 
@@ -119,24 +217,13 @@ class CommerceMulticurrencyResolver implements PriceResolverInterface {
     // Get current language.
     $language = $this->languageManager->getCurrentLanguage()->getId();
 
-    // Get default language.
-    $default_language = $this->languageManager->getDefaultLanguage()->getId();
+    // Get value from currency price field.
+    if ($entity->hasField('price_' . strtolower($currency_by_language[$language]))) {
+      $price = $entity->get('price_' . strtolower($currency_by_language[$language]))->getValue();
+      $price = reset($price);
 
-    // Set default price to null. Default price will be used to return currency
-    // of default language if no currency has been found for current language.
-    $default_price = NULL;
-
-    // Find price for current language depending of its currency.
-    foreach ($entity->get('multiprice') as $price) {
-      if ($price->get('currency_code')->getValue() == $currency_by_language[$language]) {
-        return new Price($price->get('number')->getValue(), $price->get('currency_code')->getValue());
-      }
-      elseif ($price->get('currency_code')->getValue() == $currency_by_language[$default_language]) {
-        $default_price = new Price($price->get('number')->getValue(), $price->get('currency_code')->getValue());
-      }
+      return new Price($price['number'], $price['currency_code']);
     }
-
-    return $default_price;
   }
 }
 ```
