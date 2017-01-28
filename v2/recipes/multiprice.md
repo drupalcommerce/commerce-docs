@@ -227,4 +227,3 @@ class CommerceMulticurrencyResolver implements PriceResolverInterface {
   }
 }
 ```
-
