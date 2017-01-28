@@ -2,11 +2,16 @@
 
 We want to define a specific price and currency for each language. 
 
+## Adding languages
+
+Enable language module and add French and Japanese languages.
+
+## Creating field
+
 We need a new multiple commerce_price field in product variation in place of default price field.
 
 Add following field in a custom module or add your own multiple commerce_price field to product variation.
 
-## Creating field
 ```yaml
 # config/install/field.field.commerce_product_variation.default.multiprice.yml
 langcode: en
