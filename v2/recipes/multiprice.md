@@ -64,7 +64,7 @@ custom_storage: false
 services:
   commerce_multiprice_example.commerce_multicurrency_resolver:
     class: Drupal\commerce_multiprice_example\Resolvers\CommerceMulticurrencyResolver
-    arguments: ['@request_stack']
+    arguments: ['@language_manager']
     tags:
       - { name: commerce_price.price_resolver, priority: 600 }
 ```
