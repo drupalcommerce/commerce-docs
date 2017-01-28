@@ -88,6 +88,23 @@ use Drupal\commerce_price\Resolver\PriceResolverInterface;
 class CommerceMulticurrencyResolver implements PriceResolverInterface {
 
   /**
+   * The language manager.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected $languageManager;
+
+  /**
+   * Constructs a new CommerceMulticurrencyResolver object.
+   *
+   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
+   *   The language manager.
+   */
+  public function __construct(LanguageManagerInterface $language_manager) {
+    $this->languageManager = $language_manager;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function resolve(PurchasableEntityInterface $entity, $quantity, Context $context) {
@@ -95,10 +112,10 @@ class CommerceMulticurrencyResolver implements PriceResolverInterface {
     $currency_by_language = ['en' => 'USD', 'fr' => 'EUR', 'ja' => 'JPY'];
 
     // Get current language.
-    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $language = $this->languageManager->getCurrentLanguage()->getId();
 
     // Get default language.
-    $default_language = \Drupal::languageManager()->getDefaultLanguage()->getId();
+    $default_language = $this->languageManager->getDefaultLanguage()->getId();
 
     // Set default price to null. Default price will be used to return currency
     // of default language if no currency has been found for current language.
