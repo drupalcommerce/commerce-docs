@@ -4,7 +4,7 @@ Products and types
 Creating product types
 ----------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * id [String]
@@ -45,7 +45,7 @@ Creating product types
 Loading a product type
 ----------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $product_type = \Drupal\commerce_product\Entity\ProductType::load('my_custom_product_type');
@@ -53,7 +53,7 @@ Loading a product type
 Creating products
 -----------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * uid [Integer]
@@ -71,7 +71,7 @@ Creating products
      * variations [Array(\Drupal\commerce_product\Entity\ProductVariationInterface)]
      *   Array of variations that belong to this product.
      */
-         
+
     // The variations that belong to this product.
     $variations = [
       $variation_blue_large,
@@ -93,7 +93,7 @@ Creating products
 Loading a product
 -----------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.

@@ -4,7 +4,7 @@ Orders and order items
 Creating order types
 --------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * id [String]
@@ -18,7 +18,7 @@ Creating order types
      *   Whether or not it's enabled or disabled. 1 for enabled.
      *
      * workflow [String] - [DEFAULT = order_default]
-     *   [AVAILABLE = order_default, order_default_validation, order_fulfillment, order_fulfillment_validation] 
+     *   [AVAILABLE = order_default, order_default_validation, order_fulfillment, order_fulfillment_validation]
      *   The workflow id to use as the workflow.
      *
      * refresh_mode [String] - [DEFAULT = always]
@@ -44,7 +44,7 @@ Creating order types
 Loading an order type
 ---------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $order_type = \Drupal\commerce_order\Entity\OrderType::load('custom_order_type');
@@ -52,7 +52,7 @@ Loading an order type
 Creating order item types
 -------------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * id [String]
@@ -83,7 +83,7 @@ Creating order item types
 Loading an order item type
 --------------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $order_item_type = \Drupal\commerce_order\Entity\OrderItemType::load('custom_order_item_type');
@@ -91,7 +91,7 @@ Loading an order item type
 Creating order items
 --------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * type [String] - [DEFAULT = product_variation]
@@ -129,7 +129,7 @@ Creating order items
 Loading an order item
 ---------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
@@ -138,7 +138,7 @@ Loading an order item
 Creating orders
 ---------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * type [String] - [DEFAULT = default]
@@ -204,7 +204,7 @@ Creating orders
 Loading an order
 ----------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.

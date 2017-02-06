@@ -25,7 +25,7 @@ New site
 The following command will download Drupal 8 + Commerce 2.x with all
 dependencies to the ``mystore`` folder:
 
-::
+.. code-block:: terminal
 
     composer create-project drupalcommerce/project-base mystore --stability dev
 

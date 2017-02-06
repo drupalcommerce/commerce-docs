@@ -9,7 +9,7 @@ type we made previously.
 Creating attributes
 -------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * id [String]
@@ -39,7 +39,7 @@ Creating attributes
 Loading an attribute
 --------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $size_attribute = \Drupal\commerce_product\Entity\ProductAttribute::load('size');
@@ -47,7 +47,7 @@ Loading an attribute
 Creating values for an attribute
 --------------------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * attribute [String]
@@ -83,7 +83,7 @@ Creating values for an attribute
 Loading an attribute value
 --------------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
@@ -98,7 +98,7 @@ blue and size large. // [IMPORTANT] - If a Product Variation Type has
 fields for attributes (as we added above), then variations of that type
 MUST have those attributes.
 
-.. code:: php
+.. code-block:: php
 
     /**
      * attribute_<ATTRIBUTE_ID> [\Drupal\commerce_product\Entity\ProductAttributeValueInterface]

@@ -5,16 +5,16 @@ At its core, Commerce is a set of Drupal 8 modules, which in turn depend on othe
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
-   README
+   overview
 
 
 Getting Started
 ---------------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    getting-started
 

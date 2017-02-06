@@ -5,22 +5,13 @@
 #
 import sys, os
 
-sys.path.append(os.path.abspath('exts'))
-
-from sphinx.highlighting import lexers
-from pygments.lexers.compiled import CLexer
-from pygments.lexers.special import TextLexer
-from pygments.lexers.text import RstLexer
-from pygments.lexers.web import PhpLexer
-from drupalcommerce.sphinx.lexer import TerminalLexer
-
 # -- General configuration ------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
-    'drupalcommerce.sphinx'
+    'drupalcommerce.sphinx',
 ]
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -44,9 +35,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Drupal Commerce'
-copyright = u'2017, Commerce Guys'
-author = u'Drupal Commerce Documentation Team'
+project = 'Drupal Commerce'
+copyright = '2017, Commerce Guys'
+author = 'Drupal Commerce Documentation Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -109,18 +100,35 @@ html_context = {
 html_static_path = ['../images']
 html_favicon = "../images/favicon.ico"
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
+sys.path.append(os.path.abspath('exts'))
 
-# load PhpLexer
 from sphinx.highlighting import lexers
+from pygments.lexers.compiled import CLexer
+from pygments.lexers.special import TextLexer
+from pygments.lexers.text import RstLexer
 from pygments.lexers.web import PhpLexer
+from drupalcommerce.sphinx.lexer import TerminalLexer
 
-# enable highlighting for PHP code not between <?php ... ?> by default
+# enable highlighting for PHP code not between ``<?php ... ?>`` by default
+lexers['markdown'] = TextLexer()
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
+lexers['php-standalone'] = PhpLexer(startinline=True)
+lexers['rst'] = RstLexer()
+lexers['terminal'] = TerminalLexer()
+
+config_block = {
+    'apache': 'Apache',
+    'markdown': 'Markdown',
+    'nginx': 'Nginx',
+    'rst': 'reStructuredText',
+    'terminal': 'Terminal',
+    'varnish3': 'Varnish 3',
+    'varnish4': 'Varnish 4'
+}
+
+# use PHP as the primary domain
+primary_domain = 'php'
 
 # -- Options for HTMLHelp output ------------------------------------------
 

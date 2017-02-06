@@ -7,7 +7,7 @@ orders belong to a single store.
 Creating a store type
 ---------------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * id [String]
@@ -29,7 +29,7 @@ Creating a store type
 Loading a store type
 --------------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $store_type = \Drupal\commerce_store\Entity\StoreType::load('custom_store_type');
@@ -37,7 +37,7 @@ Loading a store type
 Creating a store
 ----------------
 
-.. code:: php
+.. code-block:: php
 
     /**
      * type [String] - [DEFAULT = 'online']
@@ -77,7 +77,7 @@ Creating a store
     // If needed, this will import the currency.
     $currency_importer = \Drupal::service('commerce_price.currency_importer');
     $currency_importer->import($currency);
-     
+
     $store = \Drupal\commerce_store\Entity\Store::create([
       'type' => 'custom_store_type',
       'uid' => 1,
@@ -96,7 +96,7 @@ Creating a store
 Loading a store
 ---------------
 
-.. code:: php
+.. code-block:: php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.

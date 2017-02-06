@@ -56,3 +56,9 @@ div[class^='highlight'] pre,
 .admonition, .admonition p {
     font-size: small;
 }
+
+.rst-content blockquote {
+  border-left: 5px solid #eaeaea;
+  padding-left: 24px;
+  margin-left: 0;
+}

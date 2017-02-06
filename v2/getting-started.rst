@@ -1,4 +1,4 @@
-Getting Started with Drupal Commerce 2
+Getting Started
 ======================================
 
 Drupal Commerce requires using Composer with Drupal. If you are new to
