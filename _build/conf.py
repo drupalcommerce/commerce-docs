@@ -20,7 +20,6 @@ from drupalcommerce.sphinx.lexer import TerminalLexer
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
-    'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock', 'sensio.sphinx.phpcode', 'sensio.sphinx.bestpractice', 'sensio.sphinx.codeblock',
     'drupalcommerce.sphinx'
 ]
 
@@ -70,10 +69,10 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'monokai'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
@@ -86,9 +85,9 @@ todo_include_todos = False
 #
 import sphinx_rtd_theme
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "commerce_theme"
 
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), "themes"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -103,27 +102,26 @@ html_theme_options = {
 html_context = {
     # Enable the "Edit in GitHub link within the header of each page.
     'display_github': True,
-    # Set the following variables to generate the resulting github URL for each page.
-    # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     'github_user': 'drupalcommerce',
     'github_repo': 'commerce-docs',
-    'github_version': 'master/source/'
+    'github_version': 'master/source/',
+    "extra_css_files" : ['_static/css/commerce.css']
 }
+html_static_path = ['_static']
+html_favicon = "../favicon.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = ['_static']
 
-lexers['markdown'] = TextLexer()
+# load PhpLexer
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+
+# enable highlighting for PHP code not between <?php ... ?> by default
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
-lexers['php-standalone'] = PhpLexer(startinline=True)
-lexers['php-symfony'] = PhpLexer(startinline=True)
-lexers['rst'] = RstLexer()
-lexers['varnish3'] = CLexer()
-lexers['varnish4'] = CLexer()
-lexers['terminal'] = TerminalLexer()
 
 # -- Options for HTMLHelp output ------------------------------------------
 
