@@ -3,7 +3,7 @@ Drupal Commerce Documentation
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    introduction
    v1/README

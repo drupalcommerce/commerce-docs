@@ -1,10 +1,5 @@
 {% extends "sphinx_rtd_theme/layout.html" %}
 {% set css_files = css_files + ['_static/pygments.css'] %}
-{% set logo = 'img/logo.png' %}
-{% set github_user = 'qodeone' %}
-{% set github_repo = 'drupal-commerce' %}
-{% set github_version = 'master' %}
-{% set theme_logo_only = true %}
 {% block sidebartitle %}
 {% if logo and theme_logo_only %}
   <a href="/">
@@ -17,8 +12,15 @@
   <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" />
 {% endif %}
 </a>
-
-
-
 {% include "searchbox.html" %}
+{% endblock %}
+
+{% block menu %}
+  {% set toctree = toctree(maxdepth=-1, collapse=False, includehidden=True) %}
+  {% if toctree %}
+      {{ toctree }}
+  {% else %}
+      <!-- Local TOC -->
+      <div class="local-toc">{{ toc }}</div>
+  {% endif %}
 {% endblock %}

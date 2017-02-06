@@ -23,8 +23,6 @@ extensions = [
     'drupalcommerce.sphinx'
 ]
 
-
-
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
@@ -105,10 +103,11 @@ html_context = {
     'github_user': 'drupalcommerce',
     'github_repo': 'commerce-docs',
     'github_version': 'master/source/',
-    "extra_css_files" : ['_static/css/commerce.css']
+    'logo': 'logo.png',
+    'theme_logo_only': True
 }
-html_static_path = ['_static']
-html_favicon = "../favicon.ico"
+html_static_path = ['../images']
+html_favicon = "../images/favicon.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
