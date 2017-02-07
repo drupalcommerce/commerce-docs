@@ -1,5 +1,5 @@
-Commerce 1.x Documentation
-==========================
+Commerce 1.x
+============
 
 Head on over to `DrupalCommerce.org`_. On the site you will find a nice
 overview of the original 1.x build and links to all the relevant user

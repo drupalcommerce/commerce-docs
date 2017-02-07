@@ -6,5 +6,5 @@ Drupal Commerce Documentation
    :maxdepth: 1
 
    introduction
-   v1/README
+   v1/index
    v2/index

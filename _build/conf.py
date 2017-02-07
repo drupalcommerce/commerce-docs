@@ -3,7 +3,16 @@
 # Drupal Commerce documentation build configuration file, created by
 # sphinx-quickstart on Wed Jan 18 19:26:21 2017.
 #
-import sys, os
+import sys, os, recommonmark
+
+sys.path.append(os.path.abspath('exts'))
+
+from sphinx.highlighting import lexers
+from pygments.lexers.compiled import CLexer
+from pygments.lexers.special import TextLexer
+from pygments.lexers.text import RstLexer
+from pygments.lexers.web import PhpLexer
+from drupalcommerce.sphinx.lexer import TerminalLexer
 
 # -- General configuration ------------------------------------------------
 
@@ -11,7 +20,8 @@ import sys, os
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
-    'drupalcommerce.sphinx',
+    'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock', 'sensio.sphinx.phpcode', 'sensio.sphinx.bestpractice', 'sensio.sphinx.codeblock',
+    'drupalcommerce.sphinx', 'sphinxcontrib.phpdomain',
 ]
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -34,10 +44,10 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-# General information about the project.
-project = 'Drupal Commerce'
-copyright = '2017, Commerce Guys'
+project = u'Drupal Commerce'
+copyright = u'2017, Commerce Guys'
 author = 'Drupal Commerce Documentation Team'
+github_doc_root = 'https://github.com/drupalcommerce/commerce-docs/tree/master/'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -61,7 +71,7 @@ language = None
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'monokai'
+pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
@@ -100,15 +110,6 @@ html_context = {
 html_static_path = ['../images']
 html_favicon = "../images/favicon.ico"
 
-sys.path.append(os.path.abspath('exts'))
-
-from sphinx.highlighting import lexers
-from pygments.lexers.compiled import CLexer
-from pygments.lexers.special import TextLexer
-from pygments.lexers.text import RstLexer
-from pygments.lexers.web import PhpLexer
-from drupalcommerce.sphinx.lexer import TerminalLexer
-
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
 lexers['markdown'] = TextLexer()
 lexers['php'] = PhpLexer(startinline=True)
@@ -123,12 +124,11 @@ config_block = {
     'nginx': 'Nginx',
     'rst': 'reStructuredText',
     'terminal': 'Terminal',
-    'varnish3': 'Varnish 3',
-    'varnish4': 'Varnish 4'
 }
 
 # use PHP as the primary domain
 primary_domain = 'php'
+highlight_language='php'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
