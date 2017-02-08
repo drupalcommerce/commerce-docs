@@ -3,7 +3,7 @@
 # Drupal Commerce documentation build configuration file, created by
 # sphinx-quickstart on Wed Jan 18 19:26:21 2017.
 #
-import sys, os, recommonmark
+import sys, os
 
 sys.path.append(os.path.abspath('exts'))
 
