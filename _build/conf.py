@@ -95,6 +95,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), "themes"]
 html_theme_options = {
     'collapse_navigation': False,
     'display_version': False,
+    'navigation_depth': 4,
     'analytics_id': 'UA-12478122-2'
 }
 html_context = {
