@@ -62,3 +62,8 @@ div[class^='highlight'] pre,
   padding-left: 24px;
   margin-left: 0;
 }
+
+.wy-menu-vertical li span.toctree-expand {
+  /* Hide the JavaScript toggles */
+  display: none !important;
+}
