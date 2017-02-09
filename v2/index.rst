@@ -60,5 +60,5 @@ The `Drupal Console`_ command-line tool.
    using-promotions
    orders/index
    checkout/index
-   setting-up-payments
+   payments/index
    recipes/index
