@@ -41,6 +41,7 @@ Creating order types
     // This must be called after saving.
     commerce_order_add_order_items_field($order_type);
 
+
 Loading an order type
 ---------------------
 

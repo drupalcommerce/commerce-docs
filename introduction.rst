@@ -15,8 +15,7 @@ written in Restructured Text(.rst) so please only edit a document if you are fam
 with .rst file formatting guidelines.
 
 If you have trouble understanding any part of the documentation, please
-notify those of us who work on this section by creating an issue in our
-`documentation repository`_ and clearly explain what you don’t
+notify those of us who work on this section by `creating an issue`_ and clearly explain what you don’t
 understand and why - we’re happy to hear from you, your contribution
 helps everyone!
 
@@ -31,4 +30,5 @@ This site is hosted on `Platform.sh`_.
 
 .. _Platform.sh: https://platform.sh
 .. _documentation repository: https://github.com/drupalcommerce/commerce-docs
+.. _creating an issue: https://github.com/drupalcommerce/commerce-docs/issues
 .. _GitHub: https://github.com/

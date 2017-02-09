@@ -1,5 +1,5 @@
-Developing
-==========
+Contributing
+===========================
 
 Choosing an issue
 -----------------
@@ -71,3 +71,9 @@ That’s it! Happy contributing!
 .. _IRC channel: https://www.drupal.org/irc
 .. _kanban board: https://contribkanban.com/board/commerce2x
 .. _create a pull request: https://help.github.com/articles/using-pull-requests#initiating-the-pull-request
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+
+   development-environment

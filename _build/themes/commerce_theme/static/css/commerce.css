@@ -1,5 +1,4 @@
 @import url("theme.css");
-@import url("open-sans.css");
 
 .wy-side-nav-search, nav.wy-nav-top {
     background: #f1f1f1;
@@ -15,14 +14,6 @@
 
 nav.wy-nav-top>a, .wy-side-nav-search>.gauge-version, nav.wy-nav-top>.fa-bars{
     color: #555555
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans';
-}
-
-body{
-    font-family: 'Open Sans';
 }
 
 .highlight-console .highlight pre span.go:before{

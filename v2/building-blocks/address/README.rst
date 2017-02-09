@@ -35,7 +35,7 @@ To configure or customize address formats, navigate to the Configuration
 page (1) and click on (2) “Address Formats” under “Regional and
 Language”.
 
-::
+.. code-block:: terminal
 
     admin/config/regional/address-formats
 

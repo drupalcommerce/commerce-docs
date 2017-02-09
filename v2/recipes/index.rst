@@ -8,7 +8,7 @@ These recipes are all designed to work off of each other, so try it out
 - you can run all the code in a single shot from top to bottom.
 
 .. toctree::
-   :maxdepth: -1
+   :maxdepth: 1
 
    stores
    variations

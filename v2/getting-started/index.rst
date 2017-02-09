@@ -2,18 +2,12 @@ Getting Started
 ===============
 
 Drupal Commerce requires using Composer with Drupal. If you are new to
-Composer, or new to managing Drupal with Composer, see `Composer the
-what, why, and how`_.
+Composer, or new to managing Drupal with Composer, see :doc:`composer`.
 
-To get Drupal Commerce installed, see the `Installing Drupal Commerce`_
+To get Drupal Commerce installed, see the :doc:`install`
 guide.
 
-For keeping Drupal Commerce up to date, review the `Keeping a Drupal
-Commerce site up to date`_ guide.
-
-.. _`Composer the what, why, and how`: getting-started/composer.rst
-.. _Installing Drupal Commerce: getting-started/install.rst
-.. _Keeping a Drupal Commerce site up to date: getting-started/update.rst
+For keeping Drupal Commerce up to date, review the :doc:`update` guide.
 
 .. toctree::
    :maxdepth: 3
@@ -22,5 +16,4 @@ Commerce site up to date`_ guide.
    composer
    install
    update
-   contributing/development-environment
-   contributing/developing
+   contributing/index

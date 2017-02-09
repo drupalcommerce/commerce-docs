@@ -5,18 +5,13 @@ See Also: `module on drupal.org`_
 
 Provides code-driven workflow functionality.
 
-| A workflow is a set of states and transitions that an entity goes
-  through during its lifecycle.
-| A transition represents a one-way link between two states and has its
-  own label.
-| The current state of a workflow is stored in a state field, which
-  provides an API for getting and
-| applying transitions. An entity can have multiple workflows, each in
-  its own state field.
-| An order might have checkout and payment workflows. A node might have
-  legal and marketing workflows.
-| Workflow groups are used to group workflows used for the same purpose
-  (e.g. payment workflows).
+A workflow is a set of states and transitions that an entity goes through during
+its lifecycle. A transition represents a one-way link between two states and has its
+own label. The current state of a workflow is stored in a state field, which
+provides an API for getting and applying transitions. An entity can have multiple
+workflows, each in its own state field. An order might have checkout and payment
+workflows. A node might have legal and marketing workflows. Workflow groups are
+used to group workflows used for the same purpose (e.g. payment workflows).
 
 Architecture
 ------------
@@ -26,7 +21,7 @@ menu links.
 
 Example: commerce\_order.workflow\_groups.yml:
 
-.. code:: yaml
+.. code-block:: yaml
 
     order:
       label: Order
@@ -37,7 +32,7 @@ use cases.
 
 Example: commerce\_order.workflows.yml:
 
-.. code:: yaml
+.. code-block:: yaml
 
     order_default_validation:
       id: order_default_validation
@@ -66,28 +61,24 @@ Example: commerce\_order.workflows.yml:
           from: [draft, validation]
           to:   canceled
 
-Transitions can be further restricted by `guards`_, which are
-implemented as tagged services:
+Transitions can be further restricted by `guards`_, which are implemented as tagged services:
 
-.. code:: yaml
+.. code-block:: yaml
 
       mymodule.fulfillment_guard:
         class: Drupal\mymodule\Guard\FulfillmentGuard
         tags:
           - { name: state_machine.guard, group: order }
 
-| The group argument allows the guard factory to only instantiate the
-  guards relevant
-| to a specific workflow group.
+The group argument allows the guard factory to only instantiate the guards relevant
+to a specific workflow group.
 
-| The current state is stored in a `StateItem`_ field.
-| A field setting specifies the used workflow, or a value callback that
-  allows the workflow to be resolved at runtime
-| (checkout workflow based on the used plugin, etc.).
+The current state is stored in a `StateItem`_ field. A field setting specifies
+the used workflow, or a value callback that allows the workflow to be resolved
+at runtime (checkout workflow based on the used plugin, etc.).
 
-| A validator is provided that ensures that the specified state is valid
-  (exists in the workflow and is in the allowed
-| transitions).
+A validator is provided that ensures that the specified state is valid (exists
+in the workflow and is in the allowed transitions).
 
 .. _module on drupal.org: https://www.drupal.org/project/state_machine
 .. _Workflow: https://github.com/bojanz/state_machine/blob/8.x-1.x/src/Plugin/Workflow/WorkflowInterface.php
