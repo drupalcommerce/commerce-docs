@@ -47,7 +47,6 @@ master_doc = 'index'
 project = u'Drupal Commerce'
 copyright = u'2017, Commerce Guys'
 author = 'Drupal Commerce Documentation Team'
-github_doc_root = 'https://github.com/drupalcommerce/commerce-docs/tree/master/'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -103,7 +102,7 @@ html_context = {
     'display_github': True,
     'github_user': 'drupalcommerce',
     'github_repo': 'commerce-docs',
-    'github_version': 'master/source/',
+    'github_version': 'master/',
     'logo': 'logo.png',
     'theme_logo_only': True
 }
