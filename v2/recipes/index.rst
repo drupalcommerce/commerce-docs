@@ -15,3 +15,4 @@ These recipes are all designed to work off of each other, so try it out
    attributes
    products
    orders
+   state-machine-transitions
