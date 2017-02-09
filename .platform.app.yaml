@@ -5,21 +5,19 @@
 name: php
 
 # The toolstack used to build the application.
-type: php
+type: "php"
+build:
+    flavor: "composer"
 
 # The configuration of app when it is exposed to the web.
 web:
     # The public directory of the app, relative to its root.
-    document_root: "/_book"
-    passthru: index.html
+    document_root: "/_build/html"
     index_files:
       - index.html
-    expires: 300
     whitelist:
       - \.html$
-
-      # GitBook search indexes.
-      - search_index\.json$
+      - \.txt$
 
       # CSS and Javascript.
       - \.css$
@@ -39,7 +37,6 @@ web:
       # robots.txt.
       - /robots\.txt$
 
-      # gitbook ico
       - \.ico$
 
 # The size of the persistent disk of the application (in MB).
@@ -47,14 +44,16 @@ disk: 2048
 
 # Build time dependencies.
 dependencies:
-  nodejs:
-    gitbook-cli: "*"
+  python:
+    virtualenv: 15.1.0
 
 # The hooks that will be performed when the package is deployed.
 hooks:
     build: |
-      gitbook install
-      gitbook build
-    # We run deploy hook after your application has been deployed and started.
-    deploy: |
-      cp -f /app/images/favicon.ico /app/_book/gitbook/images/favicon.ico
+      virtualenv .virtualenv
+      . .virtualenv/bin/activate
+      # Platform.sh currently sets PIP_USER=1.
+      export PIP_USER=
+      pip install pip==9.0.1 wheel==0.29.0
+      pip install -r requirements.txt
+      make -C _build html

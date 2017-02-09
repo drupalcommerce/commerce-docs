@@ -1,0 +1,60 @@
+@import url("theme.css");
+
+.wy-side-nav-search, nav.wy-nav-top {
+    background: #f1f1f1;
+    color:#555;
+}
+
+.wy-side-nav-search>a:hover {
+    background: rgba(255,255,255,0);
+}
+.wy-side-nav-search input[type=text] {
+  border-color:#aaa;
+}
+
+nav.wy-nav-top>a, .wy-side-nav-search>.gauge-version, nav.wy-nav-top>.fa-bars{
+    color: #555555
+}
+
+.highlight-console .highlight pre span.go:before{
+    content: '> ';
+    color: #aaaaaa;
+}
+
+div[class^='highlight'] pre,
+.highlight-xml .highlight pre,
+.highlight-md .highlight pre,
+.highlight-md .highlight pre span.gh,
+.highlight-text .highlight pre,
+.highlight-console .highlight pre span.go{
+    color: #f8f8f2 !important;
+}
+
+.highlight {
+    background-color: #222222 !important;
+}
+
+.highlight .c1 {
+    color: #aaaaaa;
+}
+
+.wy-menu-vertical a:active {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    color: #555555;
+}
+
+.admonition, .admonition p {
+    font-size: small;
+}
+
+.rst-content blockquote {
+  border-left: 5px solid #eaeaea;
+  padding-left: 24px;
+  margin-left: 0;
+}
+
+.wy-menu-vertical li span.toctree-expand {
+  /* Hide the JavaScript toggles */
+  display: none !important;
+}

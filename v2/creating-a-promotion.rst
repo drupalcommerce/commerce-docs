@@ -1,0 +1,4 @@
+Create a promotion
+==================
+
+@todo
