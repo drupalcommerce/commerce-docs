@@ -114,7 +114,7 @@ lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
 lexers['php-standalone'] = PhpLexer(startinline=True)
 lexers['rst'] = RstLexer()
-lexers['terminal'] = TerminalLexer()
+lexers['terminal'] = TerminalLexer(linenos=False)
 
 config_block = {
     'apache': 'Apache',

@@ -376,3 +376,74 @@ table.highlighttable {
 .highlight-rst .gh {
     color: #fff
 }
+
+
+.highlight-bash, .highlight-terminal {
+  /* Ditch RTD base, remove !important */
+    border: solid #e1e4e5 !important;
+    border-width: 20px 3px 4px 4px !important;
+    border-radius: 3px 3px 0 0 !important;
+    position: relative;
+    overflow-x: visible !important;
+}
+
+.highlight-bash td.linenos,.highlight-terminal td.linenos {
+    display: none
+}
+
+.highlight-bash .highlight *,.highlight-terminal .highlight * {
+    border: 0;
+    color: #fff !important;
+}
+
+.highlight-bash .highlight .c,.highlight-bash .highlight .c1,.highlight-bash .highlight .cm,.highlight-bash .highlight .cs,.highlight-terminal .highlight .c,.highlight-terminal .highlight .c1,.highlight-terminal .highlight .cm,.highlight-terminal .highlight .cs {
+    color: #b729d9;
+    font-style: italic
+}
+
+.highlight-bash .highlight .s,.highlight-bash .highlight .s1,.highlight-bash .highlight .s2,.highlight-terminal .highlight .s,.highlight-terminal .highlight .s1,.highlight-terminal .highlight .s2 {
+    color: #56db3a
+}
+
+.highlight-bash .highlight .gp,.highlight-terminal .highlight .gp {
+    color: gray
+}
+
+.highlight-bash:before,.highlight-terminal:before {
+    background-color: #777;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0px #777, 1.25em 0 0 0px #777, 2.5em 0 0 0px #777;
+    content: '';
+    display: block;
+    height: .5em;
+    left: 1em;
+    position: absolute;
+    top: -1.0em;
+    width: .5em;
+}
+
+.highlight-bash pre,.highlight-terminal pre {
+    line-height: 2
+}
+
+.highlight-bash .highlighttable,.highlight-terminal .highlighttable {
+    outline: 1px solid #555
+}
+
+.highlight-terminal .gp,.highlight-terminal .c1 {
+    display: inline-block;
+    position: relative;
+    visibility: hidden
+}
+
+.highlight-terminal .gp:before,.highlight-terminal .c1:before {
+    content: attr(data-content);
+    position: absolute;
+    visibility: visible
+}
+
+.rst-content tt.literal code, .rst-content tt.literal code, .rst-content code.literal code {
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+}
