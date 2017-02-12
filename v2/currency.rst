@@ -1,5 +1,5 @@
-Currency
-========
+Currencies
+==========
 
 See Also: `Internationalization Commerce Story`_   \|
 `Internationalization Library`_
@@ -57,5 +57,5 @@ in calculations and display
 .. _CLDR: http://cldr.unicode.org/
 
 .. |Currency Landing Page| image:: images/currency-landingpage.png
-.. |Importing currency| image:: images/currency-import.png
+.. |Importing currency| image:: images/currency-import2.png
 .. |Editing a currency| image:: images/currency-edit.png

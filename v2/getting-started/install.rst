@@ -45,24 +45,27 @@ Existing site
 
 Run these commands in the root of your website:
 
-#. Add the Drupal Packagist repository
+Ensure the Drupal Packagist repository
+######################################
+
+This allows Composer to find Commerce and the other Drupal modules.
 
 .. code-block:: terminal
 
     composer config repositories.drupal composer https://packages.drupal.org/8
 
-This allows Composer to find Commerce and the other Drupal modules.
+Download Commerce
+#################
 
-#. Download Commerce
+This will also download the required libraries and modules (Address,
+Entity, State Machine, Inline Entity Form, Profile).
 
 .. code-block:: terminal
 
     composer require "drupal/commerce 2.x-dev"
 
-This will also download the required libraries and modules (Address,
-Entity, State Machine, Inline Entity Form, Profile).
-
-#. Enable Commerce (instructions below use `Drupal Console`_)
+Enable Commerce (instructions below use `Drupal Console`_)
+##########################################################
 
 .. code-block:: terminal
 

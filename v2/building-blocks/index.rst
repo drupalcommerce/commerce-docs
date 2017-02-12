@@ -12,4 +12,3 @@ your Drupal Commerce store.
    profile
    state-machine
    ief
-   currency

@@ -54,6 +54,7 @@ The `Drupal Console`_ command-line tool.
 
    getting-started/index
    building-blocks/index
+   currency
    store
    product/index
    product/catalog-and-product-pages
