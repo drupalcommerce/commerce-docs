@@ -135,8 +135,8 @@ they have chosen a product from different stores.
 
 .. |Store landing page| image:: images/store-landing-page.png
 .. |example workflow| image:: images/drupal-commerce-create-store.gif
-.. |Currency Landing Page| image:: building-blocks/images/currency-landing-page.png
-.. |Currency Import Page| image:: building-blocks/images/currency-import.png
+.. |Currency Landing Page| image:: images/currency-landing-page.png
+.. |Currency Import Page| image:: images/currency-import.png
 .. |Store page| image:: images/store-landing-page2.png
 .. |Store create| image:: images/store-add.png
 .. |Store Entity Diagram. Stores are M:M for products and M:1 for Orders.| image:: images/store-entity-diagram.png
