@@ -447,3 +447,9 @@ table.highlighttable {
   background: transparent;
   font-size: 100%;
 }
+
+.highlight span.go:before {
+    content: "$";
+    margin-right: 0.5rem;
+    color: #b3b3b3;
+}
