@@ -14,8 +14,12 @@ Here is a running document of known and supported payment gateways.
 +----------------+---------------+-----------------------+
 | Stripe         | -dev          | `Commerce Stripe`_    |
 +----------------+---------------+-----------------------+
+| PayUMoney      | -dev          | `Commerce PayUMoney`_ |
++----------------+---------------+-----------------------+
 
 .. _Commerce Braintree: https://www.drupal.org/project/commerce_braintree
 .. _Commerce PayPal: https://www.drupal.org/project/commerce_paypal
 .. _Commerce Auth.net: https://www.drupal.org/project/commerce_authnet
 .. _Commerce Stripe: https://www.drupal.org/project/commerce_stripe
+.. _Commerce PayUMoney: https://www.drupal.org/project/commerce_payumoney
+
