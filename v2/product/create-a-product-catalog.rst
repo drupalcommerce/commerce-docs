@@ -108,3 +108,90 @@ Now go ahead and visit ``/products`` page.
    :alt: Product catalog page
 
 Voila!! Your product catalog is ready.
+
+Create facets
+~~~~~~~~~~~~~
+
+We are going to add facets to the product catalog. Your catalog will look like
+this:
+
+.. figure:: images/product_catalog_page_facets.png
+   :alt: Product catalog page with facets
+
+First things first, install `facets <https://www.drupal.org/project/facets>`_
+module. Execute the following commands:
+
+.. code-block:: bash
+
+    composer require drupal/facets
+    drupal module:install facets
+
+``facets`` module is now installed. Now, we will be adding the facets.
+
+Go to ``admin/config/search/facets``. Since we have already added a view of type
+DB index, it should show there.
+
+.. figure:: images/search_create_facet_sample.png
+   :alt: Sample facet setting
+
+Click **+ Add facet**.
+
+Earlier we have added "Brand" and "Category" fields while creating the search
+index. Now we are going to use them as facets.
+
+Do the settings as follows:
+
+.. figure:: images/search_create_facet_1.png
+   :alt: Create facet 1
+
+.. figure:: images/search_create_facet_2.png
+   :alt: Create facet 2
+
+.. figure:: images/search_create_facet_3.png
+   :alt: Create facet 3
+
+.. figure:: images/search_create_facet_4.png
+   :alt: Create facet 4
+
+Click **Save**.
+
+Repeat the above steps for adding the "Category" facet.
+
+.. figure:: images/search_create_facet_5.png
+   :alt: Create facet 5
+
+Finally, you will have two facets.
+
+.. figure:: images/search_create_facet_6.png
+   :alt: Create facet 6
+
+These facets are now available as blocks. We will place them in the catalog
+page.
+
+Go to ``admin/structure/block``.
+
+Select any block region. In this case *Bartik* theme is used, and the facet
+blocks will be placed inside *Sidebar first*.
+
+.. figure:: images/search_place_facet_1.png
+   :alt: Place facet 1
+
+Place "Brand" facet.
+
+.. figure:: images/search_place_facet_2.png
+   :alt: Place facet 2
+
+.. figure:: images/search_place_facet_3.png
+   :alt: Place facet 3
+
+Similarly, place "Category" facet.
+
+.. figure:: images/search_place_facet_4.png
+   :alt: Place facet 4
+
+**Rebuild the cache.**
+
+Visit ``/products`` page, and...
+
+.. figure:: images/product_catalog_page_facets.png
+   :alt: Product catalog page with facets
