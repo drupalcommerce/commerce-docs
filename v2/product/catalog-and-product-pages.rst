@@ -1,9 +1,6 @@
 Catalog and product pages
 =========================
 
-@todo Templating a product page
-
-
 .. toctree::
    :maxdepth: 2
 
