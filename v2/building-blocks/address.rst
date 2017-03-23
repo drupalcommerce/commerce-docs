@@ -23,8 +23,8 @@ Installation
 ------------
 
 This is a dependency of Drupal Commerce. Once you have successfully installed Drupal Commerce,
-you will have the address module and its dependent PHP libraries. See `Installation
-Instructions for Commerce 2.x`_.
+you will have the address module and its dependent PHP libraries. See :doc:`Installation
+Instructions for Commerce 2.x <../getting-started/install>`.
 
 Zones
 -----
@@ -65,4 +65,3 @@ zone members.
 .. _addressfield module: https://drupal.org/project/addressfield
 .. _Address 1.x module: https://www.drupal.org/project/address
 .. _commerceguys/addressing: https://github.com/commerceguys/addressing
-.. _Installation Instructions for Commerce 2.x: ../../install.rst
