@@ -38,7 +38,7 @@ Next, click the ``Import`` tab
 to be imported is because we don’t want to store all the world’s
 currencies in your database if we don’t have to, so we make no
 assumptions and let each store request specific access to specific
-currencies. The dataset is coming from the ``intl`` library which
+currencies. The dataset is coming from the ``intl`` library, which
 generates its dataset from an international and frequently updated
 standards body.
 
