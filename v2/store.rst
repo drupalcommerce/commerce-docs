@@ -27,7 +27,6 @@ Import the currencies your store will use.
 
 The most basic piece of information that defines your store is the
 currency(s) you want to use. The vast majority of
-
 Commerce stores will simply have one currency and one store. To set this
 up, first you need to locate the currencies page at
 ``admin/commerce/config/currencies``
@@ -55,7 +54,6 @@ Create a store.
 
 Next, we need to create a store. Every product requires one store.
 Additional details will be shared about the power of
-
 having stores baked into the core of Commerce, but for now, all you need
 to do is define your store’s name, address, and select a few things
 about taxes and billing.
