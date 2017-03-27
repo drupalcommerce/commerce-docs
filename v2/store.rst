@@ -5,7 +5,7 @@ Setting up stores
 
 For Commerce 2, we have native support for stores. Stores are used for
 invoicing, tax types, and any other settings necessary for understanding
-orders. This has many applications and its important to understand what
+orders. This has many applications, and it's important to understand what
 use cases are supported out of the box and how that impacts checkout and
 other order workflows.
 
