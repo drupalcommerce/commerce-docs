@@ -74,7 +74,7 @@ attribute.
 -  Carts (which are Orders with additional functionality) can only
    contain products from one store.
 -  You can use this architecture to limit which products can be put into
-   carts together, based on physical location or for billing\\/taxes
+   carts together, based on physical location or for billing/taxes
    purposes.
 
 **Products**, by default, have an entity reference field that targets
