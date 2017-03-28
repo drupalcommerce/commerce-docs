@@ -77,7 +77,7 @@ architecture, etc.
 Line items have a purchased\_entity reference field. The target\_type of
 that reference field is different for each line item type.
 
-... needs screenshot of line item type edit page ...
+|Order item type edit page|
 
 Here the line item type points to the product variation entity type,
 indicating that the "Product variation" line item type is used to
@@ -90,3 +90,5 @@ reinvent an IEF like widget, UX and performance considerations). We
 removed it from the roadmap with a heavy heart, but now that Commerce
 2.x supports custom product architectures, we can easily explore the
 idea in contrib at a later date.
+
+.. |Order item type edit page| image:: images/order_item_type_edit.png
