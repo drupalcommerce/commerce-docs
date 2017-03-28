@@ -83,3 +83,20 @@ Loading a variation
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $variation = \Drupal\commerce_product\Entity\ProductVariation::load(1);
+
+Altering the title field label
+------------------------------
+
+.. code-block:: php
+
+    use Drupal\Core\Entity\EntityTypeInterface;
+
+    /**
+     * Implements hook_entity_base_field_info_alter().
+     */
+    function mymodule_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+      if ($entity_type->id() == 'commerce_product') {
+        // Change the title field label.
+        $fields['title']->setLabel(t('Product name'));
+      }
+    }
