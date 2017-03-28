@@ -137,7 +137,7 @@ locations you will need to manage in order to get the desired output on
 your product page.
 
     **NOTE**: It's recommended that if you are using display modes to
-    effect the product pages, that you use the "show weights" check box.
+    affect the product pages, that you use the "show weights" check box.
     The reason for this is that when a product is rendered, all fields,
     from the variation to the actual product get sorted based on weight.
     So if you just use the drag and drop methods, you will not get the

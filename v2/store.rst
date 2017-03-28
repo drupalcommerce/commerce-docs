@@ -5,7 +5,7 @@ Setting up stores
 
 For Commerce 2, we have native support for stores. Stores are used for
 invoicing, tax types, and any other settings necessary for understanding
-orders. This has many applications and its important to understand what
+orders. This has many applications, and it's important to understand what
 use cases are supported out of the box and how that impacts checkout and
 other order workflows.
 
@@ -27,7 +27,6 @@ Import the currencies your store will use.
 
 The most basic piece of information that defines your store is the
 currency(s) you want to use. The vast majority of
-
 Commerce stores will simply have one currency and one store. To set this
 up, first you need to locate the currencies page at
 ``admin/commerce/config/currencies``
@@ -39,7 +38,7 @@ Next, click the ``Import`` tab
 to be imported is because we don’t want to store all the world’s
 currencies in your database if we don’t have to, so we make no
 assumptions and let each store request specific access to specific
-currencies. The dataset is coming from the ``intl`` library which
+currencies. The dataset is coming from the ``intl`` library, which
 generates its dataset from an international and frequently updated
 standards body.
 
@@ -55,7 +54,6 @@ Create a store.
 
 Next, we need to create a store. Every product requires one store.
 Additional details will be shared about the power of
-
 having stores baked into the core of Commerce, but for now, all you need
 to do is define your store’s name, address, and select a few things
 about taxes and billing.
@@ -76,7 +74,7 @@ attribute.
 -  Carts (which are Orders with additional functionality) can only
    contain products from one store.
 -  You can use this architecture to limit which products can be put into
-   carts together, based on physical location or for billing\\/taxes
+   carts together, based on physical location or for billing/taxes
    purposes.
 
 **Products**, by default, have an entity reference field that targets
