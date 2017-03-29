@@ -9,14 +9,16 @@ Create orders
 - Tests the commerce_order entity forms by ensuring that we can create/edit/delete orders
     - Confirms that we can create an order by going to the /admin/commerce/orders page and clicking on the 'Create a new order' link and selecting the current user as the customer
 
-        ``$this->drupalGet('/admin/commerce/orders');
+.. code-block:: php
+        $this->drupalGet('/admin/commerce/orders');
         $this->getSession()->getPage()->clickLink('Create a new order');
         $user = $this->loggedInUser->getAccountName() . ' (' . $this->loggedInUser->id() . ')';
         $edit = [
         'customer_type' => 'existing',
         'uid' => $user,
         ];
-        $this->submitForm($edit, t('Create'));``
+        $this->submitForm($edit, t('Create'));
+
 
 
     - Ensures that the next page displays the following:
@@ -34,7 +36,6 @@ Edit orders
     - An order gets created
 
 .. code-block:: php
-
         $order = Order::create([
           'type' => 'default',
           'state' => 'completed',
@@ -42,6 +43,8 @@ Edit orders
           'store_id' => $this->store,
         ]);
         $order->save();
+
+
 
     - The test goes on to add a couple of adjustments for the newly created order
 
@@ -61,6 +64,8 @@ Edit orders
         $order->addAdjustment($adjustments[0]);
         $order->addAdjustment($adjustments[1]);
         $order->save();
+
+
 
     - It then, goes to the edit page of the order and confirms that only those two adjustments are visible for that order
 
@@ -93,6 +98,8 @@ Test Admin permissions for viewing orders
         'state' => 'draft',
         'uid' => $this->loggedInUser,
         ]);
+
+
 
     - Confirms the admin can see the order as well as the 'Place order'/'Cancel order' buttons
     - Ensures that anonymous users get a 403 error if they try to access the order admin page
