@@ -21,6 +21,7 @@ Tests the commerce_order entity forms by ensuring that we can create/edit/delete
         ];
         $this->submitForm($edit, t('Create'));
 
+
 - Ensures that the next page displays the following fields:
     - Billing information
     - Product Variation
@@ -37,6 +38,7 @@ Edit orders
 -----------
 
 Tests that we can edit an existing order.
+
 - An order gets created:
 
 .. code-block:: php
@@ -74,12 +76,14 @@ Delete orders
 -------------
 
 Tests that we can delete an existing order
+
 - The tests creates a new order and goes to the delete url of the order and ensures that we are successfully taken to the delete confirm form and can finalize the deletion from there.
 
 Test Admin permissions for viewing orders
 -----------------------------------------
 
 Finally, the test ensures that only the admin user can view an order's details.
+
 - First, the test creates an order item and an order:
 
 .. code-block:: php
