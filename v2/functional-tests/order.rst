@@ -21,9 +21,9 @@ Tests the commerce_order entity forms by ensuring that we can create/edit/delete
         ];
         $this->submitForm($edit, t('Create'));
 
-- Ensures that the next page displays the following:
-    - Billing information fields
-    - Product Variation fields
+- Ensures that the next page displays the following fields:
+    - Billing information
+    - Product Variation
 
 - The test goes on to fill out the product variation fields and creates a new order item.
 
