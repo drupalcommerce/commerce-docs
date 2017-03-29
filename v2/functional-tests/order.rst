@@ -1,7 +1,7 @@
 Order Administration (see OrderAdminTest.php)
 =============================================
 
-Contains tests of order administration.
+Contains tests for order administration.
 
 Create orders
 -------------
@@ -19,6 +19,7 @@ Create orders
         'uid' => $user,
         ];
         $this->submitForm($edit, t('Create'));
+
 
     -- Ensures that the next page displays the following:
         --- Billing information fields
