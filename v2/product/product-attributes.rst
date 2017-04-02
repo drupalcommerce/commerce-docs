@@ -26,7 +26,7 @@ Creating Attributes and their Values
 
 For our t-shirt we need two attributes: color and size. Let's start by
 creating the color attribute. Go to
-``admin/commerce/product-attributes`` and click the Add attribute link.
+``admin/commerce/product-attributes`` and click the Add product attribute link.
 
 .. figure:: images/attribute_create_02.png
    :alt: Product Attribute Creation
