@@ -5,8 +5,8 @@ Products
 attributes that you will use to differentiate your products. Read here to learn
 about how to create, edit, and making some attributes optional.
 
-:doc:`products` - Finally, you can create products! Follow the directions in
-this section on the most common use cases.
+:doc:`products` - Finally, you can create products! :doc:`Follow the directions in
+this section on the most common use cases.<products>`
 
 :doc:`purchasable-entities` - When it comes to product architectures, there is
 no one true answer. Furthermore, different clients might have different needs.
