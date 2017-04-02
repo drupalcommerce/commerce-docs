@@ -69,7 +69,7 @@ Enable Commerce (instructions below use `Drupal Console`_)
 
 .. code-block:: terminal
 
-    drupal module:install commerce_product commerce_checkout commerce_cart commerce_tax
+    drupal module:install commerce_product commerce_checkout commerce_cart
 
 .. _Drupal 8’s requirements: https://www.drupal.org/requirements
 .. _Drupal VM: http://www.drupalvm.com/
