@@ -35,7 +35,7 @@ Make sure that file looks like this:
 
     /**
      * @CommerceCheckoutFlow(
-     *  id = "commerce_checkout_flow",
+     *  id = "custom_checkout_flow",
      *  label = @Translation("Custom checkout flow"),
      * )
      */
@@ -127,7 +127,7 @@ Alter ``CustomCheckoutFlow.php`` so that it looks like this:
 
     /**
      * @CommerceCheckoutFlow(
-     *  id = "commerce_checkout_flow",
+     *  id = "custom_checkout_flow",
      *  label = @Translation("Custom checkout flow"),
      * )
      */
