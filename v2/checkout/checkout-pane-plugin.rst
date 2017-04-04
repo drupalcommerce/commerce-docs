@@ -49,9 +49,10 @@ Make sure that file looks like this:
        * {@inheritdoc}
        */
       public function buildPaneForm(array $pane_form, FormStateInterface $form_state, array &$complete_form) {
-        return $pane_form['message'] = [
+        $pane_form['message'] = [
           '#markup' => $this->t('This is a custom completion message.'),
         ];
+        return $pane_form;
       }
 
     }
