@@ -7,7 +7,7 @@ Installing
 Requirements
 ------------
 
-Commerce 2.x requires Drupal 8.2.0 or newer.
+Commerce 2.x requires Drupal 8.3.0 or newer.
 
 If you already have a web server, make sure it satisfies `Drupal 8’s requirements`_.
 The recommended memory limit is 256MB or more. For local development we recommend
@@ -45,7 +45,7 @@ Existing site
 
 Run these commands in the root of your website:
 
-Ensure the Drupal Packagist repository
+Add the Drupal.org Composer repository
 ######################################
 
 This allows Composer to find Commerce and the other Drupal modules.
