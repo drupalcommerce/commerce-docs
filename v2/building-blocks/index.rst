@@ -8,7 +8,6 @@ your Drupal Commerce store.
 .. toctree::
    :maxdepth: 1
 
-   address
    profile
    state-machine
    ief

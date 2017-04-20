@@ -27,8 +27,6 @@ The following PHP libraries are used:
    CLDR data. Handles currencies, currency formatting, and more.
 -  `commerceguys/addressing`_ - An addressing library, powered by
    Google’s dataset. Stores and manipulates postal addresses.
--  `commerceguys/zone`_ - A zone library. Zones are territorial
-   groupings mostly used for shipping or tax purposes.
 -  `commerceguys/tax`_ - A tax library with a flexible data model,
    predefined tax rates, powerful resolving logic.
 
@@ -44,7 +42,6 @@ The `Drupal Console`_ command-line tool.
 .. _Profile: https://drupal.org/project/profile
 .. _commerceguys/intl: https://github.com/commerceguys/intl
 .. _commerceguys/addressing: https://github.com/commerceguys/addressing
-.. _commerceguys/zone: https://github.com/commerceguys/zone
 .. _commerceguys/tax: https://github.com/commerceguys/tax
 .. _Drupal Console: https://drupalconsole.com/
 
