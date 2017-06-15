@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-rm -rf _build/html
-make -C _build html
+make clean
+make html

@@ -106,8 +106,8 @@ html_context = {
     'logo': 'logo.png',
     'theme_logo_only': True
 }
-html_static_path = ['../images']
-html_favicon = "../images/favicon.ico"
+html_static_path = ['images']
+html_favicon = "images/favicon.ico"
 
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
 lexers['markdown'] = TextLexer()
