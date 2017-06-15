@@ -5,7 +5,7 @@
 #
 import sys, os
 
-sys.path.append(os.path.abspath('exts'))
+sys.path.append(os.path.abspath('_build/exts'))
 
 from sphinx.highlighting import lexers
 from pygments.lexers.compiled import CLexer
@@ -20,8 +20,9 @@ from drupalcommerce.sphinx.lexer import TerminalLexer
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
-    'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock', 'sensio.sphinx.phpcode', 'sensio.sphinx.bestpractice', 'sensio.sphinx.codeblock',
-    'drupalcommerce.sphinx', 'sphinxcontrib.phpdomain',
+    # 'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock', 'sensio.sphinx.phpcode', 'sensio.sphinx.bestpractice', 'sensio.sphinx.codeblock',
+    'drupalcommerce.sphinx', 
+    # 'sphinxcontrib.phpdomain',
 ]
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -85,7 +86,7 @@ import sphinx_rtd_theme
 
 html_theme = "commerce_theme"
 
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), "themes"]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), "_build/themes"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
