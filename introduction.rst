@@ -25,6 +25,7 @@ browser. Alternatively, you can clone the repository and edit the book
 in your favorite text editor.
 
 Hosting
+-------
 
 This site is hosted on `Platform.sh`_.
 

@@ -37,7 +37,12 @@ But if you want to contribute heavily, we recommend you doing a local setup of t
 4. Clone the forked repository.
 5. `cd <forked-repository>`.
 6. Execute `pip install -r requirements.txt`, you might need to execute this command with `sudo`.
-7. Execute `./build.sh`, this will generate documentation HTML inside `_build/html`.
-8. Now you can view the documentation locally, execute `php -S localhost:8000 -t _build/html` , and visit [http://localhost:8000/](http://localhost:8000/) from your browser.
+
+### Edit using Visual Code Studio
+You can download Visual Code Studio and add the [reStructured Text](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext) plugin to have an editor with built in previews available.
+
+### Edit and review manually
+1. Execute `./build.sh`, this will generate documentation HTML inside `_build/html`.
+2. Now you can view the documentation locally, execute `php -S localhost:8000 -t _build/html` , and visit [http://localhost:8000/](http://localhost:8000/) from your browser.
 
 That's it!
