@@ -1,30 +1,37 @@
 Creating a checkout pane plugin
 ===============================
 
-We will learn how to create a custom checkout pane.
+There the default, and most commonly used, checkout flow uses checkout panes to build the checkout. Checkout panes are provided through the :code:`CheckoutPane` plugin.
 
-We are going to add a custom completion message. It will appear along with the
-default completion message.
+This documentation will show you how to create a custom checkout pane plugin. For our example, we will add `Google's reCaptcha <https://www.google.com/recaptcha/intro/android.html>`_.
 
-Lets create a module that will do this.
-
-If you are using `Drupal Console <https://drupalconsole.com/>`_, then you can
-execute this command from docroot:
+First you will need a custom module. If you are using `Drupal Console <https://drupalconsole.com/>`_, then you can execute this command from your Drupal directory using the :code:`generate:module` command.
 
 .. code-block:: bash
 
-    drupal generate:module  --module="My checkout pane" --machine-name="my_checkout_pane" --module-path="/modules/custom" --description="My checkout pane" --core="8.x" --package="Custom" --composer --dependencies="commerce:commerce_checkout"
+    drupal generate:module  \ 
+        --module="Checkout reCaptcha" \
+        --machine-name="commerce_checkout_recaptcha" \ 
+        --module-path="/modules/custom" \
+        --description="Provides reCaptcha for checkout" \
+        --core="8.x" \ 
+        --package="Custom" \
+        --composer \
+        --dependencies="commerce:commerce_checkout"
 
-Now create the plugin using this command:
+Now, we will use the :code:`generate:plugin:skeleton` command to create a bare bones :code:`CheckoutPane` plugin.
 
 .. code-block:: bash
 
-    drupal generate:plugin:skeleton  --module="my_checkout_pane" --plugin-id="commerce_checkout_pane" --class="CustomCompletionMessage"
+    drupal generate:plugin:skeleton \
+        --module="commerce_checkout_recaptcha" \
+        --plugin-id="commerce_checkout_pane" \
+        --class="CheckoutReCaptcha"
 
-A new file ``CustomCompletionMessage.php`` will be created inside
-``src/Plugin/Commerce/CheckoutPane``.
+A new file :code:`CheckoutReCaptcha.php` will be created inside
+the :code:`src/Plugin/Commerce/CheckoutPane` directory within your module.
 
-Make sure that file looks like this:
+Modify the class so it resembles the sample code below
 
 .. code-block:: php
 
@@ -38,45 +45,59 @@ Make sure that file looks like this:
 
     /**
      * @CommerceCheckoutPane(
-     *  id = "custom_completion_message",
-     *  label = @Translation("Custom completion message"),
-     *  admin_label = @Translation("Custom completion message"),
+     *  id = "commerce_checkout_recaptcha",
+     *  label = @Translation("reCaptcha"),
+     *  admin_label = @Translation("reCaptcha"),
      * )
      */
-    class CustomCompletionMessage extends CheckoutPaneBase implements CheckoutPaneInterface {
+    class CheckoutReCaptcha extends CheckoutPaneBase implements CheckoutPaneInterface {
 
       /**
        * {@inheritdoc}
        */
       public function buildPaneForm(array $pane_form, FormStateInterface $form_state, array &$complete_form) {
-        $pane_form['message'] = [
-          '#markup' => $this->t('This is a custom completion message.'),
+        $pane_form['recaptcha'] = [
+          '#type' => 'inline_template',
+          '#template' => '<div class="g-recaptcha clearfix" style="clear: both;" data-sitekey="{{ google_recaptcha_public_key }}"></div>',
+          '#context' => [
+          'google_recaptcha_public_key' => 'ENTER_KEY_HERE',
+        ],
+          '#weight' => 100,
         ];
         return $pane_form;
       }
 
+      /**
+       * {@inheritdoc}
+       */
+      public function validatePaneForm(array $pane_form, FormStateInterface $form_state, array &$complete_form) {
+        try {
+            $result = \Drupal::httpClient()->post('https://www.google.com/recaptcha/api/siteverify', [
+              'form_params' => [
+                'secret' => 'ENTER_KEY_HERE',
+                'response' => $_POST['g-recaptcha-response'],
+                'remoteip' => \Drupal::request()->getClientIp(),
+              ],
+            ]);
+            $result = Json::decode($result->getBody()->getContents());
+            if (!$result['success']) {
+              $form_state->setErrorByName('recaptcha', $this->t('Error validating you are not a robot.'));
+            }
+        }
+        catch (\Exception $e) {
+            $form_state->setErrorByName('recaptcha', $this->t('Error validating you are not a robot.'));
+        }
+      }
+
     }
 
-Enable the module ``my_checkout_pane``.
+Enable the module :code:`commerce_checkout_recaptcha`.
 
 .. code-block:: bash
 
-    drupal module:install my_checkout_pane
+    drupal module:install commerce_checkout_recaptcha
 
-Now go ahead and place the pane.
-
-Go to ``admin/commerce/config/checkout-flows/manage/default``.
-
-You will see the *Custom completion message* pane.
-
-.. figure:: images/custom_checkout_pane_1.png
-   :alt: Custom checkout pane 1
-
-.. figure:: images/custom_checkout_pane_2.png
-   :alt: Custom checkout pane 2
-
-Now when you complete checkout, you will see the custom completion message like
-this:
+Now, when users enter checkout, they will have to pass the reCaptcha in order to move forward.
 
 .. figure:: images/custom_checkout_pane_3.png
    :alt: Custom checkout pane 3
