@@ -7,5 +7,7 @@ We go through the same steps as creating a promotion, but with one exception. We
   - Enter a specific coupon code
   - Mark it as active
   - Set the number of times this coupon can be used
+  
+.. image:: https://user-images.githubusercontent.com/11439056/28079378-c948fd5c-6685-11e7-8970-926dd69103ae.png
 
 That's it. Now, "Save" the promotion. Let's test this out by adding a few products that amount to an order total of over $100. Notice that a discount is not automatically applied as we have added a coupon to the promotion. Instead, in the "Checkout" page, we see a 'Coupon code' textfield. Enter the coupon code in the promotion and hit "Apply coupon". You can now see that the 15% discount has been applied to the entire order. 
