@@ -3,10 +3,11 @@ Adding a Coupon
 
 Let's now imagine that we're running a new email campaign that sends customers a coupon that they can use to get 15% off each order over $100. Setting up a coupon based promotion is almost exactly the same as what we did above.
 
-We go through the same steps as creating a promotion, but with one exception. We now use the "Add New Coupon" button.
-  - Enter a specific coupon code
-  - Mark it as active
-  - Set the number of times this coupon can be used
+We go through the **same steps as creating a promotion**, but with one exception. We now use the "Add New Coupon" button and add the following:
+
+- Enter a specific coupon code
+- Mark it as active
+- Set the number of times this coupon can be used
   
 .. image:: https://user-images.githubusercontent.com/11439056/28079378-c948fd5c-6685-11e7-8970-926dd69103ae.png
 
