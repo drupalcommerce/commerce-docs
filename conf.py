@@ -23,6 +23,7 @@ extensions = [
     # 'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock', 'sensio.sphinx.phpcode', 'sensio.sphinx.bestpractice', 'sensio.sphinx.codeblock',
     'drupalcommerce.sphinx', 
     # 'sphinxcontrib.phpdomain',
+    'sphinx_tabs.tabs',
 ]
 
 # If your documentation needs a minimal Sphinx version, state it here.
