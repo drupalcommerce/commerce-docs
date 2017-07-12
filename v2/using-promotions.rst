@@ -11,7 +11,7 @@ Promotions and coupons give us the ability to setup and configure pricing rules 
 * Compatibility - if the promotion can be combine with other promotions.
 * Coupon - a promotion that will only apply if the customer adds a matching voucher code during checkout.
 
-Create a promotion
+Create Promotions
 ------------------
 
 .. toctree::
