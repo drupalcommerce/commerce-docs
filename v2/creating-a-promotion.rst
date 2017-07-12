@@ -1,4 +1,4 @@
-Create a promotion
+Creating a Promotion
 ==================
 
 Imagine that your store is currently running a special New Year campaign where you'd like to give customers a 10% discount on orders worth $50 or more. With the default offers and conditions provided by the promotion system, it is quite simple.
