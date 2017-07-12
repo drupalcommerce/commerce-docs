@@ -42,6 +42,7 @@ The ``commerce_cart.layout.css`` and ``commerce_cart.theme.css`` files provide t
 
 
 .. highlight:: html
+
 libraries-override:
   commerce_cart/cart_block:
     css:
@@ -52,6 +53,7 @@ Or to completely disable the Cart stylesheet:
 
 
 .. highlight:: html
+
 libraries-override:
   commerce_cart/cart_block:
     css:
