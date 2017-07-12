@@ -36,7 +36,7 @@ If you already have promotions running, this will automatically be reflected in 
 Saving an Order
 ---------------
 
-Now that you've added all the order details, let's save the order. We also have the option of saving this new order to our cart. This will automatically add the products in this order to our shopping cart so we can complete the checkout by going to ``/cart``. 
+Now that you've added all the order details, let's save the order. You also have the option of saving this new order to our cart. This will automatically add the products in this order to the shopping cart so you can complete the checkout by going to ``/cart``. 
 
 .. image:: ../images/save_order_to_cart.png
 
@@ -47,21 +47,21 @@ Now, click to view the order. Notice that a discount has been automatically appl
 Adding Payments
 ----------------
 
-As an admin, once we've got all the order details done, our next job would be to complete payment on the order. That's where the 'Payments' tab comes in. The payments page allows us to process a Credit Card/Email Money Transfer/Bank Transfer/Cheque payment for the order using the store's preferred Payment Gateway.
+As an admin, once you've got all the order details done, our next job would be to complete payment on the order. That's where the 'Payments' tab comes in. The payments page allows us to process a Credit Card/Email Money Transfer/Bank Transfer/Cheque payment for the order using the store's preferred Payment Gateway.
 
 .. image:: ../images/capture_order_payment.png
 
-Now, that we've got money for our products from the customer, let's go ahead and officially place the order by clicking on the "Place order" button. This will put the order in 'Validation' state.
+Now, that you've got money for the goods from the customer, let's go ahead and officially place the order by clicking on the "Place order" button. This will put the order in 'Validation' state.
 
 .. image:: ../images/order_in_validation_state.png
 
 Completing the Order
 --------------------
 
-The next steps are pretty obvious, once we are ready to ship the order, we click the "Validate Order" button and it will put the order in `Fulfillment` state.
+The next steps are pretty obvious, once you are ready to ship the order, you must click the "Validate Order" button and it will put the order in `Fulfillment` state.
 
 .. image:: ../images/order_in_fulfillment_state.png
 
-And finally, once the order has shipped out, we hit the "Fulfill Order" button and the order enters `Completed` state.
+And finally, once the order has shipped out, you can hit the "Fulfill Order" button and the order enters `Completed` state.
 
 .. image:: ../images/order_completed.png
