@@ -6,7 +6,8 @@ Checkouts, by default, display an order summary on specific steps. This summary 
 .. figure:: images/order-checkout-summary.png
    :alt: Checkout Order Summary view
 
-## Changing the view
+Changing the view
+-----------------
 
 There is no user interface for changing the view provided. The view is added by the `CheckoutFlowBase` class when building the checkout flow form:
 
