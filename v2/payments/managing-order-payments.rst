@@ -1,4 +1,4 @@
-Managing order payments
+Managing Order Payments
 =======================
 
 @todo void, capture, refund
