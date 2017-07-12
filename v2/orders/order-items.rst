@@ -10,8 +10,7 @@ and a total price.
 The order total is based off the unit price of order items multiplied by
 their quantity and the sum of all order item totals.
 
-Order items have their unit price calculated during the `order refresh
-process <order-processing.rst>`__. This synchronizes the price with the
+Order items have their unit price calculated during the :ref:`order-process`. This synchronizes the price with the
 current purchasable entity’s price while the order is still in a draft
 state.
 
