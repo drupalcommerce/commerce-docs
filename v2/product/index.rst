@@ -3,7 +3,7 @@ Products
 
 :doc:`product-attributes` - Before creating products, you need to create some
 attributes that you will use to differentiate your products. :doc:`Read here to learn
-about how to create, edit, and making some attributes optional.<product-attibutes>`
+about how to create, edit, and making some attributes optional.<product-attributes>`
 
 :doc:`products` - Finally, you can create products! :doc:`Follow the directions in
 this section on the most common use cases.<products>`
