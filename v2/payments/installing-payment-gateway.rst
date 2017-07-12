@@ -1,5 +1,5 @@
-Installing and configuring a payment gateway
-=======================================
+Installing and Configuring a Payment Gateway
+============================================
 
 While configuring your store you would probably want to install and configure a payment gateway provider module so that you can accept online payments. Currently available payment gateways for Commerce 2 are listed `here <available-payment-gateways.html>`_.
 
