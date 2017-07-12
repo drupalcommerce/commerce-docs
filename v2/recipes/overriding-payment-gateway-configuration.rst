@@ -17,7 +17,7 @@ In order to override the configuration settings in our settings.php file we need
 
 We will first need the ID assigned to the payment gateway. This is the value of the ``id`` key, in this case "paypal_express_checkout". Make a note of this value.
 
-The ``configuration`` key includes a list of all configuration settings for the chosen payment gateway. In this case, we are interested in the ``api_username``, ``api_password`` and ``signature`` settings. Note down the keys of the settings that you want to override.
+The ``configuration`` key includes a list of all configuration settings for the chosen payment gateway. In this case, we are interested in the ``api_username``, ``api_password`` and ``signature`` settings. Make a note of the keys for the settings that you want to override.
 
 Adding the Overrides
 --------------------
