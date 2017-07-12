@@ -15,6 +15,8 @@ Advanced topics
 :doc:`order-processing` - Allows you to process an order, when the system
 recalculates order item prices and availability.
 
+:doc:`order-workflows` - Order workflows define states through which an order can go, from the moment an order was created to the moment that it is completed.
+
 .. toctree::
    :maxdepth: 2
    :hidden:
@@ -22,3 +24,8 @@ recalculates order item prices and availability.
    order-types
    order-items
    order-processing
+   order-workflows
+   order-workflows-states
+   order-workflows-transitions
+   order-workflows-groups
+   order-workflows-association
