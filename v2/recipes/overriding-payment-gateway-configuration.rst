@@ -39,4 +39,4 @@ Once you've set them, these will be the settings that will be used when a custom
 How to Test if It Works
 -----------------------
 
-To ensure that the correct settings are being used, we can make a test by checking out a test order. In the PayPal example above, the test credentials can be linked to an account that has a different name than the production account. PayPal will be also indicating that an account is a sandbox account by appending the word Test after its name. When the user is redirected to PayPal, the page's title should read "Test Store".
+To ensure that the correct settings are being used, we can make a test by checking out a test order. In the PayPal example above, the test credentials can be linked to an account that has a different name than the production account. PayPal will be also indicating that an account is a sandbox account by appending the word Test after its name. When the user is redirected to PayPal, the page's title should read "Test Store" without the overrides, and simply "Store" with the overrides.
