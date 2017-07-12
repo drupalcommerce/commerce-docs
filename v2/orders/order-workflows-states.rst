@@ -1,5 +1,5 @@
 Order Workflow States
-===============
+=====================
 
 Workflow States are the different states that an Order can exist at. For example, in the default Fulfillment workflow, the order is in the Draft state when a customer is adding products to the shopping cart, after it has been submitted it is in the Fulfillment state (awaiting for the store to fulfill the order), and after the products have been shipped the order is in the Completed State.
 
