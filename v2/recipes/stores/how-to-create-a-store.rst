@@ -1,13 +1,5 @@
-Manage a store
-===============
-
-.. code-block:: php
-
-    // Loading is based off of the primary key [String] that was defined when creating it.
-    $store_type = \Drupal\commerce_store\Entity\StoreType::load('custom_store_type');
-
-Creating a store
-----------------
+How to create a store
+=====================
 
 .. code-block:: php
 

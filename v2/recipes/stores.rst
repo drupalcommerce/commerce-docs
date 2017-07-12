@@ -6,12 +6,12 @@ orders belong to a single store.
 
 Under this section we will learn how to create and manage stores and store types.
 
-A significant change coming over from Commerce 1.x is that a store specifies it's **type**
+In Commerce 2.x a store specifies it's **type** during creation.
 
 .. toctree::
    :maxdepth: 2
 
-   stores/manage-a-store
+   stores/how-to-create-a-store
    stores/manage-store-types
 
 
