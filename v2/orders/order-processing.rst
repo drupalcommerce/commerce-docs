@@ -40,7 +40,7 @@ Now that you've added all the order details, let's save the order. You also have
 
 .. image:: ../images/save_order_to_cart.png
 
-Now, click to view the order. Notice that a discount has been automatically applied to the order total as there was a "20% Off" promotion running store-wide. Also, notice that the order is currently in "Draft" state. 
+Now, click to view the order. Notice that a discount has been automatically applied to the order total as there was a "20% Off" promotion running store-wide. Also, notice that the order is currently in `Draft` state. 
 
 .. image:: ../images/promotion_applied_to_order.png
 
@@ -51,7 +51,7 @@ As an admin, once you've got all the order details done, our next job would be t
 
 .. image:: ../images/capture_order_payment.png
 
-Now, that you've got money for the goods from the customer, let's go ahead and officially place the order by clicking on the "Place order" button. This will put the order in 'Validation' state.
+Now, that you've got money for the goods from the customer, let's go ahead and officially place the order by clicking on the "Place order" button. This will put the order in `Validation` state.
 
 .. image:: ../images/order_in_validation_state.png
 
