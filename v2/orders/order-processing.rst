@@ -9,13 +9,13 @@ In Commerce Core, the order process moves through the following cycle:
 
 .. image:: ../images/order_workflow.png
 
-It starts with the order being in the shopping cart, which is the Draft/Cart state, then, once the order is placed, it is put in the Validation state. Once we're ready to ship the goods, the order is moved to the Fulfillment state. And finally, once it leaves our store, the order is officially Completed.
+It starts with the order being in the shopping cart, which is the Draft/Cart state, then, once the order is placed, it is put in the Validation state. Once you're ready to ship the goods, the order is moved to the Fulfillment state. And finally, once it leaves our store, the order is officially Completed.
 
 Now, that you know the process, let's take a look at how you can create orders on behalf of customers and move them along the order life cycle.
 
 Creating an Order
 -----------------
-Site administrators can create orders on behalf of their customers by going to ``/admin/commerce/orders/add``. From here, we can either create a new order for an existing customer (chosen from the autocomplete search box). Or, we can create a new customer on the fly by providing just an email address.
+Site administrators can create orders on behalf of their customers by going to ``/admin/commerce/orders/add``. From here, you can either create a new order for an existing customer (chosen from the autocomplete search box). Or, you can create a new customer on the fly by providing just an email address.
 
 .. image:: ../images/create_a_new_order.png
 
@@ -31,16 +31,16 @@ As you move further down, you'll see that there is an "Adjustments" section. Thi
  
 .. image:: ../images/applying_coupons_to_order.png
 
-If we already have promotions running, this will automatically be reflected in the item pricing and the overall order total.
+If you already have promotions running, this will automatically be reflected in the item pricing and the overall order total.
 
 Saving an Order
 ---------------
 
-Now that we've added all the order details, let's save the order. We also have the option of saving this new order to our cart. This will automatically add the products in this order to our shopping cart so we can complete the checkout by going to ``/cart``. 
+Now that you've added all the order details, let's save the order. We also have the option of saving this new order to our cart. This will automatically add the products in this order to our shopping cart so we can complete the checkout by going to ``/cart``. 
 
 .. image:: ../images/save_order_to_cart.png
 
-Now, click to view the order. Notice that a discount has been automatically applied to the order total as we had a "20% Off" promotion running store-wide. Also, notice that the order is currently in "Draft" state. 
+Now, click to view the order. Notice that a discount has been automatically applied to the order total as there was a "20% Off" promotion running store-wide. Also, notice that the order is currently in "Draft" state. 
 
 .. image:: ../images/promotion_applied_to_order.png
 
