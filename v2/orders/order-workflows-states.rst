@@ -5,15 +5,19 @@ Workflow States are the different states that an Order can exist at. For example
 
 The default states for the default workflows are:
 
-========= ======================== =========== ===========================
-Default    Default with validation Fulfillment Fulfillment with validation
-========= ======================== =========== ===========================
-Draft      Draft                   Draft       Draft
-Completed  Validation              Fulfillment Validation
-Canceled   Completed               Completed   Fulfillment
-           Canceled                Canceled    Completed
-                                               Canceled
-========= ======================== =========== ===========================
++-----------+-------------------------+--------------+-----------------------------+
+| Default   | Default with validation | Fulfillment  | Fulfillment with validation |
++===========+=========================+==============+=============================+
+| Draft     | Draft                   | Draft        | Draft                       |
++-----------+-------------------------+--------------+-----------------------------+
+| Completed | Validation              | Fulfillment  | Validation                  |
++-----------+-------------------------+--------------+-----------------------------+
+| Canceled  | Completed               | Completed    | Fulfillment                 |
+|           +-------------------------+--------------+-----------------------------|
+|           | Canceled                | Canceled     | Completed                   |
+|           |                         |              +-----------------------------|
+|           |                         |              | Canceled                    |
++-----------+-------------------------+--------------+-----------------------------+
 
 Workflow States are defined as part of the workflow definition in a YAML configuration file. Here is an example of how states for the Fulfillment order workflow are defined by the Commerce Order module.
 
