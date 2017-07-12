@@ -1,6 +1,6 @@
 {
-    "restructuredtext.builtDocumentationPath" : "_build/html",
-    "restructuredtext.confPath"               : ".",
+    "restructuredtext.builtDocumentationPath" : "${workspaceRoot}/_build/html",
+    "restructuredtext.confPath"               : "${workspaceRoot}",
     "restructuredtext.updateOnTextChanged"    : "true",
     "restructuredtext.sphinxBuildPath": "sphinx-build",
     "python.linting.pylintEnabled": false
