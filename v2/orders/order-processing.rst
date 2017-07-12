@@ -1,11 +1,9 @@
-Order Processing
-================
+Order Fulfillment Workflow
+==========================
 
-Order processing is part of the order refresh process. This is run when
-on draft orders to ensure that it has up to date adjustments and that
-its order items are up to date.
+Order types can have different workflows depending on what type of products your store is selling and if the products are shippable etc. The default commerce order workflow just has two states, Draft and Completed. However, if you're running a big store with products that are shippable, the "Fulfillment, with Validation" workflow might be the best suited for your needs. 
 
-In Commerce Core, the order process moves through the following cycle:
+The fulfillment, with validation, order process moves through the following cycle:
 
 .. image:: ../images/order_workflow.png
 
