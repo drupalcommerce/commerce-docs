@@ -5,7 +5,7 @@ Order Workflows that are related to each other can be grouped together in groups
 
 Workflow Groups are defined in a YAML configuration file. Here is the definition of the default Order group:
 
--- code-block:: yaml
+.. code-block:: yaml
 
     // commerce_order.workflow_groups.yml
 

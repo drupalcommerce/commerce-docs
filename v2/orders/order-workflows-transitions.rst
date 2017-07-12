@@ -5,7 +5,7 @@ Workflow Transitions are paths through which an order can move from one state to
 
 Workflow Transitions are defined as part of the workflow definition in a YAML configuration file. Here is an example of how transitions for the Fulfillment order workflow are defined by the Commerce Order module.
 
--- code-block:: yaml
+.. code-block:: yaml
 
     // commerce_order.workflows.yml
 
