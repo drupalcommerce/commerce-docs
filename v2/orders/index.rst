@@ -9,6 +9,8 @@ have states that are controlled through State Machine.
 :doc:`order-types` - You can have different order types. Order types have their
 own settings when it comes to cart, checkout, and its processing.
 
+:doc:`changing-the-order-workflow` - Each order type can use a different order workflow depending on the type of items sold, whether it's shippable etc.
+
 Advanced topics
 ---------------
 
@@ -22,3 +24,4 @@ recalculates order item prices and availability.
    order-types
    order-items
    order-processing
+   changing-the-order-workflow
