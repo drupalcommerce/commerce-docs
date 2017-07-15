@@ -8,7 +8,7 @@ This tutorial will guide you through configuring a payment gateway provider usin
 Install the Module
 ------------------
 
-The first step is to install the module that provides integration with the desired payment gateway. In this case, Commerce PayPal. For information on how to install a module in Drupal 8 see `Installing Drupal 8 Modules <https://www.drupal.org/docs/8/extending-drupal-8/installing-drupal-8-modules>`_ and `Installing Modules from the Command Line <https://www.drupal.org/docs/8/extending-drupal-8/installing-modules-from-the-command-line>`_.
+The first step is to install the module that provides integration with the desired payment gateway. In this case, Commerce PayPal. Drupal Commerce requires Composer and most related modules would have the same requirement - see `Using Composer </v2/getting-started/composer.html>`_. For specific installation instructions check the module's documentation.
 
 Add a Payment Gateway
 ---------------------
