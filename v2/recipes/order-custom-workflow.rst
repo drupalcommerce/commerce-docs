@@ -125,7 +125,7 @@ Here is an example that you can modify according to your requirements.
       protected $mailManager;
 
       /**
-       * Constructs a new OrderReceiptSubscriber object.
+       * Constructs a new OrderFulfillmentSubscriber object.
        *
        * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
        *   The language manager.
@@ -133,8 +133,8 @@ Here is an example that you can modify according to your requirements.
        *   The mail manager.
        */
       public function __construct(
-      LanguageManagerInterface $language_manager,
-      MailManagerInterface $mail_manager
+        LanguageManagerInterface $language_manager,
+        MailManagerInterface $mail_manager
       ) {
         $this->languageManager = $language_manager;
         $this->mailManager = $mail_manager;
