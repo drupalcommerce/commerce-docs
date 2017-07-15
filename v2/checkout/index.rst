@@ -6,5 +6,6 @@ Configuring your checkout
 
    guest
    customize
+   order-summary
    checkout-pane-plugin
    creating-a-checkout-flow-plugin

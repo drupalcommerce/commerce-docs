@@ -1,3 +1,5 @@
+.. _order-process:
+
 Order Processing
 ================
 
