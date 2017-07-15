@@ -5,7 +5,7 @@ The fulfillment process of an order depends on the type of store a site is runni
 
 Commerce 2 allows developers the flexibility to customise the steps that an order goes through, from creation to completion. By default, it makes available four different workflows: Default, Default with validation, Fulfillment, and Fulfillment with validation. Custom workflows can be defined by developers. An order type can be associated with a specific workflow, and that forces the order to follow that workflow's rules.
 
-Each workflow consists of states and transitions, while related workflows can be grouped together in groups.
+Each workflow consists of states and transitions.
 
 Comparison to Commerce 1
 ------------------------

@@ -29,6 +29,5 @@ recalculates order item prices and availability.
    order-workflows
    order-workflows-states
    order-workflows-transitions
-   order-workflows-groups
    order-workflows-association
    changing-the-order-workflow
