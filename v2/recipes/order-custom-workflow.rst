@@ -10,7 +10,9 @@ Defining a Workflow
 
 An order workflow is defined in a YAML configuration file in a custom or contrib module, let's call it ``my_module``. The file should be called ``my_module.workflows.yml`` and it should be created at the root folder of the module. Drupal Commerce will automatically detect the file and load the workflows defined in it, after you clear the caches.
 
-Have a look at the original definition of the Fulfillment workflow. We are going to add a Processing state and specify that the order should move from Draft, to Processing, to Fulfillment, and finally to Completed state.
+Have a look at the original definition of the Fulfillment workflow in the ``commerce_order.workflows.yml`` file. We are going to add a Processing state and specify that the order should move from Draft, to Processing, to Fulfillment, and finally to Completed state.
+
+The group key in the definition should always have "commerce_order" as its value.
 
 .. code-block:: yaml
 
@@ -83,7 +85,7 @@ Subscribing to Transition Events
 
 In many cases we may want to do more when a transition occurs than simply moving the order to the next state. Let's say that we want to send an email to the customer when an order has been processed and is awaiting for fulfillment. That should happen when a store manager clicks on the "Process order" button in the example above.
 
-The state_machine module that provides the foundation for the workflows emits two events when a transition occurs. The events are named ``commerce_order.TRANSITION_ID.TRANSITION_PHASE``, where TRANSITION_ID is the key of the transition's definition in the YAML file, and TRANSITION_PHASE is "pre_transition" for the first event that is emitted just before the transition has occurred, and "post_transition" for the second event that is emitted just after it.
+The state_machine module that provides the foundation for the workflows emits two events when a transition occurs. The events are named ``commerce_order.TRANSITION_ID.TRANSITION_PHASE``, where ``TRANSITION_ID`` is the key of the transition's definition in the YAML file, and ``TRANSITION_PHASE`` is "pre_transition" for the first event that is emitted just before the transition has occurred, and "post_transition" for the second event that is emitted just after it.
 
 In our case we want to send the email after the transition to the Fulfillment state has occurred. We therefore need to create an event subscriber that listens to the ``commerce_order.fulfill.post_transition`` event.
 
@@ -130,7 +132,10 @@ Here is an example that you can modify according to your requirements.
        * @param \Drupal\Core\Mail\MailManagerInterface $mail_manager
        *   The mail manager.
        */
-      public function __construct(LanguageManagerInterface $language_manager, MailManagerInterface $mail_manager) {
+      public function __construct(
+      LanguageManagerInterface $language_manager,
+      MailManagerInterface $mail_manager
+      ) {
         $this->languageManager = $language_manager;
         $this->mailManager = $mail_manager;
       }
