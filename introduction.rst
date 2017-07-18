@@ -24,6 +24,8 @@ editing the files through the `GitHub`_ interface directly in your
 browser. Alternatively, you can clone the repository and edit the book
 in your favorite text editor.
 
+:doc:`contributing-to-documentation` - Contributing to Documentation.
+
 Hosting
 -------
 
@@ -33,3 +35,9 @@ This site is hosted on `Platform.sh`_.
 .. _documentation repository: https://github.com/drupalcommerce/commerce-docs
 .. _creating an issue: https://github.com/drupalcommerce/commerce-docs/issues
 .. _GitHub: https://github.com/
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   contributing-to-documentation
