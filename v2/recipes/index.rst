@@ -10,10 +10,4 @@ These recipes are all designed to work off of each other, so try it out
 .. toctree::
    :maxdepth: 1
 
-   stores
-   variations
-   attributes
-   products
-   orders
-   order-custom-workflow
-   state-machine-transitions
+To get a good understanding of the various entity relations this diagram can be helpful: `Drupal Commerce 2 entity relations - including Shipping <https://www.dx-experts.nl/commerce-2-entity-relations-including-shipping>`_
