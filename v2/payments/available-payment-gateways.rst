@@ -3,129 +3,113 @@ Available payment gateways
 
 Here is a running document of known and supported payment gateways.
 
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| Name / Machine name / Version      | # of users | Ludwig integration / Issue link        | Updated for RC1 / Issue link                     |
-+====================================+============+========================================+==================================================+
-| | `Braintree`_                     |            |                                        |                                                  |
-| | commerce_braintree               | 15         | | Yes                                  | | Yes                                            |
-| | 8.x-1.0-beta1                    |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `PayPal`_                        |            |                                        |                                                  |
-| | commerce_paypal                  | 95         | | Yes                                  | | Yes                                            |
-| | 8.x-1.0-beta1                    |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Stripe`_                        |            |                                        |                                                  |
-| | commerce_stripe                  | 17         | | Yes                                  | | Yes                                            |
-| | 8.x-1.0-beta1                    |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Authorize.Net`_                 |            |                                        |                                                  |
-| | commerce_authnet                 | 29         | | Yes                                  | | Yes                                            |
-| | 8.x-1.0-beta2                    |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Vantiv`_                        |            |                                        |                                                  |
-| | commerce_vantiv                  | 0          | | Yes                                  | | Yes                                            |
-| | 8.x-1.1                          |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Square`_                        |            |                                        |                                                  |
-| | commerce_square                  | 15         | | Yes                                  | | Yes                                            |
-| | 8.x-1.0-beta5                    |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Paymill`_                       |            |                                        |                                                  |
-| | commerce_paymill                 | n/a        | | Yes                                  | | Yes                                            |
-| | 8.x-1.x-dev                      |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Ingenico`_                      |            |                                        |                                                  |
-| | commerce_ingenico                | 6          | | Yes                                  | | Needs review                                   |
-| | 8.x-1.x-dev                      |            |                                        | | https://www.drupal.org/node/2894278            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Paytrail`_                      |            |                                        |                                                  |
-| | commerce_paytrail                | 6          | | Not needed                           | | Yes                                            |
-| | 8.x-1.0-beta4                    |            |                                        | | https://www.drupal.org/node/2894279            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Payplug`_                       |            |                                        |                                                  |
-| | commerce_payplug                 | 2          | | Yes                                  | | Yes                                            |
-| | 8.x-1.0                          |            | | https://www.drupal.org/node/2892644  | | https://www.drupal.org/node/2894280            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `PayU Money`_                    |            |                                        |                                                  |
-| | commerce_payumoney               | 12         | | Not needed                           | | Yes                                            |
-| | 8.x-1.2                          |            |                                        | | https://www.drupal.org/node/2894281            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `CC Avenue`_                     |            |                                        |                                                  |
-| | commerce_ccavenue                | 2          | | Not needed                           | | Yes                                            |
-| | 8.x-1.0-beta1                    |            |                                        | | https://www.drupal.org/node/2894282            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Alipay`_                        |            |                                        |                                                  |
-| | commerce_alipay                  | 6          | | Needs review                         | | Needs review                                   |
-| | 8.x-1.0-alpha1                   |            | | https://www.drupal.org/node/2892650  | | https://www.drupal.org/node/2894285            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `WeChat Pay`_                    |            |                                        |                                                  |
-| | commerce_wechat_pay              | 1          | | Needs review                         | | Needs review                                   |
-| | 8.x-1.0-alpha2                   |            | | https://www.drupal.org/node/2892651  | | https://www.drupal.org/node/2894286            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Worldline`_                     |            |                                        |                                                  |
-| | commerce_worldline               | 2          | | Yes                                  | | Yes                                            |
-| | 8.x-1.0-alpha2                   |            | | https://www.drupal.org/node/2892652  | | https://www.drupal.org/node/2894287            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Datatrans`_                     |            |                                        |                                                  |
-| | commerce_datatrans               | 0          | | Not needed                           | | Yes                                            |
-| | 8.x-1.x-dev                      |            |                                        | | https://www.drupal.org/node/2894289            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `EasyPaybg`_                     |            |                                        |                                                  |
-| | commerce_easypaybg               | 1          | | Not needed                           | | Needs review                                   |
-| | 8.x-1.x-dev                      |            |                                        | | https://www.drupal.org/node/2894290            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Epaybg`_                        |            |                                        |                                                  |
-| | commerce_epaybg                  | 0          | | Not needed                           | | Needs review                                   |
-| | 8.x-1.x-dev                      |            |                                        | | https://www.drupal.org/node/2894291            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Mollie`_                        |            |                                        |                                                  |
-| | commerce_mollie                  | 0          | | Needs review                         | | Needs review                                   |
-| | 8.x-1.x-dev                      |            | | https://www.drupal.org/node/2892659  | | https://www.drupal.org/node/2894292            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Moneris`_                       |            |                                        |                                                  |
-| | commerce_moneris                 | 1          | | Yes                                  | | Yes                                            |
-| | 8.x-2.0-alpha1                   |            | | https://www.drupal.org/node/2892779  | | https://www.drupal.org/node/2894293            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Open Payment Platform`_         |            |                                        |                                                  |
-| | commerce_opp                     | 1          | | Not needed                           | | Requested                                      |
-| | 8.x-1.0-alpha9                   |            |                                        | | https://www.drupal.org/node/2894294            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `smartpay`_                      |            |                                        |                                                  |
-| | commerce_smartpay                | 0          | | Not needed                           | | Needs review                                   |
-| | 8.x-1.0                          |            |                                        | | https://www.drupal.org/node/2894295            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `payjp`_                         |            |                                        |                                                  |
-| | commerce_payjp                   | n/a        | | Yes                                  | | Needs review                                   |
-| | 8.x-1.x-dev                      |            | | https://www.drupal.org/node/2892685  | | https://www.drupal.org/node/2894296            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `banklink`_                      |            |                                        |                                                  |
-| | commerce_banklink                | 2          | | Not needed                           | | Needs review                                   |
-| | 8.x-1.0-beta3                    |            |                                        | | https://www.drupal.org/node/2894299            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Razorpay Payment Integration`_  |            |                                        |                                                  |
-| | commerce_razorpay                | n/a        | | Requested                            | | Needs review                                   |
-| | 8.x-1.x-dev                      |            | | https://www.drupal.org/node/2892741  | | https://www.drupal.org/node/2894300            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `CommercePaytm`_                 |            |                                        |                                                  |
-| | commercepaytm                    | 0          | | Not needed                           | | Needs review                                   |
-| | 8.x-1.x-dev                      |            |                                        | | https://www.drupal.org/node/2894301            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Commerce sermepa`_              |            |                                        |                                                  |
-| | commerce_sermepa                 | 1          | | Requested                            | | Needs review                                   |
-| | 8.x-2.x-dev                      |            | | https://www.drupal.org/node/2892777  | | https://www.drupal.org/node/2894303            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Bitpayir`_                      |            |                                        |                                                  |
-| | commerce_bitpayir                | 5          | | Not needed                           | | Yes                                            |
-| | 8.x-1.0                          |            |                                        | | https://www.drupal.org/node/2894304            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `PayONE (sandbox)`_              |            |                                        |                                                  |
-|                                    |            | | Not needed                           | | Yes                                            |
-|                                    |            |                                        | | https://www.drupal.org/node/2894305            |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
-| | `Klarna Checkout`_               |            |                                        |                                                  |
-| | commerce_klarna_checkout         |            | | Yes                                  | | Yes                                            |
-| | 8.x-1.x-dev                      |            |                                        |                                                  |
-+------------------------------------+------------+----------------------------------------+--------------------------------------------------+
++------------------------------------+----------------+-------------------------------------------------------------------+
+| Name / Machine name                | Version        | Description                                                       |
++====================================+================+===================================================================+
+| | `Braintree`_                     |                | This module integrates Braintree Payments with Drupal Commerce    |
+| | commerce_braintree               | 8.x-1.0-beta15 | to accept credit card payments on-site and store card data in     |
+| |                                  |                | the Braintree vault for later processing.                         |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `PayPal`_                        |                | This project integrates PayPal into the Drupal Commerce payment   |
+| | commerce_paypal                  | 8.x-1.0-beta15 | and checkout systems. It currently supports off-site payment via  |
+| |                                  |                | PayPal Payments Standard (WPS) and PayPal Express Checkout (EC),  |
+| |                                  |                | off-site or on-site payment via PayPal Payments Advanced (PPA)    |
+| |                                  |                | and Payflow Link (PFL), and on-site credit card payment via Link  |
+| |                                  |                | (PFL), and on-site credit card payment via PayPal Payments Pro.   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Stripe`_                        |                | This module integrates Stripe with Drupal Commerce, providing a   |
+| | commerce_stripe                  | 8.x-1.0-beta17 | tokenized payment gateway. Customers can make payments in your    |
+| |                                  |                | Drupal Commerce shop in a secure way without leaving your site.   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Authorize.Net`_                 |                | Authorize.Net integration for the Drupal Commerce payment and     |
+| | commerce_authnet                 | 8.x-1.0-beta29 | checkout system. Currently supports credit card payments on the   |
+| |                                  |                | checkout form via the AIM API using the latest Commerce release.  |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Vantiv`_                        |                | This project integrates Vantiv payment solution into the Drupal   |
+| | commerce_vantiv                  | 8.x-1.1        | Commerce payment and checkout systems.                            |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Square`_                        |                | Square is the payment / POS company making commerce easy and      |
+| | commerce_square                  | 8.x-1.0-beta55 | accessible to everyone. This module integrates with their         |
+| |                                  |                | eCommerce API for online payments into Drupal Commerce.           |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Paymill`_                       |                | Commerce Paymill is Drupal Commerce module that integrates the    |
+| | commerce_paymill                 | 8.x-1.x-dev/a  | Paymill payement gateway into your Drupal Commerce shop.          |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Ingenico`_                      |                | This module integrates the Ingenico payment gateway with Drupal   |
+| | commerce_ingenico                | 8.x-1.x-dev    | Commerce. Ingenico is the new name for Ogone one of the leading   |
+| |                                  |                | European payment solutions.                                       |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Paytrail`_                      |                | As Suomen Verkkomaksut became Paytrail, this module will replace  |
+| | commerce_paytrail                | 8.x-1.0-beta4  | the `commerce_suomenverkkomaksut`_ module.                        |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Payplug`_                       |                | This module integrates PayPlug payment as a gateway for your      |
+| | commerce_payplug                 | 8.x-1.0        | Drupal Commerce 2.x website.                                      |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `PayU Money`_                    |                | Allows Drupal Commerce orders to be paid using PayUmoney payment  |
+| | commerce_payumoney               | 8.x-1.22       | methods.                                                          |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `CC Avenue`_                     |                | The CCAvenue Payment Gateway module implements the CCAvenue       |
+| | commerce_ccavenue                | 8.x-1.0-beta1  | payment processing service (www.ccavenue.com) in Drupal Commerce. |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Alipay`_                        |                | Alipay integration for the Drupal Commerce payment and checkout   |
+| | commerce_alipay                  | 8.x-1.0-alpha1 | system.                                                           |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `WeChat Pay`_                    |                | This module provides the WeChat Pay integration for Drupal        |
+| | commerce_wechat_pay              | 8.x-1.0-alpha2 | Commerce 2 on Drupal 8.                                           |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Worldline`_                     |                | This module provides an implementation for drupal commerce 8 of   |
+| | commerce_worldline               | 8.x-1.0-alpha2 | the atos worldline payment provider.                              |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Datatrans`_                     |                | This project provides a Datatrans integration for the Drupal      |
+| | commerce_datatrans               | 8.x-1.x-dev    | Commerce payment and checkout system.                             |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `EasyPaybg`_                     |                | Module implements Bulgarian EasyPay as payment method for         |
+| | commerce_easypaybg               | 8.x-1.x-dev    | commerce module.                                                  |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Epaybg`_                        |                | Bulgarian payments gateway http://epay.bg for Commerce module.    |
+| | commerce_epaybg                  | 8.x-1.x-dev    |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Mollie`_                        |                | Drupal Commerce Payment module for Mollie Payment Services.       |
+| | commerce_mollie                  | 8.x-1.x-dev    | Implements Mollie payment services for use with Drupal Commerce.  |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Moneris`_                       |                | Moneris is a payment solution for Canada and US. It supports also |
+| | commerce_moneris                 | 8.x-2.0-alpha1 | Moneris HPP payment system (included as a separate module in 2.x) |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Open Payment Platform`_         |                | This module integrates PAY.ON Open Payment Platform with Drupal   |
+| | commerce_opp                     | 8.x-1.0-alpha9 | Commerce, integrating their COPYandPAY widget in Drupal Commerce  |
+| |                                  |                | checkout flow.                                                    |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `smartpay`_                      |                | Supports Barclaycard Hosted Payment Pages for Drupal Commerce.    |
+| | commerce_smartpay                | 8.x-1.0        |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `payjp`_                         |                | Pay.JP integration for the Drupal Commerce payment system.        |
+| | commerce_payjp                   | 8.x-1.x-dev/a  |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `banklink`_                      |                | This is a generic banklink payment gateway for drupal             |
+| | commerce_banklink                | 8.x-1.0-beta3  | Commerce 2.x.                                                     |
+| |                                  |                |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Razorpay Payment Integration`_  |                | This module serve as Payment Gateway porvided by Razorpay.        |
+| | commerce_razorpay                | 8.x-1.x-dev/a  |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `CommercePaytm`_                 |                | Integrate paytm payment gateway with drupal commerce.             |
+| | commercepaytm                    | 8.x-1.x-dev    |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Commerce sermepa`_              |                | Commerce support for Spanish banks that use Sermepa/Redsys        |
+| | commerce_sermepa                 | 8.x-2.x-dev    | systems. Full list of banks managed by sermepa:                   |
+| |                                  |                | www.redsys.es/wps/portal/redsys/publica/acercade/nuestrosSocios   |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Bitpayir`_                      |                | Provides an integration between Drupal commerce version 2 and     |
+| | commerce_bitpayir                | 8.x-1.0        | Iranian Bitpay gateway.                                           |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `PayONE (sandbox)`_              |                | This module integrates the German PAYONE Payment Provider         |
+|                                    |                | with Drupal Commerce 2.x (D8) to accept credit card payments      |
+|                                    |                | on-site and PayPal Express payments off-line.                     |
++------------------------------------+----------------+-------------------------------------------------------------------+
+| | `Klarna Checkout`_               |                | This project integrates Klarna Checkout payment into the          |
+| | commerce_klarna_checkout         | 8.x-1.x-dev    | Drupal Commerce payment and checkout systems.                     |
+| |                                  |                |                                                                   |
++------------------------------------+----------------+-------------------------------------------------------------------+
 
 .. _Braintree: https://www.drupal.org/project/commerce_braintree
 .. _PayPal: https://www.drupal.org/project/commerce_paypal
@@ -157,4 +141,4 @@ Here is a running document of known and supported payment gateways.
 .. _Bitpayir: https://www.drupal.org/project/commerce_bitpayir
 .. _PayONE (sandbox): https://www.drupal.org/sandbox/mitrpaka/2849906
 .. _Klarna Checkout: https://github.com/mitrpaka/commerce_klarna_checkout
-
+.. _commerce_suomenverkkomaksut: https://drupal.org/project/commerce_suomenverkkomaksut
