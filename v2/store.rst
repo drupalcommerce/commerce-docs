@@ -29,7 +29,7 @@ The most basic piece of information that defines your store is the
 currency(s) you want to use. The vast majority of
 Commerce stores will simply have one currency and one store. To set this
 up, first you need to locate the currencies page at
-``admin/commerce/config/currencies``
+``admin/commerce/config/currency``
 
 |Currency Landing Page|
 
