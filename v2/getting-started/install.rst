@@ -45,15 +45,6 @@ Existing site
 
 Run these commands in the root of your website:
 
-Add the Drupal.org Composer repository
-######################################
-
-This allows Composer to find Commerce and the other Drupal modules.
-
-.. code-block:: terminal
-
-    composer config repositories.drupal composer https://packages.drupal.org/8
-
 Download Commerce
 #################
 
