@@ -1,9 +1,7 @@
 Keeping a Drupal Commerce site up to date
 =========================================
 
-    Note: Drupal Commerce 2 supports upgrades between versions and has since beta. If
-    you have an alpha installation, you will need to implement an
-    upgrade path manually.
+    Note: Drupal Commerce 2 includes an upgrade path stretching back to beta1.
 
 To update to the newest version of Drupal Commerce, you will need to
 update with Composer.
