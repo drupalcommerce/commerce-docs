@@ -36,7 +36,7 @@ Tips:
    this case).
 -  Downloading additional modules:
    ``composer require "drupal/devel:1.x-dev"``
--  Updating an existing module: ``composer update drupal/address -–with-dependencies``
+-  Updating an existing module: ``composer update drupal/address --with-dependencies``
 
 See the `project-base README`_ for more details.
 
