@@ -53,7 +53,7 @@ Entity, State Machine, Inline Entity Form, Profile).
 
 .. code-block:: terminal
 
-    composer require "drupal/commerce 2.x-dev"
+    composer require "drupal/commerce"
 
 Enable Commerce (instructions below use `Drupal Console`_)
 ##########################################################
