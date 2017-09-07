@@ -4,7 +4,7 @@ disk: 1024
 web:
   locations:
     "/":
-      root: "."
+      root: ""
       passthru: /index.php
       expires: 1h
 mounts:
