@@ -34,7 +34,7 @@ as ``web/modules/contrib/commerce``).
 
 Tips:
 
--  The ``bin`` folder contains `Drupal Console`_ and `PHPUnit`_.
+-  The ``bin`` folder contains [Drupal Console] and [PHPUnit].
 -  The ``web`` folder represents the document root.
 -  Composer commands are always run from the site root (``mystore`` in this case).
 -  Downloading additional modules: ``composer require "drupal/devel:1.x-dev"``
