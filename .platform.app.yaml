@@ -1,0 +1,17 @@
+name: docs
+type: php:7.2
+disk: 1024
+web:
+  locations:
+    "/":
+      root: "."
+      passthru: /index.php
+      expires: 1h
+mounts:
+    '/app/cache': 'shared:files/cache'
+    '/app/logs': 'shared:files/logs'
+    '/app/images': 'shared:files/images'
+    '/app/assets': 'shared:files/assets'
+    '/app/user/data': 'shared:files/user-data'
+    '/app/backup': 'shared:files/backup'
+    '/app/tmp': 'shared:files/tmp'

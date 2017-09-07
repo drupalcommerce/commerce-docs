@@ -1,0 +1,6 @@
+https://{default}/:
+  type: upstream
+  upstream: docs:http
+https://{default}/:
+  type: redirect
+  to: https://{default}/
