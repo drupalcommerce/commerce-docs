@@ -3,13 +3,12 @@ version: 1.6.3
 description: "Learn2 is a new modern documentation theme for Grav"
 icon: book
 author:
-  name: Team Grav
-  email: devs@getgrav.org
-  url: http://getgrav.org
-homepage: https://github.com/getgrav/grav-theme-learn2
-demo: http://learn.getgrav.org
-keywords: heme, docs, modern, fast, responsive, html5, css3
-bugs: https://github.com/getgrav/grav-theme-learn2/issues
+  name: Drupal Commerce Maintainers
+  email:
+  url: https://drupalcommerce.org/
+homepage: https://drupalcommerce.org/
+demo:
+bugs: https://github.com/drupalcommerce/commerce-docs/issues
 license: MIT
 
 form:

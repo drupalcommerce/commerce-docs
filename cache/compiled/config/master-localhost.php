@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1504805385,
-    'checksum' => 'c7be8ac595d6a1d2e7d8dfa66a5ef643',
+    'timestamp' => 1504811214,
+    'checksum' => '4e5767723d6ffd61ed61063e5192cbeb',
     'files' => [
         'user/localhost/config' => [
             'security' => [
@@ -21,11 +21,15 @@ return [
             ],
             'plugins/highlight' => [
                 'file' => 'user/config/plugins/highlight.yaml',
-                'modified' => 1502885356
+                'modified' => 1504810919
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/config/plugins/simplesearch.yaml',
                 'modified' => 1502885356
+            ],
+            'security' => [
+                'file' => 'user/config/security.yaml',
+                'modified' => 1504753228
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
@@ -110,7 +114,7 @@ return [
             ],
             'highlight' => [
                 'enabled' => true,
-                'theme' => 'learn',
+                'theme' => 'commerce',
                 'lines' => false
             ],
             'problems' => [
