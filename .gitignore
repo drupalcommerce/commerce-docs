@@ -28,13 +28,15 @@ _book
 
 # Grav Specific
 data/*
-!data/.*
+!data/.gitkeep
 plugins/*
-!plugins/.*
+!plugins/.gitkeep
 themes/*
-!themes/.*
+!themes/.gitkeep
 cache/*
 !cache/.gitkeep
+logs/*
+!logs/.gitkeep
 
 # OS Generated
 .DS_Store*
