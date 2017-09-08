@@ -8,7 +8,7 @@ taxonomy:
 project being your site or web application. It has become the de facto dependency
 management tool for PHP. Composer allows PHP developers to easily build standalone
 distributable libraries that can be shared and integrated by others. This is
-possible in part by the PHP Framework Interoperability Group (FIG) and `PSR-4`_
+possible in part by the PHP Framework Interoperability Group (FIG) and [PSR-4]
 for autoloading of class files.
 
 >  Dependency management is not a new concept and not alone to PHP. NPM for NodeJS,

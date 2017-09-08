@@ -5,14 +5,14 @@ taxonomy:
 ---
 
 
-While configuring your store you would probably want to install and configure a payment gateway provider module so that you can accept online payments. Currently available payment gateways for Commerce 2 are listed `here <available-payment-gateways.html>`_.
+While configuring your store you would probably want to install and configure a payment gateway provider module so that you can accept online payments. Currently available payment gateways for Commerce 2 are listed [here](../01.available-gateways).
 
 This tutorial will guide you through configuring a payment gateway provider using the Commerce PayPal module as an example.
 
 Install the Module
 ------------------
 
-The first step is to install the module that provides integration with the desired payment gateway. In this case, Commerce PayPal. Drupal Commerce requires Composer and most related modules would have the same requirement - see `Using Composer </v2/getting-started/composer.html>`_. For specific installation instructions check the module's documentation.
+The first step is to install the module that provides integration with the desired payment gateway. In this case, Commerce PayPal. Drupal Commerce requires Composer and most related modules would have the same requirement - see [Using Composer](../../01.getting-started/01.using-composer). For specific installation instructions check the module's documentation.
 
 Add a Payment Gateway
 ---------------------
