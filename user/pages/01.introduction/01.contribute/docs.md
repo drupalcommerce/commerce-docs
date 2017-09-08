@@ -67,67 +67,6 @@ Will render as -
 | Test 3         | fail          |
 | Test 4         | pass          |
 
-**For adding tabs**
-
-.. code-block::
-	.. tabs::
-		.. tab:: Quickstart
-			.. code-block:: php
-
-					use Drupal\commerce_store\Entity\StoreType;
-
-					/**
-					 * id [String]
-					 *   The primary key for this store type.
-					 *
-					 * label [String]
-					 *   The label for this store type.
-					 *
-					 * description [String]
-					 *   The description for this store type.
-					 */
-					$store_type = StoreType::create([
-					  'id' => 'custom_store_type',
-					  'label' => 'My custom store type',
-					  'description' => 'This is my first custom store type!',
-					]);
-
-					$store_type->save();
-
-		.. tab:: Tutorial
-
-			 Tutorial goes here
-
-Will render as -
-
-.. tabs::
-	.. tab:: Quickstart
-		.. code-block:: php
-
-				use Drupal\commerce_store\Entity\StoreType;
-
-				/**
-				 * id [String]
-				 *   The primary key for this store type.
-				 *
-				 * label [String]
-				 *   The label for this store type.
-				 *
-				 * description [String]
-				 *   The description for this store type.
-				 */
-				$store_type = StoreType::create([
-				  'id' => 'custom_store_type',
-				  'label' => 'My custom store type',
-				  'description' => 'This is my first custom store type!',
-				]);
-
-				$store_type->save();
-
-	.. tab:: Tutorial
-
-		 Tutorial goes here
-
 ### Creating a pull request
 
 Pull requests let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.
