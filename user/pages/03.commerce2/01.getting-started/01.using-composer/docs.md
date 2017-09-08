@@ -72,7 +72,7 @@ satisfiable version 2 release, and the development version of the `commerceguys/
 >  release names (`2.0-beta3`.)
 > 
 >  Check out the Packagist Semver Checker to explore how version constraints work.
->  This link is for `drupal/core: ^8.2` [https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.2&minimum-stability=beta_](https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.2&minimum-stability=beta_)
+>  This link is for `drupal/core: ^8.3` [https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.3&minimum-stability=dev](https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.3&minimum-stability=dev)
 
 ### [composer.lock]
 
