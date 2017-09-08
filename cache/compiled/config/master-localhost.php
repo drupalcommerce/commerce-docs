@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1504836597,
-    'checksum' => '0c7622b5de5a2f8a67f2ad5dbe16ac82',
+    'timestamp' => 1504841693,
+    'checksum' => '3b251cd06e47299cca88474467310d58',
     'files' => [
         'user/localhost/config' => [
             'security' => [
@@ -37,7 +37,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1504836493
+                'modified' => 1504841687
             ]
         ],
         'system/config' => [
@@ -74,6 +74,10 @@ return [
             'plugins/highlight' => [
                 'file' => 'user/plugins/highlight/highlight.yaml',
                 'modified' => 1504836493
+            ],
+            'plugins/markdown-notices' => [
+                'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
+                'modified' => 1504841687
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
@@ -116,6 +120,16 @@ return [
                 'enabled' => true,
                 'theme' => 'commerce',
                 'lines' => false
+            ],
+            'markdown-notices' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'level_classes' => [
+                    0 => 'yellow',
+                    1 => 'red',
+                    2 => 'blue',
+                    3 => 'green'
+                ]
             ],
             'problems' => [
                 'enabled' => true,

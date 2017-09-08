@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1504836596,
-    'checksum' => 'b3fba178d018ef2ea07545b8ede66490',
+    'timestamp' => 1504841693,
+    'checksum' => '8ad7b6c6c044d46eb8de5de6664080cd',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -38,6 +38,10 @@ return [
             'plugins/highlight' => [
                 'file' => 'user/plugins/highlight/blueprints.yaml',
                 'modified' => 1504836493
+            ],
+            'plugins/markdown-notices' => [
+                'file' => 'user/plugins/markdown-notices/blueprints.yaml',
+                'modified' => 1504841687
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
@@ -2042,6 +2046,54 @@ return [
                 'name' => 'plugins.highlight.theme',
                 'validation' => 'strict'
             ],
+            'plugins.markdown-notices' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.markdown-notices.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.markdown-notices.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.markdown-notices.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'Use built in CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.markdown-notices.built_in_css',
+                'validation' => 'strict'
+            ],
+            'plugins.markdown-notices.level_classes' => [
+                'type' => 'selectize',
+                'size' => 'large',
+                'label' => 'Level classes',
+                'classes' => 'fancy',
+                'validate' => [
+                    'type' => 'commalist'
+                ],
+                'name' => 'plugins.markdown-notices.level_classes',
+                'validation' => 'strict'
+            ],
             'plugins.problems' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -2462,6 +2514,11 @@ return [
                 'highlight' => [
                     'enabled' => 'plugins.highlight.enabled',
                     'theme' => 'plugins.highlight.theme'
+                ],
+                'markdown-notices' => [
+                    'enabled' => 'plugins.markdown-notices.enabled',
+                    'built_in_css' => 'plugins.markdown-notices.built_in_css',
+                    'level_classes' => 'plugins.markdown-notices.level_classes'
                 ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
