@@ -4,14 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Products and types
-==================
-
-Creating product types
-----------------------
-
-.. code-block:: php
-
+```php
     /**
      * id [String]
      *   Primary key for this product type.
@@ -47,19 +40,21 @@ Creating product types
     commerce_product_add_variations_field($product_type);
     commerce_product_add_stores_field($product_type);
     commerce_product_add_body_field($product_type);
+    
+```
 
 Loading a product type
 ----------------------
 
-.. code-block:: php
-
+```php
     // Loading is based off of the primary key [String] that was defined when creating it.
     $product_type = \Drupal\commerce_product\Entity\ProductType::load('my_custom_product_type');
+```
 
 Creating products
 -----------------
 
-.. code-block:: php
+```php
 
     /**
      * uid [Integer]
@@ -95,12 +90,16 @@ Creating products
     // You can also add a variation to a product using the addVariation() method.
     $product->addVariation($variation_red_medium);
     $product->save();
+    
+```
 
 Loading a product
 -----------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $product = \Drupal\commerce_product\Entity\Product::load(1);
+
+```

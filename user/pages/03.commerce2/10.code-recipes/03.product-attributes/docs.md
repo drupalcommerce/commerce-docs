@@ -4,9 +4,6 @@ taxonomy:
     category: docs
 ---
 
-Product Attributes and Values
-=============================
-
 Product variation types can have certain attributes (ex. color) and
 those attributes have values (ex red, blue). In this example, we will
 create two attributes (color and size) and add them to the variation
@@ -15,8 +12,7 @@ type we made previously.
 Creating attributes
 -------------------
 
-.. code-block:: php
-
+```php
     /**
      * id [String]
      *   The primary key for this attribute.
@@ -41,19 +37,20 @@ Creating attributes
 
     $attribute_field_manager->createField($color_attribute, 'my_custom_variation_type');
     $attribute_field_manager->createField($size_attribute, 'my_custom_variation_type');
+```
 
 Loading an attribute
 --------------------
 
-.. code-block:: php
-
+```php
     // Loading is based off of the primary key [String] that was defined when creating it.
     $size_attribute = \Drupal\commerce_product\Entity\ProductAttribute::load('size');
+```
 
 Creating values for an attribute
 --------------------------------
 
-.. code-block:: php
+```php
 
     /**
      * attribute [String]
@@ -85,15 +82,17 @@ Creating values for an attribute
       'name' => 'Large',
     ]);
     $large->save();
+```
 
 Loading an attribute value
 --------------------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $red = \Drupal\commerce_product\Entity\ProductAttributeValue::load(1);
+```
 
 Assigning attributes to a variation
 -----------------------------------
@@ -104,8 +103,7 @@ blue and size large. // [IMPORTANT] - If a Product Variation Type has
 fields for attributes (as we added above), then variations of that type
 MUST have those attributes.
 
-.. code-block:: php
-
+```php
     /**
      * attribute_<ATTRIBUTE_ID> [\Drupal\commerce_product\Entity\ProductAttributeValueInterface]
      *   The attribute value entity to use for the attribute type.
@@ -127,3 +125,4 @@ MUST have those attributes.
       'attribute_size' => $large,
     ]);
     $variation_blue_large->save();
+```

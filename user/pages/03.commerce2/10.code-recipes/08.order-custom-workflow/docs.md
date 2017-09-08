@@ -1,5 +1,8 @@
-How to Create a Custom Order Workflow
-=====================================
+---
+title: How to Create a Custom Order Workflow
+taxonomy:
+    category: docs
+---
 
 In many cases, the default order workflows may not provide the states and transitions that match a store's operational processes. Commerce 2 allows developers to create custom workflows that fit custom requirements.
 
@@ -14,8 +17,7 @@ Have a look at the original definition of the Fulfillment workflow in the ``comm
 
 The group key in the definition should always have "commerce_order" as its value.
 
-.. code-block:: yaml
-
+```yaml
     // my_module.workflows.yml
 
     my_module_fulfillment_processing:
@@ -50,18 +52,16 @@ The group key in the definition should always have "commerce_order" as its value
           label: 'Cancel order'
           from: [draft, processing, fulfillment]
           to:   canceled
+```
 
 Associating the Order Type with the Workflow
 --------------------------------------------
 
 Once the workflow is registered, we need to associate an order type with it. We will assume that we use the default order type for this example. Visit ``/admin/commerce/config/order-types`` and select to Edit the default workflow. Use the workflow dropdown to choose the "Fulfill, with processing" option.
 
-.. figure:: images/order_workflow_association.jpg
-   :alt: Associating the Order Type with the New Workflow
+![Associating the Order Type with the New Workflow](../images/order_workflow_association.jpg)
 
-   Associating the Order Type with the New Workflow
-
-On a production site you may want to export the Order Type as configuration and that would contain its workflow association as well - see `Managing your site's configuration <https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration>`_.
+On a production site you may want to export the Order Type as configuration and that would contain its workflow association as well - see [Managing your site's configuration](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration).
 
 Testing the Result
 ------------------
@@ -70,15 +70,9 @@ Once the workflow is registered and it is associated with an order type, store m
 
 You can also cancel the order at any step, as defined in the workflow's transitions.
 
-.. figure:: images/process_order.jpg
-   :alt: Moving an Order from Processing to Fulfillment
+![Moving an Order from Processing to Fulfillment](../images/process_order.jpg)
 
-   Moving an Order from Processing to Fulfillment
-
-.. figure:: images/fulfill_order.jpg
-   :alt: Moving an Order from Fulfillment to Completed
-
-   Moving an Order from Fulfillment to Completed
+![Moving an Order from Fulfillment to Completed](../images/fulfill_order.jpg)
 
 Subscribing to Transition Events
 --------------------------------
@@ -91,8 +85,7 @@ In our case we want to send the email after the transition to the Fulfillment st
 
 Here is an example that you can modify according to your requirements.
 
-.. code-block:: php
-
+```php
     // my_module/src/EventSubscriber/OrderFulfillmentSubscriber.php
 
     namespace Drupal\my_module\EventSubscriber;
@@ -185,19 +178,19 @@ Here is an example that you can modify according to your requirements.
       }
 
     }
+```
 
 Note that the following functions are made available by the event, if you need to execute more advanced logic based on the state that you are coming from or the workflow that the transition is part of.
 
-.. code-block:: php
-
+```php
     $fromState = $event->getFromState();
     $toState = $event->getToState();
     $workflow = $event->getWorkflow();
+```
 
 At last, don't forget to register your event subscriber.
 
-.. code-block:: yaml
-
+```yaml
     // my_module/my_module.services.yml
 
     services:
@@ -206,3 +199,4 @@ At last, don't forget to register your event subscriber.
         arguments: ['@language_manager', '@plugin.manager.mail']
         tags:
           - { name: event_subscriber }
+```

@@ -4,16 +4,13 @@ taxonomy:
     category: docs
 ---
 
-Product Variations and types
-============================
-
 Product variations are the purchasable parts of products, thus products
 need at least one variation.
 
 Creating variation types
 ------------------------
 
-.. code-block:: php
+```php
 
     /**
      * id [String]
@@ -41,18 +38,23 @@ Creating variation types
     ]);
     $variation_type->save();
 
+```
+
 Loading a variation type
 ------------------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $variation_type = \Drupal\commerce_product\Entity\ProductVariationType::load('my_custom_variation_type');
+    
+```
 
 Creating variations
 -------------------
 
-.. code-block:: php
+```php
+
 
     /**
      * type [String] - [DEFAULT = default]
@@ -80,20 +82,25 @@ Creating variations
       'price' => new \Drupal\commerce_price\Price('24.99', 'USD'),
     ]);
     $variation->save();
+    
+```
 
 Loading a variation
 -------------------
 
-.. code-block:: php
+```php
+
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $variation = \Drupal\commerce_product\Entity\ProductVariation::load(1);
 
+```
+
 Altering the title field label
 ------------------------------
 
-.. code-block:: php
+```php
 
     use Drupal\Core\Entity\EntityTypeInterface;
 
@@ -106,3 +113,4 @@ Altering the title field label
         $fields['title']->setLabel(t('Product name'));
       }
     }
+```

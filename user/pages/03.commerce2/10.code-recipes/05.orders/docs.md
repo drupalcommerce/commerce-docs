@@ -4,13 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Orders and order items
-======================
-
-Creating order types
---------------------
-
-.. code-block:: php
+```php
 
     /**
      * id [String]
@@ -47,19 +41,22 @@ Creating order types
     // This must be called after saving.
     commerce_order_add_order_items_field($order_type);
 
+```
 
 Loading an order type
 ---------------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $order_type = \Drupal\commerce_order\Entity\OrderType::load('custom_order_type');
 
+```
+
 Creating order item types
 -------------------------
 
-.. code-block:: php
+```php
 
     /**
      * id [String]
@@ -86,19 +83,22 @@ Creating order item types
       'orderType' => 'custom_order_type',
     ]);
     $order_item_type->save();
+```
 
 Loading an order item type
 --------------------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [String] that was defined when creating it.
     $order_item_type = \Drupal\commerce_order\Entity\OrderItemType::load('custom_order_item_type');
 
+```
+
 Creating order items
 --------------------
 
-.. code-block:: php
+```php
 
     /**
      * type [String] - [DEFAULT = product_variation]
@@ -132,20 +132,24 @@ Creating order items
     $unit_price = new \Drupal\commerce_price\Price('9.99', 'USD');
     $order_item->setUnitPrice($unit_price);
     $order_item->save();
+    
+```
 
 Loading an order item
 ---------------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $order_item = \Drupal\commerce_order\Entity\OrderItem::load(1);
 
+```
+
 Creating orders
 ---------------
 
-.. code-block:: php
+```php
 
     /**
      * type [String] - [DEFAULT = default]
@@ -207,12 +211,16 @@ Creating orders
       'placed' => time(),
     ]);
     $order->save();
+    
+```
 
 Loading an order
 ----------------
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $order = \Drupal\commerce_order\Entity\Order::load(1);
+
+```

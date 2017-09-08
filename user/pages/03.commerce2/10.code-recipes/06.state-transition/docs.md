@@ -4,12 +4,9 @@ taxonomy:
     category: docs
 ---
 
-State Machine Transitions
-=========================
-
 For an actual example being used in Drupal Commerce, check out the state machine transition event subscriber being used in commerce_order to set an order's placed timestamp:
-* `commerce_order.services.yml`_
-* `TimestampEventSubscriber.php`_
+* [commerce_order.services.yml]
+* [TimestampEventSubscriber.php]
 
 Finding Transitions
 -------------------
@@ -18,8 +15,7 @@ Transition information can be found in a `{module}.workflows.yml`.
 
 Example from commerce_order:
 
-.. code-block:: yaml
-
+```yaml
     # commerce_order.services.yml
     order_default:
       id: order_default
@@ -41,14 +37,14 @@ Example from commerce_order:
           label: 'Cancel order'
           from: [draft]
           to:   canceled
+```
 
 Reacting to Transitions
 -----------------------
 
 Example - reacting to the order 'place' transition.
 
-.. code-block:: php
-
+```php
     // mymodule/src/EventSubscriber/MyModuleEventSubscriber.php
     namespace Drupal\my_module\EventSubscriber;
 
@@ -69,6 +65,7 @@ Example - reacting to the order 'place' transition.
         // @todo Write code that will run when the subscribed event fires.
       }
     }
+```
 
 Telling Drupal About Your Event Subscriber
 
@@ -76,15 +73,15 @@ Your event subscriber should be added to `{module}.services.yml` in the base dir
 
 The following would register the event subscriber in the previous section:
 
-.. code-block:: yaml
-
+```yaml
     # mymodule.services.yml
     services:
       my_module_event_subscriber:
         class: '\Drupal\my_module\EventSubscriber\MyModuleEventSubscriber'
         tags:
           - { name: 'event_subscriber' }
+```
 
 
-.. _commerce_order.services.yml: https://github.com/drupalcommerce/commerce/blob/080ca52fbb9ec73b9eeece5487a62d221e75ed04/modules/order/commerce_order.services.yml#L29
-.. _TimestampEventSubscriber.php: https://github.com/drupalcommerce/commerce/blob/080ca52fbb9ec73b9eeece5487a62d221e75ed04/modules/order/src/EventSubscriber/TimestampEventSubscriber.php
+[commerce_order.services.yml]: https://github.com/drupalcommerce/commerce/blob/080ca52fbb9ec73b9eeece5487a62d221e75ed04/modules/order/commerce_order.services.yml#L29
+[TimestampEventSubscriber.php]: https://github.com/drupalcommerce/commerce/blob/080ca52fbb9ec73b9eeece5487a62d221e75ed04/modules/order/src/EventSubscriber/TimestampEventSubscriber.php

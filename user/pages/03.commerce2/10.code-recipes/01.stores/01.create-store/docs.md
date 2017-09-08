@@ -1,7 +1,10 @@
-How to create a store
-=====================
+---
+title: How to create a store
+taxonomy:
+    category: docs
+---
 
-.. code-block:: php
+```php
 
     /**
      * type [String] - [DEFAULT = 'online']
@@ -56,12 +59,15 @@ How to create a store
     // If needed, this sets the store as the default store.
     $store_storage = \Drupal::service('entity_type.manager')->getStorage('commerce_store');
     $store_storage->markAsDefault($store);
+    
+```
 
-Loading a store
----------------
+## Loading a store
 
-.. code-block:: php
+```php
 
     // Loading is based off of the primary key [Integer]
     //   1 would be the first one saved, 2 the next, etc.
     $store = \Drupal\commerce_store\Entity\Store::load(1);
+
+```
