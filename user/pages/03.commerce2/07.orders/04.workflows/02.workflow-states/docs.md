@@ -9,6 +9,7 @@ Workflow States are the different states that an Order can exist at. For example
 The default states for the default workflows are:
 
 | Default   | Default with validation | Fulfillment  | Fulfillment with validation |
+|----------------------------------------------------------------------------------|
 | Draft     | Draft                   | Draft        | Draft                       |
 | Completed | Validation              | Fulfillment  | Validation                  |
 | Canceled  | Completed               | Completed    | Fulfillment                 |
