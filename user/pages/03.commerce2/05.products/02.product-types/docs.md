@@ -20,23 +20,19 @@ Goto ``admin/commerce/product-attributes``
 
 OR
 
-.. figure:: images/product-attribute-4.png
-	:alt: Click on Product attribute
+![Click on Product attribute](../images/product-attribute-4.png)
 
 Click **Add product attribute**
 
-.. figure:: images/product-attribute-1.png
-	:alt: Click on Add product attribute
+![Click on Add product attribute](../images/product-attribute-1.png)
 
 This will open a form.
 
-.. figure:: images/product-attribute-2.png
-	:alt: Fill Product attribute form
+![Fill Product attribute form](../images/product-attribute-2.png)
 
 After saving this form, we are required to fill *attribute values*.
 
-.. figure:: images/product-attribute-3.png
-	:alt: Fill attribute values
+![Fill attribute values](../images/product-attribute-3.png)
 
 Now save this form.
 
@@ -51,30 +47,25 @@ Goto ``admin/commerce/config/product-variation-types``
 
 OR
 
-.. figure:: images/product-variation-5.png
-	:alt: Click on Product variation type
+![Click on Product variation type](../images/product-variation-5.png)
 
 Click **Add product variation type**
 
-.. figure:: images/product-variation-1.png
-	:alt: Click on Add product variation type
+![Click on Add product variation type](../images/product-variation-1.png)
 
 This will open a form.
 
-.. figure:: images/product-variation-2.png
-	:alt: Fill product variation form
+![Fill product variation form](../images/product-variation-2.png)
 
 Now we will add image field to our product variation.
 
 Click on **Manage fields** and then click on **Add field**
 
-.. figure:: images/product-variation-3.png
-	:alt: Click Add field under Manage fields tab
+![Click Add field under Manage fields tab](../images/product-variation-3.png)
 
 Now select field type Image under *Reference*.
 
-.. figure:: images/product-variation-4.png
-	:alt: Create an image field
+![Create an image field](../images/product-variation-4.png)
 
 Then click on **Save and continue**. Then save the settings for image field.
 
@@ -89,18 +80,15 @@ Goto ``admin/commerce/config/product-types``
 
 OR
 
-.. figure:: images/product-type-3.png
-	:alt: Click on Product types
+![Click on Product types](../images/product-type-3.png)
 
 Click on **Add product type**
 
-.. figure:: images/product-type-1.png
-	:alt: Click on Add product type
+![Click on Add product type](../images/product-type-1.png)
 
 This will open a form.
 
-.. figure:: images/product-type-2.png
-	:alt: Fill product type form
+![Fill product type form](../images/product-type-2.png)
 
 Save settings and this will create our T-shirt product type.
 
@@ -111,37 +99,29 @@ Goto ``admin/commerce/products``.
 
 OR
 
-.. figure:: images/product-add-4.png
-	:alt: Click on Products
+![Click on Products](../images/product-add-4.png)
 
 Then click on *Add product*.
 
-.. figure:: images/product-add-5.png
-	:alt: Click Add product
+![Click Add product](../images/product-add-5.png)
 
 Now click on new product type that you created, in my case its *T-shirt*
 
-.. figure:: images/product-add-1.png
-	:alt: Click T-shirt
+![Click T-shirt](../images/product-add-1.png)
 
 Fill new product form and create different variations for different size and color, and click on **Save and publish** button below **Create variation** button.
 
-.. figure:: images/product-add-6.png
-	:alt: Fill form and create variations
+![Fill form and create variations](../images/product-add-6.png)
 
-.. figure:: images/product-add-2.png
-	:alt: Fill form and create variations
+![Fill form and create variations](../images/product-add-2.png)
 
 Product view
 -------------
 
 You can view all your added product by click on **Products** under ``Commerce`` menu link.
 
-.. figure:: images/product-add-4.png
-	:alt: Click on Products
+![Click on Products](../images/product-add-4.png)
 
-.. figure:: images/product-view-1.png
-	:alt: View your products in list
+![View your products in list](../images/product-view-1.png)
 
-.. figure:: images/product-add-3.png
-	:alt: View Product on product page
+![View Product on product page](../images/product-add-3.png)
