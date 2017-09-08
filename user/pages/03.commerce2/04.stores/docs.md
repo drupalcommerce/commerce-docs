@@ -17,12 +17,8 @@ other order workflows.
 To create a store you will need to have at least one currency imported,
 and then you can create a store.
 
-    | **Shortcut!** - The getting started process can be quickly done
-      using Drupal Console command:
-    | ``drupal commerce:create:store``
-    | |example workflow|
-    | *You are welcome to ignore this shortcut if you prefer the user
-      interface.*
+>  **Shortcut!** - The getting started process can be quickly done using Drupal Console command:  `drupal commerce:create:store`. *You are welcome to ignore this shortcut if you prefer the user interface.*
+>  ![Workflow](drupal-commerce-create-store.gif)
 
 ### Import the currencies your store will use.
 
@@ -34,7 +30,7 @@ up, first you need to locate the currencies page at
 
 ![Currency Landing Page](currency-landing-page.png)
 
-Next, click the ``Import`` tab
+Next, click the **Import** tab
 (``admin/commerce/config/currency/import``). The reason currencies need
 to be imported is because we don’t want to store all the world’s
 currencies in your database if we don’t have to, so we make no
@@ -48,10 +44,9 @@ standards body.
 Once you’ve imported one or more currencies, you can move on to creating
 a store.
 
-Create a store.
-~~~~~~~~~~~~~~~
+## Create a store.
 
-|Store page|
+![Store page](store-landing-page2.png)
 
 Next, we need to create a store. Every product requires one store.
 Additional details will be shared about the power of
@@ -59,15 +54,14 @@ having stores baked into the core of Commerce, but for now, all you need
 to do is define your store’s name, address, and select a few things
 about taxes and billing.
 
-|Store create|
+![Store create](store-add.png)
 
 Once you’ve got all those details filled out, click save and move on to
 creating products! Woohoo!
 
-Overview & Architecture
------------------------
+## Overview & Architecture
 
-|Store Entity Diagram. Stores are M:M for products and M:1 for Orders.|
+![Store Entity Diagram. Stores are M:M for products and M:1 for Orders.](store-entity-diagram.png)
 
 **Orders** will only ever have one store, and it is stored as an entity
 attribute.
@@ -95,16 +89,11 @@ merchant. By default stores collect the following:
 -  Default status (used to select a store when one isn’t given)
 -  Tax information
 
-Use Cases
----------
+## Use Cases
 
 We optimize for the two use cases:
 
-#. One business that has one or more locations
-
-**or**
-
-#. The marketplace model (where you have sellers)
+1. One business that has one or more locations **or** 2. The marketplace model (where you have sellers)
 
 For these use cases and possibly others, it is up to the developer to
 fill in the gaps that are present in the order workflow. This is
@@ -112,29 +101,17 @@ different from Commerce 1.x in that we will support stores by default,
 allowing for community contributions to extend the functionality instead
 of trying to build store functionality from scratch.
 
-1. One or more locations
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### One or more locations
 
 This is the most common eCommerce situation where we have a single
 person, company, or organization that is taking payments online.
 
-2. Marketplace model
-~~~~~~~~~~~~~~~~~~~~
+#### Marketplace model
 
 The marketplace model is where you have many sellers who are taking
 payment for unique products.
 
-Stores and Carts
-----------------
+## Stores and Carts
 
 A customer can have one or more Carts (which are a type of Order), if
 they have chosen a product from different stores.
-
-
-
-.. |example workflow| image:: images/drupal-commerce-create-store.gif
-.. |Currency Landing Page| image:: images/currency-landing-page.png
-.. |Currency Import Page| image:: images/currency-import.png
-.. |Store page| image:: images/store-landing-page2.png
-.. |Store create| image:: images/store-add.png
-.. |Store Entity Diagram. Stores are M:M for products and M:1 for Orders.| image:: images/store-entity-diagram.png
