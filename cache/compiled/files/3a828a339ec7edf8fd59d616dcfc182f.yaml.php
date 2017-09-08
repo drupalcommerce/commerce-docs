@@ -2,8 +2,9 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mglaman/Drupal/commerce/commerce-docs/user/config/plugins/highlight.yaml',
-    'modified' => 1504836493,
+    'modified' => 1504844242,
     'data' => [
-        'theme' => 'commerce'
+        'theme' => 'vs',
+        'lines' => false
     ]
 ];

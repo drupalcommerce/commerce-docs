@@ -4,17 +4,13 @@ taxonomy:
     category: docs
 ---
 
-Store recipes
-=============
-
 Everything starts with a store. Products can belong to many stores, and
 orders belong to a single store.
 
 Creating a store type
 ---------------------
 
-.. code-block:: php
-
+```php
     /**
      * id [String]
      *   The primary key for this store type.
@@ -31,6 +27,7 @@ Creating a store type
       'description' => 'This is my first custom store type!',
     ]);
     $store_type->save();
+```
 
 Loading a store type
 --------------------

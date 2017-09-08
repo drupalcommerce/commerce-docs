@@ -4,8 +4,4 @@ taxonomy:
     category: docs
 ---
 
-
-Managing order payments
-=======================
-
 @todo void, capture, refund
