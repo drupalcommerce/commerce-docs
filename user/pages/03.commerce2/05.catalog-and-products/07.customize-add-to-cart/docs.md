@@ -1,5 +1,8 @@
-Customize the add to cart form
-==============================
+---
+title: Customize the add to cart form
+taxonomy:
+    category: docs
+---
 
 Previously we learned how to create a product catalog.
 

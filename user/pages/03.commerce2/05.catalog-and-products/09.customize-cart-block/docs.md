@@ -1,5 +1,8 @@
-Customize the Shopping Cart block
-=================================
+---
+title: Customize the shopping cart block
+taxonomy:
+    category: docs
+---
 
 Drupal Commerce provides highly customizable "Shopping Cart" block which can be placed anywhere on site , using block , showing cart contents on all pages, and the ability for customers to add or remove cart contents. Shopping cart lets customers continue browsing the website but still know how many items has been added to their shopping cart and manage their current order. Both the block and checkout page are quite dynamic, and can easily be customized_ via the Views user interface and themed to match your site, just like any other listing built in the View module.
  
