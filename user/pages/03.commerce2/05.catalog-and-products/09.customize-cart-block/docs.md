@@ -10,17 +10,14 @@ Your shopping cart and checkout process should look great right out of the box. 
  
 The shopping cart is represented by a Drupal block shown in *figure 1* that consists of a View Listing(*fig 2*) the line items on the cart order with a footer summarizing the items on the order and linking to the cart page and checkout form. 
 
-.. figure:: images/collapsible-shopping-cart.png
-   :alt: Collapsible Shopping cart
+![Collapsible Shopping cart](../images/collapsible-shopping-cart.png)
 
    Fig 1 A Collapsible Shopping Cart showing number of items per product and cost.
 
-Customizing the Mini Cart templates and styles
-----------------------------------------------
+## Customizing the Mini Cart templates and styles
+
 1. Copy files ``commerce-cart-block.html.twig`` and ``commerce-cart-empty-page.html.twig`` from ``\modules\contrib\commerce\modules\cart\templates`` to your theme folder. For better folder organization you can copy these files to ``your-theme-folder/templates/cart`` i.e. ``your-theme-folder/templates/cart/commerce-cart-block.html.twig`` and ``your-theme-folder/templates/cart/commerce-cart-empty-page.html.twig``
 2. Once the files have been copied, you will need to clear Drupal Cache from ``Administration > Configuration > Development``. You will then be able to customize the look and feel of the cart using twig and css.
-
-.. _customized:
 
 Manipulating Fields in the Cart Summary
 ---------------------------------------
@@ -30,10 +27,9 @@ Manipulating Fields in the Cart Summary
 - Locate the **Shopping cart summary** view and click the associated edit button.
 - You can edit/remove the fields under Fields Row.
 
-.. figure:: images/shopping-cart-view.jpg
-   :alt: Shopping Cart View
+![Shopping Cart View](../images/shopping-cart-view.jpg)
    
-   Fig 2 The default shipping cart block is entirely configurable via the Views user interface.
+ Fig 2 The default shipping cart block is entirely configurable via the Views user interface.
 
 - Once Done, Save the field and the view
 
@@ -44,31 +40,30 @@ Often you might find yourself undoing what the core cart stylesheets have define
 The ``commerce_cart.layout.css`` and ``commerce_cart.theme.css`` files provide the styling which you can override in your own stylesheets using regular `Drupal`_ theme procedures. To override the cart stylesheet you can add following to your ``yourtheme.info.yml`` file.
 
 
-.. highlight:: html
-
+```yaml
 libraries-override:
   commerce_cart/cart_block:
     css:
       layout:
         css/commerce_cart.layout.css: css/commerce_cart.layout.css
+```
 
 Or to completely disable the Cart stylesheet:
 
 
-.. highlight:: html
-
+```yaml
 libraries-override:
   commerce_cart/cart_block:
     css:
       layout:
         css/commerce_cart.layout.css: false
+```
  
 In this case the file has been overridden with **false**.
 
-.. figure:: images/customized-cart.jpg
-   :alt: Customized Shopping Cart Block
+![Customized Shopping Cart Block](../images/customized-cart.jpg)
    
-   Fig 3 Illustrates how you can turn Shopping Cart into a fully custom shopping cart.
+Fig 3 Illustrates how you can turn Shopping Cart into a fully custom shopping cart.
 
 
-.. _Drupal: https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
+<https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend>
