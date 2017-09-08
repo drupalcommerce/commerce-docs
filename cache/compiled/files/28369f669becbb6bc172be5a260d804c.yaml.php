@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mglaman/Drupal/commerce/commerce-docs/user/plugins/simplesearch/blueprints.yaml',
-    'modified' => 1502885360,
+    'modified' => 1504836493,
     'data' => [
         'name' => 'SimpleSearch',
         'version' => '1.13.0',

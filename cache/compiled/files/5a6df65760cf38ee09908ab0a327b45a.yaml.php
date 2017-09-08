@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mglaman/Drupal/commerce/commerce-docs/user/plugins/simplesearch/simplesearch.yaml',
-    'modified' => 1502885360,
+    'modified' => 1504836493,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,

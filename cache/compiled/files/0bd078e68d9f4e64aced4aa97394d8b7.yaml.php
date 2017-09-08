@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mglaman/Drupal/commerce/commerce-docs/user/plugins/breadcrumbs/blueprints.yaml',
-    'modified' => 1502885358,
+    'modified' => 1504836493,
     'data' => [
         'name' => 'Breadcrumbs',
         'version' => '1.5.0',

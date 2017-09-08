@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mglaman/Drupal/commerce/commerce-docs/system/config/system.yaml',
-    'modified' => 1502885356,
+    'modified' => 1504836493,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',

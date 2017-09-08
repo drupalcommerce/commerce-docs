@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mglaman/Drupal/commerce/commerce-docs/user/plugins/highlight/blueprints.yaml',
-    'modified' => 1502885358,
+    'modified' => 1504836493,
     'data' => [
         'name' => 'Highlight',
         'version' => '1.3.2',
