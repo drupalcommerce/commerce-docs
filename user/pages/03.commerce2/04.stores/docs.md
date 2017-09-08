@@ -4,10 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Setting up stores
-=================
-
-|Store landing page|
+![Store landing page](store-landing-page.png)
 
 For Commerce 2, we have native support for stores. Stores are used for
 invoicing, tax types, and any other settings necessary for understanding
@@ -15,8 +12,7 @@ orders. This has many applications, and it's important to understand what
 use cases are supported out of the box and how that impacts checkout and
 other order workflows.
 
-Create a store
---------------
+## Create a store
 
 To create a store you will need to have at least one currency imported,
 and then you can create a store.
@@ -28,8 +24,7 @@ and then you can create a store.
     | *You are welcome to ignore this shortcut if you prefer the user
       interface.*
 
-Import the currencies your store will use.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Import the currencies your store will use.
 
 The most basic piece of information that defines your store is the
 currency(s) you want to use. The vast majority of
@@ -37,7 +32,7 @@ Commerce stores will simply have one currency and one store. To set this
 up, first you need to locate the currencies page at
 ``admin/commerce/config/currencies``
 
-|Currency Landing Page|
+![Currency Landing Page](currency-landing-page.png)
 
 Next, click the ``Import`` tab
 (``admin/commerce/config/currency/import``). The reason currencies need
@@ -48,7 +43,7 @@ currencies. The dataset is coming from the ``intl`` library, which
 generates its dataset from an international and frequently updated
 standards body.
 
-|Currency Import Page|
+![Currency Import Page](currency-import.png)
 
 Once you’ve imported one or more currencies, you can move on to creating
 a store.
@@ -137,7 +132,6 @@ they have chosen a product from different stores.
 
 
 
-.. |Store landing page| image:: images/store-landing-page.png
 .. |example workflow| image:: images/drupal-commerce-create-store.gif
 .. |Currency Landing Page| image:: images/currency-landing-page.png
 .. |Currency Import Page| image:: images/currency-import.png
