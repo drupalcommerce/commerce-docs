@@ -23,22 +23,22 @@ composer create-project drupalcommerce/project-base mystore --prefer-source --st
 
 The –prefer-source option tells Composer to use Git clone as the download method. 
 
-When prompted, answer n to:
+When prompted, answer **n** to:
 
 ```text
-Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]? n
+Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?
 ```
 
 This will keep the downloaded git repositories inside their parent folders (such
-as ``web/modules/contrib/commerce``).
+as `web/modules/contrib/commerce`).
 
 Tips:
 
--  The ``bin`` folder contains [Drupal Console] and [PHPUnit].
--  The ``web`` folder represents the document root.
--  Composer commands are always run from the site root (``mystore`` in this case).
--  Downloading additional modules: ``composer require "drupal/devel:1.x-dev"``
--  Updating an existing module: ``composer update drupal/address –with-dependencies``
+-  The `bin` folder contains [Drupal Console] and [PHPUnit].
+-  The `web``folder represents the document root.
+-  Composer commands are always run from the site root (`mystore` in this case).
+-  Downloading additional modules: `composer require "drupal/devel"`
+-  Updating an existing module: `composer update drupal/address –with-dependencies`
 
 See the [project-base README] for more details.
 
@@ -66,16 +66,42 @@ against the main repository.
 ## Running tests
 
 All of the Drupal Commerce tests are based on the PHPUnit framework. In
-order to run the tests you will need to copy the ``phpunit.xml.dist``
+order to run the tests you will need to copy the `phpunit.xml.dist`
 from the core directory and modify it for your environment. An in depth
 article on getting ready to run the tests can be found here:
-https://drupalcommerce.org/blog/45322/commerce-2x-unit-kernel-and-functional-tests-oh-my
+<https://drupalcommerce.org/blog/45322/commerce-2x-unit-kernel-and-functional-tests-oh-my>
 
 ```bash
 cd /path/to/mystore/web
 # Run PHPUnit tests
 ../bin/phpunit -c core/phpunit.xml modules/contrib/commerce
 ```
+
+### Example **phpunit.xml** environment settings.
+
+This `phpunit.xml` assumes you will be using SQLite (requires PHP SQLite extension) and
+the Drupal site accessible at `http://localhost:8080`.
+
+```xml
+<!-- Snippet of environment settings. -->
+  <php>
+    <!-- Set error reporting to E_ALL. -->
+    <ini name="error_reporting" value="32767"/>
+    <!-- Do not limit the amount of memory tests take to run. -->
+    <ini name="memory_limit" value="-1"/>
+    <!-- Example SIMPLETEST_BASE_URL value: http://localhost -->
+    <env name="SIMPLETEST_BASE_URL" value="http://localhost:8080"/>
+    <!-- Example SIMPLETEST_DB value: mysql://username:password@localhost/databasename#table_prefix -->
+    <env name="SIMPLETEST_DB" value="sqlite://localhost/sites/default/files/.ht.sqlite"/>
+    <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: /path/to/webroot/sites/simpletest/browser_output -->
+    <!--<env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/path/to/drupal8/sites/simpletest/browser_output"/>-->
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/path/to/drupal8/sites/simpletest/browser_output"/>
+    <ini name="display_errors" value="On" />
+    <ini name="display_startup_errors" value="On" />
+  </php>
+```
+
+You can run `php -S localhost:8080` from within your Drupal site to allow the tests to run.
 
 [Drupal VM]: http://www.drupalvm.com/
 [Acquia Dev Desktop]: https://www.acquia.com/products-services/dev-desktop

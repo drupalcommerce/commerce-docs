@@ -42,20 +42,13 @@ See the `project-base README`_ for more details.
 
 Run these commands in the root of your website:
 
-#### Add the Drupal.org Composer repository
-
-This allows Composer to find Commerce and the other Drupal modules.
-
-```bash
-composer config repositories.drupal composer https://packages.drupal.org/8
-```
-
 #### Download Commerce
 
 This will also download the required libraries and modules (Address, Entity, State Machine, Inline Entity Form, Profile).
 
 ```bash
-composer require "drupal/commerce 2.x-dev"
+cd /path/to/drupal8
+composer require "drupal/commerce"
 ```
 
 #### Enable Commerce
