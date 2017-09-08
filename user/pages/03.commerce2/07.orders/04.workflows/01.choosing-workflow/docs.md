@@ -4,6 +4,8 @@ taxonomy:
     category: docs
 ---
 
+! This document also contains general order management and processing.
+
 ## Associating an Order Type with a Workflow
 
 An order type can be associated with a specific workflow, and that forces the order to follow that workflow's rules such as to only move through the defined transitions. To associate an order type with an order workflow, go to ``/admin/commerce/config/order-types`` and select to Edit the desired order type. You can then choose the desired workflow from the Workflow dropdown field. Save the form.
@@ -43,9 +45,9 @@ Once you've made the appropriate selections, you are taken to the order creation
 
 ![](../../images/order_details.png)
 
-As you move further down, you'll see that there is an "Adjustments" section. This where you can add promotions, add a shipping amount, add tax, as well as, any custom amount to the order total. (`See steps on creating a promotion <../creating-a-promotion.rst>`__)
+As you move further down, you'll see that there is an "Adjustments" section. This where you can add promotions, add a shipping amount, add tax, as well as, any custom amount to the order total. ([See steps on creating a promotion](../../../06.product-merchandising/01.create-promotion))
 
- And finally, you can apply coupons to the order. (`See steps on creating a coupon <../creating-a-coupon.rst>`__)
+ And finally, you can apply coupons to the order. ([See steps on creating a coupon](../../../06.product-merchandising/02.create-coupon))
 
 ![](../../images/applying_coupons_to_order.png)
 
