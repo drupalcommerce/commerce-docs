@@ -1,3 +1,9 @@
+---
+title: Purchasable entities
+taxonomy:
+    category: docs
+---
+
 Purchasable Entities
 ====================
 

@@ -1,5 +1,9 @@
-Make a product
-==============
+---
+title: Make a product
+taxonomy:
+    category: docs
+---
+
 
 Every product has one or more variations. In the event that a product
 has more than one variation, each variation is differentiated by some

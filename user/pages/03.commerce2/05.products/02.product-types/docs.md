@@ -1,5 +1,10 @@
-Create a product type
-=====================
+---
+title: Create a product type
+taxonomy:
+    category: docs
+---
+
+
 Imagine a new product arrives in your store, let's say T-shirt. You have never sold t-shirt in your store and now you have to sell it in your store. So for this new product, you will need to create a new product type in your drupal commerce site. This is not a hard process, below is a step by step guide.
 
 Product attribute

@@ -1,5 +1,9 @@
-Setup product attributes
-========================
+---
+title: Setup product attributes
+taxonomy:
+    category: docs
+---
+
 
 .. figure:: images/tshirt_drupalcon.png
    :alt: Product Attribute Entity Relationships
