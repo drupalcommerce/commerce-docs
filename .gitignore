@@ -7,6 +7,9 @@
 ## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
 node_modules
 
+# Composer
+/vendor
+
 # Book build output
 _book
 
@@ -27,16 +30,14 @@ _book
 .sass-cache
 
 # Grav Specific
-data/*
-!data/.gitkeep
-plugins/*
-!plugins/.gitkeep
-themes/*
-!themes/.gitkeep
-cache/*
-!cache/.gitkeep
-logs/*
-!logs/.gitkeep
+/data/*
+!/data/.gitkeep
+/plugins/*
+!/plugins/.gitkeep
+/themes/*
+!/themes/.gitkeep
+/cache
+/logs
 
 # OS Generated
 .DS_Store*
