@@ -5,11 +5,11 @@ taxonomy:
 ---
 
 Drupal Commerce requires using Composer with Drupal. If you are new to
-Composer, or new to managing Drupal with Composer, see [Using Composer](01.using-composer).
+Composer, or new to managing Drupal with Composer, see [Using Composer](../02.install-update/01.using-composer).
 
-To get Drupal Commerce installed, see the [Installing](02.install) guide.
+To get Drupal Commerce installed, see the [Installing](../02.install-update/02.installation) guide.
 
-For keeping Drupal Commerce up to date, review the [Updating](03.update) guide.
+For keeping Drupal Commerce up to date, review the [Updating](../02.install-update/03.updating) guide.
 
 ## Looking for a demo?
 

@@ -12,7 +12,7 @@ This tutorial will guide you through overriding a payment gateway's configuratio
 
 In order to override the configuration settings in our settings.php file we need to know their machine names. An easy way to find them is by visiting the Configuration Export page at ``/admin/config/development/configuration/single/export``. At the "Configuration type" dropdown choose "Payment gateway", and then at the "Configuration name" dropdown choose the name of the payment gateway, in this case "PayPal Express Checkout". You will then be displayed all available configuration for it.
 
-![Locating a Payment Gateway's Configuration](../images/payment_gateway_export.jpg)
+![Locating a Payment Gateway's Configuration](payment_gateway_export.jpg)
 
 We will first need the ID assigned to the payment gateway. This is the value of the ``id`` key, in this case "paypal_express_checkout". Make a note of this value.
 
