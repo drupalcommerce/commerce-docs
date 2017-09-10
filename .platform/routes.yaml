@@ -19,6 +19,51 @@ https://{default}/:
       "/v2/building-blocks/profile.html": { "to": "/commerce2/libraries-and-dependencies/profile" }
       "/v2/building-blocks/state-machine.html": { "to": "/commerce2/libraries-and-dependencies/state-machine" }
       "/v2/building-blocks/ief.html": { "to": "/commerce2/libraries-and-dependencies/ief" }
+      "/v2/currency.html": { "to": "/commerce2/currencies" }
+      "/v2/store.html": { "to": "/commerce2/stores" }
+      "/v2/product/index.html": { "to": "/commerce2/products" }
+      "/v2/product/product-attributes.html": { "to": "/commerce2/products/product-attributes" }
+      "/v2/product/product-type.html": { "to": "/commerce2/products/product-types" }
+      "/v2/product/products.html": { "to": "/commerce2/products/products" }
+      "/v2/product/purchasable-entities.html": { "to": "/commerce2/products/purchasable-entities" }
+      "/v2/product/theme-a-product-page.html": { "to": "/commerce2/catalog-and-products/theme-product" }
+      "/v2/product/catalog-and-product-pages.html": { "to": /commerce2/catalog-and-products }
+      "/v2/product/create-a-product-catalog.html": { "to": "/commerce2/catalog-and-products/create-a-catalog" }
+      "/v2/product/customize-the-add-to-cart-form.html": { "to": "/commerce2/catalog-and-products/customize-add-to-cart" }
+      "/v2/product/customize-the-shopping-cart-block.html": { "to": "/commerce2/catalog-and-products/customize-cart-block" }
+      "/v2/using-promotions.html": { "to": "/commerce2/product-merchandising" }
+      "/v2/creating-a-coupon.html": { "to": "/commerce2/product-merchandising/create-promotion" }
+      "/v2/creating-a-promotion.html": { "to": "/commerce2/product-merchandising/create-coupon" }
+      "/v2/orders/changing-the-order-workflow.html": { "to": "/commerce2/orders/workflows/choosing-workflow" }
+      "/v2/orders/index.html": { "to": "/commerce2/orders" }
+      "/v2/orders/order-items.html": { "to": "/commerce2/orders/order-items" }
+      "/v2/orders/order-processing.html": { "to": "/commerce2/orders/order-processing" }
+      "/v2/orders/order-types.html": { "to": "/commerce2/orders/order-types" }
+      "/v2/orders/order-workflows-association.html": { "to": "/commerce2/orders/workflows/choosing-workflow" }
+      "/v2/orders/order-workflows-states.html": { "to": "/commerce2/orders/workflows/workflow-states" }
+      "/v2/orders/order-workflows-transitions.html": { "to": "/commerce2/orders/workflows/workflow-transitions" }
+      "/v2/orders/order-workflows.html": { "to": "/commerce2/orders/workflows" }
+      "/v2/checkout/checkout-pane-plugin.html": { "to": "/commerce2/checkout/custom-checkout-pane" }
+      "/v2/checkout/creating-a-checkout-flow-plugin.html": { "to": "/commerce2/checkout/custom-checkout-flow" }
+      "/v2/checkout/customize.html": { "to": "/commerce2/checkout/customizing-checkout" }
+      "/v2/checkout/guest.html": { "to": "/commerce2/checkout/guest-checkout" }
+      "/v2/checkout/index.html": { "to": "/commerce2/checkout" }
+      "/v2/checkout/order-summary.html": { "to": /checkout/changing-order-summaryv2" }
+      "/v2/payments/available-payment-gateways.html": { "to": "/commerce2/payments/available-gateways" }
+      "/v2/payments/index.html": { "to": "/commerce2/payments" }
+      "/v2/payments/installing-payment-gateway.html": { "to": "/commerce2/payments/install-configure-gateways" }
+      "/v2/payments/managing-order-payments.html": { "to": "/commerce2/payments/managing-payments" }
+      "/v2/recipes/attributes.html": { "to": "/commerce2/code-recipes/product-attributes" }
+      "/v2/recipes/index.html": { "to": "/commerce2/code-recipes" }
+      "/v2/recipes/order-custom-workflow.html": { "to": "/commerce2/code-recipes/order-custom-workflow" }
+      "/v2/recipes/orders.html": { "to": "/commerce2/code-recipes/orders" }
+      "/v2/recipes/overriding-payment-gateway-configuration.html": { "to": "/commerce2/code-recipes/payment-config-override" }
+      "/v2/recipes/products.html": { "to": "/commerce2/code-recipes/products" }
+      "/v2/recipes/state-machine-transitions.html": { "to": "/commerce2/code-recipes/state-transition" }
+      "/v2/recipes/stores/how-to-create-a-store.html": { "to": "/commerce2/code-recipes/stores/create-store" }
+      "/v2/recipes/stores/manage-store-types.html": { "to": "/commerce2/code-recipes/stores/create-store-type" }
+      "/v2/recipes/stores.html": { "to": "/commerce2/code-recipes/stores" }
+      "/v2/recipes/variations.html": { "to": "/commerce2/code-recipes/product-variations" }
 
 http://{default}/:
   type: redirect
