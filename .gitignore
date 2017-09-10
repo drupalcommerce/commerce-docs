@@ -36,8 +36,13 @@ _book
 !/plugins/.gitkeep
 /themes/*
 !/themes/.gitkeep
+/user/data/*
+!/user/data/.gitkeep
 /cache
-/logs
+/logs/*
+!/logs/.gitkeep
+/assets/*
+!/assets/.gitkeep
 
 # OS Generated
 .DS_Store*
