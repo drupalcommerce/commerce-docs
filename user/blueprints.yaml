@@ -1,0 +1,13 @@
+name: Drupal Commerce Docs
+version: 1.0.0
+description: "@todo"
+icon: book
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-skeleton-rtfm-site
+demo: http://demo.getgrav.org/rtfm-skeleton
+keywords: rtfm, skeleton, documentation, docs
+bugs: https://github.com/getgrav/grav-skeleton-rtfm-site/issues
+license: MIT

@@ -22,3 +22,28 @@ _book
 /_build/html
 /_build/epub
 *.pyc
+
+# Sass
+.sass-cache
+
+# Grav Specific
+data/*
+!data/.gitkeep
+plugins/*
+!plugins/.gitkeep
+themes/*
+!themes/.gitkeep
+cache/*
+!cache/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
+# phpstorm
+.idea/*

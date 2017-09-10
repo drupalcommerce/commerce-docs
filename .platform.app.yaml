@@ -1,59 +1,17 @@
-# This file describes an application. You can have multiple applications
-# in the same project.
-
-# The name of this app. Must be unique within a project.
-name: php
-
-# The toolstack used to build the application.
-type: "php"
-build:
-    flavor: "composer"
-
-# The configuration of app when it is exposed to the web.
+name: docs
+type: php:7.2
+disk: 1024
 web:
-    # The public directory of the app, relative to its root.
-    document_root: "/_build/html"
-    index_files:
-      - index.html
-    whitelist:
-      - \.html$
-      - \.txt$
-
-      # CSS and Javascript.
-      - \.css$
-      - \.js$
-
-      # image/* types.
-      - \.gif$
-      - \.jpe?g$
-      - \.png$
-
-      # fonts types.
-      - \.ttf$
-      - \.eot$
-      - \.woff$
-      - \.otf$
-
-      # robots.txt.
-      - /robots\.txt$
-
-      - \.ico$
-
-# The size of the persistent disk of the application (in MB).
-disk: 2048
-
-# Build time dependencies.
-dependencies:
-  python:
-    virtualenv: 15.1.0
-
-# The hooks that will be performed when the package is deployed.
-hooks:
-    build: |
-      virtualenv .virtualenv
-      . .virtualenv/bin/activate
-      # Platform.sh currently sets PIP_USER=1.
-      export PIP_USER=
-      pip install pip==9.0.1 wheel==0.29.0
-      pip install -r requirements.txt
-      make clean && make html
+  locations:
+    "/":
+      root: ""
+      passthru: /index.php
+      expires: 1h
+mounts:
+    '/cache': 'shared:files/cache'
+    '/logs': 'shared:files/logs'
+    '/images': 'shared:files/images'
+    '/assets': 'shared:files/assets'
+    '/user/data': 'shared:files/user-data'
+    '/backup': 'shared:files/backup'
+    '/tmp': 'shared:files/tmp'
