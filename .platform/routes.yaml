@@ -1,6 +1,25 @@
 https://{default}/:
   type: upstream
   upstream: docs:http
+  redirects:
+    expires: 12m
+    paths:
+      "/introduction.html": { "to": "/introduction" }
+      "/contributing-to-documentation.html": { "to": "/introduction/contribute" }
+      "/v1/index.html": { "to": "/commerce1" }
+
+      "/v2/index.html": { "to": "/commerce2" }
+      "/v2/getting-started/index.html": { "to": "/commerce2/getting-started" }
+      "/v2/getting-started/composer.html": { "to": "/commerce2/getting-started/using-composer" }
+      "/v2/getting-started/install.html": { "to": "/commerce2/getting-started/install" }
+      "/v2/getting-started/update.html": { "to": "/commerce2/getting-started/update" }
+      "/v2/getting-started/contributing/index.html": { "to": "/commerce2/getting-started/contributing" }
+      "/v2/getting-started/contributing/development-environment.html": { "to": "/commerce2/getting-started/contributing/development-environment" }
+      "/v2/building-blocks/index.html": { "to": "/commerce2/libraries-and-dependencies" }
+      "/v2/building-blocks/profile.html": { "to": "/commerce2/libraries-and-dependencies/profile" }
+      "/v2/building-blocks/state-machine.html": { "to": "/commerce2/libraries-and-dependencies/state-machine" }
+      "/v2/building-blocks/ief.html": { "to": "/commerce2/libraries-and-dependencies/ief" }
+
 http://{default}/:
   type: redirect
   to: https://{default}/
