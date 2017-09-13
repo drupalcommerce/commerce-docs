@@ -4,11 +4,68 @@ https://{default}/:
   redirects:
     expires: 12m
     paths:
+      # Outline change
+      "/commerce2/getting-started": {"to": "/commerce2/developer-guide/getting-started"}
+      "/commerce2/getting-started/using-composer": {"to": "/commerce2/developer-guide/install-update/using-composer"}
+      "/commerce2/getting-started/install": {"to": "/developer-guide/install-update/installation"}
+      "/commerce2/getting-started/update": {"to": "/developer-guide/install-update/updating"}
+      "/commerce2/getting-started/contributing": {"to": "/commerce2/developer-guide/contributing"}
+      "/commerce2/getting-started/contributing/development-environment": {"to": "/commerce2/developer-guide/contributing/setup-local-environment" }
+      "/commerce2/libraries-and-dependencies": {"to": "/commerce2/developer-guide/core/libraries-and-dependencies" }
+      "/commerce2/libraries-and-dependencies/libraries": {"to": "/commerce2/developer-guide/core/libraries-and-dependencies/libraries" }
+      "/commerce2/libraries-and-dependencies/profile": {"to": "/commerce2/developer-guide/core/libraries-and-dependencies/profile"}
+      "/commerce2/libraries-and-dependencies/state-machine": {"to": "/commerce2/developer-guide/core/libraries-and-dependencies/state-machine" }
+      "/commerce2/libraries-and-dependencies/ief": {"to": "/commerce2/developer-guide/core/libraries-and-dependencies/ief"}
+      "/commerce2/currencies": {"to": "/user-guide/setting-up-store/importing-currencies" }
+      "/commerce2/stores": {"to": "/commerce2/user-guide/setting-up-store"}
+      "/commerce2/products": {"to": "/commerce2/user-guide/products"}
+      "/commerce2/products/product-attributes": {"to": "/commerce2/user-guide/products/configure-product-attributes"}
+      "/commerce2/products/product-types": {"to": "/commerce2/user-guide/products/manage-product-structure"}
+      "/commerce2/products/products": {"to": "/commerce2/user-guide/products/create-a-product"}
+      "/commerce2/products/purchasable-entities": {"to": "/commerce2/developer-guide/products/purchasable-entities"}
+      "/commerce2/catalog-and-products": {"to": "/commerce2/developer-guide/catalogs"}
+      "/commerce2/catalog-and-products/create-a-catalog": {"to": "/commerce2/developer-guide/catalogs/create-a-catalog"}
+      "/commerce2/catalog-and-products/customize-add-to-cart": {"to": "/commerce2/developer-guide/cart/customize-add-to-cart-form"}
+      "/commerce2/catalog-and-products/theme-product": {"to": "/developer-guide/products/theme-product"}
+      "/commerce2/catalog-and-products/customize-cart-block": {"to": "/developer-guide/cart/customize-cart-block"}
+      "/commerce2/product-merchandising": {"to": "/commerce2/user-guide/promotions"}
+      "/commerce2/product-merchandising/create-promotion": {"to": "/commerce2/user-guide/promotions/create-promotion"}
+      "/commerce2/product-merchandising/create-coupon": {"to": "/commerce2/user-guide/promotions/coupons-with-promotion"}
+      "/commerce2/orders": {"to": "/commerce2/user-guide/orders"}
+      "/commerce2/orders/order-types": {"to": "/commerce2/developer-guide/orders/order-types"}
+      "/commerce2/orders/order-items": {"to": "/commerce2/developer-guide/orders/order-items"}
+      "/commerce2/orders/order-processing": {"to": "/commerce2/developer-guide/orders/order-refresh-and-process"}
+      "/commerce2/orders/workflows": {"to": "/commerce2/developer-guide/orders/workflows"}
+      "/commerce2/orders/workflows/choosing-workflow": {"to": "/commerce2/developer-guide/orders/workflows/choosing-workflow"}
+      "/commerce2/orders/workflows/workflow-states": {"to": "/commerce2/developer-guide/orders/workflows/workflow-states"}
+      "/commerce2/orders/workflows/workflow-transitions": {"to": "/commerce2/developer-guide/orders/workflows/workflow-transitions"}
+      "/commerce2/checkout": {"to": "/commerce2/user-guide/checkout"}
+      "/commerce2/checkout/guest-checkout": {"to": "/commerce2/user-guide/checkout/control-guest-checkout"}
+      "/commerce2/checkout/customizing-checkout": {"to": "/commerce2/user-guide/checkout/configure-checkout"}
+      "/commerce2/checkout/changing-order-summary": {"to": "/commerce2/developer-guide/checkout/changing-order-summary"}
+      "/commerce2/checkout/custom-checkout-pane": {"to": "/commerce2/developer-guide/checkout/create-custom-checkout-pane"}
+      "/commerce2/checkout/custom-checkout-flow": {"to": "/commerce2/developer-guide/checkout/create-custom-checkout-flow"}
+      "/commerce2/payments": {"to": "/commerce2/user-guide/payments"}
+      "/commerce2/payments/available-gateways": {"to": "/commerce2/developer-guide/payments/gateways-providers"}
+      "/commerce2/payments/install-configure-gateways": {"to": "/commerce2/developer-guide/payments/install-configure-gateways"}
+      "/commerce2/payments/managing-payments": {"to": "/commerce2/user-guide/payments"}
+      "/commerce2/code-recipes": {"to": "/commerce2/developer-guide"}
+      "/commerce2/code-recipes/stores": {"to": "/commerce2/developer-guide/stores"}
+      "/commerce2/code-recipes/stores/create-store": {"to": "/commerce2/developer-guide/stores/create-store"}
+      "/commerce2/code-recipes/stores/create-store-type": {"to": "/commerce2/developer-guide/stores/create-store-type"}
+      "/commerce2/code-recipes/product-variations": {"to": "/commerce2/developer-guide/products"}
+      "/commerce2/code-recipes/product-attributes": {"to": "/commerce2/developer-guide/products/product-attributes"}
+      "/commerce2/code-recipes/products": {"to": "/commerce2/developer-guide/products"}
+      "/commerce2/code-recipes/orders": {"to": "/commerce2/developer-guide/orders"}
+      "/commerce2/code-recipes/state-transition": {"to": "/commerce2/developer-guide/orders/react-to-workflow-transitions"}
+      "/commerce2/code-recipes/payment-config-override": {"to": "/commerce2/developer-guide/payments/overriding-payment-config"}
+      "/commerce2/code-recipes/order-custom-workflow": {"to": "/commerce2/developer-guide/orders/create-custom-workflow"}
+
+      # Sphinx
       "/introduction.html": { "to": "/introduction" }
       "/contributing-to-documentation.html": { "to": "/introduction/contribute" }
       "/v1/index.html": { "to": "/commerce1" }
       "/v1": { "to": "/commerce1" }
-
       "/v2/index.html": { "to": "/commerce2" }
       "/v2": { "to": "/commerce2" }
       "/v2/getting-started": { "to": "/commerce2/getting-started" }
@@ -55,7 +112,7 @@ https://{default}/:
       "/v2/checkout/guest.html": { "to": "/commerce2/checkout/guest-checkout" }
       "/v2/checkout": { "to": "/commerce2/checkout" }
       "/v2/checkout/index.html": { "to": "/commerce2/checkout" }
-      "/v2/checkout/order-summary.html": { "to": /checkout/changing-order-summaryv2" }
+      "/v2/checkout/order-summary.html": { "to": "/checkout/changing-order-summaryv2" }
       "/v2/payments/available-payment-gateways.html": { "to": "/commerce2/payments/available-gateways" }
       "/v2/payments": { "to": "/commerce2/payments" }
       "/v2/payments/index.html": { "to": "/commerce2/payments" }

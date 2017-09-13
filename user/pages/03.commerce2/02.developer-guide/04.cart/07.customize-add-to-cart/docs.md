@@ -1,8 +1,10 @@
 ---
-title: Customize the add to cart form
+title: (Deprecated) Cart form
 taxonomy:
     category: docs
 ---
+
+!! @todo this needs to be merged into relevant pieces in same guide.
 
 Previously we learned how to create a product catalog.
 
