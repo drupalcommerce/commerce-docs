@@ -1,5 +1,5 @@
 ---
-title: Configuring shipping methods
+title: Configure shipping methods
 taxonomy:
     category: docs
 ---

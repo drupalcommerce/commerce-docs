@@ -1,5 +1,5 @@
 ---
-title: What is resolving
+title: Understanding resolvers
 taxonomy:
     category: docs
 ---
@@ -8,3 +8,5 @@ taxonomy:
 
 
 Explain our pattern of chain resolvers, since it is used often.
+
+Link to documentation pages involving them.

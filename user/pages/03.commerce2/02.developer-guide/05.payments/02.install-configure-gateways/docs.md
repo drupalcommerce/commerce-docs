@@ -1,5 +1,5 @@
 ---
-title: Installing and Configuring a Payment Gateway
+title: Installing and Configure a Payment Gateway
 taxonomy:
     category: docs
 ---
