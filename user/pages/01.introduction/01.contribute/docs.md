@@ -9,7 +9,7 @@ editing a document and making a pull request in Github.
 
 The beauty of an open source project is that anyone can contribute. To contribute 
 to an open source project you need not to be a programmer, there are other ways to 
-contribute to an open source project than through code. Easiest way for non-programmers 
+contribute to an open source project than through code. The easiest way for non-programmers 
 is to contribute through documentation.
 
 If you have trouble understanding any part of the documentation, please notify those of 
@@ -72,7 +72,7 @@ Will render as -
 Pull requests let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.
 
 Start by creating a branch for your work.
-The branch name should contain a brief summary of its id and the issue, e.g **106-create-product-type**:
+The branch name should contain a brief summary of its ID and the issue, e.g **106-create-product-type**:
 
 ```bash
 cd commerce-docs/v2
@@ -92,7 +92,7 @@ Once you create a pull request on GitHub, it runs checks on your pull request. I
 
 ![Show all checks image](pull-request-1.png)
 
-To get the details about platform-based build for your pull request. Click on the **details** link.
+To get the details about platform-based build for your pull request, click on the **details** link.
 
 ![Show platform-based build](pull-request-2.png)
 
@@ -100,9 +100,9 @@ To get the details about platform-based build for your pull request. Click on th
 
 **Getting feedback**
 
-To get the feedback on your pull request you need to ask somebody to review it. And [Drupal Slack] member are ready to review the pull requests for you. But first you will need an invite, you can get invite by submitting your email id here.
+To get the feedback on your pull request you need to ask somebody to review it, and [Drupal Slack] members are ready to review the pull requests for you. But first you will need an invite, you can get invite by submitting your email id here.
 
-In the above image, pull request was reviewed by reviewer and some changes are suggested. So we will make the suggested changes and push the changes.
+In the above image, a pull request was reviewed by reviewer and some changes are suggested. So we will make the suggested changes and push the changes.
 
 ```bash
 # Change the desired files.
