@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-![](RulesInCommerce2.png]
+![](RulesInCommerce2.png)
 
 Commerce 2.x no longer relies on the Rules module. We now have event subscribers (example: order state changes), resolvers (example: calculating sell price and calculating VAT), and entities configured with conditions (example: payment gateways).
 
