@@ -22,6 +22,8 @@ Be aware that some events correspond to state transitions, and the [State Machin
 |**Select available payment methods for an order** event | Now handled through payment gateway configurations at _Administration » Commerce » Configuration » Payment gateways_. These support various conditions to define when payment gateways should be usable by customers.|
 
 ## More on resolvers
-[](https://docs.drupalcommerce.org/commerce2/developer-guide/core/understanding-resolvers)
+[Understanding Resolvers](../../03.core/03.understanding-resolvers)
+
+@todo: Link to relevant resolver docs, as well.
 
 ! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
