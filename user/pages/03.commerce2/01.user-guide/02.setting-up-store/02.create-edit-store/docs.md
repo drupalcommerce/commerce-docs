@@ -32,8 +32,8 @@ up, first you need to locate the currencies page at
 
 ![Currency Landing Page](currency-landing-page.png)
 
-Next, click the **Import** tab
-(``admin/commerce/config/currency/import``). The reason currencies need
+Next, click the **+ Add currency** button
+(``admin/commerce/config/currencies/add``). The reason currencies need
 to be imported is because we don’t want to store all the world’s
 currencies in your database if we don’t have to, so we make no
 assumptions and let each store request specific access to specific
