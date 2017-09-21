@@ -29,7 +29,7 @@ NumberFormatter and provide currency, country, language data.
 ## Importing Defined Currencies
 
 If you navigate to `admin/commerce/config/currency` and click on the
-“Add currency” tab, you will see a simple dropdown that shows you all the
+“Add currency” button, you will see a simple dropdown that shows you all the
 supported currencies (157 active currencies).
 
 ![Importing currency](currency-import2.png)
