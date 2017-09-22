@@ -1,58 +1,37 @@
 ---
-title: Importing currencies
+title: Adding a currency
 taxonomy:
     category: docs
 ---
 
-! This piece of documentation needs clarifications to make it friendlier for end users. And technical aspects should be put in a document in the Developer Guide
-
-See Also: [Internationalization Commerce Story] | [Internationalization Library]
-
-![Currency Landing Page](currency-landingpage.png)
 
 ## Overview
 
-Commerce without borders means we support every language and every
-denomination of currency. This is a big undertaking because not only do
-we need to support various currencies, we need to support their regional
-formatting rules, what each currency is called in every other language,
-and many other difficult problems.
+Drupal Commerce uses the internationally-recognized standard of [CLDR] data to
+provide multiple currency support. Currencies are formatted based on the locale
+of a language, giving a true localized experience. All of this is possible
+due to the underlying multilingual and localization capabilities of Drupal.
 
-Commerce 2’s currency support is built upon the [commerceguys/intl]
-library which provides a list of currencies, currency formatting,
-countries, and languages. This list in not something we cooked up on the
-back of a napkin, the intl library uses the internationally-recognized
-standard of [CLDR] data. We parse the CLDR definitions into our own
-more compact YAML definitions and use them to re-implement intl’s
-NumberFormatter and provide currency, country, language data.
+## Adding a new currency.
 
-## Importing Defined Currencies
+Visit the Commerce configuration page and go to the Currencies page in the Store
+section.
 
-If you navigate to `admin/commerce/config/currency` and click on the
-“+ Add currency” button, you will see a simple dropdown that shows you all the
-supported currencies (157 active currencies).
+![Configuration overview](commerce-configuration.png)
 
-![Importing currency](currency-import2.png)
+The currencies page shows a list of all currencies currently added. To add a
+currency, such as the Canadian Dollar, click on **+ Add currency**. The next form
+will provide you with a list of available currencies to import. Select your
+currency and click **Add**
 
-When imported, a configuration entity called “commerce_currency” is
-created with all the relevant data from the CLDR definition. Once
-imported, the configuration entity is unique to your installation, which
-means you can make minor changes to formatting and not worry about an
-update reverting your changes.
+![Add currency](add-currency.png)
 
-Also, thanks to the CLDR dataset, we import all the translations of the
-currency you are importing for all the languages you have in your site.
-A small, but very practical and helpful time saver.
+## Editing Currencies
 
-## Creating and Editing Currencies
+While not common, sometimes you may wish to modify a currency that was added. Once
+a currency is added, you can click **Edit** to modify the currency.
 
 ![Editing a currency](currency-edit.png)
 
-Once imported (or if you click “+ Add a new currency”) you can change
-the name, the numeric code, the symbol and how many minor units we use
-in calculations and display
 
-[Internationalization Commerce Story]: https://drupalcommerce.org/blog/15916/commerce-2x-stories-internationalization
-[Internationalization Library]: https://github.com/commerceguys/intl
-[commerceguys/intl]: https://github.com/commerceguys/intl
 [CLDR]: http://cldr.unicode.org/
