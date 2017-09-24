@@ -8,23 +8,25 @@ taxonomy:
 
 ## Swift Mailer module
 
-The [Swift Mailer](https://www.drupal.org/project/swiftmailer) module can be used with Commerce in order to send HTML emails. 
+The [Swift Mailer](https://www.drupal.org/project/swiftmailer) module can be used with Commerce in order to send HTML emails. The Swift Mailer library has also been proposed to be added to core to deprecate most of Drupal core's mailsystem. More can be found https://www.drupal.org/node/1803948.
 
 ## Installation
 
 Swift Mailer depends on the Mail System module.  Install both using Composer:
 
+```
 composer require drupal/swiftmailer
+```
 
 Then enable the Swift Mailer module.  This will automatically enable the Mail System module as well.
 
 ## Configuration
 
-First, configure the Mail System module at /admin/config/system/mailsystem.
+First, configure the Mail System module at `/admin/config/system/mailsystem`.
 
 To have Swift Mailer handle all email for your site, set both the Formatter and Sender to "Swift Mailer."
 
-Next, configure the Swift Mailer settings at /admin/config/swiftmailer/transport.
+Next, configure the Swift Mailer settings at `/admin/config/swiftmailer/transport`.
 
 Be sure to select the mail transport mechanism to use.
 
