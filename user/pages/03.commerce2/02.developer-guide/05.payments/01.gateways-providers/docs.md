@@ -38,6 +38,7 @@ Here is a running document of known and supported payment gateways.
 | [Bitpayir]                     | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway.                 |
 | [PayONE (sandbox)]             | This module integrates the German PAYONE Payment Provider with Drupal Commerce 2.x (D8) to accept credit card payments on-site and PayPal Express payments off-line.                                    |
 | [Klarna Checkout]              | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems.     |
+| [Payeezy]                      | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported.     |
 
 [Braintree]: https://www.drupal.org/project/commerce_braintree
 [PayPal]: https://www.drupal.org/project/commerce_paypal
@@ -71,3 +72,4 @@ Here is a running document of known and supported payment gateways.
 [Klarna Checkout]: https://github.com/mitrpaka/commerce_klarna_checkout
 [commerce_suomenverkkomaksut]: https://drupal.org/project/commerce_suomenverkkomaksut
 [sermepa]: www.redsys.es/wps/portal/redsys/publica/acercade/nuestrosSocios
+[Payeezy]: https://www.drupal.org/project/commerce_payeezy
