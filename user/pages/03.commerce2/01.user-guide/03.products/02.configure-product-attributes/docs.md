@@ -4,30 +4,26 @@ taxonomy:
     category: docs
 ---
 
-! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
+! We need updated screenshots. Feel free to follow the *edit this page* link and contribute.
 
 ![Product Attribute Entity Relationships](tshirt_drupalcon.png)
 
 Imagine you need to sell a DrupalCon t-shirt. This t-shirt comes in
 different sizes and colors. Each combination of size and color has its
-own SKU, so you know which color and size the customer has purchased and
-you can track exactly how many of each combination you have in stock.
-
-![Product Attribute Entity Relationships](attribute_entity_relationships.png)
-
-!! @todo, the above is too technical for this guide section.
+own SKU, so you know which color and size the customer has purchased and you can track exactly how many of each combination you have in stock.
 
 Color and size are product attributes. Blue and small are product
-attribute values, belonging to the mentioned attributes. The combination
-of attribute values (with a SKU and a price) is called a product
-variation. These variations are grouped inside a product.
+attribute values, belonging to the mentioned attributes. The combination of attribute values (with a SKU and a price) is called a product variation. These variations are grouped inside a product.
 
 Creating Attributes and their Values
 ------------------------------------
 
 For our t-shirt we need two attributes: color and size. Let's start by
-creating the color attribute. Go to
-``admin/commerce/product-attributes`` and click the Add product attribute link.
+creating the color attribute. Go to the Drupal Commerce administration page and visit the **Product Attributes** link.
+
+![Product attributes from administration page](images/commerce-configuration-attributes.png)
+
+Click on the **Add product attribute** link to create an attribute.
 
 ![Product Attribute Creation](attribute_create_02.png)
 
@@ -106,8 +102,6 @@ these steps:
 1. Go to ``/admin/commerce/config/product-variation-types``
 2. Click the drop down next to the variation type you want and click
    "manage fields" 
-   
-   !! @todo image broken
    
    ![](product_variation_manage_fields.gif)
 3. Un-select the "required" checkbox to make the attribute optional.

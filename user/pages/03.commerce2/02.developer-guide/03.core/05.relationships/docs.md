@@ -34,3 +34,7 @@ merchant. By default stores collect the following:
 -  Owner
 -  Default status (used to select a store when one isn’t given)
 -  Tax information
+
+![Product Attribute Entity Relationships](attribute_entity_relationships.png)
+
+Product attribute relations
