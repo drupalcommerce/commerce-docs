@@ -16,6 +16,17 @@ The recommended memory limit is 256MB or more. For local development we recommen
 
 [Why must we use Composer?]
 
+### PHP requirements
+
+Drupal Commerce requires that you have the [bcmath](http://php.net/manual/en/intro.bc.php) extension installed. 
+
+If you are using DrupalVM, add the following to your configuration.
+
+```
+extra_packages:
+  - php-bcmath
+```
+
 ## New site
 
 The following command will download Drupal 8 + Commerce 2.x with all
