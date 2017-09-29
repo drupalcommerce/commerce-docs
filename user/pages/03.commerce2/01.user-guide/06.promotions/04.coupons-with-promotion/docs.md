@@ -7,7 +7,9 @@ taxonomy:
 ! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
 
 
-Let's now imagine that you're running a new email campaign that sends customers a coupon that they can use to get 15% off each order over $100. Setting up a coupon based promotion is similar as creating a new promotion. You setup the promotion in the same way, except you attach a coupon to it. Once you create a coupon, the promotion will not apply unless a customer enters the coupon code. 
+Let's now imagine that you're running a new email campaign that sends customers a coupon that they can use to get 15% off each order over $100. 
+
+Setting up a coupon based promotion is the same as creating a new promotion but with a extra step. You setup the promotion the [same way as before](../01.create-promotion), but this time lets add a Coupon to the promotion.
 
 Click on the Coupon tab at the top of the page. Click on 'Add Coupon' and add the following:
 - Enter a specific coupon code
