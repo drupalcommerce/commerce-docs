@@ -6,7 +6,6 @@ taxonomy:
 
 Drupal Commerce has many models and relationships. This page provides explainations as to how these different models related, including entity relationship diagrams.
 
-
 ![Store Entity Diagram. Stores are M:M for products and M:1 for Orders.](store-entity-diagram.png)
 
 **Orders** will only ever have one store, and it is stored as an entity
@@ -37,4 +36,4 @@ merchant. By default stores collect the following:
 
 ![Product Attribute Entity Relationships](attribute_entity_relationships.png)
 
-Product attribute relations
+![Product Entity Relationships](product_entity_relationships.png)

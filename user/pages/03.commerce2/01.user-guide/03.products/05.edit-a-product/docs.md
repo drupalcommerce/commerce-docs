@@ -4,8 +4,14 @@ taxonomy:
     category: docs
 ---
 
-! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
+Products can be edited by going to the products overview page and selecting to edit an existing product. When the products are in the table there will be operation links which allow you to edit the product.
 
-## Editing a product variation
+![Edit](images/edit-product.png)
 
-## Editing a product
+The form will allow you to modify the existing information for the product.
+
+![Edit](images/edit-product-top.png)
+
+To manage variations, you just need to click **Edit** for its entry.
+
+![Edit](images/edit-product-variations.png)
