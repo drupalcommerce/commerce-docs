@@ -6,6 +6,8 @@ taxonomy:
 
 Drupal Commerce has many models and relationships. This page provides explainations as to how these different models related, including entity relationship diagrams.
 
+Full ERD: https://www.dx-experts.nl/commerce-2-entity-relations-including-shipping
+
 ![Store Entity Diagram. Stores are M:M for products and M:1 for Orders.](store-entity-diagram.png)
 
 **Orders** will only ever have one store, and it is stored as an entity
