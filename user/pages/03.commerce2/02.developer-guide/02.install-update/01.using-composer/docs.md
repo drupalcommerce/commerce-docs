@@ -103,7 +103,7 @@ If the new dependency has any conflicts with other dependencies, such as incompa
 
 ### [composer remove]
 
-The `composer remove` command removes a new dependency to your project. This will update the `composer.json` and `composer.lock` files and regenerate the class autoloader.
+The `composer remove` command removes a dependency from your project. This will update the `composer.json` and `composer.lock` files and regenerate the class autoloader.
 
 If the dependency is required by another package, it will not be removed.
 
