@@ -4,7 +4,7 @@ https://{default}/:
   redirects:
     expires: 12m
     paths:
-      "developer-guide/install-update/installation": { "to": "commerce2/developer-guide/install-update/installation" }
+      "/developer-guide/install-update/installation": { "to": "/commerce2/developer-guide/install-update/installation" }
 
       # Outline change
       "/commerce2/getting-started": {"to": "/commerce2/developer-guide/getting-started"}
