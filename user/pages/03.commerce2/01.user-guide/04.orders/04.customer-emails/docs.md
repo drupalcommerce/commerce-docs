@@ -6,11 +6,11 @@ taxonomy:
 
 These settings are managed on an Order Type basis so that you can have different settings for different types of order and manage order notifications in a granular way.
 
+Find your order types at Commerce > Configuration > Orders > Order Types ( /admin/commerce/config/order-types/ )
 ![Select Order Type](commerce2-order-type-selection.png)
 
 ## Enable / Disable Customer Order Receipts
 
- - Find your order types at Commerce > Configuration > Orders > Order Types ( /admin/commerce/config/order-types/ )
  - Click on **Edit** on the order type you wish to configure
  ![Select Order Type](commerce2-order-type-selection.png)
  - Locate the **Emails** section
@@ -19,7 +19,6 @@ These settings are managed on an Order Type basis so that you can have different
 
 ## How to send Store Admin / Manager order notifications
 
- - Find your order types at Commerce > Configuration > Orders > Order Types ( /admin/commerce/config/order-types/ )
  - Click on **Edit** on the order type you wish to set up
  ![Select Order Type](commerce2-order-type-selection.png)
  - Locate the **Emails** section
