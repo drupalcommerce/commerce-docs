@@ -7,7 +7,7 @@ taxonomy:
 ## Overview
 To give your customers the ease of creating an account at the end of their checkout you need to enable the "Guest Registration after checkout" pane in your checkout flow.
 
-!At the time of writing your site will not have this feature by default. You need to apply a [patch]. The below instructions then apply to your site.
+!At the time of writing your site will not have this feature by default. You need to apply a the latest good [patch from this issue]. The below instructions then apply to your site.
 
 ## Enable / Disable Account Registration at Checkout
 You need to enable / disable registration for each Checkout Flow you are using.
@@ -27,4 +27,4 @@ To **Disable** Guest Registration
 
 ![Drag and Drop Guest Registration]( 	commerce2-checkout-flow-complete.png)
 
-[patch] https://www.drupal.org/node/2857157
+[patch from this issue]: https://www.drupal.org/node/2857157
