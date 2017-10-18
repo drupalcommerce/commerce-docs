@@ -23,5 +23,5 @@ Locate the **Emails** section
 
 ![Check / uncheck notification](commerce2-email-section.png)
 
-Check / uncheck the **Email the customer a receipt when an order is placed** box.
-Enter the store notification email address into the **Send a copy of the receipt to this email:** field.
+ - Check / uncheck the **Email the customer a receipt when an order is placed** box.
+ - Enter the store notification email address into the **Send a copy of the receipt to this email:** field.
