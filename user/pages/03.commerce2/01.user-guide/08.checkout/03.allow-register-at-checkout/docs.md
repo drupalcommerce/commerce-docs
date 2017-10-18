@@ -19,9 +19,11 @@ Click **Edit** on the Checkout Flow you want to configure.
 
 ![Select Checkout Flow](commerce2-checkout-flows.png)
 
-To **Enable** Locate the "Disabled" section and drag the **Guest registration after checkout** into the "Complete" section and click **Save**.
+To **Enable** Guest Registration
+ - Locate the "Disabled" section and drag the **Guest registration after checkout** into the "Complete" section and click **Save**.
 
-To **Disable** Locate the "Complete" section and drag the **Guest registration after checkout** into the "Disabled" section and click **Save**.
+To **Disable** Guest Registration
+ - Locate the "Complete" section and drag the **Guest registration after checkout** into the "Disabled" section and click **Save**.
 
 ![Drag and Drop Guest Registration]( 	commerce2-checkout-flow-complete.png)
 
