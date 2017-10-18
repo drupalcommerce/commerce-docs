@@ -15,7 +15,7 @@ These settings are managed on an Order Type basis so that you can have different
  ![Select Order Type](commerce2-order-type-selection.png)
  - Locate the **Emails** section
  - Check / uncheck the **Email the customer a receipt when an order is placed**.
- ![Check / uncheck notification](![Select Order Type](commerce2-order-type-selection.png))
+ ![Check / uncheck notification](commerce2-email-section.png)
 
 ## How to send Store Admin / Manager order notifications
 
@@ -24,5 +24,5 @@ These settings are managed on an Order Type basis so that you can have different
  ![Select Order Type](commerce2-order-type-selection.png)
  - Locate the **Emails** section
  - Enter the email to notify when a new order is placed
- ![Enter Admin Notification Email](![Select Order Type](commerce2-order-type-selection.png))
+ ![Enter Admin Notification Email](commerce2-email-section.png)
  
