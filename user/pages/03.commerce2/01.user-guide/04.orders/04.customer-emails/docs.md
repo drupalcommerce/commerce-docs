@@ -20,7 +20,8 @@ Locate the **Emails** section
 
 ![Check / uncheck notification](commerce2-email-section.png)
 
-Check / uncheck the **Email the customer a receipt when an order is placed**.
+Check / uncheck the **Email the customer a receipt when an order is placed** box.
+
 
 
 ## How to send Store Admin / Manager order notifications
