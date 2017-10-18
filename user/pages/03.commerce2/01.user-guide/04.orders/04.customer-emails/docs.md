@@ -4,6 +4,19 @@ taxonomy:
     category: docs
 ---
 
-! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
+These settings are managed on an Order Type basis so that you can have different settings for different types of order and manage order notifications in a granular way.
 
-Explain how to enable/disable customer order receipts. Send a copy to store admin / manager.
+## Enable / Disable Customer Order Receipts
+
+ - Find your order types at Commerce > Configuration > Orders > Order Types ( /admin/commerce/config/order-types/ )
+ - Select 'Edit' on the order type you wish to set up.
+ - Locate the 'Emails' section
+ - Check / uncheck the 'Email the customer a receipt when an order is placed' 
+
+## How to send Store Admin / Manager order notifications
+
+ - Find your order types at Commerce > Configuration > Orders > Order Types ( /admin/commerce/config/order-types/ )
+ - Select 'Edit' on the order type you wish to set up
+ - Locate the 'Emails' section
+ - Enter the email to notify when a new order is placed
+ 
