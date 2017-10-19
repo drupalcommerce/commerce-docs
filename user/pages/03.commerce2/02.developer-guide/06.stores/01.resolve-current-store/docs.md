@@ -4,16 +4,12 @@ taxonomy:
     category: docs
 ---
 
-The first store created in Commerce is saved as the default store in commerce_store.settings.yml.
+The first store created in Commerce is saved as the default store in `commerce_store.settings.yml`. This is used in `\Drupal\commerce_store\Resolver\DefaultStoreResolver` to load the site's default store..
 
-This uses Drupal\commerce_store\Resolver\DefaultStoreResolver to retrieve it on page load.
+In order to load a different store we must create a new StoreResolver. In this example, use a store ID set in a cookie to load the relevant store.
 
-In order to load a different store, create a new StoreResolver.
-
-In this example, use a store ID set in a cookie to load the relevant store.
-
-Copy DefaultStoreResolver to your module (in /src/Resolver/) and rename to CookieStoreResolver.
-Change the code in resolve() to load the store ID from the cookie and return it.
+Copy DefaultStoreResolver to your module (in `/src/Resolver/`) and rename to CookieStoreResolver.
+Change the code in `resolve()` to load the store ID from the cookie and return it.
 
 ```php
 <?php
@@ -52,8 +48,9 @@ class CookieStoreResolver implements StoreResolverInterface {
    * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
    *   The request stack.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager RequestStack $request_stack) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, RequestStack $request_stack) {
     $this->storage = $entity_type_manager->getStorage('commerce_store');
+    $this->requestStack = $request_stack;
   }
 
   /**
@@ -61,7 +58,7 @@ class CookieStoreResolver implements StoreResolverInterface {
    */
   public function resolve() {
       $current_request = $this->requestStack->getCurrentRequest();
-      $store_id = current_request->cookies->get('Drupal_visitor_store_id');
+      $store_id = $current_request->cookies->get('Drupal_visitor_store_id');
 
       if ($store_id) {
           $store = $this->storage->load($store_id);
