@@ -27,6 +27,8 @@ To **Allow Registration at Checkout**
  
 ![Check the Allow box](commerce2-checkout-allow-registration-admin.png)
 
+With a Boostrap theme you page will look something like the below.
+
 ![Allow box checked user view](commerce2-checkout-allow-registration-bootstrap.png)
 
 To **Deny Registraion at Checkout**
@@ -36,5 +38,7 @@ To **Deny Registraion at Checkout**
  - click **update** and then **Save** at the bottom of the page.
 
 ![Uncheck the Allow box](commerce2-checkout-no-guest-no-registration-admin.png)
+
+With a Boostrap theme you page will look something like the below.
 
 ![Allow box unchecked user view](commerce2-checkout-no-guest-no-registration-bootstrap.png)
