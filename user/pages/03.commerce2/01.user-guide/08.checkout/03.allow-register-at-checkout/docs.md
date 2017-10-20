@@ -19,7 +19,7 @@ Click **Edit** on the Checkout Flow you want to configure.
 ![Select Checkout Flow](commerce2-checkout-flows.png)
 
 
-To **Allow Registration at Checkout*
+To **Allow Registration at Checkout**
  - Click the cog icon in the **Login or continue as guest**
  - Uncheck the **Allow guest checkout** box
  - Check the **Allow registration** box
