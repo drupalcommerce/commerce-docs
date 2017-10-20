@@ -10,7 +10,7 @@ By default your site will allow guest checkouts.
 You can change this and only allow registered users to checkout and/or allow users to register before they checkout.
 You can change this setting on a per Checkout Flow basis, so you can allow guest checkouts for some flows and not others as you need.
 
-## How to enable / disable Guest Checkout
+### How to enable / disable Guest Checkout
 
 Visit the Commerce configuration page and go to the **Checkout Flows** section.
 
@@ -41,7 +41,7 @@ To give your customers the ease of creating an account at the end of their check
 
 !At the time of writing your site will not have this feature by default. You need to apply the latest good [patch from this issue]. The below instructions will then apply to your site.
 
-## Enable / Disable Account Registration at Checkout
+### Enable / Disable Account Registration at Checkout
 You need to enable / disable registration for each Checkout Flow you are using.
 
 Visit the Commerce configuration page and go to the **Checkout Flows** section.
