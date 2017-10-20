@@ -24,10 +24,17 @@ To **Allow Registration at Checkout*
  - Uncheck the **Allow guest checkout** box
  - Check the **Allow registration** box
  - click **update** and then **Save** at the bottom of the page.
+ 
+![Check the Allow box](commerce2-checkout-allow-registration-admin.png)
 
+![Allow box checked user view](commerce2-checkout-allow-registration-bootstrap.png)
 
 To **Deny Registraion at Checkout**
  - Click the cog icon in the **Login or continue as guest**
  - Uncheck the **Allow guest checkout** box
  - Uncheck the **Allow registration** box
  - click **update** and then **Save** at the bottom of the page.
+
+![Uncheck the Allow box](commerce2-checkout-no-guest-no-registration-admin.png)
+
+![Allow box unchecked user view](commerce2-checkout-no-guest-no-registration-bootstrap.png)
