@@ -7,6 +7,8 @@ taxonomy:
 ## Overview
 To ensure all users have accounts you can restrict checkout and force users without accounts to make one before they can checkout. You can change this setting on a per Checkout Flow basis, so you can deny guest checkouts for some flows and not others as you need.
 
+You can also allow registration at the end of Guest checkouts, see the [Contol Guest Checkout](../02.control-guest-checkout/docs.md) section for details.
+
 ## Enable / Disable Account Registration at Checkout
 
 Visit the Commerce configuration page and go to the **Checkout Flows** section.
