@@ -28,3 +28,9 @@ To **Enable** Guest Registration
 To **Disable** Guest Registration
 - Click the cog icon in the **Login or continue as guest**
 - Uncheck the **Allow guest checkout** box, click **update** and then **Save** at the bottom of the page.
+
+![Select Checkout Flow](commerce2-guest-checkout-allowed-admin.png)
+
+Your first checkout page will then have the below sections, its exact appearance will vary as the below image uses the Bootstrap theme.
+
+![Select Checkout Flow](commerce2-guest-checkout-allowed-bootstrap.png)
