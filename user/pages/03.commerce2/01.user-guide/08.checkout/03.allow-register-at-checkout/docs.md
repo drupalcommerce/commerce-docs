@@ -45,7 +45,7 @@ With a Boostrap theme you page will look something like the below.
 ![Allow box unchecked user view](commerce2-checkout-no-guest-no-registration-bootstrap.png)
 
 
-## Allow guests to create an account at the end of the checkout process
+## Allow guests to create an account during the checkout process
 
 To give your customers the ease of creating an account at the end of their checkout you need to enable the "Guest Registration after checkout" pane in your checkout flow.
 
