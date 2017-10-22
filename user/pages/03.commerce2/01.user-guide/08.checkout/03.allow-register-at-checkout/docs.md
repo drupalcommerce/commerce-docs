@@ -5,7 +5,9 @@ taxonomy:
 ---
 
 ## Overview
-To ensure all users have accounts you can restrict checkout and force users without accounts to make one before they can checkout. You can change this setting on a per Checkout Flow basis, so you can deny guest checkouts for some flows and not others as you need.
+To ensure all users have accounts you can restrict checkout to just users with accounts and either force users without accounts to create an account before they can checkout, or deny them the ability to checkout altogether. 
+
+You can change this setting on a per Checkout Flow basis, so you can deny guest checkouts for some flows and not others as you need.
 
 
 ## Enable / Disable Account Registration at Checkout
