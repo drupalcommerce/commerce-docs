@@ -1,11 +1,11 @@
 ---
-title: Allow registration at checkout
+title: Allow registration during checkout
 taxonomy:
     category: docs
 ---
 
 ## Overview
-You can restrict checkout to just users with accounts. You can then and either deny access to checkout to users without accounts or require them to create an account before they can checkout.
+You can restrict checkout to just users with accounts. You can then either completely deny checkout access to users without accounts or require them to create an account before they can checkout.
 
 You can change this setting on a per Checkout Flow basis, so you can deny guest checkouts for some flows and not others as you need.
 
