@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-This guide assumes you have created your product attributes, or understan how they are used after reading how to [configure product attributes](../02.configure-product-attributes)
+This guide assumes you have created your product attributes, or understand how they are used after reading how to [configure product attributes](../02.configure-product-attributes)
 
 ! Currently you must create the product variation type first, then your product type. There is an open issue to streamline and simplify this process: [https://www.drupal.org/node/2911346](https://www.drupal.org/node/2911346)
 
