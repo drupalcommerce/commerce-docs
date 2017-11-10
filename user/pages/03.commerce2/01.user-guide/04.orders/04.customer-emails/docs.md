@@ -25,3 +25,9 @@ Locate the **Emails** section
 
  - Check / uncheck the **Email the customer a receipt when an order is placed** box.
  - Enter the store notification email address into the **Send a copy of the receipt to this email:** field. You can enter multiple comma separated addresses into this field eg "one@example.com, two@example.com, three@example.com"
+
+## Editing / Translating the Email Text
+
+Use the template file located in `/commerce/modules/order/templates/commerce-order-receipt.html.twig`.
+
+You can copy this file to your theme and then edit the text as desired. You can also use the file as a translation reference when searching for strings to translate in the user interface translation UI.
