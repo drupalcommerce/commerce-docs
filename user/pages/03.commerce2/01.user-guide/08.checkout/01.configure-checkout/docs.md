@@ -8,7 +8,7 @@ taxonomy:
 
 Checkout flow page is under Home >> Administration >> Commerce >> Configuration >> Checkout flows
 
-![checkout_1](checkout_1.JPG)
+![checkout_1](commerce-docs/images/contributing/checkout_1.JPG)
 
 Drupal Commerce comes with a drag-and-drop checkout form builder that lets you decide what information you need to collect from or display to customers during the checkout process. It supports single and multi-page checkout depending on your requirements and can be easily extended with new components through the use of contributed or custom modules.
 
