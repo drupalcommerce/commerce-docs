@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Orders can be created for customers in the administrative areas. This can be done by going to the **Orders** management page from the **Commerce** page from the administrative toolnar. Click on **Create  a new order**.
+Orders can be created for customers in the administrative areas. This can be done by going to the **Orders** management page from the **Commerce** page from the administrative toolbar. Click on **Create  a new order**.
 
 ![Orders](images/order-overview.png)
 
