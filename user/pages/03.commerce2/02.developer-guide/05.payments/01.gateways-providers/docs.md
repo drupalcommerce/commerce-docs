@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Here is a list of known payment gateways for which support is currently being provided.
+Here is a list of known payment gateways that are being supported by their maintainers.
 
 | Name                            | Description                                             |
 |-------------------------------------------------------------------------------------------|
