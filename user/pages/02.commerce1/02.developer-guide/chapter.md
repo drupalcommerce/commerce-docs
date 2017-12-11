@@ -7,8 +7,8 @@ taxonomy:
 Developer guide
 ===============
 
-This section will be for those implementing Drupal Commerce. It allows us to explain dependencies and how they are used. It will show different integration options.
+Development on Drupal Commerce is a community effort, and all are invited to join in where possible.  We're bringing together people from around the world with a wide range of expertise to make this a giant leap forward in Drupal based e-commerce.
 
-The Developer guide will be primarily for audiences who may have a WooCommerce background, for example. It is assumed for anyone who is using Drupal Commerce for the first time.
+In order to dive in, you should know where the code currently stands and how to contribute to it.  To that end, we'll be adding a project roadmap in the near future that ties into both a specification and issues in our <a href="http://drupal.org/project/issues/commerce">issue tracker</a> to visualize what we have completed and what remains to be done.
 
-We will include a Adapting from 1.x section. This is a section that essentially highlights how developer implementations in 1.x would be done in 2.x
+When you're ready to dive in, you should review the <a href="http://www.drupalcommerce.org/developer-guide/development-standards">development standards</a> and make sure you understand the Drupal Commerce <a href="http://www.drupalcommerce.org/developer-guide/code-workflow">code workflow</a>. Then go pick an issue, find other people working on the same system, and get to work!
