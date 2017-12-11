@@ -9,3 +9,7 @@ There are two ways to install Drupal Commerce. You can do it from scratch by ins
 An easier way to install Drupal Commerce would be to use an installation profile that enables and configures the Commerce modules and components for you.  The primary starter installation profile is <a href="http://drupal.org/project/commerce_kickstart">Commerce Kickstart</a>, but a major goal for the project is to see additional installation profiles tailor the initial configuration toward specific markets and business models.
 
 Refer to the section below for your preferred method of installation.
+
+<a href="https://drupalcommerce.org/user-guide/installing-scratch">Installing from scratch</a>
+<a href="https://drupalcommerce.org/user-guide/installing-commerce-kickstart-1x">Installing with Commerce Kickstart 1.x</a>
+<a href="https://drupalcommerce.org/user-guide/migrating-ubercart-stores">Migrating from Ubercart Stores</a>
