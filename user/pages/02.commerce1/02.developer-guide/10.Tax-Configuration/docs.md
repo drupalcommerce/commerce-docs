@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Tax Configuration
 taxonomy:
     category: docs
 ---

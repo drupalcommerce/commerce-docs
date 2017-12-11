@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Migrating from Ubercart Stores
 taxonomy:
     category: docs
 ---

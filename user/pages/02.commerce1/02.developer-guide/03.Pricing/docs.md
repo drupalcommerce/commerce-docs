@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Pricing
 taxonomy:
     category: docs
 ---

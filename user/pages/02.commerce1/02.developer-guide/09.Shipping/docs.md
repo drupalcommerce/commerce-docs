@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Shipping
 taxonomy:
     category: docs
 ---

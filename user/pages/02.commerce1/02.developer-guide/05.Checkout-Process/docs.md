@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Checkout Process
 taxonomy:
     category: docs
 ---

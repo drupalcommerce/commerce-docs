@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Snippets
 taxonomy:
     category: docs
 ---

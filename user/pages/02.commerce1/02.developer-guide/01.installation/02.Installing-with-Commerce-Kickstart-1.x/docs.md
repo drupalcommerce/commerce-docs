@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Installing with Commerce Kickstart 1.x
 taxonomy:
     category: docs
 ---

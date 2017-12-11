@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Payments
 taxonomy:
     category: docs
 ---

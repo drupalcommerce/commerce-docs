@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Workflow Examples
 taxonomy:
     category: docs
 ---

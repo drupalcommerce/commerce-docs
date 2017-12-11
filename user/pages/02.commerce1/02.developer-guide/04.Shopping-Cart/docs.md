@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Shopping Cart
 taxonomy:
     category: docs
 ---

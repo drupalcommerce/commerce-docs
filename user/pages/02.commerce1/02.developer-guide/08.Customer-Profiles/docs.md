@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Customer Profiles
 taxonomy:
     category: docs
 ---

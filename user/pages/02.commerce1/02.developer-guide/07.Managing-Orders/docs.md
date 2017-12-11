@@ -1,5 +1,5 @@
 ---
-title: Installing from scratch
+title: Managing Orders
 taxonomy:
     category: docs
 ---
