@@ -11,9 +11,9 @@ Currently the Info hooks and API utilization guides contain the only complete co
 
 
 <ul>
-<li><a href="https://drupalcommerce.org/developer-guide/core-architecture/systems">Systems</a></li>
-<li><a href="https://drupalcommerce.org/developer-guide/core-architecture/entities">Entities</a></li>
-<li><a href="https://drupalcommerce.org/developer-guide/core-architecture/fields">Fields</a></li>
-<li><a href="https://drupalcommerce.org/developer-guide/core-architecture/info-hooks">Info hooks</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/systems">Systems</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/entities">Entities</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/fields">Fields</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/info-hooks">Info hooks</a></li>
 
 </ul>

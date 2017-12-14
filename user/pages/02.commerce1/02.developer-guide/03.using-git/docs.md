@@ -8,6 +8,10 @@ This page does not necessarily need to contain a tutorial on how to use Git, as 
 
 For starters, here's the prototype documentation on drupal.org for using Git to maintain a Drupal module:
 
-http://drupal.org/node/711070
 
-http://progit.org/book/
+<ul>
+<li><a href="http://drupal.org/node/711070">http://drupal.org/node/711070</a></li>
+<li><a href="http://progit.org/book/">http://progit.org/book/</a></li>
+</ul>
+
+
