@@ -14,9 +14,9 @@ This page will serve as a container describing the various fields and widgets de
 
 
 <ul>
-<li><a href="http://progit.org/book/">Price field</a></li>
-<li><a href="">Product reference field</a></li>
-<li><a href="">Address field (contrib)</a></li>
-<li><a href="">Line item reference field</a></li>
-<li><a href="">Customer profile reference</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/fields/price-field">Price field</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/fields/product-reference-field">Product reference field</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/fields/address-field">Address field (contrib)</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/fields/line-item-reference-field">Line item reference field</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/fields/customer-profile-reference">Customer profile reference</a></li>
 </ul>
