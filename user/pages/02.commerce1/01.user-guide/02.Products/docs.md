@@ -3,7 +3,6 @@ title: Products
 taxonomy:
     category: docs
 ---
-
 <div class="docs-enhanced">
 <p>Product Types represent a standalone product or potentially a single variation in a group of related products (such as a single size of a style of t-shirt). Every product must have a Title, a unique merchant-defined SKU, and a base price in the default Price field.  Additional fields to represent internal data or product attributes may be added as necessary, and new product types can be created to facilitate multiple sets of fields.</p>
 
@@ -82,11 +81,9 @@ taxonomy:
 
 
 <ul>
-<li><a href="">Product Attributes and Variations</a></li>  
-<li><a href="">Product Displays</a></li>  
-<li><a href="">Administering Products</a></li>  
-<li><a href="">Setting up a Product Catalog</a></li>  
-<li><a href="">Importing Products using Feeds</a></li>  
-
-
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/products/product-attributes-and-variations">Product Attributes and Variations</a></li>  
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/products/product-displays">Product Displays</a></li>  
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/products/administering-products">Administering Products</a></li>  
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/products/setting-up-a-product-catalog">Setting up a Product Catalog</a></li>  
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/products/importing-products-using-feeds">Importing Products using Feeds</a></li>  
 </ul>
