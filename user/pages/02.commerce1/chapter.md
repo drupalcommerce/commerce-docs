@@ -25,8 +25,8 @@ On the site you will find a nice overview of the original 1.x build and links to
    documentation that ships with all Commerce installations.
 
 [DrupalCommerce.org]: https://drupalcommerce.org/getting-started
-[User Guide]: https://drupalcommerce.org/user-guide
-[Developer Guide]: https://drupalcommerce.org/developer-guide
+[User Guide]: https://docs.drupalcommerce.org/commerce1/user-guide
+[Developer Guide]: https://docs.drupalcommerce.org/commerce1/developer-guide
 [Commerce Kickstart 2]: https://drupalcommerce.org/commerce-kickstart-2
 [Commerce Cookbook]: https://drupalcommerce.org/site-builders-guide
 [API Documentation]: http://api.drupalcommerce.org/
