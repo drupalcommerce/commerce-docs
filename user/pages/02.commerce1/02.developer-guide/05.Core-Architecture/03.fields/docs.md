@@ -1,5 +1,5 @@
 ---
-title: Installation profiles
+title: Fields
 taxonomy:
     category: docs
 ---

@@ -1,5 +1,5 @@
 ---
-title: Core Architecture
+title: Info Hooks
 taxonomy:
     category: docs
 ---
