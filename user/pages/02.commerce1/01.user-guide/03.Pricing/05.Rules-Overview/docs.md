@@ -22,7 +22,7 @@ taxonomy:
 <h2>Drupal Commerce Documentation Examples using Rules</h2>
 <p>There are a number of topics we handle in the Drupal Commerce documentation that include some or all of the Rule interface to show off a certain aspect. Below we've listed a small accounting of the articles that are written to take advantage and teach you more about the Rules interface.</p>
 <ul>
-<li><a href="/user-guide/sell-price-calculation">Administrator's Special (50% Discount)</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/shopping-cart">Administrator's Special (50% Discount)</a></li>
 <li><a href="/user-guide/shopping-cart-and-multicurrency">Flat Rate Currency Conversion</a></li>
 </ul>
 

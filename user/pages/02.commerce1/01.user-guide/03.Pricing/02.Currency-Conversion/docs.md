@@ -11,7 +11,7 @@ taxonomy:
 <ul>
     <li><a href="http://drupal.org/project/commerce_multicurrency">Commerce Multicurrency</a> - Define and deal with currency exchange rates.</li>
     <li><a href="http://commerceguys.com/blog/commerce-module-tuesday-commerce-multicurrency">Multicurrency</a> - Watch pcambra's excellent Multicurrency Video</li>
-    <li><a href="http://www.drupalcommerce.org/specification/info-hooks/commerce">Currency Info Hooks</a> - Read about the API for pulling currency information</li>
+    <li><a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/info-hooks">Currency Info Hooks</a> - Read about the API for pulling currency information</li>
 </ul>
 <h2>Enable Multiple Currencies</h2>
 <p>Before you can make a single rule or product into a different currency, you will need to enable a few of the currencies on the backend. Below we show you how to do that.</p>
