@@ -28,7 +28,6 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Epaybg]                       | Bulgarian payments gateway http://epay.bg for Commerce module.                                      |
 | [Mollie]                       | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce.                                 |
 | [Moneris]                      | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x)                |
-| [Open Payment Platform]        | This module integrates PAY.ON Open Payment Platform with Drupal Commerce, integrating their COPYandPAY widget in Drupal Commerce checkout flow.              |
 | [smartpay]                     | Supports Barclaycard Hosted Payment Pages for Drupal Commerce.                                             |
 | [payjp]                        | Pay.JP integration for the Drupal Commerce payment system.                                               |
 | [banklink]                     | This is a generic banklink payment gateway for drupal Commerce 2.x.                                         |
@@ -45,25 +44,24 @@ Here is a list of known payment gateways that are being supported by their maint
 
 [Braintree]: https://www.drupal.org/project/commerce_braintree
 [PayPal]: https://www.drupal.org/project/commerce_paypal
-[Stripe]: https://www.drupal.org/project/commerce_Stripe
-[Authorize.Net]: https://www.drupal.org/project/commerce_Authnet
-[Vantiv]: https://www.drupal.org/project/commerce_Vantiv
-[Square]: https://www.drupal.org/project/commerce_Square
-[Paymill]: https://www.drupal.org/project/commerce_Paymill
-[Ingenico]: https://www.drupal.org/project/commerce_Ingenico
-[Paytrail]: https://www.drupal.org/project/commerce_Paytrail
-[Payplug]: https://www.drupal.org/project/commerce_Payplug
+[Stripe]: https://www.drupal.org/project/commerce_stripe
+[Authorize.Net]: https://www.drupal.org/project/commerce_authnet
+[Vantiv]: https://www.drupal.org/project/commerce_vantiv
+[Square]: https://www.drupal.org/project/commerce_square
+[Paymill]: https://www.drupal.org/project/commerce_paymill
+[Ingenico]: https://www.drupal.org/project/commerce_ingenico
+[Paytrail]: https://www.drupal.org/project/commerce_paytrail
+[Payplug]: https://www.drupal.org/project/commerce_payplug
 [PayU Money]: https://www.drupal.org/project/commerce_payumoney
 [CC Avenue]: https://www.drupal.org/project/commerce_ccavenue
-[Alipay]: https://www.drupal.org/project/commerce_Alipay
+[Alipay]: https://www.drupal.org/project/commerce_alipay
 [WeChat Pay]: https://www.drupal.org/project/commerce_wechat_pay
-[Worldline]: https://www.drupal.org/project/commerce_Worldline
-[Datatrans]: https://www.drupal.org/project/commerce_Datatrans
-[EasyPaybg]: https://www.drupal.org/project/commerce_EasyPaybg
-[Epaybg]: https://www.drupal.org/project/commerce_Epaybg
-[Mollie]: https://www.drupal.org/project/commerce_Mollie
-[Moneris]: https://www.drupal.org/project/commerce_Moneris
-[Open Payment Platform]: https://www.drupal.org/project/commerce_opp
+[Worldline]: https://www.drupal.org/project/commerce_worldline
+[Datatrans]: https://www.drupal.org/project/commerce_datatrans
+[EasyPaybg]: https://www.drupal.org/project/commerce_easyPaybg
+[Epaybg]: https://www.drupal.org/project/commerce_epaybg
+[Mollie]: https://www.drupal.org/project/commerce_mollie
+[Moneris]: https://www.drupal.org/project/commerce_moneris
 [smartpay]: https://www.drupal.org/project/commerce_smartpay
 [payjp]: https://www.drupal.org/project/commerce_payjp
 [banklink]: https://www.drupal.org/project/commerce_banklink
@@ -72,7 +70,7 @@ Here is a list of known payment gateways that are being supported by their maint
 [Commerce sermepa]: https://www.drupal.org/project/commerce_sermepa
 [Bitpayir]: https://www.drupal.org/project/commerce_bitpayir
 [PayONE (sandbox)]: https://www.drupal.org/sandbox/mitrpaka/2849906
-[Klarna Checkout]: https://github.com/mitrpaka/commerce_klarna_checkout
+[Klarna Checkout]: https://www.drupal.org/project/commerce_klarna_checkout
 [commerce_suomenverkkomaksut]: https://drupal.org/project/commerce_suomenverkkomaksut
 [sermepa]: www.redsys.es/wps/portal/redsys/publica/acercade/nuestrosSocios
 [Payeezy]: https://www.drupal.org/project/commerce_payeezy
