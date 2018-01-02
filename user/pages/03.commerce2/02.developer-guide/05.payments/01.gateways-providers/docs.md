@@ -50,7 +50,7 @@ Here is a list of known payment gateways that are being supported by their maint
 |  [Commerce Elavon]		 |		|
 |  [Commerce ePayco]		|		|
 |  [Commerce GoCardless]   	|		|
-|  [Commerce Liqpay Gateway	|		|
+|  [Commerce Liqpay Gateway]|		|
 |  [Commerce MultiSafepay]   |		|
 |  [Commerce Pagos Net]   	|		|
 |  [Commerce Payir]   		|		|
