@@ -39,6 +39,31 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Klarna Checkout]  | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |
 | [Payeezy]  | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported. |
 | [Omise]  | This module integrates Omise with Drupal Commerce. |
+|  [Commerce  Pasargad]  	 |
+|  [Commerce  Zarinpal]  	 |
+|  [Commerce Amazon Pay] 	 |
+|  [Commerce Atom Payment]   |
+|  [Commerce Braintree Marketplace]   |
+|  [Commerce China Payments] |
+|  [Commerce DIBS integration]   |
+|  [Commerce DPS]  			 |
+|  [Commerce Elavon]		 |
+|  [Commerce ePayco]		|
+|  [Commerce GoCardless]   	|
+|  [Commerce Liqpay Gateway
+|  [Commerce MultiSafepay]   |
+|  [Commerce Pagos Net]   	|
+|  [Commerce Payir]   		|
+|  [Commerce PayTabs]   	|
+|  [Commerce Payway]   		|
+|  [Commerce Razorpay Payment Integration]   |
+|  [Commerce Saman Gateway] |
+|  [Commerce Satispay]   	|
+|  [Commerce Swedbank Payment Portal]   |
+|  [Commerce Tpay]   		|
+|  [Commerce USAePay]   	|
+|  [E-Commerce Mellat]   	|
+
 
 
 
