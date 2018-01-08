@@ -14,34 +14,34 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |					
 | [Braintree]| This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |					
 | [CC Avenue]| The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.|					
-| [Commerce  Pasargad]  	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	|			
-| [Commerce  Zarinpal]  	 | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module.	|			
-| [Commerce Amazon Pay] 	 | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce.	|			
-| [Commerce Atom Payment]   | This payment gateway will support Indian and international credit card, Debit card and internet banking system with safe and secure.	|			
-| [Commerce Braintree Marketplace]   |	Extends commerce_braintree module to leverage the Braintree marketplace transactions API.	|			
-| [Commerce China Payments] |	Integrates with Alipay and WeChat Pay			|	
-| [Commerce DIBS integration]   |	Provides a DIBS payment gateway integration which allows you to send your clients to make an off-site payment directly on the DIBS payment system.		|		
-| [Commerce DPS]  			 |	DPS (PaymentExpress) payment methods for Drupal Commerce.	|
-| [Commerce Elavon]		 |	Integrate Elavon Virtual Merchant payment service Converge payment gateway with Commerce module. There are two payment options Onsite or Offsite Redirect	|	
-| [Commerce ePayco]		|	ePayco is a Colombian payment gateway that Integrate ePayco Off-site payments, Set-up global gateway settings, Alter payment data dinamically	|	
-| [Commerce GoCardless]   	|	Integration with the UK Direct Debit payment gateway GoCardless	|		
-| [Commerce Liqpay Gateway]|	payment services provided by LiqPay. It efficiently integrates payments from various sources such as: credit cards, cash via self-service terminals (offline payments), email receipts, privat24 banking or liqpay accounts.	|			
-| [Commerce MultiSafepay]   |	Multisafepay integration for Drupal Commerce.	|			
-| [Commerce Pagos Net]   	|	This project integrates the PagosNet payment gateway into the Drupal Commerce payment and checkout systems.	|		
-| [Commerce Payir]   		|	Pay.ir payment method for Drupal Commerce	|	
-| [Commerce PayTabs]   	|	This module integrates PayTabs with Drupal Commerce. This is an offsite payment gateway. It provides credit card payments only, so far.	|		
-| [Commerce Payway]   		|	Commerce Payway is a payment module that integrates Westpac Payway API with the Drupal Commerce module.	|	
-| [Commerce Razorpay Payment Integration]   |	 Razorpay Payment Integration |				
-| [Commerce Saman Gateway] |	Saman Bank is Iranian commerce solution.	|			
-| [Commerce Satispay]   	|	Satispay payment system for Drupal Commerce.	|		
+| [Commerce  Pasargad]  	 |	|			
+| [Commerce  Zarinpal]  	 |	|			
+| [Commerce Amazon Pay] 	 |	|			
+| [Commerce Atom Payment]   |	|				
+| [Commerce Braintree Marketplace]   |		|			
+| [Commerce China Payments] |				|	
+| [Commerce DIBS integration]   |			|		
+| [Commerce DPS]  			 |		|
+| [Commerce Elavon]		 |		|	
+| [Commerce ePayco]		|		|	
+| [Commerce GoCardless]   	|		|		
+| [Commerce Liqpay Gateway]|		|			
+| [Commerce MultiSafepay]   |		|			
+| [Commerce Pagos Net]   	|		|		
+| [Commerce Payir]   		|		|	
+| [Commerce PayTabs]   	|		|		
+| [Commerce Payway]   		|		|	
+| [Commerce Razorpay Payment Integration]   |	|				
+| [Commerce Saman Gateway] |		|			
+| [Commerce Satispay]   	|		|		
 | [Commerce sermepa] | Commerce support for Spanish banks that use Sermepa/Redsys systems. Full list of banks managed by [sermepa] |					
-| [Commerce Swedbank Payment Portal]   |	This module integrates Swedbank Payment Portal payment methods (banklink, credit card) as payment gateways in Drupal Commerce.	|	
-| [Commerce Tpay]   		|	This project integrates Tpay payment and checkout systems	|	
-| [Commerce USAePay]   	|	USAePay credit card gateway for Commerce using SOAP.	|		
+| [Commerce Swedbank Payment Portal]   |		|			
+| [Commerce Tpay]   		|		|	
+| [Commerce USAePay]   	|		|		
 | [CommercePaytm]| Integrate paytm payment gateway with drupal commerce. |					
 | [Datatrans]| This project provides a Datatrans integration for the Drupal Commerce payment and checkout system.  |					
 | [EasyPaybg]| Module implements Bulgarian EasyPay as payment method for commerce module.  |					
-| [E-Commerce Mellat]   	|	Mellat is Iranian commerce solution.	|		
+| [E-Commerce Mellat]   	|		|		
 | [Epaybg]   | Bulgarian payments gateway http://epay.bg for Commerce module.  |					
 | [Ingenico] | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions.  |
 | [Klarna Checkout]  | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |					
