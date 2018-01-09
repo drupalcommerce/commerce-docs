@@ -19,12 +19,9 @@ taxonomy:
 
 <h2>Product Variations</h2>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/CK-Entity-or-Node.jpg">
-            <img src="/sites/default/files/docs/CK-Entity-or-Node.jpg" alt="Drupal Commerce Entity Graph" />
-        </a>
-    </div>
+
+![Drupal Commerce Entity Graph](CK-Entity-or-Node.jpg)
+
     <div class="caption">
         <p class="caption-title">Page or Variation?</p>
         <p>This illustration explains the differences between product pages (nodes) and product variations (products).</p>
@@ -40,11 +37,8 @@ taxonomy:
 
 <h2>Product Types</h2>
 
-<div class="screenshot">
-    <a href="/sites/default/files/docs/CK-Product-Entity.png">
-        <img src="/sites/default/files/docs/CK-Product-Entity.png" alt="Drupal Commerce Product Entity Graph" />
-    </a>
-</div>
+![Drupal Commerce Product Entity Graph](CK-Product-Entity.png)
+
 
 <p>Using Drupal 7's entity system has provided us with a very simple paradigm: Nodes have Content Types. Content Types have fields and made lots of sense for content-related items. Product Entities are similar to Content Types. You can create Product Types with various fields.</p>
 <p>For example, you may want to sell physical books, ebook downloads, and have a donation system similar to Kickstarter for up-and-coming authors. Each product type can have it's own set of fields, rules, display settings, etc. You can add and edit product types right there in core using strikingly familiar forms (they are literally the same as the content type forms, minus all of the unnecessary content type settings). Let's quickly examine three different product types, with a few fields:</p>
