@@ -3,11 +3,10 @@ title: Products
 taxonomy:
     category: docs
 ---
-<div class="docs-enhanced">
+
 <p>Product Types represent a standalone product or potentially a single variation in a group of related products (such as a single size of a style of t-shirt). Every product must have a Title, a unique merchant-defined SKU, and a base price in the default Price field.  Additional fields to represent internal data or product attributes may be added as necessary, and new product types can be created to facilitate multiple sets of fields.</p>
 
-
-![Drupal Commerce Entities](commerce-docs/user/pages/02.commerce1/01.user-guide/02.Products/Entity.png) 
+![Drupal commerce Entities](commerce-docs/user/pages/02.commerce1/01.user-guide/02.Products/Entity.png)
 
 </div>
 <p>The above graphic shows all of the Drupal Commerce Entities. Note the ubiquitous Drupal node is "grouping" or "referencing" various products. We achieve this with a product reference field. When you add a product to your cart and/or you go to checkout, an order is created with a line item that references your product. Finally, the customer is taken through the checkout process and the order status is hopefully updated to "complete."</p>
@@ -75,7 +74,6 @@ taxonomy:
   </li>
 </ul></p>
 <p>We're sure you can come up with your own set of really interesting cross-selling kinds of products that push our Product entities to their limits! Let us know here if you have a site that you would like featured in the Showcase.</p>
-</div>
 
 
 
