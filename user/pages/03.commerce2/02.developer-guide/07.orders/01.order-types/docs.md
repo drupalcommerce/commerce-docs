@@ -20,7 +20,7 @@ can have the more simplistic *Default* workflow.
 ![Order refresh settings](../images/order-types-refresh.png)
 
 Each order type can control its refresh settings to control how often
-order draft’s are processed. This controls the [order refresh
+order drafts are processed. This controls the [order refresh
 process.](../03.order-processing)
 
 ![Order type cart settings](../images/order-types-cart.png)
