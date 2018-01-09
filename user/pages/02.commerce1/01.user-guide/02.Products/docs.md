@@ -8,7 +8,8 @@ taxonomy:
 
 ![Drupal commerce Entities](commerce-docs/user/pages/02.commerce1/01.user-guide/02.Products/Entity.png)
 
-</div>
+
+
 <p>The above graphic shows all of the Drupal Commerce Entities. Note the ubiquitous Drupal node is "grouping" or "referencing" various products. We achieve this with a product reference field. When you add a product to your cart and/or you go to checkout, an order is created with a line item that references your product. Finally, the customer is taken through the checkout process and the order status is hopefully updated to "complete."</p>
 
 <div class="screenshot">
