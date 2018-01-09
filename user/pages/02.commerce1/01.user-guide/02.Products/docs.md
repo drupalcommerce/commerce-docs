@@ -6,7 +6,7 @@ taxonomy:
 
 <p>Product Types represent a standalone product or potentially a single variation in a group of related products (such as a single size of a style of t-shirt). Every product must have a Title, a unique merchant-defined SKU, and a base price in the default Price field.  Additional fields to represent internal data or product attributes may be added as necessary, and new product types can be created to facilitate multiple sets of fields.</p>
 
-![Drupal commerce Entities](commerce-docs/user/pages/02.commerce1/01.user-guide/02.Products/Entity.png)
+![Drupal commerce Entities](Entity.png)
 
 
 
