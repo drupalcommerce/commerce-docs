@@ -16,6 +16,7 @@ taxonomy:
 <H2>Example attribute configuration</H2>
 <p>Lets walk through setting up an attribute field on a product type and see how it interacts with the product fields injected on the product display. For this example, we are using Commerce Kickstart 1.x</p>
 </div>
+
 ![Manage your Product Fields](Prod-Attr-Step1.png)
 
 
