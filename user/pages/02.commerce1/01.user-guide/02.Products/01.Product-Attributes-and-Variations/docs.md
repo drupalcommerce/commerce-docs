@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-
+<div>
 <p>Product attributes are the descriptors we use to define kinds of products. For example, we could describe a tshirt by the color and size. These attributes mean that in the real physical world your store may only carry one red shirt, but you have three sizes or three "variations." Commerce software must deal with product variations in a flexible way. Here's how Drupal Commerce abstracts it:</p>
 <ol>
     <li><strong>Product Types.</strong> A product type is a specific bundle based on a custom product entity. Each bundle can have fields attached to it, including pictures and other kinds of information.</li>
@@ -34,10 +34,11 @@ taxonomy:
         <li class="last">Product Types</li>
     </ul>
 </div>
+</div>
 
 ![Add a List (text) field and use select list.](Prod-Attr-Step2.png)
 
-
+<div>
 
 <div class="caption">
         <p class="caption-title">Add Product Field</p>
@@ -55,11 +56,10 @@ taxonomy:
         <li class="last">Manage Fields</li>
     </ul>
 </div>
-
+</div>
 ![Add you field choices. This is editable later :)](Prod-Attr-Step3.png)
 
-
-
+<div>
 <div class="caption">
         <p class="caption-title">Add Field Choices</p>
         <p>This can be any simple list, one for each new line. Let your imagination run wild!</p>
@@ -74,10 +74,11 @@ taxonomy:
         <li class="last">Add Field</li>
     </ul>
 </div>
+</div>
 
 ![After clicking save, you will want to enabled the attribute field settings.](Prod-Attr-Step4.png)
 
-
+<div>
 <div class="caption">
         <p class="caption-title">Enable Attribute Field</p>
         <p>This is the most important step as it is what turns a normal field
@@ -93,10 +94,10 @@ taxonomy:
         <li class="last">Configure Field</li>
     </ul>
 </div>
-
+</div>
 ![Let's modify the three products with a unique image and color option.](Prod-Attr-Step5.png)
 
-
+<div>
 <div class="caption">
         <p class="caption-title">Modify Products</p>
         <p>Here is the edit screen of PROD-01 that comes with the standard
@@ -112,10 +113,10 @@ taxonomy:
         <li class="last">Edit PROD-01</li>
     </ul>
 </div>
-
+</div>
 ![Now lets create a new Product Display for our three new colors.](Prod-Attr-Step6.png)
 
-
+<div>
 <div class="caption">
         <p class="caption-title">Add Product Display</p>
         <p>Navigate to the Content List screen and click "Add Content." This
@@ -130,10 +131,10 @@ taxonomy:
         <li class="last">Add Content</li>
     </ul>
 </div>
-
+</div>
 ![Attach the updated products to the new product display.](Prod-Attr-Step7.png)
 
-
+<div>
 <div class="caption">
         <p class="caption-title">Attach Products</p>
         <p>This is the Product Reference Field that is included on Commerce
@@ -151,13 +152,13 @@ taxonomy:
         <li class="last">Add Product Display</li>
     </ul>
 </div>
-
+</div>
 ![The color drop down now updates the price and picture.](Prod-Attr-Step8.png)
 
-
+<div>
 <div class="caption">
         <p class="caption-title">Final Result</p>
         <p>The color drop down now updates the price and picture.</p>
     </div>
 </div>
-
+</div>
