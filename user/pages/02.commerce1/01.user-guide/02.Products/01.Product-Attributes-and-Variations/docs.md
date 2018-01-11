@@ -17,11 +17,10 @@ taxonomy:
 <p>Lets walk through setting up an attribute field on a product type and see how it interacts with the product fields injected on the product display. For this example, we are using Commerce Kickstart 1.x</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/"><img
-        src="/sites/default/files/docs/Prod-Attr-Step1.png" alt="" /></a>
+        <a href="/sites/default/files/docs/Prod-Attr-Step1.png"><img
+        src="/sites/default/files/docs/Prod-Attr-Step1.png" alt="Manage your Product
+        Fields" /></a>
     </div>
-
-![Manage your Product Fields](Prod-Attr-Step1.png)
 <div class="caption">
         <p class="caption-title">Product Types</p>
         <p>Navigate to your Store page and click on "Products" and then "Product
