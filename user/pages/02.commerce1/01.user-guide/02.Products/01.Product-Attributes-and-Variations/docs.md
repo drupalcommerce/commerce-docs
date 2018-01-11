@@ -18,12 +18,6 @@ taxonomy:
 
 ![Manage your Product Fields](Prod-Attr-Step1.png)
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step1.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step1.png" alt="Manage your Product
-        Fields" /></a>
-    </div>
 
 <div class="caption">
         <p class="caption-title">Product Types</p>
@@ -41,12 +35,10 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step2.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step2.png" alt="Add a List (text) field
-        and use select list." /></a>
-    </div>
+![Add a List (text) field and use select list.](Prod-Attr-Step2.png)
+
+
+
 <div class="caption">
         <p class="caption-title">Add Product Field</p>
         <p>When you navigate to the manage field screen, if you are a Drupal
@@ -64,12 +56,10 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step3.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step3.png" alt="Add you field choices.
-        This is editable later :)" /></a>
-    </div>
+![Add you field choices. This is editable later :)](Prod-Attr-Step3.png)
+
+
+
 <div class="caption">
         <p class="caption-title">Add Field Choices</p>
         <p>This can be any simple list, one for each new line. Let your imagination run wild!</p>
@@ -85,12 +75,9 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step4.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step4.png" alt="After clicking save, you
-        will want to enabled the attribute field settings." /></a>
-    </div>
+![After clicking save, you will want to enabled the attribute field settings.](Prod-Attr-Step4.png)
+
+
 <div class="caption">
         <p class="caption-title">Enable Attribute Field</p>
         <p>This is the most important step as it is what turns a normal field
@@ -107,12 +94,9 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step5.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step5.png" alt="Let's modify the three
-        products with a unique image and color option." /></a>
-    </div>
+![Let's modify the three products with a unique image and color option.](Prod-Attr-Step5.png)
+
+
 <div class="caption">
         <p class="caption-title">Modify Products</p>
         <p>Here is the edit screen of PROD-01 that comes with the standard
@@ -129,12 +113,9 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step6.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step6.png" alt="Now lets create a new
-        Product Display for our three new colors." /></a>
-    </div>
+![Now lets create a new Product Display for our three new colors.](Prod-Attr-Step6.png)
+
+
 <div class="caption">
         <p class="caption-title">Add Product Display</p>
         <p>Navigate to the Content List screen and click "Add Content." This
@@ -150,12 +131,9 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step7.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step7.png" alt="Attach the updated
-        products to the new product display." /></a>
-    </div>
+![Attach the updated products to the new product display.](Prod-Attr-Step7.png)
+
+
 <div class="caption">
         <p class="caption-title">Attach Products</p>
         <p>This is the Product Reference Field that is included on Commerce
@@ -174,12 +152,9 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step8.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step8.png" alt="The color drop down now
-        updates the price and picture." /></a>
-    </div>
+![The color drop down now updates the price and picture.](Prod-Attr-Step8.png)
+
+
 <div class="caption">
         <p class="caption-title">Final Result</p>
         <p>The color drop down now updates the price and picture.</p>
