@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-<div class="docs-enhanced">
+
 <p>Product attributes are the descriptors we use to define kinds of products. For example, we could describe a tshirt by the color and size. These attributes mean that in the real physical world your store may only carry one red shirt, but you have three sizes or three "variations." Commerce software must deal with product variations in a flexible way. Here's how Drupal Commerce abstracts it:</p>
 <ol>
     <li><strong>Product Types.</strong> A product type is a specific bundle based on a custom product entity. Each bundle can have fields attached to it, including pictures and other kinds of information.</li>
@@ -15,13 +15,16 @@ taxonomy:
 
 <H2>Example attribute configuration</H2>
 <p>Lets walk through setting up an attribute field on a product type and see how it interacts with the product fields injected on the product display. For this example, we are using Commerce Kickstart 1.x</p>
+
+![Manage your Product Fields](Prod-Attr-Step1.png)
+
 <div class="screenshot screenshot-caption">
     <div class="img">
         <a href="/sites/default/files/docs/Prod-Attr-Step1.png"><img
         src="/sites/default/files/docs/Prod-Attr-Step1.png" alt="Manage your Product
         Fields" /></a>
     </div>
-![Manage your Product Fields](Prod-Attr-Step1.png)
+
 <div class="caption">
         <p class="caption-title">Product Types</p>
         <p>Navigate to your Store page and click on "Products" and then "Product
@@ -183,4 +186,3 @@ taxonomy:
     </div>
 </div>
 
-</div>
