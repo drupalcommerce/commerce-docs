@@ -11,20 +11,20 @@ taxonomy:
 <p>Additionally, orders on this page of the checkout form will no longer be considered shopping carts so the total of the order does not change while the customer is submitting payment.</p>
 <h2>Overview of screenshots</h2>
 <div class="screenshot ">
-    <a href="/sites/default/files/docs/Checkout-Pages-1.png">
-        <img src="/sites/default/files/docs/Checkout-Pages-1.png" alt="Default Checkout Page" />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/04.Checkout-Single-vs-Multiple-Page/Checkout-Pages-1.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/04.Checkout-Single-vs-Multiple-Page/Checkout-Pages-1.png" alt="Default Checkout Page" />
     </a>
 </div>
 
 <div class="screenshot ">
-    <a href="/sites/default/files/docs/Checkout-Pages-2.png">
-        <img src="/sites/default/files/docs/Checkout-Pages-2.png" alt="Example Payment" />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/04.Checkout-Single-vs-Multiple-Page/Checkout-Pages-2.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/04.Checkout-Single-vs-Multiple-Page/Checkout-Pages-2.png" alt="Example Payment" />
     </a>
 </div>
 
 <div class="screenshot ">
-    <a href="/sites/default/files/docs/Checkout-Pages-2.png">
-        <img src="/sites/default/files/docs/Checkout-Pages-3.png" alt="Checkout Complete Page" />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/04.Checkout-Single-vs-Multiple-Page/Checkout-Pages-2.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/04.Checkout-Single-vs-Multiple-Page/Checkout-Pages-3.png" alt="Checkout Complete Page" />
     </a>
 </div>
 </div>

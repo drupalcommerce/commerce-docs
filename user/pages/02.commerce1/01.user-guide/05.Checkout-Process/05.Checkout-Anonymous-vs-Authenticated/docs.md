@@ -9,8 +9,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Anon-Auth-1.png">
-            <img src="/sites/default/files/docs/Checkout-Anon-Auth-1.png" alt="Anonymous Rules" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-1.png" alt="Anonymous Rules" />
         </a>
     </div>
     <div class="caption">
@@ -25,8 +25,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Anon-Auth-1.png">
-            <img src="/sites/default/files/docs/Checkout-Anon-Auth-1.png" alt="Anonymous Rules" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-1.png" alt="Anonymous Rules" />
         </a>
     </div>
     <div class="caption">
@@ -37,8 +37,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Anon-Auth-2.png">
-            <img src="/sites/default/files/docs/Checkout-Anon-Auth-2.png" alt="The first rule we are looking at has a simple job: If the new user already exists, assign the order to the user that already exists. Imagine business logic that requires this user supply a password to merge these two accounts. Lots of possibilities with this rule exposed." />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-2.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-2.png" alt="The first rule we are looking at has a simple job: If the new user already exists, assign the order to the user that already exists. Imagine business logic that requires this user supply a password to merge these two accounts. Lots of possibilities with this rule exposed." />
         </a>
     </div>
     <div class="caption">
@@ -49,8 +49,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Anon-Auth-3.png">
-            <img src="/sites/default/files/docs/Checkout-Anon-Auth-3.png" alt="New Account Rule" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-3.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/05.Anonymous-vs-Authenticated/Checkout-Anon-Auth-3.png" alt="New Account Rule" />
         </a>
     </div>
     <div class="caption">

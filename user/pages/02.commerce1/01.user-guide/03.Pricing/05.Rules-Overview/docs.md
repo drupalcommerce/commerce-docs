@@ -7,8 +7,8 @@ taxonomy:
 <div class="docs-enhanced"><p>What is it about the amazing flexibility of Drupal that is so addictive? It's like being a Chef and having all the best ingredients at your finger tips. Or perhaps it's like being a lego-nerd and having an unlimited supply of any brick or any set that was ever made. For free.</p>
 <p>Drupal has Views for listing content, Rules for reacting, Flags for collecting, ctools for abstracting, and just about anything else you can imagine built on top of those. But what we want to focus on is Rules and how they affect Pricing in Drupal Commerce.</p>
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Price-Calc-Overview.png">
-        <img src="/sites/default/files/docs/Price-Calc-Overview.png"
+    <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/05.Rules-Overview/Price-Calc-Overview.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/05.Rules-Overview/Price-Calc-Overview.png"
              alt="Product Price Calculations happen under store configuration product pricing rules" />
     </a>
     <ul class="screenshot_breadcrumbs">

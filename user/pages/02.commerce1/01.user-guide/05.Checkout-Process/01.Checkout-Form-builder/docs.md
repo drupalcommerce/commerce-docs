@@ -11,8 +11,8 @@ taxonomy:
 <h2>Default checkout pages and panes</h2>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Form-1.png">
-            <img src="/sites/default/files/docs/Checkout-Form-1.png" alt="Navigate to Store Configuration and click 'Checkout Settings'" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/01.Checkout-Form-builder/Checkout-Form-1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/01.Checkout-Form-builder/Checkout-Form-1.png" alt="Navigate to Store Configuration and click 'Checkout Settings'" />
         </a>
     </div>
     <div class="caption">
@@ -28,8 +28,8 @@ taxonomy:
 
 
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Checkout-Form-2.png">
-        <img src="/sites/default/files/docs/Checkout-Form-2.png" alt="Drupal Commerce Checkout Form Builder'" />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/01.Checkout-Form-builder/Checkout-Form-2.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/01.Checkout-Form-builder/Checkout-Form-2.png" alt="Drupal Commerce Checkout Form Builder'" />
     </a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>

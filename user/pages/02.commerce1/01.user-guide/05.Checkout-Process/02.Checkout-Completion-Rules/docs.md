@@ -18,8 +18,8 @@ taxonomy:
 <p>To demonstrate the Checkout Rules, we've created an exercise that will send an email to our fulfillment shop once the payment is complete. This is a particularly interesting case because we will not use the event that Commerce picks for us by default. All is explained in the captions.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-1.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-1.png" alt="Create a Fulfillment Email Action" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-1.png" alt="Create a Fulfillment Email Action" />
         </a>
     </div>
     <div class="caption">
@@ -37,8 +37,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-2.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-2.png" alt="We need to replace an event." />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-2.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-2.png" alt="We need to replace an event." />
         </a>
     </div>
     <div class="caption">
@@ -56,8 +56,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-3.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-3.png" alt="Choose this event. " />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-3.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-3.png" alt="Choose this event. " />
         </a>
     </div>
     <div class="caption">
@@ -75,8 +75,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-4.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-4.png" alt="Add Action for sending email." />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-4.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-4.png" alt="Add Action for sending email." />
         </a>
     </div>
     <div class="caption">
@@ -94,8 +94,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-5.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-5.png" alt="Add email, subject" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-5.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-5.png" alt="Add email, subject" />
         </a>
     </div>
     <div class="caption">
@@ -113,8 +113,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-6.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-6.png" alt="Final Rule" />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-6.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-6.png" alt="Final Rule" />
         </a>
     </div>
     <div class="caption">
@@ -132,8 +132,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Checkout-Rules-Exercise-7.png">
-            <img src="/sites/default/files/docs/Checkout-Rules-Exercise-7.png" alt="Notice that even after checkout, the status is pending." />
+        <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-7.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/02.Checkout-Completion-Rules/Checkout-Rules-Exercise-7.png" alt="Notice that even after checkout, the status is pending." />
         </a>
     </div>
     <div class="caption">

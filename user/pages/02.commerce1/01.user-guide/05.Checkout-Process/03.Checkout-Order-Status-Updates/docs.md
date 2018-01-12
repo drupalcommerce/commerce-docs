@@ -6,8 +6,8 @@ taxonomy:
 
 <div class="docs-enhanced">
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Checkout-Order-Default-Status.png">
-        <img src="/sites/default/files/docs/Checkout-Order-Default-Status.png" alt="Default Drupal Commerce Order Statuses" />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/03.Checkout-Order-Status-Updates/Checkout-Order-Default-Status.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/03.Checkout-Order-Status-Updates/Checkout-Order-Default-Status.png" alt="Default Drupal Commerce Order Statuses" />
     </a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
@@ -22,8 +22,8 @@ taxonomy:
 <p>In addition to customer data being saved to the order, the order status is also updated to reflect its current place in the checkout process. The checkout router uses the order status to determine a customer's access to visit a requested checkout page for a particular order.</p>
 <p>Upon checkout completion, the <em>Completing the checkout process</em> event/hook is invoked, allowing you to affect what happens to orders and what sort of communication needs to occur on checkout completion.</p>
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Checkout-Order-When-Order-is-Paid.png">
-        <img src="/sites/default/files/docs/Checkout-Order-When-Order-is-Paid.png" alt="Select this if you need an event to trigger after payment." />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/03.Checkout-Order-Status-Updates/Checkout-Order-When-Order-is-Paid.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/03.Checkout-Order-Status-Updates/Checkout-Order-When-Order-is-Paid.png" alt="Select this if you need an event to trigger after payment." />
     </a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
@@ -35,8 +35,8 @@ taxonomy:
 </div>
 <p><strong>Note</strong> &mdash; There is a more reliable event called <em>When an order is first paid in full</em> that should be used to update or process an order based on payment. Checkout can complete with payment still pending, so it is best not to mark orders completed on the basis of checkout completion alone.</p>
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Checkout-Order-Default-Rules.png">
-        <img src="/sites/default/files/docs/Checkout-Order-Default-Rules.png" alt="Default Drupal Commerce Rules" />
+    <a href="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/03.Checkout-Order-Status-Updates/Checkout-Order-Default-Rules.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/05.Checkout-Process/03.Checkout-Order-Status-Updates/Checkout-Order-Default-Rules.png" alt="Default Drupal Commerce Rules" />
     </a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
