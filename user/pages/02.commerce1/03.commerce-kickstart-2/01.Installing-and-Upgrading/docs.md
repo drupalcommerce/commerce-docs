@@ -192,4 +192,4 @@ $ drush updatedb -y
         <p>The getting started screen and "help" tab are there to give you guidance for using Drupal Commerce Kickstart 2 and all of it's features.</p>
     </div>
 </div>
-</div>s
+</div>

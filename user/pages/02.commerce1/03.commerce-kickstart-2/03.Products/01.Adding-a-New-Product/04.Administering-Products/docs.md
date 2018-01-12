@@ -12,8 +12,8 @@ interest to store managers are the screens available for Product management.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-Store.png"><img
-        src="/sites/default/files/docs/Prod-Admin-Store.png" alt="Drupal Commerce Store
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store.png" alt="Drupal Commerce Store
         Administration Screen." /></a>
     </div>
     <div class="caption">
@@ -29,8 +29,8 @@ interest to store managers are the screens available for Product management.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-Store-Product.png"><img
-        src="/sites/default/files/docs/Prod-Admin-Store-Product.png" alt="Product Listing"
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product.png" alt="Product Listing"
         /></a>
     </div>
     <div class="caption">
@@ -50,8 +50,8 @@ interest to store managers are the screens available for Product management.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-Store-Product-Types.png"><img
-        src="/sites/default/files/docs/Prod-Admin-Store-Product-Types.png" alt="Product
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Types.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Types.png" alt="Product
         Type Listing Screen"
         /></a>
     </div>
@@ -71,8 +71,8 @@ interest to store managers are the screens available for Product management.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-Store-Product-Fields.png"><img
-        src="/sites/default/files/docs/Prod-Admin-Store-Product-Fields.png" alt="Product
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Fields.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Fields.png" alt="Product
         Type, Manage Fields" /></a>
     </div>
     <div class="caption">
@@ -91,8 +91,8 @@ interest to store managers are the screens available for Product management.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-Store-Product-Display.png"><img
-        src="/sites/default/files/docs/Prod-Admin-Store-Product-Display.png" alt="This is
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Display.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Display.png" alt="This is
         where you manage the display of the fields for default values." /></a>
     </div>
     <div class="caption">
@@ -111,8 +111,8 @@ interest to store managers are the screens available for Product management.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-Store-Product-Edit.png"><img
-        src="/sites/default/files/docs/Prod-Admin-Store-Product-Edit.png" alt="Product
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Edit.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-Store-Product-Edit.png" alt="Product
         Edit Screen" /></a>
     </div>
     <div class="caption">
@@ -143,8 +143,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step1.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step1.png" alt="Hover over the
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step1.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step1.png" alt="Hover over the
         product listing view and click Edit" /></a>
     </div>
     <div class="caption">
@@ -163,8 +163,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step2.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step2.png" alt="Rearrange the
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step2.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step2.png" alt="Rearrange the
         fields to easily move and remove fields quickly." /></a>
     </div>
     <div class="caption">
@@ -182,8 +182,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step3.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step3.png" alt="Lets remove the
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step3.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step3.png" alt="Lets remove the
         Product Type Field" /></a>
     </div>
     <div class="caption">
@@ -203,8 +203,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step4.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step4.png" alt="We're adding an
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step4.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step4.png" alt="We're adding an
         image field." /></a>
     </div>
     <div class="caption">
@@ -226,8 +226,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step5.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step5.png" alt="We want to
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step5.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step5.png" alt="We want to
         remove the default colon and change the image to display as a
         thumbnail." /></a>
     </div>
@@ -249,8 +249,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step6.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step6.png" alt="Let's go ahead
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step6.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step6.png" alt="Let's go ahead
         and add a couple new Exposed Filters" /></a>
     </div>
     <div class="caption">
@@ -271,8 +271,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step7.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step7.png" alt="Here we're
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step7.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step7.png" alt="Here we're
         adding two exposed filters. We're going to enable keyword search for
         Titles and drop down selection for Product Types." /></a>
     </div>
@@ -292,8 +292,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step8.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step8.png" alt="For the title,
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step8.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step8.png" alt="For the title,
         we will expose the filter and change the operator to contains any word."
         /></a>
     </div>
@@ -313,8 +313,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step9.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step9.png" alt="The Product Type
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step9.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step9.png" alt="The Product Type
         Exposed Filter automatically knows it can be a drop down of all
         available product types." /></a>
     </div>
@@ -334,8 +334,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step10.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step10.png" alt="Lets change the
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step10.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step10.png" alt="Lets change the
         exposed filter submit button from Apply to Search." /></a>
     </div>
     <div class="caption">
@@ -354,8 +354,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step11.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step11.png" alt="It's really
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step11.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step11.png" alt="It's really
         that simple." /></a>
     </div>
     <div class="caption">
@@ -374,8 +374,8 @@ field, and extend a product title keyword filter.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Admin-ViewEdit-step12.png"><img
-        src="/sites/default/files/docs/Prod-Admin-ViewEdit-step12.png" alt="Final
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step12.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/04.Administering-Products/Prod-Admin-ViewEdit-step12.png" alt="Final
         Customized Drupal Commerce Product Administration Screen" /></a>
     </div>
     <div class="caption">

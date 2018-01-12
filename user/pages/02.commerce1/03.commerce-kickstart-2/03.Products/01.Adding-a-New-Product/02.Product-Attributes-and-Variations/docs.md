@@ -17,8 +17,8 @@ taxonomy:
 <p>Lets walk through setting up an attribute field on a product type and see how it interacts with the product fields injected on the product display. For this example, we are using Commerce Kickstart 1.x</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step1.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step1.png" alt="Manage your Product
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step1.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step1.png" alt="Manage your Product
         Fields" /></a>
     </div>
     <div class="caption">
@@ -39,8 +39,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step2.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step2.png" alt="Add a List (text) field
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step2.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step2.png" alt="Add a List (text) field
         and use select list." /></a>
     </div>
     <div class="caption">
@@ -62,8 +62,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step3.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step3.png" alt="Add you field choices.
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step3.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step3.png" alt="Add you field choices.
         This is editable later :)" /></a>
     </div>
     <div class="caption">
@@ -83,8 +83,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step4.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step4.png" alt="After clicking save, you
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step4.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step4.png" alt="After clicking save, you
         will want to enabled the attribute field settings." /></a>
     </div>
     <div class="caption">
@@ -105,8 +105,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step5.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step5.png" alt="Let's modify the three
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step5.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step5.png" alt="Let's modify the three
         products with a unique image and color option." /></a>
     </div>
     <div class="caption">
@@ -127,8 +127,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step6.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step6.png" alt="Now lets create a new
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step6.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step6.png" alt="Now lets create a new
         Product Display for our three new colors." /></a>
     </div>
     <div class="caption">
@@ -148,8 +148,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step7.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step7.png" alt="Attach the updated
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step7.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step7.png" alt="Attach the updated
         products to the new product display." /></a>
     </div>
     <div class="caption">
@@ -172,8 +172,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Prod-Attr-Step8.png"><img
-        src="/sites/default/files/docs/Prod-Attr-Step8.png" alt="The color drop down now
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step8.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/02.Product Attributes-and-Variations/Prod-Attr-Step8.png" alt="The color drop down now
         updates the price and picture." /></a>
     </div>
     <div class="caption">

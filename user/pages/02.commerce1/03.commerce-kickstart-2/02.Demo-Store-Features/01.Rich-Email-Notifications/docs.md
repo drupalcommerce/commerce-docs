@@ -7,12 +7,12 @@ taxonomy:
 <div class="docs-enhanced">
 <p>The Commerce Kickstart team decided early on that the current implementation rich HTML email notifications was a clear necessity and the existing solutions didn't match some of the biggest concerns. To handle the email notifications, Commerce Kickstart has integrated the <a href="http://drupal.org/project/message">Messages</a> module and the <a href="http://drupal.org/project/mimemail">Mime</a> mail module.</p>
 <p>To edit the various templates that come standard with Kickstart, you simply need to go to <strong>Site Settings &gt; Advanced Settings &gt; Structure &gt; Message Types</p>
-<div class="screenshot"><img src="/sites/default/files/docs/CK-Email-Notifications-01.png" alt="Message Types Overview" /></div>
+<div class="screenshot"><img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Demo-Store-Features/01.Rich-Email-Notifications/CK-Email-Notifications-01.png" alt="Message Types Overview" /></div>
 <p>Each Message Type is like a Content Type for Email Notifications. Commerce Kickstart then is designed to use Rules to send create a Message of a certain type.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Email-Notifications-02.png">
-            <img src="/sites/default/files/docs/CK-Email-Notifications-02.png" alt="Rules that trigger the Email Notifications" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Demo-Store-Features/01.Rich-Email-Notifications/CK-Email-Notifications-02.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Demo-Store-Features/01.Rich-Email-Notifications/CK-Email-Notifications-02.png" alt="Rules that trigger the Email Notifications" />
         </a>
     </div>
     <div class="caption">
@@ -29,8 +29,8 @@ taxonomy:
 <p><a href="http://drupal.org/project/message_notify">Message Notify</a> allows messages to be sent as emails using <a href="http://drupal.org/project/rules">Rules</a>, which Commerce Kickstart happily enables by default. Admittedly, this functionality is a bit hidden from the average user and it's in the long term goals to expose more of this functionality to the user interface in a more understandable way. Until then, please feel free to share your favorite templates and rules for sending out receipts, invoices, etc.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Email-Notifications-03.png">
-            <img src="/sites/default/files/docs/CK-Email-Notifications-03.png" alt="Example Rule that sends Message" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Demo-Store-Features/01.Rich-Email-Notifications/CK-Email-Notifications-03.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Demo-Store-Features/01.Rich-Email-Notifications/CK-Email-Notifications-03.png" alt="Example Rule that sends Message" />
         </a>
     </div>
     <div class="caption">

@@ -10,8 +10,8 @@ taxonomy:
 <p>The Kickstart 2 Demo Store chooses a relatively complicated setup to show you how that complexitity works through the entire site: Each variation has it's own set of images. Below are the two steps you'll need to take to add an image using the Kickstart 2 Demo Store</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-01.png">
-<img src="/sites/default/files/docs/CK-Product-Images-01.png" alt="Product Images - Add a Product" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-01.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-01.png" alt="Product Images - Add a Product" />
 </a>
     </div>
     <div class="caption">
@@ -21,8 +21,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-02.png">
-<img src="/sites/default/files/docs/CK-Product-Images-02.png" alt="Product Images - Add a Product" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-02.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-02.png" alt="Product Images - Add a Product" />
 </a>
     </div>
     <div class="caption">
@@ -33,8 +33,8 @@ taxonomy:
 <p>To set this up on the "No Demo" kickstarter, you can follow these steps:</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-03.png">
-<img src="/sites/default/files/docs/CK-Product-Images-03.png" alt="Product Images - Add a Product" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-03.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-03.png" alt="Product Images - Add a Product" />
 </a>
     </div>
     <div class="caption">
@@ -48,8 +48,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-04.png">
-<img src="/sites/default/files/docs/CK-Product-Images-04.png" alt="Product Images - Click Create a Variation" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-04.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-04.png" alt="Product Images - Click Create a Variation" />
 </a>
     </div>
     <div class="caption">
@@ -64,8 +64,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-05.png">
-<img src="/sites/default/files/docs/CK-Product-Images-05.png" alt="Product Images - Create a Variation" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-05.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-05.png" alt="Product Images - Create a Variation" />
 </a>
     </div>
     <div class="caption">
@@ -80,8 +80,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-06.png">
-<img src="/sites/default/files/docs/CK-Product-Images-06.png" alt="Product Images - Manage Fields" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-06.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-06.png" alt="Product Images - Manage Fields" />
 </a>
     </div>
     <div class="caption">
@@ -96,8 +96,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-07.png">
-<img src="/sites/default/files/docs/CK-Product-Images-07.png" alt="Product Images - Manage Fields" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-07.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-07.png" alt="Product Images - Manage Fields" />
 </a>
     </div>
     <div class="caption">
@@ -113,8 +113,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-08.png">
-<img src="/sites/default/files/docs/CK-Product-Images-08.png" alt="Product Images - Manage Fields" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-08.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-08.png" alt="Product Images - Manage Fields" />
 </a>
     </div>
     <div class="caption">
@@ -128,8 +128,8 @@ taxonomy:
     </ul>
 </div><div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-09.png">
-<img src="/sites/default/files/docs/CK-Product-Images-09.png" alt="Product Images - Add Photo" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-09.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-09.png" alt="Product Images - Add Photo" />
 </a>
     </div>
     <div class="caption">
@@ -146,8 +146,8 @@ taxonomy:
 <p>You can follow the same procedure above to add an image gallery to your product displays. The advantage or difference is that you are adding the image field to the Content Type or the "group" of products. So, if you were selling tshirts and just had one image, this is how you would set that up.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-10.png">
-<img src="/sites/default/files/docs/CK-Product-Images-10.png" alt="Product Images - Edit Content Type" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-10.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-10.png" alt="Product Images - Edit Content Type" />
 </a>
     </div>
     <div class="caption">
@@ -161,8 +161,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-11.png">
-<img src="/sites/default/files/docs/CK-Product-Images-11.png" alt="Product Images - Manage Fields" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-11.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-11.png" alt="Product Images - Manage Fields" />
 </a>
     </div>
     <div class="caption">
@@ -177,8 +177,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-12.png">
-<img src="/sites/default/files/docs/CK-Product-Images-12.png" alt="Product Images - Add Existing Field" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-12.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-12.png" alt="Product Images - Add Existing Field" />
 </a>
     </div>
     <div class="caption">
@@ -194,8 +194,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Images-13.png">
-<img src="/sites/default/files/docs/CK-Product-Images-13.png" alt="Product Images - Example Form" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-13.png">
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/03.Adding-images-to-variations-and-dealing-with-image-styles/CK-Product-Images-13.png" alt="Product Images - Example Form" />
 </a>
     </div>
     <div class="caption">

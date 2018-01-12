@@ -11,8 +11,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Entity-or-Node.jpg">
-            <img src="/sites/default/files/docs/CK-Entity-or-Node.jpg" alt="Drupal Commerce Entity Graph" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/03.Product-Displays/CK-Entity-or-Node.jpg">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/03.Product-Displays/CK-Entity-or-Node.jpg" alt="Drupal Commerce Entity Graph" />
         </a>
     </div>
     <div class="caption">
@@ -38,8 +38,8 @@ taxonomy:
 <h2>Attribute Fields</h2>
 <div class="screenshot screenshot-caption">
     <div class="img">
-    <a href="/sites/default/files/docs/Add-to-Cart-form-goal_0.png"><img
-    src="/sites/default/files/docs/Add-to-Cart-form-goal_0.png" alt="Changing an attribute
+    <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/03.Product-Displays/Add-to-Cart-form-goal_0.png"><img
+    src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/03.Product-Displays/Add-to-Cart-form-goal_0.png" alt="Changing an attribute
     should update the price and picture." /></a>
     </div>
     <div class="caption">

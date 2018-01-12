@@ -8,8 +8,8 @@ taxonomy:
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/sNTXFIiYoo4" frameborder="0" allowfullscreen></iframe>
 <div class="screenshot screenshot-caption" style="margin-top: 25px">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Entity-or-Node.jpg">
-            <img src="/sites/default/files/docs/CK-Entity-or-Node.jpg" alt="Drupal Commerce Entity Graph" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/01.Choosing-between-Page-or-Variation/CK-Entity-or-Node.jpg">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/01.Choosing-between-Page-or-Variation/CK-Entity-or-Node.jpg" alt="Drupal Commerce Entity Graph" />
         </a>
     </div>
     <div class="caption">

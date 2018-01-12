@@ -15,8 +15,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-New-01_1.png">
-          <img src="/sites/default/files/docs/CK-Product-New-01_1.png" alt="Mouseover the word Products in the menu and select Add a Product." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-01_1.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-01_1.png" alt="Mouseover the word Products in the menu and select Add a Product." />
        </a>
     </div>
     <div class="caption">
@@ -32,8 +32,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-New-02.png">
-          <img src="/sites/default/files/docs/CK-Product-New-02.png" alt="The Product Creation Form has three sections: Title/Description, Product Variations, and Catalog Management." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-02.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-02.png" alt="The Product Creation Form has three sections: Title/Description, Product Variations, and Catalog Management." />
        </a>
     </div>
     <div class="caption">
@@ -51,8 +51,8 @@ taxonomy:
 <h3>How do I add a new type of product variation?</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-New-03.png">
-          <img src="/sites/default/files/docs/CK-Product-New-03.png" alt="Mouseover the word Products in the menu and select Variation types." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-03.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-03.png" alt="Mouseover the word Products in the menu and select Variation types." />
        </a>
     </div>
     <div class="caption">
@@ -68,8 +68,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-New-04.png">
-          <img src="/sites/default/files/docs/CK-Product-New-04.png" alt="First, you should read the disclaimer at the top of the page. Second, go ahead and click on the button." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-04.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-04.png" alt="First, you should read the disclaimer at the top of the page. Second, go ahead and click on the button." />
        </a>
     </div>
     <div class="caption">
@@ -85,8 +85,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-New-05.png">
-          <img src="/sites/default/files/docs/CK-Product-New-05.png" alt="Just like any entity type creation form (think Content Types) you can name the type of product variation." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-05.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/01.Adding-a-New-Product/CK-Product-New-05.png" alt="Just like any entity type creation form (think Content Types) you can name the type of product variation." />
        </a>
     </div>
     <div class="caption">
