@@ -21,8 +21,8 @@ taxonomy:
         <li class="last">Order settings</li>
     </ul>
     <div class="img">
-        <a href="/sites/default/files/docs/screenshot_2014-11-18_14.58.46.png">
-            <img src="/sites/default/files/docs/screenshot_2014-11-18_14.58.46.png" alt="Order configuration screenshot" />
+        <a href="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_14.58.46.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_14.58.46.png" alt="Order configuration screenshot" />
         </a>
     </div>
 </div>
@@ -31,8 +31,8 @@ taxonomy:
 <p>A new local action for orders that, when clicked, will run the pricing rules for that particular order. </p>
 <div class="screenshot">
     <div class="img">
-        <a href="/sites/default/files/docs/screenshot_2014-11-18_15.14.25.png">
-            <img src="/sites/default/files/docs/screenshot_2014-11-18_15.14.25.png" alt="Apply Pricing Rules screenshot" />
+        <a href="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_15.14.25.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_15.14.25.png" alt="Apply Pricing Rules screenshot" />
         </a>
     </div>
 </div>
@@ -49,8 +49,8 @@ taxonomy:
 
 <div class="screenshot">
     <div class="img">
-        <a href="/sites/default/files/docs/screenshot_2014-11-18_15.22.53.png">
-            <img src="/sites/default/files/docs/screenshot_2014-11-18_15.22.53.png" alt="Simulate Checkout Completion screenshot" />
+        <a href="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_15.22.53.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_15.22.53.png" alt="Simulate Checkout Completion screenshot" />
         </a>
     </div>
 </div>
@@ -64,8 +64,8 @@ taxonomy:
 
 <div class="screenshot">
     <div class="img">
-        <a href="/sites/default/files/docs/screenshot_2014-11-18_15.41.45.png">
-            <img src="/sites/default/files/docs/screenshot_2014-11-18_15.41.45.png" alt="Shopping cart refresh screenshot" />
+        <a href="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_15.41.45.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/07.Managing-Orders/01.Order-Settings/screenshot_2014-11-18_15.41.45.png" alt="Shopping cart refresh screenshot" />
         </a>
     </div>
 </div>
