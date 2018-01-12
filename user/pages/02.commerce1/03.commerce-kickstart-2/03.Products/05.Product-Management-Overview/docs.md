@@ -14,8 +14,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Mngmt-01.png"><img
-        src="/sites/default/files/docs/CK-Product-Mngmt-01.png" alt="Advanced Filtering Demo" /></a>
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-01.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-01.png" alt="Advanced Filtering Demo" /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Advanced Filtering</p>
@@ -25,8 +25,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Mngmt-02.png"><img
-        src="/sites/default/files/docs/CK-Product-Mngmt-02.png" alt="Inline Editing is powered by Views Mega Row." /></a>
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-02.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-02.png" alt="Inline Editing is powered by Views Mega Row." /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Inline Editing</p>
@@ -36,8 +36,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Mngmt-03.png"><img
-        src="/sites/default/files/docs/CK-Product-Mngmt-03.png" alt="Operations Button" /></a>
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-03.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-03.png" alt="Operations Button" /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Operations Button</p>
@@ -47,8 +47,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/CK-Product-Mngmt-04.png"><img
-        src="/sites/default/files/docs/CK-Product-Mngmt-04.png" alt="You can use the included support for Bulk Operations. " /></a>
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-04.png"><img
+        src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/05.Product-Management-Overview/CK-Product-Mngmt-04.png" alt="You can use the included support for Bulk Operations. " /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Bulk Operations</p>

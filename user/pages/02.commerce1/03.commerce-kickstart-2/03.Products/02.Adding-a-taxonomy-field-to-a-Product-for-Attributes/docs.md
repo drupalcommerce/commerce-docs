@@ -13,8 +13,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-01.png">
-          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-01.png" alt="If you haven't already done so, look at Adding a New Product over here: http://www.drupalcommerce.org/commerce-kickstart-2/adding-new-product" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-01.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-01.png" alt="If you haven't already done so, look at Adding a New Product over here: http://www.drupalcommerce.org/commerce-kickstart-2/adding-new-product" />
        </a>
     </div>
     <div class="caption">
@@ -31,8 +31,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-02.png">
-          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-02.png" alt="Simply add a taxonomy field." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-02.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-02.png" alt="Simply add a taxonomy field." />
        </a>
     </div>
     <div class="caption">
@@ -50,8 +50,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-03.png">
-          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-03.png" alt="Simply configure a taxonomy field." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-03.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-03.png" alt="Simply configure a taxonomy field." />
        </a>
     </div>
     <div class="caption">
@@ -68,8 +68,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-04.png">
-          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-04.png" alt="Demonstrating the Taxonomy field." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-04.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-04.png" alt="Demonstrating the Taxonomy field." />
        </a>
     </div>
     <div class="caption">
@@ -84,8 +84,8 @@ taxonomy:
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-05.png">
-          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/03.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-05.png" alt="The final page shows us a drop down that affects the price." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-05.png">
+          <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/02.Products/02.Adding-a-taxonomy-filed-to-a-Product-for-Atributes/CK-Product-Variations-05.png" alt="The final page shows us a drop down that affects the price." />
        </a>
     </div>
     <div class="caption">
