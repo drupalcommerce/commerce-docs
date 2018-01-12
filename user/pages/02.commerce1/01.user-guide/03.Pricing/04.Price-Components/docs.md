@@ -32,8 +32,8 @@ order can be found in its order total price field</li>
 <p>In order to show you what price components look like, we've picked up the Price Calculations example towards the end. To see the whole exercise, <a href="Price-Calc.html">check it out</a>.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step8.png">
-            <img src="/sites/default/files/docs/Price-Calc-step8.png" alt="Lets reveal the price components" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step8.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step8.png" alt="Lets reveal the price components" />
         </a>
     </div>
     <div class="caption">
@@ -51,8 +51,8 @@ order can be found in its order total price field</li>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step9.png">
-            <img src="/sites/default/files/docs/Price-Calc-step9.png" alt="Set the price field to show formatted with components." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step9.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step9.png" alt="Set the price field to show formatted with components." />
         </a>
     </div>
     <div class="caption">
@@ -71,8 +71,8 @@ order can be found in its order total price field</li>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step10.png">
-            <img src="/sites/default/files/docs/Price-Calc-step10.png" alt="Administrators see the discount" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step10.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step10.png" alt="Administrators see the discount" />
         </a>
     </div>
     <div class="caption">
@@ -92,8 +92,8 @@ order can be found in its order total price field</li>
 <p>In order to show you what price components using rules look like, we've picked up the Price Calculations example in the very middle. To see the whole exercise, <a href="Price-Calc.html">check it out</a>.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step6.png">
-            <img src="/sites/default/files/docs/Price-Calc-step6.png" alt="Set .5 for 50% off, and select Discount for the price component type." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step6.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step6.png" alt="Set .5 for 50% off, and select Discount for the price component type." />
         </a>
     </div>
     <div class="caption">

@@ -116,13 +116,14 @@ scenario as mentioned above.</p>
         highly recommend <a href="http://dev.nodeone.se/node/984">additional
         tutorials</a>.</p>
     </div>
+    <div>
     <ul class="screenshot_breadcrumbs">
-        <li class="first">Administration</li>
-        <li>Store</li>
-        <li>Product Pricing Rules</li>
-        <li class="last">Click Add a Price</li>
+            <li class="first">Administration</li>
+            <li>Store</li>
+            <li>Product Pricing Rules</li>
+            <li class="last">Click Add a Price</li>
     </ul>
-
+    </div>
 
 
 ![Name your new rules so that it makes sense to you.](Cart-MultiCurrency-Step4.png)
