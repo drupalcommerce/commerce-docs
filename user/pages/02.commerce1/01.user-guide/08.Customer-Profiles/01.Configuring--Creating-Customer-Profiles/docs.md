@@ -23,8 +23,8 @@ number, and complete checkout with the new field. After completing checkout, go 
 the newly created customer profile and save it to view the resulting message.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Profile-Admin-1.png">
-            <img src="/sites/default/files/docs/Profile-Admin-1.png" alt="Go to Store, then click Customer Profiles." />
+        <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/">
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/" alt="Go to Store, then click Customer Profiles." />
         </a>
     </div>
     <div class="caption">
