@@ -7,8 +7,8 @@ taxonomy:
 <div class="docs-enhanced">
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/orders-intro.png">
-            <img src="/sites/default/files/docs/orders-intro.png" alt="Orders Listing in Drupal Commerce Kickstart 2">
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/04.Orders-Overview/orders-intro.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/04.Orders-Overview/orders-intro.png" alt="Orders Listing in Drupal Commerce Kickstart 2">
         </a>
     </div>
     <div class="caption">

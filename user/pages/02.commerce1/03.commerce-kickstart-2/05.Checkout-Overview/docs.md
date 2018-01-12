@@ -6,7 +6,7 @@ taxonomy:
 
 <div class="docs-enhanced">
 <div class="screenshot">
-<img src="/sites/default/files/docs/CK-Checkout-01.png" alt="Checkout Example" />
+<img src="/user/pages/02.commerce1/03.commerce-kickstart-2/05.Checkout-Overview/CK-Checkout-01.png" alt="Checkout Example" />
 </div>
 <p>Drupal Commerce comes with a drag-and-drop checkout form builder that lets you decide what information you need to collect from or display to customers during the checkout process. It supports single and multi-page checkout depending on your requirements and can be easily extended with new components through the use of contributed or custom modules.</p>
 <p>The parts that Kickstart brings to the table that aren't a part of our standard <a href="/user-guide/checkout-process">User Guide articles</a> include:</p>
