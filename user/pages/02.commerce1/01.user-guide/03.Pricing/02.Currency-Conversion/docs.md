@@ -45,12 +45,7 @@ taxonomy:
         <li class="last">Currency Settings</li>
     </ul>
 </div>
-
-
-
 ![You can then select which currency you want for your product](Price-Convert-EditProduct.png)
-
-
 <div class="caption">
         <p class="caption-title">Edit Product</p>
         <p>You can then select which currency you want for your product.</p>
@@ -63,13 +58,7 @@ taxonomy:
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Price-Convert-Final.png"><img
-        src="Price-Convert-Final.png" alt="Enable Currency. It's that simple" /></a>
-    </div>
-
-
+![Enable Currency. It's that simple](Price-Convert-Final.png)
 
 
 <div class="caption">
@@ -85,50 +74,39 @@ equal to .76 Euros, that would be a fine and relatively easy thing to produce
 using rules. </p>
 <p>Below we work through an entire exercise where we use Rules to create such a
 scenario as mentioned above.</p>
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step1.png"><img
-        src="Cart-MultiCurrency-Step1.png" alt="Let's create a
-        static currency conversion for these products!" /></a>
-    </div>
-    <div class="caption">
+![Let's create a static currency conversion for these products!](Cart-MultiCurrency-Step1.png)
+
+<div class="caption">
         <p class="caption-title">Original Pricing</p>
         <p>The original pricing is shown here for three products. Our goal is to
         create a rule that affects the prices and changes the currency. Note
         that you need to enable a few other currencies to make this work.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li class="last">View Products</li>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step2.png"><img
-        src="Cart-MultiCurrency-Step2.png" alt="First, Navigate
-        to Product pricing rules" /></a>
-    </div>
-    <div class="caption">
+![First, Navigate to Product pricing rules](Cart-MultiCurrency-Step2.png)
+
+
+<div class="caption">
         <p class="caption-title">Product Pricing Rules</p>
         <p>The first step is to click on Store and then "Configuration" and,
         finally, Product Pricing Rules. That is where the magic all happens when
         dealing with currency exchange.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li class="last">Product Pricing Rules</li>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step3.png"><img
-        src="Cart-MultiCurrency-Step3.png" alt="Click on Add a
-        Pricing Rule and Add event" /></a>
-    </div>
+
+![Click on Add a Pricing Rule and Add event](Cart-MultiCurrency-Step3.png)
     <div class="caption">
         <p class="caption-title">Pricing Rule</p>
         <p>We need to click on add a pricing rule. If this is your first time on
@@ -145,17 +123,14 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step4.png"><img
-        src="Cart-MultiCurrency-Step4.png" alt="Name your new
-        rules so that it makes sense to you." /></a>
-    </div>
-    <div class="caption">
+
+![Name your new rules so that it makes sense to you.](Cart-MultiCurrency-Step4.png)
+
+<div class="caption">
         <p class="caption-title">Name Rule</p>
         <p>After you have created a name, click "Add Condition."</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li>Product Pricing Rules</li>
@@ -164,21 +139,16 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step5.png"><img
-        src="Cart-MultiCurrency-Step5.png" alt="Write or find the
-        following code: commerce-line-item:commerce-unit-price:currency-code"
-        /></a>
-    </div>
-    <div class="caption">
+![Write or find the following code: commerce-line-item:commerce-unit-price:currency-code](Cart-MultiCurrency-Step5.png)
+
+<div class="caption">
         <p class="caption-title">Data Comparison</p>
         <p>After clicking "Add Condition…"</p>
         <p>You will want to choose "Data Comparison" and then select
         "<code>commerce-line-item:commerce-unit-price:currency-code</code>" using the object
         navigator.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li>Product Pricing Rules</li>
@@ -188,21 +158,16 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step6.png"><img
-        src="Cart-MultiCurrency-Step6.png" alt="Choose the
-        currency you want to convert. For our example, we are converting US $ to
-        something else."
-        /></a>
-    </div>
-    <div class="caption">
+![Choose the currency you want to convert. For our example, we are converting US $ to something else.](Cart-MultiCurrency-Step6.png)
+
+
+<div class="caption">
         <p class="caption-title">Currency to Filter</p>
         <p>Note that we are creating a filter that will only allow US dollars
         into our actions. Without this filter, all line items would go through
         this rule.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li>Product Pricing Rules</li>
@@ -211,20 +176,17 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step7.png"><img
-        src="Cart-MultiCurrency-Step7.png" alt="Select multiply
-        to change the unit price." /></a>
-    </div>
-    <div class="caption">
+![Select multiply to change the unit price.](Cart-MultiCurrency-Step7.png)
+
+
+<div class="caption">
         <p class="caption-title">Convert Numbers</p>
         <p>Click "Add Action"</p>
         <p>In order to actually create a currency conversion we need to do a
         little math. This next step is where you add the currency exchange
         rate.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li>Product Pricing Rules</li>
@@ -233,14 +195,10 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step8.png"><img
-        src="Cart-MultiCurrency-Step8.png" alt="The current
-        currency exchange is 0.76 EUR to 1 US Dollars. So we multiply by 0.76"
-        /></a>
-    </div>
-    <div class="caption">
+
+![The current currency exchange is 0.76 EUR to 1 US Dollars. So we multiply by 0.76](Cart-MultiCurrency-Step8.png)
+ 
+<div class="caption">
         <p class="caption-title">Doing the Exchange</p>
         <p>If you had 1 US dollar, how much would that equal in your other
         currency? It changes, but for our exercise we're going to assume a
@@ -248,7 +206,7 @@ scenario as mentioned above.</p>
         with <a href="http://drupal.org/project/commerce_multicurrency">Commerce
         Multicurrency</a>).</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li>Product Pricing Rules</li>
@@ -258,12 +216,7 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step9.png"><img
-        src="Cart-MultiCurrency-Step9.png" alt="Create a new
-        action using the convert to new currency rule." /></a>
-    </div>
+![Create a new action using the convert to new currency rule.](Cart-MultiCurrency-Step9.png)
     <div class="caption">
         <p class="caption-title">Convert Currency Symbol</p>
         <p>Click Add Action.</p>
@@ -280,12 +233,7 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step10.png"><img
-        src="Cart-MultiCurrency-Step10.png" alt="Select the final
-        currency destination. For our example, it will be EUR." /></a>
-    </div>
+![Select the final currency destination. For our example, it will be EUR.](Cart-MultiCurrency-Step10.png)
     <div class="caption">
         <p class="caption-title">Final Currency</p>
         <p>We are simply selecting the final currency symbol. You can safely
@@ -300,12 +248,7 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step11.png"><img
-        src="Cart-MultiCurrency-Step11.png" alt="Final rule
-        screen for Static Currency Exchange Rate." /></a>
-    </div>
+![Final rule screen for Static Currency Exchange Rate.](Cart-MultiCurrency-Step11.png)
     <div class="caption">
         <p class="caption-title">Final Screen</p>
         <p>The final screen for the rule. If your screen doesn't look like this, go
@@ -319,12 +262,7 @@ scenario as mentioned above.</p>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="Cart-MultiCurrency-Step12.png"><img
-        src="Cart-MultiCurrency-Step12.png" alt="Notice how the
-        cart and the product page show the converted price." /></a>
-    </div>
+![Notice how the cart and the product page show the converted price.](Cart-MultiCurrency-Step12.png)
     <div class="caption">
         <p class="caption-title">Example Cart</p>
         <p>We have not modified any of the products prices, but we have
