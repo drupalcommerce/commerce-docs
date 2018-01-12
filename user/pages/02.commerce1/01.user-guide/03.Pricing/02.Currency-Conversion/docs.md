@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-<div class="docs-enhanced">
+
 <p>Let's face it, the internet doesn't just sell to our neighbors down the street, it can literally connect you to the whole world. Last we checked, there are hundreds of currencies and thousands of countries. It's hard to address them all. We've provided the framework for simplified currency conversion in Drupal Commerce core. But we've also built a framework that has already enabled lots of solutions to popup on drupal.org as free currency conversion solutions.</p>
 <p>In the next section we outline how one might convert currencies using only Drupal Commerce, but we admit plainly that this has a very limited use-case. The exercise is intended to teach you how to deal with the pricing rules that every major ecommerce shop is going to use. Directly below, we've listed a few other options you have available to meet your currency conversion requirements:</p>
 
@@ -16,49 +16,46 @@ taxonomy:
 <h2>Enable Multiple Currencies</h2>
 <p>Before you can make a single rule or product into a different currency, you will need to enable a few of the currencies on the backend. Below we show you how to do that.</p>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Price-Convert-StoreConfig.png"><img
-        src="/sites/default/files/docs/Price-Convert-StoreConfig.png" alt="Enable Multiple Currencies" /></a>
-    </div>
-    <div class="caption">
+
+![Enable Multiple Currencies](Price-Convert-StoreConfig.png)
+
+
+<div class="caption">
         <p class="caption-title">Multiple Currencies</p>
         <p>Just like if you were translating content, you have to enable multiple currencies before you can convert them. To get started, you must navigate to the Store Configuration screen and click Currency Settings.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li class="last">Configure</li>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Price-Convert-Enable-Currency.png"><img
-        src="/sites/default/files/docs/Price-Convert-Enable-Currency.png" alt="Enable a couple of currencies for fun" /></a>
-    </div>
-    <div class="caption">
+
+![Enable a couple of currencies for fun](Price-Convert-Enable-Currency.png)
+
+
+<div class="caption">
         <p class="caption-title">Currency Settings</p>
         <p>Here on the currency settings page, all you can really do is enable currencies and set the default currency.</p>
-    </div>
-    <ul class="screenshot_breadcrumbs">
-        <li class="first">Administration</li>
+    </div><ul class="screenshot_breadcrumbs">
+<li class="first">Administration</li>
         <li>Store</li>
         <li>Configure</li>
         <li class="last">Currency Settings</li>
     </ul>
 </div>
 
-<div class="screenshot screenshot-caption">
-    <div class="img">
-        <a href="/sites/default/files/docs/Price-Convert-EditProduct.png"><img
-        src="/sites/default/files/docs/Price-Convert-EditProduct.png" alt="You can then select which currency you want for your product." /></a>
-    </div>
-    <div class="caption">
+
+
+![You can then select which currency you want for your product](Price-Convert-EditProduct.png)
+
+
+<div class="caption">
         <p class="caption-title">Edit Product</p>
         <p>You can then select which currency you want for your product.</p>
     </div>
-    <ul class="screenshot_breadcrumbs">
+<ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
         <li>Products</li>
@@ -68,10 +65,14 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Convert-Final.png"><img
-        src="/sites/default/files/docs/Price-Convert-Final.png" alt="Enable Currency. It's that simple" /></a>
+        <a href="Price-Convert-Final.png"><img
+        src="Price-Convert-Final.png" alt="Enable Currency. It's that simple" /></a>
     </div>
-    <div class="caption">
+
+
+
+
+<div class="caption">
         <p class="caption-title">Multiple Currencies</p>
         <p>When you've got currencies enabled you can do all sorts of interesting things with prices.</p>
     </div>
@@ -86,8 +87,8 @@ using rules. </p>
 scenario as mentioned above.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step1.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step1.png" alt="Let's create a
+        <a href="Cart-MultiCurrency-Step1.png"><img
+        src="Cart-MultiCurrency-Step1.png" alt="Let's create a
         static currency conversion for these products!" /></a>
     </div>
     <div class="caption">
@@ -105,8 +106,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step2.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step2.png" alt="First, Navigate
+        <a href="Cart-MultiCurrency-Step2.png"><img
+        src="Cart-MultiCurrency-Step2.png" alt="First, Navigate
         to Product pricing rules" /></a>
     </div>
     <div class="caption">
@@ -124,8 +125,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step3.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step3.png" alt="Click on Add a
+        <a href="Cart-MultiCurrency-Step3.png"><img
+        src="Cart-MultiCurrency-Step3.png" alt="Click on Add a
         Pricing Rule and Add event" /></a>
     </div>
     <div class="caption">
@@ -146,8 +147,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step4.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step4.png" alt="Name your new
+        <a href="Cart-MultiCurrency-Step4.png"><img
+        src="Cart-MultiCurrency-Step4.png" alt="Name your new
         rules so that it makes sense to you." /></a>
     </div>
     <div class="caption">
@@ -165,8 +166,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step5.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step5.png" alt="Write or find the
+        <a href="Cart-MultiCurrency-Step5.png"><img
+        src="Cart-MultiCurrency-Step5.png" alt="Write or find the
         following code: commerce-line-item:commerce-unit-price:currency-code"
         /></a>
     </div>
@@ -189,8 +190,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step6.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step6.png" alt="Choose the
+        <a href="Cart-MultiCurrency-Step6.png"><img
+        src="Cart-MultiCurrency-Step6.png" alt="Choose the
         currency you want to convert. For our example, we are converting US $ to
         something else."
         /></a>
@@ -212,8 +213,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step7.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step7.png" alt="Select multiply
+        <a href="Cart-MultiCurrency-Step7.png"><img
+        src="Cart-MultiCurrency-Step7.png" alt="Select multiply
         to change the unit price." /></a>
     </div>
     <div class="caption">
@@ -234,8 +235,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step8.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step8.png" alt="The current
+        <a href="Cart-MultiCurrency-Step8.png"><img
+        src="Cart-MultiCurrency-Step8.png" alt="The current
         currency exchange is 0.76 EUR to 1 US Dollars. So we multiply by 0.76"
         /></a>
     </div>
@@ -259,8 +260,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step9.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step9.png" alt="Create a new
+        <a href="Cart-MultiCurrency-Step9.png"><img
+        src="Cart-MultiCurrency-Step9.png" alt="Create a new
         action using the convert to new currency rule." /></a>
     </div>
     <div class="caption">
@@ -281,8 +282,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step10.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step10.png" alt="Select the final
+        <a href="Cart-MultiCurrency-Step10.png"><img
+        src="Cart-MultiCurrency-Step10.png" alt="Select the final
         currency destination. For our example, it will be EUR." /></a>
     </div>
     <div class="caption">
@@ -301,8 +302,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step11.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step11.png" alt="Final rule
+        <a href="Cart-MultiCurrency-Step11.png"><img
+        src="Cart-MultiCurrency-Step11.png" alt="Final rule
         screen for Static Currency Exchange Rate." /></a>
     </div>
     <div class="caption">
@@ -320,8 +321,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step12.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step12.png" alt="Notice how the
+        <a href="Cart-MultiCurrency-Step12.png"><img
+        src="Cart-MultiCurrency-Step12.png" alt="Notice how the
         cart and the product page show the converted price." /></a>
     </div>
     <div class="caption">
@@ -330,5 +331,4 @@ scenario as mentioned above.</p>
         successfully converted all of the currency to Euros and exchanged the
         prices. For example, Product Three is listed as $32 US dollars in the database, but is listed here as 7,60 Euros.</p>
     </div>
-</div>
 </div>
