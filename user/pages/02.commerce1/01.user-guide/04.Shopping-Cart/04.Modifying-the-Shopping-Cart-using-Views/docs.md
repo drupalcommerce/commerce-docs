@@ -26,8 +26,8 @@ individually.</p>
 <h3>Editing the Shopping Cart Block</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-HoverEditBlock.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-HoverEditBlock.png" alt="Click edit
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-HoverEditBlock.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-HoverEditBlock.png" alt="Click edit
         to configure the shopping cart block View" /></a>
     </div>
     <div class="caption">
@@ -45,8 +45,8 @@ individually.</p>
 <h3>Editing the Shopping Cart Page</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickEdit.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickEdit.png" alt="Click edit
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-Anon2Auth-Views-ClickEdit.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-Anon2Auth-Views-ClickEdit.png" alt="Click edit
         to configure the shopping cart View" /></a>
     </div>
     <div class="caption">
@@ -62,8 +62,8 @@ individually.</p>
 </div>
 <h3>What views looks like when you click edit.</h3>
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Cart-BlockandViews-Overview.png"><img
-    src="/sites/default/files/docs/Cart-BlockandViews-Overview.png" alt="Drupal
+    <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Overview.png"><img
+    src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Overview.png" alt="Drupal
     Commerce Shopping Cart Block Views" /></a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
@@ -84,8 +84,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <h3>Create a View</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-CreateView.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-CreateView.png" alt="Create a
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-CreateView.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-CreateView.png" alt="Create a
         View block based on Commerce Order with Display Table" /></a>
     </div>
     <div class="caption">
@@ -104,8 +104,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step1.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step1.png" alt="Add Commerce
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step1.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step1.png" alt="Add Commerce
         Order ID to Contextual Filters" /></a>
     </div>
     <div class="caption">
@@ -125,8 +125,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step1.5.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step1.5.png" alt="VERY IMPORTANT:
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step1.5.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step1.5.png" alt="VERY IMPORTANT:
         Supply Default Value and choose current user's order ID" /></a>
     </div>
     <div class="caption">
@@ -147,8 +147,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step2.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step2.png" alt="Add a
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step2.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step2.png" alt="Add a
         relationship to Reference Line Item" /></a>
     </div>
     <div class="caption">
@@ -168,8 +168,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step3.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step3.png" alt="Add a field,
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step3.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step3.png" alt="Add a field,
         search for title" /></a>
     </div>
     <div class="caption">
@@ -190,8 +190,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step4.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step4.png" alt="Add a Footer called the Line Item Summary" /></a>
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step4.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step4.png" alt="Add a Footer called the Line Item Summary" /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Footer</p>
@@ -212,8 +212,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step4.5.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step4.5.png" alt="Add a filter to
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step4.5.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step4.5.png" alt="Add a filter to
         make sure you are only seeing products." /></a>
     </div>
     <div class="caption">
@@ -235,8 +235,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step5.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step5.png" alt="Custom Shopping Cart Preview." /></a>
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step5.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step5.png" alt="Custom Shopping Cart Preview." /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Views Preview</p>
@@ -256,8 +256,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step6.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step6.png" alt="Drag new block to
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step6.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step6.png" alt="Drag new block to
         a region of your choosing." /></a>
     </div>
     <div class="caption">
@@ -276,8 +276,8 @@ Commerce Guys were able to build a shopping cart in Views.</p>
 <br />
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-BlockandViews-Step7.png"><img
-        src="/sites/default/files/docs/Cart-BlockandViews-Step7.png" alt="Default Shopping
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step7.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/04.Modifying-the-Shopping-Cart-using-Views/Cart-BlockandViews-Step7.png" alt="Default Shopping
         Cart vs. New Custom Shopping Cart" /></a>
     </div>
     <div class="caption">
