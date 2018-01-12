@@ -98,6 +98,7 @@ scenario as mentioned above.</p>
         finally, Product Pricing Rules. That is where the magic all happens when
         dealing with currency exchange.</p>
     </div>
+
 <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
@@ -121,7 +122,7 @@ scenario as mentioned above.</p>
         <li>Product Pricing Rules</li>
         <li class="last">Click Add a Price</li>
     </ul>
-</div>
+
 
 
 ![Name your new rules so that it makes sense to you.](Cart-MultiCurrency-Step4.png)
