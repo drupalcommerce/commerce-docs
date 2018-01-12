@@ -18,8 +18,8 @@ taxonomy:
 <h3>Showing Authorize.net Configuration for On-Site Payments</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-On-1.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-On-1.png" alt="Enable Authorize.net for example On-Site Payment configuration." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-1.png" alt="Enable Authorize.net for example On-Site Payment configuration." />
         </a>
     </div>
     <div class="caption">
@@ -34,8 +34,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-On-2.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-On-2.png" alt="You must enable Payment Methods before you can use them." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-2.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-2.png" alt="You must enable Payment Methods before you can use them." />
         </a>
     </div>
     <div class="caption">
@@ -51,8 +51,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-On-3.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-On-3.png" alt="Enable the On-Site Payment Method example Authorize.net" />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-3.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-3.png" alt="Enable the On-Site Payment Method example Authorize.net" />
         </a>
     </div>
     <div class="caption">
@@ -69,8 +69,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-On-4.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-On-4.png" alt="Configure Authorize.net" />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-4.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-4.png" alt="Configure Authorize.net" />
         </a>
     </div>
     <div class="caption">
@@ -88,8 +88,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-ON-5.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-ON-5.png" alt="This is where you configure the Payment Method." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-ON-5.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-ON-5.png" alt="This is where you configure the Payment Method." />
         </a>
     </div>
     <div class="caption">
@@ -107,8 +107,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-On-6.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-On-6.png" alt="This is an example Authorize.net configuration screen." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-6.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-6.png" alt="This is an example Authorize.net configuration screen." />
         </a>
     </div>
     <div class="caption">
@@ -126,8 +126,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-On-7.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-On-7.png" alt="You can see our credit card payment method has been enabled." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-7.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-On-7.png" alt="You can see our credit card payment method has been enabled." />
         </a>
     </div>
     <div class="caption">
@@ -144,8 +144,8 @@ taxonomy:
 <h3>Showing PayPal Configuration for Off-Site Payments</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-Off-1.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-Off-1.png" alt="Enable PayPal for example Off-Site Payment configuration." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-1.png" alt="Enable PayPal for example Off-Site Payment configuration." />
         </a>
     </div>
     <div class="caption">
@@ -160,8 +160,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-Off-2.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-Off-2.png" alt="You must enable Payment Methods before you can use them." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-2.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-2.png" alt="You must enable Payment Methods before you can use them." />
         </a>
     </div>
     <div class="caption">
@@ -177,8 +177,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-Off-3.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-Off-3.png" alt="Enable the Off-Site Payment Method example PayPal" />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-3.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-3.png" alt="Enable the Off-Site Payment Method example PayPal" />
         </a>
     </div>
     <div class="caption">
@@ -195,8 +195,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-Off-4.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-Off-4.png" alt="Configure PayPal" />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-4.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-4.png" alt="Configure PayPal" />
         </a>
     </div>
     <div class="caption">
@@ -214,8 +214,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-Off-5.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-Off-5.png" alt="This is where you configure the Payment Method." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-5.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-5.png" alt="This is where you configure the Payment Method." />
         </a>
     </div>
     <div class="caption">
@@ -233,8 +233,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Pay-OnOffSite-Off-6.png">
-            <img src="/sites/default/files/docs/Pay-OnOffSite-Off-6.png" alt="You can see our PayPal payment method has been enabled." />
+        <a href="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-6.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/06.Payments/Pay-OnOffSite-Off-6.png" alt="You can see our PayPal payment method has been enabled." />
         </a>
     </div>
     <div class="caption">
