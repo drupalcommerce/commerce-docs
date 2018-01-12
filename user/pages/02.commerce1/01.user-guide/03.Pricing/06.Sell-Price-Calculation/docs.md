@@ -6,8 +6,8 @@ taxonomy:
 
 <div class="docs-enhanced">
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Price-Calc-Overview.png">
-        <img src="/sites/default/files/docs/Price-Calc-Overview.png"
+    <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-Overview.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-Overview.png"
              alt="Product Price Calculations happen under store configuration product pricing rules" />
     </a>
     <ul class="screenshot_breadcrumbs">
@@ -46,8 +46,8 @@ taxonomy:
 <p>What the sell price should be on checkout with 50% discount if I'm an administrator: $15</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step1.png">
-            <img src="/sites/default/files/docs/Price-Calc-step1.png" alt="Create a product pricing rule" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step1.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step1.png" alt="Create a product pricing rule" />
         </a>
     </div>
     <div class="caption">
@@ -65,8 +65,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step2.png">
-            <img src="/sites/default/files/docs/Price-Calc-step2.png" alt="Calculating sale price event should be selected by default. We're going to add a condition for only affecting prices if users are administrators. We're going to reduce the price the by 50%." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step2.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step2.png" alt="Calculating sale price event should be selected by default. We're going to add a condition for only affecting prices if users are administrators. We're going to reduce the price the by 50%." />
         </a>
     </div>
     <div class="caption">
@@ -84,8 +84,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step3.png">
-            <img src="/sites/default/files/docs/Price-Calc-step3.png" alt="Select the user has roles condition." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step3.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step3.png" alt="Select the user has roles condition." />
         </a>
     </div>
     <div class="caption">
@@ -103,8 +103,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step4.png">
-            <img src="/sites/default/files/docs/Price-Calc-step4.png" alt="Select the administrator role." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step4.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step4.png" alt="Select the administrator role." />
         </a>
     </div>
     <div class="caption">
@@ -122,8 +122,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step5.png">
-            <img src="/sites/default/files/docs/Price-Calc-step5.png" alt="Next, we've already clicked on Add Action and are now selecting the multiply unit price option." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step5.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step5.png" alt="Next, we've already clicked on Add Action and are now selecting the multiply unit price option." />
         </a>
     </div>
     <div class="caption">
@@ -141,8 +141,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step6.png">
-            <img src="/sites/default/files/docs/Price-Calc-step6.png" alt="Set .5 for 50% off, and select Discount for the price component type." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step6.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step6.png" alt="Set .5 for 50% off, and select Discount for the price component type." />
         </a>
     </div>
     <div class="caption">
@@ -160,8 +160,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step7.png">
-            <img src="/sites/default/files/docs/Price-Calc-step7.png" alt="Final Rule Screen Overview" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step7.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step7.png" alt="Final Rule Screen Overview" />
         </a>
     </div>
     <div class="caption">
@@ -179,8 +179,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step8.png">
-            <img src="/sites/default/files/docs/Price-Calc-step8.png" alt="Lets reveal the price components" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step8.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step8.png" alt="Lets reveal the price components" />
         </a>
     </div>
     <div class="caption">
@@ -198,8 +198,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step9.png">
-            <img src="/sites/default/files/docs/Price-Calc-step9.png" alt="Set the price field to show formatted with components." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step9.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step9.png" alt="Set the price field to show formatted with components." />
         </a>
     </div>
     <div class="caption">
@@ -218,8 +218,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Price-Calc-step10.png">
-            <img src="/sites/default/files/docs/Price-Calc-step10.png" alt="Administrators see the discount" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step10.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/06.Sell-Price-Calculation/Price-Calc-step10.png" alt="Administrators see the discount" />
         </a>
     </div>
     <div class="caption">

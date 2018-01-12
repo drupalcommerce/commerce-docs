@@ -7,8 +7,8 @@ taxonomy:
 <div class="docs-enhanced"><h2>Price Recalculation on Load</h2>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Refresh-Price-Rules.png"><img
-        src="/sites/default/files/docs/Cart-Refresh-Price-Rules.png" alt="Shopping Cart
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/03.Cart-Refresh/Cart-Refresh-Price-Rules.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/03.Cart-Refresh/Cart-Refresh-Price-Rules.png" alt="Shopping Cart
         refreshes prices on every page load." /></a>
     </div>
     <div class="caption">

@@ -36,8 +36,8 @@ to that section below.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Hide-Block.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Hide-Block.png" alt="Configure
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Hide-Block.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Hide-Block.png" alt="Configure
         Shopping Cart Block" /></a>
     </div>
     <div class="caption">
@@ -56,8 +56,8 @@ to that section below.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Hide-Block-2.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Hide-Block-2.png" alt="Configure
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Hide-Block-2.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Hide-Block-2.png" alt="Configure
         Visibility" /></a>
     </div>
     <div class="caption">
@@ -83,8 +83,8 @@ doesn't work out, you can always click "Revert" and everything will go back to
 the fresh and shiny version that ships with Commerce.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickEdit.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickEdit.png" alt="Click edit
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-ClickEdit.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-ClickEdit.png" alt="Click edit
         to configure the shopping cart View" /></a>
     </div>
     <div class="caption">
@@ -101,8 +101,8 @@ the fresh and shiny version that ships with Commerce.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickAccess.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickAccess.png" alt="Click
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-ClickAccess.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-ClickAccess.png" alt="Click
         None under Access" /></a>
     </div>
     <div class="caption">
@@ -120,8 +120,8 @@ the fresh and shiny version that ships with Commerce.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Views-AuthRole.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Views-AuthRole.png" alt="Choose the
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-AuthRole.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-AuthRole.png" alt="Choose the
         authenticated role." /></a>
     </div>
     <div class="caption">
@@ -146,8 +146,8 @@ anonymous user would experience.</p>
 the sidebar for Commerce Kickstart. There is a not-so-straightforward way to do this, so hang in there. The Shopping Cart Block that is enabled in the Commerce Kickstart project is actually setup in code. What we need to do is disable that block, create a new Views Block, and enable the Views block instead.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Hide-Block.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Hide-Block.png" alt="Configure
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Hide-Block.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Hide-Block.png" alt="Configure
         Shopping Cart Block" /></a>
     </div>
     <div class="caption">
@@ -166,8 +166,8 @@ the sidebar for Commerce Kickstart. There is a not-so-straightforward way to do 
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Block-Disable.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Block-Disable.png" alt="Select None
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Block-Disable.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Block-Disable.png" alt="Select None
         to remove the Shopping Cart from your theme." /></a>
     </div>
     <div class="caption">
@@ -186,8 +186,8 @@ the sidebar for Commerce Kickstart. There is a not-so-straightforward way to do 
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickEdit.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Views-ClickEdit.png" alt="Click edit
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-ClickEdit.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-ClickEdit.png" alt="Click edit
         to configure the shopping cart View" /></a>
     </div>
     <div class="caption">
@@ -204,8 +204,8 @@ the sidebar for Commerce Kickstart. There is a not-so-straightforward way to do 
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Views-AddBlock.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Views-AddBlock.png" alt="Click Add
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-AddBlock.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Views-AddBlock.png" alt="Click Add
         Block" /></a>
     </div>
     <div class="caption">
@@ -224,8 +224,8 @@ the sidebar for Commerce Kickstart. There is a not-so-straightforward way to do 
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Anon2Auth-Block-Enable.png"><img
-        src="/sites/default/files/docs/Cart-Anon2Auth-Block-Enable.png" alt="Click Configure to Enable your new block." /></a>
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Block-Enable.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/02.Anonymous-Carts-and-Logged-In-Users/Cart-Anon2Auth-Block-Enable.png" alt="Click Configure to Enable your new block." /></a>
     </div>
     <div class="caption">
         <p class="caption-title">Enable new block</p>

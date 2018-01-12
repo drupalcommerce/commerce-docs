@@ -6,8 +6,8 @@ taxonomy:
 
 <div class="docs-enhanced">
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Cart-Order-LineItems-Shopping-Cart.png"><img
-    src="/sites/default/files/docs/Cart-Order-LineItems-Shopping-Cart.png" alt="Drupal
+    <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-Shopping-Cart.png"><img
+    src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-Shopping-Cart.png" alt="Drupal
     Commerce Shopping Cart" /></a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Click "Add to Cart"</li>
@@ -34,8 +34,8 @@ less Commerce-jargon?</p>
 <h2>Shopping Cart Overview</h2>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Order-LineItems-Order-Status.png"><img
-        src="/sites/default/files/docs/Cart-Order-LineItems-Order-Status.png" alt="Order
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-Order-Status.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-Order-Status.png" alt="Order
         Status for Shopping Carts" /></a>
     </div>
     <div class="caption">
@@ -62,8 +62,8 @@ where users shouldn't be allowed to create and manage their own orders via a
 cart.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Order-LineItems-Admin.png"><img
-        src="/sites/default/files/docs/Cart-Order-LineItems-Admin.png" alt="Administrative
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-Admin.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-Admin.png" alt="Administrative
         View for Shopping Carts" /></a>
     </div>
     <div class="caption">
@@ -95,8 +95,8 @@ only buy Product A if Product B is not in the cart. You can make Drupal Commerce
 understand this using Rules. We describe the recommended rule below.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-Order-LineItems-UnsetLineItem.png"><img
-        src="/sites/default/files/docs/Cart-Order-LineItems-UnsetLineItem.png" alt="Clone
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-UnsetLineItem.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/06.Shopping-Carts-Orders-and-Line-Items/Cart-Order-LineItems-UnsetLineItem.png" alt="Clone
         the unset price rule to set up your own rule with your own logic" /></a>
     </div>
     <div class="caption">

@@ -6,7 +6,7 @@ taxonomy:
 
 <div class="docs-enhanced">
 <div class="screenshot">
-    <img src="/sites/default/files/docs/Add-to-Cart-Drupal-Commerce-1.png" alt="Where do
+    <img src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Drupal-Commerce-1.png" alt="Where do
     you configure the Add-to-Cart button in Drupal Commerce?" />
 </div>
 <p>Almost everything in Drupal Commerce is put together using a common Drupal
@@ -45,8 +45,8 @@ to access, alter, and create Add-to-Cart buttons.</p>
 <h3 id="product-reference-field">Product Reference Fields</h3>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Add-to-Cart-Drupal-Commerce-Product-Reference-Field.png">
-        <img src="/sites/default/files/docs/Add-to-Cart-Drupal-Commerce-Product-Reference-Field.png"
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Drupal-Commerce-Product-Reference-Field.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Drupal-Commerce-Product-Reference-Field.png"
              alt="Product Reference Field Configuration Screen" /></a>
     </div>
     <div class="caption">
@@ -73,8 +73,8 @@ to make this extra product data visible to customers.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Add-to-Cart-Drupal-Commerce-Product-Display-Formatter.png">
-        <img src="/sites/default/files/docs/Add-to-Cart-Drupal-Commerce-Product-Display-Formatter.png"
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Drupal-Commerce-Product-Display-Formatter.png">
+        <img src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Drupal-Commerce-Product-Display-Formatter.png"
              alt="Product Reference Field Configuration Screen" /></a>
     </div>
     <div class="caption">
@@ -101,8 +101,8 @@ enables prices, images, and other fields attached to your products to be
 displayed in the node along with an Add-to-Cart button.</p>
 <h3 id="add-to-cart-examples">Attribute Fields & Add-to-Cart Form Examples</h3>
 <div class="screenshot">
-    <a href="/sites/default/files/docs/Add-to-Cart-form-goal.png"><img
-    src="/sites/default/files/docs/Add-to-Cart-form-goal.png" alt="Changing an attribute
+    <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-form-goal.png"><img
+    src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-form-goal.png" alt="Changing an attribute
     should update the price and picture." /></a>
 </div>
 <p>The most obvious example is the basic price field attached to products. In
@@ -110,8 +110,8 @@ most cases, you will need the price displayed along with the product description
 and Add to Cart form.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Add-to-Cart-Custom-Field.png">
-            <img src="/sites/default/files/docs/Add-to-Cart-Custom-Field.png"
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Custom-Field.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Custom-Field.png"
                  alt="Custom Field Configuration" />
         </a>
     </div>
@@ -139,8 +139,8 @@ product, such as a t-shirt color or t-shirt size). You will want this image
 rendered into the node display that groups these products together.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Add-to-Cart-Form-Manage-Display.png">
-            <img src="/sites/default/files/docs/Add-to-Cart-Form-Manage-Display.png"
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Form-Manage-Display.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/01.Add-to-Cart-Form/Add-to-Cart-Form-Manage-Display.png"
                  alt="Add to Cart Manage Display Form" />
         </a>
     </div>

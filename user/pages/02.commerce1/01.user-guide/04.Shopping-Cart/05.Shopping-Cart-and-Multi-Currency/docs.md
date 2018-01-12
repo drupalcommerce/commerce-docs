@@ -25,8 +25,8 @@ allowFullScreen></iframe>
 Drupal Commerce supports a small subset of currency support.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Overview.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Overview.png" alt="Currency
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Overview.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Overview.png" alt="Currency
         Settings Screen" /></a>
     </div>
     <div class="caption">
@@ -53,8 +53,8 @@ using rules. </p>
 scenario as mentioned above.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step1.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step1.png" alt="Let's create a
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step1.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step1.png" alt="Let's create a
         static currency conversion for these products!" /></a>
     </div>
     <div class="caption">
@@ -72,8 +72,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step2.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step2.png" alt="First, Navigate
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step2.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step2.png" alt="First, Navigate
         to Product pricing rules" /></a>
     </div>
     <div class="caption">
@@ -91,8 +91,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step3.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step3.png" alt="Click on Add a
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step3.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step3.png" alt="Click on Add a
         Pricing Rule and Add event" /></a>
     </div>
     <div class="caption">
@@ -113,8 +113,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step4.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step4.png" alt="Name your new
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step4.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step4.png" alt="Name your new
         rules so that it makes sense to you." /></a>
     </div>
     <div class="caption">
@@ -132,8 +132,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step5.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step5.png" alt="Write or find the
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step5.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step5.png" alt="Write or find the
         following code: commerce-line-item:commerce-unit-price:currency-code"
         /></a>
     </div>
@@ -156,8 +156,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step6.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step6.png" alt="Choose the
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step6.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step6.png" alt="Choose the
         currency you want to convert. For our example, we are converting US $ to
         something else."
         /></a>
@@ -179,8 +179,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step7.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step7.png" alt="Select multiply
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step7.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step7.png" alt="Select multiply
         to change the unit price." /></a>
     </div>
     <div class="caption">
@@ -201,8 +201,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step8.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step8.png" alt="The current
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step8.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step8.png" alt="The current
         currency exchange is 0.76 EUR to 1 US Dollars. So we multiply by 0.76"
         /></a>
     </div>
@@ -226,8 +226,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step9.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step9.png" alt="Create a new
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step9.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step9.png" alt="Create a new
         action using the convert to new currency rule." /></a>
     </div>
     <div class="caption">
@@ -248,8 +248,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step10.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step10.png" alt="Select the final
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step10.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step10.png" alt="Select the final
         currency destination. For our example, it will be EUR." /></a>
     </div>
     <div class="caption">
@@ -268,8 +268,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step11.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step11.png" alt="Final rule
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step11.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step11.png" alt="Final rule
         screen for Static Currency Exchange Rate." /></a>
     </div>
     <div class="caption">
@@ -287,8 +287,8 @@ scenario as mentioned above.</p>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Cart-MultiCurrency-Step12.png"><img
-        src="/sites/default/files/docs/Cart-MultiCurrency-Step12.png" alt="Notice how the
+        <a href="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step12.png"><img
+        src="/user/pages/02.commerce1/01.user-guide/04.Shopping-Cart/05.Shopping-Cart-and-Multi-Currency/Cart-MultiCurrency-Step12.png" alt="Notice how the
         cart and the product page show the converted price." /></a>
     </div>
     <div class="caption">
