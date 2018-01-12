@@ -24,7 +24,7 @@ the newly created customer profile and save it to view the resulting message.</p
 <div class="screenshot screenshot-caption">
     <div class="img">
         <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/">
-            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/" alt="Go to Store, then click Customer Profiles." />
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-1.png" alt="Go to Store, then click Customer Profiles." />
         </a>
     </div>
     <div class="caption">
@@ -39,8 +39,8 @@ the newly created customer profile and save it to view the resulting message.</p
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Profile-Admin-2.png">
-            <img src="/sites/default/files/docs/Profile-Admin-2.png" alt="Let's add phone number" />
+        <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-2.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-2.png" alt="Let's add phone number" />
         </a>
     </div>
     <div class="caption">
@@ -57,8 +57,8 @@ the newly created customer profile and save it to view the resulting message.</p
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Profile-Admin-3.png">
-            <img src="/sites/default/files/docs/Profile-Admin-3.png" alt="Add a Field" />
+        <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-3.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-3.png" alt="Add a Field" />
         </a>
     </div>
     <div class="caption">
@@ -75,8 +75,8 @@ the newly created customer profile and save it to view the resulting message.</p
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Profile-Admin-4.png">
-            <img src="/sites/default/files/docs/Profile-Admin-4.png" alt="Checkout Example" />
+        <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-4.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-4.png" alt="Checkout Example" />
         </a>
     </div>
     <div class="caption">
@@ -87,8 +87,8 @@ the newly created customer profile and save it to view the resulting message.</p
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Profile-Admin-5.png">
-            <img src="/sites/default/files/docs/Profile-Admin-5.png" alt="Read the disclaimer on the customer profile edit screen." />
+        <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-5.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-5.png" alt="Read the disclaimer on the customer profile edit screen." />
         </a>
     </div>
     <div class="caption">
@@ -105,8 +105,8 @@ the newly created customer profile and save it to view the resulting message.</p
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/sites/default/files/docs/Profile-Admin-6.png">
-            <img src="/sites/default/files/docs/Profile-Admin-6.png" alt="Cloned message." />
+        <a href="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-6.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/08.Customer-Profiles/01.Configuring--Creating-Customer-Profiles/Profile-Admin-6.png" alt="Cloned message." />
         </a>
     </div>
     <div class="caption">
