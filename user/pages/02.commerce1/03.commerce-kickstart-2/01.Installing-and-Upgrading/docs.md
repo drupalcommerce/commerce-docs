@@ -63,8 +63,8 @@ $ drush updatedb -y
 <p>Did you skip the pre-installation checklist? Shame on you. Make sure you have everything ready for the actual installation, then proceed:</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-1.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-1.png" alt="Download Commerce Kickstart Options" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-1.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-1.png" alt="Download Commerce Kickstart Options" />
         </a>
     </div>
     <div class="caption">
@@ -77,8 +77,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-2.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-2.png" alt="Extract the Files" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-2.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-2.png" alt="Extract the Files" />
         </a>
     </div>
     <div class="caption">
@@ -92,8 +92,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-3.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-3.png" alt="Installation Screen, welcome." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-3.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-3.png" alt="Installation Screen, welcome." />
         </a>
     </div>
     <div class="caption">
@@ -108,8 +108,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-4.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-4.png" alt="Requirements Problem Screen" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-4.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-4.png" alt="Requirements Problem Screen" />
         </a>
     </div>
     <div class="caption">
@@ -123,8 +123,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-5.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-5.png" alt="Setting up the database configuration" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-5.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-5.png" alt="Setting up the database configuration" />
         </a>
     </div>
     <div class="caption">
@@ -139,8 +139,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-6.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-6.png" alt="Installation running through." />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-6.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-6.png" alt="Installation running through." />
         </a>
     </div>
     <div class="caption">
@@ -150,8 +150,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-7.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-7.png" alt="Site Configuration" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-7.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-7.png" alt="Site Configuration" />
         </a>
     </div>
     <div class="caption">
@@ -161,8 +161,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-8.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-8.png" alt="Configure Store Content" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-8.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-8.png" alt="Configure Store Content" />
         </a>
     </div>
     <div class="caption">
@@ -172,8 +172,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-9.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-9.png" alt="Importing Products" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-9.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-9.png" alt="Importing Products" />
         </a>
     </div>
     <div class="caption">
@@ -183,8 +183,8 @@ $ drush updatedb -y
 </div>
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-10.png">
-            <img src="/user/pages/03.commerce-kickstart-2/Installing-and-Upgrading/CK-Install-10.png" alt="Getting Started" />
+        <a href="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-10.png">
+            <img src="/user/pages/02.commerce1/03.commerce-kickstart-2/01.Installing-and-Upgrading/CK-Install-10.png" alt="Getting Started" />
         </a>
     </div>
     <div class="caption">
