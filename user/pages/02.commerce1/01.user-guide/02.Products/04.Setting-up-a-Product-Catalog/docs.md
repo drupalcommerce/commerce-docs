@@ -19,8 +19,8 @@ taxonomy:
       <p>The first catalog we will create is a simple View that will show product teasers. This is similar to the approach used by Drupal core to populate your homepage on install. Re-making it in Views means you could tweak it using the Views interface.</p>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Disp-Step1.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Disp-Step1.png" alt="Add a new View that is listing Product Displays." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Disp-Step1.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Disp-Step1.png" alt="Add a new View that is listing Product Displays." />
             </a>
          </div>
          <div class="caption">
@@ -36,8 +36,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Disp-Step2.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Disp-Step2.png" alt="Our new Catalog Page." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Disp-Step2.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Disp-Step2.png" alt="Our new Catalog Page." />
             </a>
          </div>
          <div class="caption">
@@ -49,8 +49,8 @@ taxonomy:
       <p>This is a simple listing of Product Entities that have no link, just a simple Add to Cart Button and a price. This would be good for a one-page catalog, perhaps a table with available donations, etc.</p>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step1.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step1.png" alt="Name the view, Choose eCommerce Product, and use a grid display." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step1.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step1.png" alt="Name the view, Choose eCommerce Product, and use a grid display." />
             </a>
          </div>
          <div class="caption">
@@ -66,8 +66,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step2.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step2.png" alt="Add the Cart button and the price field." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step2.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step2.png" alt="Add the Cart button and the price field." />
             </a>
          </div>
          <div class="caption">
@@ -84,8 +84,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step3.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step3.png" alt="Add the Product Title and the Product Image." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step3.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step3.png" alt="Add the Product Title and the Product Image." />
             </a>
          </div>
          <div class="caption">
@@ -102,8 +102,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step4.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step4.png" alt="Add to Cart Field, leave off the label and check the link products towards the bottom." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step4.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step4.png" alt="Add to Cart Field, leave off the label and check the link products towards the bottom." />
             </a>
          </div>
          <div class="caption">
@@ -120,8 +120,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step5.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step5.png" alt="Leave off the label, set the formatted amount and display to show calculated sell price." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step5.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step5.png" alt="Leave off the label, set the formatted amount and display to show calculated sell price." />
             </a>
          </div>
          <div class="caption">
@@ -138,8 +138,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step6.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step6.png" alt="Product title field" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step6.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step6.png" alt="Product title field" />
             </a>
          </div>
          <div class="caption">
@@ -156,8 +156,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step7.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step7.png" alt="Let's rearrange fields." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step7.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step7.png" alt="Let's rearrange fields." />
             </a>
          </div>
          <div class="caption">
@@ -174,8 +174,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step8.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step8.png" alt="Rearrange New Fields and Remove one Field" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step8.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step8.png" alt="Rearrange New Fields and Remove one Field" />
             </a>
          </div>
          <div class="caption">
@@ -192,8 +192,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Simple-Step9.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Simple-Step9.png" alt="Final Product Catalog" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step9.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Simple-Step9.png" alt="Final Product Catalog" />
             </a>
          </div>
          <div class="caption">
@@ -207,8 +207,8 @@ taxonomy:
       <p>Additionally, if you're using attributes and want an Add to Cart form in the View, you need to render the product display node's product reference field to the View instead of using the Add to Cart form field from the product table itself.  Furthermore, if you want product fields in the View to update when attributes are selected, you can't just add the product fields directly to the View.  This is because injected field updating depends on a special wrapper around the product fields that only comes when the fields are rendered through the node output.  The solution for this is to render product fields through a view mode of the display node itself, such as putting a teaser of the node into the grid and having the node type configured to inject product fields into the teaser.  This will give the product fields the right wrapper to be updated when the Add to Cart form attribute select lists are updated.</p>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step1.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step1.png" alt="Choose Type Product Display and use Grid, Fields." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step1.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step1.png" alt="Choose Type Product Display and use Grid, Fields." />
             </a>
          </div>
          <div class="caption">
@@ -224,8 +224,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step2.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step2.png" alt="Lets go ahead and expand the advanced tab and add a relationship." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step2.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step2.png" alt="Lets go ahead and expand the advanced tab and add a relationship." />
             </a>
          </div>
          <div class="caption">
@@ -243,8 +243,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step3.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step3.png" alt="This is the magical Views Relationship that we will use." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step3.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step3.png" alt="This is the magical Views Relationship that we will use." />
             </a>
          </div>
          <div class="caption">
@@ -261,8 +261,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step4.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step4.png" alt="You only want Product Displays that have products associated with them." />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step4.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step4.png" alt="You only want Product Displays that have products associated with them." />
             </a>
          </div>
          <div class="caption">
@@ -279,8 +279,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step5.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step5.png" alt="Let's add a few fields" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step5.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step5.png" alt="Let's add a few fields" />
             </a>
          </div>
          <div class="caption">
@@ -297,8 +297,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step6.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step6.png" alt="Add these fields" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step6.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step6.png" alt="Add these fields" />
             </a>
          </div>
          <div class="caption">
@@ -315,8 +315,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step7.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step7.png" alt="Add to Cart Form" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step7.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step7.png" alt="Add to Cart Form" />
             </a>
          </div>
          <div class="caption">
@@ -333,8 +333,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step8.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step8.png" alt="Price Field" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step8.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step8.png" alt="Price Field" />
             </a>
          </div>
          <div class="caption">
@@ -351,8 +351,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step9.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step9.png" alt="Image Field" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step9.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step9.png" alt="Image Field" />
             </a>
          </div>
          <div class="caption">
@@ -369,8 +369,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step10.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step10.png" alt="Rearrange Fields" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step10.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step10.png" alt="Rearrange Fields" />
             </a>
          </div>
          <div class="caption">
@@ -387,8 +387,8 @@ taxonomy:
       </div>
       <div class="screenshot screenshot-caption">
          <div class="img">
-            <a href="/sites/default/files/docs/Prod-Catalog-Advanced-Step11.png">
-            <img src="/sites/default/files/docs/Prod-Catalog-Advanced-Step11.png" alt="Final Product Catalog" />
+            <a href="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step11.png">
+            <img src="/user/pages/02.commerce1/01.01.user-guide/02.Products/04.Setting-up-a-Product-Catalog/Prod-Catalog-Advanced-Step11.png" alt="Final Product Catalog" />
             </a>
          </div>
          <div class="caption">
