@@ -29,8 +29,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-01.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-01.png" alt="We're going to add a coupon field to the default Line Item Type." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-01.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-01.png" alt="We're going to add a coupon field to the default Line Item Type." />
             </a>
      </div>
 
@@ -49,8 +49,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-02.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-02.png" alt="Add field to Line Item." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-02.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-02.png" alt="Add field to Line Item." />
             </a>
      </div>
 
