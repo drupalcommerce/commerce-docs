@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Order receipt emails are powered through Twih templates. There is no user interface for customizing the email content. In most cases email require inline styling and full HTML. This is where Twig excels. 
+Order receipt emails are powered through Twig templates. There is no user interface for customizing the email content. In most cases email require inline styling and full HTML. This is where Twig excels. 
 
 The order receipt email, which customers receive, is controlled through the `commerce_order_receipt` theme hook. The following information is available to the theme hook
 
