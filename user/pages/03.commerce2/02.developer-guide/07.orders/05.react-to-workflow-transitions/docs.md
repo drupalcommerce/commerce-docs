@@ -18,7 +18,7 @@ Transition information can be found in a `{module}.workflows.yml`.
 Example from commerce_order:
 
 ```yaml
-    # commerce_order.services.yml
+    # commerce_order.workflows.yml
     order_default:
       id: order_default
       group: commerce_order
