@@ -163,6 +163,38 @@ And thats it for __Checkout__. Now we only need to handle the returning user.
 
 ### Return from Payment provider
 
-! To be continued
+When the user returns from the payment provider, we need to validate that the payment actually succeed. 
 
-! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
+To do this, simply implement the `onReturn` method in the `RedirectCheckout` class:
+
+```php
+public function onReturn(OrderInterface $order, Request $request) {
+    if ($request->something_that_marks_a_failure) {
+        throw new PaymentGatewayException('Payment failed!');
+    }
+    
+    $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
+    $payment = $payment_storage->create([
+      'state' => 'completed'
+      'amount' => $order->getTotalPrice(),
+      'payment_gateway' => $this->entityId,
+      'order_id' => $order->id(),
+      'remote_id' => $request->request->get('remote_id'),
+      'remote_state' => $request->request->get('remote_state'),
+    ]);
+
+    $payment->save();
+}
+```
+
+There are a couple of things to be aware of in the `onReturn` method. 
+First, this method might be called, even though that the payment failed. So you should implement some payment provider specific logic, for figuring out whether the payment was successfull or not (`if ($request->something_that_marks_a_failure) {`).
+Second, QuickPay for instance will not pass any valueable information in the request when returning from QuickPay. So for QuickPay you either need to implement a callback method, or do a lookup at QuickPay in this method. Both can work equally well. Just note, that the payment provider you are integrating with, might have different ways to complete a payment.
+
+If an error are detected, the method should throw a `PaymentGatewayException`. This will reset the payment:
+
+![Errornous payment](https://imgur.com/OY7I74N)
+
+Other than that, the onReturn should create a payment and store it.
+
+And thats it. You should now be able to do checkouts through the payment provider of your choice.
