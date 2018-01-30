@@ -20,6 +20,5 @@ taxonomy:
         <li class="last">Orders</li>
     </ul>
 </div>
-<p>Drupal Commerce Kickstart 2 Order Managing features overview. See how to "Quick Edit" and bulk update your orders by watching the video embedded below.</p>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/SyYs11jkj7s" frameborder="0" allowfullscreen></iframe>
+
 </div>
