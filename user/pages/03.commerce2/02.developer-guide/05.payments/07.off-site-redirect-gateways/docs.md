@@ -111,7 +111,7 @@ The `submitConfigurationForm` saves the input into the configuration.
 
 With these method in place, when we go to the Add payment gateway configuration form, we will now see the new fields, when our new plugin is selected:
 
-![Add payment gateway configuration form](https://imgur.com/h3aAL9G)
+![Add payment gateway configuration form](add-payment-gateway-configuration-form.png)
 
 ### Checkout
 
@@ -120,7 +120,7 @@ With the configuration all setup, it's now time to configure the checkout.
 Since this is an offsite checkout form, the user will at some point be redirect to the payment gateway (QuickPay in this example). 
 Remember the __annotation__ `"offsite-payment" = "Drupal\commerce_quickpay\PluginForm\RedirectCheckoutForm",` in the `RedirectCheckout` class. This defines a form that Commerce will redirect to, when the user clicks the __Pay and complete purchase__ button:
 
-![Pay and complete purchase](https://imgur.com/RczLoNX)
+![Pay and complete purchase](pay-and-complete-purchase.png)
 
 Let's implement the `RedirectCheckoutForm` form.
 
@@ -193,7 +193,7 @@ Second, QuickPay for instance will not pass any valueable information in the req
 
 If an error are detected, the method should throw a `PaymentGatewayException`. This will reset the payment:
 
-![Errornous payment](https://imgur.com/OY7I74N)
+![Errornous payment](errornous-payment.png)
 
 Other than that, the onReturn should create a payment and store it.
 
