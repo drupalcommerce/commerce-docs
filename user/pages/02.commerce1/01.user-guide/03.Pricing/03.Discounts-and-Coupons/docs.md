@@ -146,8 +146,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-07.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-07.png" alt="Add our coupon field." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-07.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-07.png" alt="Add our coupon field." />
             </a>
      </div>
 
@@ -169,8 +169,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-08.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-08.png" alt="Add Components" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-08.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-08.png" alt="Add Components" />
             </a>
      </div>
 
@@ -179,16 +179,16 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-09.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-09.png" alt="Our new cart." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-09.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-09.png" alt="Our new cart." />
             </a>
      </div>
 </div>
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-10.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-10.png" alt="Adding a new Product Pricing Rule." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-10.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-10.png" alt="Adding a new Product Pricing Rule." />
             </a>
      </div>
 
@@ -206,8 +206,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-11.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-11.png" alt="Make up a pricing rule." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-11.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-11.png" alt="Make up a pricing rule." />
             </a>
      </div>
 
@@ -226,8 +226,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-12.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-12.png" alt="This is where we will be spending the next few minutes. Hang in there, it's pretty easy." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-12.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-12.png" alt="This is where we will be spending the next few minutes. Hang in there, it's pretty easy." />
             </a>
      </div>
 
@@ -248,8 +248,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-13.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-13.png" alt="First, add a condition for our new field." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-13.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-13.png" alt="First, add a condition for our new field." />
             </a>
      </div>
 
@@ -269,8 +269,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-14.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-14.png" alt="For this condition, we need the commerce-line-item data selector and our new field." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-14.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-14.png" alt="For this condition, we need the commerce-line-item data selector and our new field." />
             </a>
      </div>
 
@@ -290,8 +290,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-15.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-15.png" alt="Next, add and to require our final data comparison condition." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-15.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-15.png" alt="Next, add and to require our final data comparison condition." />
             </a>
      </div>
 
@@ -312,8 +312,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-16.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-16.png" alt="Now lets add data comparison condition." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-16.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-16.png" alt="Now lets add data comparison condition." />
             </a>
      </div>
 
@@ -334,8 +334,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-17.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-17.png" alt="Find our new field." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-17.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-17.png" alt="Find our new field." />
             </a>
      </div>
 
@@ -356,8 +356,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-18.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-18.png" alt="Adding the coupon code here." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-18.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-18.png" alt="Adding the coupon code here." />
             </a>
      </div>
 
@@ -378,8 +378,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-19.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-19.png" alt="Add discount action." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-19.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-19.png" alt="Add discount action." />
             </a>
      </div>
 
@@ -401,8 +401,8 @@ taxonomy:
     
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-20.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-20.png" alt="Be sure to set multiply value and change component type to discount." />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-20.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-20.png" alt="Be sure to set multiply value and change component type to discount." />
             </a>
      </div>
 
@@ -424,8 +424,8 @@ taxonomy:
 
 <div class="screenshot screenshot-caption">
     <div class="img">
-        <a href="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-21.png">
-            <img src="/user/pages/02.commerce1/01.01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-21.png" alt="Final Shopping Cart using our new coupon rule" />
+        <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-21.png">
+            <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Coupon-21.png" alt="Final Shopping Cart using our new coupon rule" />
             </a>
      </div>
 
