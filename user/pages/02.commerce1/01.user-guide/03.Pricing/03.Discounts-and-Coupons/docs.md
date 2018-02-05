@@ -12,7 +12,7 @@ taxonomy:
 <h2>Administrator's Special</h2>
 <div class="screenshot">
     <a href="#">
-        <img src="Price-Calc-step10.png" alt="Administrators see the discount" />
+        <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Calc-step10.png" alt="Administrators see the discount" />
     </a>
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
