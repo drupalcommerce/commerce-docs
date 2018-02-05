@@ -10,10 +10,7 @@ taxonomy:
 <p>Even with those limitations, it is still possible to create quite complex pricing scenarios. One Drupal Commerce site currently uses approximately 1500+ Rules!</p>
 <p><strong>Note about Coupons.</strong> Using Drupal Commerce Core, it is very possible to allow users to add coupons via line item (when someone clicks an add to cart link) or via Checkout. To do the checkout method, you can follow the same principles as outlined in our "Simple Coupon" exercise, however you will need to add the field to your Order type via code and expose it on the checkout pane using <a href="http://drupal.org/project/commerce_fieldgroup_panes">Commerce Fieldgroup Panes</a>.</p>
 <h2>Administrator's Special</h2>
-<div class="screenshot">
-    <a href="#">
-        <img src="/user/pages/02.commerce1/01.user-guide/03.Pricing/03.Discounts-and-Coupons/Price-Calc-step10.png" alt="Administrators see the discount" />
-    </a>
+
     <ul class="screenshot_breadcrumbs">
         <li class="first">Administration</li>
         <li>Store</li>
