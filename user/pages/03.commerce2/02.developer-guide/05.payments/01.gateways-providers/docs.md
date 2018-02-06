@@ -56,6 +56,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Payplug]  | This module integrates PayPlug payment as a gateway for your Drupal Commerce 2.x website. |					
 | [Paytrail] | As Suomen Verkkomaksut became Paytrail, this module will replace [commerce_suomenverkkomaksut] module.   |					
 | [PayU Money]   | Allows Drupal Commerce orders to be paid using PayUmoney payment methods.|					
+| [QuickPay]   | Allows Drupal Commerce payments through the Danish payment provider QuickPay |					
 | [Razorpay Payment Integration] | This module serve as Payment Gateway porvided by Razorpay. |					
 | [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |					
 | [Square]   | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|					
@@ -67,7 +68,7 @@ Here is a list of known payment gateways that are being supported by their maint
 
 
 
-
+[QuickPay]: https://www.drupal.org/project/commerce_quickpay_gateway
 [Braintree]: https://www.drupal.org/project/commerce_braintree
 [PayPal]: https://www.drupal.org/project/commerce_paypal
 [Stripe]: https://www.drupal.org/project/commerce_stripe
