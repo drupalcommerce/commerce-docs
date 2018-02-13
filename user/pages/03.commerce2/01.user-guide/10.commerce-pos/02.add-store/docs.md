@@ -19,3 +19,5 @@ Now click on **Physical**.
 ![And Physical store type](images/add-physical-store-type.png)
 
 Now you will see a form. Fill this form and click **Save** button in the bottom. You will see the newly created store on the page.
+
+! Note: Adding a physical store for POS is totally optional. Your POS will work with your default store as well.
