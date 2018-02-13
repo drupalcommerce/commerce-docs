@@ -1,5 +1,5 @@
 ---
-title: Add Store
+title: Add Physical type store
 taxonomy:
     category: docs
 ---
