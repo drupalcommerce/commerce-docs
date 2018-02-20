@@ -4,6 +4,9 @@ taxonomy:
     category: docs
 ---
 
+Getting started
+===============
+
 Drupal Commerce requires using Composer with Drupal. If you are new to
 Composer, or new to managing Drupal with Composer, see [Using Composer](../02.install-update/01.using-composer).
 
