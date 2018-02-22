@@ -29,7 +29,6 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Commerce MultiSafepay]   |	Multisafepay integration for Drupal Commerce.	|	[Off site] |	
 | [Commerce Pagos Net]   	|	This project integrates the PagosNet payment gateway into the Drupal Commerce payment and checkout systems.	|	[On site] |
 | [Commerce Payir]   		|	Pay.ir payment method for Drupal Commerce	|	[Off site] |
-
 | [Commerce PayTabs]   	|	This module integrates PayTabs with Drupal Commerce. This is an offsite payment gateway. It provides credit card payments only, so far.	|		[On site] |
 | [Commerce Payway]   		|	Commerce Payway is a payment module that integrates Westpac Payway API with the Drupal Commerce module.	|	[On site] |
 | [Commerce Razorpay Payment Integration]   |	 Razorpay Payment Integration |	[On site] |
@@ -43,8 +42,9 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Datatrans]| This project provides a Datatrans integration for the Drupal Commerce payment and checkout system.  | [Off site] |					
 | [EasyPaybg]| Module implements Bulgarian EasyPay as payment method for commerce module.  | [Off site] |
 | [E-Commerce Mellat]   	|	Mellat is Iranian commerce solution.	|	[Off site] |
-| [Epaybg]   | Bulgarian payments gateway http://epay.bg for Commerce module.  |	[Off site] |	
+| [Epaybg]   | Bulgarian payments gateway http://epay.bg for Commerce module.  |	[Off site] |
 | [Ingenico] | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions.  |[Off site] [On site] |
+
 | [Klarna Checkout]  | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |					
 | [Mollie]   | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce. |					
 | [Moneris]  | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x)|					
