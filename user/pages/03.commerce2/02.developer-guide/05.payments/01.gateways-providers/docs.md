@@ -8,7 +8,7 @@ Here is a list of known payment gateways that are being supported by their maint
 
 | Name| Description | Type |
 |-------------------------------------------------------------------------------------------|
-| [Alipay]   | Alipay integration for the Drupal Commerce payment and checkout system.  | [Off site] |					
+| [Alipay]   | Alipay integration for the Drupal Commerce payment and checkout system.  | [Off site] |	
 | [Authorize.Net]| Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via the AIM API using the latest Commerce release.  |	[On site] |				
 | [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. | [Off site] |					
 | [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. | [Off site] |				
@@ -16,7 +16,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | [CC Avenue]| The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.| [Off site] |					
 | [Commerce  Pasargad]  	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	| [Off site] |		
 | [Commerce  Zarinpal]  	 | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module.	| [Off site] |			
-	| [Commerce Amazon Pay] 	 | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce.	|			
+| [Commerce Amazon Pay] 	 | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce.	|			
 | [Commerce Atom Payment]   | This payment gateway will support Indian and international credit card, Debit card and internet banking system with safe and secure.	| [Off site] |		
 | [Commerce Braintree Marketplace]   |	Extends commerce_braintree module to leverage the Braintree marketplace transactions API.	| [On site] |			
 | [Commerce China Payments] |	Integrates with Alipay and WeChat Pay			| [Off site] |	
@@ -43,28 +43,27 @@ Here is a list of known payment gateways that are being supported by their maint
 | [EasyPaybg]| Module implements Bulgarian EasyPay as payment method for commerce module.  | [Off site] |
 | [E-Commerce Mellat]   	|	Mellat is Iranian commerce solution.	|	[Off site] |
 | [Epaybg]   | Bulgarian payments gateway http://epay.bg for Commerce module.  |	[Off site] |
-| [Ingenico] | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions.  |[Off site] [On site] |
-
-| [Klarna Checkout]  | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |					
-| [Mollie]   | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce. |					
-| [Moneris]  | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x)|					
-| [Omise]  | This module integrates Omise with Drupal Commerce. |					
-| [Payeezy]  | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported. |					
-| [payjp]| Pay.JP integration for the Drupal Commerce payment system.   |					
-| [Paymill]  | Commerce Paymill is Drupal Commerce module that integrates the Paymill payement gateway into your Drupal Commerce shop. | 					
-| [PayONE (sandbox)] | This module integrates the German PAYONE Payment Provider with Drupal Commerce 2.x (D8) to accept credit card payments on-site and PayPal Express payments off-line.|					
-| [PayPal]   | This project integrates PayPal into the Drupal Commerce payment and checkout systems. It currently supports off-site payment via PayPal Express Checkout (EC),  on-site credit card payment via PayPal Payments Pro. |					
-| [Payplug]  | This module integrates PayPlug payment as a gateway for your Drupal Commerce 2.x website. |					
-| [Paytrail] | As Suomen Verkkomaksut became Paytrail, this module will replace [commerce_suomenverkkomaksut] module.   |					
-| [PayU Money]   | Allows Drupal Commerce orders to be paid using PayUmoney payment methods.|					
-| [QuickPay]   | Allows Drupal Commerce payments through the Danish payment provider QuickPay |					
-| [Razorpay Payment Integration] | This module serve as Payment Gateway porvided by Razorpay. |					
-| [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |					
-| [Square]   | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|					
-| [Stripe]   | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.|					
-| [Vantiv]   | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |					
-| [WeChat Pay]   | This module provides the WeChat Pay integration  for Drupal Commerce 2 on Drupal 8.|					
-| [Worldline]| This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.|					
+| [Ingenico] | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions.  | [Off site] / [On site] |
+| [Klarna Checkout]  | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |	[Off site] |				
+| [Mollie]   | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce. | 					
+| [Moneris]  | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x)| [On site] |					
+| [Omise]  | This module integrates Omise with Drupal Commerce. | [On site] |
+| [Payeezy]  | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported. |	[Off site] / [On site] |
+| [payjp]| Pay.JP integration for the Drupal Commerce payment system.   | [On site] |
+| [Paymill]  | Commerce Paymill is Drupal Commerce module that integrates the Paymill payement gateway into your Drupal Commerce shop. | [On site] |
+| [PayONE (sandbox)] | This module integrates the German PAYONE Payment Provider with Drupal Commerce 2.x (D8) to accept credit card payments on-site and PayPal Express payments off-line.| [Off site] / [On site] |
+| [PayPal]   | This project integrates PayPal into the Drupal Commerce payment and checkout systems. It currently supports off-site payment via PayPal Express Checkout (EC),  on-site credit card payment via PayPal Payments Pro. |	[Off site] / [On site] |
+| [Payplug]  | This module integrates PayPlug payment as a gateway for your Drupal Commerce 2.x website. |	[Off site] |
+| [Paytrail] | As Suomen Verkkomaksut became Paytrail, this module will replace [commerce_suomenverkkomaksut] module.   | [Off site] |
+| [PayU Money]   | Allows Drupal Commerce orders to be paid using PayUmoney payment methods.|	[Off site] |
+| [QuickPay]   | Allows Drupal Commerce payments through the Danish payment provider QuickPay |	[Off site] |
+| [Razorpay Payment Integration] | This module serve as Payment Gateway porvided by Razorpay. |	[Off site] |
+| [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |	[Off site] |
+| [Square]   | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|	[On site] |
+| [Stripe]   | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.| [On site] |
+| [Vantiv]   | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
+| [WeChat Pay]   | This module provides the WeChat Pay integration  for Drupal Commerce 2 on Drupal 8.|	[Off site] |
+| [Worldline]| This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
 
 
 
