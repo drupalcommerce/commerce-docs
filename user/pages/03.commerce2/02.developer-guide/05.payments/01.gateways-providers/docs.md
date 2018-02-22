@@ -8,11 +8,11 @@ Here is a list of known payment gateways that are being supported by their maint
 
 | Name| Description |
 |-------------------------------------------------------------------------------------------|
-| [Alipay]   | Alipay integration for the Drupal Commerce payment and checkout system.  |					
+| [Alipay]   | Alipay integration for the Drupal Commerce payment and checkout system.  |[Off site]|					
 | [Authorize.Net]| Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via the AIM API using the latest Commerce release.  |					
-| [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. |					
-| [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |					
-| [Braintree]| This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |					
+| [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. |[Off site]|					
+| [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |[Off site]|				
+| [Braintree]| This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site]|				
 | [CC Avenue]| The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.|					
 | [Commerce  Pasargad]  	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	|			
 | [Commerce  Zarinpal]  	 | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module.	|			
