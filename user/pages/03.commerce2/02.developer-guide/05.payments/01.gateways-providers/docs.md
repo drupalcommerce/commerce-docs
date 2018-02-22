@@ -16,7 +16,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | [CC Avenue]| The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.| [Off site] |					
 | [Commerce  Pasargad]  	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	| [Off site] |		
 | [Commerce  Zarinpal]  	 | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module.	| [Off site] |			
-| [Commerce Amazon Pay] 	 | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce.	|			
+| [Commerce Amazon Pay] 	 | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce.	| [N/A] |	
 | [Commerce Atom Payment]   | This payment gateway will support Indian and international credit card, Debit card and internet banking system with safe and secure.	| [Off site] |		
 | [Commerce Braintree Marketplace]   |	Extends commerce_braintree module to leverage the Braintree marketplace transactions API.	| [On site] |			
 | [Commerce China Payments] |	Integrates with Alipay and WeChat Pay			| [Off site] |	
@@ -45,7 +45,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Epaybg]   | Bulgarian payments gateway http://epay.bg for Commerce module.  |	[Off site] |
 | [Ingenico] | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions.  | [Off site] / [On site] |
 | [Klarna Checkout]  | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |	[Off site] |				
-| [Mollie]   | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce. | 					
+| [Mollie]   | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce. | [Off site] |
 | [Moneris]  | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x)| [On site] |					
 | [Omise]  | This module integrates Omise with Drupal Commerce. | [On site] |
 | [Payeezy]  | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported. |	[Off site] / [On site] |
