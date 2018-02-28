@@ -9,7 +9,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | Name| Description | Type |
 |-------------------------------------------------------------------------------------------|
 | [Alipay]   | Alipay integration for the Drupal Commerce payment and checkout system.  | [Off site] |	
-| [Authorize.Net]| Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via the AIM API using the latest Commerce release.  |	[On site] |				
+| [Authorize.Net]| Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. |	[On site] |				
 | [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. | [Off site] |					
 | [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. | [Off site] |				
 | [Braintree]| This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site] |				
