@@ -94,7 +94,7 @@ Since `FixedAmountOffBase` takes care of all the configuration code, we just nee
 ```
 ## Slightly more advanced example
 Let's suppose that instead of discounting all matching order items to a fixed price, we only want to discount a set quantity of the order items. For example, if we wanted to make just one of the order items free, we would set quantity to 1 and the discount amount to 0. No matter what quantity of order items we have, the discount will remain fixed at the value of the order item price.
-In this example, we will need to implement our own configuration, so we extend `PromotionOfferBase` instead of `FixedAmountOffBase`. Here's what our annotation looks like:
+In this example, we will need to implement our own configuration methods, so we extend `PromotionOfferBase` instead of `FixedAmountOffBase`. Here's what our annotation looks like:
 ```
 /**
  * Discounts a set quantity of items to fixed amount.
@@ -119,7 +119,7 @@ For our configuration, we need two values, an integer `quantity` and a Price `am
 To see the configuration form build/validate/submit methods, you can view the [full source code](https://gist.github.com/lisastreeter/d7bfeff9ef948c4cd3e7a1daad1c9b63). Here's what our configuration form looks like on the Promotion edit page:
 ![Promotion offer advanced example](Promotion_example_advanced.png)
 
-It is very similar to the code provided in `FixedAmountOffBase`. We just needed to handle the quantity value in addition to the amount. Similarly, our `apply()` method closely resembles the `apply()` method in our Simple Example above and the `OrderItemFixedAmountOff` offer type. After some error checking, we calculate the adjustment amount like this:
+The code in our configuration methods is very similar to the code provided in `FixedAmountOffBase`. We just needed to handle the quantity value in addition to the amount. Similarly, our `apply()` method closely resembles the `apply()` method of our Simple Example above and the `OrderItemFixedAmountOff` offer type. After some error checking, we calculate the adjustment amount like this:
 ```
     // Calculate per-item reduction amount.
     $adjustment_amount = $unit_price->subtract($target_amount);
