@@ -7,10 +7,14 @@ taxonomy:
 >    Note: Drupal Commerce 2 includes an upgrade path stretching back to beta1.
 
 To update to the newest version of Drupal Commerce, you will need to
-update with Composer.
+update with Composer. Until [Change submodule metadata to use '*' instead of 'self.version'](https://www.drupal.org/project/project_composer/issues/2948861) is fixed instead of running
 
 ```bash
 composer update drupal/commerce --with-dependencies
+```
+Run
+```bash
+composer update --with-dependencies drupal/commerce drupal/commerce_price drupal/commerce_product drupal/commerce_order drupal/commerce_payment drupal/commerce_checkout drupal/commerce_tax drupal/commerce_cart drupal/commerce_log drupal/commerce_store drupal/commerce_promotion
 ```
 
 Please note the `--with-dependencies` option. Without this option
