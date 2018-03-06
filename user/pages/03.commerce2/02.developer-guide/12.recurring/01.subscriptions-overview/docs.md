@@ -17,7 +17,7 @@ Each subscription has a billing schedule. Billing schedules are configuration en
 A billing schedule also has a billing schedule plugin. Two billing schedule plugins are included in the commerce recurring module: Rolling and Fixed. Both rolling and fixed billing schedules have an Interval (some number of hours, days, weeks, months, or years). Fixed billing schedules with monthly intervals also have a Start day (1 - 31). Fixed billing schedules with yearly intervals also have a Start month (Jaunuary - December). 
 
 Suppose a new annual subscription is purchased on October 12th. If the first billing period should be October 12 - October 12, then you should set up a "Rolling" billing schedule. All subsequent billing periods for this subscription will also begin and end on October 12th. Suppose, on the other hand, that you want the annual subscription to start on January 1st every year. Then you should set up a "Fixed" billing schedule; the first billing period will run from October 12 to January 1st, and subsequent billing periods will start and end on January 1st. The billing schedule plugin is configured through the admin UI:
-![Fixed_annual_billing_schedule](/content/images/2018/03/Fixed_annual_billing_schedule.png)
+![Fixed_annual_billing_schedule](../images/Fixed_annual_billing_schedule.png)
 
 The primary function of a billing schedule plugin is to generate billing periods:
 `generateFirstBillingPeriod()` generates the first billing period for a subscription, given a start date.
@@ -38,7 +38,7 @@ In addition to the billing schedule plugin, the billing schedule configuration o
 
 ### Dunning
 Cron jobs are used to handle the processing of payments; the dunning settings affect how declined payments will be handled for the recurring order. How many retries? How much time between retries? What happens if we reach the maximum number of retries without success?
-![billing_schedule_dunning-1](/content/images/2018/03/billing_schedule_dunning-1.png)
+![billing_schedule_dunning-1](../images/billing_schedule_dunning.png)
 
 ## Subscription type plugin and Charges
 The Subscription type plugin serves as the bundle plugin type for the Subscription entity. Commerce recurring provides two default subscription type bundles: the product variation type and the Standalone type. The key method implemented by these plugins is the `collectCharges()` method, which returns an array of `Charge` objects for a subscription and a billing period. 
