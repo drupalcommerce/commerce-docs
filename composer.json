@@ -48,6 +48,7 @@
         "exclude": ["VERSION"]
     },
     "scripts": {
+        "server": "@php -S localhost:8080 system/router.php",
         "post-create-project-cmd": "bin/grav install",
         "test": "vendor/bin/codecept run unit",
         "test-windows": "vendor\\bin\\codecept run unit"

@@ -40,6 +40,14 @@ this dependency as well.”
 
 This also means less work for you.
 
+## How to install it
+
+Composer offers a convenient installer that you can execute directly from the commandline.
+Follow instructions on [how to install Composer here](https://www.getcomposer.org/doc/00-intro.md)
+
+
+
+
 ## How to use it
 
 ### [composer.json]
