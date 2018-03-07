@@ -43,8 +43,7 @@ This also means less work for you.
 ## How to install it
 
 Composer offers a convenient installer that you can execute directly from the commandline.
-
-[How to install Composer here]: https://getcomposer.org/doc/00-intro.md
+How to install Composer here https://getcomposer.org/doc/00-intro.md
 
 
 
