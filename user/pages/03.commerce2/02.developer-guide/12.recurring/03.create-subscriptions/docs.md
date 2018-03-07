@@ -20,7 +20,7 @@ This method also triggers the onSubscriptionCreate() method for the `Subscriptio
 ### Return to OrderSubscriber::onPlace()
 `SubscriptionStorage` returns the newly created Subscription entity to the `onPlace()` method in the OrderSubscriber class, which saves the entity: 
 
-![Create subscription](../images/01.create-subscription.png)
+![Create subscription](../images/02.create-subscription.png)
 
 There's one last step in the `onPlace()` method, but it's a *BIG* one: a call to the `ensureOrder` method provided by the `RecurringOrderManager` service. The RecurringOrderManager holds almost all of the module logic, so we'll see it used throughout the recurring commerce module. For now, we'll limit ourselves to just the `ensureOrder()` method (and the methods it calls.)
 
@@ -59,7 +59,7 @@ At this point, we have a problem with our recurring order item: the unit price m
 
 Finally, the `applyCharges()` method finishes by adding the recurring order item to the recurring order. The recurring order's total is automatically recalcuated so that it matches the unit price of the recurring order item.
 
-![Create recurring order](../images/05.create-recurring-order.png)
+![Create recurring order](../images/05.create-recurring-order-item.png)
 
 ### Return to RecurringOrderManager::ensureOrder()
 After the `applyCharges()` method finishes, `ensureOrder()` triggers the `onSubscriptionActivate()` method for the `SubscriptionType` plugin. In the default "Product variation" subscription type, this method does nothing, but you could add your own custom logic here by overriding the method in a custom SubscriptionType plugin (and creating a product variation type that uses your custom plugin.)
