@@ -7,7 +7,7 @@ https://{default}/:
       "/developer-guide/install-update/installation": { "to": "/commerce2/developer-guide/install-update/installation" }
 
       # Outline change
-      "/commerce2/getting-started": {"to": "/commerce2/developer-guide/getting-started"}
+      "/commerce2/developer-guide/getting-started": {"to": "/commerce2/getting-started"}
       "/commerce2/getting-started/using-composer": {"to": "/commerce2/developer-guide/install-update/using-composer"}
       "/commerce2/getting-started/install": {"to": "/developer-guide/install-update/installation"}
       "/commerce2/getting-started/update": {"to": "/developer-guide/install-update/updating"}
