@@ -5,7 +5,9 @@ taxonomy:
 ---
 
 ## Ordering a subscription/recurring product
-This section describes the sequence of events that occurs when a customer completes checkout for an order that includes a subscription/recurring product variation.
+This section describes the sequence of events that occurs when a customer completes checkout for an order that includes a subscription/recurring product variation. At the end of the [Getting started section](../02.getting-started/docs.md), we had a non-recurring order wth a payment method and at least one order item for a product variation that allows subscriptions. A "subscription" adjustment may have been added to the order (depending on the variation's billing schedule and timing of the order.)
+
+![Initial order](../images/01.initial-order.png)
 
 ### OrderSubscriber onPlace() method
 The Commerce recurring module includes an `OrderSubscriber` service that subscribes to the `commerce_order.place.pre_transition` event. When a customer completes checkout, the order is placed, and the order subscriber's `onPlace()` method is triggered. In this method, we first confirm that the order type is *not* recurring and that the payment method has been set. If the order is valid, we iterate through the order's items. If an order item's purchasable entity has both a "subscription type" and "billing schedule", then a new subscription is created for the item.
@@ -16,12 +18,18 @@ The subscription entity is created by the `SubscriptionStorage` class, in its `c
 This method also triggers the onSubscriptionCreate() method for the `SubscriptionType` plugin. In the default "Product variation" subscription type, this method does nothing, but you could add your own custom logic here by overriding the method in a custom SubscriptionType plugin (and creating a product variation type that uses your custom plugin.)
 
 ### Return to OrderSubscriber::onPlace()
-`SubscriptionStorage` returns the newly created Subscription entity to the `onPlace()` method in the OrderSubscriber class, which saves the entity. There's one last step in the `onPlace()` method, but it's a *BIG* one: a call to the `ensureOrder` method provided by the `RecurringOrderManager` service. The RecurringOrderManager holds almost all of the module logic, so we'll see it used throughout the recurring commerce module. For now, we'll limit ourselves to just the `ensureOrder()` method (and the methods it calls.)
+`SubscriptionStorage` returns the newly created Subscription entity to the `onPlace()` method in the OrderSubscriber class, which saves the entity: 
+
+![Create subscription](../images/01.create-subscription.png)
+
+There's one last step in the `onPlace()` method, but it's a *BIG* one: a call to the `ensureOrder` method provided by the `RecurringOrderManager` service. The RecurringOrderManager holds almost all of the module logic, so we'll see it used throughout the recurring commerce module. For now, we'll limit ourselves to just the `ensureOrder()` method (and the methods it calls.)
 
 ### RecurringOrderManager ensureOrder() method
 The Subscription entity is passed to the `ensureOrder` method as its only argument. First, the subscription's billing schedule plugin is used to generate the first billing period. (For more information on how this happens, review [Subscriptions overview](../01.subscriptions-overview/docs.md) as well as the `Fixed` and `Rolling` billing schedule plugin code.) 
 
 Next, RecurringOrderManager's `createOrder()` method is used to create a new recurring-type order entity. Its store, customer, billing profile, payment method, payment gateway, and billing schedule fields are set to values provided by the subscription entity and its payment method. The order's billing period is set to the first billing period.
+
+![Create recurring order](../images/03.create-recurring-order.png)
 
 After the billing period and recurring order are created, the RecurringOrderManager's `applyCharges()` method is called. There's a lot of logic in this method, but to keep things simple here, we'll just look at what happens for our *newly created* recurring order.
 
@@ -42,6 +50,8 @@ Otherwise, the billing schedule is POSTPAID, and we're charging for the current/
 
 Once the base billing period is determined, a new `Charge` is created using that billing period and subscription entity field values.
 
+![Create charge](../images/04.create-charge.png)
+
 ### Return to RecurringOrderManager::applyCharges()
 The subscription type plugin returned an array containing just a single `Charge` object that is used for the purchased entity, title, quantity, billing period, and unit price fields values of the recurring-type order item. Also, the `subscription` field of the recurring order item is set to the `id` of the subscription entity.
 
@@ -49,10 +59,14 @@ At this point, we have a problem with our recurring order item: the unit price m
 
 Finally, the `applyCharges()` method finishes by adding the recurring order item to the recurring order. The recurring order's total is automatically recalcuated so that it matches the unit price of the recurring order item.
 
+![Create recurring order](../images/05.create-recurring-order.png)
+
 ### Return to RecurringOrderManager::ensureOrder()
 After the `applyCharges()` method finishes, `ensureOrder()` triggers the `onSubscriptionActivate()` method for the `SubscriptionType` plugin. In the default "Product variation" subscription type, this method does nothing, but you could add your own custom logic here by overriding the method in a custom SubscriptionType plugin (and creating a product variation type that uses your custom plugin.)
 
 Next, `ensureOrder()` finishes up by saving the recurring order item and the recurring order. Then the recurring order is added to the `Subscription` entity, and the Subscription is saved. The recurring order is returned to the OrderSubscriber's `onPlace()` method and we're done!
+
+![Finished create subscription](../images/06.finish-create-subscription.png)
 
 ### Summary
 Here's an overview of "who did what" when the OrderSubscriber's `onPlace()` method was triggered by the `commerce_order.place.pre_transition` event:
