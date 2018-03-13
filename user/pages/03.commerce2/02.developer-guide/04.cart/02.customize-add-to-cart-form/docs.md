@@ -71,3 +71,16 @@ In this case the file has been overridden with <strong>false.</strong>
 <i>Fig 3 - illustrates how you can turn Shopping Cart into a fully custom shopping cart </i>
 
 <h2>Why we don't merge carts</h2>
+
+Drupal supports both anonymous and authenticated shopping carts and checkout. Authenticated users can preserve items in their shopping carts so they would see the same items when logging in from multiple devices or across multiple sessions.
+
+This resulted in a small conflict that we had to figure out how to deal with: users could have items in their authenticated shopping carts but browse the site anonymously, create a new shopping cart, and then log in. What should happen to the items in their authenticated carts vs. the items in their anonymous carts?
+
+There are three basic resolutions: combine the shopping carts together so the user still has a single shopping cart, remove the items from the previous session and leave it up to the customer to find them again if desired, or retain the old shopping cart but ignore it until the customer has completed checkout for the current cart.
+
+In Drupal Commerce we changed course to retain the old cart but, from the customer's point of view, treat that anonymously created cart as the current cart after login.
+
+There is an appropriate hook (hook_commerce_cart_order_convert()) so developers could alter this behavior on a site-by-site basis as need be.
+Allows modules to perform additional processing to convert an anonymous shopping cart order to an authenticated cart.
+
+
