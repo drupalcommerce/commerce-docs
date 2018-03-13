@@ -6,7 +6,7 @@ taxonomy:
 
 ## Setting up subscriptions: First steps
 ### Step 1 - Create/enable a payment method
-Each subscription has a Payment method, so you'll need to set up at least one enabled payment gateway that can be used by a customer to create a payment method.
+Each subscription has a Payment method, so you'll need to set up at least one enabled payment gateway that can be used by a customer to create a payment method for subscriptions. Note that the payment gateway must support stored payment methods, e.g. card on file, continuous authorizations, etc. Please refer to [the list of known payment gateways that are being supported by their maintainers](https://docs.drupalcommerce.org/commerce2/developer-guide/payments/gateways-providers) to identify "onsite" gateways that can be used.
 
 ### Step 2 - Create a billing schedule.
 Billing schedules are configuration entities that can be created through the admin UI: `Commerce >> Configuration >> Payment`
