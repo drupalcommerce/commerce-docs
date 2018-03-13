@@ -70,3 +70,4 @@ In this case the file has been overridden with <strong>false.</strong>
    ![Profile Default Shipping Cart Block](fitness.jpg)  
 <i>Fig 3 - illustrates how you can turn Shopping Cart into a fully custom shopping cart </i>
 
+<h2>Why we don't merge carts</h2>
