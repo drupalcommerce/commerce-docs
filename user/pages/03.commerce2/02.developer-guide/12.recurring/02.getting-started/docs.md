@@ -15,8 +15,8 @@ See [Subscriptions overview](../01.subscriptions-overview/docs.md) for additiona
 ### Step 3 - Enable subscriptions for a product variation type
 While it is possible to [create standalone subscriptions](../05.create-standalone-subscriptions/docs.md), the more typical case is to create a product variation that will trigger the subscription. Unless a custom subscription type plugin has been created, the only option you'll see for the variation's subscription type is, "Product variation."
 
-### Step 4 - Create a new product variation
-Create a new product variation for the type you added in step 3. Select the billing schedule you added in step 2 and the "product variation" subscription type. You should now be able to place an order for a subscription by adding this new product variation to your cart.
+### Step 4 - Create a new product and variation
+Create a new product with a variation of the type you added in step 3. Select the billing schedule you added in step 2 and the "product variation" subscription type. You should now be able to place an order for a subscription by adding this new product to your cart.
 
 
 ## Adding a subscription product variation to the cart
