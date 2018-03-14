@@ -5,7 +5,7 @@ taxonomy:
 ---
 
 ## Ordering a subscription/recurring product
-This section describes the sequence of events that occurs when a customer completes checkout for an order that includes a subscription/recurring product variation. At the end of the [Getting started section](../02.getting-started/docs.md), we had a non-recurring order wth a payment method and at least one order item for a product variation that allows subscriptions. A "subscription" adjustment may have been added to the order (depending on the variation's billing schedule and timing of the order.)
+This section describes the sequence of events that occurs when a customer completes checkout for an order that includes a subscription/recurring product variation. At the end of the [Getting started section](../02.getting-started/docs.md), we had a non-recurring order with a payment method and at least one order item for a product variation that allows subscriptions. A "subscription" adjustment may have been added to the order (depending on the variation's billing schedule and timing of the order).
 
 ![Initial order](../images/01.initial-order.png)
 
