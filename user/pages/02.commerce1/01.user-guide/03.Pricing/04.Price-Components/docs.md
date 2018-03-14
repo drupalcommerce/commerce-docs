@@ -29,7 +29,7 @@ hook_commerce_price_component_type_info(). Core price component types include:</
 order can be found in its order total price field</li>
 </ul>
 <h2>Enable Price Components for Display</h2>
-<p>In order to show you what price components look like, we've picked up the Price Calculations example towards the end. To see the whole exercise, <a href="Price-Calc.html">check it out</a>.</p>
+<p>In order to show you what price components look like, we've picked up the Sell Price Calculations example towards the end. To see the whole exercise, <a href="sell-price-calculation">check it out</a>.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
         <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step8.png">
@@ -89,7 +89,7 @@ order can be found in its order total price field</li>
     </ul>
 </div>
 <h2>Enable Price Components via Rules</h2>
-<p>In order to show you what price components using rules look like, we've picked up the Price Calculations example in the very middle. To see the whole exercise, <a href="Price-Calc.html">check it out</a>.</p>
+<p>In order to show you what price components using rules look like, we've picked up the Sell Price Calculations example in the very middle. To see the whole exercise, <a href="/sell-price-calculation">check it out</a>.</p>
 <div class="screenshot screenshot-caption">
     <div class="img">
         <a href="/user/pages/02.commerce1/01.user-guide/03.Pricing/04.Price-Components/Price-Calc-step6.png">
