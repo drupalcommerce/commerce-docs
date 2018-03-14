@@ -24,6 +24,8 @@ The recurring's order BillingSchedule (a config entity) is used to get the Retry
 
 If the maximum number of retries has been reached, the recurring order's state is changed to 'Failed' by applying the 'mark_failed' workflow transition. The Billing Schedule's Dunning settings control whether the recurring order's subscription(s) should remain active or should be canceled. If the subscription(s) should be canceled, this is also handled by the `RecurringOrderClose` plugin. The state of each subscription will be set to 'Canceled', and the subscriptions will be saved. The Job will not be run again.
 
+If the customer wishes to reactivate the subscription, he will have to go through the checkout process again to begin a new subscription. (A process to reactivate a subscription by adding a new payment method does not yet exist.)
+
 The `handleDecline()` method also dispatches a `PaymentDeclinedEvent` (that could be used to send a dunning email) and saves the recurring order.
 
 ## Renewing a recurring order
