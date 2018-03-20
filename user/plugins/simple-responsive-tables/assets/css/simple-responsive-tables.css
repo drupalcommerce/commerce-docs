@@ -1,0 +1,30 @@
+.simple-responsive-table {
+  position: relative;
+  overflow: hidden;
+}
+
+.simple-responsive-table > div {
+  overflow-x: auto;
+}
+
+.simple-responsive-table.is-scrollable-right:after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 50px;
+  height: 100%;
+  border: 10px 0 0 10px / 50% 0 0 50%;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+  content: "";
+}
+
+.simple-responsive-table.is-scrollable-left:before {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px;
+  height: 100%;
+  border: 10px 0 0 10px / 50% 0 0 50%;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.25);
+  content: "";
+}
