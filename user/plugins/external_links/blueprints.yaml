@@ -1,15 +1,15 @@
-name: "External Links"
-version: "1.5.3"
-description: "This plugin adds small icons to external and mailto links, informing users the link will take them to a new site or open their email client."
-icon: "external-link"
+name: 'External Links'
+version: '1.6.0'
+description: 'This plugin adds small icons to external and mailto links, informing users the link will take them to a new site or open their email client.'
+icon: 'external-link'
 author:
-  name: "Sommerregen"
-  email: "sommerregen@benjamin-regler.de"
-homepage: "https://github.com/sommerregen/grav-plugin-external-links"
-keywords: ["external", "links", "filter", "formatter", "plugin"]
-docs: "https://github.com/sommerregen/grav-plugin-external-links/blob/master/README.md"
-bugs: "https://github.com/sommerregen/grav-plugin-external-links/issues"
-license: "MIT/GPL"
+  name: 'Sommerregen'
+  email: 'sommerregen@benjamin-regler.de'
+homepage: 'https://github.com/sommerregen/grav-plugin-external-links'
+keywords: ['external', 'links', 'filter', 'formatter', 'plugin']
+docs: 'https://github.com/sommerregen/grav-plugin-external-links/blob/master/README.md'
+bugs: 'https://github.com/sommerregen/grav-plugin-external-links/issues'
+license: 'MIT/GPL'
 
 form:
   validation: strict
@@ -81,6 +81,17 @@ form:
                   validate:
                     type: bool
 
+                links.redirects:
+                  type: toggle
+                  label: PLUGINS.EXTERNAL_LINKS.LINKS.REDIRECTS
+                  help: PLUGINS.EXTERNAL_LINKS.LINKS.REDIRECTS_HELP
+                  default: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
                 links.schemes:
                   type: selectize
                   size: large
@@ -108,7 +119,7 @@ form:
                   size: large
                   label: PLUGINS.EXTERNAL_LINKS.EXCLUDE.DOMAINS
                   help: PLUGINS.EXTERNAL_LINKS.EXCLUDE.DOMAINS_HELP
-                  placeholder: "localhost/*, img.domain.com/*"
+                  placeholder: 'localhost/*, img.domain.com/*'
                   validate:
                     type: commalist
 

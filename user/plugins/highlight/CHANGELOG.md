@@ -1,8 +1,17 @@
-# v1.3.2
-## 05/xx/2017
+# v1.4.0
+## 12/05/2017
 
 1. [](#new)
-    * Added option for line numbers
+    * Updated `highlight.js` to version 9.12.0 (bariscelik) [#16](https://github.com/getgrav/grav-plugin-highlight/pull/16)
+    * Updated `line-numbers.js` to version 2.1.0 (bariscelik) [#16](https://github.com/getgrav/grav-plugin-highlight/pull/16)
+    * Added line numbers to blueprints for admin plugin control (bariscelik) [#16](https://github.com/getgrav/grav-plugin-highlight/pull/16)
+    * Removed JQuery dependency (bariscelik) [#16](https://github.com/getgrav/grav-plugin-highlight/pull/16)
+
+# v1.3.2
+## 10/22/2017
+
+1. [](#new)
+    * Added option for line numbers [#12](https://github.com/getgrav/grav-plugin-highlight/pull/12)
 
 # v1.3.1
 ## 07/14/2016

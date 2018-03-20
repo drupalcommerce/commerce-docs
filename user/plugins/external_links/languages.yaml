@@ -29,6 +29,9 @@ de:
         WWW: "Verlinkung (WWW)"
         WWW_HELP: "Verlinke auch Links, die mit 'www.' beginnen als extern"
 
+        REDIRECTS: "Folge Seiten-Weiterleitungen"
+        REDIRECTS_HELP: "Links zu Seiten, die zu einer externen URL weiterleiten werden auch als extern markiert"
+
         SCHEMES: "Erlaubte Protokolle"
         SCHEMES_HELP: "Liste von erlaubten Protokollen"
 
@@ -80,6 +83,9 @@ en:
         WWW: "Link WWW"
         WWW_HELP: "Automatically link any hostname that starts with 'www.' as external"
 
+        REDIRECTS: "Follow Page redirects"
+        REDIRECTS_HELP: "Also mark links as external, that link to pages that redirect to an external URL"
+
         SCHEMES: "Allowed schemes"
         SCHEMES_HELP: "List of allowed schemes"
 
@@ -106,10 +112,10 @@ fr:
     EXTERNAL_LINKS:
       PLUGIN_NAME: "Liens externes"
       PLUGIN_STATUS: "Statut du plugin"
-      STATUS_HELP: "Set to false to disable this plugin completely."
+      STATUS_HELP: "Régler sur false pour désactiver complètement le plugin."
 
       BUILTIN_CSS: "Utiliser les CSS intégrés"
-      WEIGHT: "Ordre d'exécution"
+      WEIGHT: "Ordre d’exécution"
 
       SETTINGS: "Configuration"
       CONTENT: "Contenu"
@@ -130,6 +136,9 @@ fr:
 
         WWW: "Liens WWW"
         WWW_HELP: "Reconnaître automatiquement tout lien commencant par 'www.' comme étant un lien externe."
+
+        REDIRECTS: "Follow Page redirects"
+        REDIRECTS_HELP: "Also mark links as external, that link to pages that redirect to an external URL"
 
         SCHEMES: "Schémas autorisés"
         SCHEMES_HELP: "Liste des schémas autorisés"
@@ -181,6 +190,9 @@ ru:
 
         WWW: "Ссылка WWW"
         WWW_HELP: "Автоматически связывать любое имя хоста, которое начинается с 'www'. как внешние"
+
+        REDIRECTS: "Follow Page redirects"
+        REDIRECTS_HELP: "Also mark links as external, that link to pages that redirect to an external URL"
 
         SCHEMES: "Допустимые схемы"
         SCHEMES_HELP: "Список допустимых схем"
