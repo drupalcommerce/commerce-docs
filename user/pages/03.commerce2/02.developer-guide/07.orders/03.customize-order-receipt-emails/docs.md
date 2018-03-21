@@ -16,8 +16,22 @@ The order receipt email, which customers receive, is controlled through the `com
 
 The default `commerce-order-receipt.html.twig` can be found in the `commerce_order` module. 
 
-The email can be customized by overriding the Twig template into your theme.
+The email can be customized by overriding the Twig template into your theme or in your custom module.
 
-You must also make sure your Drupal site is sending emails in HTML properly. Out of the box, Drupal does not do this. See [Sending HTML emails](../../03.core/02.html-emails) on how to ensure emails are being formatted properly, and that your theme's template is being used t render the emails.
+```php
+/**
+ * Implements hook_theme().
+ */
+function my_module_theme($existing, $type, $theme, $path) {
+  return [
+    'commerce_order_receipt' => [
+      'template' => 'my-module-order-receipt',
+      'base hook' => 'commerce_order_receipt',
+    ],
+  ];
+}
+```
+
+You must also make sure your Drupal site is sending emails in HTML properly. Out of the box, Drupal does not do this. See [Sending HTML emails](../../03.core/02.html-emails) on how to ensure emails are being formatted properly, and that your theme's template is being used to render the emails.
 
 ! If your Drupal site is not using your theme to render emails, it may not pick up your overridden template.
