@@ -16,11 +16,11 @@ The order receipt email, which customers receive, is controlled through the `com
 
 The default `commerce-order-receipt.html.twig` can be found in the `commerce_order` module. 
 
-The email can be customized by overriding the Twig template into your theme.
+The email can be customized by overriding the Twig template in your theme just as you would any other template (see [Drupal's Twig Template docs](https://www.drupal.org/docs/8/theming/twig/working-with-twig-templates)).
  
 Or in your custom module:
 
-Copy `commerce-order-receipt.html.twig` to your modules `templates/` directory and rename to `my-module-order-receipt`.
+Copy `commerce-order-receipt.html.twig` to  `my_module/templates/my-module-order-receipt`.
 
 Then register it in `my_module.module`.
 
