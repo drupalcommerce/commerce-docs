@@ -1,5 +1,5 @@
 home:
-  alias: '/commerce2'
+  alias: '/introduction'
 
 pages:
   theme: commerce
