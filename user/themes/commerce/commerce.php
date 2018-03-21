@@ -39,6 +39,7 @@ class Commerce extends Theme
     $summary = trim(strip_tags($page->summary(null, true)));
 
     $metadata_values = [
+      'description' => $summary,
       'og:sitename' => $config->get('site.title'),
       'og:title' => $page->title(),
       'og:description' => $summary,
