@@ -37,16 +37,22 @@ class Commerce extends Theme
     $config = $this->mergeConfig($page);
     $metadata = $page->metadata();
     $summary = trim(strip_tags($page->summary(null, true)));
+    $title = $page->title();
 
     $metadata_values = [
-      'description' => $summary,
+      'description' => trim(strip_tags($page->summary(155, true))),
+      'article:publisher' => 'https://drupalcommerce.org/',
+      'article:section' => $page->parent()->title(),
       'og:sitename' => $config->get('site.title'),
-      'og:title' => $page->title(),
+      'og:title' => $title,
       'og:description' => $summary,
+      'og:type' => 'article',
+      'og:url' => $page->url(true, true),
       'twitter:card' => 'summary',
-      'twitter:title' => $page->title(),
+      'twitter:title' => $title,
       'twitter:description' => $summary,
       'twitter:site' => '@drupalcommerce',
+      'twitter:author' => '@drupalcommerce',
       'twitter:label1' => 'Filed under',
       'twitter:data1' => $page->parent()->title(),
     ];
@@ -56,6 +62,11 @@ class Commerce extends Theme
       $metadata[$property]['content'] = $value;
     }
 
+    // Google
+    $metadata['itemprop_name']['itemprop'] = 'name';
+    $metadata['itemprop_name']['content'] = $title;
+    $metadata['itemprop_description']['itemprop'] = 'description';
+    $metadata['itemprop_description']['content'] = $summary;
     $page->metadata($metadata);
   }
 }
