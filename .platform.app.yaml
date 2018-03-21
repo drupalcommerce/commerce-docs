@@ -15,3 +15,7 @@ mounts:
     '/user/data': 'shared:files/user-data'
     '/backup': 'shared:files/backup'
     '/tmp': 'shared:files/tmp'
+hooks:
+  deploy: |
+    set -e
+    bin/plugin tntsearch index
