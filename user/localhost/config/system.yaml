@@ -3,8 +3,8 @@ assets:
   js_pipeline: false
 
 twig:
-  cache: true
+  cache: false
   debug: true
 
 debugger:
-  enabled: false
+  enabled: true
