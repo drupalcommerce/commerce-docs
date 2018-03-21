@@ -16,7 +16,13 @@ The order receipt email, which customers receive, is controlled through the `com
 
 The default `commerce-order-receipt.html.twig` can be found in the `commerce_order` module. 
 
-The email can be customized by overriding the Twig template into your theme or in your custom module.
+The email can be customized by overriding the Twig template into your theme.
+ 
+Or in your custom module:
+
+Copy `commerce-order-receipt.html.twig` to your modules `templates/` directory and rename to `my-module-order-receipt`.
+
+Then register it in `my_module.module`.
 
 ```php
 /**
