@@ -43,101 +43,109 @@ class ExternalLinks
     {
         // Get all <a> tags and process them
         $content = preg_replace_callback('~<a[^>]*>.*?</a>~i',
-          function($match) use ($options, $page) {
-              // Load PHP built-in DOMDocument class
-              if (($dom = $this->loadDOMDocument($match[0])) === null) {
-                  return $match[0];
-              }
-
-              $a = $dom->getElementsByTagName('a')->item(0);
-
-              // Process links with non-empty href attribute
-              $href = $a->getAttribute('href');
-              if (strlen($href) == 0) {
-                  return $match[0];
-              }
-
-              // Get the class of the <a> element
-              $class = $a->hasAttribute('class') ? $a->getAttribute('class') : '';
-              $classes = array_filter(explode(' ', $class));
-
-              // Exclude links with specific class from processing
-              $exclude = $options->get('exclude.classes', null);
-              if ($exclude && !!array_intersect($exclude, $classes)) {
-                  return $match[0];
-              }
-
-              // Get domains to be seen as internal
-              $domains = $options->get('exclude.domains', []);
-
-              // This is a mailto link.
-              if (strpos($href, 'mailto:') === 0) {
-                  $classes[] = 'mailto';
-              }
-
-              // The link is external
-              elseif ($url = $this->isExternalUrl($href, $domains, $page)) {
-                  // Add external class
-                  $classes[] = 'external-link';
-                  $a->setAttribute('href', $url);
-
-                  // Add target="_blank"
-                  $target = $options->get('target');
-                  if ($target) {
-                      $a->setAttribute('target', $target);
-                  }
-
-                  // Add no-follow.
-                  $nofollow = $options->get('no_follow');
-                  if ($nofollow) {
-                      $rel = array_filter(explode(' ', $a->getAttribute('rel')));
-                      if (!in_array('nofollow', $rel)) {
-                          $rel[] = 'nofollow';
-                          $a->setAttribute('rel', implode(' ', $rel));
-                      }
-                  }
-
-                // Add image class to <a> if it has at least one <img> child element
-                $imgs = $a->getElementsByTagName('img');
-                if ($imgs->length > 1) {
-                    // Add "images" class to <a> element, if it has multiple child images
-                    $classes[] = 'images';
-                } elseif ($imgs->length == 1) {
-                    $imgNode = $imgs->item(0);
-
-                    // Get image size
-                    list($width, $height) = $this->getImageSize($imgNode);
-
-                    // Determine maximum dimension of image size
-                    $size = max($width, $height);
-
-                    // Depending on size determine image type
-                    $classes[] = ((0 < $size) && ($size <= 32)) ? 'icon' : 'image';
-                } else {
-                    // Add "no-image" class to <a> element, if it has no child images
-                    $classes[] = 'no-image';
+            function($match) use ($options, $page) {
+                // Load PHP built-in DOMDocument class
+                if (($dom = $this->loadDOMDocument($match[0])) === null) {
+                    return $match[0];
                 }
 
-                // Add title (aka alert text)
-                if ($options->get('title')) {
-                    $language = Grav::instance()['language'];
-                    $message = $language->translate(['PLUGINS.EXTERNAL_LINKS.TITLE_MESSAGE']);
+                $a = $dom->getElementsByTagName('a')->item(0);
 
-                    // Set default title to link else, set title as data attribute
-                    $key = $a->hasAttribute('title') ? 'data-title' : 'title';
-                    $a->setAttribute($key, $message);
+                // Process links with non-empty href attribute
+                $href = $a->getAttribute('href');
+                if (strlen($href) == 0) {
+                    return $match[0];
                 }
-            }
 
-            // Set class attribute
-            if (count($classes) && ($options->get('mode') === 'active')) {
-                $a->setAttribute('class', implode(' ', $classes));
-            }
+                // Get the class of the <a> element
+                $class = $a->hasAttribute('class') ? $a->getAttribute('class') : '';
+                $classes = array_filter(explode(' ', $class));
 
-            // Save Dom document back to HTML representation
-            $html = $this->saveDOMDocument($dom);
-            return $html;
-        }, $content);
+                // Exclude links with specific class from processing
+                $exclude = $options->get('exclude.classes', null);
+                if ($exclude && !!array_intersect($exclude, $classes)) {
+                    return $match[0];
+                }
+
+                // Get domains to be seen as internal
+                $domains = $options->get('exclude.domains', []);
+
+                // This is a mailto link.
+                if (strpos($href, 'mailto:') === 0) {
+                    $classes[] = 'mailto';
+                }
+
+                // The link is external
+                elseif ($url = $this->isExternalUrl($href, $domains, $page)) {
+                    // Add external class
+                    $classes[] = 'external-link';
+                    $a->setAttribute('href', $url);
+
+                    // Add target="_blank"
+                    $target = $options->get('target');
+                    if ($target) {
+                        $a->setAttribute('target', $target);
+                    }
+
+                    // Add no-follow.
+                    $nofollow = $options->get('no_follow');
+                    if ($nofollow) {
+                        $rel = array_filter(explode(' ', $a->getAttribute('rel')));
+                        if (!in_array('nofollow', $rel)) {
+                            $rel[] = 'nofollow';
+                            $a->setAttribute('rel', implode(' ', $rel));
+                        }
+                    }
+
+                    // Set rel="noopener noreferrer"
+                    $rel = $a->hasAttribute('rel') ? $a->getAttribute('rel') : '';
+                    $rel = array_filter(explode(' ', $rel));
+
+                    $rel[] = 'noopener';
+                    $rel[] = 'noreferrer';
+                    $a->setAttribute('rel', implode(' ', array_unique($rel)));
+
+                    // Add image class to <a> if it has at least one <img> child element
+                    $imgs = $a->getElementsByTagName('img');
+                    if ($imgs->length > 1) {
+                        // Add "images" class to <a> element, if it has multiple child images
+                        $classes[] = 'images';
+                    } elseif ($imgs->length == 1) {
+                        $imgNode = $imgs->item(0);
+
+                        // Get image size
+                        list($width, $height) = $this->getImageSize($imgNode);
+
+                        // Determine maximum dimension of image size
+                        $size = max($width, $height);
+
+                        // Depending on size determine image type
+                        $classes[] = ((0 < $size) && ($size <= 32)) ? 'icon' : 'image';
+                    } else {
+                        // Add "no-image" class to <a> element, if it has no child images
+                        $classes[] = 'no-image';
+                    }
+
+                    // Add title (aka alert text)
+                    if ($options->get('title')) {
+                        $language = Grav::instance()['language'];
+                        $message = $language->translate(['PLUGINS.EXTERNAL_LINKS.TITLE_MESSAGE']);
+
+                        // Set default title to link else, set title as data attribute
+                        $key = $a->hasAttribute('title') ? 'data-title' : 'title';
+                        $a->setAttribute($key, $message);
+                    }
+                }
+
+                // Set class attribute
+                if (count($classes) && ($options->get('mode') === 'active')) {
+                    $a->setAttribute('class', implode(' ', $classes));
+                }
+
+                // Save Dom document back to HTML representation
+                $html = $this->saveDOMDocument($dom);
+                return $html;
+            }, $content);
 
         // Write content back to page
         return $content;
@@ -200,18 +208,26 @@ class ExternalLinks
                     // The protocol turns out be an allowed protocol
                     $external = $url;
                 }
-            } elseif ($config->get('plugins.external_links.links.www')) {
-                // Remove possible path duplicate
-                $route = Grav::instance()['base_url'] . $page->route();
-                $href = Utils::startsWith($url, $route)
-                  ? ltrim(mb_substr($url, mb_strlen($route)), '/')
-                  : $url;
+            }  else {
+                if ($config->get('plugins.external_links.links.www')) {
+                    // Remove possible path duplicate
+                    $route = Grav::instance()['base_url'] . $page->route();
+                    $href = Utils::startsWith($url, $route)
+                        ? ltrim(mb_substr($url, mb_strlen($route)), '/')
+                        : $url;
 
-                // We found an url without protocol, but with starting 'www' (sub-)domain
-                if (Utils::startsWith($url, 'www.')) {
-                    $external = 'http://' . $url;
-                } elseif (Utils::startsWith($href, 'www.')) {
-                    $external = 'http://' . $href;
+                    // We found an url without protocol, but with starting 'www' (sub-)domain
+                    if (Utils::startsWith($url, 'www.')) {
+                        $external = 'http://' . $url;
+                    } elseif (Utils::startsWith($href, 'www.')) {
+                        $external = 'http://' . $href;
+                    }
+                }
+                if ($config->get('plugins.external_links.links.redirects')) {
+                    $targetPage = Grav::instance()['pages']->find($url);
+                    if ($targetPage && $targetPage->redirect()) {
+                        $external = $this->isExternalUrl($targetPage->redirect(), $domains, $page);
+                    }
                 }
             }
         }

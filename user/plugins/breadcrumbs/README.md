@@ -58,7 +58,7 @@ This command will check your Grav install to see if your Breadcrumbs plugin is d
 Manually updating Breadcrumbs is pretty simple. Here is what you will need to do to get this done:
 
 * Delete the `your/site/user/plugins/breadcrumbs` directory.
-* Downalod the new version of the Breadcrumbs plugin from either [GitHub](https://github.com/getgrav/grav-plugin-breadcrumbs) or [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
+* Download the new version of the Breadcrumbs plugin from either [GitHub](https://github.com/getgrav/grav-plugin-breadcrumbs) or [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
 * Unzip the zip file in `your/site/user/plugins` and rename the resulting folder to `breadcrumbs`.
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
@@ -73,6 +73,7 @@ enabled: true
 show_all: true
 built_in_css: true
 include_home: true
+include_current: true
 icon_home: ''
 icon_divider_classes: 'fa fa-angle-right'
 link_trailing: false
