@@ -64,6 +64,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Vantiv]   | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
 | [WeChat Pay]   | This module provides the WeChat Pay integration  for Drupal Commerce 2 on Drupal 8.|	[Off site] |
 | [Worldline]| This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
+| [Commerce wayforpay gateway]   | This module provides the Wayforpay integration  for Drupal Commerce 2 on Drupal 8.| [Off site] |
 
 
 
@@ -127,3 +128,4 @@ Here is a list of known payment gateways that are being supported by their maint
 [Commerce Tpay]: https://www.drupal.org/project/commerce_tpay
 [Commerce USAePay]: https://www.drupal.org/project/commerce_usaepay
 [E-Commerce Mellat]: https://www.drupal.org/project/mellat_gateway
+[Commerce wayforpay gateway]: https://www.drupal.org/project/commerce_wayforpay
