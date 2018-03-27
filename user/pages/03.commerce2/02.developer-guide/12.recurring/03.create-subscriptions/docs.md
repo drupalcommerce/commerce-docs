@@ -5,9 +5,14 @@ taxonomy:
 ---
 
 ## Ordering a subscription/recurring product
-This section describes the sequence of events that occurs when a customer completes checkout for an order that includes a subscription/recurring product variation. At the end of the [Getting started section](../02.getting-started/docs.md), we had a non-recurring order with a payment method and at least one order item for a product variation that allows subscriptions. A "subscription" adjustment may have been added to the order (depending on the variation's billing schedule and timing of the order).
+This section describes the sequence of events that occurs when a customer completes checkout for an order that includes a subscription/recurring product variation. At the end of the [Getting started section](../02.getting-started/docs.md), we had an initial order with a payment method and at least one order item for a product variation that allows subscriptions. A "subscription" adjustment may have been added to the order (depending on the variation's billing schedule and timing of the order).
 
 ![Initial order](../images/01.initial-order.png)
+
+#### The Initial order vs. Recurring orders
+When a new subscription order is placed, it may be tempting to think, "oh, I've just created a new order with a subscription item. This must be a 'recurring' order with a 'recurring' order item." But that's not the case. A subscription's "Initial order" is never a recurring-type order. It does, however, have at least one order item for a product variation that allows subscriptions. And this product variation is set as the Subscription's "Purchased entity".
+
+"Recurring" orders, on the other hand, are created for each billing period of a subscription. And the recurring order's items represent the charges applied to the subscription during that billing period. You will never directly create or edit either a recurring order or recurring order items through the UI. These entities are managed internally, as part of the overall subscription system. (Note: as of 3/13/2018, there is [an open issue (#2925817)](https://www.drupal.org/project/commerce_recurring/issues/2925817) for disallowing the creation/editing of recurring orders.)
 
 ### OrderSubscriber onPlace() method
 The Commerce Recurring module includes an `OrderSubscriber` service that subscribes to the `commerce_order.place.pre_transition` event. When a customer completes checkout, the order is placed, and the order subscriber's `onPlace()` method is triggered. In this method, we first confirm that the order type is *not* recurring and that the payment method has been set. If the order is valid, we iterate through the order's items. If an order item's purchasable entity has both a "subscription type" and "billing schedule", then a new subscription is created for the item.
@@ -20,12 +25,12 @@ This method also triggers the onSubscriptionCreate() method for the `Subscriptio
 ### Return to OrderSubscriber::onPlace()
 `SubscriptionStorage` returns the newly created Subscription entity to the `onPlace()` method in the OrderSubscriber class, which saves the entity: 
 
-![Create subscription](../images/02.create-subscription.png)
+![Create subscription](../images/02.create-subscription.png#billing-schedule-plugin)
 
 There's one last step in the `onPlace()` method, but it's a *BIG* one: a call to the `ensureOrder` method provided by the `RecurringOrderManager` service. The RecurringOrderManager holds almost all of the module logic, so we'll see it used throughout the Commerce Recurring module. For now, we'll limit ourselves to just the `ensureOrder()` method (and the methods it calls.)
 
 ### RecurringOrderManager ensureOrder() method
-The Subscription entity is passed to the `ensureOrder` method as its only argument. First, the subscription's billing schedule plugin is used to generate the first billing period. (For more information on how this happens, review [Subscriptions overview](../01.subscriptions-overview/docs.md) as well as the `Fixed` and `Rolling` billing schedule plugin code.) 
+The Subscription entity is passed to the `ensureOrder` method as its only argument. First, the subscription's billing schedule plugin is used to generate the first billing period. (For more information on how this happens, review [Subscriptions overview](../01.subscriptions-overview/docs.md#billing-schedule-plugin) as well as the `Fixed` and `Rolling` billing schedule plugin code.) 
 
 Next, RecurringOrderManager's `createOrder()` method is used to create a new recurring-type order entity. Its store, customer, billing profile, payment method, payment gateway, and billing schedule fields are set to values provided by the subscription entity and its payment method. The order's billing period is set to the first billing period.
 
@@ -34,7 +39,13 @@ Next, RecurringOrderManager's `createOrder()` method is used to create a new rec
 After the billing period and recurring order are created, the RecurringOrderManager's `applyCharges()` method is called. There's a lot of logic in this method, but to keep things simple here, we'll just look at what happens for our *newly created* recurring order.
 
 ### RecurringOrderManager applyCharges() method
-Our newly created *recurring* order does not yet have any order items. The `applyCharges()` method is where recurring-type order items are created and added to our recurring-type order. First, the subscription type plugin's `collectCharges()` method is used to create [`Charge` objects](../01.subscriptions-overview/docs.md). Assuming our subscription is using the product variation subscription type plugin, the `collectCharges()` method is implemented in the `SubscriptionTypeBase` class.
+Our newly created *recurring* order does not yet have any order items. The `applyCharges()` method is where recurring-type order items are created and added to our recurring-type order. First, the subscription type plugin's `collectCharges()` method is used to create `Charge` objects. Assuming our subscription is using the product variation subscription type plugin, the `collectCharges()` method is implemented in the `SubscriptionTypeBase` class. The Charge object (or objects) returned by `collectCharges()` has the following structure:
+
+* purchasedEntity (`PurchasableEntityInterface` or null)
+* title (string)
+* quantity (string)
+* unitPrice (`Price`)
+* billingPeriod (`BillingPeriod`)
 
 ### SubscriptionTypeBase::collectCharges()
 Here is a short synopsis of what the method does; for full details, take a look at the full source code for `SubscriptionTypeBase::collectCharges()`.
@@ -55,7 +66,7 @@ Once the base billing period is determined, a new `Charge` is created using that
 ### Return to RecurringOrderManager::applyCharges()
 The subscription type plugin returned an array containing just a single `Charge` object that is used for the purchased entity, title, quantity, billing period, and unit price fields values of the recurring-type order item. Also, the `subscription` field of the recurring order item is set to the `id` of the subscription entity.
 
-At this point, we have a problem with our recurring order item: the unit price might not be valid for the base billing period that was calculated. So here's where the prorater plugin gets called into action. Recall that the billing schedule configuration entity has a [prorater plugin](../01.subscriptions-overview/docs.md). In the prorater plugin's `prorateOrderItem` method, a prorated unit price is returned, and the recurring order item's unit price is updated. Note that the unit price is set here as 'overridden' so that it will not be subsequently changed by any price resolvers.
+At this point, we have a problem with our recurring order item: the unit price might not be valid for the base billing period that was calculated. So here's where the prorater plugin gets called into action. Recall that the billing schedule configuration entity has a [prorater plugin](../01.subscriptions-overview/docs.md#prorater). In the prorater plugin's `prorateOrderItem` method, a prorated unit price is returned, and the recurring order item's unit price is updated. Note that the unit price is set here as 'overridden' so that it will not be subsequently changed by any price resolvers.
 
 Finally, the `applyCharges()` method finishes by adding the recurring order item to the recurring order. The recurring order's total is automatically recalcuated so that it matches the unit price of the recurring order item.
 
@@ -96,5 +107,3 @@ Here's an overview of "who did what" when the OrderSubscriber's `onPlace()` meth
 At the end of this process, we have an 'active' subscription with a single recurring order (in the draft state). The billing period for the recurring order is the "first" billing period for the subscription. The billing period for the recurring order item is the base billing period. The order total is the *next* amount due, calculated using the base billing period and taking the amount already charged in the initial (non-recurring) order into consideration.
 
 In the next section, we'll look at how this recurring order is closed and renewed.
-
-
