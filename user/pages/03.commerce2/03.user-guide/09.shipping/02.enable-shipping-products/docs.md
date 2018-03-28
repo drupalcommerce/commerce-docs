@@ -12,3 +12,12 @@ and edit each variation type that you want to enable shipping for.
 ![Product Variation Type Edit Form](images/product-variation-edit.png)
 
 Depending on your shipping plugin, you may also need to enable dimensions there.
+
+Edit your order type:
+
+- Select one of the fulfilment workflows.
+
+- Enable shipping and choose a shipment type.
+
+- Select the 'Shipping' checkout flow
+
