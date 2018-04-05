@@ -175,7 +175,7 @@ public function onReturn(OrderInterface $order, Request $request) {
     
     $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
     $payment = $payment_storage->create([
-      'state' => 'completed'
+      'state' => 'completed',
       'amount' => $order->getTotalPrice(),
       'payment_gateway' => $this->entityId,
       'order_id' => $order->id(),
