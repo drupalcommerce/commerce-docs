@@ -13,6 +13,7 @@ Here is a list of known payment gateways that are being supported by their maint
 | [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. | [Off site] |					
 | [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. | [Off site] |				
 | [Braintree]| This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site] |				
+| [cashpresso]| With cashpresso you pay for purchases in installments. You can choose your installment amount when buying and change it anytime after. |	[Off site] |				
 | [CC Avenue]| The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.| [Off site] |					
 | [Commerce  Pasargad]  	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	| [Off site] |		
 | [Commerce  Zarinpal]  	 | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module.	| [Off site] |			
@@ -127,3 +128,4 @@ Here is a list of known payment gateways that are being supported by their maint
 [Commerce Tpay]: https://www.drupal.org/project/commerce_tpay
 [Commerce USAePay]: https://www.drupal.org/project/commerce_usaepay
 [E-Commerce Mellat]: https://www.drupal.org/project/mellat_gateway
+[cashpresso]: https://www.drupal.org/project/commerce_cashpresso

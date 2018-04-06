@@ -38,6 +38,7 @@ The class, in this case `RedirectCheckout`, must extend the `OffsitePaymentGatew
 namespace Drupal\commerce_quickpay\Plugin\Commerce\PaymentGateway;
 
 use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayBase;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Provides the QuickPay offsite Checkout payment gateway.
