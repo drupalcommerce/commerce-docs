@@ -65,6 +65,29 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Vantiv]   | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
 | [WeChat Pay]   | This module provides the WeChat Pay integration  for Drupal Commerce 2 on Drupal 8.|	[Off site] |
 | [Worldline]| This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
+| Commerce Coinpayments  |
+| Commerce Dps Pxpay |
+| Commerce Ecpay  |
+| Commerce Epn  |
+| Commerce Euplatesc  |
+| Commerce Gocardless Payment |
+| Commerce Iats  |
+| Commerce Liqpay Gateway |
+| Commerce Moyasar  |
+| Commerce Omise  |
+| Commerce Pagseguro  |
+| Commerce Pagseguro Transp |
+| Commerce Rave  |
+| Commerce Rbspayment  |
+| Trustpay   |
+| Commerce Vipps  |
+| Commerce Wayforpay  |
+| Commerce Xem  |
+| Commercepayu   |
+| Commerce Fondy  |
+| Sendwithus Commerce  |
+| Simplifycommerce   |
+| Commerce Sofortbanking  |
 
 
 
@@ -129,3 +152,31 @@ Here is a list of known payment gateways that are being supported by their maint
 [Commerce USAePay]: https://www.drupal.org/project/commerce_usaepay
 [E-Commerce Mellat]: https://www.drupal.org/project/mellat_gateway
 [cashpresso]: https://www.drupal.org/project/commerce_cashpresso
+
+
+##needs to be added
+
+[Commerce Coinpayments ]: https://www.drupal.org/project/commerce_coinpayments
+[Commerce Dps Pxpay]: https://www.drupal.org/project/commerce_dps_pxpay
+[Commerce Ecpay ]: https://www.drupal.org/project/commerce_ecpay
+[Commerce Epn ]: https://www.drupal.org/project/commerce_epn
+[Commerce Euplatesc ]: https://www.drupal.org/project/commerce_euplatesc
+[Commerce Gocardless Payment]: https://www.drupal.org/project/commerce_gocardless_payment
+[Commerce Iats ]: https://www.drupal.org/project/commerce_iats
+[Commerce Liqpay Gateway]: https://www.drupal.org/project/commerce_liqpay_gateway
+[Commerce Moyasar ]: https://www.drupal.org/project/commerce_moyasar
+[Commerce Omise ]: https://www.drupal.org/project/commerce_omise
+[Commerce Pagseguro ]: https://www.drupal.org/project/commerce_pagseguro
+[Commerce Pagseguro Transp]: https://www.drupal.org/project/commerce_pagseguro_transp
+[Commerce Rave ]: https://www.drupal.org/project/commerce_rave
+[Commerce Rbspayment ]: https://www.drupal.org/project/commerce_rbspayment
+[Trustpay  ]: https://www.drupal.org/project/trustpay
+[Commerce Vipps ]: https://www.drupal.org/project/commerce_vipps
+[Commerce Wayforpay ]: https://www.drupal.org/project/commerce_wayforpay
+[Commerce Xem ]: https://www.drupal.org/project/commerce_xem
+[Commercepayu  ]: https://www.drupal.org/project/commercepayu
+[Commerce Fondy ]: https://www.drupal.org/project/commerce_fondy
+[Sendwithus Commerce ]: https://www.drupal.org/project/sendwithus_commerce
+[Simplifycommerce  ]: https://www.drupal.org/project/simplifycommerce
+[Commerce Sofortbanking ]: https://www.drupal.org/project/commerce_sofortbanking
+
