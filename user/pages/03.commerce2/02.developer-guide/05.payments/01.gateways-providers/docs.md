@@ -81,15 +81,15 @@ Here is a list of known payment gateways that are being supported by their maint
 |71| [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |	[Off site] |
 |72| [Square] | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|	[On site] |
 |73| [Stripe] | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.| [On site] |
-|74| [Trustpay ] |	TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay.	|[Off]|
+|74| [Trustpay] |	TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay.	|[Off]|
 |75| [Vantiv] | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
 |76| [WeChat Pay] | This module provides the WeChat Pay integration for Drupal Commerce 2 on Drupal 8.|	[Off site] |
 |77| [Worldline] | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
+|78| [Suomen Verkkomaksut] | Commerce Suomen Verkkomaksut integrates Suomen Verkkomaksut payment method | [Off]
 
 
 
-
-
+[Suomen Verkkomaksut]:https://www.drupal.org/project/commerce_suomenverkkomaksut
 [QuickPay]: https://www.drupal.org/project/commerce_quickpay_gateway
 [Braintree]: https://www.drupal.org/project/commerce_braintree
 [PayPal]: https://www.drupal.org/project/commerce_paypal
