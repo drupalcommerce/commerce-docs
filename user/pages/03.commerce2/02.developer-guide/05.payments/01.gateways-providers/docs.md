@@ -9,12 +9,12 @@ Here is a list of known payment gateways that are being supported by their maint
 | Name| Description | Type |
 |-------------------------------------------------------------------------------------------|
 | [Alipay]   | Alipay integration for the Drupal Commerce payment and checkout system.  | [Off site] |	
-| [Authorize.Net]| Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. |	[On site] |				
+| [Authorize.Net] | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. |	[On site] |				
 | [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. | [Off site] |					
 | [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. | [Off site] |				
-| [Braintree]| This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site] |				
-| [cashpresso]| With cashpresso you pay for purchases in installments. You can choose your installment amount when buying and change it anytime after. |	[Off site] |				
-| [CC Avenue]| The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.| [Off site] |					
+| [Braintree] | This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site] |				
+| [cashpresso] | With cashpresso you pay for purchases in installments. You can choose your installment amount when buying and change it anytime after. |	[Off site] |				
+| [CC Avenue] | The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.| [Off site] |					
 | [Commerce  Pasargad]  	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	| [Off site] |		
 | [Commerce  Zarinpal]  	 | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module.	| [Off site] |			
 | [Commerce Amazon Pay] 	 | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce.	| [N/A] |	
@@ -39,9 +39,9 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Commerce Swedbank Payment Portal]   |	This module integrates Swedbank Payment Portal payment methods (banklink, credit card) as payment gateways in Drupal Commerce.	|	[Off site] |
 | [Commerce Tpay]   		|	This project integrates Tpay payment and checkout systems	|	[Off site] |
 | [Commerce USAePay]   	|	USAePay credit card gateway for Commerce using SOAP.	|	[On site] |
-| [CommercePaytm]| Integrate paytm payment gateway with drupal commerce. |	[Off site] |
-| [Datatrans]| This project provides a Datatrans integration for the Drupal Commerce payment and checkout system.  | [Off site] |					
-| [EasyPaybg]| Module implements Bulgarian EasyPay as payment method for commerce module.  | [Off site] |
+| [CommercePaytm] | Integrate paytm payment gateway with drupal commerce. |	[Off site] |
+| [Datatrans] | This project provides a Datatrans integration for the Drupal Commerce payment and checkout system.  | [Off site] |					
+| [EasyPaybg] | Module implements Bulgarian EasyPay as payment method for commerce module.  | [Off site] |
 | [E-Commerce Mellat]   	|	Mellat is Iranian commerce solution.	|	[Off site] |
 | [Epaybg]   | Bulgarian payments gateway http://epay.bg for Commerce module.  |	[Off site] |
 | [Ingenico] | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions.  | [Off site] / [On site] |
@@ -64,30 +64,31 @@ Here is a list of known payment gateways that are being supported by their maint
 | [Stripe]   | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.| [On site] |
 | [Vantiv]   | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
 | [WeChat Pay]   | This module provides the WeChat Pay integration  for Drupal Commerce 2 on Drupal 8.|	[Off site] |
-| [Worldline]| This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
-| Commerce Coinpayments  |
-| Commerce Dps Pxpay |
-| Commerce Ecpay  |
-| Commerce Epn  |
-| Commerce Euplatesc  |
-| Commerce Gocardless Payment |
-| Commerce Iats  |
-| Commerce Liqpay Gateway |
-| Commerce Moyasar  |
-| Commerce Omise  |
-| Commerce Pagseguro  |
-| Commerce Pagseguro Transp |
-| Commerce Rave  |
-| Commerce Rbspayment  |
-| Trustpay   |
-| Commerce Vipps  |
-| Commerce Wayforpay  |
-| Commerce Xem  |
-| Commercepayu   |
-| Commerce Fondy  |
-| Sendwithus Commerce  |
-| Simplifycommerce   |
-| Commerce Sofortbanking  |
+| [Worldline] | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
+| [Commerce Coinpayments ] |
+| [Commerce Dps Pxpay] |
+| [Commerce Ecpay ] |
+| [Commerce Epn ] |
+| [Commerce Euplatesc ] |
+| [Commerce Gocardless Payment] |
+| [Commerce Iats ] |
+| [Commerce Liqpay Gateway] |
+| [Commerce Moyasar ] |
+| [Commerce Omise ] |
+| [Commerce Pagseguro ] |
+| [Commerce Pagseguro Transp] |
+| [Commerce Rave ] |
+| [Commerce Rbspayment ] |
+| [Trustpay  ] |
+| [Commerce Vipps ] |
+| [Commerce Wayforpay ] |
+| [Commerce Xem ] |
+| [Commercepayu  ] |
+| [Commerce Fondy ] |
+| [Sendwithus Commerce ] |
+| [Simplifycommerce  ] |
+| [Commerce Sofortbanking ] |
+
 
 
 
@@ -154,7 +155,6 @@ Here is a list of known payment gateways that are being supported by their maint
 [cashpresso]: https://www.drupal.org/project/commerce_cashpresso
 
 
-##needs to be added
 
 [Commerce Coinpayments ]: https://www.drupal.org/project/commerce_coinpayments
 [Commerce Dps Pxpay]: https://www.drupal.org/project/commerce_dps_pxpay
