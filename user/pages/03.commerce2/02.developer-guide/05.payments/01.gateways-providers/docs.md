@@ -59,7 +59,7 @@ Here is a list of known payment gateways that are being supported by their maint
 |49| [Commerce Wayforpay ] |	This module provides a Drupal Commerce payment method to embed the payment services provided by Wayforpay	|[Off]|
 |50| [Commerce Xem ] |	This module uses the Coin Market Cap website to convert USD, EUR and so on to XEM		|[Off]|
 |51| [CommercePaytm] | Integrate paytm payment gateway with drupal commerce. |	[Off site] |
-|52| [Commercepayu ] |	 Commercepayu integration for the Drupal Commerce payment system.		|[Off]|
+|52| [Commercepayu] |	 Commercepayu integration for the Drupal Commerce payment system.		|[Off]|
 |53| [Datatrans] | This project provides a Datatrans integration for the Drupal Commerce payment and checkout system. | [Off site] |
 |54| [EasyPaybg] | Module implements Bulgarian EasyPay as payment method for commerce module. | [Off site] |
 |55| [E-Commerce Mellat] 	|	Mellat is Iranian commerce solution.	|	[Off site] |
