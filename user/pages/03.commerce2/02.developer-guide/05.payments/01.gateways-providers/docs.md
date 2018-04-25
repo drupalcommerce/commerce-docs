@@ -78,14 +78,13 @@ Here is a list of known payment gateways that are being supported by their maint
 |68| [Paytrail] | As Suomen Verkkomaksut became Paytrail, this module will replace [commerce_suomenverkkomaksut] module. | [Off site] |
 |69| [PayU Money] | Allows Drupal Commerce orders to be paid using PayUmoney payment methods.|	[Off site] |
 |70| [QuickPay] | Allows Drupal Commerce payments through the Danish payment provider QuickPay |	[Off site] |
-|71| [Razorpay Payment Integration] | This module serve as Payment Gateway porvided by Razorpay. |	[Off site] |
-|72| [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |	[Off site] |
-|73| [Square] | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|	[On site] |
-|74| [Stripe] | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.| [On site] |
-|75| [Trustpay ] |	TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay.	|[Off]|
-|76| [Vantiv] | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
-|77| [WeChat Pay] | This module provides the WeChat Pay integration for Drupal Commerce 2 on Drupal 8.|	[Off site] |
-|78| [Worldline] | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
+|71| [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |	[Off site] |
+|72| [Square] | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|	[On site] |
+|73| [Stripe] | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.| [On site] |
+|74| [Trustpay ] |	TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay.	|[Off]|
+|75| [Vantiv] | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
+|76| [WeChat Pay] | This module provides the WeChat Pay integration for Drupal Commerce 2 on Drupal 8.|	[Off site] |
+|77| [Worldline] | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider.| [Off site] |
 
 
 
@@ -126,8 +125,8 @@ Here is a list of known payment gateways that are being supported by their maint
 [Payeezy]: https://www.drupal.org/project/commerce_payeezy
 [Omise]: https://www.drupal.org/project/commerce_omise
 
-[Commerce  Pasargad]: https://www.drupal.org/project/commerce_pasargad
-[Commerce  Zarinpal]: https://www.drupal.org/project/commerce_zarinpal
+[Commerce Pasargad]: https://www.drupal.org/project/commerce_pasargad
+[Commerce Zarinpal]: https://www.drupal.org/project/commerce_zarinpal
 [Commerce Amazon Pay]: https://www.drupal.org/project/commerce_amazon_lpa
 [Commerce Atom Payment]: https://www.drupal.org/project/commerce_atom_payment
 [Commerce Braintree Marketplace]: https://www.drupal.org/project/commerce_braintree_marketplace
@@ -168,11 +167,11 @@ Here is a list of known payment gateways that are being supported by their maint
 [Commerce Pagseguro Transp]: https://www.drupal.org/project/commerce_pagseguro_transp
 [Commerce Rave ]: https://www.drupal.org/project/commerce_rave
 [Commerce Rbspayment ]: https://www.drupal.org/project/commerce_rbspayment
-[Trustpay  ]: https://www.drupal.org/project/trustpay
+[Trustpay]: https://www.drupal.org/project/trustpay
 [Commerce Vipps ]: https://www.drupal.org/project/commerce_vipps
 [Commerce Wayforpay ]: https://www.drupal.org/project/commerce_wayforpay
 [Commerce Xem ]: https://www.drupal.org/project/commerce_xem
-[Commercepayu  ]: https://www.drupal.org/project/commercepayu
+[Commercepayu]: https://www.drupal.org/project/commercepayu
 [Commerce Fondy ]: https://www.drupal.org/project/commerce_fondy
 [Commerce Sofortbanking ]: https://www.drupal.org/project/commerce_sofortbanking
 
