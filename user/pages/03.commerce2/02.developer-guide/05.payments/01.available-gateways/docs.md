@@ -6,13 +6,13 @@ category: docs
 
 Here is a list of known payment gateways that are being supported by their maintainers.
 
-| Name| Description | Type |
+| Name| Description | Type | Commerce Recurring |
 |-------------------------------------------------------------------------------------------|
 |1| [Alipay] | Alipay integration for the Drupal Commerce payment and checkout system. | [Off site] |
 |2| [Authorize.Net] | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. |	[On site] |
 |3| [banklink] | This is a generic banklink payment gateway for drupal Commerce 2.x. | [Off site] |
 |4| [Bitpayir] | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. | [Off site] |
-|5| [Braintree] | This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site] |
+|5| [Braintree] | This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |	[On site] | Fully Supported |
 |6| [cashpresso] | With cashpresso you pay for purchases in installments. You can choose your installment amount when buying and change it anytime after. |	[Off site] |
 |7| [CC Avenue] | The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce.| [Off site] |
 |8| [Commerce Pasargad] 	 | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce	| [Off site] |
@@ -79,7 +79,7 @@ Here is a list of known payment gateways that are being supported by their maint
 |69| [PayU Money] | Allows Drupal Commerce orders to be paid using PayUmoney payment methods.|	[Off site] |
 |70| [QuickPay] | Allows Drupal Commerce payments through the Danish payment provider QuickPay |	[Off site] |
 |71| [smartpay] | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |	[Off site] |
-|72| [Square] | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|	[On site] |
+|72| [Square] | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce.|	[On site] | (No card on file) |
 |73| [Stripe] | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site.| [On site] |
 |74| [Trustpay] |	TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay.	|[Off]|
 |75| [Vantiv] | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |	[On site] |
