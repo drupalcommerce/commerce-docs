@@ -38,6 +38,11 @@ class Commerce extends Theme
     $metadata = $page->metadata();
     $summary = trim(strip_tags($page->summary(null, true)));
     $title = $page->title();
+    
+    $parentTitle = '';
+    if ($page->parent()) {
+      $parentTitle = $page->parent()->title();
+    }
 
     $metadata_values = [
       'description' => trim(strip_tags($page->summary(155, true))),
