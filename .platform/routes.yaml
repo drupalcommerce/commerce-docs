@@ -49,6 +49,7 @@ https://{default}/:
       "/commerce2/checkout/custom-checkout-flow": {"to": "/commerce2/developer-guide/checkout/create-custom-checkout-flow"}
       "/commerce2/payments": {"to": "/commerce2/user-guide/payments"}
       "/commerce2/payments/available-gateways": {"to": "/commerce2/developer-guide/payments/gateways-providers"}
+      "/commerce2/developer-guide/payments/gateways-providers": { "to": "/commerce2/developer-guide/payments/available-gateways" }
       "/commerce2/payments/install-configure-gateways": {"to": "/commerce2/developer-guide/payments/install-configure-gateways"}
       "/commerce2/payments/managing-payments": {"to": "/commerce2/user-guide/payments"}
       "/commerce2/code-recipes": {"to": "/commerce2/developer-guide"}
@@ -116,7 +117,6 @@ https://{default}/:
       "/v2/checkout/index.html": { "to": "/commerce2/checkout" }
       "/v2/checkout/order-summary.html": { "to": "/checkout/changing-order-summaryv2" }
       "/v2/payments/available-payment-gateways.html": { "to": "/commerce2/developer-guide/payments/available-gateways" }
-      "/commerce2/payments/available-gateways": { "to": "/commerce2/developer-guide/payments/available-gateways" }
       "/v2/payments": { "to": "/commerce2/payments" }
       "/v2/payments/index.html": { "to": "/commerce2/payments" }
       "/v2/payments/installing-payment-gateway.html": { "to": "/commerce2/payments/install-configure-gateways" }
