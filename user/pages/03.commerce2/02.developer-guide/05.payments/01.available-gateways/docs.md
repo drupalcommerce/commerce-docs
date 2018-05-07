@@ -6,7 +6,7 @@ category: docs
 
 Here is a list of known payment gateways that are being supported by their maintainers.
 
-| Name| Description | Type |
+| # | Name| Description | Type |
 |-------------------------------------------------------------------------------------------|
 |1| [Alipay] | Alipay integration for the Drupal Commerce payment and checkout system. | [Off site] |
 |2| [Authorize.Net] | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. |	[On site] |
