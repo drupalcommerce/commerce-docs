@@ -10,7 +10,7 @@ username_regex: '^[a-z0-9_-]{3,16}$'             # Only lowercase chars, digits,
 pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' # At least one number, one uppercase and lowercase letter, and be at least 8+ chars
 
 languages:
-  supported: []                                  # List of languages supported. eg: [en, fr, de]
+  supported: [en, es]                            # List of languages supported. eg: [en, fr, de]
   include_default_lang: true                     # Include the default lang prefix in all URLs
   translations: true                             # Enable translations by default
   translations_fallback: true                    # Fallback through supported translations if active lang doesn't exist
