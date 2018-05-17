@@ -61,7 +61,7 @@ class RedirectCheckout extends OffsitePaymentGatewayBase {
 }
 ```
 
-When you have created this file (and enabled the module), then when you go to __Commerce__ > __Configutration__ > __Payment gateways__ > __Add new payment gateway__ you should be able to choose the new payment method at __Plugin__:
+When you have created this file (and enabled the module), then when you go to __Commerce__ > __Configuration__ > __Payment gateways__ > __Add new payment gateway__ you should be able to choose the new payment method at __Plugin__:
 
 ![Add payment gateway](add-payment-gateway.png)
 
