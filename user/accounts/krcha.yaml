@@ -1,0 +1,11 @@
+email: milan@leancommerce.net
+fullname: Milan
+title: admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$2HhRn7nISDBVn/jzQRoAS.6N1oXZQQ.6ffPdEVbIT2Y7/knF2sXC6

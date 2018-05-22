@@ -1,4 +1,2 @@
-# Global plugin configurations
-
-enabled: true                # Set to false to disable this plugin completely
-active: true                # Option to (de-)activate this plugin on a page
+enabled: false
+active: false
