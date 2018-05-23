@@ -47,4 +47,4 @@ taxonomy:
     </div>
 </div>
 
-<p>The settings for attribute fields are built into the field edit form. These are typically List fields and Taxonomy term reference fields, because they have a discreet number of options. Attribute fields can use select list or radio button widgets on the Add to Cart form.</p>
+<p>The settings for attribute fields are built into the field edit form. These are typically List fields and Taxonomy term reference fields, because they have a discrete number of options. Attribute fields can use select list or radio button widgets on the Add to Cart form.</p>

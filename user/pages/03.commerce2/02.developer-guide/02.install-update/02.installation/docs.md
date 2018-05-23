@@ -8,7 +8,7 @@ taxonomy:
 
 Requirements
 
- -Commerce 2.x requires Drupal 8.4.0 or newer.
+ -Commerce 2.x requires Drupal 8.5.0 or newer.
 
  If you already have a web server, make sure it satisfies [Drupal 8’s requirements].
  The recommended memory limit is 256MB or more. For local development we recommend
@@ -20,11 +20,11 @@ Requirements
 
  Drupal Commerce requires that you have the [bcmath](http://php.net/manual/en/intro.bc.php) extension installed.
 
- If you are using DrupalVM, add the following to your configuration.
+ If you are using DrupalVM, add the following to your configuration (change PHP version number if needed).
 
  ```
- extra_packages:
-    php-bcmath
+ php_packages_extra:
+   - php7.1-bcmath
  ```
 
  ## New site

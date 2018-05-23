@@ -1,0 +1,36 @@
+name: Simple Responsive Tables
+version: 1.1.1
+description: Wraps tables in a div, enabling them to be scrolled vertically on small screens.
+icon: table
+author:
+  name: Beni Gartenmann
+  email: mail@benigartenmann.ch
+homepage: https://github.com/bgartenmann/grav-plugin-simple-responsive-tables
+keywords: grav, plugin, table, responsive, wrap
+bugs: https://github.com/bgartenmann/grav-plugin-simple-responsive-tables/issues
+docs: https://github.com/bgartenmann/grav-plugin-simple-responsive-tables/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    active:
+      type: toggle
+      label: Plugin active
+      highlight: 1
+      default: 0
+      options:
+        1: Yes
+        0: No
+      validate:
+        type: bool

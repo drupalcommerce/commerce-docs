@@ -1,5 +1,5 @@
 name: Breadcrumbs
-version: 1.5.0
+version: 1.5.1
 description: The **Breadcrumbs** plugin provides a simple method to display the depth of your content/navigation structure.
 icon: caret-square-o-right
 author:
@@ -51,6 +51,17 @@ form:
     include_home:
       type: toggle
       label: Include Home
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    include_current:
+      type: toggle
+      label: Include Current Page
       highlight: 1
       default: 1
       options:

@@ -27,9 +27,17 @@ class AnchorsPlugin extends Plugin
         } else {
             $this->enable([
                 'onPageInitialized' => ['onPageInitialized', 0],
-                'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
+                'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+                'onTwigExtensions' => ['onTwigExtensions', 0]
             ]);
         }
+    }
+
+    public function onTwigExtensions()
+    {
+        $config = $this->config->get('plugins.anchors.selectors');
+        require_once(__DIR__ . '/twig/AnchorsTwigExtension.php');
+        $this->grav['twig']->twig->addExtension(new AnchorsTwigExtension($config));
     }
 
     /**

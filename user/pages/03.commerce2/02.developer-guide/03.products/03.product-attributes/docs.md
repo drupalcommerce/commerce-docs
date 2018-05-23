@@ -46,6 +46,17 @@ Loading an attribute
     // Loading is based off of the primary key [String] that was defined when creating it.
     $size_attribute = \Drupal\commerce_product\Entity\ProductAttribute::load('size');
 ```
+Checking if an attribute value exists within a particular attribute type
+--------------------
+
+```php
+    // Look up while filtering by Attribute
+    $productAttributeId = \Drupal::entityTypeManager()
+          ->getStorage('commerce_product_attribute_value')
+          ->condition('attribute', 'attribute_machine_name')
+          ->condition('field_value', field_value)
+          ->execute();
+```
 
 Creating values for an attribute
 --------------------------------

@@ -38,6 +38,7 @@ The class, in this case `RedirectCheckout`, must extend the `OffsitePaymentGatew
 namespace Drupal\commerce_quickpay\Plugin\Commerce\PaymentGateway;
 
 use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayBase;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Provides the QuickPay offsite Checkout payment gateway.
@@ -60,7 +61,7 @@ class RedirectCheckout extends OffsitePaymentGatewayBase {
 }
 ```
 
-When you have created this file (and enabled the module), then when you go to __Commerce__ > __Configutration__ > __Payment gateways__ > __Add new payment gateway__ you should be able to choose the new payment method at __Plugin__:
+When you have created this file (and enabled the module), then when you go to __Commerce__ > __Configuration__ > __Payment gateways__ > __Add new payment gateway__ you should be able to choose the new payment method at __Plugin__:
 
 ![Add payment gateway](add-payment-gateway.png)
 
@@ -175,7 +176,7 @@ public function onReturn(OrderInterface $order, Request $request) {
     
     $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
     $payment = $payment_storage->create([
-      'state' => 'completed'
+      'state' => 'completed',
       'amount' => $order->getTotalPrice(),
       'payment_gateway' => $this->entityId,
       'order_id' => $order->id(),
