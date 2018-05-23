@@ -12,7 +12,7 @@ Requirements
 
  If you already have a web server, make sure it satisfies [Drupal 8’s requirements].
  The recommended memory limit is 256MB or more. For local development we recommend
- [Drupal VM] (advanced users) or [Acquia Dev Desktop] (beginners). You will also need [Composer].
+ [Drupal VM] (advanced users), [ddev], or [Acquia Dev Desktop] (beginners). You will also need [Composer].
 
  [Why must we use Composer?]
 
@@ -73,7 +73,8 @@ Requirements
  [Drupal 8’s requirements]: https://www.drupal.org/requirements
  [Drupal VM]: http://www.drupalvm.com/
  [Acquia Dev Desktop]: https://www.acquia.com/products-services/dev-desktop
- [Composer]: https://getcomposer.org/doc/00-intro.rst#installation-linux-unix-osx
- [Why must we use Composer?]: https://bojanz.wordpress.com/2015/09/18/d8-composer-definitive-intro/
+ [ddev]: https://www.drud.com/what-is-ddev/
+ [Composer]: https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx
+ [Why must we use Composer?]: https://glamanate.com/blog/managing-your-drupal-project-composer
  [Drupal Console]: https://drupalconsole.com
  [project-base README]: https://github.com/drupalcommerce/project-base/blob/8.x/README.md

@@ -11,7 +11,7 @@ distributable libraries that can be shared and integrated by others. This is
 possible in part by the PHP Framework Interoperability Group (FIG) and [PSR-4]
 for autoloading of class files.
 
->  Dependency management is not a new concept and not alone to PHP. NPM for NodeJS,
+>  Dependency management is not a new concept and not unique to PHP. NPM for NodeJS,
 >  Bower for front end libraries, Bundler/Gems for Ruby, PIP for Python, Maven for
 >  Java and so forth.
 
@@ -78,7 +78,7 @@ satisfiable version 2 release, and the development version of the `commerceguys/
 
 >  Composer relies on semantic versioning, using `~` and `^` operators, or direct
 >  release names (`2.0-beta3`.)
-> 
+>
 >  Check out the Packagist Semver Checker to explore how version constraints work.
 >  This link is for `drupal/core: ^8.3` [https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.3&minimum-stability=dev](https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.3&minimum-stability=dev)
 
