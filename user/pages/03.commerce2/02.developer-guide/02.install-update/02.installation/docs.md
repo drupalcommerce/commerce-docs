@@ -4,28 +4,10 @@ taxonomy:
     category: docs
 ---
 
-**Installing Commerce to contribute back?** Check out our [Getting ready for development](../04.contributing/01.development-environment) guide.
+**Installing Commerce to contribute back?** Check out our [Getting ready for development](../../01.contributing/01.setup-local-environment) guide.
 
-Requirements
+Be sure to [Review Requirements](../01.requirements) before starting the installation process.
 
- -Commerce 2.x requires Drupal 8.5.0 or newer.
-
- If you already have a web server, make sure it satisfies [Drupal 8’s requirements].
- The recommended memory limit is 256MB or more. For local development we recommend
- [Drupal VM] (advanced users), [ddev], or [Acquia Dev Desktop] (beginners). You will also need [Composer].
-
- [Why must we use Composer?]
-
- ### PHP requirements
-
- Drupal Commerce requires that you have the [bcmath](http://php.net/manual/en/intro.bc.php) extension installed.
-
- If you are using DrupalVM, add the following to your configuration (change PHP version number if needed).
-
- ```
- php_packages_extra:
-   - php7.1-bcmath
- ```
 
  ## New site
 
@@ -70,11 +52,5 @@ Requirements
  drupal module:install commerce_product commerce_checkout commerce_cart
  ```
 
- [Drupal 8’s requirements]: https://www.drupal.org/requirements
- [Drupal VM]: http://www.drupalvm.com/
- [Acquia Dev Desktop]: https://www.acquia.com/products-services/dev-desktop
- [ddev]: https://www.drud.com/what-is-ddev/
- [Composer]: https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx
- [Why must we use Composer?]: https://glamanate.com/blog/managing-your-drupal-project-composer
  [Drupal Console]: https://drupalconsole.com
  [project-base README]: https://github.com/drupalcommerce/project-base/blob/8.x/README.md

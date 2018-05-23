@@ -82,7 +82,7 @@ Requirements
  Once you've created a store, you'll be able to create products and start
  developing the rest of your site.
 
-![create_new_store](../images/create-new-store.jpg)
+![create_new_store](../images/05.create-new-store.jpg)
 
  Tips:
 

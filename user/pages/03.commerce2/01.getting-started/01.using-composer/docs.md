@@ -30,7 +30,7 @@ includes other classes when they are first needed. When Composer runs, it
 regenerates the autoloader, giving it the locations of the newly downloaded
 dependencies.
 
-Commerce utilizes various [libraries and dependencies](../../02.libraries-and-dependencies). Without Composer and the
+Commerce utilizes various [libraries and dependencies](../../02.developer-guide/03.core/00.libraries-and-dependencies). Without Composer and the
 generated class autoloader you cannot use Commerce. The libraries we depend on
 will not be available, even if manually installed.
 
@@ -118,7 +118,7 @@ If the dependency is required by another package, it will not be removed.
 ## Links and resources
 
 * [Managing Your Drupal Project with Composer](https://glamanate.com/blog/managing-your-drupal-project-composer), or the [slides version](https://docs.google.com/presentation/d/1PK9q2dBkGHfyEO76bEVpqS61wTgA0LGbru2PECiwUnk/edit?usp=sharing)
-* [Drupal Commerce project template](https://github.com/drupalcommerce/project-base)
+* [Drupal Commerce Composer project template](https://github.com/drupalcommerce/project-base)
 * [Drupal Composer project template](https://github.com/drupal-composer/drupal-project)
 * [Platform.sh Drupal 8 + Composer template example](https://github.com/platformsh/platformsh-example-drupal8)
 * [Amazee Labs Composer recipes](https://www.amazeelabs.com/en/blog/drupalcomposerrecipes)
