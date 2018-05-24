@@ -8,7 +8,7 @@ taxonomy:
 
  - [Drupal 8 system requirements]
  - Install [Composer].
- - Install [ddev]
+ - Install [ddev].
 
 
  ## Create your Drupal Commerce project.
