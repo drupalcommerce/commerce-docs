@@ -7,7 +7,7 @@ taxonomy:
 >    Note: Drupal Commerce 2 includes an upgrade path stretching back to beta1.
 
 To update to the newest version of Drupal Commerce, you will need to
-update with Composer. 
+update with Composer.
 
 Run the following command. Until [Change submodule metadata to use '*' instead of 'self.version'](https://www.drupal.org/project/project_composer/issues/2948861) is fixed, this lengthy command is needed.
 
@@ -21,7 +21,6 @@ Once the Drupal.org infrastructure issue is resolved, the command will be
 composer update drupal/commerce --with-dependencies
 ```
 
-
 Please note the `--with-dependencies` option. Without this option
 specified any needed, contributed projects and libraries will not
 update. Only the Drupal Commerce module will be updated.
@@ -34,3 +33,13 @@ recommend running them on the command line rather than the
 drupal update:debug
 drupal update:execute
 ```
+
+### Composer update tips
+If your `composer update` command isn't working, you can try:
+
+  - Run `composer why-not` to check dependency issues.
+  - Run `composer remove` then `composer require` to reinstall the project.
+  - Delete the `composer.lock` file and entire /vendor directory from
+    your project and then run `composer install`.
+  - Run `composer clear-cache`.
+  - Run `composer self-update`.
