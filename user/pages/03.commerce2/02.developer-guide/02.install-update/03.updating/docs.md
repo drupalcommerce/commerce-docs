@@ -22,7 +22,7 @@ composer update drupal/commerce --with-dependencies
 ```
 
 Please note the `--with-dependencies` option. Without this option
-specified any needed, contributed projects and libraries will not
+specified, any needed, contributed projects and libraries will not
 update. Only the Drupal Commerce module will be updated.
 
 Run your Drupal updates once all of the dependencies are updated. We

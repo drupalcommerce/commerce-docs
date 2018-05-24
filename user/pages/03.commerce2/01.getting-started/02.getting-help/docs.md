@@ -10,8 +10,8 @@ If you are new to Drupal, you will want to learn more about [Drupal issue queues
 Drupal Commerce is an actively maintained project, and oftentimes you'll be
 able to search its [Issue Queue] to find an answer to a question or a solution to
 a problem/bug. Solutions are usually presented in the form of a patch. See the
-[patching section of the documentation](../../02.developer-guide/07.patching) for
-information about applying patches.
+[Patching section](../../02.developer-guide/07.patching) of this documentation
+guide for information about applying patches.
 
 ## Chat with the Drupal Commerce community using Slack
 Drupal Commerce benefits from an active community of developers who participate
@@ -32,8 +32,11 @@ some general tips on how to get help in a way that's both respectful and
 constructive:
 
  - Start with a search in the project's issue queue. Avoid posting duplicate issues!
- - If you can't find anything, the Commerce Slack channel is a good next step.
-   Post a general message about the problem you're having. It may be a "known issue".
+ - If you can't find anything that's applicable to your problem,
+   the Commerce Slack channel is a good next step.
+   Post a general message about the problem you're having, to start. You can get
+   into the details in a specific thread. If your problem is a "known issue",
+   you'll probably be directed to the Issue page.
  - Chatting with people in the Slack channel may lead to a suggestion to post
    a new issue.
  - If you're posting an issue for the first time, review [How to create a good issue].

@@ -21,7 +21,7 @@ composer update drupal/token --with-dependencies
 See [Updating](../03.updating) for additional information about how to make
 updates using Composer.
 
-Also, it is critically important that you keep up-to-date with [Drupal security advisories].
+Also, it is **critically important** that you keep up-to-date with [Drupal security advisories].
 You can subscribe to the "Security announcements" newsletter in your [Drupal.org] user
 profile settings.
 

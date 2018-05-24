@@ -4,13 +4,11 @@ taxonomy:
     category: docs
 ---
 
-**Installing Commerce to contribute back?** Check out our [Getting ready for development](../04.contributing/01.development-environment) guide.
+ ## Requirements
 
-Requirements
-
- -Commerce 2.x requires Drupal 8.5.0 or newer.
- -Install [Composer].
- -Install [ddev]
+ - [Drupal 8 system requirements]
+ - Install [Composer].
+ - Install [ddev]
 
 
  ## Create your Drupal Commerce project.
@@ -28,18 +26,19 @@ Requirements
 
  Configure ddev:
  ```bash
+ cd mystore
  ddev config
  ```
 
  When prompted:
-   Leave the project name set to the name of your project directory (mystore).
-   Leave the docroot location set to 'web'.
-   Leave the project type set to 'drupal8'.
+ - Leave the project name set to the name of your project directory (mystore).
+ - Leave the docroot location set to 'web'.
+ - Leave the project type set to 'drupal8'.
 
  At this point, you can start up your project environment. However, you may
- want to first change the http and https ports for your site, which are 80 and
- 443 by default. If these ports are already in use on your machine, you will
- get the following error message:
+ want to first change the http and https ports for your site, which are set to
+ 80 and 443 by default. If these ports are already in use on your machine, you
+ will get the following error message:
 
 >  Failed to start commerce-docs: Unable to listen on required ports, localhost
 >  port 80 is in use, Troubleshooting suggestions at
@@ -73,26 +72,18 @@ Requirements
  Port:         	3306
  ```
  Note that you need to open the 'Advanced options' section of the form to
- enter the `Host`.
+ enter the `Host` value.
 
  ## Getting started
  The very first thing you'll want to do to get started with Drupal
- Commerce is to create a store. Under the Commerce menu in the toolbar,
+ Commerce is create a store. Under the Commerce menu in the toolbar,
  navigate to Configuration > Store > Stores and click the `Add store` button.
  Once you've created a store, you'll be able to create products and start
  developing the rest of your site.
 
 ![create_new_store](../images/05.create-new-store.jpg)
 
- Tips:
-
-  - Composer commands are always run from the site root (`mystore` in this case).
-  - Downloading additional modules:   `composer require "drupal/devel:1.x-dev"`
-  - Updating an existing module: `composer update drupal/address -–with-dependencies`
-
- See the `project-base README`_ for more details.
-
-
+ [Drupal 8 system requirements]: https://www.drupal.org/requirements
  [ddev]: https://www.drud.com/what-is-ddev/
  [Composer]: https://getcomposer.org/
  [Drupal Console]: https://drupalconsole.com

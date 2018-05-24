@@ -23,13 +23,10 @@ Be sure to [Review Requirements](../01.requirements) before starting the install
 
  Tips:
 
-   The `bin` folder contains [Drupal Console] binary.
-   The `web` folder represents the document root.
-   Composer commands are always run from the site root (`mystore` in this case).
-   Downloading additional modules:   `composer require "drupal/devel:1.x-dev"`
-   Updating an existing module: `composer update drupal/address -–with-dependencies`
-
- See the `project-base README`_ for more details.
+ - The `bin` folder contains [Drupal Console] binary.
+ - The `web` folder represents the document root.
+ - Composer commands are always run from the site root (`mystore` in this case).
+ - See the `project-base README`_ for more details.
 
  ## Existing site
 
