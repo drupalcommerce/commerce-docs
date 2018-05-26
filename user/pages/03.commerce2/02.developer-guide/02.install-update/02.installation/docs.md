@@ -8,7 +8,8 @@ taxonomy:
 
 Requirements
 
- -Commerce 2.x requires Drupal 8.5.0 or newer.
+ - Commerce 2.x requires Drupal 8.5.0 or newer.
+ - Recommended to use the newest version of composer, as older versions may or may not work, check that your version matches the version listed on https://getcomposer.org/
 
  If you already have a web server, make sure it satisfies [Drupal 8’s requirements].
  The recommended memory limit is 256MB or more. For local development we recommend
