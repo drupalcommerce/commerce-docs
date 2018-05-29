@@ -151,27 +151,226 @@ Here is a list of known payment gateways that are being supported by their maint
 [E-Commerce Mellat]: https://www.drupal.org/project/mellat_gateway
 [cashpresso]: https://www.drupal.org/project/commerce_cashpresso
 
-
-
 [Commerce Coinpayments ]: https://www.drupal.org/project/commerce_coinpayments
 [Commerce Dps Pxpay]: https://www.drupal.org/project/commerce_dps_pxpay
-[Commerce Ecpay ]: https://www.drupal.org/project/commerce_ecpay
-[Commerce Epn ]: https://www.drupal.org/project/commerce_epn
-[Commerce Euplatesc ]: https://www.drupal.org/project/commerce_euplatesc
+[Commerce Ecpay]: https://www.drupal.org/project/commerce_ecpay
+[Commerce Epn]: https://www.drupal.org/project/commerce_epn
+[Commerce Euplatesc]: https://www.drupal.org/project/commerce_euplatesc
 [Commerce Gocardless Payment]: https://www.drupal.org/project/commerce_gocardless_payment
-[Commerce Iats ]: https://www.drupal.org/project/commerce_iats
+[Commerce Iats]: https://www.drupal.org/project/commerce_iats
 [Commerce Liqpay Gateway]: https://www.drupal.org/project/commerce_liqpay_gateway
-[Commerce Moyasar ]: https://www.drupal.org/project/commerce_moyasar
-[Commerce Omise ]: https://www.drupal.org/project/commerce_omise
-[Commerce Pagseguro ]: https://www.drupal.org/project/commerce_pagseguro
+[Commerce Moyasar]: https://www.drupal.org/project/commerce_moyasar
+[Commerce Omise]: https://www.drupal.org/project/commerce_omise
+[Commerce Pagseguro]: https://www.drupal.org/project/commerce_pagseguro
 [Commerce Pagseguro Transp]: https://www.drupal.org/project/commerce_pagseguro_transp
-[Commerce Rave ]: https://www.drupal.org/project/commerce_rave
-[Commerce Rbspayment ]: https://www.drupal.org/project/commerce_rbspayment
+[Commerce Rave]: https://www.drupal.org/project/commerce_rave
+[Commerce Rbspayment]: https://www.drupal.org/project/commerce_rbspayment
 [Trustpay]: https://www.drupal.org/project/trustpay
-[Commerce Vipps ]: https://www.drupal.org/project/commerce_vipps
-[Commerce Wayforpay ]: https://www.drupal.org/project/commerce_wayforpay
-[Commerce Xem ]: https://www.drupal.org/project/commerce_xem
+[Commerce Vipps]: https://www.drupal.org/project/commerce_vipps
+[Commerce Wayforpay]: https://www.drupal.org/project/commerce_wayforpay
+[Commerce Xem]: https://www.drupal.org/project/commerce_xem
 [Commercepayu]: https://www.drupal.org/project/commercepayu
-[Commerce Fondy ]: https://www.drupal.org/project/commerce_fondy
-[Commerce Sofortbanking ]: https://www.drupal.org/project/commerce_sofortbanking
+[Commerce Fondy]: https://www.drupal.org/project/commerce_fondy
+[Commerce Sofortbanking]: https://www.drupal.org/project/commerce_sofortbanking
+
+
+[ui-accordion independent=true open=0]
+[ui-accordion-item title="AliPay"]
+| ![Alipay](logo.png) | [AliPay] |
+|:--- |:--- |
+| **Description** | Alipay integration for the Drupal Commerce payment and checkout system. |
+| **Type** | Off Site |
+| **Currencies** | GBP HKD USD CHF SGD SEK DKK NOK JPY CAD AUD EUR NZD KRW THB  |
+| **Countries** |  110 countries and regions around the world, including the United States, Brazil, Russia, Ukraine, Belarus, Germany, the Netherlands, Spain, Israel, Turkey, Italy, and more. |
+[/ui-accordion-item]
+[ui-accordion-item title="Authorize.Net"]
+| ![Authorize.Net](logo.png) | [Authorize.Net] |
+|:--- |:--- |
+| **Description** | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. |
+| **Type** | On Site |
+| **Currencies** |  USD |
+| **Countries** | USA |
+[/ui-accordion-item]
+[ui-accordion-item title="banklink"]
+| ![banklink](logo.png) | [banklink] |
+|:--- |:--- |
+| **Description** | This is a generic banklink payment gateway for drupal Commerce 2.x. |
+| **Type** | Off Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Bitpayir"]
+| ![Bitpayir](logo.png) | [Bitpayir] |
+|:--- |:--- |
+| **Description** | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |
+| **Type** | Off Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Braintree"]
+| ![Braintree](logo.png) | [[Braintree]] |
+|:--- |:--- |
+| **Description** | This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |
+| **Type** | On Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="cashpresso"]
+| ![cashpresso](logo.png) | [cashpresso] |
+|:--- |:--- |
+| **Description** | With cashpresso you pay for purchases in installments. You can choose your installment amount when buying and change it anytime after. |
+| **Type** | Off Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="CC Avenue"]
+| ![CC Avenue](logo.png) | [CC Avenue] |
+|:--- |:--- |
+| **Description** | The CCAvenue Payment Gateway module implements the CCAvenue payment processing service (www.ccavenue.com) in Drupal Commerce. |
+| **Type** | Off Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Pasargad"]
+| ![Commerce Pasargad](logo.png) | [Commerce Pasargad] |
+|:--- |:--- |
+| **Description** | Pasargad Bank is a famous Iranian bank, this module is a payment method for Drupal Commerce |
+| **Type** | Off Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Zarinpal"]
+| ![Commerce Zarinpal](logo.png) | [Commerce Zarinpal] |
+| --- | --- |
+| **Description** | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module. |
+| **Type** | Off Site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Amazon Pay"]
+| ![Commerce Amazon Pay](logo.png) | [Commerce Amazon Pay] |
+| --- | --- |
+| **Description** | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce. |
+| **Type** | [N/A] |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Atom Payment"]
+| ![Commerce Atom Payment](logo.png) | [Commerce Atom Payment] |
+| --- | --- |
+| **Description** | This payment gateway will support Indian and international credit card, Debit card and internet banking system with safe and secure. |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Braintree Marketplace"]
+| ![Commerce Braintree Marketplace](logo.png) | [Commerce Braintree Marketplace] |
+| --- | --- |
+| **Description** | Extends commerce_braintree module to leverage the Braintree marketplace transactions API. |
+| **Type** | On site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce China Payments"]
+| ![Commerce China Payments](logo.png) | [Commerce China Payments] |
+| --- | --- |
+| **Description** | Integrates with Alipay and WeChat Pay |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Coinpayments"]
+| ![Commerce Coinpayments](logo.png) | [Commerce Coinpayments] |
+| --- | --- |
+| **Description** | Payments Module for Drupal Commerce, which accepts all cryptocurrencies for payments in your drupal site |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce DIBS integration"]
+| ![Commerce DIBS integration](logo.png) | [Commerce DIBS integration] |
+| --- | --- |
+| **Description** | Provides a DIBS payment gateway integration which allows you to send your clients to make an off-site payment directly on the DIBS payment system. |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Dps Pxpay"]
+| ![Commerce Dps Pxpay](logo.png) | [Commerce Dps Pxpay] |
+| --- | --- |
+| **Description** | DPS (PaymentExpress) PxPay payment method |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce DPS"]
+| ![Commerce DPS](logo.png) | [Commerce DPS] |
+| --- | --- |
+| **Description** | DPS (PaymentExpress) payment methods for Drupal Commerce. |
+| **Type** | Off site / On site|
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Ecpay"]
+| ![Commerce Ecpay](logo.png) | [Commerce Ecpay] |
+| --- | --- |
+| **Description** | Provides integration between Drupal Commerce and ECPay’s payment, shipping, and e-invoice solutions. |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Elavon"]
+| ![Commerce Elavon](logo.png) | [Commerce Elavon] |
+| --- | --- |
+| **Description** | Integrate Elavon Virtual Merchant payment service Converge payment gateway with Commerce module. There are two payment options Onsite or Offsite Redirect |
+| **Type** | On site / Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce ePayco"]
+| ![Commerce ePayco](logo.png) | [Commerce ePayco] |
+| --- | --- |
+| **Description** | ePayco is a Colombian payment gateway that Integrate ePayco Off-site payments, Set-up global gateway settings, Alter payment data dinamically |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Epn"]
+| ![Commerce Epn](logo.png) | [Commerce Epn] |
+| --- | --- |
+| **Description** | Payment Gateway for eProcessingNetwork.com |
+| **Type** | On site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Euplatesc"]
+| ![Commerce Euplatesc](logo.png) | [Commerce Euplatesc] |
+| --- | --- |
+| **Description** | This project integrates EuPlatesc.ro into the Drupal Commerce payment and checkout systems. |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Fondy"]
+| ![Commerce Fondy](logo.png) | [Commerce Fondy] |
+| --- | --- |
+| **Description** | Fondy Payment Gateway module allows the admin to set up the Fondy payment method on their store. Qiwi, Yandex, Privat24, cash payments, PayPal, SEPA, Swift, online banking with Ukrainian, Russian and European banks |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+[ui-accordion-item title="Commerce Gocardless Payment"]
+| ![Commerce Gocardless Payment](logo.png) | [Commerce Gocardless Payment] |
+| --- | --- |
+| **Description** | Integration with the UK Direct Debit payment gateway GoCardless |
+| **Type** | Off site |
+| **Currencies** |   |
+| **Countries** |   |
+[/ui-accordion-item]
+
+
+
+
+[/ui-accordion]
+
 
