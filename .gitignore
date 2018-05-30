@@ -55,3 +55,7 @@ Thumbs.db
 .idea/*
 
 /bin/composer.phar
+
+\.ddev/config\.yaml
+
+\.ddev/docker-compose\.yaml
