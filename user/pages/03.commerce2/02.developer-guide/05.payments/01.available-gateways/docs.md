@@ -36,7 +36,7 @@ category: docs
 | **Description** | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |
 | **Type** | Off Site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Iran |
 [/ui-accordion-item]
 [ui-accordion-item title="5. Braintree"]
 | ![Braintree](logo.png?resize=80,80) | [Braintree] |
@@ -76,7 +76,7 @@ category: docs
 | **Description** | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module. |
 | **Type** | Off Site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Iran |
 [/ui-accordion-item]
 [ui-accordion-item title="10. Commerce Amazon Pay"]
 | ![Commerce Amazon Pay](logo.png?resize=80,80) | [Commerce Amazon Pay] |
@@ -108,7 +108,7 @@ category: docs
 | **Description** | Integrates with Alipay and WeChat Pay |
 | **Type** | Off site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | China |
 [/ui-accordion-item]
 [ui-accordion-item title="14. Commerce Coinpayments"]
 | ![Commerce Coinpayments](logo.png?resize=80,80) | [Commerce Coinpayments] |
@@ -163,8 +163,8 @@ category: docs
 | --- | --- |
 | **Description** | ePayco is a Colombian payment gateway that Integrate ePayco Off-site payments, Set-up global gateway settings, Alter payment data dinamically |
 | **Type** | Off site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | Bulgaria |
+| **Countries** | BGN |
 [/ui-accordion-item]
 [ui-accordion-item title="21. Commerce Epn"]
 | ![Commerce Epn](logo.png?resize=80,80) | [Commerce Epn] |
@@ -179,16 +179,16 @@ category: docs
 | --- | --- |
 | **Description** | This project integrates EuPlatesc.ro into the Drupal Commerce payment and checkout systems. |
 | **Type** | Off site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | RON |
+| **Countries** | Romania |
 [/ui-accordion-item]
 [ui-accordion-item title="23. Commerce Fondy"]
 | ![Commerce Fondy](logo.png?resize=80,80) | [Commerce Fondy] |
 | --- | --- |
 | **Description** | Fondy Payment Gateway module allows the admin to set up the Fondy payment method on their store. Qiwi, Yandex, Privat24, cash payments, PayPal, SEPA, Swift, online banking with Ukrainian, Russian and European banks |
 | **Type** | Off site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** |  Visa, Visa Electron, Mastercard and Maestro bank cards from any country |
+| **Countries** |  Visa, Visa Electron, Mastercard and Maestro bank cards from any country |
 [/ui-accordion-item]
 [ui-accordion-item title="24. Commerce Gocardless Payment"]
 | ![Commerce Gocardless Payment](logo.png?resize=80,80) | [Commerce Gocardless Payment] |
@@ -283,8 +283,8 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates PayTabs with Drupal Commerce. This is an offsite payment gateway. It provides credit card payments only, so far. |
 | **Type** | On site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | Source: https://www.paytabs.com/en/global/ |
+| **Countries** | Source: https://www.paytabs.com/en/global/ |
 [/ui-accordion-item]
 [ui-accordion-item title="36. Commerce Payway"]
 | ![Commerce Payway](logo.png?resize=80,80) | [Commerce Payway] |
@@ -300,7 +300,7 @@ category: docs
 | **Description** | This module integrates Flutterwave Rave into Drupal Commerce payment. It currently supports the Standard and Hosted Payment Page workflows from Rave. |
 | **Type** | Off site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Nigeria |
 [/ui-accordion-item]
 [ui-accordion-item title="38. Commerce Razorpay Payment Integration"]
 | ![Commerce Razorpay Payment Integration](logo.png?resize=80,80) | [Commerce Razorpay Payment Integration] |
@@ -316,7 +316,7 @@ category: docs
 | **Description** | Integrates Commerce Payment with RBS Payment system API |
 | **Type** | Off site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Russia |
 [/ui-accordion-item]
 [ui-accordion-item title="40. Commerce Saman Gateway"]
 | ![Commerce Saman Gateway](logo.png?resize=80,80) | [Commerce Saman Gateway] |
@@ -356,7 +356,7 @@ category: docs
 | **Description** | This module integrates Swedbank Payment Portal payment methods (banklink, credit card) as payment gateways in Drupal Commerce. |
 | **Type** | Off site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Estonia |
 [/ui-accordion-item]
 [ui-accordion-item title="45. Commerce Tpay"]
 | ![Commerce Tpay](logo.png?resize=80,80) | [Commerce Tpay] |
@@ -364,7 +364,7 @@ category: docs
 | **Description** | This project integrates Tpay payment and checkout systems |
 | **Type** | Off site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Poland |
 [/ui-accordion-item]
 [ui-accordion-item title="46. Commerce USAePay"]
 | ![Commerce USAePay](logo.png?resize=80,80) | [Commerce USAePay] |
@@ -380,7 +380,7 @@ category: docs
 | **Description** | Vipps is a Norwegian payment application designed for smartphones developed by DNB. |
 | **Type** | Off site |
 | **Currencies** |   |
-| **Countries** |   |
+| **Countries** | Norway |
 [/ui-accordion-item]
 [ui-accordion-item title="48. Commerce Wayforpay"]
 | ![Commerce Wayforpay](logo.png?resize=80,80) | [Commerce Wayforpay] |
@@ -427,8 +427,8 @@ category: docs
 | --- | --- |
 | **Description** | Module implements Bulgarian EasyPay as payment method for commerce module. |
 | **Type** | Off site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | BGN |
+| **Countries** | Bulgaria |
 [/ui-accordion-item]
 [ui-accordion-item title="54. E-Commerce Mellat"]
 | ![E-Commerce Mellat](logo.png?resize=80,80) | [E-Commerce Mellat] |
@@ -475,8 +475,8 @@ category: docs
 | --- | --- |
 | **Description** | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x) |
 | **Type** | On site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | CAD, USD |
+| **Countries** | Canada, USA |
 [/ui-accordion-item]
 [ui-accordion-item title="60. Omise"]
 | ![Omise](logo.png?resize=80,80) | [Omise] |
@@ -491,8 +491,8 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported. |
 | **Type** | On site / Off site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | Source: https://support.payeezy.com/hc/en-us/articles/205757587-Dynamic-Currency-Conversion-DCC-and-Dynamic-Pricing-DP-Feature-Guide |
+| **Countries** | Source: https://support.payeezy.com/hc/en-us/articles/205757587-Dynamic-Currency-Conversion-DCC-and-Dynamic-Pricing-DP-Feature-Guide |
 [/ui-accordion-item]
 [ui-accordion-item title="62. payjp"]
 | ![payjp](logo.png?resize=80,80) | [payjp] |
@@ -531,7 +531,7 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates PayPlug payment as a gateway for your Drupal Commerce 2.x website. |
 | **Type** | Off site|
-| **Currencies** |   |
+| **Currencies** | EUR |
 | **Countries** |   |
 [/ui-accordion-item]
 [ui-accordion-item title="67. Paytrail"]
@@ -595,8 +595,8 @@ category: docs
 | --- | --- |
 | **Description** | This project integrates Vantiv payment solution into the Drupal Commerce payment and checkout systems. |
 | **Type** | On site|
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | CAD, USD  |
+| **Countries** | Canada, USA |
 [/ui-accordion-item]
 [ui-accordion-item title="75. WeChat Pay"]
 | ![WeChat Pay](logo.png?resize=80,80) | [WeChat Pay] |
@@ -689,7 +689,7 @@ category: docs
 [E-Commerce Mellat]: https://www.drupal.org/project/mellat_gateway
 [cashpresso]: https://www.drupal.org/project/commerce_cashpresso
 
-[Commerce Coinpayments ]: https://www.drupal.org/project/commerce_coinpayments
+[Commerce Coinpayments]: https://www.drupal.org/project/commerce_coinpayments
 [Commerce Dps Pxpay]: https://www.drupal.org/project/commerce_dps_pxpay
 [Commerce Ecpay]: https://www.drupal.org/project/commerce_ecpay
 [Commerce Epn]: https://www.drupal.org/project/commerce_epn
