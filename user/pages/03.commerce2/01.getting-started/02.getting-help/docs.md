@@ -1,4 +1,4 @@
----
+ls ---
 title: Getting help
 taxonomy:
     category: docs
@@ -13,7 +13,7 @@ a problem/bug. Solutions are usually presented in the form of a patch. See the
 [Patching section](../../02.developer-guide/02.install-update/07.patching) of this documentation
 guide for information about applying patches.
 
-## Chat with the Drupal Commerce community using Slack
+## Chat with us on Slack
 Drupal Commerce benefits from an active community of developers who participate
 in the #commerce [Slack] channel. There is also a general Drupal #support channel
 and the Drupal #general channel for light support questions. To join, visit:
