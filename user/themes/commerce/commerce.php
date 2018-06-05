@@ -38,7 +38,7 @@ class Commerce extends Theme
     $metadata = $page->metadata();
     $summary = trim(strip_tags($page->summary(null, true)));
     $title = $page->title();
-    
+
     $parentTitle = '';
     if ($page->parent()) {
       $parentTitle = $page->parent()->title();
@@ -47,7 +47,7 @@ class Commerce extends Theme
     $metadata_values = [
       'description' => trim(strip_tags($page->summary(155, true))),
       'article:publisher' => 'https://drupalcommerce.org/',
-      'article:section' => $page->parent()->title(),
+      'article:section' => $parentTitle,
       'og:sitename' => $config->get('site.title'),
       'og:title' => $title,
       'og:description' => $summary,
@@ -59,7 +59,7 @@ class Commerce extends Theme
       'twitter:site' => '@drupalcommerce',
       'twitter:author' => '@drupalcommerce',
       'twitter:label1' => 'Filed under',
-      'twitter:data1' => $page->parent()->title(),
+      'twitter:data1' => $parentTitle,
     ];
     foreach ($metadata_values as $property => $value) {
       $metadata[$property]['name'] = $property;
