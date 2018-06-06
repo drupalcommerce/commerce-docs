@@ -6,7 +6,7 @@ taxonomy:
 
 **Installing Commerce to contribute back?** Check out our [Getting ready for development](../../01.contributing/01.setup-local-environment) guide.
 
-Be sure to [Review Requirements](../01.requirements) before starting the installation process.
+Be sure to [review requirements](../01.requirements) before starting the installation process.
 
 
  ## New site
@@ -23,10 +23,11 @@ Be sure to [Review Requirements](../01.requirements) before starting the install
 
  Tips:
 
- - The `bin` folder contains [Drupal Console] binary.
+ - The `bin` folder contains any library binaries, such as [Drupal Console], [PHPUnit], [Behat], etc.
  - The `web` folder represents the document root.
+   - If you host your site on Acquia Cloud or another service that requires Drupal in a subdirectory other than `web`, [these instructions] describe how you can relocate the docroot.
  - Composer commands are always run from the site root (`mystore` in this case).
- - See the `project-base README`_ for more details.
+ - See the [Composer template for Drupal projects README] for more details.
 
  ## Existing site
 
@@ -51,3 +52,7 @@ Be sure to [Review Requirements](../01.requirements) before starting the install
 
  [Drupal Console]: https://drupalconsole.com
  [project-base README]: https://github.com/drupalcommerce/project-base/blob/8.x/README.md
+ [PHPUnit]: https://www.drupal.org/docs/8/phpunit/running-phpunit-tests
+ [Behat]: http://docs.behat.org/en/latest/
+ [these instructions]: https://github.com/drupal-composer/drupal-project/issues/64#issuecomment-206455356
+ [Composer template for Drupal projects README]: https://github.com/drupal-composer/drupal-project/blob/8.x/README.md

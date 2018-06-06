@@ -8,9 +8,13 @@ Drupal uses a patch system to provide solutions to issues in between version
 releases. If you are unfamiliar with the concept of patching, you can learn
 about [Patches] at drupal.org.
 
-You can use Composer to apply patches by modifying the `composer.json` file
-that's at the root of your project. In the "extra" section, you will see
-"installer-types" and "installer-paths". To add patches to your project, add a
+- If you used `composer create-project` to create your site, you can use Composer to apply patches by modifying the `composer.json` file that's at the root of your project.
+
+- If you did not use `composer create-project` to create your site, you can use the [Applying patches documentation] provided by drupal.org to learn about patching options.
+
+The following documentation describes the procedure for applying patches for a composer-managed site.
+
+In the "extra" section of your `composer.json` file, you will see "installer-types" and "installer-paths". To add patches to your project, add a
 new "patches" group to "extra".
 
 For example, your "extra" section looks something like this without any patches:
@@ -116,3 +120,4 @@ composer update drupal/commerce
 
 [Patches]: https://www.drupal.org/patch
 [Issue #2901939: Move variations form to its own tab]: https://www.drupal.org/project/commerce/issues/2901939
+[Applying patches documentation]: https://www.drupal.org/patch/apply

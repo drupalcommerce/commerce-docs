@@ -19,7 +19,6 @@ For example:
 
 * [Commerce Shipping] makes it possible to ship physical products to your customers.
 * [Commerce Recurring] makes it possible to provide subscriptions and recurring billing.
-* [Commerce Variation Cart Form] provides an alternative add-to-cart form for specific use cases.
 
 Extending your composer-managed site with additional modules is a
 straightforward process. Each Drupal module has its own project page on

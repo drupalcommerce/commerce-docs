@@ -13,6 +13,9 @@ a problem/bug. Solutions are usually presented in the form of a patch. See the
 [Patching section](../../02.developer-guide/02.install-update/07.patching) of this documentation
 guide for information about applying patches.
 
+## Search Drupal Answers on StackExchange
+[Drupal Answers] is a question and answer site for Drupal developers and administrators. To search for information specific to Drupal Commerce, tag your queries with `drupal-commerce`. There are thousands of posted [Drupal Commerce questions], so it's a great place to look for help.
+
 ## Chat with us on Slack
 Drupal Commerce benefits from an active community of developers who participate
 in the #commerce [Slack] channel. There is also a general Drupal #support channel
@@ -33,9 +36,9 @@ constructive:
 
  - Start with a search in the project's issue queue. Try to avoid posting
    duplicate issues!
- - If you can't find anything that's applicable to your problem,
-   the Commerce Slack channel is a good next step.
-   Post a general message about the problem you're having, to start. You can get
+ - If you can't find anything that's applicable to your problem, searching
+   Drupal Answers on StackExchange is a good next step. Post a question if none of the existing questions apply to your issue.
+ - For more immediate responses, you can try the Commerce Slack channel. Post a general message about the problem you're having, to start. You can get
    into the details in a separate thread. If your problem is a "known issue",
    you'll probably be directed to its Issue page.
  - Chatting with people in the Slack channel may lead to a suggestion to post
@@ -53,3 +56,5 @@ constructive:
 [Drupal issue queues]: https://www.drupal.org/issue-queue
 [Issue Queue]: https://www.drupal.org/project/issues/commerce
 [How to create a good issue]: https://www.drupal.org/issue-queue/how-to
+[Drupal Answers]: https://drupal.stackexchange.com/
+[Drupal Commerce questions]: https://drupal.stackexchange.com/questions/tagged/drupal-commerce

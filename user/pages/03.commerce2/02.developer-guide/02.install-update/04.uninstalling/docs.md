@@ -40,6 +40,8 @@ uninstall additional modules.
 
 ![uninstall_commerce](../images/04.uninstall-commerce.jpg)
 
+Since the Commerce base module provides a field type, it cannot be uninstalled together with the other modules. This is a known Drupal limitation. You will be blocked from uninstalling Commerce and a see a "Fields pending deletion" message. You can delete the field in question by running Cron. You can run Cron through the Admin UI by navigating to Configuration > System > Cron.
+
 Once all Commerce modules have been uninstalled, use Composer to remove the
 Commerce dependency from your project.
 
