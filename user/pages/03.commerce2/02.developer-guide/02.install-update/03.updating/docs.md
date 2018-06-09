@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
->    Note: Drupal Commerce 2 includes an upgrade path stretching back to beta1.
+** Important: You must use Composer to update Drupal Core, Drupal Commerce, and all contributed modules. Otherwise, your site will break. Also, you should always back up your site before starting an update procedure. **
 
 To update to the newest version of Drupal Commerce, you will need to
 update with Composer.

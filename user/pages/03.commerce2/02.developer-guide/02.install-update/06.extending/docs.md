@@ -40,8 +40,18 @@ The instructions below use [Drupal Console]
 drupal module:install commerce_shipping
 ```
 
+### Adding custom modules from GitHub
+
+Many Drupal developers use [GitHub] for their initial module development work. So you may find that a module you'd like to use to extend your site is available on GitHub but not on Drupal.org. So how do you add that custom module to your composer-managed site? You can use [Composer Installers], a multi-framework composer library installer. Please see [How to download a module hosted on GitHub via composer.json?] on Drupal Answers for a good example of how to do this.
+
+If you are developing custom modules locally yourself, see [Managing dependencies for a custom product] for an explanation of using Composer to manage your dependencies.
+
 [drupal.org]: https://www.drupal.org
 [Extending Drupal 8]: https://www.drupal.org/docs/8/extending-drupal-8
 [Commerce Shipping]: https://www.drupal.org/project/commerce_shipping
 [Commerce Recurring]: https://www.drupal.org/project/commerce_recurring
 [Commerce Variation Cart Form]: https://www.drupal.org/project/commerce_variation_cart_form
+[GitHub]: https://github.com/
+[Composer Installers]: https://github.com/composer/installers
+[How to download a module hosted on GitHub via composer.json?]: https://drupal.stackexchange.com/questions/243581/how-to-download-a-module-hosted-on-github-via-composer-json
+[Managing dependencies for a custom product]: https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project

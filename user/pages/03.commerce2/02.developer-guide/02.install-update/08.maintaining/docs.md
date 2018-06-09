@@ -4,6 +4,8 @@ taxonomy:
     category: docs
 ---
 
+** Important: You must use Composer to update Drupal Core, Drupal Commerce and all contributed modules. Otherwise, your site will break. Also, you should always back up your site before starting an update procedure. **
+
 In order to keep Drupal Commerce and your other installed modules up-to-date,
 you can use Composer to produce a list of outdated modules with the Composer
 `outdated` command:
