@@ -13,8 +13,6 @@ Setting up:
 3. product types
 
 4. non-attribute fields
-- taxonomies
-- grouped / related products
 
 5. product architectures
 
