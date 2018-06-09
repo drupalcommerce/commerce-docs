@@ -9,6 +9,8 @@ formatters, widgets, templates, css, preprocess functions, display modes
 theming product page
 add-to-cart form
 
+Possible section on decoupled/headless options?
+
 Add to Cart Form
 Show the form
 Explain how the attribute element translates to the add-to-cart form
