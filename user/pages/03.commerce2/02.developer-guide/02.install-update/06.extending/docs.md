@@ -32,7 +32,7 @@ composer require drupal/commerce_shipping --prefer-dist
 Where `commerce_shipping` is the name of the module you want to add to your
 project. Composer will add the module as well as all of its dependencies.
 
-Then you can install the module using the Admin UI or Drupal console:
+Then you can install the module using the Admin UI (`/admin/modules`) or Drupal console:
 
 The instructions below use [Drupal Console]
 

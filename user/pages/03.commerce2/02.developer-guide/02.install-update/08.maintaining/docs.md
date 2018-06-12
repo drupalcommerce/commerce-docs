@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-** Important: You must use Composer to update Drupal Core, Drupal Commerce and all contributed modules. Otherwise, your site will break. Also, you should always back up your site before starting an update procedure. **
+** Important: You must use Composer to update Drupal Core, Drupal Commerce and all contributed modules. Otherwise, your site will break. Also, you should always back up your site before starting an update procedure. See [Concept: Data Backups documentation] in the Drupal 8 User Guide for more information. **
 
 In order to keep Drupal Commerce and your other installed modules up-to-date,
 you can use Composer to produce a list of outdated modules with the Composer
@@ -29,3 +29,4 @@ profile settings.
 
 [Drupal security advisories]: https://www.drupal.org/security
 [Drupal.org]: https://www.drupal.org
+[Concept: Data Backups documentation]: https://www.drupal.org/docs/user_guide/en/prevent-backups.html
