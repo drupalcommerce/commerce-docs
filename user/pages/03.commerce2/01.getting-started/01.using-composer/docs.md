@@ -43,8 +43,9 @@ This also means less work for you.
 ## How to install it
 
 Composer offers a convenient installer that you can execute directly from the commandline.
-Follow instructions on [how to install Composer here](https://www.getcomposer.org/doc/00-intro.md)
-
+Follow instructions on [how to install Composer here](https://www.getcomposer.org/doc/00-intro.md).
+We recommend that you use the newest version of composer, as older versions may or may not work.
+Check that your version matches the version listed on [getcomposer.org](https://getcomposer.org/).
 
 
 

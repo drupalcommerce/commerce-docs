@@ -12,7 +12,9 @@ taxonomy:
  The recommended memory limit is 256MB or more.
 
  - To properly take advantage of [Drupal's configuration management system], you should always develop locally. For local development we recommend
- [DDEV] (Docker-based) or [Drupal VM] (Vagrant-based). You will also need [Composer].
+ [DDEV] (Docker-based) or [Drupal VM] (Vagrant-based).
+
+ - You will also need [Composer]. We recommend that you use the newest version of composer, as older versions may or may not work. Check that your version matches the version listed on [getcomposer.org](https://getcomposer.org/).
 
 
  ### PHP requirements
@@ -35,7 +37,6 @@ taxonomy:
  [Drupal 8’s requirements]: https://www.drupal.org/requirements
  [DDEV]: https://www.drud.com/what-is-ddev/
  [Drupal VM]: http://www.drupalvm.com/
- [Acquia Dev Desktop]: https://www.acquia.com/products-services/dev-desktop
  [Composer]: https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx
  [Drupal's configuration management system]: https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration
  [Drupal VM documentation]: https://github.com/geerlingguy/drupal-vm/search?q=bcmath&type=Issues
