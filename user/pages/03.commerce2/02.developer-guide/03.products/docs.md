@@ -4,224 +4,70 @@ taxonomy:
     category: docs
 ---
 
-Deleting a product deletes its variations. Adding a variation to a
-product automatically creates a backreference on the variation, accessed
-via `$variation->getProduct()`.
+Description of major sections:
 
-[Purchasable entities](02.purchasable-entities) - When it comes to product architectures, there is
-no one true answer. Furthermore, different clients might have different needs.
-That’s why it’s important for Commerce 2.x to support any number of product
-architectures.
+01. Concepts
+- NOTE: I expect this section of the Products documentation will be the last to be completed, since it should serve as a reference/additional/high-level explanation of concepts relevant to all other sections. Essentially, the idea is that some people like to try to understand the "big picture" before diving into specifics; other people would prefer to just get started and then jump back to "explanations" whenever they get stuck or something is confusing. So I'll keep adding to this section as I work on the others and then re-organize and clean up as necessary as the end.
+- include reference page for glossary of terminology
+- relationship diagram, product structure
+- entities: Product, ProductAttribute, ProductAttributeValue, ProductType, ProductVariation, ProductVariationType
+- also: Purchasable entities, Store entity, Price field, Order item types = order line items
 
+02. Setting up
+- step-by-step config for attributes, product/variation types ("config creation" in developer guide, "content creation" in user guide)
+- using non-attribute fields (including images, files) = supplier/vendor, manufacturer/brand, etc.
+- adding fields to attributes (color hex, alternative names, etc.)
+- links to drupal.org docs on custom fields
+- various approaches to product architecture
+- auto-variation names
+- default variations
+- products without attributes / single variation products
+- configurable products (commerce customizable products)
+- downloadable products / virtual products
+- physical products -> link to shipping module docs
+- subscriptions -> link to recurring module docs
+- bundles
+- content translation module
+- creating config from code ("code recipes") in a "Reference" section at the end
 
-```php
-    /**
-     * id [String]
-     *   Primary key for this product type.
-     *
-     * label [String]
-     *   Label for this product type
-     *
-     * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
-     *   [AVAILABLE = FALSE, TRUE]
-     *   Whether or not it's enabled or disabled. 1 for enabled.
-     *
-     * description [String]
-     *   Description for this product.
-     *
-     * variationType [String] - [DEFAULT = default]
-     *   Foreign key for the variation type used.
-     *
-     * injectVariationFields [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
-     *   Whether or not to inject the variation fields.
-     */
+03. Managing products
+- improvements you, as a site builder or developer, can make to improve
+the admin UI experience for merchants
+- links to relevant drupal.org "pre-requisite" docs
+- Views filter / sort / bulk ops
+- creating duplicate variations / bulk creation of products/variations
+- permissions / access control / deletion-related issues
+- importing products (csv, migrations), feeds / commerce-feeds currently problematic
+- exporting products (csv, json, views_data_export module)
+- managing images? -> links to drupal.org docs
+- creating content from code ("code recipes") in a "Reference" section at the end
 
-    // Create the product type.
-    $product_type = \Drupal\commerce_product\Entity\ProductType::create([
-      'id' => 'my_custom_product_type',
-      'label' => "My custom product type",
-      'description' => '',
-      'variationType' => 'my_custom_variation_type',
-      'injectVariationFields' => TRUE,
-    ]);
-    $product_type->save();
+04. Displaying products
+- formatters, widgets, templates, css, preprocess functions
+- commerce product rendered attribute element, various services, hook alters
+- lots of FAQ, from stackexchange, issue queue, etc.
+- commerce fancy attributes (blog post)
+- add-to-cart form
+- twig examples, links to drupal.org twig / theming docs
+- product catalog (facets, search api)
+- product images, galleries
+- commerce ajax add to cart
+- commerce variation cart form
+- also provide overview of decoupled / headless options?
 
-    // These three functions must be called to add the appropriate fields to the type
-    commerce_product_add_variations_field($product_type);
-    commerce_product_add_stores_field($product_type);
-    commerce_product_add_body_field($product_type);
-    
-```
+05. Marketing products
+- links to drupal.org docs on taxonomies, views, (flag module?)
+- product categories / tags (menus for categories?)
+- includes SEO (links to relevant modules: pathauto, etc.)
+- product reviews
+- grouped / related products
+- upselling / cross-selling / featured products
+- add-ons?
 
-Loading a product type
-----------------------
+Other product-related that will be addressed in separate sections:
+- pricing, currencies, promotions
+- shipping
+- stock
+- tax
+- subscriptions / recurring
 
-```php
-    // Loading is based off of the primary key [String] that was defined when creating it.
-    $product_type = \Drupal\commerce_product\Entity\ProductType::load('my_custom_product_type');
-```
-
-Creating products
------------------
-
-```php
-
-    /**
-     * uid [Integer]
-     *   Foreign key of the user that created the product.
-     *
-     * type [String] - [DEFAULT = default]
-     *   Foreign key of the product type being used.
-     *
-     * title [String]
-     *   The product title.
-     *
-     * stores [Array(\Drupal\commerce_store\Entity\StoreInterface)]
-     *   Array of stores this product belongs to.
-     *
-     * variations [Array(\Drupal\commerce_product\Entity\ProductVariationInterface)]
-     *   Array of variations that belong to this product.
-     */
-
-    // The variations that belong to this product.
-    $variations = [
-      $variation_blue_large,
-    ];
-
-    $product = \Drupal\commerce_product\Entity\Product::create([
-      'uid' => 1,
-      'type' => 'my_custom_product_type',
-      'title' => 'My Custom Product',
-      'stores' => [$store],
-      'variations' => $variations,
-    ]);
-    $product->save();
-
-    // You can also add a variation to a product using the addVariation() method.
-    $product->addVariation($variation_red_medium);
-    $product->save();
-    
-```
-
-Loading a product
------------------
-
-```php
-
-    // Loading is based off of the primary key [Integer]
-    //   1 would be the first one saved, 2 the next, etc.
-    $product = \Drupal\commerce_product\Entity\Product::load(1);
-
-```
-
-
-Product variations are the purchasable parts of products, thus products
-need at least one variation.
-
-Creating variation types
-------------------------
-
-```php
-
-    /**
-     * id [String]
-     *   The primary key for this variation type.
-     *
-     * label [String]
-     *   The label for this variation type.
-     *
-     * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
-     *   [AVAILABLE = FALSE, TRUE]
-     *   Whether or not it's enabled or disabled. 1 for enabled.
-     *
-     * orderItemType [String] - [DEFAULT = default]
-     *   Foreign key for the order item type to use.
-     *
-     * generateTitle [Bool] - [DEFAULT = TRUE]
-     *   Whether or not it should generate the title based off of product label and attributes.
-     */
-    $variation_type = \Drupal\commerce_product\Entity\ProductVariationType::create([
-      'id' => 'my_custom_variation_type',
-      'label' => 'Variation Type With Color',
-      'status' => TRUE,
-      'orderItemType' => 'default',
-      'generateTitle' => TRUE,
-    ]);
-    $variation_type->save();
-
-```
-
-Loading a variation type
-------------------------
-
-```php
-
-    // Loading is based off of the primary key [String] that was defined when creating it.
-    $variation_type = \Drupal\commerce_product\Entity\ProductVariationType::load('my_custom_variation_type');
-    
-```
-
-Creating variations
--------------------
-
-```php
-
-
-    /**
-     * type [String] - [DEFAULT = default]
-     *   Foreign key of the variation type to use.
-     *
-     * sku [String]
-     *   The sku for this variation.
-     *
-     * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
-     *   [AVAILABLE = FALSE, TRUE]
-     *   Whether or not it's enabled or disabled. 1 for enabled.
-     *
-     * price [\Drupal\commerce_price\Price] - [OPTIONAL]
-     *   The price for this variation.
-     *
-     * title [String] - [POTENTIALLY NOT REQUIRED]
-     *   The title for the product variation.
-     *   If the variation type is set to generate a title, this is not used.
-     *   Otherwise, a title must be given.
-     */
-    $variation = \Drupal\commerce_product\Entity\ProductVariation::create([
-      'type' => 'my_custom_variation_type',
-      'sku' => 'test-product-01',
-      'status' => TRUE,
-      'price' => new \Drupal\commerce_price\Price('24.99', 'USD'),
-    ]);
-    $variation->save();
-    
-```
-
-Loading a variation
--------------------
-
-```php
-
-
-    // Loading is based off of the primary key [Integer]
-    //   1 would be the first one saved, 2 the next, etc.
-    $variation = \Drupal\commerce_product\Entity\ProductVariation::load(1);
-
-```
-
-Altering the title field label
-------------------------------
-
-```php
-
-    use Drupal\Core\Entity\EntityTypeInterface;
-
-    /**
-     * Implements hook_entity_base_field_info_alter().
-     */
-    function mymodule_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
-      if ($entity_type->id() == 'commerce_product') {
-        // Change the title field label.
-        $fields['title']->setLabel(t('Product name'));
-      }
-    }
-```
