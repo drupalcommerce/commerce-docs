@@ -6,6 +6,14 @@ category: docs
 
 
 [ui-accordion independent=true open=0]
+[ui-accordion-item title="Amazon Pay"]
+| ![Amazon Pay](amazon2.png) | [Amazon Pay] |
+|:--- |:--- |
+| **Description** | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce. | 
+| **Type** | N/A |
+| **Currencies** |  |
+| **Countries** |  |
+[/ui-accordion-item]
 [ui-accordion-item title="Authorize.Net"]
 | ![Authorize.Net](authorize2.png) | [Authorize.Net] |
 |:--- |:--- |
@@ -110,12 +118,6 @@ category: docs
 | **Type** | Off Site |
 | **Currencies** |   |
 | **Countries** | Iran |
-[/ui-accordion-item]
-[ui-accordion-item title="8. Commerce Amazon Pay"]
-| [Commerce Amazon Pay] | [Commerce Amazon Pay] |
-| --- | --- |
-| **Description** | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce. |
-| **Type** | [N/A] |
 [/ui-accordion-item]
 [ui-accordion-item title="9. Commerce Atom Payment"]
 | [Commerce Atom Payment] | [Commerce Atom Payment] |
@@ -588,7 +590,7 @@ category: docs
 
 [Commerce Pasargad]: https://www.drupal.org/project/commerce_pasargad
 [Commerce Zarinpal]: https://www.drupal.org/project/commerce_zarinpal
-[Commerce Amazon Pay]: https://www.drupal.org/project/commerce_amazon_lpa
+[Amazon Pay]: https://www.drupal.org/project/commerce_amazon_lpa
 [Commerce Atom Payment]: https://www.drupal.org/project/commerce_atom_payment
 [Commerce Braintree Marketplace]: https://www.drupal.org/project/commerce_braintree_marketplace
 [Commerce China Payments]: https://www.drupal.org/project/commerce_cnpay
