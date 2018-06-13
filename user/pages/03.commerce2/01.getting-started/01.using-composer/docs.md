@@ -11,7 +11,7 @@ distributable libraries that can be shared and integrated by others. This is
 possible in part by the PHP Framework Interoperability Group (FIG) and [PSR-4]
 for autoloading of class files.
 
->  Dependency management is not a new concept and not alone to PHP. NPM for NodeJS,
+>  Dependency management is not a new concept and not unique to PHP. NPM for NodeJS,
 >  Bower for front end libraries, Bundler/Gems for Ruby, PIP for Python, Maven for
 >  Java and so forth.
 
@@ -30,7 +30,7 @@ includes other classes when they are first needed. When Composer runs, it
 regenerates the autoloader, giving it the locations of the newly downloaded
 dependencies.
 
-Commerce utilizes various [libraries and dependencies](../../02.libraries-and-dependencies). Without Composer and the
+Commerce utilizes various [libraries and dependencies](../../02.developer-guide/03.core/00.libraries-and-dependencies). Without Composer and the
 generated class autoloader you cannot use Commerce. The libraries we depend on
 will not be available, even if manually installed.
 
@@ -43,8 +43,9 @@ This also means less work for you.
 ## How to install it
 
 Composer offers a convenient installer that you can execute directly from the commandline.
-Follow instructions on [how to install Composer here](https://www.getcomposer.org/doc/00-intro.md)
-
+Follow instructions on [how to install Composer here](https://www.getcomposer.org/doc/00-intro.md).
+We recommend that you use the newest version of composer, as older versions may or may not work.
+Check that your version matches the version listed on [getcomposer.org](https://getcomposer.org/).
 
 
 
@@ -78,7 +79,7 @@ satisfiable version 2 release, and the development version of the `commerceguys/
 
 >  Composer relies on semantic versioning, using `~` and `^` operators, or direct
 >  release names (`2.0-beta3`.)
-> 
+>
 >  Check out the Packagist Semver Checker to explore how version constraints work.
 >  This link is for `drupal/core: ^8.3` [https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.3&minimum-stability=dev](https://semver.mwl.be/#?package=drupal%2Fdrupal&version=%5E8.3&minimum-stability=dev)
 
@@ -118,7 +119,7 @@ If the dependency is required by another package, it will not be removed.
 ## Links and resources
 
 * [Managing Your Drupal Project with Composer](https://glamanate.com/blog/managing-your-drupal-project-composer), or the [slides version](https://docs.google.com/presentation/d/1PK9q2dBkGHfyEO76bEVpqS61wTgA0LGbru2PECiwUnk/edit?usp=sharing)
-* [Drupal Commerce project template](https://github.com/drupalcommerce/project-base)
+* [Drupal Commerce Composer project template](https://github.com/drupalcommerce/project-base)
 * [Drupal Composer project template](https://github.com/drupal-composer/drupal-project)
 * [Platform.sh Drupal 8 + Composer template example](https://github.com/platformsh/platformsh-example-drupal8)
 * [Amazee Labs Composer recipes](https://www.amazeelabs.com/en/blog/drupalcomposerrecipes)

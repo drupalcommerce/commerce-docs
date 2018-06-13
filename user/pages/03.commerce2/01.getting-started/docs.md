@@ -12,7 +12,8 @@ To learn how to use Drupal Commerce, see the [User Guide](../03.user-guide)
 
 Ready to start developing and working with Drupal Commerce?
 
-* [Using Composer](../02.developer-guide/02.install-update/01.using-composer): Drupal Commerce requires using Composer with Drupal. If you are new to Composer, or new to managing Drupal with Composer.
+* [Using Composer](01.using-composer): If you are new to Composer or new to managing Drupal with Composer. Drupal Commerce requires using Composer with Drupal.
+* [Getting Help](02.getting-help): General guidelines for how and where to get help for Drupal Commerce.
 * [Installation guide](../02.developer-guide/02.install-update/02.installation): To get Drupal Commerce installed.
 * [Updating guide](../02.developer-guide/02.install-update/03.updating) guide: For keeping Drupal Commerce up to date.
 

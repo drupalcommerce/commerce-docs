@@ -21,7 +21,7 @@ dependencies to the `mystore` folder:
 composer create-project drupalcommerce/project-base mystore --prefer-source --stability dev
 ```
 
-The –prefer-source option tells Composer to use Git clone as the download method. 
+The –prefer-source option tells Composer to use Git clone as the download method.
 
 When prompted, answer **n** to:
 

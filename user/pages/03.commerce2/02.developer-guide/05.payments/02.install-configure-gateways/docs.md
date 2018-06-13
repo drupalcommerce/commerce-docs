@@ -12,7 +12,7 @@ This tutorial will guide you through configuring a payment gateway provider usin
 Install the Module
 ------------------
 
-The first step is to install the module that provides integration with the desired payment gateway. In this case, Commerce PayPal. Drupal Commerce requires Composer and most related modules would have the same requirement - see [Using Composer](../../01.getting-started/01.using-composer). For specific installation instructions check the module's documentation.
+The first step is to install the module that provides integration with the desired payment gateway. In this case, Commerce PayPal. Drupal Commerce requires Composer and most related modules would have the same requirement - see [Using Composer](../../../01.getting-started/01.using-composer). For specific installation instructions check the module's documentation.
 
 Add a Payment Gateway
 ---------------------
