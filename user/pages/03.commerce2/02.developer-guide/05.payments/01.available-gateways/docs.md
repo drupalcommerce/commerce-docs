@@ -17,7 +17,7 @@ category: docs
 [ui-accordion-item title="Authorize.Net"]
 | ![Authorize.Net](authorize2.png) | [Authorize.Net] |
 |:--- |:--- |
-| **Description** | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. | 
+| **Description** | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js | 
 | **Type** | On Site |
 | **Currencies** |  USD more info: [https://www.authorize.net/international/](https://www.authorize.net/international/) |
 | **Countries** | USA more info: [https://www.authorize.net/international/](https://www.authorize.net/international/) |
