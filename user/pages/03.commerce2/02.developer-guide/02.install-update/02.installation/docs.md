@@ -54,11 +54,11 @@ Be sure to [review requirements](../01.requirements) before starting the install
 ## Alternative installation instructions for Ludwig users
 > Composer is the recommended way to install and maintain a site. Site administrators using Ludwig need to be careful when combining modules that depend on external libraries, since there are no safeguards against incompatible library versions or overlapping requirements.
 
-These instructions assume you are working with an existing site.
+These instructions assume you are working with an existing site. See the Drupal.org documentation on [Installing Drupal 8] if you do not have an existing site.
 
 1. Download and install the [Ludwig module].
 
-2. Download Commerce and the 6 required modules. You will need -dev versions of Commerce and Address for this to work. Other modules (such as payment gateways) haven't been updated with ludwig.json files yet.
+2. Download [Commerce] and the following 6 required modules. Do not install the modules yet.
 - [Address]
 - [Entity API]
 - [Entity Reference Revisions]
@@ -66,10 +66,21 @@ These instructions assume you are working with an existing site.
 - [Profile]
 - [State Machine]
 
-3. Use Ludwig to download libraries required by those modules. Go to `admin/reports/packages` to see the listing of required packages. The Packages page provides a download link for each missing library along with the paths where they should be placed. Download the libraries, then clear the cache to make them available.
-![Ludwig user interface](../images/ludwig-ui.png)
+3. Ludwig generates a listing of libraries required by those modules. The Packages page at `admin/reports/packages` provides a download link for each missing library along with the paths where they should be placed.
 
-4. Install Commerce and the 6 required modules.
+![Ludwig user interface](../images/ludwig-ui.jpg)
+
+4. Download the libraries, then clear the cache to make them available. For example, download commerceguys/addressing and place it in `modules/contrib/address/lib/commerceguys-addressing/v1.0.0`. You should see the STATUS for each required package change from "Missing" to "Installed". Alternatively, if you are comfortable with the command line, you can use Drupal Console or Drush commands.
+
+ **Drupal Console**
+ - ludwig:list: List all managed packages.
+ - ludwig:download: Download missing packages.
+
+ **Drush**
+ - ludwig-download: Download missing packages.
+
+
+5. Install Commerce and the 6 required modules.
 
 > Whenever Commerce needs to be updated, all 7 modules need to be downloaded again, and then all of their libraries need to be downloaded again as well.
 
@@ -83,9 +94,11 @@ In subsequent sections of the [Installation and updates documentation](../), it 
  [these instructions]: https://github.com/drupal-composer/drupal-project/issues/64#issuecomment-206455356
  [Composer template for Drupal projects README]: https://github.com/drupal-composer/drupal-project/blob/8.x/README.md
  [Ludwig module]: https://www.drupal.org/project/ludwig
+ [Commerce]: https://www.drupal.org/project/commerce
  [Address]: https://www.drupal.org/project/address
  [Entity API]: https://www.drupal.org/project/entity
  [Entity Reference Revisions]: https://www.drupal.org/project/entity_reference_revisions
  [Inline Entity Form]: https://www.drupal.org/project/inline_entity_form
  [Profile]: https://www.drupal.org/project/profile
  [State Machine]: https://www.drupal.org/project/state_machine
+ [Installing Drupal 8]: https://www.drupal.org/docs/8/install
