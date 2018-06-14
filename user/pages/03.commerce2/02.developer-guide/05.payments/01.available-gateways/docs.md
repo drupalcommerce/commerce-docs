@@ -86,7 +86,6 @@ category: docs
 |:--- |:--- |
 | **Description** | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |
 | **Type** | Off Site |
-
 | **Countries** | Iran |
 [/ui-accordion-item]
 [ui-accordion-item title="4. cashpresso"]
@@ -116,7 +115,6 @@ category: docs
 | --- | --- |
 | **Description** | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module. |
 | **Type** | Off Site |
-
 | **Countries** | Iran |
 [/ui-accordion-item]
 [ui-accordion-item title="9. Commerce Atom Payment"]
@@ -136,7 +134,6 @@ category: docs
 | --- | --- |
 | **Description** | Integrates with Alipay and WeChat Pay |
 | **Type** | Off site |
-
 | **Countries** | China |
 [/ui-accordion-item]
 [ui-accordion-item title="12. Commerce Coinpayments"]
@@ -308,7 +305,6 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates Flutterwave Rave into Drupal Commerce payment. It currently supports the Standard and Hosted Payment Page workflows from Rave. |
 | **Type** | Off site |
-
 | **Countries** | Nigeria |
 [/ui-accordion-item]
 [ui-accordion-item title="36. Commerce Razorpay Payment Integration"]
@@ -322,8 +318,13 @@ category: docs
 | --- | --- |
 | **Description** | Integrates Commerce Payment with RBS Payment system API |
 | **Type** | Off site |
-
 | **Countries** | Russia |
+[/ui-accordion-item]
+[ui-accordion-item title="38. Commerce Sberbank Acquiring"]
+| [Commerce Sberbank Acquiring] | [Commerce Sberbank Acquiring] |
+| --- | --- |
+| **Description** | Integration Sberbank Acquiring with Drupal Commerce 2. |
+| **Type** | Off site |
 [/ui-accordion-item]
 [ui-accordion-item title="38. Commerce Saman Gateway"]
 | [Commerce Saman Gateway] | [Commerce Saman Gateway] |
@@ -354,7 +355,6 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates Swedbank Payment Portal payment methods (banklink, credit card) as payment gateways in Drupal Commerce. |
 | **Type** | Off site |
-
 | **Countries** | Estonia |
 [/ui-accordion-item]
 [ui-accordion-item title="43. Commerce Tpay"]
@@ -362,7 +362,6 @@ category: docs
 | --- | --- |
 | **Description** | This project integrates Tpay payment and checkout systems |
 | **Type** | Off site |
-
 | **Countries** | Poland |
 [/ui-accordion-item]
 [ui-accordion-item title="44. Commerce USAePay"]
@@ -376,7 +375,6 @@ category: docs
 | --- | --- |
 | **Description** | Vipps is a Norwegian payment application designed for smartphones developed by DNB. |
 | **Type** | Off site |
-
 | **Countries** | Norway |
 [/ui-accordion-item]
 [ui-accordion-item title="46. Commerce Wayforpay"]
@@ -428,6 +426,12 @@ category: docs
 | --- | --- |
 | **Description** | Bulgarian payments gateway http://epay.bg for Commerce module. |
 | **Type** | Off site |
+[/ui-accordion-item]
+[ui-accordion-item title="54. GlobalOnePay"]
+| [GlobalOnePay] | [GlobalOnePay] |
+| --- | --- |
+| **Description** | Provides an integration with GlobalOnePay payment gateway. Right now the module supports only on-site payments. |
+| **Type** | On site |
 [/ui-accordion-item]
 [ui-accordion-item title="54. Ingenico"]
 | [Ingenico] | [Ingenico] |
@@ -508,6 +512,12 @@ category: docs
 | --- | --- |
 | **Description** | Allows Drupal Commerce orders to be paid using PayUmoney payment methods. |
 | **Type** | Off site|
+[/ui-accordion-item]
+[ui-accordion-item title="66. QualPay"]
+| [QualPay] | [QualPay] |
+| --- | --- |
+| **Description** | This module integrates QualPay with Drupal Commerce, providing a one-stop payment gateway. Customers can make payments in your Drupal Commerce shop in a secure way without leaving your site. |
+| **Type** | On site|
 [/ui-accordion-item]
 [ui-accordion-item title="66. QuickPay"]
 | [QuickPay] | [QuickPay] |
@@ -635,4 +645,6 @@ category: docs
 [Commercepayu]: https://www.drupal.org/project/commercepayu
 [Commerce Fondy]: https://www.drupal.org/project/commerce_fondy
 [Commerce Sofortbanking]: https://www.drupal.org/project/commerce_sofortbanking
-
+[GlobalOnePay]:https://www.drupal.org/project/commerce_globalonepay
+[QualPay]: https://www.drupal.org/project/commerce_qualpay
+[Commerce Sberbank Acquiring]: https://www.drupal.org/project/commerce_sberbank_acquiring
