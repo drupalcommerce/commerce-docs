@@ -117,26 +117,26 @@ category: docs
 | **Type** | Off Site |
 | **Countries** | Iran |
 [/ui-accordion-item]
-[ui-accordion-item title="9. Commerce Atom Payment"]
+[ui-accordion-item title="8. Commerce Atom Payment"]
 | [Commerce Atom Payment] | [Commerce Atom Payment] |
 | --- | --- |
 | **Description** | This payment gateway will support Indian and international credit card, Debit card and internet banking system with safe and secure. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="10. Commerce Braintree Marketplace"]
+[ui-accordion-item title="9. Commerce Braintree Marketplace"]
 | [Commerce Braintree Marketplace] | [Commerce Braintree Marketplace] |
 | --- | --- |
 | **Description** | Extends commerce_braintree module to leverage the Braintree marketplace transactions API. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="11. Commerce China Payments"]
+[ui-accordion-item title="10. Commerce China Payments"]
 | [Commerce China Payments] | [Commerce China Payments] |
 | --- | --- |
 | **Description** | Integrates with Alipay and WeChat Pay |
 | **Type** | Off site |
 | **Countries** | China |
 [/ui-accordion-item]
-[ui-accordion-item title="12. Commerce Coinpayments"]
+[ui-accordion-item title="11. Commerce Coinpayments"]
 | [Commerce Coinpayments] | [Commerce Coinpayments] |
 | --- | --- |
 | **Description** | Payments Module for Drupal Commerce, which accepts all cryptocurrencies for payments in your drupal site |
@@ -144,31 +144,31 @@ category: docs
 | **Currencies** | Cryptocurrency https://www.coinpayments.net/supported-coins |
 | **Countries** | [N/A] |
 [/ui-accordion-item]
-[ui-accordion-item title="13. Commerce DIBS integration"]
+[ui-accordion-item title="12. Commerce DIBS integration"]
 | [Commerce DIBS integration] | [Commerce DIBS integration] |
 | --- | --- |
 | **Description** | Provides a DIBS payment gateway integration which allows you to send your clients to make an off-site payment directly on the DIBS payment system. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="14. Commerce Dps Pxpay"]
+[ui-accordion-item title="13. Commerce Dps Pxpay"]
 | [Commerce Dps Pxpay] | [Commerce Dps Pxpay] |
 | --- | --- |
 | **Description** | DPS (PaymentExpress) PxPay payment method |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="15. Commerce DPS"]
+[ui-accordion-item title="14. Commerce DPS"]
 | [Commerce DPS] | [Commerce DPS] |
 | --- | --- |
 | **Description** | DPS (PaymentExpress) payment methods for Drupal Commerce. |
 | **Type** | Off site / On site|
 [/ui-accordion-item]
-[ui-accordion-item title="16. Commerce Ecpay"]
+[ui-accordion-item title="15. Commerce Ecpay"]
 | [Commerce Ecpay] | [Commerce Ecpay] |
 | --- | --- |
 | **Description** | Provides integration between Drupal Commerce and ECPay’s payment, shipping, and e-invoice solutions. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="17. Commerce Elavon"]
+[ui-accordion-item title="16. Commerce Elavon"]
 | [Commerce Elavon] | [Commerce Elavon] |
 | --- | --- |
 | **Description** | Integrate Elavon Virtual Merchant payment service Converge payment gateway with Commerce module. There are two payment options Onsite or Offsite Redirect |
@@ -176,7 +176,7 @@ category: docs
 | **Currencies** | https://www.elavon.com/country-selector.html |
 | **Countries** | https://www.elavon.com/country-selector.html |
 [/ui-accordion-item]
-[ui-accordion-item title="18. Commerce ePayco"]
+[ui-accordion-item title="17. Commerce ePayco"]
 | [Commerce ePayco] | [Commerce ePayco] |
 | --- | --- |
 | **Description** | ePayco is a Colombian payment gateway that Integrate ePayco Off-site payments, Set-up global gateway settings, Alter payment data dinamically 
@@ -184,7 +184,7 @@ category: docs
 | **Currencies** | Bulgaria |
 | **Countries** | BGN |
 [/ui-accordion-item]
-[ui-accordion-item title="19. Commerce Epn"]
+[ui-accordion-item title="18. Commerce Epn"]
 | [Commerce Epn] | [Commerce Epn] |
 | --- | --- |
 | **Description** | Payment Gateway for eProcessingNetwork.com |
@@ -192,7 +192,7 @@ category: docs
 | **Currencies** | USD |
 | **Countries** | USA |
 [/ui-accordion-item]
-[ui-accordion-item title="20. Commerce Euplatesc"]
+[ui-accordion-item title="19. Commerce Euplatesc"]
 | [Commerce Euplatesc] | [Commerce Euplatesc] |
 | --- | --- |
 | **Description** | This project integrates EuPlatesc.ro into the Drupal Commerce payment and checkout systems. |
@@ -200,7 +200,7 @@ category: docs
 | **Currencies** | RON |
 | **Countries** | Romania |
 [/ui-accordion-item]
-[ui-accordion-item title="21. Commerce Fondy"]
+[ui-accordion-item title="20. Commerce Fondy"]
 | [Commerce Fondy] | [Commerce Fondy] |
 | --- | --- |
 | **Description** | Fondy Payment Gateway module allows the admin to set up the Fondy payment method on their store. Qiwi, Yandex, Privat24, cash payments, PayPal, SEPA, Swift, online banking with Ukrainian, Russian and European banks |
@@ -208,7 +208,7 @@ category: docs
 | **Currencies** |  Visa, Visa Electron, Mastercard and Maestro bank cards from any country |
 | **Countries** |  Visa, Visa Electron, Mastercard and Maestro bank cards from any country |
 [/ui-accordion-item]
-[ui-accordion-item title="22. Commerce Gocardless Payment"]
+[ui-accordion-item title="21. Commerce Gocardless Payment"]
 | [Commerce Gocardless Payment] | [Commerce Gocardless Payment] |
 | --- | --- |
 | **Description** | Integration with the UK Direct Debit payment gateway GoCardless |
@@ -216,19 +216,19 @@ category: docs
 | **Currencies** | GBP |
 | **Countries** | UK |
 [/ui-accordion-item]
-[ui-accordion-item title="23. Commerce GoCardless"]
+[ui-accordion-item title="22. Commerce GoCardless"]
 | [Commerce GoCardless] | [Commerce GoCardless] |
 | --- | --- |
 | **Description** | Integration with the UK Direct Debit payment gateway GoCardless |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="24. Commerce Iats"]
+[ui-accordion-item title="23. Commerce Iats"]
 | [Commerce Iats] | [Commerce Iats] |
 | --- | --- |
 | **Description** | iATS Payments integration for the Drupal Commerce |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="25. Commerce Liqpay Gateway"]
+[ui-accordion-item title="24. Commerce Liqpay Gateway"]
 | [Commerce Liqpay Gateway] | [Commerce Liqpay Gateway] |
 | --- | --- |
 | **Description** | payment services provided by LiqPay. It efficiently integrates payments from various sources such as: credit cards, cash via self-service terminals (offline payments), email receipts, privat24 banking or liqpay accounts. |
@@ -236,19 +236,19 @@ category: docs
 | **Currencies** | UAH |
 | **Countries** | Ukraine |
 [/ui-accordion-item]
-[ui-accordion-item title="26. Commerce Moyasar"]
+[ui-accordion-item title="25. Commerce Moyasar"]
 | [Commerce Moyasar] | [Commerce Moyasar] |
 | --- | --- |
 | **Description** | Moyasar integration for the Drupal Commerce payment system. |
 | **Type** | On site / Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="27. Commerce MultiSafepay"]
+[ui-accordion-item title="26. Commerce MultiSafepay"]
 | [Commerce MultiSafepay] | [Commerce MultiSafepay] |
 | --- | --- |
 | **Description** | Multisafepay integration for Drupal Commerce. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="28. Commerce Omise"]
+[ui-accordion-item title="27. Commerce Omise"]
 | [Commerce Omise] | [Commerce Omise] |
 | --- | --- |
 | **Description** | Omise integration for the Drupal Commerce payment system. |
@@ -256,7 +256,7 @@ category: docs
 | **Currencies** | Source: https://www.omise.co/multi-currency |
 | **Countries** | Source: https://www.omise.co/multi-currency |
 [/ui-accordion-item]
-[ui-accordion-item title="29. Commerce Pagos Net"]
+[ui-accordion-item title="28. Commerce Pagos Net"]
 | [Commerce Pagos Net] | [Commerce Pagos Net] |
 | --- | --- |
 | **Description** | This project integrates the PagosNet payment gateway into the Drupal Commerce payment and checkout systems. |
@@ -264,7 +264,7 @@ category: docs
 | **Currencies** | BOB |
 | **Countries** | Bolivia |
 [/ui-accordion-item]
-[ui-accordion-item title="30. Commerce Pagseguro"]
+[ui-accordion-item title="29. Commerce Pagseguro"]
 | [Commerce Pagseguro] | [Commerce Pagseguro] |
 | --- | --- |
 | **Description** | PagSeguro integration for the Drupal Commerce payment and checkout systems. |
@@ -272,7 +272,7 @@ category: docs
 | **Currencies** | BRL |
 | **Countries** | Brazil |
 [/ui-accordion-item]
-[ui-accordion-item title="31. Commerce Pagseguro Transp"]
+[ui-accordion-item title="30. Commerce Pagseguro Transp"]
 | [Commerce Pagseguro Transp] | [Commerce Pagseguro Transp] |
 | --- | --- |
 | **Description** | This project integrates PagSeguro Transparente, brazilian payment provider |
@@ -280,13 +280,13 @@ category: docs
 | **Currencies** | BRL|
 | **Countries** | Brazil |
 [/ui-accordion-item]
-[ui-accordion-item title="32. Commerce Payir"]
+[ui-accordion-item title="31. Commerce Payir"]
 | [Commerce Payir] | [Commerce Payir] |
 | --- | --- |
 | **Description** | Pay.ir payment method for Drupal Commerce |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="33. Commerce PayTabs"]
+[ui-accordion-item title="32. Commerce PayTabs"]
 | [Commerce PayTabs] | [Commerce PayTabs] |
 | --- | --- |
 | **Description** | This module integrates PayTabs with Drupal Commerce. This is an offsite payment gateway. It provides credit card payments only, so far. |
@@ -294,33 +294,33 @@ category: docs
 | **Currencies** | Source: https://www.paytabs.com/en/global/ |
 | **Countries** | Source: https://www.paytabs.com/en/global/ |
 [/ui-accordion-item]
-[ui-accordion-item title="34. Commerce Payway"]
+[ui-accordion-item title="33. Commerce Payway"]
 | [Commerce Payway] | [Commerce Payway] |
 | --- | --- |
 | **Description** | Commerce Payway is a payment module that integrates Westpac Payway API with the Drupal Commerce module. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="35. Commerce Rave"]
+[ui-accordion-item title="34. Commerce Rave"]
 | [Commerce Rave] | [Commerce Rave] |
 | --- | --- |
 | **Description** | This module integrates Flutterwave Rave into Drupal Commerce payment. It currently supports the Standard and Hosted Payment Page workflows from Rave. |
 | **Type** | Off site |
 | **Countries** | Nigeria |
 [/ui-accordion-item]
-[ui-accordion-item title="36. Commerce Razorpay Payment Integration"]
+[ui-accordion-item title="35. Commerce Razorpay Payment Integration"]
 | [Commerce Razorpay Payment Integration] | [Commerce Razorpay Payment Integration] |
 | --- | --- |
 | **Description** | Razorpay Payment Integration |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="37. Commerce Rbspayment"]
+[ui-accordion-item title="36. Commerce Rbspayment"]
 | [Commerce Rbspayment] | [Commerce Rbspayment] |
 | --- | --- |
 | **Description** | Integrates Commerce Payment with RBS Payment system API |
 | **Type** | Off site |
 | **Countries** | Russia |
 [/ui-accordion-item]
-[ui-accordion-item title="38. Commerce Sberbank Acquiring"]
+[ui-accordion-item title="37. Commerce Sberbank Acquiring"]
 | [Commerce Sberbank Acquiring] | [Commerce Sberbank Acquiring] |
 | --- | --- |
 | **Description** | Integration Sberbank Acquiring with Drupal Commerce 2. |
@@ -433,25 +433,25 @@ category: docs
 | **Description** | Provides an integration with GlobalOnePay payment gateway. Right now the module supports only on-site payments. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="54. Ingenico"]
+[ui-accordion-item title="55. Ingenico"]
 | [Ingenico] | [Ingenico] |
 | --- | --- |
 | **Description** | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions. |
 | **Type** | On site / Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="55. Klarna Checkout"]
+[ui-accordion-item title="56. Klarna Checkout"]
 | [Klarna Checkout] | [Klarna Checkout] |
 | --- | --- |
 | **Description** | This project integrates Klarna Checkout payment into the Drupal Commerce payment and checkout systems. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="56. Mollie"]
+[ui-accordion-item title="57. Mollie"]
 | [Mollie] | [Mollie] |
 | --- | --- |
 | **Description** | Drupal Commerce Payment module for Mollie Payment Services. Implements Mollie payment services for use with Drupal Commerce. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="57. Moneris"]
+[ui-accordion-item title="58. Moneris"]
 | [Moneris] | [Moneris] |
 | --- | --- |
 | **Description** | Moneris is a payment solution for Canada and US. It supports also Moneris HPP payment system (included as a separate module in 2.x) |
@@ -459,13 +459,13 @@ category: docs
 | **Currencies** | CAD, USD |
 | **Countries** | Canada, USA |
 [/ui-accordion-item]
-[ui-accordion-item title="58. Omise"]
+[ui-accordion-item title="59. Omise"]
 | [Omise] | [Omise] |
 | --- | --- |
 | **Description** | This module integrates Omise with Drupal Commerce. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="59. Payeezy"]
+[ui-accordion-item title="60. Payeezy"]
 | [Payeezy] | [Payeezy] |
 | --- | --- |
 | **Description** | This module integrates Payeezy with Drupal Commerce to accept credit card payments on-site. Hosted (offsite) and on-site payment is supported. |
@@ -473,7 +473,7 @@ category: docs
 | **Currencies** | Source: https://support.payeezy.com/hc/en-us/articles/205757587-Dynamic-Currency-Conversion-DCC-and-Dynamic-Pricing-DP-Feature-Guide |
 | **Countries** | Source: https://support.payeezy.com/hc/en-us/articles/205757587-Dynamic-Currency-Conversion-DCC-and-Dynamic-Pricing-DP-Feature-Guide |
 [/ui-accordion-item]
-[ui-accordion-item title="60. payjp"]
+[ui-accordion-item title="61. payjp"]
 | [payjp] | [payjp] |
 | --- | --- |
 | **Description** | Pay.JP integration for the Drupal Commerce payment system. |
@@ -481,19 +481,19 @@ category: docs
 | **Currencies** | JPY https://pay.jp/ |
 | **Countries** | Japan / https://pay.jp/  |
 [/ui-accordion-item]
-[ui-accordion-item title="61. Paymill"]
+[ui-accordion-item title="62. Paymill"]
 | [Paymill] | [Paymill] |
 | --- | --- |
 | **Description** | Commerce Paymill is Drupal Commerce module that integrates the Paymill payement gateway into your Drupal Commerce shop. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="62. PayONE (sandbox)"]
+[ui-accordion-item title="63. PayONE (sandbox)"]
 | [PayONE] | [PayONE (sandbox)] |
 | --- | --- |
 | **Description** | This module integrates the German PAYONE Payment Provider with Drupal Commerce 2.x (D8) to accept credit card payments on-site and PayPal Express payments off-line. |
 | **Type** | On site / Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="63. Payplug"]
+[ui-accordion-item title="64. Payplug"]
 | [Payplug] | [Payplug] |
 | --- | --- |
 | **Description** | This module integrates PayPlug payment as a gateway for your Drupal Commerce 2.x website. |
@@ -501,25 +501,25 @@ category: docs
 | **Currencies** | EUR |
 | **Countries** |   |
 [/ui-accordion-item]
-[ui-accordion-item title="64. Paytrail"]
+[ui-accordion-item title="65. Paytrail"]
 | [Paytrail] | [Paytrail] |
 | --- | --- |
 | **Description** | As Suomen Verkkomaksut became Paytrail, this module will replace [commerce_suomenverkkomaksut] module. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="65. PayU Money"]
+[ui-accordion-item title="66. PayU Money"]
 | [PayU Money] | [PayU Money] |
 | --- | --- |
 | **Description** | Allows Drupal Commerce orders to be paid using PayUmoney payment methods. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="66. QualPay"]
+[ui-accordion-item title="67. QualPay"]
 | [QualPay] | [QualPay] |
 | --- | --- |
 | **Description** | This module integrates QualPay with Drupal Commerce, providing a one-stop payment gateway. Customers can make payments in your Drupal Commerce shop in a secure way without leaving your site. |
 | **Type** | On site|
 [/ui-accordion-item]
-[ui-accordion-item title="66. QuickPay"]
+[ui-accordion-item title="68. QuickPay"]
 | [QuickPay] | [QuickPay] |
 | --- | --- |
 | **Description** | Allows Drupal Commerce payments through the Danish payment provider QuickPay |
@@ -527,31 +527,31 @@ category: docs
 | **Currencies** | All currencies |
 | **Countries** | Denmark, Germany, UK, France, Greenland, Italy, Norway, Nederlands, Poland, Sweden |
 [/ui-accordion-item]
-[ui-accordion-item title="67. smartpay"]
+[ui-accordion-item title="69. smartpay"]
 | [smartpay] | [smartpay] |
 | --- | --- |
 | **Description** | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="68. Trustpay"]
+[ui-accordion-item title="70. Trustpay"]
 | [Trustpay] | [Trustpay] |
 | --- | --- |
 | **Description** | TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="69. WeChat Pay"]
+[ui-accordion-item title="71. WeChat Pay"]
 | [WeChat Pay] | [WeChat Pay] |
 | --- | --- |
 | **Description** | This module provides the WeChat Pay integration for Drupal Commerce 2 on Drupal 8. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="70. Worldline"]
+[ui-accordion-item title="72. Worldline"]
 | [Worldline] | [Worldline] |
 | --- | --- |
 | **Description** | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="71. Suomen Verkkomaksut"]
+[ui-accordion-item title="73. Suomen Verkkomaksut"]
 | [Suomen Verkkomaksut] | [Suomen Verkkomaksut] |
 | --- | --- |
 | **Description** | Commerce Suomen Verkkomaksut integrates Suomen Verkkomaksut payment method |
