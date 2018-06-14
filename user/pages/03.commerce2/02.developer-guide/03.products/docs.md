@@ -30,17 +30,8 @@ Description of major sections:
 - content translation module
 - creating config from code ("code recipes") in a "Reference" section at the end
 
-03. Managing products
-- improvements you, as a site builder or developer, can make to improve
-the admin UI experience for merchants
-- links to relevant drupal.org "pre-requisite" docs
-- Views filter / sort / bulk ops
-- creating duplicate variations / bulk creation of products/variations
-- permissions / access control / deletion-related issues
-- importing products (csv, migrations), feeds / commerce-feeds currently problematic
-- exporting products (csv, json, views_data_export module)
-- managing images? -> links to drupal.org docs
-- creating content from code ("code recipes") in a "Reference" section at the end
+#### [Product management](03.product-management)
+- Design and customize the product management experience for administrative users.
 
 04. Displaying products
 - formatters, widgets, templates, css, preprocess functions
@@ -49,8 +40,7 @@ the admin UI experience for merchants
 - commerce fancy attributes (blog post)
 - add-to-cart form
 - twig examples, links to drupal.org twig / theming docs
-- product catalog (facets, search api)
-- product images, galleries
+- product images
 - commerce ajax add to cart
 - commerce variation cart form
 - also provide overview of decoupled / headless options?
@@ -63,6 +53,9 @@ the admin UI experience for merchants
 - grouped / related products
 - upselling / cross-selling / featured products
 - add-ons?
+- product catalog (facets, search api)
+- product images, galleries
+
 
 Other product-related that will be addressed in separate sections:
 - pricing, currencies, promotions

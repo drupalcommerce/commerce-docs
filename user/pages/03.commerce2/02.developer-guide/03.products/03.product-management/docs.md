@@ -23,10 +23,10 @@ Learn techniques for designing and customizing the product management experience
 - Learn about options for importing products.
 - Set up a product data export page with the Views data export module.
 
-#### [Image management](06.image-management)
+#### [Product image management](06.image-management)
 - TBD
 
-#### [Code recipes](07.code-recipes)
+#### [Product code recipes](07.code-recipes)
 - Create products, variations, and attribute values.
 - Load products, variations, and attribute values.
 - Work with attribute values.
