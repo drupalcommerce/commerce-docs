@@ -13,12 +13,13 @@ Description of major sections:
 - entities: Product, ProductAttribute, ProductAttributeValue, ProductType, ProductVariation, ProductVariationType
 - also: Purchasable entities, Store entity, Price field, Order item types = order line items
 
-02. Setting up
+#### [Basic setup](02.basic-setup)
 - step-by-step config for attributes, product/variation types ("config creation" in developer guide, "content creation" in user guide)
 - using non-attribute fields (including images, files) = supplier/vendor, manufacturer/brand, etc.
 - adding fields to attributes (color hex, alternative names, etc.)
 - links to drupal.org docs on custom fields
 - various approaches to product architecture
+- product specification content type
 - auto-variation names
 - default variations
 - products without attributes / single variation products
@@ -32,8 +33,9 @@ Description of major sections:
 
 #### [Product management](03.product-management)
 - Design and customize the product management experience for administrative users.
+- Create product content programmatically, via bulk importing, and using data entry forms.
 
-04. Displaying products
+#### [Displaying products](04.displaying-products)
 - formatters, widgets, templates, css, preprocess functions
 - commerce product rendered attribute element, various services, hook alters
 - lots of FAQ, from stackexchange, issue queue, etc.
@@ -44,6 +46,7 @@ Description of major sections:
 - commerce ajax add to cart
 - commerce variation cart form
 - also provide overview of decoupled / headless options?
+- display multiple products
 
 05. Marketing products
 - links to drupal.org docs on taxonomies, views, (flag module?)
