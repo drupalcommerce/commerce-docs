@@ -1,5 +1,5 @@
 ---
-title: Setup
+title: Basic setup
 taxonomy:
     category: docs
 ---

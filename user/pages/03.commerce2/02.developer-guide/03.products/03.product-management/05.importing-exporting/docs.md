@@ -60,7 +60,7 @@ After saving all your changes, you should be able to navigate to your new Produc
 ![Finished product export page](../../images/product-export-view-06.jpg)
 
 ---
-In the next section, ...
+In the next section, we'll look at image management in Drupal.
 
 [Creating Listings with Views]: https://www.drupal.org/docs/user_guide/en/views-chapter.html
 [Commerce Feeds module]: https://www.drupal.org/project/commerce_feeds

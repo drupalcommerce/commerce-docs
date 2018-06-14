@@ -1,8 +1,11 @@
 ---
-title: Reference
+title: Code recipes
 taxonomy:
     category: docs
 ---
+
+  see also: How to create commerce products from code: https://www.drupal.org/project/commerce/issues/2811529
+
 
 Creating products
 -----------------
@@ -111,6 +114,17 @@ Loading a variation
 
 ```
 
+Checking if an attribute value exists within a particular attribute type
+--------------------
+
+```php
+    // Look up while filtering by Attribute
+    $productAttributeId = \Drupal::entityTypeManager()
+          ->getStorage('commerce_product_attribute_value')
+          ->condition('attribute', 'attribute_machine_name')
+          ->condition('field_value', field_value)
+          ->execute();
+```
 
 Creating values for an attribute
 --------------------------------
@@ -159,7 +173,7 @@ Loading an attribute value
     $red = \Drupal\commerce_product\Entity\ProductAttributeValue::load(1);
 ```
 
-Assigning attributes to a variation
+Assigning attribute values to a variation
 -----------------------------------
 
 Let's say we want our hypothetical product to have two variations. One
@@ -191,4 +205,3 @@ MUST have those attributes.
     ]);
     $variation_blue_large->save();
 ```
-

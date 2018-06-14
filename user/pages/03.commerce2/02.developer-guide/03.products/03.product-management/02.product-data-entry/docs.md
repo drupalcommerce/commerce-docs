@@ -1,5 +1,5 @@
 ---
-title: Content creation
+title: Product data entry
 taxonomy:
     category: docs
 ---
@@ -11,9 +11,5 @@ Drupal 8 User Guide [Concept: Forms and Widgets](https://www.drupal.org/docs/use
 - reordering, disabled fields
 - field group module: https://www.webwash.net/customize-content-form-page-using-field-group-drupal-8/
 
-Options for importing products
-- csv, migrations, example code: https://github.com/mglaman/commerce_examples/tree/master/migrations
-- commerce feeds: https://www.drupal.org/project/commerce_feeds, some work has been done: https://www.drupal.org/project/commerce_feeds/issues/2931860
-- commerce migrate: https://www.drupal.org/project/commerce_migrate
-
-Creating content from code -> References section at end.
+---
+In the next section, we'll look at issues related to deletion of product-related data.
