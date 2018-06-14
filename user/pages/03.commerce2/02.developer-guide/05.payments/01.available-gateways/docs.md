@@ -11,48 +11,48 @@ category: docs
 |:--- |:--- |
 | **Description** | This module integratesAmazon Pay and Login with Amazon with Drupal and Drupal Commerce. | 
 | **Type** | N/A |
-| **Currencies** |  |
-| **Countries** |  |
+| **Currencies** | GBP, EUR, USD |
+| **Countries** | DE, UK, US |
 [/ui-accordion-item]
 [ui-accordion-item title="Authorize.Net"]
 | ![Authorize.Net](authorize2.png) | [Authorize.Net] |
 |:--- |:--- |
 | **Description** | Authorize.Net integration for Drupal Commerce payment and checkout system. Currently supports credit card payments on the checkout form via Accept.js. | 
 | **Type** | On Site |
-| **Currencies** |  USD more info: https://www.authorize.net/international/ |
-| **Countries** | USA more info: https://www.authorize.net/international/ |
+| **Currencies** |  USD more info: [https://www.authorize.net/international/](https://www.authorize.net/international/) |
+| **Countries** | USA more info: [https://www.authorize.net/international/](https://www.authorize.net/international/) |
 [/ui-accordion-item]
 [ui-accordion-item title="Braintree"]
 | ![Braintree](braintree2.png) | [Braintree] |
 |:--- |:--- |
 | **Description** | This module integrates Braintree Payments with Drupal Commerce to accept credit card payments on-site and store card data inthe Braintree vault for later processing. |
 | **Type** | On Site |
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | [https://developers.braintreepayments.com/reference/general/currencies](https://developers.braintreepayments.com/reference/general/currencies) |
+| **Countries** | [https://developers.braintreepayments.com/reference/general/countries/](https://developers.braintreepayments.com/reference/general/countries/) |
 [/ui-accordion-item]
 [ui-accordion-item title="PayPal"]
 | ![PayPal](paypal2.png) | [PayPal] |
 | --- | --- |
 | **Description** | This project integrates PayPal into the Drupal Commerce payment and checkout systems. It currently supports off-site payment via PayPal Express Checkout (EC), on-site credit card payment via PayPal Payments Pro. |
 | **Type** | On site / Off site|
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | [https://developer.paypal.com/docs/integration/direct/rest/currency-codes/](https://developer.paypal.com/docs/integration/direct/rest/currency-codes/) |
+| **Countries** | [https://developer.paypal.com/docs/integration/direct/rest/country-codes/](https://developer.paypal.com/docs/integration/direct/rest/country-codes/) |
 [/ui-accordion-item]
 [ui-accordion-item title="Square"]
 | ![Square](square2.png) | [Square] |
 | --- | --- |
 | **Description** | Square is the payment / POS company making commerce easy and accessible to everyone. This module integrates with their eCommerce API for online payments into Drupal Commerce. |
 | **Type** | On site|
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | AUD, CAD, GBP, JPY, USD |
+| **Countries** | AU, CA, JP, UK, US |
 [/ui-accordion-item]
 [ui-accordion-item title="Stripe"]
 | ![Stripe](stripe2.png) | [Stripe] |
 | --- | --- |
 | **Description** | This module integrates Stripe with Drupal Commerce, providing a tokenized payment gateway. Customers can make payments in yourDrupal Commerce shop in a secure way without leaving your site. |
 | **Type** | On site|
-| **Currencies** |   |
-| **Countries** |   |
+| **Currencies** | USD, AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW |
+| **Countries** | AD, AT, BE, BG, HR, CY, CZ, DK, EE, FO, FI, FR, DE, GI, GR, GL, GG, VA, HU, IS, IE, IM, IL, IT, JE, LV, LI, LT, LU, MK, MT, MC, ME, NL, NO, PL, PT, RO, PM, SM, RS, SK, SI, ES, SJ, SE, CH, TR, GB |
 [/ui-accordion-item]
 [ui-accordion-item title="Vantiv"]
 | ![Vantiv](vantiv2.png) | [Vantiv] |
@@ -86,7 +86,7 @@ category: docs
 |:--- |:--- |
 | **Description** | Provides an integration between Drupal commerce version 2 and Iranian Bitpay gateway. |
 | **Type** | Off Site |
-| **Currencies** |   |
+
 | **Countries** | Iran |
 [/ui-accordion-item]
 [ui-accordion-item title="4. cashpresso"]
@@ -116,7 +116,7 @@ category: docs
 | --- | --- |
 | **Description** | Zarinpal is Iranian payment gateway. This module provides an integration between Drupal Commerce 2 and Zarinpal Gateway, you can use both IRR (Iranian Rials) and TMN (Iranian Tomans) with this module. |
 | **Type** | Off Site |
-| **Currencies** |   |
+
 | **Countries** | Iran |
 [/ui-accordion-item]
 [ui-accordion-item title="9. Commerce Atom Payment"]
@@ -136,7 +136,7 @@ category: docs
 | --- | --- |
 | **Description** | Integrates with Alipay and WeChat Pay |
 | **Type** | Off site |
-| **Currencies** |   |
+
 | **Countries** | China |
 [/ui-accordion-item]
 [ui-accordion-item title="12. Commerce Coinpayments"]
@@ -308,7 +308,7 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates Flutterwave Rave into Drupal Commerce payment. It currently supports the Standard and Hosted Payment Page workflows from Rave. |
 | **Type** | Off site |
-| **Currencies** |   |
+
 | **Countries** | Nigeria |
 [/ui-accordion-item]
 [ui-accordion-item title="36. Commerce Razorpay Payment Integration"]
@@ -322,7 +322,7 @@ category: docs
 | --- | --- |
 | **Description** | Integrates Commerce Payment with RBS Payment system API |
 | **Type** | Off site |
-| **Currencies** |   |
+
 | **Countries** | Russia |
 [/ui-accordion-item]
 [ui-accordion-item title="38. Commerce Saman Gateway"]
@@ -354,7 +354,7 @@ category: docs
 | --- | --- |
 | **Description** | This module integrates Swedbank Payment Portal payment methods (banklink, credit card) as payment gateways in Drupal Commerce. |
 | **Type** | Off site |
-| **Currencies** |   |
+
 | **Countries** | Estonia |
 [/ui-accordion-item]
 [ui-accordion-item title="43. Commerce Tpay"]
@@ -362,7 +362,7 @@ category: docs
 | --- | --- |
 | **Description** | This project integrates Tpay payment and checkout systems |
 | **Type** | Off site |
-| **Currencies** |   |
+
 | **Countries** | Poland |
 [/ui-accordion-item]
 [ui-accordion-item title="44. Commerce USAePay"]
@@ -376,7 +376,7 @@ category: docs
 | --- | --- |
 | **Description** | Vipps is a Norwegian payment application designed for smartphones developed by DNB. |
 | **Type** | Off site |
-| **Currencies** |   |
+
 | **Countries** | Norway |
 [/ui-accordion-item]
 [ui-accordion-item title="46. Commerce Wayforpay"]
