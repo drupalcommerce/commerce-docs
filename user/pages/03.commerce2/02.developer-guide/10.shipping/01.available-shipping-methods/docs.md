@@ -1,5 +1,5 @@
 ---
-title: Available Shipping Modules
+title: Available shipping methods
 taxonomy:
     category: docs
 ---
@@ -31,7 +31,7 @@ taxonomy:
 [ui-accordion-item title="Commerce UPS"]
 | [Commerce UPS] | [Commerce UPS] |
 |:--- |:--- |
-| **Description** |  | 
+| **Description** | Provides UPS shipping estimates in conjunction with the Commerce Shipping and Commerce Physical modules. | 
 [/ui-accordion-item]
 [/ui-accordion]
 
