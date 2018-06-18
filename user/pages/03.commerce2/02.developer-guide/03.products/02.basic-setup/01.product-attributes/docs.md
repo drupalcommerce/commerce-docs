@@ -4,6 +4,8 @@ taxonomy:
     category: docs
 ---
 
+Note: this page should set up the Color attribute as in the commerce demo. Leave set as a radio or select list for the display element. Do not Manage the display. Link to product display doc for that: [Custom product attribute displays](../../04.displaying-products/03.product_attributes)
+
 If your products have options like size, color, format, or package size, then you need to create product attributes and their values. For example, suppose you are selling a t-shirt that comes in a variety of sizes and colors. Then you need to create a "Size" attribute (with values like, "Small", "Medium", and "Large"), and you need to create a "Color" attribute (with values like "Red", "Blue", and "Green"). Defining product attributes is one of the first steps involved in setting up your Drupal Commerce products.
 
 ![T-shirt color and size product attributes](../../images/tshirt_drupalcon.png)
