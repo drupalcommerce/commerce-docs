@@ -1,5 +1,5 @@
 ---
-title: Reference
+title: Code recipes
 taxonomy:
     category: docs
 ---
@@ -21,3 +21,7 @@ Altering the title field label
       }
     }
 ```
+
+Provide an example for ProductEvents::FILTER_VARIATIONS, used by ProductVariationStorage::loadEnabled, used by the ProductVariation widgets.
+
+Creating a custom product variation widget for add-to-cart-form
