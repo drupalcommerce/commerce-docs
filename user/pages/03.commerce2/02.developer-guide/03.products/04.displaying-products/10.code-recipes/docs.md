@@ -24,4 +24,29 @@ Altering the title field label
 
 Provide an example for ProductEvents::FILTER_VARIATIONS, used by ProductVariationStorage::loadEnabled, used by the ProductVariation widgets.
 
-Creating a custom product variation widget for add-to-cart-form
+Creating a custom product variation widget for add to cart form
+------------------------------
+
+
+Creating a custom add to cart form
+------------------------------
+
+If the default add to cart form lacks some necessary functionality, you can either use a form alter hook or consider this cleaner approach:
+
+1. Extend commerce_cart\Form\AddToCartForm.php
+ - Override any methods to alter the form functionality.
+
+2. Implement hook_entity_type_build() to swap out the default form with your custom one.
+
+```php
+/**
+ * Implements hook_entity_type_build().
+ */
+function mymodule_entity_type_build(array &$entity_types) {
+  $entity_types['commerce_order_item']->setFormClass('add_to_cart', '\Drupal\mymodule\Form\AddToCartForm');
+}
+```
+
+3. If your custom module name does not come after "commerce_cart" alphabetically, then you will need to manually adjust its weight. To do this, you can use hook_module_implements_alter(). Or you can use the `module_set_weight` API function (implemented in core\includes\module.inc).
+
+
