@@ -38,12 +38,8 @@ Description of major sections:
 #### [Displaying products](04.displaying-products)
 - formatters, widgets, templates, css, preprocess functions
 - commerce product rendered attribute element, various services, hook alters
-- lots of FAQ, from stackexchange, issue queue, etc.
-- commerce fancy attributes (blog post)
 - add-to-cart form
-- twig examples, links to drupal.org twig / theming docs
 - product images
-- commerce ajax add to cart
 - commerce variation cart form
 - also provide overview of decoupled / headless options?
 - display multiple products

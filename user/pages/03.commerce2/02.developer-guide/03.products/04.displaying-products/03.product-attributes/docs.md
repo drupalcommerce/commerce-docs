@@ -12,7 +12,7 @@ This section describes how you can modify the *Add to cart form* to do things li
 - [Add to cart form documentation](../02.add-to-cart-form)
 - [Product attributes](../../03.products/01.product-attributes)
 
-At the end of the [Add to cart form documentation page](../02.add-to-cart-form), we looked at the difference between the *Product variation attributes* widget and the *Product variation title*. To customize the display of individual product attributes, like Color or Size, the *Product variation attributes* widget must be selected on the Add to cart form display for the product's order item type.
+At the end of the [Add to cart form documentation page](../02.add-to-cart-form), we looked at the difference between the *Product variation attributes* widget and the *Product variation title*. To customize the display of individual product attributes, like Color or Size, the *Produc*t variation attributes* widget must be selected on the Add to cart form display for the product's order item type.
 
 ### Product attribute element types
 
@@ -21,7 +21,7 @@ There are three options for how a product attribute is displayed on the add to c
 #### Rendered attribute element type
 The rendered attribute element type works by using the Add to Cart Form view display mode for the product attribute. (The default display mode for the product attribute is used if the Add to Cart Form display mode is not explicitly enabled.)
 
-To access this administrative UI, navigate to your list of Product attributes at `/admin/commerce/product-attributes` and click the *Edit* button for the product attribute. Select *Rendered attribute* for the Element type and then click the *Save* button at the bottom of the page.
+To access this administrative UI, navigate to your list of Product attributes at `/admin/commerce/product-attributes` and click the "Edit" button for the product attribute. Select "Rendered attribute" for the Element type and then click the "Save" button at the bottom of the page.
 
 ![Select rendered attributes element type](../../images/product-attributes-ui-1.jpg)
 

@@ -6,6 +6,8 @@ taxonomy:
 
 If you need customization for your product displays beyond what is possible using the administration UI, then you will probably need to create custom Twig templates as part of a custom theme. This is an advanced topic beyond the scope of this Drupal Commerce documentation guide. For an overview, please see the [Theming Drupal Guide] on Drupal.org.
 
+How to use twig to create a layout by hand.
+
 Also link to twig documentation
 
 Use twig.debug: true

@@ -22,3 +22,5 @@ Setting up:
 - downloadable products
 - subscriptions (link)
 - bundles
+
+- Include example of "Brand" taxonomy and field, to be used in displaying products example.
