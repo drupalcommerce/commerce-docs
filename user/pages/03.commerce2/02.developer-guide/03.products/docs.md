@@ -36,11 +36,8 @@ Description of major sections:
 - Create product content programmatically, via bulk importing, and using data entry forms.
 
 #### [Displaying products](04.displaying-products)
-- formatters, widgets, templates, css, preprocess functions
-- commerce product rendered attribute element, various services, hook alters
-- add-to-cart form
-- product images
-- display multiple products
+- Customize the display of products on your site.
+- Use the "Add to cart form" to allow customers to select products and add them to their carts.
 
 05. Marketing products
 - links to drupal.org docs on taxonomies, views, (flag module?)

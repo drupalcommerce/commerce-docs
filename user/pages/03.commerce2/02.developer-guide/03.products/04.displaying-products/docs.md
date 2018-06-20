@@ -18,18 +18,14 @@ Learn techniques for displaying products on your site.
 - Customize the product attribute elements that appear on the Add to cart form.
 - Learn about the Rendered attribute element type.
 
-#### [Product overview page](04.product-overview-page)
-- Use Views to customize the display of the Products overview page.
-- Customize product filtering, sorting, and bulk operations.
+#### [Theming products](04.theme-product)
+- Use Twig to create a layout for products, variations, or product attribute values.
 
-#### [Importing and exporting products](05.importing-exporting)
-- Learn about options for importing products.
-- Set up a product data export page with the Views data export module.
+#### [Multi-product displays](05.multiple-products)
+- Use Views to display a page with multiple products.
 
-#### [Product image management](06.image-management)
+#### [Product images](06.product-images)
 - TBD
 
-#### [Product code recipes](07.code-recipes)
-- Create products, variations, and attribute values.
-- Load products, variations, and attribute values.
-- Work with attribute values.
+#### [Code recipes](07.code-recipes)
+- *List of specific recipes or categories of recipes.*
