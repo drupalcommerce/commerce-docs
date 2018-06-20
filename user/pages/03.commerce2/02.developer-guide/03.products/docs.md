@@ -39,7 +39,7 @@ Description of major sections:
 - Customize the display of products on your site.
 - Use the "Add to cart form" to allow customers to select products and add them to their carts.
 
-05. Marketing products
+#### Marketing products
 - links to drupal.org docs on taxonomies, views, (flag module?)
 - product categories / tags (menus for categories?)
 - includes SEO (links to relevant modules: pathauto, etc.)
