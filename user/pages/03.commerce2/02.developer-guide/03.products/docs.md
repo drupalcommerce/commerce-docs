@@ -40,8 +40,6 @@ Description of major sections:
 - commerce product rendered attribute element, various services, hook alters
 - add-to-cart form
 - product images
-- commerce variation cart form
-- also provide overview of decoupled / headless options?
 - display multiple products
 
 05. Marketing products

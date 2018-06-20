@@ -24,7 +24,18 @@ Altering the title field label
 
 Provide an example for ProductEvents::FILTER_VARIATIONS, used by ProductVariationStorage::loadEnabled, used by the ProductVariation widgets.
 
+
+Hiding add to cart form for anonymous users
+------------------------------
+Use hook_form_alter and
+`'#access' => !is_anonymous` under add to cart submit
+
+
 Creating a custom product variation widget for add to cart form
+------------------------------
+
+
+Example of subscribing to the `ProductEvents::FILTER_VARIATIONS` event.
 ------------------------------
 
 

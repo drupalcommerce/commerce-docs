@@ -61,7 +61,16 @@ also:
 - attributes (not to be confused with product attributes)
 
 
+If you are not familiar with theming in Drupal, you will want to read the next section of documentation on [Theming Products](../04.theme-products) to get a general overview before looking at specific theming options for product attributes. Theming allows you to further customize the display of product attributes, beyond what is possible using only the administrative UI.
+
+Drupal commerce provides a specific template that can be overriden for product attributes:
+- `commerce-product-attribute-value.html.twig`
+
+Also, there is a custom css library for rendered product attributes, located within the Drupal Commerce Product module: `css/commerce_product.rendered-attributes.css`. There are two classes attached to the rendered product attribute element that can be targeted with custom styling:
+- `product--rendered-attribute`
+- `product--rendered-attribute__selected`
+
 ---
-In the next section, add to cart form flyout module?
+In the next section, displaying a page with multiple products...
 
 [Theming Drupal Guide]: https://www.drupal.org/docs/8/theming
