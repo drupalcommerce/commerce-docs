@@ -4,8 +4,24 @@ title: admin
 state: enabled
 access:
   admin:
-    login: true
-    super: true
+    super: 'true'
+    login: 'true'
+    cache: 'true'
+    configuration: 'true'
+    configuration_system: 'true'
+    configuration_site: 'true'
+    configuration_media: 'true'
+    configuration_info: 'true'
+    settings: 'true'
+    pages: 'true'
+    maintenance: 'true'
+    statistics: 'true'
+    plugins: 'true'
+    themes: 'true'
+    users: 'true'
   site:
-    login: true
+    login: 'true'
 hashed_password: $2y$10$2HhRn7nISDBVn/jzQRoAS.6N1oXZQQ.6ffPdEVbIT2Y7/knF2sXC6
+language: en
+twofa_enabled: false
+twofa_secret: BWQAODQ7SC4674LXFIFKA5UFFUD7SOJD
