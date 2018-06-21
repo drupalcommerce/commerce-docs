@@ -31,15 +31,11 @@ If you're making a relatively small change - like fixing a typo or rewording som
 But if you want to contribute heavily, we recommend you doing a local setup of the documentation.
 
 ### Local setup
-1. Install [Python](https://www.python.org/downloads/).
-2. If `pip` is not installed by default, install it from [here](https://pip.pypa.io/en/stable/installing/).
-3. Fork this [documentation repository](https://github.com/drupalcommerce/commerce-docs).
-4. Clone the forked repository.
-5. `cd <forked-repository>`.
-6. Execute `pip install -r requirements.txt`, you might need to execute this command with `sudo`.
+1. Run composer install 
 7. In the terminal generate user for admin panel `bin/plugin login newuser`
-8. Add credentials ![Adding Credentials](admin_grav.png)
-9. Login [localhost:8000/admin](localhost:8000/admin)
+8. Add credentials 
+![Adding Credentials](admin_grav.png)
+9. Login `php -S localhost:8000 system/router.php`
 
 ### Edit using Visual Code Studio
 You can download Visual Code Studio and add the [reStructured Text](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext) plugin to have an editor with built in previews available.
