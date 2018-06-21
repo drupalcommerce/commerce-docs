@@ -1,8 +1,12 @@
 ---
-title: Basic setup
+title: Product types and setup
 taxonomy:
     category: docs
 ---
+
+1. Simple product
+
+2. Clothing product
 
 Setting up:
 
