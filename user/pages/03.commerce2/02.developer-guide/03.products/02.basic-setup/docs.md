@@ -4,27 +4,31 @@ taxonomy:
     category: docs
 ---
 
-1. Simple product
+#### [Simple product type](01.simple-product)
+- Create a simple, single-variation product type.
+- Add an image field to its product variation type.
 
-2. Clothing product
+#### [Standard product type](02.standard-product)
+- Create product attributes and a product type with multiple variations.
 
-Setting up:
+#### Product categories
+ - Brand example
+ - Multi-level category
 
-1. product attributes
+#### Product specifications
+ - Custom content types
+ - Display suite module
 
-2. product variation types
+#### Product architectures
+ - Virtual vs physical
+ - Configurable
+ - Downloadable
+ - Subscriptions
+ - Bundles
 
-3. product types
+#### Deleting config
+ - ?
 
-4. non-attribute fields
-
-5. product architectures
-
-- products w/out attributes / single variation
-- virtual vs. physical (links to stock/shipping)
-- configurable products
-- downloadable products
-- subscriptions (link)
-- bundles
-
-- Include example of "Brand" taxonomy and field, to be used in displaying products example.
+#### [Code recipes](10.code-recipes)
+ - CRUD ops
+ - Purchasable entity

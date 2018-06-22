@@ -7,6 +7,8 @@ taxonomy:
 - product catalog (also in displaying products)
 - product categories/tags
 - upselling/cross-selling/featured products
+-   - https://www.drupal.org/project/commerce_pado
+
 - product reviews
 - SEO stuff: pathauto
 
