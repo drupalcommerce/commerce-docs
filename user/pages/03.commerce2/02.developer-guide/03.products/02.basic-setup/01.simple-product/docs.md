@@ -75,11 +75,43 @@ If you have defined product attributes, they will be listed here. Select any att
 ##### Language settings
 If you have enabled the core Content Translation module, an additional "Language settings" section will appear on the product variation type form. You can learn more about [Making Your Site Multilingual] in the  Drupal 8 User Guide.
 
-### Add an image field to a product variation type
+### Add images to a product variation type
+Custom fields of a variety of types can be added to your product variations. To add a field for one or more images to your Simple product variation type:
+1. Navigate to the "Manage fields" page for the Simple product variation type: `/admin/commerce/config/product-variation-types/simple/edit/fields`
+2. Click the "Add field" button.
+3. Select field type "Image" (under Reference). (If you do not see "Image" as an option, make sure that the Drupal core [Image module] is enabled.)
+4. Enter "Images" for the Label.
+5. Click the "Save and continue" button.
+
+![Add Image field](../../images/simple-product-type-4.jpg)
+
+On the "Field settings" configuration page:
+
+6. Change the "Allowed number of values" from "Limited" to "Unlimited". Product variations of type "Simple" can have 1 or more images.
+7. Click "Save field settings" to continue.
+
+>You can use the default values for the rest of the Image field settings. If you are interested in learning more about the Image field settings options, see the Drupal 8 documentation for [Working with images], which is currently out of date. Until it has been updated, you may find this [Image Media Type Manage Fields Tab] documentation more helpful.
+
+![Image field settings](../../images/simple-product-type-5.jpg)
+
+On the "Image settings for Simple" configuration page:
+
+8. Select the "Required field" option to make images required for product variations of type "Simple".
+9. Change the "File directory" to "product-images".
+10. Deselect the "*Alt* field required" setting (to simplify data entry for this demonstration setup).
+11. Click the "Save settings" button to finish configuring the new "Images" field.
+
+![Image settings for Simple](../../images/simple-product-type-6.jpg)
+
+Images can now be uploaded for Simple product variations and displayed on product pages. See [Product display pages](../../04.displaying-products/01.product-display) for documentation on customizing product displays.
+
+You can use this same general approach to add other fields to both product and product variation types.
 
 ---
 In the next section, we'll look at creating a more complex product type, with product attributes and multiple variations per product.
 
 [Making Your Site Multilingual]: https://www.drupal.org/docs/user_guide/en/multilingual-chapter.html
 [Commerce shipping module]: https://www.drupal.org/project/commerce_shipping
-
+[Image module]: https://www.drupal.org/docs/8/core/modules/image
+[Working with images]: https://www.drupal.org/docs/8/core/modules/image/working-with-images
+[Image Media Type Manage Fields Tab]: http://webtech.training.oregonstate.edu/osu-drupal-8/technical-manual/working-structure/media-entity/image-media-type/image-media-type-manage-fields-tab
