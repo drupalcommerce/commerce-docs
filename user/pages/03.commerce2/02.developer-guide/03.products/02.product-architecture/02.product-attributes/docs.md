@@ -8,9 +8,9 @@ If your products have options like size, color, format, or package size, then yo
 
 ![T-shirt color and size product attributes](../../images/tshirt_drupalcon.png)
 
-As the above image suggests, a product with a particular set of attributes will not necessarily have a variation for every possible combination. Perhaps the size Large t-shirt is only available in Green, and the Medium t-shirt is only available in Blue and Orange.
+As the above image suggests, a product with a particular set of attributes will not necessarily have a variation for every possible combination. Perhaps the size Large t-shirt is only available in Green, and the Medium t-shirt is only available in Blue and Orange. Product attribute values do not define the complete set of product variations; rather they define a set of possible attribute combinations available to product variations.
 
-### Create a simple product attribute
+### Create a basic product attribute
 
 Let's start by creating a "Size" attribute with values Small, Medium, and Large.
 
@@ -18,7 +18,7 @@ Let's start by creating a "Size" attribute with values Small, Medium, and Large.
 2. Enter "Size" for the Name.
 3. Select "Select list" for the Element type. See [Product attributes] in the "Displaying products" documentation section for a description of how these options affect product displays.
 4. Do not select any Product variation types. This Size attribute will not be used for the Default or Simple product types. When we create a new "Clothing" product type (below), we can come back to update the configuration.
-5. Click the "Save" button to create the new product attributes.
+5. Click the "Save" button to create the new product attribute.
 
 ![Create Size product attribute](../../images/clothing-product-type-1.jpg)
 
@@ -50,45 +50,43 @@ For the Color attribute, we want to present the options as color swatches instea
 
 ![Color attribute display](../../images/add-to-cart-ui.jpg)
 
->To set up the Color product attribute, we need to install the [Color module]. See the documentation on [Extending Drupal Commerce](../../../02.install-update/06.extending) for an overview of installing contributed Drupal modules.
+>To set up the Color product attribute like this, you will need to install the [Color module]. See the documentation on [Extending Drupal Commerce](../../../02.install-update/06.extending) for an overview of installing contributed Drupal modules.
 
+The initial steps for creating the Color attribute are the same as the steps described above, for creating the Size attribute. Briefly, you need to:
+1. Navigate to the "Product attributes" page by using the menu item under the main "Commerce" menu or `/admin/commerce/product-attributes`.
+2. Enter "Color" for the Name.
+3. Select the "Clothing" product variation type.
+4. Click the "Save" button to create the new product attribute.
+5. Enter "Black", "Blue", "Green", and "Pink" for the Color attribute values. (T
+6. Click the "Save" button.
 
+Now that we've created the "Color" attribute, we can add an additional field by navigating to the "Manage fields" configuration page for the Color attribute: `/admin/commerce/product-attributes/manage/color/fields`.
 
-Note: this page should set up the Color attribute as in the commerce demo. Leave set as a radio or select list for the display element. Do not Manage the display. Link to product display doc for that: [Custom product attribute displays](../../04.displaying-products/03.product_attributes)
+1. Click the "Add field" button.
+2. Select "Color" from the list of field types.
+3. Enter "Color" for the Label.
+4. Click the "Save and continue" button.
 
+![Add color field](../../images/clothing-product-type-5.jpg)
 
-After you have created the color attribute, we need to define at least
-one value. Normally we would simply say the color is "blue" or "red" but
-sometimes you might need to further define the attribute using fields.
-Adding fields is covered in detail later on in the documentation.
+On the "Field settings" configuration page, leave the default values are fine. On the "Color settings for Color" page, enable the "Required field" option and disable the "Record opacity" option. After saving the changes, you can return to Edit the page again, to set the default value for the color to "#000000".
 
-Need to mention that configuration translation and content_translation module needs to be enabled...
-Show a screen shot without the additional field.
+![Color field configuration](../../images/clothing-product-type-6.jpg)
 
-The product attribute values user interface allows creating and
-re-ordering multiple values at the same time and a very powerful
-translation capability:
+After adding and configuring the Color field, return to the main configuration page for the Color attribute: `/admin/commerce/product-attributes/manage/color`. Enter the following values for the "Color" for each attribute value:
 
-![Product Attribute Value Creation](../../images/attribute_create_03.png)
+- Black: #000000
+- Blue: #9CC8D5
+- Green: #9ACA96
+- Pink: #E1A7CE
 
-Adding fields to Attributes
----------------------------
+Click the "Save" button to complete the configuration for the "Color" product attribute.
 
-Product attributes are so much more than a word. Often times they
-represent a differentiation between products that is useful to call out
-visually for customers. The fieldable attribute value lets the
-information architect decide what best describes this attribute. Like
-any other fieldable entity, you can locate the list of attribute bundles
-and click edit fields:
+![Color field hex values](../../images/clothing-product-type-7.jpg)
 
-``/admin/commerce/product-attributes``
+>TRANSLATION stuff here or someplace else?? Enable configuration translation and content_translation modules.
 
-![Locating list of attributes](../../images/attribute_create_01.png)
-
-Add a field as you would expect. Most fields are supported and will
-automatically show up when you go to add attribute values:
-
-![Example of attribute with more than one attribute](../../images/attribute_create_03.png)
-
+---
+In the next section, we'll look at creating product categories.
 
 [Color module]: https://www.drupal.org/project/color_field

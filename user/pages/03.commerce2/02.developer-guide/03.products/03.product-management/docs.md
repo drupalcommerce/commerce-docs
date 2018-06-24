@@ -26,7 +26,7 @@ Learn techniques for designing and customizing the product management experience
 #### [Product image management](06.image-management)
 - TBD
 
-#### [Product code recipes](07.code-recipes)
+#### [Code recipes](10.code-recipes)
 - Create products, variations, and attribute values.
 - Load products, variations, and attribute values.
 - Work with attribute values.

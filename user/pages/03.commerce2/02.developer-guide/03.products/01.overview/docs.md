@@ -1,12 +1,8 @@
 ---
-title: Concepts
+title: Overview
 taxonomy:
     category: docs
 ---
-
-Describes general ideas, relationships, processes (with entity relationship diagrams) related to products.
-
-![Product Information Structure](../images/attribute_entity_relationships.png)
 
 Before you beging adding products to your Drupal Commerce store, it is important to understand the product structure. Let us go through an example.
 
@@ -36,5 +32,5 @@ The following table is an example of variations that could be for a Drupal Comme
 | Cart graphic | Extra Large | White |
 | Cart graphic | Extra Large | Black |
 
-TOC for next secions?
+
 

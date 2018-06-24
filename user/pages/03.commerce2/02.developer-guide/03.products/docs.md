@@ -4,16 +4,17 @@ taxonomy:
     category: docs
 ---
 
-Description of major sections:
+Reference the Commerce demo module as a source for many of the examples in the documentation. Documentation will explain how to build a site that includes all functionality in the Commerce demo module.
 
-01. Concepts
+#### [Overview](01.overview)
 - NOTE: I expect this section of the Products documentation will be the last to be completed, since it should serve as a reference/additional/high-level explanation of concepts relevant to all other sections. Essentially, the idea is that some people like to try to understand the "big picture" before diving into specifics; other people would prefer to just get started and then jump back to "explanations" whenever they get stuck or something is confusing. So I'll keep adding to this section as I work on the others and then re-organize and clean up as necessary as the end.
+- gettings started page?
 - include reference page for glossary of terminology
 - relationship diagram, product structure
 - entities: Product, ProductAttribute, ProductAttributeValue, ProductType, ProductVariation, ProductVariationType
 - also: Purchasable entities, Store entity, Price field, Order item types = order line items
 
-#### [Basic setup](02.basic-setup)
+#### [Product architecture](02.product-architecture)
 - step-by-step config for attributes, product/variation types ("config creation" in developer guide, "content creation" in user guide)
 - using non-attribute fields (including images, files) = supplier/vendor, manufacturer/brand, etc.
 - adding fields to attributes (color hex, alternative names, etc.)
@@ -25,7 +26,7 @@ Description of major sections:
 - products without attributes / single variation products
 - configurable products (commerce customizable products)
 - downloadable products / virtual products
-- physical products -> link to shipping module docs
+- physical products -> link to shipping module docs (a little on getting started, just what's set up in the commerce demo module)
 - subscriptions -> link to recurring module docs
 - bundles
 - content translation module
@@ -57,4 +58,5 @@ Other product-related that will be addressed in separate sections:
 - stock
 - tax
 - subscriptions / recurring
+- put concept of purchasable entity into section on "orders" b/c product module just provides the default (and most common) product architecture
 
