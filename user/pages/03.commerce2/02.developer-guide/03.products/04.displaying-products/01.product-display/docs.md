@@ -10,7 +10,7 @@ This section describes how to customize the product pages that are displayed on 
 
 #### Prerequisites
 - If you're unfamiliar with the "Manage display" configuration form fundamentals, read about [Changing Content Display] in the Drupal User Guide. Learn how to reorder fields, change label positioning, and select and configure field formatters.
-- Creating product types, etc. ("Simple" product type example)
+- Creating the [Simple product type](../../02.product-architecture/01.simple-product)
 
 ### Product variation field injection
 

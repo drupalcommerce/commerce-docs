@@ -10,6 +10,7 @@ Drupal 8 User Guide [Concept: Forms and Widgets](https://www.drupal.org/docs/use
 - widgets, settings, Variations (separate tab or inline entity form options)
 - reordering, disabled fields
 - field group module: https://www.webwash.net/customize-content-form-page-using-field-group-drupal-8/
+- field permissions module:
 
 ---
-In the next section, we'll look at issues related to deletion of product-related data.
+In the next section, we'll look at issues related to deletion of product-related data

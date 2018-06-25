@@ -16,23 +16,16 @@ Documentation in this section describes various approaches to product architectu
 - Create product attributes and a product type with multiple variations.
 - Add a Color field to a product attribute.
 
-#### Product categories
+#### [Product categories](03.product-categories)
  - Brand example
  - Multi-level category
 
-#### Product specifications
- - Custom content types
- - Display suite module
-
-#### Product architectures
+#### Product architectures (possibly break into multiple pages)
  - Virtual vs physical
  - Configurable
  - Downloadable
  - Subscriptions
  - Bundles
-
-#### Deleting config
- - ?
 
 #### [Code recipes](10.code-recipes)
  - CRUD ops

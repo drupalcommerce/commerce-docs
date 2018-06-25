@@ -1,5 +1,6 @@
 ---
-title: Reference
+title: Code recipes
+
 taxonomy:
     category: docs
 ---
