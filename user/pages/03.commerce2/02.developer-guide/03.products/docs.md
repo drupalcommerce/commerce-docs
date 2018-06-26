@@ -15,22 +15,12 @@ Reference the Commerce demo module as a source for many of the examples in the d
 - also: Purchasable entities, Store entity, Price field, Order item types = order line items
 
 #### [Product architecture](02.product-architecture)
-- step-by-step config for attributes, product/variation types ("config creation" in developer guide, "content creation" in user guide)
-- using non-attribute fields (including images, files) = supplier/vendor, manufacturer/brand, etc.
-- adding fields to attributes (color hex, alternative names, etc.)
-- links to drupal.org docs on custom fields
-- various approaches to product architecture
-- product specification content type
-- auto-variation names
-- default variations
-- products without attributes / single variation products
-- configurable products (commerce customizable products)
-- downloadable products / virtual products
-- physical products -> link to shipping module docs (a little on getting started, just what's set up in the commerce demo module)
-- subscriptions -> link to recurring module docs
-- bundles
-- content translation module
-- creating config from code ("code recipes") in a "Reference" section at the end
+- Create a simple, single-variation product type.
+- Create product attributes and a product type with multiple variations.
+- Add custom fields to product types, product variation types, and product attributes.
+- Create product categories.
+- Various approaches to product architecture.
+- Multilingual products.
 
 #### [Product management](03.product-management)
 - Design and customize the product management experience for administrative users.

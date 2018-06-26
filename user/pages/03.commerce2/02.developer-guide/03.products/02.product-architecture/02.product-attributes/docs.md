@@ -44,6 +44,15 @@ If you look at the configuration form for any product variation type, you'll see
 
 ![Enable Size attribute](../../images/clothing-product-type-4.jpg)
 
+#### Make a product attribute optional
+
+By default, all product attributes are required. However, after adding a product attribute to a product variation type, you can change its field settings so that it is not required. For example, to make the "Size" attribute optional for the "Clothing" product type, navigate to its "Manage fields" configuration page at `/admin/commerce/config/product-variation-types/clothing/edit/fields`. Click the button for the "Edit" operation for the "Size" field.
+
+![Edit size attribute field](../../images/clothing-product-type-8.jpg)
+
+On the "Size settings for Clothing" page, de-select the "Required field" checkbox and click the "Save settings" button to make the Size attribute optional for the Clothing product type.
+
+![Make size attribute field optional](../../images/clothing-product-type-9.jpg)
 
 ### Add a field to a product attribute
 For the Color attribute, we want to present the options as color swatches instead of just the color names. Most of the documentation for this functionality will be covered in the [Add to cart form](../../04.displaying-products/02.add-to-cart-form) page of the Displaying products section. Here we'll just set up the Color product attribute.
@@ -83,8 +92,6 @@ After adding and configuring the Color field, return to the main configuration p
 Click the "Save" button to complete the configuration for the "Color" product attribute.
 
 ![Color field hex values](../../images/clothing-product-type-7.jpg)
-
->TRANSLATION stuff here or someplace else?? Enable configuration translation and content_translation modules.
 
 ---
 In the next section, we'll look at creating product categories.

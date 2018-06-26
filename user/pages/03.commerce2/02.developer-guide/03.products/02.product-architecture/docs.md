@@ -21,12 +21,16 @@ Documentation in this section describes various approaches to product architectu
  - Multi-level category
 
 #### Product architectures (possibly break into multiple pages)
- - Virtual vs physical
- - Configurable
+ - Virtual vs physical (link to shipping module docs)
+ - Configurable (commerce customizable products)
  - Downloadable
- - Subscriptions
+ - Subscriptions (link to recurring docs)
  - Bundles
+
+#### Multilingual products
+- content translation module
 
 #### [Code recipes](10.code-recipes)
  - CRUD ops
  - Purchasable entity
+
