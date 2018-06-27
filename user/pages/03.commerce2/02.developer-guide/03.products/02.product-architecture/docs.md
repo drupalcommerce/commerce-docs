@@ -28,9 +28,12 @@ Documentation in this section describes various approaches to product architectu
  - Bundles
 
 #### Multilingual products
-- content translation module
+- Products, variations, attributes
 
 #### [Code recipes](10.code-recipes)
  - CRUD ops
  - Purchasable entity
 
+also?
+- auto-variation names
+- default variations

@@ -150,3 +150,12 @@ Checking if an attribute value exists within a particular attribute type
           ->condition('field_value', field_value)
           ->execute();
 ```
+
+Multilingual products code:
+https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21ContentEntityBase.php/function/ContentEntityBase%3A%3AgetTranslation/8.5.x
+- get product's stores translated to a language: $product->getTranslation('fr')->getStores();
+- get product's variations translated to a language: $product->getTranslation('en')->getVariations()
+- default variation translated to a language: $product->getTranslation('fr')->getDefaultVariation()
+- get variation's product: $variation->getTranslation('fr')->getProduct()
+- get variation's attributes: $variation->getTranslation('fr')->getAttributeValues()
+

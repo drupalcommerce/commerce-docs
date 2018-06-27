@@ -38,9 +38,6 @@ This is a setting that affects how products are displayed for end users. You can
 ##### Publish new products of this type by default
 "Published" is an option on the data entry form for products and can be checked (published) or unchecked (not published), by default. Also, it is possible to remove the "published" setting from the product form completely (for all or just a subset of administrative users). You can learn more about the [product data entry form](../../03.product-management/02.product-data-entry) configuration options in the [Product management](../../03.product-management) section of the documentation.
 
-##### Language settings
-If you have enabled the core Content Translation module, an additional "Language settings" section will appear on the product type form. You can learn more about [Making Your Site Multilingual] in the  Drupal 8 User Guide.
-
 ### Configure a product variation type
 To access the configuration form for a product variation type, you can either navigate to the "Product variation types" listing at `/admin/commerce/config/product-variation-types` or use the "Product variation type" links on the "Product types" listing at `admin/commerce/config/product-types`.
 
@@ -71,9 +68,6 @@ When a product variation is added to the cart, it is added as a new line item. T
 
 ##### Attributes
 If you have defined product attributes, they will be listed here. Select any attributes that are applicable to your product variation type.
-
-##### Language settings
-If you have enabled the core Content Translation module, an additional "Language settings" section will appear on the product variation type form. You can learn more about [Making Your Site Multilingual] in the  Drupal 8 User Guide.
 
 ### Add images to a product variation type
 Custom fields of a variety of types can be added to your product variations. To add a field for one or more images to your Simple product variation type:
