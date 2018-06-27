@@ -4,6 +4,9 @@ taxonomy:
     category: docs
 ---
 
+>Move this text into a subfolder To match the structure of the rest of the "Products" documentation, this should be a short intro combined with table-of-contents for the "Overview" subsection.
+
+
 Before you beging adding products to your Drupal Commerce store, it is important to understand the product structure. Let us go through an example.
 
 Let us say that your store sells t-shirts. Your t-shirts come in various sizes; such as small, medium, large, and extra large. Each shirt has a graphic but can come in different colors. Each graphic t-shirt is its own product but has its variations of colors available.

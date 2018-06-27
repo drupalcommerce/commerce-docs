@@ -49,7 +49,7 @@ The "Brand" field has now been added to the Simple product type. To add the Bran
 
 >Instructions here with link to page describing how to use these categories
 ---
-In the next section, we'll look at creating a product specificiation.
+In the next section, we'll look at options for product architectures in Drupal Commerce.
 
 [Concept: Taxonomy]: https://www.drupal.org/docs/user_guide/en/structure-taxonomy.html
 [Feeds module]: https://www.drupal.org/project/feeds

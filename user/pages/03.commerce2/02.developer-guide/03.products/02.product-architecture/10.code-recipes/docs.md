@@ -5,8 +5,29 @@ taxonomy:
     category: docs
 ---
 
-Creating a product type
-----------------------
+If you want to write custom code to programatically create or manage your product architecture, you can use these code recipes as a starting point.
+
+- **Create:**
+ - [Product type](#creating-a-product-type)
+ - [Product variation type](#creating-a-variation-type)
+ - [Product attributes](#creating-product-attributes)
+- **Load:**
+ - [Product type](#loading-a-product-type)
+ - [Product variation type](#loading-a-variation-type)
+ - [Product attribute](#loading-a-product-attribute)
+- **Add a custom field to a:**
+ - [Product type](#adding-a-custom-field-to-a-product-type)
+ - [Product variation type](#adding-a-custom-field-to-a-product-variation-type)
+ - [Product attribute](#adding-a-custom-field-to-a-product-attribute)
+- **Product variation type extras:**
+ - Make a product attribute field optional.
+ - Enable "dimensions" and "shippable" traits.
+ - Create a custom product variation trait.
+- **[PurchasableEntityInterface](#purchasableentityinterface)**
+
+### Creating a product type
+In the [Simple product type](../01.simple-product) documentation, we looked at creating a product type through the administration UI. A "Simple" product variation type was created automatically for us. If you are creating a product type programatically, you will need to create its product variation type *before* you create the product type.
+
 ```php
     /**
      * id [String]
@@ -46,17 +67,7 @@ Creating a product type
 
 ```
 
-Loading a product type
-----------------------
-
-```php
-    // Loading is based off of the primary key [String] that was defined when creating it.
-    $product_type = \Drupal\commerce_product\Entity\ProductType::load('my_custom_product_type');
-```
-
-Creating variation types
-------------------------
-
+### Creating a variation type
 ```php
 
     /**
@@ -86,25 +97,7 @@ Creating variation types
     $variation_type->save();
 
 ```
-
-Loading a variation type
-------------------------
-
-```php
-
-    // Loading is based off of the primary key [String] that was defined when creating it.
-    $variation_type = \Drupal\commerce_product\Entity\ProductVariationType::load('my_custom_variation_type');
-
-```
-
-Product variation types can have certain attributes (ex. color) and
-those attributes have values (ex red, blue). In this example, we will
-create two attributes (color and size) and add them to the variation
-type we made previously.
-
-Creating attributes
--------------------
-
+### Creating product attributes
 ```php
     /**
      * id [String]
@@ -132,30 +125,81 @@ Creating attributes
     $attribute_field_manager->createField($size_attribute, 'my_custom_variation_type');
 ```
 
-Loading an attribute
---------------------
+### Loading a product type
+```php
+    // Loading is based off of the primary key [String] that was defined when creating it.
+    $product_type = \Drupal\commerce_product\Entity\ProductType::load('my_custom_product_type');
+```
 
+### Loading a variation type
+```php
+
+    // Loading is based off of the primary key [String] that was defined when creating it.
+    $variation_type = \Drupal\commerce_product\Entity\ProductVariationType::load('my_custom_variation_type');
+
+```
+
+### Loading a product attribute
 ```php
     // Loading is based off of the primary key [String] that was defined when creating it.
     $size_attribute = \Drupal\commerce_product\Entity\ProductAttribute::load('size');
 ```
-Checking if an attribute value exists within a particular attribute type
---------------------
+### PurchasableEntityInterface
+The ProductVariation entity class implements the PurchasableEntityInterface. Any content entity type that implements this interface can be purchased. Line items (*order items*) have a purchased_entity reference field. If you develop a content entity type that implements this PurchasableEntityInterface, you can set up an order item type to allow customers to purchase your custom entity type instead of standard product variations.
 
 ```php
-    // Look up while filtering by Attribute
-    $productAttributeId = \Drupal::entityTypeManager()
-          ->getStorage('commerce_product_attribute_value')
-          ->condition('attribute', 'attribute_machine_name')
-          ->condition('field_value', field_value)
-          ->execute();
+      <?php
+
+      namespace Drupal\commerce;
+
+      use Drupal\Core\Entity\ContentEntityInterface;
+
+      /**
+       * Defines the interface for purchasable entities.
+       *
+       * Lives in Drupal\commerce instead of Drupal\commerce_order so that entity
+       * type providing modules such as commerce_product don't need to depend
+       * on commerce_order.
+       */
+      interface PurchasableEntityInterface extends ContentEntityInterface {
+
+        /**
+         * Gets the stores through which the purchasable entity is sold.
+         *
+         * @return \Drupal\commerce_store\Entity\StoreInterface[]
+         *   The stores.
+         */
+        public function getStores();
+
+        /**
+         * Gets the purchasable entity's order item type ID.
+         *
+         * Used for finding/creating the appropriate order item when purchasing a
+         * product (adding it to an order).
+         *
+         * @return string
+         *   The order item type ID.
+         */
+        public function getOrderItemTypeId();
+
+        /**
+         * Gets the purchasable entity's order item title.
+         *
+         * Saved in the $order_item->title field to protect the order items of
+         * completed orders against changes in the referenced purchased entity.
+         *
+         * @return string
+         *   The order item title.
+         */
+        public function getOrderItemTitle();
+
+        /**
+         * Gets the purchasable entity's price.
+         *
+         * @return \Drupal\commerce_price\Price|null
+         *   The price, or NULL.
+         */
+        public function getPrice();
+
+      }
 ```
-
-Multilingual products code:
-https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21ContentEntityBase.php/function/ContentEntityBase%3A%3AgetTranslation/8.5.x
-- get product's stores translated to a language: $product->getTranslation('fr')->getStores();
-- get product's variations translated to a language: $product->getTranslation('en')->getVariations()
-- default variation translated to a language: $product->getTranslation('fr')->getDefaultVariation()
-- get variation's product: $variation->getTranslation('fr')->getProduct()
-- get variation's attributes: $variation->getTranslation('fr')->getAttributeValues()
-

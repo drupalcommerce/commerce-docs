@@ -4,6 +4,8 @@ taxonomy:
     category: docs
 ---
 
+This page still needs a short introduction / overview and/or TOC links.
+
 ### Virtual vs physical products
 
 In Drupal Commerce, products can be either virtual or physical. A physical product is any product that needs to be shipped or physically delivered to customers in some other way.
@@ -30,6 +32,10 @@ You will see that two "traits" have been added to the configuration form for the
 Both these fields can be managed just like any other field in terms of displaying them on data entry forms and product displays. For more information on how these fields are used in the context of the Commerce Shipping module, see [link to shipping documentation here].
 
 #### Stock management for physical products
+An important aspect of product architecture with respect to stock management is the definition of your product attributes and variations. For each unique combination of attributes, i.e., for each product variation, you get a single SKU. If you need to keep track of the number of units for each color, for example, then "Color" should be a product attribute.
+
+In contrast, suppose you sell custom t-shirts that can be ordered in *any* customer-specified color and/or design, and you only track inventory based on Size (Small, Medium, Large, etc.) In this case, you would want "Size" as a product attribute, but "Color" would not be a product attribute. Instead, you would want to add a custom "Color" field that customers can use at the time they order an item to specify the t-shirt color.
+
 The Drupal 8 version for the [Commerce Stock module] is currently being ported to Drupal 8. It is not yet ready for use on a live site.
 
 ### Configurable / customizable products
@@ -48,8 +54,29 @@ For downloadable products / files, we recommend the [Commerce File module]. The 
 For subscription products, we recommend the [Commerce Recurring Framework module], which provides recurring billing for Drupal Commerce. [Developer documentation for this module](../../../12.recurring) is covered in a later section in this guide.
 
 ### Product bundles
-For Product bundles, we recommend the [Commerce Product Bundle module]. The port to Drupal 8 is currently in progress. See the [Drupal 8 (Commerce 2) Version] issue for additional information:
+For product bundles, we recommend the [Commerce Product Bundle module]. The port to Drupal 8 is currently in progress. See the [Drupal 8 (Commerce 2) Version] issue for additional information:
 
+### Purchasable entities
+When it comes to product architectures, there is no one true answer. That’s why it’s important for Drupal Commerce to support any number of product architectures. Do you need a Commerce solution that uses a completely unique architecture? Perhaps there's just no way to make the "products/variations/attributes" structure provided by the [Product module](../../01.overview/01.product-module) fit your needs. If so, you can develop a completely custom product architecture but still benefit from the rest of the Drupal Commerce ecosystem of modules (cart, checkout, order, payment, etc.).
+
+The key to Drupal's product architecture flexibility is the concept of a "purchasable entity". Product variations are one example of purchasable entities. Every product variation (and every purchasable entity) in Drupal Commerce has 4 key properties:
+
+| Property  | What does it mean? |
+|----------------------------|
+| Stores | The stores through which the item can be purchased. |
+| Title | The name or label of the item being purchased. |
+| Price | The base price of the item being purchased. |
+| Order item type | The type of order item (line item) to use when a product is purchased (added to order/cart). |
+
+
+ Order line items can be configured to reference *any* "purchasable entity". On the Order item type configuration page, you can specify the "Purchasable entity type" for your line items. "Product variation" is just the default option.
+
+![Order item type edit page](../../images/order_item_type_edit.png)
+
+If you're interested in writing custom code to define your own "purchasable entities", you can start by looking at the `PurchasableEntityInterface`, which is included in the [Code recipes](../10.code-recipes) page of this documentation section.
+
+---
+In the next section, we'll describe the setup for multilingual products.
 
 [Commerce Shipping module]: https://www.drupal.org/project/commerce_shipping
 [Commerce Stock module]: https://www.drupal.org/project/commerce_stock

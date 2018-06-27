@@ -4,13 +4,13 @@ taxonomy:
     category: docs
 ---
 
-Documentation in this section describes various approaches to product architecture. Say something about structuring your product types to best suit your individual business logic needs.
+Documentation in this section describes various approaches to product architecture. Learn how to structure your product types to best suit your specific business logic needs.
 
 >For an overview of the Drupal commerce product information structure, see [page in the overview section].
 
 #### [Simple product type](01.simple-product)
 - Create a simple, single-variation product type.
-- Add an Image field to its product variation type.
+- Add an Image field to a product variation type.
 
 #### [Product attributes](02.product-attributes)
 - Create product attributes and a product type with multiple variations.
@@ -20,19 +20,17 @@ Documentation in this section describes various approaches to product architectu
  - Brand example
  - Multi-level category
 
-#### Product architectures (possibly break into multiple pages)
- - Virtual vs physical (link to shipping module docs)
- - Configurable (commerce customizable products)
- - Downloadable
- - Subscriptions (link to recurring docs)
- - Bundles
+#### [Product architectures](04.product-architectures)
+ - An overview of approaches to product architecture in Drupal Commerce
+ - Contributed modules for extending product architecture options
+ - Introduction to the Purchasable Entity concept
 
-#### Multilingual products
-- Products, variations, attributes
+#### [Multilingual products](05.multilingual-products)
+- Enable translations for products, variations, and product attribute values.
 
 #### [Code recipes](10.code-recipes)
  - CRUD ops
- - Purchasable entity
+ - Purchasable entity interface
 
 also?
 - auto-variation names

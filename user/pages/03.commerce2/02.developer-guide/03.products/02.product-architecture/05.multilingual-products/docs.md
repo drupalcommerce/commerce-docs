@@ -34,7 +34,7 @@ If you would like to translate the names of your product and product variation t
 
 >Need more here about product variations, link to docs on prices, currencies...
 
-### Product attribute values:
+### Enable translations for product attribute values:
 For multilingual product attribute values, you need to enable attribute value translation for each product attribute that requires translation.
 1. Go to the "Product attributes" page by selecting the menu item from the main "Commerce" menu or navigating to `/admin/commerce/product-attributes`
 2. Click the "Edit" button for each product attribute.
