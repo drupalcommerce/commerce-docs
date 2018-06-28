@@ -15,15 +15,8 @@ If you want to write custom code to programatically create or manage your produc
  - [Product type](#loading-a-product-type)
  - [Product variation type](#loading-a-variation-type)
  - [Product attribute](#loading-a-product-attribute)
-- **Add a custom field to a:**
- - [Product type](#adding-a-custom-field-to-a-product-type)
- - [Product variation type](#adding-a-custom-field-to-a-product-variation-type)
- - [Product attribute](#adding-a-custom-field-to-a-product-attribute)
-- **Product variation type extras:**
- - Make a product attribute field optional.
- - Enable "dimensions" and "shippable" traits.
- - Create a custom product variation trait.
-- **[PurchasableEntityInterface](#purchasableentityinterface)**
+- **Implement:**
+ - [PurchasableEntityInterface](#purchasableentityinterface)
 
 ### Creating a product type
 In the [Simple product type](../01.simple-product) documentation, we looked at creating a product type through the administration UI. A "Simple" product variation type was created automatically for us. If you are creating a product type programatically, you will need to create its product variation type *before* you create the product type.
@@ -144,6 +137,7 @@ In the [Simple product type](../01.simple-product) documentation, we looked at c
     // Loading is based off of the primary key [String] that was defined when creating it.
     $size_attribute = \Drupal\commerce_product\Entity\ProductAttribute::load('size');
 ```
+
 ### PurchasableEntityInterface
 The ProductVariation entity class implements the PurchasableEntityInterface. Any content entity type that implements this interface can be purchased. Line items (*order items*) have a purchased_entity reference field. If you develop a content entity type that implements this PurchasableEntityInterface, you can set up an order item type to allow customers to purchase your custom entity type instead of standard product variations.
 
