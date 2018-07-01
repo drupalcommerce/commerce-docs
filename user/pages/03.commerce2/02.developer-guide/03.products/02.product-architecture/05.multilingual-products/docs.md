@@ -51,6 +51,8 @@ You can add translations for the product attribute label and the names for each 
 
 ![Add product attribute translations](../../images/multilingual-products-7.jpg)
 
+### Links and resources
+* [Making Your Site Multilingual]
 
 [Making Your Site Multilingual]: https://www.drupal.org/docs/user_guide/en/multilingual-chapter.html
 [Content Translation module]: https://www.drupal.org/docs/8/core/modules/content-translation/overview

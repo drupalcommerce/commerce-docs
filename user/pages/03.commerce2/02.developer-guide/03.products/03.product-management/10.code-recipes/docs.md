@@ -4,11 +4,24 @@ taxonomy:
     category: docs
 ---
 
-  see also: How to create commerce products from code: https://www.drupal.org/project/commerce/issues/2811529
+  If you want to write custom code to programatically create or manage products, you can use these code recipes as a starting point.
+
+- **Create:**
+ - [Products](#creating-products)
+ - [Variations](#creating-variations)
+ - [Attribute values](#creating-values-for-an-attribute)
+- **Load:**
+ - [Products](#loading-a-product)
+ - [Variations](#loading-a-variation)
+ - [Attribute values](#loading-an-attribute-value)
+- **Manage product attributes:**
+ - [Check if an attribute value exists](#checking-if-an-attribute-value-exists-within-a-particular-attribute-type)
+ - [Assign attribute values to a variation](#assigning-attribute-values-to-a-variation)
 
 
-Creating products
------------------
+### Creating products
+- Since product variations are the purchasable parts of products, products need at least one variation.
+- Since every product belongs to one or more stores, products need at least one store.
 
 ```php
 
@@ -47,29 +60,13 @@ Creating products
     $product->addVariation($variation_red_medium);
     $product->save();
 
-```
-
-Loading a product
------------------
-
-```php
-
-    // Loading is based off of the primary key [Integer]
-    //   1 would be the first one saved, 2 the next, etc.
-    $product = \Drupal\commerce_product\Entity\Product::load(1);
+    // Adding a variation to a product automatically creates a backreference on the variation.
+    // You can access the product of a variation via:
+    $variation->getProduct();
 
 ```
 
-Product variations are the purchasable parts of products, thus products
-need at least one variation.
-
-Adding a variation to a product
-automatically creates a backreference on the variation, accessed via
-`$variation->getProduct()`.
-
-Creating variations
--------------------
-
+### Creating variations
 ```php
 
 
@@ -102,33 +99,7 @@ Creating variations
 
 ```
 
-Loading a variation
--------------------
-
-```php
-
-
-    // Loading is based off of the primary key [Integer]
-    //   1 would be the first one saved, 2 the next, etc.
-    $variation = \Drupal\commerce_product\Entity\ProductVariation::load(1);
-
-```
-
-Checking if an attribute value exists within a particular attribute type
---------------------
-
-```php
-    // Look up while filtering by Attribute
-    $productAttributeId = \Drupal::entityTypeManager()
-          ->getStorage('commerce_product_attribute_value')
-          ->condition('attribute', 'attribute_machine_name')
-          ->condition('field_value', field_value)
-          ->execute();
-```
-
-Creating values for an attribute
---------------------------------
-
+###Creating values for an attribute
 ```php
 
     /**
@@ -163,9 +134,25 @@ Creating values for an attribute
     $large->save();
 ```
 
-Loading an attribute value
---------------------------
+###Loading a product
+```php
 
+    // Loading is based off of the primary key [Integer]
+    //   1 would be the first one saved, 2 the next, etc.
+    $product = \Drupal\commerce_product\Entity\Product::load(1);
+
+```
+
+###Loading a variation
+```php
+
+    // Loading is based off of the primary key [Integer]
+    //   1 would be the first one saved, 2 the next, etc.
+    $variation = \Drupal\commerce_product\Entity\ProductVariation::load(1);
+
+```
+
+###Loading an attribute value
 ```php
 
     // Loading is based off of the primary key [Integer]
@@ -173,14 +160,19 @@ Loading an attribute value
     $red = \Drupal\commerce_product\Entity\ProductAttributeValue::load(1);
 ```
 
-Assigning attribute values to a variation
------------------------------------
+###Checking if an attribute value exists within a particular attribute type
+```php
+    // Look up while filtering by Attribute
+    $productAttributeId = \Drupal::entityTypeManager()
+          ->getStorage('commerce_product_attribute_value')
+          ->condition('attribute', 'attribute_machine_name')
+          ->condition('field_value', field_value)
+          ->execute();
+```
 
-Let's say we want our hypothetical product to have two variations. One
-will be the color red and size medium, and the other will be the color
-blue and size large. // [IMPORTANT] - If a Product Variation Type has
-fields for attributes (as we added above), then variations of that type
-MUST have those attributes.
+###Assigning attribute values to a variation
+Let's say we want our hypothetical product to have two variations. One will be the color red and size medium, and the other will be the color blue and size large.
+- If a Product Variation Type has fields for attributes, then variations of that type **MUST** have those attributes.
 
 ```php
     /**
@@ -206,22 +198,3 @@ MUST have those attributes.
     $variation_blue_large->save();
 ```
 
-Checking if an attribute value exists within a particular attribute type
---------------------
-
-```php
-    // Look up while filtering by Attribute
-    $productAttributeId = \Drupal::entityTypeManager()
-          ->getStorage('commerce_product_attribute_value')
-          ->condition('attribute', 'attribute_machine_name')
-          ->condition('field_value', field_value)
-          ->execute();
-```
-
-Multilingual products code:
-https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21ContentEntityBase.php/function/ContentEntityBase%3A%3AgetTranslation/8.5.x
-- get product's stores translated to a language: $product->getTranslation('fr')->getStores();
-- get product's variations translated to a language: $product->getTranslation('en')->getVariations()
-- default variation translated to a language: $product->getTranslation('fr')->getDefaultVariation()
-- get variation's product: $variation->getTranslation('fr')->getProduct()
-- get variation's attributes: $variation->getTranslation('fr')->getAttributeValues()

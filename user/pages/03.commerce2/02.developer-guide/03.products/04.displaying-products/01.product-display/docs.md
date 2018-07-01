@@ -9,7 +9,6 @@ This section describes how to customize the product pages that are displayed on 
 ![Product manage display ui](../../images/product-display-ui-1.jpg)
 
 #### Prerequisites
-- If you're unfamiliar with the "Manage display" configuration form fundamentals, read about [Changing Content Display] in the Drupal User Guide. Learn how to reorder fields, change label positioning, and select and configure field formatters.
 - Creating the [Simple product type](../../02.product-architecture/01.simple-product)
 
 ### Product variation field injection
@@ -43,7 +42,8 @@ Image" and Product variation "Price" fields are updated on the displayed page.
 
 ![Ordering injected fields](../../images/product-display-ui-6.jpg)
 
+### Links and resources
+* [Changing Content Display (Drupal user guide)](https://www.drupal.org/docs/user_guide/en/structure-content-display.html)
+
 ---
 In the next section, we'll look at how you can customize the Add to cart form.
-
-[Changing Content Display]: https://www.drupal.org/docs/user_guide/en/structure-content-display.html

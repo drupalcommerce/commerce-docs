@@ -12,3 +12,5 @@ The following is an introduction to terminology used in Drupal Commerce.
 | Variation | A product variation represents an option of specific attributes for a product. For example, the Large Blue sweatshirt versus the Medium Red sweatshirt. This is what is purchased and has a price. It has a sku that must be unique across all products and variations. |
 | Product | The actual product, a sweatshirt, which contains all of its variations. Every product has at least one variation. |
 
+maybe some general Drupal terms as well, like "Entity reference", for docs that use "entity reference fields"
+

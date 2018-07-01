@@ -8,10 +8,6 @@ This section describes how you can modify the product attributes that appear on 
 
 ![Add to cart form](../../images/add-to-cart-ui.jpg)
 
-#### Prerequisites
-- [Add to cart form documentation](../02.add-to-cart-form)
-- [Product attributes](../../03.products/01.product-attributes)
-
 >In the [Add to cart form documentation](../02.add-to-cart-form), we looked at the difference between the "Product variation attributes" widget and the "Product variation title" widget. To customize the display of individual product attributes, like Color or Size, the "Product variation attributes widget" must be selected on the Add to cart form display for the product's order item type.
 
 ### Product attribute element types
@@ -37,6 +33,10 @@ A similar approach can be taken for displaying an attribute as an image:
 1. Add an Image field to the product attribute.
 2. Select "Rendered attribute" as the Element type.
 3. Configure the attribute's display so that only the image field is rendered.
+
+### Links and resources
+* [Add to cart form documentation](../02.add-to-cart-form)
+* [Product attributes](../../03.products/01.product-attributes)
 
 ---
 In the next section, product theming...

@@ -6,7 +6,6 @@ taxonomy:
 ---
 
 If you want to write custom code to programatically create or manage your product architecture, you can use these code recipes as a starting point.
-
 - **Create:**
  - [Product type](#creating-a-product-type)
  - [Product variation type](#creating-a-variation-type)

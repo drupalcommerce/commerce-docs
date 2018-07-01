@@ -11,12 +11,6 @@ The "Add to cart form" allows customers to select a specific variation of a prod
 
 ![Add to cart form](../../images/add-to-cart-ui.jpg)
 
-#### Prerequisites
-- Field formatters (link)
-- Form display modes (link)
-- Order item type configuration, purchased entity (link)
-- Cart (link)
-
 ### Add the Add to cart form to your product display
 
 In the previous section, we looked at how to customize product pages using the "Manage display" configuration form for product types. To include the Add to cart form on your product display, make sure the "Variations" field is enabled and set its Formatter to "Add to cart form". This formatter has a single configuration option:
@@ -90,6 +84,12 @@ You can add the Add to cart form to a custom content type by adding an "Entity r
 6. For each product type specified in step #3, navigate to the "Manage display" form for the "View mode" specified in step #5. The Variations field should be enabled, with "Add to cart form" selected as its formatter.
 
 ![Rendered product with add to cart form](../../images/add-to-cart-ui-8.jpg)
+
+### Links and resources
+* Field formatters (link)
+* Form display modes (link)
+* Order item type configuration, purchased entity (link)
+* Cart (link)
 
 ---
 In the next section, we'll look at configuration options for displaying a product's attributes, such as "Color" and "Size".

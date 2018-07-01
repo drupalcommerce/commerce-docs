@@ -7,7 +7,6 @@ taxonomy:
 In the [Simple product type](../01.simple-product) documentation, we added a custom field to a *product variation type*, to allow product variations to have images. In the [Product type with attributes](../02.product-attributes) documentation, we added a custom field to a *product attribute*, to allow a Color attribute to be displayed as a color swatch image instead of just the color name. In this section, we're going to look at how to add fields to *product types* so that we can organize products into categories that can be used for the product catalog.
 
 #### Prerequisites
-- Drupal 8 User Guide documentation on [Concept: Taxonomy]
 - Creating the [Simple product type](../../02.product-architecture/01.simple-product)
 
 ### Create a basic product category
@@ -47,7 +46,14 @@ Let's add a field that references our "Brands" taxonomy to both our Simple produ
 
 The "Brand" field has now been added to the Simple product type. To add the Brand field to another product type, you can "Re-use an existing field" to select this Brand field on the "Add field" page for the product type.
 
+
 >Instructions here with link to page describing how to use these categories
+Maybe also "product tags" or multi-level taxonomies, taxonomy_term_depth module. Not sure how to break up this topic between "architecture" and "marketing" (catalog)
+
+### Links and resources
+* Drupal 8 User Guide documentation on [Concept: Taxonomy]
+
+
 ---
 In the next section, we'll look at options for product architectures in Drupal Commerce.
 

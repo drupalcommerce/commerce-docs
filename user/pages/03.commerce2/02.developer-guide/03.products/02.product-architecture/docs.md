@@ -29,9 +29,8 @@ Documentation in this section describes various approaches to product architectu
 - Enable translations for products, variations, and product attribute values.
 
 #### [Code recipes](10.code-recipes)
- - CRUD ops
- - Purchasable entity interface
+ - Create product types, variation types, and product attributes.
+ - Load product types, variation types, and product attributes.
+ - Implement the PurchasableEnityInterface for custom product architectures.
 
-also?
-- auto-variation names
-- default variations
+> TODO?  auto-variation names, default variations
