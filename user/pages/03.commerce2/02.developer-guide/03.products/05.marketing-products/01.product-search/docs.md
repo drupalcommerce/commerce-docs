@@ -4,6 +4,8 @@ taxonomy:
     category: docs
 ---
 
+> NOTE: this page needs to be updated. Want to simplify this by using Fields instead of Rendered entity for the View display. The current stage of this page is very much an "initial draft" and will be revised soon.
+
 ##### Install Search API modules
 1. Install the [Search API module]. (*see the extending docs.*)
 2. Navigate to the "Extend" page at `/admin/modules`.
