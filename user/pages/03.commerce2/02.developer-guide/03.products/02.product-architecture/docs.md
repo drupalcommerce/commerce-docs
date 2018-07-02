@@ -18,7 +18,7 @@ Documentation in this section describes various approaches to product architectu
 
 #### [Product categories](03.product-categories)
  - Brand example
- - Multi-level category
+ - Multi-level category, tags?
 
 #### [Product architectures](04.product-architectures)
  - An overview of approaches to product architecture in Drupal Commerce
