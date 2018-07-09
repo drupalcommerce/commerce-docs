@@ -21,6 +21,7 @@ The default product template is commerce-product.html.twig
  - Use `{{ product }}` to print them all.
  - Use `{{ product.title }}`, for example, to print a single field.
  - Use `{{ product|without('title') }}`, for example, to exclude the printing of a given field.
+ - Product attribute fields are grouped so that they can be excluded together; use `{{- product|without('variation_attributes') -}}` to exclude the printing of product attribute fields.
 
 ##### Product-level field variables
 - product.title
