@@ -27,7 +27,7 @@ Search API is a contributed module that provides a framework for creating search
  - The [Processors page] in the Search API documentation guide provides a good overview of processor options.
 
 ##### Step 1: Install Search API modules
-1. Install the [Search API module]. (*see the extending docs.*)
+1. Add the [Search API module] to your site. (*See the [documentation on extending Drupal Commerce](../../../02.install-update/06.extending).*)
 2. Navigate to the "Extend" page at `/admin/modules`.
 3. Install the "Database Search" and "Search API" modules.
 4. Also, it is recommended that you *uninstall* the Core "Search" module whenever you are using Search API.
@@ -60,7 +60,6 @@ Search API is a contributed module that provides a framework for creating search
 
 3. Specify the Type for each of the added fields. We've added Title, Product variation SKU, and Product variation Title fields to this search index. Since we want to be able to find individual words contained in our search fields, not just the whole field value, select "Fulltext" for each of the fields. (You can use non-Fulltext field types when you only want to use a field for filtering or sorting.)
 4. Set the Boost value for each of the added fields. Fields with higher boost scores will be "boosted" towards the top of the search listings. For example, if the Product Title has a boost score of 5, and other fields only have a boost score of 1, then products with the search term in their title will appear higher in the search results than products that only have the term in other fields.
-
 
 ![Add index fields](../../images/product-search-4.jpg)
 
@@ -97,7 +96,6 @@ Next, we'll set up a basic search page for our indexed data using Views and the 
   * Select the "Link to the Product" option.
 4. In the Filter criteria section, add and configure the "Fulltext search" item:
  - Select "Expose this filter to visitors, and allow them to change it".
- - Select the "Required" option.
  - Enter "Search products" for the "Label".
  - Select "Contains any of these words" for the "Operator".
 

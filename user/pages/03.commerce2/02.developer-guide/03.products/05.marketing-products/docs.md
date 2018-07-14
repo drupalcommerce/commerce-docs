@@ -8,7 +8,7 @@ taxonomy:
 - Search_api module
 
 * product catalog (facets, facets_pretty_paths)
-* categories and menus
+* categories and menus (link to page in architecture, maybe also mention "product tags"?)
 * upselling/cross-selling/featured/related products
 -   - https://www.drupal.org/project/commerce_pado
 * product stories (blog articles, applications, user stories, etc.)

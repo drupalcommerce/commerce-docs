@@ -17,8 +17,8 @@ Documentation in this section describes various approaches to product architectu
 - Add a Color field to a product attribute.
 
 #### [Product categories](03.product-categories)
- - Brand example
- - Multi-level category, tags?
+ - Create a simple Brand taxonomomy and a hierarchical Product category taxonomy.
+ - Integrate the taxonomies with specific product types.
 
 #### [Product architectures](04.product-architectures)
  - An overview of approaches to product architecture in Drupal Commerce

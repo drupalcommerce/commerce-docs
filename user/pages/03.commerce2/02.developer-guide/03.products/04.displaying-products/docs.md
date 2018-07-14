@@ -26,6 +26,7 @@ Learn techniques for displaying products on your site.
 
 #### [Product images](06.product-images)
 - TBD
+- Image delta formatter: image_delta_formatter module
 
 #### [Code recipes](07.code-recipes)
 - *List of specific recipes or categories of recipes.*

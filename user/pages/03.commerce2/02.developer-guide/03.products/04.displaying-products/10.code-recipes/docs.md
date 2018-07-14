@@ -71,3 +71,9 @@ function mymodule_preprocess_commerce_product(&$variables) {
   ...
 }
 ```
+
+### Links and resources
+* [Custom field formatter for displaying entity images with thumbnails and 1 large image], posted by Ivan Jaros in [Drupal Answers] on StackExchange.
+
+[Custom field formatter for displaying entity images with thumbnails and 1 large image]: https://drupal.stackexchange.com/questions/192471/display-entity-images-with-thumbnails-and-1-large-image
+[Drupal Answers]: https://drupal.stackexchange.com/

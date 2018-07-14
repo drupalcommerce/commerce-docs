@@ -36,7 +36,7 @@ On the Size product attribute configuration form, add "Small", "Medium", and "La
 You can use the drag-and-drop handle in the leftmost column, the "Reset to alphabetical" button, or the "Show row weights" link and "Weight" select lists to reorder the values. This order will be used on the form used to enter product variation data. CHECK ON THIS--FOR DEMO, ORDER DOESN'T SEEM TO WORK???
 
 ### Add a product attribute to a product variation type
-In the [Simple product type](../01.simple-product) documentation, we created a product type named, "Simple". Use the same procedure to create a new product type named, "Clothing", including the addition of an "Images" field. Since the "Images" field serves the same purpose for both product variation types, you can Re-use the existing field instead of creating a new one:
+In the [Simple product type](../01.simple-product) documentation, we created a product type named, "Simple". Use the same procedure to create a new product type named, "Clothing", with a corresponding "Clothing" product variation type. When you add the "Images" field to the product variation type, you can re-use the existing Image field instead of creating a new one:
 
 ![Re-use existing Images field](../../images/clothing-product-type-3.jpg)
 
