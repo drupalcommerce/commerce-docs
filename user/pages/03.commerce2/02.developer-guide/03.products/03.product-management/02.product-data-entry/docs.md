@@ -93,6 +93,7 @@ Also, you may want to look at the custom css library that's used for the default
 
 ### Links and resources
 * Drupal 8 User Guide documentation on [Concept: Forms and Widgets](https://www.drupal.org/docs/user_guide/en/structure-widgets.html)
+
 ---
 In the next section, we'll look at customization options for the Product overview page.
 

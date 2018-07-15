@@ -6,11 +6,6 @@ taxonomy:
 
 In this section, we're going to walk through the steps involved in creating a simple product type, one that has a single variation per product. We'll also add an image field for our variation type.
 
-#### Prerequisites
-- Definition of product variation
-- Definition of order item
-- Create a store.
-
 ### Create a product type
 To create a new product type:
 1. Navigate to the "Product types" listing at `admin/commerce/config/product-types`

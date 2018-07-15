@@ -4,4 +4,8 @@ taxonomy:
     category: docs
 ---
 
-Move most of the text from the current top-level "Overview" document into this page.
+What are these things:
+1. Product types, Default product type, Products
+2. Variation types, Default product variation type, Variations, default order item type, Sku uniqueness
+3. Product attributes, attribute values
+4. Purchasable entities

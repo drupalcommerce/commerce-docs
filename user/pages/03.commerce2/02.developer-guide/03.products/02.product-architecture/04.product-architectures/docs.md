@@ -57,7 +57,7 @@ For subscription products, we recommend the [Commerce Recurring Framework module
 For product bundles, we recommend the [Commerce Product Bundle module]. The port to Drupal 8 is currently in progress. See the [Drupal 8 (Commerce 2) Version] issue for additional information:
 
 ### Purchasable entities
-When it comes to product architectures, there is no one true answer. That’s why it’s important for Drupal Commerce to support any number of product architectures. Do you need a Commerce solution that uses a completely unique architecture? Perhaps there's just no way to make the "products/variations/attributes" structure provided by the [Product module](../../01.overview/01.product-module) fit your needs. If so, you can develop a completely custom product architecture but still benefit from the rest of the Drupal Commerce ecosystem of modules (cart, checkout, order, payment, etc.).
+When it comes to product architectures, there is no one true answer. That’s why it’s important for Drupal Commerce to support any number of product architectures. Do you need a Commerce solution that uses a completely unique architecture? Perhaps there's just no way to make the "products/variations/attributes" structure provided by the Product module fit your needs. If so, you can develop a completely custom product architecture but still benefit from the rest of the Drupal Commerce ecosystem of modules (cart, checkout, order, payment, etc.).
 
 The key to Drupal's product architecture flexibility is the concept of a "purchasable entity". Product variations are one example of purchasable entities. Every product variation (and every purchasable entity) in Drupal Commerce has 4 key properties:
 
