@@ -115,9 +115,6 @@ We have now created two facets, which can be viewed on the Facets administration
 For the screenshot below, I selected the "Urban Living" Category. Then its five sub-categories appeared. Selecting "Toys/Novelties" reduced the number of matching products to just two. Notice that only the single "Pool Toys Inc." Brand is listed, since that is the brand for both toys.
 ![Product catalog page in action](../../images/product-catalog-13.jpg)
 
-#### Facets_pretty_paths module
-(not yet finished)
-
 ### Links and resources
 * [Search API module documentation]
 * Drupal 8 User Guide documentation on [Creating Listings with Views]
