@@ -11,8 +11,10 @@ taxonomy:
 - What else?
 
 #### [Concepts](02.concepts)
-- What are all the things
-- entities: Product, ProductAttribute, ProductAttributeValue, ProductType, ProductVariation, ProductVariationType, Purchasable entities
+- Through various examples, learn about:
+ - Products and product types
+ - Product variations and product variation types
+ - Product attributes and product attribute values
 
 #### [Product information structure](03.product-information-structure)
 - How are all the things related
