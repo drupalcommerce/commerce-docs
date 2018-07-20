@@ -7,9 +7,9 @@ taxonomy:
 This page describes Drupal Commerce products at a conceptual level. For step-by-step instructions for setting up products for your site, see the [Product Architecture documentation](../../02.product-documentation). For more specific, technical explanations of the product-related data structures and relationships, see the [Product Information Structure documentation](../03.product-information-structure).
 
 #### Product SKUs -- What are they and why are they important?
-SKU stands for "stock keeping unit" and is a unique code that identifies the products you sell. Companies that are direct manufacturers may use MPNs, or "manufacturing part numbers", instead of SKUs (but they'll still be called "SKUs" in Drupal).
+SKU stands for "stock keeping unit" and is a unique code that identifies the products you sell. Companies that are direct manufacturers may use MPNs, or "manufacturing part numbers", instead of SKUs (but they'll still be called "SKUs" in Drupal Commerce).
 
-For stores that sell physical products, SKUs are critically important for inventory management. A complete list of all product SKUs along with a quantity value for each provides the information you need to monitor stock levels. What about stores that sell non-physical products, like services or virtual products, for which there may be *unlimited* inventory? You still need SKUs. SKUs are important for sales and financial reporting for all types of products.
+For stores that sell physical products, SKUs are critically important for inventory management. A complete list of all product SKUs along with a quantity value for each provides the information you need to monitor stock levels. What about stores that sell non-physical products, like services or virtual products, for which there may be *unlimited* inventory? You still need SKUs. SKUs are important for sales and financial reporting for all types of products. The SKU is your unique identifier for each product.
 
 If you already have a well-defined list of products, each with a SKU, price, and other data fields, then you probably don't need to spend too much time thinking about SKUs. As long as each SKU is unique, you're good. However, in other cases, creating the template/structure for your product SKUs may be one of your first product-related design decisions. In Drupal Commerce, SKUs can be any strings up to 255 characters long, but typically, you will want to keep your SKUs as short and simple as possible. Also, avoid spaces and special characters, and be consistent with your format.
 
@@ -36,7 +36,7 @@ Do you also need a product attribute for "Name"? Well, it depends... are you goi
 
 What about names for which you're not going to carry stock? For those, you can create an additional "Name" product attribute value, called "Other" (or "Custom") and then provide a way for customers to enter a name when they purchase a product. *(See the [Add to cart form documentation](../../04.displaying-products/02.add-to-cart-form) for more information on how to set this up.)* You'll create a SKU and a product variation for the "Other" Name attribute value in each of the available colors.
 
-Alternatively, suppose you're only going to carry stock for writing journals in each available color, with no pre-printed titles. In that case, you'll only need a single product attribute for Color. The name to be used for the titles will not be a product attribute; instead, it will be an extra line item field, stored with the order data.
+Alternatively, suppose you're only going to carry stock for writing journals in each available color, with no pre-printed titles. In that case, you'll only need a single product attribute for Color. The name to be used for the titles will not be a product attribute; instead, it will be an extra order item field, stored with the order data.
 
 #### Product types, product variation types, and product attributes
 Suppose our store sells both traditional books (in a variety of formats) and Customizable Writing Journals (in a variety of colors), as described in the examples above. In Drupal Commerce terminology, these are two different *product types*, each with a corresponding *product variation type*.
@@ -46,7 +46,7 @@ Suppose our store sells both traditional books (in a variety of formats) and Cus
 
 Just as you can define any product attributes you need to match your specific products, you can define your own product and product variation types. In Drupal Commerce, there isn't a set of predefined "product types". You are free to create as many product types as you need to precisely define your products. The [Product Architecture documentation](../../02.product-documentation) describes a variety of approaches to product architecture.
 
-When you first create a Drupal Commerce site, you will see a "Default" product type and a "Default" product variation type. You can use these types as is, customize them, or delete them from your site completely. If you have a homogenous list of products, you may not need to create any custom product/variation types; the default types may be sufficient. Here is a screenshot of the form used to create a standard Default-type product.
+When you first create a Drupal Commerce site, you will see a "Default" product type and a "Default" product variation type. You can use these types as is, customize them, or delete them from your site completely. If you have a homogenous list of products, you may not need to create any custom product/variation types; the default types may be sufficient. If you do not customize the Default product type, as provided by Drupal Commerce, in any way, then your administrative users will add and edit products using a form that looks like this:
 
 ![Add default type product](../../images/overview-concept-1.jpg)
 
