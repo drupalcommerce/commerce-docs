@@ -4,26 +4,35 @@ taxonomy:
     category: docs
 ---
 
-Need to write a little intro here... refer back to Concepts page as a prerequisite. This is a more technical overview. It assumes familiarity with Drupal concepts...
+This page provides specific, technical explanations of the product-related data structures and relationships in Drupal Commerce. Familiarity with Drupal concepts including configuration entities, content entities, bundles, and base fields is assumed. For a more general introduction to Drupal Commerce products,  see the [Concepts documentation page](../02.concepts).
 
+Not sure about the ordering of these sections. Current ordering doesn't fit with the images...
 
+#### Product attribute values and product attributes
+A **product attribute value** is a content entity that has a product attribute as its bundle entity type. Its base fields are:
+- attribute: the ID of the product attribute value's "product attribute" bundle.
+- name: typically displayed to customers as a selectable product option, like "Blue", "Green", or "Red".
+- weight: used for ordering attribute values in relation to other attribute values. The default ordering is alphabetical.
+- created and changed: timestamps that are automatically set when attribute values are created/changed.
 
-The Drupal Commerce product module defines three content entities, each with a corresponding bundle configuration entity type. Name them here and maybe provide a little TOC.
+Custom fields can be added to product attribute value entities through the administrative UI.
 
-#### Product attributes and product attribute values
-A **product attribute** is a configuration entity that has a unique id, label (Name), and an "Element type". The attribute element type can be one of:
-- Radio buttons
-- Select list
-- Rendered attribute (See [Product attributes](../../04.displaying-products/03.product-attributes) in the Displaying products documentation.)
+A **product attribute** is a configuration entity that has the following properties:
+- id: unique string id
+- label: label to be used for the attribute and typically displayed to customer. For example: "Color" or "Size"
+- elementType, one of:
+ - 'radios' (radio buttons)
+ - 'select' (select list)
+ - 'commerce_product_rendered_attribute' (Rendered attribute). See [Product attributes](../../04.displaying-products/03.product-attributes) in the Displaying products documentation.
 
-The values for a product attribute are not stored in its configuration data, but the "ProductAttribute" class provides a `getValues()` method that can be used to retrieve an array of "ProductAttributeValueInterface" objects, sorted by weight and name.
+The product attribute entity also has two useful "getter" methods:
+- The `getElementType()` method returns the attribute's entityType value.
+- The `getValues()` method returns an array of "ProductAttributeValueInterface" objects, sorted by weight and name.
 
 **Deleting product attributes**
-- If a product attribute is deleted, then all of its product attribute values will also be deleted. Every product attribute value must have a product attribute; therefore, product attribute values cannot exist without their product attributes.
+- If a product attribute is deleted, then all of its product attribute values will also be deleted.
 
-A **product attribute value** is a content entity that has a product attribute as its bundle entity type. Each product attribute value has a name and weight (used for ordering values in relation to others). Timestamps for attribute value creation and changed time are also stored.
 
-Custom fields can be added to product attribute value entities through the administration ui.
 
 ![Product Information Structure](../../images/attribute_entity_relationships.png)
 
