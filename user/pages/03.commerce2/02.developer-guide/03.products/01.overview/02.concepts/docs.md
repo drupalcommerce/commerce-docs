@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-This page describes Drupal Commerce products at a conceptual level. For step-by-step instructions for setting up products for your site, see the [Product Architecture documentation](../../02.product-documentation). For more specific, technical explanations of the product-related data structures and relationships, see the [Product Information Structure documentation](../03.product-information-structure).
+This page describes Drupal Commerce products at a conceptual level. For step-by-step instructions for setting up products for your site, see the [Product Architecture documentation](../../02.product-architecture). For more specific, technical explanations of the product-related data structures and relationships, see the [Product Information Structure documentation](../03.product-information-structure).
 
 #### Product SKUs -- What are they and why are they important?
 SKU stands for "stock keeping unit" and is a unique code that identifies the products you sell. Companies that are direct manufacturers may use MPNs, or "manufacturing part numbers", instead of SKUs (but they'll still be called "SKUs" in Drupal Commerce).
