@@ -23,6 +23,5 @@ If you are evaluating Drupal Commerce as a potential ecommerce solution, this se
 - Set up the "Add to cart form" to allow customers to select products and add them to their carts.
 
 #### [Marketing products](05.marketing-products)
-- Create a product search page
-- Set up a product catalog.
+- Create a product search page and product catalog.
 - More TBD

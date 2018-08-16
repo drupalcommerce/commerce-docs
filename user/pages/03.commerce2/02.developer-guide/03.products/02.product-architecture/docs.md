@@ -30,5 +30,3 @@ Documentation in this section describes various approaches to product architectu
  - Create product types, variation types, and product attributes.
  - Load product types, variation types, and product attributes.
  - Implement the PurchasableEnityInterface for custom product architectures.
-
-> TODO?  auto-variation names, default variations

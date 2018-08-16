@@ -4,7 +4,15 @@ taxonomy:
     category: docs
 ---
 
-This page still needs a short introduction / overview and/or TOC links.
+This page provides a general overview of some of the most commonly used types of product architectures:
+
+- [Virtual products](#virtual-vs-physical-products)
+- [Physical products](#physical-product-configuration)
+- [Configurable / customizable products](#configurable-customizable-products)
+- [Downlodable products / files](#downloadable-products-files)
+- [Subscriptions](#subscriptions)
+- [Product bundles](#product-bundles)
+- [Unique / none-of-the-above architectures](#purchasable-entities)
 
 ### Virtual vs physical products
 
@@ -29,7 +37,7 @@ You will see that two "traits" have been added to the configuration form for the
 
 ![Shipping traits for physical product variation type](../../images/product-architectures-2.jpg)
 
-Both these fields can be managed just like any other field in terms of displaying them on data entry forms and product displays. For more information on how these fields are used in the context of the Commerce Shipping module, see [link to shipping documentation here].
+Both these fields can be managed just like any other field in terms of displaying them on data entry forms and product displays. For more information on how these fields are used in the context of the Commerce Shipping module, see the [Shipping documentation](../../../10.shipping).
 
 #### Stock management for physical products
 An important aspect of product architecture with respect to stock management is the definition of your product attributes and variations. For each unique combination of attributes, i.e., for each product variation, you get a single SKU. If you need to keep track of the number of units for each color, for example, then "Color" should be a product attribute.
@@ -47,11 +55,11 @@ To implement a configurable product in the context of Drupal Commerce product ar
 
 Both single-variation products and products with attributes / variations can be customized as a configurable product. Also, multiple custom fields could be added for a configurable product. For step-by-step instructions, see [Add fields for customizable products](../../04.displaying-products/02.add-to-cart-form) in the "Configuring the Add to cart form fields" section of the documentation on the "Add to cart form".
 
-### Downlodable products / files
+### Downloadable products / files
 For downloadable products / files, we recommend the [Commerce File module]. The port to Drupal 8 is currently in progress. See the [Port to Drupal 8] issue for the current status.
 
 ### Subscriptions
-For subscription products, we recommend the [Commerce Recurring Framework module], which provides recurring billing for Drupal Commerce. [Developer documentation for this module](../../../12.recurring) is covered in a later section in this guide.
+For subscription products, we recommend the [Commerce Recurring Framework module], which provides recurring billing for Drupal Commerce. See the [Subscriptions documentation](../../../12.recurring) for additional information.
 
 ### Product bundles
 For product bundles, we recommend the [Commerce Product Bundle module]. The port to Drupal 8 is currently in progress. See the [Drupal 8 (Commerce 2) Version] issue for additional information:

@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-If you need to display the products on your site in multiple languages, you will need to build a Multilingual Drupal site. Multilingual functionality in Drupal is beyond the scope of this Drupal Commerce documentation guide. For an overview, please see the Drupal 8 User Guide section on [Making Your Site Multilingual]. This page describes basic multilingual setup for products, product variations, and product attribute values.
+If you want to display the products on your site in multiple languages, you'll need to build a Multilingual Drupal site. Multilingual functionality in Drupal is a larger topic, beyond the scope of this Drupal Commerce documentation guide. For an overview, please see the Drupal 8 User Guide section on [Making Your Site Multilingual]. This page describes basic multilingual setup for products, product variations, and product attribute values.
 
 #### Prerequisites
 - The Drupal core [Content Translation module] is required for multilingual products.
@@ -31,8 +31,6 @@ On the Translations page for each product, you will see options for adding a tra
 If you would like to translate the names of your product and product variation types, you can use the "Translate" tabs on the configuration forms for each type.
 
 ![Edit product type name](../../images/multilingual-products-4.jpg)
-
->Need more here about product variations, link to docs on prices, currencies...
 
 ### Enable translations for product attribute values:
 For multilingual product attribute values, you need to enable attribute value translation for each product attribute that requires translation.
