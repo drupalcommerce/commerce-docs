@@ -50,7 +50,6 @@ When you first create a Drupal Commerce site, you will see a "Default" product t
 
 ![Add default type product](../../images/overview-concept-1.jpg)
 
-
 ### Links and Resources
 * [SKU Best Practices for Online Shopping Sites], by Andrew Brett Watson
 
