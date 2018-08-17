@@ -17,7 +17,7 @@ taxonomy:
 - **Manage product attributes:**
  - [Check if an attribute value exists](#checking-if-an-attribute-value-exists-within-a-particular-attribute-type)
  - [Assign attribute values to a variation](#assigning-attribute-values-to-a-variation)
-
+- [**Alter the product title field label**](#altering-the-title-field-label)
 
 ### Creating products
 - Since product variations are the purchasable parts of products, products need at least one variation.
@@ -196,5 +196,25 @@ Let's say we want our hypothetical product to have two variations. One will be t
       'attribute_size' => $large,
     ]);
     $variation_blue_large->save();
+```
+
+### Altering the title field label
+The following example will change the label for the product name from "Title" to "Product name".
+
+![Change product name label](../../images/managing-products-code-recipes-1.jpg)
+
+```php
+
+    use Drupal\Core\Entity\EntityTypeInterface;
+
+    /**
+     * Implements hook_entity_base_field_info_alter().
+     */
+    function mymodule_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+      if ($entity_type->id() == 'commerce_product') {
+        // Change the title field label.
+        $fields['title']->setLabel(t('Product name'));
+      }
+    }
 ```
 
