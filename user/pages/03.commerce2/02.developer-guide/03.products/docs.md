@@ -20,7 +20,7 @@ If you are evaluating Drupal Commerce as a potential ecommerce solution, this se
 
 #### [Displaying products](04.displaying-products)
 - Customize the display of products on your site.
-- Set up the "Add to cart form" to allow customers to select products and add them to their carts.
+- Set up the ***Add to cart form*** to allow customers to select products and add them to their carts.
 
 #### [Marketing products](05.marketing-products)
 - Create a product search page and product catalog.
