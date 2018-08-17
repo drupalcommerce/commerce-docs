@@ -18,7 +18,7 @@ If you want to write custom code to programatically create or manage your produc
  - [PurchasableEntityInterface](#purchasableentityinterface)
 
 ### Creating a product type
-In the [Simple product type](../01.simple-product) documentation, we looked at creating a product type through the administration UI. A "Simple" product variation type was created automatically for us. If you are creating a product type programatically, you will need to create its product variation type *before* you create the product type.
+In the [Simple product type](../01.simple-product) documentation, we looked at creating a product type through the administration UI. A *Simple* product variation type was created automatically for us. If you are creating a product type programatically, you will need to create its product variation type *before* you create the product type.
 
 ```php
     /**
@@ -138,7 +138,7 @@ In the [Simple product type](../01.simple-product) documentation, we looked at c
 ```
 
 ### PurchasableEntityInterface
-The ProductVariation entity class implements the PurchasableEntityInterface. Any content entity type that implements this interface can be purchased. Line items (*order items*) have a purchased_entity reference field. If you develop a content entity type that implements this PurchasableEntityInterface, you can set up an order item type to allow customers to purchase your custom entity type instead of standard product variations.
+The ProductVariation entity class implements the PurchasableEntityInterface. Any content entity type that implements this interface can be purchased. Line items (***order items***) have a purchased_entity reference field. If you develop a content entity type that implements this PurchasableEntityInterface, you can set up an order item type to allow customers to purchase your custom entity type instead of standard product variations.
 
 ```php
       <?php
