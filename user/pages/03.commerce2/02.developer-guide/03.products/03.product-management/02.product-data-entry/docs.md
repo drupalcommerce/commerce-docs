@@ -4,8 +4,6 @@ taxonomy:
     category: docs
 ---
 
->This page will need an update once [Move the variations form to its own tab](https://www.drupal.org/project/commerce/issues/2901939) is fixed. Also: [Simplify the variation UX when each product has a single variation](https://www.drupal.org/project/commerce/issues/2690681).
-
 This documentation page describes how you can customize the forms used to enter product data in Drupal Commerce. A single form is used for both creating new products and editing existing products, but the product form can be  configured uniquely for each of your product types. For the [Simple product type](../../02.product-architecture/01.simple-product#configure-a-product-variation-type) we created in the Product architecture section of the documentation, this is what the product form looks like, without any modifications.
 
 ![Product data entry form](../../images/product-data-entry-1.jpg)
@@ -46,8 +44,6 @@ The Stores field appears in the Visibility settings of the Sidebar section of th
 
 By default, "Entity select" is set as the widget for the Stores field. This is a custom Drupal Commerce widget that can be used by entity reference fields, like Stores. The entity select widget is an adaptive field widget that changes its form element based on the number of available options for the field. If there is only one available entity (i.e., only one available store in this case), you can enable a setting to hide the field completely. If shown, the single option will be displayed with either a checkbox or radio button. Checkboxes are used whenever multiple items can be selected; radio buttons are used when only a single item can be selected. Since products can belong to multiple stores, checkboxes will be used for the Stores field.
 You can also set an "autocomplete threshold" for the Entity select widget. If the number of option values exceeds the autocomplete threshold, then an autocomplete field will be presented to the user instead of checkboxes/radio buttons. Users can use the autocomplete field to enter text to search for the Store by name.
-
->will want to move description of the Commerce entity select widget to a more general section of the documentation  (core components?) and provide a link here instead of full description.
 
 If you do not want to use the Entity select widget, you can select one of the other available options. However, you should avoid using the "Inline entity form - Complex" widget, since you will generally not want users to edit Store data when they're editing products.
 

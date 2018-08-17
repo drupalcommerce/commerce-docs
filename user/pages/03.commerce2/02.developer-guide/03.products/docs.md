@@ -7,9 +7,8 @@ taxonomy:
 If you are evaluating Drupal Commerce as a potential ecommerce solution, this section will help you decide whether Drupal Commerce can meet your needs with respect to how you can organize, maintain, and display your product-related information. If you are a site builder or developer, step-by-step instructions and explanations will help you get started with setting up products in your Drupal Commerce site.
 
 #### [Overview](01.overview)
-- Getting started ...
-- Learn terminology and general concepts related to Drupal Commerce products.
-- More TBD
+- For anyone working with Drupal Commerce, start by learning general concepts related to products.
+- For developers interested in writing custom code, familiarize yourself with the product information structure.
 
 #### [Product architecture](02.product-architecture)
 - Learn how to define and configure your products and product categories.
@@ -21,8 +20,8 @@ If you are evaluating Drupal Commerce as a potential ecommerce solution, this se
 
 #### [Displaying products](04.displaying-products)
 - Customize the display of products on your site.
-- Use the "Add to cart form" to allow customers to select products and add them to their carts.
+- Set up the ***Add to cart form*** to allow customers to select products and add them to their carts.
 
 #### [Marketing products](05.marketing-products)
-- Create a product catalog.
+- Create a product search page and product catalog.
 - More TBD

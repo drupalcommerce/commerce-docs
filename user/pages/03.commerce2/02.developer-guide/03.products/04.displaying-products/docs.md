@@ -25,8 +25,8 @@ Learn techniques for displaying products on your site.
 - Use Views to display a page with multiple products.
 
 #### [Product images](06.product-images)
-- TBD
-- Image delta formatter: image_delta_formatter module
+- Learn how to use the Drupal Core Image module to create a custom image style for products.
+- Use the Image delta formatter module to create a custom view mode for product variations.
 
 #### [Code recipes](07.code-recipes)
-- *List of specific recipes or categories of recipes.*
+- Various techniques and code snippets for customizing product displays and the add to cart form.

@@ -15,13 +15,13 @@ Documentation in this section describes various approaches to product architectu
 - Add a Color field to a product attribute.
 
 #### [Product categories](03.product-categories)
- - Create a simple Brand taxonomomy and a hierarchical Product category taxonomy.
+ - Create a simple Brand taxonomy and a hierarchical Product category taxonomy.
  - Integrate the taxonomies with specific product types.
 
 #### [Product architectures](04.product-architectures)
  - An overview of approaches to product architecture in Drupal Commerce
  - Contributed modules for extending product architecture options
- - Introduction to the Purchasable Entity concept
+ - Introduction to the ***Purchasable Entity*** concept
 
 #### [Multilingual products](05.multilingual-products)
 - Enable translations for products, variations, and product attribute values.
@@ -30,5 +30,3 @@ Documentation in this section describes various approaches to product architectu
  - Create product types, variation types, and product attributes.
  - Load product types, variation types, and product attributes.
  - Implement the PurchasableEnityInterface for custom product architectures.
-
-> TODO?  auto-variation names, default variations
