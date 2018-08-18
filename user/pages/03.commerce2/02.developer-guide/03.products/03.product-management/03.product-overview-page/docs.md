@@ -21,15 +21,15 @@ The functionality of this page is powered by Views. Navigate to `/admin/structur
 Use the FIELDS section to add, remove, or reorder the columns displayed on the Products overview page. If you look at the list of Fields, you'll see two special items in addition to Title, Type (hidden if there's only one bundle), Status, and Updated. Bulk update and Operations links are two special Fields that will be described below. To control sorting options for the displayed fields, use the `Settings` link in the FORMAT section.
 
 ### Modify filter options
-You can create additional criteria for filtering products by setting options in the FILTER CRITERIA section. For example, if you want to provide an option for displaying only Published or Unpublished products, add "Published" as a filter criterion and select the "expose this filter to visitors" option. In the EXPOSED FORM section of the ADVANCED settings, you can further customize the appearance of the filter form on the products page.
+You can create additional criteria for filtering products by setting options in the FILTER CRITERIA section. For example, if you want to provide an option for displaying only Published or Unpublished products, add *Published* as a filter criterion and select the *expose this filter to visitors* option. In the EXPOSED FORM section of the ADVANCED settings, you can further customize the appearance of the filter form on the products page.
 
 ### Bulk update options
-The "Bulk update" field provides the checkbox in the first column of the listing as well as the "With selection" menu. Drupal Commerce provides three options by default:
+The *Bulk update* field provides the checkbox in the first column of the listing as well as the *With selection* menu. Drupal Commerce provides three options by default:
 - Delete product
 - Publish product
 - Unpublish product
 
-Administrative users with the [necessary permissions](../01.access-control) can execute these operations on selected products. You can remove any of these options by clicking on the "Product: Bulk update" item in the FIELDS section. You can also add options by creating [Action plugins] with custom code. Looking at the code for the Publish and Unpublish product Action plugins is a good place to start: `Drupal\commerce_product\Plugin\Action\PublishProduct`. The, [Create an action for custom mass updates with Drupal 8](https://www.flocondetoile.fr/blog/create-action-custom-mass-updates-drupal-8), article is a good introduction to the topic.
+Administrative users with the [necessary permissions](../01.access-control) can execute these operations on selected products. You can remove any of these options by clicking on the *Product: Bulk update* item in the FIELDS section. You can also add options by creating [Action plugins] with custom code. Looking at the code for the Publish and Unpublish product Action plugins is a good place to start: `Drupal\commerce_product\Plugin\Action\PublishProduct`. The, [Create an action for custom mass updates with Drupal 8](https://www.flocondetoile.fr/blog/create-action-custom-mass-updates-drupal-8), article is a good introduction to the topic.
 
 ### Operations links
 The Operations menu that appears in the rightmost column of the Products overview page can be modified with custom code, using [hook_entity_operation_alter]. If you are unfamiliar with hooks, see [Understanding Hooks] in the documentation provided by drupal.org.
