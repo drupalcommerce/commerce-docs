@@ -9,12 +9,12 @@ If you need to customize layouts for your product displays beyond what is possib
 ### Theming products
 The default product template is commerce-product.html.twig
 
-- The product template will be used for product pages and product fields displayed with the "Rendered entity" formatter.
-- Use "Manage display" for your product type to make sure that all the fields you want displayed are enabled for the active display mode. (The "Default" display mode is used for product pages; display mode is a configuration option for rendered entities.)
+- The product template will be used for product pages and product fields displayed with the *Rendered entity* formatter.
+- Use *Manage display* for your product type to make sure that all the fields you want displayed are enabled for the active display mode. (The *Default* display mode is used for product pages; display mode is a configuration option for rendered entities.)
 - If you want to display variation fields, product variation field injection should be enabled. Also, make sure that all the variation fields you want displayed are enabled for the Default display mode for the variation type.
 
 #### Available variables
-- **attributes**: HTML attributes for the wrapper. (*not to be confused with "product attributes"*)
+- **attributes**: HTML attributes for the wrapper. (*not to be confused with **product attributes***)
 - **product_entity**: The product entity.
 - **product_url**: The product URL.
 - **product**: The rendered product fields.
@@ -46,12 +46,12 @@ The default product template is commerce-product.html.twig
 ### Theming product variations
 The default product template is commerce-product-variation.html.twig
 
-- If you are using the "Add to cart form" formatter to display your product's variations, this template will *not* be used.
-- This template will be used whenever the "Rendered entity" formatter is selected for a product variations field.
-- Use "Manage display" for your product variation type to make sure that all the fields you want displayed are enabled for the rendered entity's display mode.
+- If you are using the *Add to cart form* formatter to display your product's variations, this template will *not* be used.
+- This template will be used whenever the *Rendered entity* formatter is selected for a product variations field.
+- Use *Manage display* for your product variation type to make sure that all the fields you want displayed are enabled for the rendered entity's display mode.
 
 #### Available variables
-- **attributes**: HTML attributes for the wrapper. (*not to be confused with "product attributes"*)
+- **attributes**: HTML attributes for the wrapper. (*not to be confused with **product attributes***)
 - **product_variation_entity**: The product variation entity.
 - **product_url**: The product URL.
 - **product_variation**: The rendered product variation fields.
@@ -73,8 +73,8 @@ The default product template is commerce-product-variation.html.twig
 ### Theming product attribute values
 The default product attribute template is commerce-product-attribute-value.html.twig
 
-- This template will be used whenever the "Rendered attribute" formatter is selected for a product variations field.
-- Use "Manage display" for your product attribute to make sure that all the fields you want displayed are enabled for the "Add to Cart Form" display mode.
+- This template will be used whenever the *Rendered attribute* formatter is selected for a product variations field.
+- Use *Manage display* for your product attribute to make sure that all the fields you want displayed are enabled for the *Add to Cart Form* display mode.
 
 #### Available variables
 - **attributes**: HTML attributes for the wrapper.
@@ -94,6 +94,6 @@ Also, there is a custom css library for rendered product attributes, located wit
 - `product--rendered-attribute__selected`
 
 ---
-In the next section, displaying a page with multiple products...
+In the next section, we'll look at how you can create a page that displays multiple products with multiple *add to cart forms*.
 
 [Theming Drupal Guide]: https://www.drupal.org/docs/8/theming

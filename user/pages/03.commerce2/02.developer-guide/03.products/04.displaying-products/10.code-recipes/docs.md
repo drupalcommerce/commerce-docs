@@ -28,7 +28,7 @@ function mymodule_entity_type_build(array &$entity_types) {
 }
 ```
 
-3. If your custom module name does not come after "commerce_cart" alphabetically, then you will need to manually adjust its weight. To do this, you can use hook_module_implements_alter(). Or you can use the `module_set_weight` API function (implemented in core\includes\module.inc).
+3. If your custom module name does not come after *commerce_cart* alphabetically, then you will need to manually adjust its weight. To do this, you can use `hook_module_implements_alter()`. Or you can use the `module_set_weight` API function (implemented in core\includes\module.inc).
 
 
 ### Altering commerce product twig template variables
