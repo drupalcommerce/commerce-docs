@@ -65,7 +65,7 @@ class Onsite extends OnsitePaymentGatewayBase implements OnsiteInterface {
 
 Next, we'll implement the plugin configuration form methods for our *api_key* setting: *defaultConfiguration()*, *buildConfigurationForm()*, and *submitConfigurationForm()*, as described in the [Creating payment gateways documentation](../docs.md). We'll describe the implementation of the rest of the methods in the context of the *OnsiteInterface* we'll create.
 
-**OnsiteInterface** extends a base interface, *OnsitePaymentGatewayInterface*, as well as three additional interfaces provided by the Drupal Commerce Payment module. The other interfaces signal which additional capabilities the gateway has. For an actual implementation, you may want to define additional methods in your plugin's interface that are specific to your payment provider.
+**OnsiteInterface** extends a base interface, *OnsitePaymentGatewayInterface*, as well as three additional interfaces provided by the Drupal Commerce Payment module. For an actual implementation, you may want to define additional methods in your plugin's interface that are specific to your payment provider.
 
 ```php
 interface OnsiteInterface extends OnsitePaymentGatewayInterface, SupportsAuthorizationsInterface, SupportsRefundsInterface, SupportsUpdatingStoredPaymentMethodsInterface {
@@ -74,7 +74,7 @@ interface OnsiteInterface extends OnsitePaymentGatewayInterface, SupportsAuthori
 ```
 
 ### Step 2: Implement the plugin methods
-Now that we have the basic structure in place for our on-site payment gateway plugin, the next step is to implement each of the methods defined by *OnsiteInterface* and the interfaces it extends.
+Now that we have the basic structure in place for our on-site payment gateway plugin, the next step is to implement each of the methods defined by *OnsiteInterface* and the interfaces it extends. The other interfaces signal which additional capabilities a payment gateway has.
 
 #### OnsitePaymentGatewayInterface and SupportsStoredPaymentMethodsInterface
 **OnsitePaymentGatewayInterface** is the base interface for on-site payment gateways. It extends the *PaymentGatewayInterface* base interface as well as the *SupportsStoredPaymentMethodsInterface*. It defines a single method, *createPayment()*. **SupportsStoredPaymentMethodsInterface** defines the interface for gateways which support storing payment methods. It defines *createPaymentMethod()* and *deletePaymentMethod()* methods.

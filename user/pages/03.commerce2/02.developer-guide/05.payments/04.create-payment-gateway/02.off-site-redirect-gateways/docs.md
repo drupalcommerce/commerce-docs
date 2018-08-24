@@ -32,7 +32,7 @@ This defines a form that Drupal Commerce will redirect to, when the user clicks 
 
 ![Pay and complete purchase](../../images/create-payment-gateway-4.png)
 
-We only need to implement one method, `buildConfigurationForm`, for the `RedirectCheckoutForm` form. This is a pretty straightforward Drupal form, and it should not hold any surprises. For this example, we will set a lot of hidden fields and automatically redirect the user to QuickPay.
+We only need to implement one method, *buildConfigurationForm()*, for the `RedirectCheckoutForm` form. This is a pretty straightforward Drupal form, and it should not hold any surprises. For this example, we will set a lot of hidden fields and automatically redirect the user to QuickPay.
 
 ```php
 <?php
@@ -70,9 +70,9 @@ class RedirectCheckoutForm extends PaymentOffsiteForm {
 That completes our ***Checkout*** implementation. Next, we need to handle the returning user.
 
 ### Return from payment provider
-When the user returns from the payment provider, we need to validate that the payment actually succeeded. To do this, we'll implement the `onReturn()` method in the `RedirectCheckout` class. If the payment failed, the method should throw a `PaymentGatewayException`. This will reset the payment. The Drupal Comerce Payment module provides several other *Exceptions* in addition to the *PaymentGatewayException*, which are listed at the end of this page.
+When the user returns from the payment provider, we need to validate that the payment actually succeeded. To do this, we'll implement the *onReturn()* method in the `RedirectCheckout` class. If the payment failed, the method should throw a `PaymentGatewayException`. This will reset the payment. The Drupal Comerce Payment module provides several other *Exceptions* in addition to the *PaymentGatewayException*, which are listed at the end of this page.
 
-![Errornous payment](../../07.off-site-redirect-gateways/errornous-payment.png)
+![Payment error message](../../images/create-payment-gateway-5.png)
 
 If the payment was successful, the method should create a payment and store it:
 

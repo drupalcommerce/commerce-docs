@@ -6,8 +6,8 @@ taxonomy:
 
 The Commerce 2 Payment API provides a framework for implementing online payment gateways. Most of the code you will need to write is gateway specific. This documentation section includes examples in separate pages for three types of payment gateways:
 
-* [On-site payment gateways](01.on-site-gateways), includes an overview of payment gateway interfaces
-* [Off-site (redirect) gateways](02.off-site-redirect-gateways), includes an overview of payment gateway exceptions
+* [On-site payment gateways](01.on-site-gateways), includes an overview of payment gateway [interfaces](01.on-site-gateways#step-2-implement-the-plugin-methods)
+* [Off-site (redirect) gateways](02.off-site-redirect-gateways), includes an overview of payment gateway [exceptions](02.off-site-redirect-gateways#handling-payment-gateway-exceptions)
 * [Off-site (iframe) gateways](03.off-site-iframe-gateways), includes example Javascript configuration
 
 ##### Initial steps for creating a payment gateway in Drupal Commerce:
@@ -121,10 +121,10 @@ When a plugin is selected on the *Payment gateway* administrative page, its conf
 
 ![Add payment gateway configuration form](../images/create-payment-gateway-3.png)
 
-We can do that by implementing the `defaultConfiguration()`, `buildConfigurationForm()`, and `submitConfigurationForm()` methods in the `RedirectCheckout` plugin class.
+We can do that by implementing the *defaultConfiguration()*, *buildConfigurationForm()*, and *submitConfigurationForm()* methods in the `RedirectCheckout` plugin class.
 
-#### The `defaultConfiguration()` method
-Use the `defaultConfiguration()` method to return default values, corresponding to the settings you defined in your module's [configuration schema file](#create-a-configuration-schema-file). For the *Commerce QuickPay* module, we only defined *private_key* and *api_key* settings, so the `defaultConfiguration()` method looks like this:
+#### The defaultConfiguration() method
+Use the *defaultConfiguration()* method to return default values, corresponding to the settings you defined in your module's [configuration schema file](#create-a-configuration-schema-file). For the *Commerce QuickPay* module, we only defined *private_key* and *api_key* settings, so the defaultConfiguration() method looks like this:
 
 ```php
   public function defaultConfiguration() {
@@ -135,8 +135,8 @@ Use the `defaultConfiguration()` method to return default values, corresponding 
   }
 ```
 
-#### The `buildConfigurationForm()` method
-The `buildConfigurationForm` method is a standard Drupal form builder. To display the fields in the plugin congiguration form, add them as Form API fields in your `buildConfigurationForm` method. For *Commerce QuickPay*, we can use simple *textfield* elements for each of the settings. If you are unfamiliar with building forms in Drupal 8, the [Drupal 8 Form API reference] may be helpful.
+#### The buildConfigurationForm() method
+The *buildConfigurationForm* method is a standard Drupal form builder. To display the fields in the plugin congiguration form, add them as Form API fields in your buildConfigurationForm method. For *Commerce QuickPay*, we can use simple *textfield* elements for each of the settings. If you are unfamiliar with building forms in Drupal 8, the [Drupal 8 Form API reference] may be helpful.
 
 ```php
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
@@ -162,8 +162,8 @@ The `buildConfigurationForm` method is a standard Drupal form builder. To displa
   }
 ```
 
-#### The `submitConfigurationForm()` method
-Finally, to save the settings values entered by administrative users, we need to implement the `submitConfigurationForm` method. The `submitConfigurationForm` saves the input into the configuration.
+#### The submitConfigurationForm() method
+Finally, to save the settings values entered by administrative users, we need to implement the *submitConfigurationForm* method. The submitConfigurationForm saves the input into the configuration.
 
 ```php
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
