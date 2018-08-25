@@ -4,12 +4,14 @@ taxonomy:
     category: docs
 ---
 
-This documentation will explain how to set up an off-site payment gateway in an iFrame. As in the [QuickPay redirect payment gateway example](../docs.md), you'll start by creating a custom module, configuration schema, payment plugin, and configuration form methods.
+This documentation will explain how to set up an off-site payment gateway in an iFrame. As described in the [Creating payment gateways documentation](../docs.md), you'll start by creating a custom module, configuration schema, payment plugin, and configuration form methods.
 
 Off-site payments in iFrames work similarly to off-site payments by redirect. As such, this guide focuses on the **Checkout** process as this is the main area where they differ. This documentation was written while developing the [Commerce Rave module], so in all the examples you should replace **commerce_rave** or **rave** with the id of your module.
 
 ### Configuration
-In addition to the standard configuration, we need to add some Javascript specific to our *Rave* payment gateway, for the iFrame checkout. We'll put our Javascript code in a file named `commerce_rave.form.js` located in a folder named `js`. We'll discuss the [implementation of `commerce_rave.form.js`](#custom-javascript-for-iframe-initialization-and-submission) later in this guide. Next, we'll create a file named `commerce_rave.libraries.yml` to define a *rave* library and detail its assets and dependencies. We need the `drupalSettings` library in order to pass necessary *transaction data* from the payment form to the iFrame. For more information, see the [Drupal 8 documentation on adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 module]. Here is the full definition of our *rave* library:
+In addition to the standard configuration, we need to add some Javascript specific to our *Rave* payment gateway, for the iFrame checkout. We'll put our Javascript code in a file named `commerce_rave.form.js` located in a folder named `js`. We'll discuss the implementation of `commerce_rave.form.js` later in this guide.
+
+Next, we'll create a file named `commerce_rave.libraries.yml` to define a *rave* library and detail its assets and dependencies. We need the `drupalSettings` library in order to pass necessary *transaction data* from the payment form to the iFrame. For more information, see the [Drupal 8 documentation on adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 module]. Here is the full definition of our *rave* library:
 
 ```yaml
 rave:

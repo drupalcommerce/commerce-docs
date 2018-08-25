@@ -70,7 +70,7 @@ class RedirectCheckoutForm extends PaymentOffsiteForm {
 That completes our ***Checkout*** implementation. Next, we need to handle the returning user.
 
 ### Return from payment provider
-When the user returns from the payment provider, we need to validate that the payment actually succeeded. To do this, we'll implement the *onReturn()* method in the `RedirectCheckout` class. If the payment failed, the method should throw a `PaymentGatewayException`. This will reset the payment. The Drupal Comerce Payment module provides several other *Exceptions* in addition to the *PaymentGatewayException*, which are listed at the end of this page.
+When the user returns from the payment provider, we need to validate that the payment actually succeeded. To do this, we'll implement the *onReturn()* method in the `RedirectCheckout` class. If the payment failed, the method should throw a `PaymentGatewayException`. This will reset the payment.
 
 ![Payment error message](../../images/create-payment-gateway-5.png)
 
@@ -101,22 +101,6 @@ In this example code, we've simply used `if ($request->something_that_marks_a_fa
 Also, note that the payment provider you are integrating with might have different ways to complete a payment. Some payment providers, including QuickPay, will not pass any sensitive information in the request when returning. You may need to implement a callback method or submit a request for additional information from the provider.
 
 And that's it. You should now be able to implement checkouts for the off-site payment provider of your choice.
-
-### Handling Payment Gateway Exceptions
-In this example, we used the *PaymentGatewayException* to handle failures in the *onReturn()* method. ***PaymentGatewayException*** is the *Base* exception for all payment gateway errors. As stated in the [Drupal 8 Coding standards documentation on PHP Exceptions]:
-
->The use of subclassed Exceptions is preferred over reusing a single generic Exception class with different error messages as different classes may then be caught separately.
-
-The Drupal Commerce Payment module provides several subclassed Exceptions:
-
-- ***DeclineException*** is a base exception for declined transactions. A transaction can be declined due to an invalid payment method, fraud check, expired authorization, etc. See the [Braintree documentation on Declines] for a good, detailed explanation.<br />The Payment module provides two additional *Decline* exceptions that subclass *DeclineException*:
- - ***HardDeclineException*** should be thrown for declined transactions that can't be retried.
- - ***SoftDeclineException*** should be thrown for declined transactions that can be retried.
-
-- ***InvalidRequestException*** is an exception for requests that are invalid due to missing or invalid parameters, usually indicating a bug in the plugin logic.
- - ***AuthenticationException*** is a subclass of *InvalidRequestException*. It should be thrown when the request can't be properly authenticated (usually because of missing or invalid API keys).<br />&nbsp;<br />
-
-- ***InvalidResponseException*** should be thrown when the payment gateway receives an invalid response. The API endpoint might be down, throwing an error, or returning a response whose signature can't be verified.
 
 [How to Log Messages in Drupal 8]: https://drupalize.me/blog/201510/how-log-messages-drupal-8
 [Drupal 8 Coding standards documentation on PHP Exceptions]: https://www.drupal.org/docs/develop/coding-standards/php-exceptions
