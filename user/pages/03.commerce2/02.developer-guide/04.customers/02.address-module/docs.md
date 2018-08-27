@@ -1,5 +1,5 @@
 ---
-title: Addresses
+title: Address module
 taxonomy:
     category: docs
 ---
