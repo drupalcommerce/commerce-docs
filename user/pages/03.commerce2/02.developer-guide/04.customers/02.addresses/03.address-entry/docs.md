@@ -6,8 +6,9 @@ taxonomy:
 
 This documentation page describes how you can customize address fields as they appear on forms.
 
-* [Setting field overrides](#setting-field-overrides) describes how you can control which address fields appear on forms and whether they are required.
-* [Altering address fields on forms](#altering-address-form-fields) describes how you can change field labels and make other alterations.
+* [Setting field overrides](#setting-field-overrides) describes how to control which address fields appear on forms and whether they are required.
+* [Altering address fields on forms](#altering-address-form-fields) describes how to change field labels and make other alterations.
+* [Setting initial values for address fields](#setting-initial-values-for-address-fields) describes how to set default values for address fields.
 
 ### Setting field overrides
 For each address field (First name, middle name, last name, etc.), you can specify an *override* setting. By default, the data in the Commerce Guys *Addressing* library is used to determine how fields should be used for a specific country.
@@ -90,4 +91,49 @@ function mymodule_customize_address($element, $form_state) {
 
 ![Customized street address](../../images/address-entry-2.png)
 
-### TBD: document how to use external service for postal code validation
+### Setting initial values for address fields
+The *Address* module provides an event that can be used to set initial values for address form fields. In this example, we'll create an event subscriber to set the default country to *Australia*, the suburb to *New South Wales*, and the city to *Sydney*.
+
+![Australia initial values](../../images/address-entry-5.png)
+
+Here is our complete event subscriber class (missing documentation):
+
+```php
+<?php
+
+namespace Drupal\mymodule\EventSubscriber;
+
+use Drupal\address\Event\AddressEvents;
+use Drupal\address\Event\InitialValuesEvent;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+class AustraliaDefaultEventSubscriber implements EventSubscriberInterface {
+
+  public static function getSubscribedEvents() {
+    $events[AddressEvents::INITIAL_VALUES][] = ['onInitialValues'];
+    return $events;
+  }
+
+  public function onInitialValues(InitialValuesEvent $event) {
+    $initial_values = [
+      'country_code' => 'AU',
+      'administrative_area' => 'NSW',
+      'locality' => 'Sydney',
+    ];
+    $event->setInitialValues($initial_values);
+  }
+
+}
+```
+
+Don't forget to add the event subscriber to your custom module's `services.yml` file and rebuild caches:
+
+```php
+services:
+  mymodule.australia_subscriber:
+    class: Drupal\mymodule\EventSubscriber\AustraliaDefaultEventSubscriber
+    tags:
+      - {name: event_subscriber}
+```
+
+> TBD: document how to use external service for postal code validation

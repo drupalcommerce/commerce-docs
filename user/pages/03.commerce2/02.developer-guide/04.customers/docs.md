@@ -4,15 +4,20 @@ taxonomy:
     category: docs
 ---
 
-Summary here of this documentation section
+>Summary here of the customers documentation section.
 
-#### [Overview](01.overview)
+#### Overview
 - TBD
 
-#### [Addresses](02.address-module)
+#### [Addresses](02.addresses)
+- Learn about address formats, countries, and subdivisions.
+- Customize address forms and displays.
+
+#### Profiles
 - TBD
 
-#### [Profiles](03.profile-module)
+#### Customer Accounts
 - TBD
 
-#### TBD
+#### Customer Groups
+- TBD
