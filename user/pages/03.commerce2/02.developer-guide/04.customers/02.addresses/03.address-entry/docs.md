@@ -6,20 +6,20 @@ taxonomy:
 
 This documentation page describes how you can customize address fields as they appear on forms.
 
-* [Setting field overrides](#setting-field-overrides) describes how to control which address fields appear on forms and whether they are required.
-* [Altering address fields on forms](#altering-address-form-fields) describes how to change field labels and make other alterations.
-* [Setting initial values for address fields](#setting-initial-values-for-address-fields) describes how to set default values for address fields.
+* [Setting field overrides](#setting-field-overrides) describes how to control which address field properties appear on forms and whether they are required.
+* [Altering address field properties on forms](#altering-address-field-properties-on-forms) describes how to change field property labels and make other alterations.
+* [Setting initial values for address field properties](#setting-initial-values-for-address-field-properties) describes how to set default values for address field properties.
 
 ### Setting field overrides
-For each address field (First name, middle name, last name, etc.), you can specify an *override* setting. By default, the data in the Commerce Guys *Addressing* library is used to determine how fields should be used for a specific country.
+For each address field property (First name, middle name, last name, etc.), you can specify an *override* setting. By default, the data in the Commerce Guys *Addressing* library is used to determine how field properties should be used for a specific country.
 
 The options are:
 
 | Setting  | Behavior |
 | ---------| -------- |
-| Hidden   | Field will not be used. |
-| Optional | A field that is normally required will be optional. |
-| Required | The field will be required. This will only apply if the address format uses the field. |
+| Hidden   | Field property will not be used. |
+| Optional | A field property that is normally required will be optional. |
+| Required | The field property will be required. This will only apply if the address format uses the field property. |
 
 ![Field overrides for locked fields](../../images/address-entry-3.png)
 
@@ -30,7 +30,7 @@ Administrative users can configure field override settings for an address field 
 #### Field overrides for locked address fields
 If your address field is locked, you won't be able to use the address field's *Manage fields* administrative page to set field overrides. However, you can implement `hook_form_alter()` to programmatically set override values.
 
-For example, suppose you want to set overrides for the address field that appears on *Customer* profiles. Here we set override values for the organization, locality, and postal code field
+For example, suppose you want to set overrides for the address field that appears on *Customer* profiles. Here we set override values for the organization, locality, and postal code field properties.
 
 ```php
 <?php
@@ -48,14 +48,14 @@ function mymodule_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 }
 ```
 
-### Altering address form fields
+### Altering address field properties on forms
 The default address widget uses the custom *address* form element. As a result, you cannot use `hook_form_alter()` or `hook_field_widget_form_alter()` directly. Instead, you need to add an `#after_build` callback to the address form element and then alter it from there.
 
-#### Example 1: Customize the *Company* field
-In this example, we'll make the following customizations to the *Company* field:
+#### Example 1: Customize the *Company* field property
+In this example, we'll make the following customizations to the *Company* field property:
 * Change the "Company" label to "Organization".
 * Change the textfield size from 60 to 30.
-* Make the field required.
+* Make the field property required.
 
 ```php
 <?php
@@ -78,8 +78,8 @@ function mymodule_customize_address($element, $form_state) {
 ```
 ![Customized company field](../../images/address-entry-1.png)
 
-#### Example 2: customize the *Street address* field
-In this example, we'll change the default "Street address" label with separate labels for each of the two street address fields. We can use the same `mymodule_form_alter()` from the first example with a new `mymodule_customize_address()`:
+#### Example 2: customize the *Street address* field property
+In this example, we'll change the default "Street address" label with separate labels for each of the two street address field properties. We can use the same `mymodule_form_alter()` from the first example with a new `mymodule_customize_address()`:
 
 ```php
 function mymodule_customize_address($element, $form_state) {
@@ -91,8 +91,8 @@ function mymodule_customize_address($element, $form_state) {
 
 ![Customized street address](../../images/address-entry-2.png)
 
-### Setting initial values for address fields
-The *Address* module provides an event that can be used to set initial values for address form fields. In this example, we'll create an event subscriber to set the default country to *Australia*, the suburb to *New South Wales*, and the city to *Sydney*.
+### Setting initial values for address field properties
+The *Address* module provides an event that can be used to set initial values for address field properties. In this example, we'll create an event subscriber to set the default country to *Australia*, the suburb to *New South Wales*, and the city to *Sydney*.
 
 ![Australia initial values](../../images/address-entry-5.png)
 
