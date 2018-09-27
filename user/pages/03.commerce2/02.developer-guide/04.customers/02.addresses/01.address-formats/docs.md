@@ -20,7 +20,7 @@ The *Address* module provides a custom *address* field that can have the followi
 - Country (limited to pre-defined list of *available* countries)
 
 ### What is an *address format*?
-Address formats are defined on a per-country basis. They make it possible to dynamically alter the form used to enter addresses based on the selected country. Without address formats, an address form might look something like this:
+An address format is the definition of how a country's addresses should be rendered for display and how the form for entering an address for that country should be rendered and validated. Address formats are defined on a per-country basis. They make it possible to dynamically alter the form used to enter addresses based on the selected country. Without address formats, an address form might look something like this:
 
 ![Badly implemented address form](../../images/address-format-5.png)
 

@@ -52,7 +52,7 @@ function mymodule_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 The default address widget uses the custom *address* form element. As a result, you cannot use `hook_form_alter()` or `hook_field_widget_form_alter()` directly. Instead, you need to add an `#after_build` callback to the address form element and then alter it from there.
 
 #### Example 1: Customize the *Company* field
-In this example, we'll made the following customizations to the *Company* field:
+In this example, we'll make the following customizations to the *Company* field:
 * Change the "Company" label to "Organization".
 * Change the textfield size from 60 to 30.
 * Make the field required.
