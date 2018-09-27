@@ -64,10 +64,11 @@ For the Color attribute, we want to present the options as color swatches instea
 The initial steps for creating the Color attribute are the same as the steps described above, for creating the Size attribute. Briefly, you need to:
 1. Navigate to the *Product attributes* page by using the menu item under the main *Commerce* menu or `/admin/commerce/product-attributes`.
 2. Enter "Color" for the Name.
-3. Select the *Clothing* product variation type.
-4. Click the *Save* button to create the new product attribute.
-5. Enter "Black", "Blue", "Green", and "Pink" for the Color attribute values.
-6. Click the *Save* button.
+3. Select *Rendered attribute* for the Element type.
+4. Select the *Clothing* product variation type.
+5. Click the *Save* button to create the new product attribute.
+6. Enter "Black", "Blue", "Green", and "Pink" for the Color attribute values.
+7. Click the *Save* button.
 
 Now that we've created the *Color* attribute, we can add an additional field by navigating to the *Manage fields* configuration page for the Color attribute: `/admin/commerce/product-attributes/manage/color/fields`.
 
