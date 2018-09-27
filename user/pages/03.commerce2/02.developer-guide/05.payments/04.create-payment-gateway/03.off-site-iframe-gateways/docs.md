@@ -4,9 +4,9 @@ taxonomy:
     category: docs
 ---
 
-This documentation will explain how to set up an off-site payment gateway in an iFrame. As described in the [Creating payment gateways documentation](../docs.md), you'll start by creating a custom module, configuration schema, payment plugin, and configuration form methods.
+This documentation will explain how to set up an off-site payment gateway in an iFrame. Off-site payments in iFrames work similarly to off-site payments by redirect. The difference is that in the **Checkout** process, the "off-site" portion is handled within an embedded iframe and does not take the customer to the third party payment gateways website. As described in the [Creating payment gateways documentation](../docs.md), you'll start by creating a custom module, configuration schema, payment plugin, and configuration form methods.
 
-Off-site payments in iFrames work similarly to off-site payments by redirect. As such, this guide focuses on the **Checkout** process as this is the main area where they differ. This documentation was written while developing the [Commerce Rave module], so in all the examples you should replace **commerce_rave** or **rave** with the id of your module.
+>This documentation was written while developing the [Commerce Rave module], so in all the examples you should replace **commerce_rave** or **rave** with the id of your module.
 
 ### Configuration
 In addition to the standard configuration, we need to add some Javascript specific to our *Rave* payment gateway, for the iFrame checkout. We'll put our Javascript code in a file named `commerce_rave.form.js` located in a folder named `js`. We'll discuss the implementation of `commerce_rave.form.js` later in this guide.
@@ -18,7 +18,6 @@ rave:
   version: VERSION
   js:
     js/commerce_rave.form.js: {}
-    https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
@@ -36,7 +35,7 @@ We will handle checkout in the `iFrameCheckoutForm` class, which resides in `src
 #### The buildConfigurationForm() method
 The *buildConfigurationForm()* method is a standard Drupal form builder which we've simplified here for this example. Typically, the payment processor will require a *redirect* url where it sends the payment response to; for *Rave*, this is specified as *redirect_url*. We've also included *version*, *private_key*, *api_key*, and *payment_amount* data items. In the actual implementation, there are many additional fields specific to the payment processor.
 
-Once we've computed all the necessary *data* items, we'll attach them to the form using ***drupalSettings***. This will reside in a *transactionData* key. Then, using ***drupalSettings***, we will retrieve *transactionData* in our javascript file (*commerce_rave.form.js*) and use it to initialize the iFrame.
+Once we've computed all the necessary *data* items, we'll attach them to the form using ***drupalSettings***. This will reside in a *transactionData* key. Then, using ***drupalSettings***, we will retrieve *transactionData* in our JavaScript file (*commerce_rave.form.js*) and use it to initialize the iFrame.
 
 
 ```php
@@ -46,6 +45,8 @@ Once we've computed all the necessary *data* items, we'll attach them to the for
 
     /** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
     $payment = $this->entity;
+
+    $form['#attached']['library'][] = 'commerce_rave/rave';
 
     $data = [
       'version' => 'v10',
@@ -64,11 +65,10 @@ Once we've computed all the necessary *data* items, we'll attach them to the for
 ```
 
 #### The buildRedirectForm() method
-In *buildRedirectForm()*, we _attach_ our javascript library, configure a message to show above the payment button, and add *processRedirectForm* as a form processor:
+In *buildRedirectForm()*, we configure a message to show above the payment button, and add *processRedirectForm* as a form processor:
 
 ```php
-  public function buildRedirectForm(array $form, FormStateInterface $form_state, $redirect_url, array $data, $redirect_method = '') {
-    $form['#attached']['library'][] = 'commerce_rave/rave';
+  public function buildRedirectForm(array $form, FormStateInterface $form_state, $redirect_url, array $data, $redirect_method = BasePaymentOffsiteForm::REDIRECT_GET) {
     $helpMessage = t('Please wait while the payment server loads. If nothing happens within 10 seconds, please click on the button below.');
 
     $form['commerce_message'] = [
@@ -84,7 +84,7 @@ In *buildRedirectForm()*, we _attach_ our javascript library, configure a messag
 ```
 
 #### The processRedirectForm() method
-In *processRedirectForm()*, we add a class to the form (`payment-iframe-form`) which we'll target in our javascript library:
+In *processRedirectForm()*, we add a class to the form (`payment-iframe-form`) which we'll target in our JavaScript library:
 
 ```php
   public static function processRedirectForm(array $element, FormStateInterface $form_state, array &$complete_form) {
@@ -139,7 +139,7 @@ The complete `commerce_rave.form.js` will look like this when we are done:
 
   Drupal.behaviors.raveForm = {
     attach: function (context) {
-      var options = drupalSettings['rave']['transactionData'];
+      var options = drupalSettings.rave.transactionData;
 
       var $paymentForm = $('.payment-iframe-form', context);
 

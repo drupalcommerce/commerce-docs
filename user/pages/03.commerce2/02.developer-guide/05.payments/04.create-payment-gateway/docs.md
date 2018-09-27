@@ -110,7 +110,7 @@ Here is the full list of properties for Commerce Payment Gateway annotations:
 | display_label | The display label, a translatable string. |
 | modes    | An array of supported modes, keyed by machine name. If no modes are provided, the default modes are *Test* and *Live* are provided. The mode labels are translatable strings. |
 | forms    | An array of form classes, keyed by operation. For example, the *Manual* payment gateway has as its *forms* property:<br /><code>  forms = {<br />&nbsp;&nbsp;"add-payment" = "Drupal\commerce_payment\PluginForm\ManualPaymentAddForm",<br />&nbsp;&nbsp;"receive-payment" = "Drupal\commerce_payment\PluginForm\PaymentReceiveForm",<br />},</code> |
- | js_library | The javascript library ID. |
+ | js_library | The JavaScript library ID. |
  | payment_type | The payment type used by the payment gateway, a string. If no payment type is provided, the default value is *payment_default*. |
  | payment_method_types | An array of the payment method types handled by the payment gateway. If no payment method types are provided, a *credit_card* default type is provided. Other types can be things like *paypal*, or *paypal_credit*. |
  | default_payment_method_type | The default payment method type, a string. If no default type is provided, the first payment method type is used as the default. |
