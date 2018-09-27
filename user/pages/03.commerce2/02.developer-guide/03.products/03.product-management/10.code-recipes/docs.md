@@ -199,7 +199,7 @@ Let's say we want our hypothetical product to have two variations. One will be t
 ```
 
 ### Altering the title field label
-The following example will change the label for the product name from "Title" to "Product name".
+The following example will change the label for the product name from *Title* to *Product name*.
 
 ![Change product name label](../../images/managing-products-code-recipes-1.jpg)
 

@@ -8,10 +8,10 @@ Learn techniques for displaying products on your site.
 
 #### [Product display pages](01.product-display)
 - Customize the product pages that are displayed on your site.
-- Learn about the concept of "product variation field injection".
+- Learn about the concept of *product variation field injection*.
 
 #### [Add to cart form](02.add-to-cart-form)
-- Include the "Add to cart form" on product pages and/or other pages on your site to allow customers to add products to their shopping cart.
+- Include the *Add to cart form* on product pages and/or other pages on your site to allow customers to add products to their shopping cart.
 - Learn about options for customizing the Add to cart form, including adding fields for customizable products.
 
 #### [Product attributes](03.product-attributes)
