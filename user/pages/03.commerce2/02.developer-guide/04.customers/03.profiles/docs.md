@@ -10,12 +10,15 @@ This section provides documentation for the *Profile* module as a whole, with pa
 - TBD
 
 #### [Profile configuration](02.profile-configuration)
-- Learn about configuration options for profile types such as the *customer profile* type.
-- Control access to profiles and their fields for your customers and administrative users.
+- Add a Contact phone field to the customer profile type.
+- Create a new profile type to capture additional information about your customers.
+- Learn about configuration options for profile types.
 
 #### [Profile management](03.profile-management)
-- Design and customize the profile management experience for administrative users.
+- Control access to profiles and their fields for your customers and administrative users.
+- Use the Field Permissions module to customize...
 - Add and edit profiles on behalf of customers.
+- Profile view?
 - Learn options for importing and exporting profiles.
 
 #### [Code recipes](04.code-recipes)
