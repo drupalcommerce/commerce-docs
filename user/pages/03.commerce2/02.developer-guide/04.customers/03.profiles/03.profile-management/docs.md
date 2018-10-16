@@ -101,11 +101,12 @@ To allow administrative users to perform bulk operations on profiles, add the *B
 If you are interested in creating additional [Action plugins] with custom code, the [Create an action for custom mass updates with Drupal 8], article is a good introduction to the topic.
 
 ### Importing profiles
+For site builders, the [Commerce Feeds module] is a solution for importing profiles; unfortunately, it has not yet been fully ported into Drupal 8. If you are comfortable writing custom code for importing profiles, the [Commerce Migrate module] is a good place to start. There is a version for Drupal 8, [documentation], and an explanation of the differences between using Feeds vs. using Migrate for importing profiles and other commerce data.
 
 ### Exporting profiles
+You can use the [Views data export module] to provide product export functionality. If you are unfamiliar with using Views in Drupal, start by reading about [Creating Listings with Views], in the Drupal 8 User Guide. Also, the [Importing and exporting documentation for Products](../../../03.products/03.product-management/04.importing-exporting#exporting-products) includes an example of using Views data export for exporting products. The same approach can be used for exporting profiles.
 
 ---
-In the next section, we'll look at...
 
 [Field permissions]: https://www.drupal.org/project/field_permissions
 [Taxonomy]: https://www.drupal.org/docs/user_guide/en/structure-taxonomy.html
@@ -113,4 +114,8 @@ In the next section, we'll look at...
 [Creating Listings with Views]: https://www.drupal.org/docs/user_guide/en/views-chapter.html
 [Action plugins]: https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Action!ActionInterface.php/interface/ActionInterface/8.5.x
 [Create an action for custom mass updates with Drupal 8]: https://www.flocondetoile.fr/blog/create-action-custom-mass-updates-drupal-8
+[Commerce Feeds module]: https://www.drupal.org/project/commerce_feeds
+[Commerce Migrate module]: https://www.drupal.org/project/commerce_migrate
+[documentation]: https://www.drupal.org/docs/8/modules/commerce-migrate
+[Views data export module]: https://www.drupal.org/project/views_data_export
 

@@ -7,7 +7,9 @@ taxonomy:
 This section provides documentation for the *Profile* module as a whole, with particular emphasis on how profiles are used in *Drupal Commerce*.
 
 #### [Overview](01.overview)
-- TBD
+- Address book defined
+- Where does profile appear within checkout processes
+- User vs. profile data relative, stored in an additional profile
 
 #### [Profile configuration](02.profile-configuration)
 - Add a Contact phone field to the customer profile type.
@@ -16,9 +18,7 @@ This section provides documentation for the *Profile* module as a whole, with pa
 
 #### [Profile management](03.profile-management)
 - Control access to profiles and their fields for your customers and administrative users.
-- Use the Field Permissions module to customize...
-- Add and edit profiles on behalf of customers.
-- Profile view?
+- Manage profiles on behalf of customers.
 - Learn options for importing and exporting profiles.
 
 #### [Code recipes](04.code-recipes)
