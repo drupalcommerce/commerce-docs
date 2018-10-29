@@ -4,14 +4,17 @@ taxonomy:
     category: docs
 ---
 
-This documentation page describes how you can customize the forms used to enter product data in Drupal Commerce. A single form is used for both creating new products and editing existing products, but the product form can be  configured uniquely for each of your product types. For the [Simple product type](../../02.product-architecture/01.simple-product#configure-a-product-variation-type) we created in the Product architecture section of the documentation, this is what the product form looks like, without any modifications.
+This documentation page describes how you can customize the forms used to enter product data in Drupal Commerce. The forms that are used to edit product and product variation types can be configured uniquely for each of your product and variation types.
 
-![Product data entry form](../../images/product-data-entry-1.jpg)
+### Single vs. multi-variation product types
+In the [Product architecture documentation](../../02.product-architecture), we created a [Simple product type](../../02.product-architecture/01.simple-product#configure-a-product-variation-type) that had only a single variation per product and a [Clothing product type](../../02.product-architecture//02.product-attributes) with multiple variations per product. Let's start by comparing the forms for these two product types. On the left, we have the form for the *Simple* product type, with a *Product Information* section that includes data entry fields for the single product variation. On the right, we have the form for the *Clothing* product type, with a *Variations* tab that links to a *separate* page for managing the product's variations. The rest of the forms is identical
+
+![Product data entry form](../../images/product-data-entry-1.png)
 
 ### Manage the product form display
 To customize the product data entry form, start by navigating to the *Manage form display* configuration page for your product type. For the Simple product type, that page is located at `/admin/commerce/config/product-types/simple/edit/form-display`. Let's look at the configuration form (on the left) alongside the product form (on the right) to better understand how they're related.
 
-![Manage product form display](../../images/product-data-entry-2.jpg)
+![Manage product form display](../../images/product-data-entry-2.png)
 
 The first thing to notice is that there are four fields that do not appear in the main section of the form; the Stores, URL alias, Author, and Created fields are separated into a Sidebar section of the product field. We will look at the Sidebar section next, but for now, let's focus on the main section of the product form.
 
@@ -59,16 +62,10 @@ The Author field can reference any User, including any that are customers rather
 
 In a standard Drupal Commerce installation, there are no alternative widgets or configuration options available for the Created field.
 
-### Manage the product variation form display
-The *Inline entity form - Complex* widget is used for the Variations field. Unless you've developed a custom field widget for your product variations field, you should not change the widget type for the Variations field.
+### Editing the variation for single-variation product types
+The *Single variation (Product information)* widget is used for the Variations field. Unless you've developed a custom field widget for your product variations field, you should not change the widget type for the Variations field. This widget embeds a data entry form for a product variation, as configured for the specific product variation type. In this case, we are looking at a *Simple* product with a *Simple* product variation type. To customize the data entry form for the Simple product variation, navigate to its *Manage form display* configuration form at `/admin/commerce/config/product-variation-types/simple/edit/form-display`.
 
-![Inline entity form widget](../../images/product-data-entry-3.jpg)
-
-You can configure some basic settings for the widget; for example, you might want to disable the, *Allow users to duplicate variations* option for a product type that has only a single variation per product. If you want to further customize the display of the Variations field on your form, see the [documentation on inline entity form](../../../03.core/00.libraries-and-dependencies/04.ief).
-
-This widget embeds a data entry form for a product variation, as configured for the specific product variation type. In this case, we are looking at a *Simple* product with a *Simple* product variation type. To customize the data entry form for the Simple product variation, navigate to its *Manage form display* configuration form at `/admin/commerce/config/product-variation-types/simple/edit/form-display`.
-
-![Mange form display for product variation](../../images/product-data-entry-5.jpg)
+![Manage form display for product variation](../../images/product-data-entry-5.png)
 
 In the above image, you can see how the settings for the form display of the Simple product variation type (on the left) correspond to the Variations form that's embedded into the data entry form for the Simple product (on the right).
 
@@ -78,7 +75,12 @@ You can use a product variation type's *Manage form display* configuration form 
 - The selected widget for each field
 - The configuration options for each widget
 
-In this example, the *Title* field is not displayed even though it's enabled, since we selected the *Generate variation titles based on attribute values* option for this product variation type. (See the [Simple product type documentation](../../02.product-architecture/01.simple-product#configure-a-product-variation-type).)
+### Editing variations for multi-variation product types
+For product types that allow multiple variations per product, administrative users will see a *Variations* tab when editing or viewing products. Clicking on the *Variations* tab link takes you to another page, separate from the main product form. So you'll want to make sure administrative users understand that they need to click the *Save* button on a product's *Edit* page before navigating to its *Variations* page.
+
+A product's *Variations* page is a draggable list of variations with operations links in the rightmost column. To customize the edit form for product variations, use the product variation type's *Manage form display* configuration form as described above.
+
+![Manage product variations](../../images/product-data-entry-6.png)
 
 ### Theming the product form
 If you need to customize the layout for your product form beyond what is possible using the administration UI, you can use the product form Twig template as part of a custom theme. Theming is an advanced topic beyond the scope of this Drupal Commerce documentation guide. For an overview, please see the [Theming Drupal Guide] on Drupal.org.

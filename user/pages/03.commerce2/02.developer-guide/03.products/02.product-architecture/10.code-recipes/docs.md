@@ -28,15 +28,14 @@ In the [Simple product type](../01.simple-product) documentation, we looked at c
      * label [String]
      *   Label for this product type
      *
-     * status [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
-     *   [AVAILABLE = FALSE, TRUE]
-     *   Whether or not it's enabled or disabled. 1 for enabled.
-     *
      * description [String]
      *   Description for this product.
      *
      * variationType [String] - [DEFAULT = default]
      *   Foreign key for the variation type used.
+     *
+     * multipleVariations [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
+     *   Whether products of this type can have multiple variations.
      *
      * injectVariationFields [Bool] - [OPTIONAL, DEFAULTS TO TRUE]
      *   Whether or not to inject the variation fields.
@@ -48,6 +47,7 @@ In the [Simple product type](../01.simple-product) documentation, we looked at c
       'label' => "My custom product type",
       'description' => '',
       'variationType' => 'my_custom_variation_type',
+      'multipleVariations' => TRUE,
       'injectVariationFields' => TRUE,
     ]);
     $product_type->save();
@@ -56,7 +56,6 @@ In the [Simple product type](../01.simple-product) documentation, we looked at c
     commerce_product_add_variations_field($product_type);
     commerce_product_add_stores_field($product_type);
     commerce_product_add_body_field($product_type);
-
 ```
 
 ### Creating a variation type
