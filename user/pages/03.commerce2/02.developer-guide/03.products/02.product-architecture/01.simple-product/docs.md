@@ -10,10 +10,11 @@ In this section, we're going to walk through the steps involved in creating a si
 To create a new product type:
 1. Navigate to the *Product types* listing at `/admin/commerce/config/product-types`
 2. Click the *Add product type* button.
-3. Enter "Simple" for the Label. You can use the default settings for all other options.
-4. Click the *Save* button.
+3. Enter "Simple" for the Label.
+4. Disable the *Allow each product to have multiple variations* option.
+5. Click the *Save* button.
 
-![Simple product type creation](../../images/simple-product-type-1.jpg)
+![Simple product type creation](../../images/simple-product-type-1.png)
 
 #### Product type configuration options
 ##### Label
@@ -27,8 +28,11 @@ Typically, each product type will have its own corresponding variation type, and
 
 However, it is possible for a single product variation type to be used by multiple product types. In that situation, you could select an existing product variation type to be used by the product type you're creating. For example, suppose all your product variations need only the basic title/sku/price fields, but some of your products are manufactured internally while others are outsourced. You might need a variety of different product-level fields in this situation. You could also have different product types because of different marketing needs.
 
+##### Allow each product to have multiple variations
+This setting affects how product variation data is entered by administrative users. If enabled, product variations are edited in a form separate from the main product edit form. If a product has only one variation, it can be edited directly on the product data entry form. See the [Editing products documentation](../../03.product-management/02.product-data-entry) for more information on product forms.
+
 ##### Inject product variation fields into the rendered product
-This is a setting that affects how products are displayed for end users. You can learn more about [product variation field injection](../../04.displaying-products/01.product-display) in the [Displaying products](../../04.displaying-products) section of the documentation.
+This setting affects how products are displayed for end users. You can learn more about [product variation field injection](../../04.displaying-products/01.product-display) in the [Displaying products](../../04.displaying-products) section of the documentation.
 
 ##### Publish new products of this type by default
 *Published* is an option on the data entry form for products and can be checked (published) or unchecked (not published), by default. Also, it is possible to remove the *published* setting from the product form completely (for all or just a subset of administrative users). You can learn more about the [product data entry form](../../03.product-management/02.product-data-entry) configuration options in the [Product management](../../03.product-management) section of the documentation.

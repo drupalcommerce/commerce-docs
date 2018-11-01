@@ -39,6 +39,7 @@ The default product template is commerce-product.html.twig
 - product.variation_title
 - product.variation_sku
 - product.variation_price
+- product.variation_list_price
 - For each added product variation field:
  - product.*variation_field_added_field_name*
 
@@ -63,6 +64,7 @@ The default product template is commerce-product-variation.html.twig
 - product_variation.title
 - product_variation.sku
 - product_variation.price
+- product_variation.list_price
 - product_variation.product_id
  - for the variation's product
 - For each attribute:

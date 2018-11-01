@@ -30,7 +30,7 @@ On the Translations page for each product, you will see options for adding a tra
 
 If you would like to translate the names of your product and product variation types, you can use the *Translate* tabs on the configuration forms for each type.
 
-![Edit product type name](../../images/multilingual-products-4.jpg)
+![Edit product type name](../../images/multilingual-products-4.png)
 
 ### Enable translations for product attribute values:
 For multilingual product attribute values, you need to enable attribute value translation for each product attribute that requires translation.

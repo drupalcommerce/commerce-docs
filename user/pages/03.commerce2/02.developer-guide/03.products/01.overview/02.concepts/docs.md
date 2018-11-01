@@ -48,7 +48,7 @@ Just as you can define any product attributes you need to match your specific pr
 
 When you first create a Drupal Commerce site, you will see a *Default* product type and a *Default* product variation type. You can use these types as is, customize them, or delete them from your site completely. If you have a homogenous list of products, you may not need to create any custom product/variation types; the default types may be sufficient. If you do not customize the Default product type, as provided by Drupal Commerce, in any way, then your administrative users will add and edit products using a form that looks like this:
 
-![Add default type product](../../images/overview-concept-1.jpg)
+![Add default type product](../../images/overview-concept-1.png)
 
 If you would like to customize the forms used to enter products, see the [Editing products page](../../03.product-management/02.product-data-entry) in the [Product Management documentation](../../03.product-management).
 
