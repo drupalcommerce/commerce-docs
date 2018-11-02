@@ -8,7 +8,7 @@ taxonomy:
 
 Commerce 2.x no longer relies on the Rules module. We now have event subscribers (example: order state changes), resolvers (example: calculating sell price and calculating VAT), and entities configured with conditions (example: payment gateways).
 
-Be aware that some events correspond to state transitions, and the [State Machine](https://drupal.org/project/state_machine) module fires them upon a transition. You can find the metadata for these in `MODULENAME.workflows.yml`. Events are also documented in the `\Drupal\MODULENAME\Event` namespace as a final class containing constants. For an example of using these, see `\Drupal\commerce_log\EventSubscriber::getSubscribedEvents()`.
+Be aware that some events correspond to state transitions, and the [State Machine](https://drupal.org/project/state_machine) module fires them upon a transition. You can find the metadata for these in `MODULENAME.workflows.yml`. Events are also documented in the `\Drupal\MODULENAME\Event` namespace as a final class containing constants. For an example of using these, see `\Drupal\commerce_log\EventSubscriber\OrderEventSubscriber::getSubscribedEvents()`.
 
 ## Partial list of where the Rules went
 
