@@ -15,7 +15,7 @@ services. Currently available plugins with status as of 6 November 2018:
   - Flat Rate/Flate per Item - Beta, included in Commerce Shipping.
   - [Fedex](https://www.drupal.org/project/commerce_fedex) - Alpha.
   - [Commerce Australia Post](https://www.drupal.org/project/commerce_auspost) - Beta
-  - [Commerce NZPost](https://www.drupal.org/project/commerce_nzpost) - V8.x-2.1
+  - [Commerce NZPost](https://www.drupal.org/project/commerce_nzpost) - V8.x-3.3
   - [USPS](https://www.drupal.org/project/commerce_usps) - In progress, not yet functional.
   - [Canada Post](https://www.drupal.org/project/commerce_canadapost) - Alpha
   - Other modules/plugins such as UPS, Kiala have yet to be ported
