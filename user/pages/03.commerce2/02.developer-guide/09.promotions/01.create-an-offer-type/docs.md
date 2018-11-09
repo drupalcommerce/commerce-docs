@@ -22,6 +22,7 @@ $offer->apply($order_item, $this);
 * Fixed amount off the order subtotal
 * Percentage off each matching product
 * Percentage off the order subtotal
+
 You can see the list of all available offer types on the Promotion add/edit form:
 
 ![Promotion edit form offers fixed](Promotion_offers_fixed.png)
