@@ -487,8 +487,8 @@ category: docs
 | **Description** | Commerce Paymill is Drupal Commerce module that integrates the Paymill payement gateway into your Drupal Commerce shop. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="63. PayONE (sandbox)"]
-| [PayONE] | [PayONE (sandbox)] |
+[ui-accordion-item title="63. PayONE"]
+| [PayONE] | [PayONE] |
 | --- | --- |
 | **Description** | This module integrates the German PAYONE Payment Provider with Drupal Commerce 2.x (D8) to accept credit card payments on-site and PayPal Express payments off-line. |
 | **Type** | On site / Off site|
@@ -591,7 +591,7 @@ category: docs
 [CommercePaytm]: https://www.drupal.org/project/commercepaytm
 [Commerce sermepa]: https://www.drupal.org/project/commerce_sermepa
 [Bitpayir]: https://www.drupal.org/project/commerce_bitpayir
-[PayONE (sandbox)]: https://www.drupal.org/sandbox/mitrpaka/2849906
+[PayONE]: https://www.drupal.org/project/commerce_payone
 [Klarna Checkout]: https://www.drupal.org/project/commerce_klarna_checkout
 [commerce_suomenverkkomaksut]: https://drupal.org/project/commerce_suomenverkkomaksut
 [sermepa]: www.redsys.es/wps/portal/redsys/publica/acercade/nuestrosSocios
