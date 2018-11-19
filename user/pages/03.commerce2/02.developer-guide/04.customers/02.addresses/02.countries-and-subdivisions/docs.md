@@ -7,9 +7,9 @@ taxonomy:
 The Address module provides a custom *Country* field type along with a custom form element, default formatter, and default widget. Country data is stored internally using standard 2-letter codes. Country codes are limited to the list of available countries.
 
 ### What is the list of available countries and how can I change it?
-The *Commerce Guys Addressing library* provides a list of countries, with translations for over 250 locales. This library is a requirement for the Drupal Address Module (and part of the reason why you ought to use Composer to manage your Drupal Commerce project). The dataset is stored locally in JSON format. For the actual list, see the *CountryRepository* class: `commerceguys/addressing/src/Country/CountryRepository.php`.
+The *Commerce Guys Addressing* library provides a list of countries with translations for over 250 locales. This library is a requirement for the Address module, which is part of why we strongly recommend using Composer to manage your Drupal Commerce project. The dataset is stored locally in JSON format. For the actual list, see the *CountryRepository* class: `commerceguys/addressing/src/Country/CountryRepository.php`.
 
-You can alter the list of *available* countries for a select list by subscribing to the `AddressEvents::AVAILABLE_COUNTRIES` event. Here is a simple example of an event subscriber for the available countries event. It reduces the set of available countries to just 5: Australia, Brazil, Canada, Japan, and the United Kindom.
+You can alter the list of *available* countries for a select list by subscribing to the `AddressEvents::AVAILABLE_COUNTRIES` event. Here is a simple example of an event subscriber for the available countries event. It reduces the set of available countries to just 5: Australia, Brazil, Canada, Japan, and the United Kingdom.
 
 ```php
 <?php

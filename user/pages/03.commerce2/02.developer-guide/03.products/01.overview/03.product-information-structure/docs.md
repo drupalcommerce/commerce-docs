@@ -38,6 +38,7 @@ A **product variation** is a content entity that has a product variation type as
 | sku          | Unique product variation sku, required |
 | title        | The product variation title, required |
 | price        | The variation price, required |
+| list_price    | The variation list price |
 | status       | Whether th variation is active, boolean |
 | type         | Id of the product variation type bundle |
 | path         | Optional URL alias for the product display page |
@@ -74,17 +75,19 @@ Entity traits are implemented as plugins. If you are interested in creating your
 The **locked** property of a commerce entity bundle controls whether a bundle can be deleted. CommerceBundleEntityBase provides `lock()` and `unlock()` methods that can be used to set the locked status for a commerce entity bundle.
 
 ##### Product types
-A **product type** is a configuration bundle entity that extends `CommerceBundleEntityBase`. It has a description, *variation type* ID field, and an *inject variation fields* boolean field.
+A **product type** is a configuration bundle entity that extends `CommerceBundleEntityBase`. It has a description, *variation type* ID field, and booleans fields for *allow multiple variations* and *inject variation fields* options.
 
 Why does a product type need a set variation type? The variation type ID field value is set when a new product type is created. It is used to set the target bundle for the product *variations* field so that whenever a variation is added to a product, the correct type of variation is added. The variation type ID field is also used for the *Product attributes overview* formatter, a formatter that displays a product's variations as rendered attribute entities.
 
 The *inject variation fields* setting affects how products are displayed. You can learn more about [product variation field injection](../../04.displaying-products/01.product-display) in the [Displaying products documentation](../../04.displaying-products).
 
+The *allow multiple variations* affects how products are edited. You can learn more about this setting in the [Editing products documentation](../../03.product-management/02.product-data-entry)
+
 The product type administrative page also includes an option to *Publish new products of this type by default*. This option value is not stored with the product type configuration data; instead, it is used to set the default value for the product entity's *status* base field, for the product type.
 
-A standard Drupal Commerce installation includes a product type named *Default*. Its product variation type is the *Default* product variation type, and its *inject variations fields* and *publish new products of the type by default* settings are enabled. You can change these default values or customize the *Default* product variation type with additional fields.
+A standard Drupal Commerce installation includes a product type named *Default*. Its product variation type is the *Default* product variation type, and it allows multiple variations per product. Its *inject variations fields* and *publish new products of the type by default* settings are both enabled. You can change these default values or customize the *Default* product variation type with additional fields.
 
-![Default product type](../../images/info-structure-2.jpg)
+![Default product type](../../images/info-structure-2.png)
 
 Alternatively, if you do not want to use the *Default* product type, you can also delete it completely from your site.
 

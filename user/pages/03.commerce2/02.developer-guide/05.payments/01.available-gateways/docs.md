@@ -208,18 +208,16 @@ category: docs
 | **Currencies** |  Visa, Visa Electron, Mastercard and Maestro bank cards from any country |
 | **Countries** |  Visa, Visa Electron, Mastercard and Maestro bank cards from any country |
 [/ui-accordion-item]
-[ui-accordion-item title="21. Commerce Gocardless Payment"]
-| [Commerce Gocardless Payment] | [Commerce Gocardless Payment] |
-| --- | --- |
-| **Description** | Integration with the UK Direct Debit payment gateway GoCardless |
-| **Type** | Off site |
-| **Currencies** | GBP |
-| **Countries** | UK |
-[/ui-accordion-item]
-[ui-accordion-item title="22. Commerce GoCardless"]
+[ui-accordion-item title="21. Commerce GoCardless"]
 | [Commerce GoCardless] | [Commerce GoCardless] |
 | --- | --- |
 | **Description** | Integration with the UK Direct Debit payment gateway GoCardless |
+| **Type** | On site |
+[/ui-accordion-item]
+[ui-accordion-item title="22. Commerce Global Payments (Realex)"]
+| [Commerce Global Payments (Realex)] | [Commerce Global Payments (Realex)] |
+| --- | --- |
+| **Description** | Integration with Global Payments. |
 | **Type** | On site |
 [/ui-accordion-item]
 [ui-accordion-item title="23. Commerce Iats"]
@@ -395,11 +393,11 @@ category: docs
 | **Description** | Integrate paytm payment gateway with drupal commerce. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="49. Commercepayu"]
-| [Commercepayu] | [Commercepayu] |
+[ui-accordion-item title="49. Commerce Worldpay"]
+| [Commerce Worldpay] | [Commerce Worldpay] |
 | --- | --- |
-| **Description** | Commercepayu integration for the Drupal Commerce payment system. |
-| **Type** | Off site |
+| **Description** | WorldPay Business integration. |
+| **Type** | On site / Off site |
 [/ui-accordion-item]
 [ui-accordion-item title="50. Datatrans"]
 | [Datatrans] | [Datatrans] |
@@ -427,11 +425,11 @@ category: docs
 | **Description** | Bulgarian payments gateway http://epay.bg for Commerce module. |
 | **Type** | Off site |
 [/ui-accordion-item]
-[ui-accordion-item title="54. GlobalOnePay"]
-| [GlobalOnePay] | [GlobalOnePay] |
+[ui-accordion-item title="54. IDPay"]
+| [IDPay] | [IDPay] |
 | --- | --- |
-| **Description** | Provides an integration with GlobalOnePay payment gateway. Right now the module supports only on-site payments. |
-| **Type** | On site |
+| **Description** | IDPay is an Iranian payment provider and one of the Financial Technology leaders in Iran. |
+| **Type** | Off site |
 [/ui-accordion-item]
 [ui-accordion-item title="55. Ingenico"]
 | [Ingenico] | [Ingenico] |
@@ -487,8 +485,8 @@ category: docs
 | **Description** | Commerce Paymill is Drupal Commerce module that integrates the Paymill payement gateway into your Drupal Commerce shop. |
 | **Type** | On site |
 [/ui-accordion-item]
-[ui-accordion-item title="63. PayONE (sandbox)"]
-| [PayONE] | [PayONE (sandbox)] |
+[ui-accordion-item title="63. PayONE"]
+| [PayONE] | [PayONE] |
 | --- | --- |
 | **Description** | This module integrates the German PAYONE Payment Provider with Drupal Commerce 2.x (D8) to accept credit card payments on-site and PayPal Express payments off-line. |
 | **Type** | On site / Off site|
@@ -591,7 +589,7 @@ category: docs
 [CommercePaytm]: https://www.drupal.org/project/commercepaytm
 [Commerce sermepa]: https://www.drupal.org/project/commerce_sermepa
 [Bitpayir]: https://www.drupal.org/project/commerce_bitpayir
-[PayONE (sandbox)]: https://www.drupal.org/sandbox/mitrpaka/2849906
+[PayONE]: https://www.drupal.org/project/commerce_payone
 [Klarna Checkout]: https://www.drupal.org/project/commerce_klarna_checkout
 [commerce_suomenverkkomaksut]: https://drupal.org/project/commerce_suomenverkkomaksut
 [sermepa]: www.redsys.es/wps/portal/redsys/publica/acercade/nuestrosSocios
@@ -629,7 +627,7 @@ category: docs
 [Commerce Ecpay]: https://www.drupal.org/project/commerce_ecpay
 [Commerce Epn]: https://www.drupal.org/project/commerce_epn
 [Commerce Euplatesc]: https://www.drupal.org/project/commerce_euplatesc
-[Commerce Gocardless Payment]: https://www.drupal.org/project/commerce_gocardless_payment
+[Commerce Global Payments (Realex)]: https://www.drupal.org/project/commerce_globalpayments
 [Commerce Iats]: https://www.drupal.org/project/commerce_iats
 [Commerce Liqpay Gateway]: https://www.drupal.org/project/commerce_liqpay_gateway
 [Commerce Moyasar]: https://www.drupal.org/project/commerce_moyasar
@@ -642,9 +640,9 @@ category: docs
 [Commerce Vipps]: https://www.drupal.org/project/commerce_vipps
 [Commerce Wayforpay]: https://www.drupal.org/project/commerce_wayforpay
 [Commerce Xem]: https://www.drupal.org/project/commerce_xem
-[Commercepayu]: https://www.drupal.org/project/commercepayu
 [Commerce Fondy]: https://www.drupal.org/project/commerce_fondy
 [Commerce Sofortbanking]: https://www.drupal.org/project/commerce_sofortbanking
-[GlobalOnePay]:https://www.drupal.org/project/commerce_globalonepay
+[IDPay]: https://www.drupal.org/project/commerce_idpay
 [QualPay]: https://www.drupal.org/project/commerce_qualpay
 [Commerce Sberbank Acquiring]: https://www.drupal.org/project/commerce_sberbank_acquiring
+[Commerce Worldpay]: https://www.drupal.org/project/commerce_worldpay

@@ -13,7 +13,7 @@ and a total price.
 The order total is based off the unit price of order items multiplied by
 their quantity and the sum of all order item totals.
 
-Order items have their unit price calculated during the [order refresh process](../03.order-processing). This synchronizes the price with the
+Order items have their unit price calculated during the [order refresh process](../01.order-refresh-and-process). This synchronizes the price with the
 current purchasable entity’s price while the order is still in a draft state.
 
 The add to cart form is actually the create form for an order item
