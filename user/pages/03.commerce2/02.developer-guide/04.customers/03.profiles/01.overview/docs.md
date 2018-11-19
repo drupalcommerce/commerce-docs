@@ -31,4 +31,3 @@ Within Drupal Commerce, the *Order* and *Payment* modules provide checkout panes
 
 [Profile module]: https://www.drupal.org/project/profile
 [Commerce Shipping module]: https://www.drupal.org/project/commerce_shipping
-

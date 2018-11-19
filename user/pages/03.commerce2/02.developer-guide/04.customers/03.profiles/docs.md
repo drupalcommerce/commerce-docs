@@ -7,9 +7,8 @@ taxonomy:
 This section provides documentation for the *Profile* module as a whole, with particular emphasis on how profiles are used in *Drupal Commerce*.
 
 #### [Overview](01.overview)
-- Address book defined
-- Where does profile appear within checkout processes
-- User vs. profile data relative, stored in an additional profile
+- Familiarize yourself with the concepts of profiles and their relationship to user accounts.
+- Learn about how profiles are organized in a customer's address book and how they are used in the checkout process.
 
 #### [Profile configuration](02.profile-configuration)
 - Add a Contact phone field to the customer profile type.
