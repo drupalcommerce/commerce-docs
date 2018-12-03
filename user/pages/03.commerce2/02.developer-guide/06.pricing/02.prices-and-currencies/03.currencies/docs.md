@@ -26,6 +26,23 @@ For instructions on managing currencies, see the [Adding a currency](../../../..
 
 When the price module is installed, the currency importer service is used to import a default currency based on the site's default country (or US if not set). When new languages are installed, the currency importer service is used to import currency translations.
 
+CurrencyImporter service:
+getImportable()
+import($currency_code)
+importByCountry($country_code)
+importTranslations($langcodes)
+
+###Currency config entity
+currencyCode: string
+name: label
+numericCode: string
+symbol: label
+fractionDigits: integer
+
+CurrencyFormatter service extends the intl version:
+format($number, $currencyCode, $options = []);
+returns a string or false
+parse($number, $currencyCode, $options = []); --> use for input widgets
 
 ### Links and resources:
 * [Internationalization Commerce Story]

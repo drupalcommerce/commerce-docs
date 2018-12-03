@@ -8,6 +8,14 @@ The [Price module] requires commerceguys/intl library.
 
 provides functionality for storing, validating, and displaying international postal addresses. On eCommerce sites in general, when going through checkout customers are often annoyed by US-centric address forms. When interviewed about cart abandonment, this topic is a common complaint. In Drupal Commerce, the *Address* module solves this problem by providing country-specific address forms to customers along with the capability to display the addresses properly for shipping or billing purposes.
 
+#### [Overview](01.overview)
+- What is a price
+- How are prices used in Drupal Commerce
+
+#### [Prices](02.prices)
+- Price object and field
+- Calculator service
+
 #### [Currencies](03.currencies)
 - TBD
 
@@ -16,6 +24,6 @@ provides functionality for storing, validating, and displaying international pos
 - PriceCalculator service: price a purchasable entity would have if is was in an order
 - commerce-price-plain template
 
-#### [Price resolvers](05.chain-price-resolvers)
+#### [Price resolvers](05.price-resolvers)
 - Explain pattern of chain resolvers.
 - Price resolving is base price; order refresh allows adding adjustments.

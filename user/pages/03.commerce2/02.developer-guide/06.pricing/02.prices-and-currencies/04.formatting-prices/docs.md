@@ -22,8 +22,11 @@ $element['price'] = [
 
 This would render as $10.25.
 
-## Field formatters
+This Twig filter can be used on both Price objects and arrays with `number` and `currency_code` keys.
+Uses the currency formatter service. Link to currency formatter service in currencies doc.
 
+
+## Field formatters
 ### Plain
 
 Prints the price using the `commerce_price_plain` theme hook. Resembles `10.25 USD`. Can be useful for exported data (CSV).
