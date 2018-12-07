@@ -3,7 +3,84 @@ title: Create a condition
 taxonomy:
     category: docs
 ---
-Commerce conditions are used in when creating a Promotion or a Payment Gateway for your store. 
+
+Commerce conditions are used in when creating a Promotion or a Payment Gateway 
+for your store. 
+
+In this context, conditions are a set of plugins unique to the 
+commerce project. They are not connected in function or code to conditions in 
+core such as: Drupal\Core\Database\Query\Condition. 
+
+
+Outline:
+
+
+Show ConditionInterface functions
+Show ConditionBase functions
+
+The only function needed to fulfill the interface is 'evaluate', because 
+ConditionBase covers all other interface functions. 
+
+Show OrderProductType because it is the simplest condition.
+
+```php
+<?php
+
+namespace Drupal\commerce_product\Plugin\Commerce\Condition;
+
+use Drupal\commerce\Plugin\Commerce\Condition\ConditionBase;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Provides the product type condition for orders.
+ *
+ * @CommerceCondition(
+ *   id = "order_product_type",
+ *   label = @Translation("Product type"),
+ *   display_label = @Translation("Order contains product types"),
+ *   category = @Translation("Products"),
+ *   entity_type = "commerce_order",
+ * )
+ */
+class OrderProductType extends ConditionBase {
+
+  use ProductTypeTrait;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function evaluate(EntityInterface $entity) {
+    $this->assertEntity($entity);
+    /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
+    $order = $entity;
+    foreach ($order->getItems() as $order_item) {
+      /** @var \Drupal\commerce_product\Entity\ProductVariationInterface $purchased_entity */
+      $purchased_entity = $order_item->getPurchasedEntity();
+      if (!$purchased_entity || $purchased_entity->getEntityTypeId() != 'commerce_product_variation') {
+        continue;
+      }
+      $product_type = $purchased_entity->getProduct()->bundle();
+      if (in_array($product_type, $this->configuration['product_types'])) {
+        return TRUE;
+      }
+    }
+
+    return FALSE;
+  }
+
+}
+```
+
+Explain the workflow of when the evaluate function gets called. ONLY WHEN A 
+COUPON IS APPLIED TO AN ORDER.
+
+
+That concludes the simplest form of condition. 
+
+
+Move on to show how a more complex config form is created in OrderItemQuantity.
+
+
 
 Promotion Example using class OrderItemQuantity:
 
@@ -132,67 +209,6 @@ class OrderItemQuantity extends ConditionBase implements ParentEntityAwareInterf
 
 }
 ```
-
-Note that only 
-
-```php
-<?php
-
-namespace Drupal\commerce\Plugin\Commerce\Condition;
-
-use Drupal\Component\Plugin\ConfigurablePluginInterface;
-use Drupal\Component\Plugin\PluginInspectionInterface;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Plugin\PluginFormInterface;
-
-/**
- * Defines the interface for conditions.
- */
-interface ConditionInterface extends ConfigurablePluginInterface, PluginFormInterface, PluginInspectionInterface {
-
-  /**
-   * Gets the condition label.
-   *
-   * @return string
-   *   The condition label.
-   */
-  public function getLabel();
-
-  /**
-   * Gets the condition display label.
-   *
-   * Shown in the condition UI when enabling/disabling a condition.
-   *
-   * @return string
-   *   The condition display label.
-   */
-  public function getDisplayLabel();
-
-  /**
-   * Gets the condition entity type ID.
-   *
-   * This is the entity type ID of the entity passed to evaluate().
-   *
-   * @return string
-   *   The condition's entity type ID.
-   */
-  public function getEntityTypeId();
-
-  /**
-   * Evaluates the condition.
-   *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *   The entity.
-   *
-   * @return bool
-   *   TRUE if the condition has been met, FALSE otherwise.
-   */
-  public function evaluate(EntityInterface $entity);
-
-}
-```
-
-
 
 
 
