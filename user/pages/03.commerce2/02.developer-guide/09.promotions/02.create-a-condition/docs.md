@@ -24,13 +24,6 @@ ConditionBase covers all other interface functions.
 Show OrderProductType because it is the simplest condition.
 
 ```php
-<?php
-
-namespace Drupal\commerce_product\Plugin\Commerce\Condition;
-
-use Drupal\commerce\Plugin\Commerce\Condition\ConditionBase;
-use Drupal\Core\Entity\EntityInterface;
-
 /**
  * Provides the product type condition for orders.
  *
@@ -43,7 +36,6 @@ use Drupal\Core\Entity\EntityInterface;
  * )
  */
 class OrderProductType extends ConditionBase {
-
   use ProductTypeTrait;
 
   /**
@@ -209,7 +201,5 @@ class OrderItemQuantity extends ConditionBase implements ParentEntityAwareInterf
 
 }
 ```
-
-
 
 ! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
