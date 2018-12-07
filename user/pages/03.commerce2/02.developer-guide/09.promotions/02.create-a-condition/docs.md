@@ -106,8 +106,7 @@ User story:
   
  ![Add Promotion UI](create-a-promotion.png)
   
-[OrderItemQuantity.php](https://cgit.drupalcode.org/commerce/tree/modules/promotion/src/Plugin/Commerce/Condition/OrderItemQuantity.php)
----
+
 ```php
 <?php // namespace & use
 /**
@@ -221,6 +220,6 @@ class OrderItemQuantity extends ConditionBase implements ParentEntityAwareInterf
 
 }
 ```
-
+[OrderItemQuantity.php](https://cgit.drupalcode.org/commerce/tree/modules/promotion/src/Plugin/Commerce/Condition/OrderItemQuantity.php)
 
 ! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
