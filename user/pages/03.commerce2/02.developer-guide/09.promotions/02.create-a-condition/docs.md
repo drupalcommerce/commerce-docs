@@ -11,85 +11,105 @@ In this context, conditions are a set of plugins unique to the
 commerce project. They are not connected in function or code to conditions in 
 core such as: Drupal\Core\Database\Query\Condition. 
 
+A promotion condition evaluated only when a coupon is applied to an order.
 
-Outline:
 
+Minimum requirements to build a condition:
+---
 
-Show ConditionInterface functions
-Show ConditionBase functions
-
-The only function needed to fulfill the interface is 'evaluate', because 
-ConditionBase covers all other interface functions. 
-
-Show OrderProductType because it is the simplest condition.
+As you can see from comparing `ConditionInterface` with `ConditionBase`, 
+there is only one function required when extending ConditionBase to fulfill 
+the ConditionInterface prescription.
 
 ```php
+<?php
+
 /**
- * Provides the product type condition for orders.
- *
- * @CommerceCondition(
- *   id = "order_product_type",
- *   label = @Translation("Product type"),
- *   display_label = @Translation("Order contains product types"),
- *   category = @Translation("Products"),
- *   entity_type = "commerce_order",
- * )
+ * Defines the interface for conditions.
  */
-class OrderProductType extends ConditionBase {
-  use ProductTypeTrait;
+interface ConditionInterface extends ConfigurablePluginInterface, PluginFormInterface, PluginInspectionInterface {
+
+  /** * Gets the condition label. */ 
+  public function getLabel();
+
+  /** * Shown in the condition UI when enabling/disabling a condition. */
+  public function getDisplayLabel();
+
+  /** * This is the entity type ID of the entity passed to evaluate(). */
+  public function getEntityTypeId();
 
   /**
-   * {@inheritdoc}
+   * Evaluates the condition.
+   *
+   * @param \Drupal\Core\Entity\EntityInterface $entity
+   *   The entity.
+   *
+   * @return bool
+   *   TRUE if the condition has been met, FALSE otherwise.
    */
-  public function evaluate(EntityInterface $entity) {
-    $this->assertEntity($entity);
-    /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
-    $order = $entity;
-    foreach ($order->getItems() as $order_item) {
-      /** @var \Drupal\commerce_product\Entity\ProductVariationInterface $purchased_entity */
-      $purchased_entity = $order_item->getPurchasedEntity();
-      if (!$purchased_entity || $purchased_entity->getEntityTypeId() != 'commerce_product_variation') {
-        continue;
-      }
-      $product_type = $purchased_entity->getProduct()->bundle();
-      if (in_array($product_type, $this->configuration['product_types'])) {
-        return TRUE;
-      }
-    }
+  public function evaluate(EntityInterface $entity);
+}
 
-    return FALSE;
-  }
+```
+[ConditionInterface.php](https://cgit.drupalcode.org/commerce/tree/src/Plugin/Commerce/Condition/ConditionInterface.php)
 
+```php
+<?php
+
+/**
+ * Provides the base class for conditions.
+ */
+abstract class ConditionBase extends PluginBase implements ConditionInterface {
+
+  public function __construct(array $configuration, $plugin_id, $plugin_definition) { }
+
+  public function calculateDependencies() { ... }
+
+  public function defaultConfiguration() { ... }
+
+  public function getConfiguration() { ... }
+
+  public function setConfiguration(array $configuration) { ... }
+
+  public function buildConfigurationForm(array $form, FormStateInterface $form_state) { ... }
+
+  public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {}
+
+  public function submitConfigurationForm(array &$form, FormStateInterface $form_state) { ... }
+
+  // These are required by ConditionInterface.
+  public function getLabel() { ... }
+
+  public function getDisplayLabel() { ... }
+
+  public function getEntityTypeId() { ... }
+  
+  // TODO function evaluate is missing, write your own.
 }
 ```
-
-Explain the workflow of when the evaluate function gets called. ONLY WHEN A 
-COUPON IS APPLIED TO AN ORDER.
+[ConditionBase.php](https://cgit.drupalcode.org/commerce/tree/src/Plugin/Commerce/Condition/ConditionBase.php)
 
 
-That concludes the simplest form of condition. 
+Functionally, a condition would not be useful without some sort of user 
+configuration. defaultConfiguration, buildConfigurationForm, and 
+validateConfigurationForm go hand in hand with evaluate to create a basic 
+condition.
+
+Lets see how these functions are used in practice by analysing one of 
+the simplest conditions to ship with commerce: OrderItemQuantity.
 
 
-Move on to show how a more complex config form is created in OrderItemQuantity.
-
-
-
-Promotion Example using class OrderItemQuantity:
+Example using class OrderItemQuantity:
 
 User story:
   As a store manager I want to encourage bulk ordering by creating a promotion that applies to orders of at least 5 of the selected product. 
   
  ![Add Promotion UI](create-a-promotion.png)
   
-  
-  Lets look how the code actually processes this condition. 
- 
- /commerce/modules/promotion/src/Plugin/Commerce/Condition/OrderItemQuantity.php
-
+[OrderItemQuantity.php](https://cgit.drupalcode.org/commerce/tree/modules/promotion/src/Plugin/Commerce/Condition/OrderItemQuantity.php)
+---
 ```php
-<?php
-// namespace & use
-
+<?php // namespace & use
 /**
  * Provides the total discounted product quantity condition.
  *
@@ -201,5 +221,6 @@ class OrderItemQuantity extends ConditionBase implements ParentEntityAwareInterf
 
 }
 ```
+
 
 ! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
