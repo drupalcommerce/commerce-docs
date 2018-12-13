@@ -537,19 +537,25 @@ category: docs
 | **Description** | TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="71. WeChat Pay"]
+[ui-accordion-item title="71. Webpay.by"]
+| [Webpay.by] | [Webpay.by] |
+| --- | --- |
+| **Description** | This module provides the Webpay.by payment integration for Drupal Commerce 2 on Drupal 8. |
+| **Type** | Off site|
+[/ui-accordion-item]
+[ui-accordion-item title="72. WeChat Pay"]
 | [WeChat Pay] | [WeChat Pay] |
 | --- | --- |
 | **Description** | This module provides the WeChat Pay integration for Drupal Commerce 2 on Drupal 8. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="72. Worldline"]
+[ui-accordion-item title="73. Worldline"]
 | [Worldline] | [Worldline] |
 | --- | --- |
 | **Description** | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="73. Suomen Verkkomaksut"]
+[ui-accordion-item title="74. Suomen Verkkomaksut"]
 | [Suomen Verkkomaksut] | [Suomen Verkkomaksut] |
 | --- | --- |
 | **Description** | Commerce Suomen Verkkomaksut integrates Suomen Verkkomaksut payment method |
@@ -646,3 +652,4 @@ category: docs
 [QualPay]: https://www.drupal.org/project/commerce_qualpay
 [Commerce Sberbank Acquiring]: https://www.drupal.org/project/commerce_sberbank_acquiring
 [Commerce Worldpay]: https://www.drupal.org/project/commerce_worldpay
+[Webpay.by]: https://www.drupal.org/project/commerce_wechat_pay
