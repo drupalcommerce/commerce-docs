@@ -7,9 +7,9 @@ taxonomy:
 Introduction
 ---
 
-Conditions are a set of plugins unique to the commerce project. They are used
-to determine applicable **Promotions**, **Payment Gateways**, or **Shipping 
-Methods** for an order.
+Conditions are a set of [plugins](https://www.drupal.org/docs/8/api/plugin-api/plugin-api-overview)
+unique to the commerce project. They are used to determine applicable
+**Promotions**, **Payment Gateways**, or **Shipping Methods** for an order.
 
 
 Example user stories / use cases:
@@ -27,20 +27,20 @@ Example user stories / use cases:
   creating a promotion that applies to orders of at least 5 products. 
   Use: [OrderItemQuantity - Total discounted product quantity](https://cgit.drupalcode.org/commerce/tree/modules/promotion/src/Plugin/Commerce/Condition/OrderItemQuantity.php)
   This use case will be used as an example for the rest of this tutorial. 
-  Note: This use case will only be fully realized when the new promotion is
+  Note: This condition will only be fully realized when the new promotion is
   given a coupon and the coupon is applied to an order during checkout.  
   
   ![Screenshot of add Promotion UI](promotion-example.png)
   
 
-Minimum requirements to build a condition:
+Creating Conditions
 ---
 
 As you can see from comparing 
 [ConditionInterface](https://cgit.drupalcode.org/commerce/tree/src/Plugin/Commerce/Condition/ConditionInterface.php)
 with [ConditionBase](https://cgit.drupalcode.org/commerce/tree/src/Plugin/Commerce/Condition/ConditionBase.php),
 there is only one function required when extending ConditionBase to fulfill 
-the ConditionInterface definition of ***evaluate***. 
+the ConditionInterface definition of ***->evaluate()***. 
 
 ```
 interface ConditionInterface extends ConfigurablePluginInterface, PluginFormInterface, PluginInspectionInterface {
@@ -70,7 +70,7 @@ configuration. `defaultConfiguration`, `buildConfigurationForm`, and
 `validateConfigurationForm` go hand in hand with `evaluate` to create a basic 
 condition.
 
-Lets see how these functions are used in practice by analysing one of 
+Let's see how these functions are used in practice by analyzing one of 
 the simplest conditions to ship with commerce:  [OrderItemQuantity](https://cgit.drupalcode.org/commerce/tree/modules/promotion/src/Plugin/Commerce/Condition/OrderItemQuantity.php)
 
 
@@ -78,7 +78,8 @@ Annotations
 ---
 
 First, meta-information about the condition must be declared in the 
-@CommerceCondition annotation. 
+@CommerceCondition [annotation](https://www.drupal.org/docs/8/api/plugin-api/annotations-based-plugins). 
+This annotation lets Drupal find your new plugin.
 
 ```
 /**
@@ -101,15 +102,20 @@ class OrderItemQuantity extends ConditionBase implements ParentEntityAwareInterf
 
 | Tag | Description | 
 |---  |---|
-| `id` | A machine name unique to commerce condition.|
-| `label` | This is displayed along with a checkbox to engage condition.|
+| `id` | A unique machine name for the condition. |
+| `label` | A human friendly name for the condition.|
 | `category` | Decides which container the condition label is displayed in.|
-| `entity_type` | Ensures that this promotion only applies to commerce orders. Enforced by `$this->assertEntity($entity)` in the evaluate function.|
-| `parent_entity_type` | When specified, a condition will only be available on that entity type. |
+| `entity_type` | Ensures that this condition only applies to commerce orders.|
+| `parent_entity_type` | Optional. Used to designate this condition for 
+use only with a Promotion, PaymentGateway, or Shipping Method. |
 | `weight` | The order in which conditions are displayed within a container.|
 
 This is where `label`, `category`, and `parent_entity_type` will be displayed
- to the user:
+ to the user at any of these pages:
+ 
+ - /promotion/add
+ - /admin/commerce/config/payment-gateways/add
+ - /admin/commerce/config/shipping-methods/add
  
  ![condition.png](condition-display-explanation.png)
 
@@ -123,23 +129,6 @@ only available for a promotion and is not available for a payment gateway or
 shipping method. 
 
 This is explained concisely in the [\Drupal\commerce\Annotation CommerceCondition class](https://cgit.drupalcode.org/commerce/tree/src/Annotation/CommerceCondition.php) comments.
-
-```
-class CommerceCondition extends Plugin {
-// ... 
-/**
- * The parent entity type ID.
- *
- * This is the entity type ID of the entity that embeds the conditions.
- * For example: 'commerce_promotion'.
- *
- * When specified, a condition will only be available on that entity type.
- *
- * @var string
- */
-public $parent_entity_type;
-}
-```
 
 
 Build Configuration Form
@@ -175,11 +164,6 @@ public function buildConfigurationForm(array $form, FormStateInterface $form_sta
   return $form;
 }
 ```
-
-It is important not to hardcore values for a component's `'#default_value'` or 
-`'#value'` in the `buildConfigurationForm` function. Doing so will stop any new
-configuration values set by user input from being saved. Use 
-`defaultConfiguration` function to set default values. 
 
 
 Default Configuration Settings
@@ -220,15 +204,16 @@ public function submitConfigurationForm(array &$form, FormStateInterface $form_s
 Evaluate Function
 ---
 
-This is the guts of a condition. The goal of `evaluate` is to decide if an 
-order meets a certain criteria and to return a boolean TRUE if so. 
+This is the guts of a condition. The goal of `->evaluate()` is to decide if an 
+order meets a certain criteria. 
 
 ```
-// *** Remember annotations are inherited from ConditionInterface.***
 public function evaluate(EntityInterface $entity) {
 
-// This line is essential as it ensures this condition will only run for the 
-// 'entity_type' declared in this condition's annotations. 
+  /*
+   * This line is essential as it ensures this condition will crash if it is 
+   * given a different entity type than what is declared in its annotations.
+   */
   $this->assertEntity($entity);
   
   /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
@@ -240,7 +225,9 @@ public function evaluate(EntityInterface $entity) {
   $quantity = '0';
   foreach ($order->getItems() as $order_item) {
   
-// First assess if each order item can apply to this condition.
+    /*
+     * First assess if each order item can apply to this condition.
+     */
     // If the offer has conditions, skip order items that don't match.
     if ($offer instanceof OrderItemPromotionOfferInterface) {
     
@@ -252,20 +239,18 @@ public function evaluate(EntityInterface $entity) {
       }
     }
     
-// Get the quantity from each item and add to a running total.
+    /*
+     * Get the quantity from each item and add to a running total.
+     */
     $quantity = Calculator::add($quantity, $order_item->getQuantity());
   }
-
-// This is where the final decision is made to whether a condition is met.
+  
+  /*
+   * This is where the final decision is made to whether a condition is met.
+   */
   switch ($this->configuration['operator']) {
     case '>=':
      return $quantity >= $this->configuration['quantity'];
-     
-/* To be more explicit for this tutorial's use case: 
- * If the total quantity of all order items is greater than or equal to the 
- * quantity that the user set in the configuration form, return TRUE. If not, 
- * return FALSE and the promotion will not be applied to the order.
- */
     
     case '>':
       
