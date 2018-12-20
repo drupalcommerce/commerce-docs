@@ -652,4 +652,4 @@ category: docs
 [QualPay]: https://www.drupal.org/project/commerce_qualpay
 [Commerce Sberbank Acquiring]: https://www.drupal.org/project/commerce_sberbank_acquiring
 [Commerce Worldpay]: https://www.drupal.org/project/commerce_worldpay
-[Webpay.by]: https://www.drupal.org/project/commerce_wechat_pay
+[Webpay.by]: https://www.drupal.org/project/commerce_webpay_by
