@@ -9,21 +9,20 @@ taxonomy:
 Introduction
 ------------
 
-The competitive nature of the current retail market has driven store owners to search for methods and strategies
-to stand out from the competition and to drive sales. Creating promotions has been the strategy that has proven most effective 
-for achieving those two goals. Commerce Promotions in Commerce 2.x provides the site administrator with the tools necessary to 
-turn their innovative promotion ideas into reality. 
-How exactly does Commerce Promotions achieve this you ask? Commerce Promotions works with [Commerce Orders] (../07.orders) 
-which has the ability to apply price adjustments to orders during the [order refresh process] (../07.orders/01.order-refresh-and-process).
-It is during the order refresh process that Commerce Promotions is able to add a price adjustment for the promotion in 
-question to the given order.   
-Let's dive into the code and see how exactly this is achieved. 
+The competitive nature of the current retail market has driven store owners to search for methods and strategies to stand
+out from the competition and to drive sales. Creating promotions has been the strategy that has proven most effective
+for achieving those two goals. Commerce Promotions provides the site administrator with the tools necessary to turn their
+innovative promotion ideas into reality. How exactly does Commerce Promotions achieve this you ask? Commerce Promotions
+work with [Commerce Orders] (../07.orders) which has the ability to apply price adjustments to orders during the
+[order refresh process] (../07.orders/01.order-refresh-and-process). It is during the order refresh process that
+Commerce Promotions is able to add a price adjustment for the promotion in question to the given order. Let's dive into
+the code and see how exactly this is achieved.
 
 -----------------
 Promotion Entity
 -----------------
 The `commerce_promotion` entity makes the storage and handling of the data related to the Commerce Promotion possible.
-It has base fields that enable one to confirm whether or not a given promotion can be applied to a particular order. 
+It has base fields that enable one to confirm whether or not a given promotion can be applied to a particular order.
 Below is a list of `commerce_promotion`'s base fields along with a brief description of each one. An example of how one
 might go about creating a custom Commerce Promotion is also given.
 
@@ -45,18 +44,22 @@ Create a Promotion Entity Example
    * stores [entity_reference] - [target_type = commerce_store]
    *   The stores for which the promotion is valid.
    *
-   * offer [commerce_plugin_item:commerce_promotion_offer] 
+   * offer [commerce_plugin_item:commerce_promotion_offer]
    *   The offer type that the promotion is using. See Drupal\commerce_promotion\PromotionOfferManager to understand
-   *   how the Promotion offer plugins are discovered and instantiated. 
+   *   how the Promotion offer plugins are discovered and instantiated.
    *   Offers can have their own conditions. The available offer conditions and traits that are used by those conditions
    *   can be found in
-   *   \Drupal\commerce_product\src\Plugin\Commerce\Conditions. 
-   *   See the section, Create a Condition, for further information regarding conditions.  
+   *   \Drupal\commerce_product\src\Plugin\Commerce\Conditions.
+   *   See the section,
+```
+[Create a Condition] (02.create-a-condition)
+```php
+   *   , for further information regarding conditions.
    *
    * conditions [commerce_plugin_item:commerce_condition] - [OPTIONAL]
    *   [AVAILABLE = see commerce/modules/order/src/Plugin/Commerce/Condition]
-   *   The conditions that must be satisfied in order for the promotion to be created.
-   *   Is used in Promotion::applies($order) to check whether the promotion can be applied to the given order.   
+   *   The conditions that must be satisfied in order for the promotion to be applied.
+   *   Is used in Promotion::applies($order) to check whether the promotion can be applied to the given order.
    *
    * condition_operator [list_string] - [DEFAULT = AND]
    *   [AVAILABLE = AND, OR]
@@ -69,15 +72,15 @@ Create a Promotion Entity Example
    * usage_limit [integer] - [DEFAULT = 0]
    *   The maximum number of times the promotion can be used. 0 for unlimited.
    *
-   * start_date [datetime] - [datetime_type = date] [DEFAULT = current date]
+   * start_date
    *   The date the promotion becomes valid.
    *  
-   * end_date [datetime] - [datetime_type = date] - [OPTIONAL] 
+   * end_date
    *   The date after which the promotion is invalid.
    *
    * compatibility [list_string] - [DEFAULT = any]
    *   Whether the promotion is compatibile with other promotions (any) or whether the promotion is not compatible with
-   *   any other promotions (none). 
+   *   any other promotions (none).
    *   Is used in Promotion::applies($order) to check whether the promotion can be applied to the given order.
    *
    * status [boolean] - [DEFAULT = TRUE]
@@ -111,13 +114,13 @@ Create a Promotion Entity Example
 
 Coupon Entity
 -------------
-The `commerce_promotion_coupon` entity allows a customer to redeem a promotion.
-Its base field, usage_limit, is used to check whether or not a given promotion can be applied to a particular order. 
-Below is a list of `commerce_promotion_coupon`'s base fields along with a brief description of each one. An example of 
-how one might go about creating a custom Commerce Coupon is also given.
+The `commerce_promotion_coupon` entity allows a customer to redeem a promotion. Its base field, usage_limit, is used to
+check whether or not a given promotion can be applied to a particular order. Below is a list of `commerce_promotion_coupon`'s
+base fields along with a brief description of each one. An example of how one might go about creating a custom Commerce
+Coupon is also given.
 
 Create a Coupon Entity Example
----------------------------------
+------------------------------
 ```php
 
   /**
@@ -146,7 +149,7 @@ How Coupons Are Added To An Order
 ---------------------------------
 
 In commerce_promotion.module, Commerce Promotions adds the `commerce_promotion_coupon` entity as a base field to the
- `commerce_order` entity. 
+`commerce_order` entity.
  ```php
  /**
   * Implements hook_entity_base_field_info().
@@ -176,7 +179,7 @@ In commerce_promotion.module, Commerce Promotions adds the `commerce_promotion_c
    }
  }
  ```
-This allows a site administrator to search for a coupon by it's code and add the coupon to an order in the order's edit 
+This allows a site administrator to search for a coupon by it's code and add the coupon to an order in the order's edit
 page.
 
 ![Add coupon to order](promotion-coupon-example.png)
@@ -184,13 +187,13 @@ page.
 How Promotion Adjustments Are Added to the Order
 -------------------------------------------------
 
-The `Drupal\commerce_promotion\PromotionOrderProcessor` service applies promotions to orders during the order refresh 
+The `Drupal\commerce_promotion\PromotionOrderProcessor` service applies promotions to orders during the order refresh
 process. This is achieved by implementing `Drupal\commerce_order\OrderProcessorInterface` and using the `process(OrderInterface $order)` 
 function. Implementing the `OrderProcessorInterface` ensures that the `PromotionOrderProcessor` is added as a processor to
-the order during the order refresh. See [order refresh and process] (../07.orders/01.order-refresh-and-process) 
+the order during the order refresh. See [order refresh and process] (../07.orders/01.order-refresh-and-process)
 for more information on how this process ensures that an order has up to date product pricing, promotional adjustments
 , taxes, and more. 
-`PromotionOrderProcessor::process($order)` checks if the given order has coupons. If it does then each coupon's 
+`PromotionOrderProcessor::process($order)` checks if the given order has coupons. If it does then each coupon's
 parent promotion gets applied to the order if the following is true:
  - the promotion is available
  - the coupon is enabled
@@ -198,10 +201,9 @@ parent promotion gets applied to the order if the following is true:
  - the promotion is compatible with other promotions on the order
  - the conditions pass     
 
-Whether these statements are true or false is dictated by the values 
-in the corresponding base fields of the `commmerce_promotion` and `commerce_promotion_coupon` entities; see the 
-above sections for further information. The coupon is removed from the order if any of the aforementioned statements are
-false.
+Whether these statements are true or false is dictated by the values in the corresponding base fields of the
+`commmerce_promotion` and `commerce_promotion_coupon` entities; see the above sections for further information. The
+coupon is removed from the order if any of the aforementioned statements are\false.
 ```php
 public function process(OrderInterface $order) {
   /** @var \Drupal\commerce_promotion\Entity\CouponInterface[] $coupons */
@@ -272,9 +274,9 @@ public function apply(EntityInterface $entity, PromotionInterface $promotion) {
 How Promotion Usage Is Registered
 ---------------------------------
 
-The `Drupal\commerce_promotion\EventSubscriber\OrderEventSubscriber` listens for the 
-`commerce_order.place.pre_transition` event (which occurs before an order is placed) and uses `\Drupal\commerce_promotion\PromotionUsage`
-to register promotion usage when the order is placed. Promotion usage is registered by using `\Drupal\Core\Database\Connection`
+The `Drupal\commerce_promotion\EventSubscriber\OrderEventSubscriber` listens for the `commerce_order.place.pre_transition`
+event (which occurs before an order is placed) and uses `\Drupal\commerce_promotion\PromotionUsage` to register promotion
+usage when the order is placed. Promotion usage is registered by using `\Drupal\Core\Database\Connection`
 to insert the promotion information into the database.
 ```php
 public function register(OrderInterface $order, PromotionInterface $promotion, CouponInterface $coupon = NULL) {
@@ -288,5 +290,5 @@ public function register(OrderInterface $order, PromotionInterface $promotion, C
     ->execute();
 }
 ```
-This system allows the usage of the promotion to be tracked. By storing the email the customer can be tracked which 
+This system allows the usage of the promotion to be tracked. By storing the email the customer can be tracked which
 allows tracking both authenticated and anonymous customers the same way.
