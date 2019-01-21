@@ -511,13 +511,20 @@ category: docs
 | **Description** | Allows Drupal Commerce orders to be paid using PayUmoney payment methods. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="67. QualPay"]
+[ui-accordion-item title="67. Postfinance"]
+| [Postfinance] | [Postfinance] |
+| --- | --- |
+| **Description** | Provides integration for the e-payment solutions from Postfinance. |
+| **Type** | Off site |
+[/ui-accordion-item]
+[/ui-accordion]
+[ui-accordion-item title="68. QualPay"]
 | [QualPay] | [QualPay] |
 | --- | --- |
 | **Description** | This module integrates QualPay with Drupal Commerce, providing a one-stop payment gateway. Customers can make payments in your Drupal Commerce shop in a secure way without leaving your site. |
 | **Type** | On site|
 [/ui-accordion-item]
-[ui-accordion-item title="68. QuickPay"]
+[ui-accordion-item title="69. QuickPay"]
 | [QuickPay] | [QuickPay] |
 | --- | --- |
 | **Description** | Allows Drupal Commerce payments through the Danish payment provider QuickPay |
@@ -525,37 +532,37 @@ category: docs
 | **Currencies** | All currencies |
 | **Countries** | Denmark, Germany, UK, France, Greenland, Italy, Norway, Nederlands, Poland, Sweden |
 [/ui-accordion-item]
-[ui-accordion-item title="69. smartpay"]
+[ui-accordion-item title="70. smartpay"]
 | [smartpay] | [smartpay] |
 | --- | --- |
 | **Description** | Supports Barclaycard Hosted Payment Pages for Drupal Commerce. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="70. Trustpay"]
+[ui-accordion-item title="71. Trustpay"]
 | [Trustpay] | [Trustpay] |
 | --- | --- |
 | **Description** | TrustPay, provider of online payment solutions, is a principal member of Visa, Mastercard and UnionPay. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="71. Webpay.by"]
+[ui-accordion-item title="72. Webpay.by"]
 | [Webpay.by] | [Webpay.by] |
 | --- | --- |
 | **Description** | This module provides the Webpay.by payment integration for Drupal Commerce 2 on Drupal 8. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="72. WeChat Pay"]
+[ui-accordion-item title="73. WeChat Pay"]
 | [WeChat Pay] | [WeChat Pay] |
 | --- | --- |
 | **Description** | This module provides the WeChat Pay integration for Drupal Commerce 2 on Drupal 8. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="73. Worldline"]
+[ui-accordion-item title="74. Worldline"]
 | [Worldline] | [Worldline] |
 | --- | --- |
 | **Description** | This module provides an implementation for drupal commerce 8 of the atos worldline payment provider. |
 | **Type** | Off site|
 [/ui-accordion-item]
-[ui-accordion-item title="74. Suomen Verkkomaksut"]
+[ui-accordion-item title="75. Suomen Verkkomaksut"]
 | [Suomen Verkkomaksut] | [Suomen Verkkomaksut] |
 | --- | --- |
 | **Description** | Commerce Suomen Verkkomaksut integrates Suomen Verkkomaksut payment method |
@@ -601,7 +608,7 @@ category: docs
 [sermepa]: www.redsys.es/wps/portal/redsys/publica/acercade/nuestrosSocios
 [Payeezy]: https://www.drupal.org/project/commerce_payeezy
 [Omise]: https://www.drupal.org/project/commerce_omise
-
+[Postfinance]: https://www.drupal.org/project/commerce_postfinance
 [Commerce Pasargad]: https://www.drupal.org/project/commerce_pasargad
 [Commerce Zarinpal]: https://www.drupal.org/project/commerce_zarinpal
 [Amazon Pay]: https://www.drupal.org/project/commerce_amazon_lpa
