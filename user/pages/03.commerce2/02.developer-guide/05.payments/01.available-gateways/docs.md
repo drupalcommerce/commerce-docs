@@ -4,6 +4,12 @@ taxonomy:
 category: docs
 ---
 
+Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **93 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../02.install-configure-gateways) documentation for information on configuration.
+
+If you don't see a payment provider you want for your project, Drupal Commerce provides a framework for implementing your own online payment gateways. See the [Creating payment gateways](../04.create-payment-gateway) documentation for more information. 
+
+If you create your own payment gateway module or find one that's not in this list yet, please [let us know about it] so that we can add it.
+
 ##### Featured payment gateways
 [ui-accordion independent=true open=0]
 [ui-accordion-item title="Amazon Pay"]
@@ -66,7 +72,7 @@ category: docs
 [/ui-accordion]
 
 
-##### Additional payment gateways
+##### 86 Additional payment gateways
 [ui-accordion independent=true open=-1]
 [ui-accordion-item title="Affirm"]
 |  | [Affirm] |
@@ -745,3 +751,4 @@ category: docs
 [Postfinance]: https://www.drupal.org/project/commerce_postfinance
 [Swisscom Easypay]: https://www.drupal.org/project/commerce_swisscom_easypay
 [Transbank Webpay]: https://www.drupal.org/project/commerce_webpay
+[let us know about it]: https://github.com/drupalcommerce/commerce-docs/issues
