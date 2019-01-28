@@ -22,7 +22,9 @@ your Drupal Commerce store.
 - More TBD
 
 #### [Understanding resolvers](03.understanding-resolvers)
-- TBD
+- Learn about the concept of Resolvers.
+- Learn about types of Resolvers and how they're used in Drupal Commerce.
+- Learn about the structure of Resolvers and Chain resolvers.
 
 #### [Relationship diagrams](05.relationships)
 - Learn about the major Drupal Commerce entities and their relationships.
