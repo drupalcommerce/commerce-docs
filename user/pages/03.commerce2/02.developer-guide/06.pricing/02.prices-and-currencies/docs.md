@@ -4,9 +4,7 @@ taxonomy:
     category: docs
 ---
 
-The [Price module] requires commerceguys/intl library.
-
-provides functionality for storing, validating, and displaying international postal addresses. On eCommerce sites in general, when going through checkout customers are often annoyed by US-centric address forms. When interviewed about cart abandonment, this topic is a common complaint. In Drupal Commerce, the *Address* module solves this problem by providing country-specific address forms to customers along with the capability to display the addresses properly for shipping or billing purposes.
+> Introductory text TBD
 
 #### [Overview](01.overview)
 - What is a price

@@ -5,7 +5,6 @@ taxonomy:
 ---
 
 ### Overview
-
 commerce_price field:
 number (string)
 currency_code (string)
