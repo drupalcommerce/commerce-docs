@@ -6,7 +6,7 @@ taxonomy:
 
 ## Checkout Flows
 
-Checkout flow page is under Home >> Administration >> Commerce >> Configuration >> Checkout flows
+Checkout flow page is under Home >> Administration >> Commerce >> Configuration >> Orders >> Checkout flows
 
 ![Checkout flow](images/checkout-flow.png)
 
@@ -24,7 +24,7 @@ Complete -  the final landing page showing the checkout completion message.
 Sidebar - order summary and coupon redemptions
 Disabled - Panes that you want to disable
 
-Order information:
+Order information
 Contains from Contact information and Payment information.
 
 Contact information is only visible for anonymous users, allowing them to specify an e-mail address to use for their order. 
