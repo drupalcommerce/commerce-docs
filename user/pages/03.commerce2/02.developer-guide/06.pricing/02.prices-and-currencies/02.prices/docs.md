@@ -4,10 +4,26 @@ taxonomy:
     category: docs
 ---
 
-### Overview
-commerce_price field:
-number (string)
-currency_code (string)
+Drupal Commerce provides a custom *Price* field that has the following properties:
+* Number: a decimal number, stored as a string.
+* Currency code: a three letter currency code, stored as a string.
+
+### What is a *number format*?
+Number formats are used both for rendering the display of prices and for validating price data entered into forms. Number formats are defined on a per-locale basis. The default locale is 'en' (English). Number formats can include the following information:
+* Decimal separator (comma)
+* Grouping separator (space)
+* Currency pattern ('¤#,##0.00')
+* Accounting currency pattern ('¤#,##0.00;(¤#,##0.00)')
+* Numbering system (eg. 'latn')
+* Plus sign (eg '+')
+* Minus sign (eg '-')
+* Percent sign (eg '٪')
+
+Complete list here: `CommerceGuys\Intl\NumberFormat\NumberFormatRepository`
+
+
+#### How can I alter the number format definition for a locale?
+Implement event subscriber for the `PriceEvents::NUMBER_FORMAT` event.
 
 PriceItem field type has 3 formatters (see formatting prices section) and 2 widgets
 
@@ -26,11 +42,11 @@ roung($price, $mode) -- default mode is round half up. See interface documentati
 
 #### Section on price data entry
 ## Custom form elements
-commerce_number form element supports language-specific imput
+commerce_number form element supports language-specific input
 - uses text instead of number type to accept language-specific input, such as commas
 - provides placeholder value, 9.99, formatted w/ NumberFormatter service
 
-See imput.html.twig
+See input.html.twig
 Describe NumberFormatter service
 
 commerce_price form element uses commerce_number as well as currency input
@@ -41,7 +57,7 @@ events:
 NumberFormatDefinition
 PriceEvents: NUMBER_FORMAT ?
 
-repostitories -- explain like address module
+repositories -- explain like address module
 CurrencyRepository, NumberFormatRepository
 
 ### Links and resources:

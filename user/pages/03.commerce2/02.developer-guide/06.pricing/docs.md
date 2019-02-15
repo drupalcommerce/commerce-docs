@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
->Summary here of the pricing documentation section.
+>Summary TBD of the pricing documentation section.
 
 #### [Overview](01.overview)
 - TBD
@@ -12,11 +12,12 @@ taxonomy:
 #### [Prices and currencies](02.prices-and-currencies)
 - TBD
 
-#### [Promotions](03.promotions)
+#### [Order refresh](03.order-refresh)
 - TBD
 
-#### [Fees](04.fees)
+#### [Promotions](04.promotions)
 - TBD
 
-#### [Order refresh](05.order-refresh)
+#### [Fees](05.fees)
 - TBD
+
