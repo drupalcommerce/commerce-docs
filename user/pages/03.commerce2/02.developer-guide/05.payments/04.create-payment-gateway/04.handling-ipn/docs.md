@@ -1,7 +1,5 @@
 ---
 title: Handling an IPN
-taxonomy:
-    category: docs
+visible: false
+redirect: '/commerce2/developer-guide/payments/create-payment-gateway/off-site-gateways/handling-ipn[301]'
 ---
-
-! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.

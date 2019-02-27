@@ -1,19 +1,12 @@
 ---
-title: Creating payment gateways
+title: Getting started
 taxonomy:
     category: docs
 ---
 
-The Commerce 2 Payment API provides a framework for implementing online payment gateways. Most of the code you will need to write is gateway specific. This documentation section includes examples in separate pages for several types of payment gateways:
+For a developer interested in implementing a new payment gateway module, this documentation outlines the initial steps that are common to all types of Drupal Commerce payment gateway modules. For specific code examples, we'll use the [Commerce QuickPay module].
 
-* [On-site payment gateways](02.on-site-gateways)
-* [Off-site (redirect) gateways](03.off-site-redirect-gateways)
-* [Off-site (iframe) gateways](03.off-site-iframe-gateways)
-* [Off-site (IPN) gateways](04.handling-ipn)
-
-##### Initial steps for creating a payment gateway in Drupal Commerce:
-For all these gateway types, the initial steps are the same. We'll go through these steps here, using the the Commerce QuickPay module (*not yet released*) as an example.
-
+#### Initial steps
 1. [Create a new module.](#step-1-create-a-new-module)
 2. [Create the configuration schema.](#step-2-create-a-configuration-schema-file)
 3. [Create a payment gateway plugin.](#step-3-create-a-payment-gateway-plugin)
@@ -21,9 +14,9 @@ For all these gateway types, the initial steps are the same. We'll go through th
 
 ### Step 1: Create a new module
 
-The first thing you will need to do is create a new module with a YAML file that includes the *commerce_payment* dependency. For more information, see the [Drupal 8 documentation on creating custom modules]. For the Commerce QuickPay module, this file is named `commerce_quickpay.info.yml` and looks like this:
+The first thing you will need to do is create a new module with a YAML file that includes the `commerce_payment` dependency. For more information, see the [Drupal 8 documentation on creating custom modules]. For the Commerce QuickPay module, this file is named `commerce_quickpay.info.yml` and looks like this:
 
-```php
+```yml
 name: Commerce QuickPay
 type: module
 description: Provides Commerce integration for the QuickPay Gateway.
@@ -33,17 +26,39 @@ dependencies:
   - commerce:commerce_payment
 ```
 
-If your payment gateway depends on a vendor-supplied library, you may also need to include a `composer.json` file with a pointer to its repository. For more information, see the [Add a composer.json file section] of the Drupal 8 documentation on creating custom modules.
+If your payment gateway depends on a vendor-supplied library, you will also need to include a `composer.json` file with a pointer to its repository. Here is an example `composer.json` file from the[Commerce Worldpay module], which includes the `worldpay/worldpay-lib-php` library:
+
+```yml
+{
+    "name": "drupal/commerce_worldpay",
+    "type": "drupal-module",
+    "description": "Provides Commerce integration for Worldpay.com",
+    "homepage": "http://drupal.org/project/commerce_worldpay",
+    "license": "GPL-2.0+",
+    "keywords": ["Drupal"],
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/commerce_worldpay",
+        "source": "http://cgit.drupalcode.org/commerce_worldpay"
+    },
+    "require": {
+        "drupal/commerce": "~2.0",
+        "worldpay/worldpay-lib-php": "^2.1"
+    }
+}
+```
+ For more information, see the [Add a composer.json file section] of the Drupal 8 documentation on creating custom modules.
+
 
 ### Step 2: Create a configuration schema file
-For your payment provider, you will probably need some information like *API key*, *Private key*, etc. These will be your payment gateway settings that are stored by Drupal's configuration system. You will need to figure out which settings you need, based on documentation provided by your specific payment provider. Once you've determined the necessary settings, create your configuration schema file:
+For your payment provider, you will probably need configuration data such as *API key*, *Private key*, etc. These will be your payment gateway settings that are stored by Drupal's configuration system. You will need to figure out which settings you need based on documentation provided by your specific payment provider. Once you've determined the necessary settings, create your configuration schema file:
 
 1. Create a new `config` folder in your custom module.
 2. Create a `schema` subfolder within the `config` folder.
 3. Create a file within the `schema` folder named `my_module.schema.yml`, where `my_module` is replaced by the name of your custom module. For Commerce QuickPay, this would be `commerce_quickpay.schema.yml`.
 4. In your schema configuration file, enter a mapping with key-value pairs for each of your payment gateway settings.
 
-Here is a simplistic example for the QuickPay module, with only *private_key* and *api_key* settings. The actual QuickPay integration would require additional settings. The ***type*** should be `commerce_payment_gateway_configuration`. For the name of the configuration object, use `commerce_payment.commerce_payment_gateway.plugin`. as a prefix followed by a descriptive name, like *quickpay_redirect_checkout*.
+Here is a simplified example for the QuickPay module, showing only *private_key* and *api_key* settings. The actual QuickPay integration requires additional settings. The ***type*** should be `commerce_payment_gateway_configuration`. For the name of the configuration object, use `commerce_payment.commerce_payment_gateway.plugin.` as a prefix followed by a descriptive name, like `quickpay_redirect_checkout`.
 
 ```yml
 # config/schema/commerce_quickpay.schema.yml
@@ -56,13 +71,12 @@ commerce_payment.commerce_payment_gateway.plugin.quickpay_redirect_checkout:
     api_key:
       type: string
       label: 'API key'
-
 ```
 
 For more information on creating schema files, see the [Drupal 8 documentation on configuration schema/metadata].
 
 ### Step 3: Create a payment gateway plugin
-If you are new to creating plugins, see the [Drupal 8 Plugin API documentation]. Your plugin class should be located within your custom module in the `src/Plugin/Commerce/PaymentGateway` folder. To create your payment gateway plugin, begin by subclassing one of the payment gateway base classes:
+If you are new to creating plugins, the [Drupal 8 Plugin API documentation] provides a good overview. Your plugin class should be located within your custom module in the `src/Plugin/Commerce/PaymentGateway` folder. To create your payment gateway plugin, begin by subclassing one of the payment gateway base classes:
 * For an on-site gateway, use: `Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OnsitePaymentGatewayBase`.
 * For an off-site gateway, use: `Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayBase`.
 
@@ -97,11 +111,11 @@ class RedirectCheckout extends OffsitePaymentGatewayBase {
 }
 ```
 
-An important aspect of your plugin class its ***annotation***, identified by ***@CommercePaymentGateway***. The annotation contains the information Drupal Commerce needs to *discover* your plugin. To learn more about annotations, see the [Drupal 8 documentation on Annotations-base plugins]. For example, if you enable the Commerce QuickPay module (or rebuild caches if the module is already enabled), you will then see *QuickPay (Redirect to quickpay)* as a payment gateway *Plugin* option:
+An important aspect of your plugin class is its ***annotation***, identified by ***@CommercePaymentGateway***. The annotation contains the information Drupal Commerce needs to *discover* your plugin. To learn more about annotations, see the [Drupal 8 documentation on Annotations-base plugins]. For example, if you enable the Commerce QuickPay module (or rebuild caches if the module is already enabled), you will then see *QuickPay (Redirect to quickpay)* as a payment gateway *Plugin* option:
 
-![QuickPay Plugin](../images/create-payment-gateway-2.png)
+![QuickPay Plugin](../../images/create-payment-gateway-2.png)
 
-Here is the full list of properties for Commerce Payment Gateway annotations:
+Here is the full list of properties for Commerce Payment Gateway annotation properties:
 
 | Property | Description |
 | -------- | ----------- |
@@ -116,16 +130,17 @@ Here is the full list of properties for Commerce Payment Gateway annotations:
  | default_payment_method_type | The default payment method type, a string. If no default type is provided, the first payment method type is used as the default. |
  | credit_card_types | An array of credit card types handled by the payment gateway. If no credit card types are provided, the default list of credit card types is provided by the `getTypes()` method in the `Drupal\commerce_payment\CreditCard` class: *visa*, *mastercard*, *maestro*, *amex*, *dinersclub*, *discover*, *jcb*, and *unionpay*. |
 
+
 ### Step 4: Implement the plugin configuration form
 
-When a plugin is selected on the *Payment gateway* administrative page, its configuration form is automatically loaded. The base payment gateway class, `PaymentGatewayBase` builds a form for the *Display name*, *Mode*, and *Payment method types* settings. (*Mode* and *Payment method types* are hidden when only single options exist.) However, it's up to you to implement the configuration form methods for the settings that are specific to your Payment gateway. For the Commerce QuickPay example, we need add the *API Key* and *Private key* settings to the configuration form:
+When a plugin is selected on the *Payment gateway* administrative page, its configuration form is automatically loaded. The base payment gateway class, `PaymentGatewayBase` builds a form for the *Display name*, *Mode*, and *Payment method types* settings. (*Mode* and *Payment method types* are hidden when only single options exist.) However, it's up to you to implement the configuration form methods for the settings that are specific to your Payment gateway. For our Commerce QuickPay example, we'll create a configuration form for the *API Key* and *Private key* settings we defined earlier in our [configuration schema file.](#step-2-create-a-configuration-schema-file).
 
-![Add payment gateway configuration form](../images/create-payment-gateway-3.png)
+![Add payment gateway configuration form](../../images/create-payment-gateway-3.png)
 
 We can do that by implementing the *defaultConfiguration()*, *buildConfigurationForm()*, and *submitConfigurationForm()* methods in our `RedirectCheckout` plugin class.
 
 #### The defaultConfiguration() method
-Use the *defaultConfiguration()* method to return default values, corresponding to the settings you defined in your module's [configuration schema file](#create-a-configuration-schema-file). For the *Commerce QuickPay* module, we only defined *private_key* and *api_key* settings, so the defaultConfiguration() method looks like this:
+Use the *defaultConfiguration()* method to return default values, corresponding to the settings you defined in your module's [configuration schema file](#create-a-configuration-schema-file). For our *Commerce QuickPay* module example, our `defaultConfiguration()` method looks like this:
 
 ```php
   public function defaultConfiguration() {
@@ -175,6 +190,11 @@ Finally, to save the settings values entered by administrative users, we need to
   }
 ```
 
+---
+After completing these initial steps for creating your custom payment gateway module, you can continue with the documentation for either [On site gateways](../on-site-gateways) or [Off site gateways](../off-site-gateways).
+
+[Commerce QuickPay module]: https://www.drupal.org/project/commerce_quickpay_gateway
+[Commerce Worldpay module]: https://www.drupal.org/project/commerce_worldpay
 [Drupal 8 documentation on creating custom modules]: https://www.drupal.org/docs/8/creating-custom-modules
 [Drupal 8 documentation on configuration schema/metadata]: https://www.drupal.org/docs/8/api/configuration-api/configuration-schemametadata
 [Drupal 8 Plugin API documentation]: https://www.drupal.org/docs/8/api/plugin-api
