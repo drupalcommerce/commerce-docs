@@ -13,7 +13,7 @@ Drupal Commerce comes with a drag-and-drop checkout form builder that lets you d
 
 In the checkout system, a checkout page is a distinct step in the checkout process that contains one or more checkout panes that are represented as fieldsets or divs as part of the form representing the checkout page they're on. You do not have to use every checkout pane defined on your site, and some contributed modules will define new ones that you can use if needed.
 
-##Default checkout pages and panes
+## Default checkout pages and panes
 
 ### Checkout Settings
 
