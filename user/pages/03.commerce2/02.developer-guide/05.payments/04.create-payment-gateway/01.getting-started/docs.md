@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-For a developer interested in implementing a new payment gateway module, this documentation outlines the initial steps that are common to all types of Drupal Commerce payment gateway modules. For specific code examples, we'll use the [Commerce QuickPay module].
+For a developer interested in implementing a custom payment gateway module, this documentation outlines the initial steps that are common to all types of Drupal Commerce payment gateway modules.
 
 #### Initial steps
 1. [Create a new module.](#step-1-create-a-new-module)
@@ -14,10 +14,9 @@ For a developer interested in implementing a new payment gateway module, this do
 
 ### Step 1: Create a new module
 
-The first thing you will need to do is create a new module with a YAML file that includes the `commerce_payment` dependency. For more information, see the [Drupal 8 documentation on creating custom modules]. For the [Commerce QuickPay module], this file is named `commerce_quickpay.info.yml` and looks like this:
+The first thing you will need to do is create a new module with a YAML file that includes the `commerce_payment` dependency. For more information, see the [Drupal 8 documentation on creating custom modules]. For the [Commerce QuickPay module], for example, this file is named `commerce_quickpay.info.yml` and looks like this:
 
 ```yml
-
 name: Commerce QuickPay
 type: module
 description: Provides Commerce integration for the QuickPay Gateway.
