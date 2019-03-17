@@ -1,107 +1,137 @@
 ---
-title: Off-site (redirect) payment gateways
+title: Off-site redirect payment gateways
 taxonomy:
     category: docs
 ---
 
-This documentation will explain how to set up an off-site payment gateway. Off-site payment is enabled through a redirect from the Payment checkout page to the payment service, with customers ideally being returned back to the Payment page upon success or failure so they can be moved forward or backward in the checkout process as the case may require.
+In an off-site redirect payment gateway, the customer is taken to the third party payment provider's website during the checkout process. This happens when the customer clicks the *Pay and complete purchase* button:
+![Pay and complete purchase](../../../images/create-payment-gateway-4.png)
 
-Off-site payment flow:
- 1. Customer hits the *payment* checkout step.
- 2. The *PaymentProcess* checkout pane shows the *offsite-payment* plugin form.
- 3. The plugin form performs a redirect or shows an iFrame.
- 4. The customer provides their payment details to the payment provider.
- 5. The payment provider redirects the customer back to the return url.
- 6. A payment is created in either *onReturn()* or *onNotify()*.
+To implement this functionality, you will need to create an *Offsite payment* plugin form. When a payment gateway implements the `OffsitePaymentGatewayInterface` interface, this plugin form is embedded into the *Payment process* checkout pane. To implement this form, you will need to:
+1. Extend the base off-site payment form.
+2. Add your payment form to your payment gateway plugin annotation.
+3. Implement the `buildConfigurationForm()` method for your payment form:
+  * Build the array of data for the request to the payment provider.
+  * Specify the request method (POST or GET).
+  * Use `buildRedirectForm()` to submit the request to the payment provider.
 
-- If the payment provider supports asynchronous notifications (IPNs), then creating the payment in *onNotify()* is preferred, since it is guaranteed to be called even if the customer does not return to the site.
-- If the customer declines to provide their payment details, and cancels the payment at the payment provider, they will be redirected back to the cancel url.
-
-We'll continue with the QuickPay payment gateway example that was started in the [Creating payment gateways documentation](../docs.md). In that example, we created a custom module, configuration schema, payment plugin, and configuration form methods. With the configuration all set up, we can proceed to configure the checkout.
-
-### Checkout
-In the ***annotation*** for the QuickPay payment gateway plugin (`RedirectCheckout`), we defined the ***offsite-payment*** form class:
-
-```php
- *    forms = {
- *     "offsite-payment" = "Drupal\commerce_quickpay\PluginForm\RedirectCheckoutForm",
- *   },
-```
-
-This defines a form that Drupal Commerce will redirect to, when the user clicks the *Pay and complete purchase* button:
-
-![Pay and complete purchase](../../images/create-payment-gateway-4.png)
-
-We only need to implement one method, *buildConfigurationForm()*, for the `RedirectCheckoutForm` form. This is a pretty straightforward Drupal form, and it should not hold any surprises. For this example, we will set a lot of hidden fields and automatically redirect the user to QuickPay.
+### 1. Extend the base off-site payment form
+Your plugin form should extend `PaymentGatewayFormBase`, like this:
 
 ```php
 <?php
 
-namespace Drupal\commerce_quickpay\PluginForm;
+namespace Drupal\my_custom_gateway\PluginForm;
 
-use Drupal\commerce_payment\PluginForm\PaymentOffsiteForm;
+use Drupal\commerce_payment\Exception\PaymentGatewayException;
+use Drupal\commerce_payment\PluginForm\PaymentOffsiteForm as BasePaymentOffsiteForm;
 use Drupal\Core\Form\FormStateInterface;
 
-class RedirectCheckoutForm extends PaymentOffsiteForm {
+class MyCustomPaymentForm extends BasePaymentOffsiteForm {
 
+  /**
+   * {@inheritdoc}
+   */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
-    $configuration = $this->getConfiguration();
 
-    /** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
-    $payment = $this->entity;
+     ... your custom code here ...
 
-    $data['version'] = 'v10';
-    $data['private_key'] = $configuration['private_key'];
-    $data['api_key'] = $configuration['api_key'];
+    return $this->buildRedirectForm($form, $form_state, ...your parameters...);
+  }
+
+}
+```
+
+The base `PaymentOffsiteForm` class provides the `buildRedirectForm()` method that you'll use to invoke the request to the payment provider at the end of your `buildConfigurationForm()` method.  In addition to the `$form` and `$form_state`, you will pass it the redirect url for your payment provider, an array of data to be submitted to the payment provider, and the redirect method (GET or POST).
+
+The base form's `buildConfigurationForm()` method checks that the required `$form['#return_url']` and `$form['#cancel_url']` values are present. Also, if `$form['#capture']` has not been set, it will provide *TRUE* as a default value, meaning that the payment should be authorized and captured rather than just authorized.
+
+### 2. Add your payment form to the gateway plugin annotation
+In the `@CommercePaymentGateway` ***annotation*** at the start of your off-site payment gateway plugin, you need to specify the class for your custom ***offsite-payment*** plugin form:
+
+```php
+ *    forms = {
+ *     "offsite-payment" = "Drupal\my_custom_gateway\PluginForm\MyCustomPaymentForm",
+ *   },
+```
+
+### 3. Implement the `buildConfigurationForm()` method
+We only need to implement one method, `buildConfigurationForm()`, for the payment form plugin class. This method is responsible for:
+* building the array of data for the request to the payment provider
+* specifying the request method (POST or GET)
+* using `buildRedirectForm()` to submit the request to the payment provider
+
+Handling the actual response from the payment provider is covered in subsequent documentation pages: [Return from payment provider](../03.return-from-payment-provider) and [Handling an IPN](../04.handling-ipn).
+
+#### Gathering data for the request to the payment provider:
+Your payment gateway API documentation will provide you with the information you need to build an array of data to be submitted to the payment provider. This data may come from multiple sources such as:
+* your custom payment gateway configuration
+* the payment entity
+* the order and its billing profile
+* form data (the *return* and *cancel* url values)
+
+For example:
+```php
+/** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
+$payment = $this->entity;
+
+/** @var \Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayInterface $payment_gateway_plugin */
+$payment_gateway_plugin = $payment->getPaymentGateway()->getPlugin();
+$configuration = $payment_gateway_plugin->getConfiguration();
+
+// Payment gateway configuration data.
+$data['version'] = 'v10';
+$data['merchant_id'] = $configuration['merchant_id'];
+$data['agreement_id'] = $configuration['agreement_id'];
+$data['language'] = $configuration['language'];
+
+// Payment data.
+$data['currency'] = $payment->getAmount()->getCurrencyCode();
+$data['total'] => $payment->getAmount()->getNumber();
+$data['variables[payment_gateway]'] = $payment->getPaymentGatewayId();
+$data['variables[order]'] = $payment->getOrderId();
+
+// Order and billing address.
+$order = $payment->getOrder();
+$billing_address = $order->getBillingProfile()->get('address');
+$data['name'] = $billing_address->->getGivenName() . ' ' $billing_address->getFamilyName();
+$data['city'] = $billing_address->getLocality();
+$data['state'] = $billing_address->getAdministrativeArea()
+
+// Form url values.
+$data['continueurl'] = $form['#return_url'];
+$data['cancelurl'] = $form['#cancel_url'];
+```
+
+#### POST vs GET request methods
+For the API request submission, you need to specify either *POST* or *GET* for the request method. You do so by setting the last parameter of the `buildRedirectForm()` call to one of:
+* `PaymentOffsiteForm::REDIRECT_POST`
+* `PaymentOffsiteForm::REDIRECT_GET`
+
+If the request method is *GET*, then `buildRedirectForm()` attaches the `$data` array as the *query string* for the `$redirect_url`. It then throws a `NeedsRedirectException`, an exception that represents the need for an HTTP redirect. If no request method is specified, *GET* is used as the default value.
+
+If the request method is *POST*, then `buildRedirectForm()` attaches javascript that auto-clicks the form submit button. The form will display this message and a button to allow the customer to re-submit the form to the `$redirect_url`:
+
+>Please wait while you are redirected to the payment server. If nothing happens within 10 seconds, please click on the button below.
+
+In addition to the submit button, the customer is also presented with a *Go back* cancel button, which will invoke the payment gateway's `onCancel()` method.
+
+#### Submit the API request to the payment provider
+The last parameter we need to pass into `buildRedirectForm()` is the actual `$redirect_url`. So the final statement of your `buildConfigurationForm()` method should look something like this:
+
+```php
+<?php
 
     return $this->buildRedirectForm(
       $form,
       $form_state,
-      'https://payment.quickpay.net',
+      'https://payment.my_payment_provider.net',
       $data,
       PaymentOffsiteForm::REDIRECT_POST
     );
   }
 }
 ```
-*Again remember that this is just for illustration purposes; the real QuickPay implementation requires a lot more details.*
 
-That completes our ***Checkout*** implementation. Next, we need to handle the returning user.
-
-### Return from payment provider
-When the user returns from the payment provider, we need to validate that the payment actually succeeded. To do this, we'll implement the *onReturn()* method in the `RedirectCheckout` class. If the payment failed, the method should throw a `PaymentGatewayException`. This will reset the payment.
-
-![Payment error message](../../images/create-payment-gateway-5.png)
-
-If the payment was successful, the method should create a payment and store it:
-
-```php
-public function onReturn(OrderInterface $order, Request $request) {
-    if ($request->something_that_marks_a_failure) {
-        throw new PaymentGatewayException('Payment failed!');
-    }
-
-    $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
-    $payment = $payment_storage->create([
-      'state' => 'completed',
-      'amount' => $order->getTotalPrice(),
-      'payment_gateway' => $this->entityId,
-      'order_id' => $order->id(),
-      'remote_id' => $request->request->get('remote_id'),
-      'remote_state' => $request->request->get('remote_state'),
-    ]);
-
-    $payment->save();
-}
-```
-
-In this example code, we've simply used `if ($request->something_that_marks_a_failure)`. In an actual implementation, you would need to use logic specific to your payment provider and do comprehensive error-checking. Typically, you will also want to log the information returned by the provider. See [How to Log Messages in Drupal 8] for more information.
-
-Also, note that the payment provider you are integrating with might have different ways to complete a payment. Some payment providers, including QuickPay, will not pass any sensitive information in the request when returning. You may need to implement a callback method or submit a request for additional information from the provider.
-
-And that's it. You should now be able to implement checkouts for the off-site payment provider of your choice.
-
-[How to Log Messages in Drupal 8]: https://drupalize.me/blog/201510/how-log-messages-drupal-8
-[Drupal 8 Coding standards documentation on PHP Exceptions]: https://www.drupal.org/docs/develop/coding-standards/php-exceptions
-[Braintree documentation on Declines]: https://articles.braintreepayments.com/control-panel/transactions/declines
+After building your *Offsite payment* plugin form, continue with the [Return from payment provider](../03.return-from-payment-provider) documentation to learn how to handle the return from the payment provider.

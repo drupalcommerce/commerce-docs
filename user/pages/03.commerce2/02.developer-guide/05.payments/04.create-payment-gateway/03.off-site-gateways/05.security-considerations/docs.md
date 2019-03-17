@@ -4,13 +4,13 @@ taxonomy:
     category: docs
 ---
 
-Off site payment gateways are potentially vulnerable to malicious attacks because they accept requests from external sources. The `onReturn()`, `onNotify()` and`onCancel()` methods all accept a `[Request]` which *should* come from the payment gateway. Unfortunately, it's not possible for Drupal Commerce to automatically apply CSRF protections that will work for all types of Off site payment gateways. So as an *Off site* payment gateway developer, it's your responsibility to read and understand the integration documentation and implement protections specific to your gateway. By properly implementing the gateway's CSRF protections, you ensure that the `Request` actually *does* come from the gateway and not some malicious source.
+Off-site payment gateways are potentially vulnerable to malicious attacks because they accept requests from external sources. The `onReturn()`, `onNotify()` and`onCancel()` methods all accept a `[Request]` which *should* come from the payment gateway. Unfortunately, it's not possible for Drupal Commerce to automatically apply CSRF protections that will work for all types of Off-site payment gateways. So as an *Off-site* payment gateway developer, it's your responsibility to read and understand the integration documentation and implement protections specific to your gateway. By properly implementing the gateway's CSRF protections, you ensure that the `Request` actually *does* come from the gateway and not some malicious source.
 
-In this document, we've included a few examples of `Request` validation implementations used by actual Drupal Commerce Off site payment gateways.
+In this document, we've included a few examples of `Request` validation implementations used by actual Drupal Commerce Off-site payment gateways.
 
 #### PayPal: Express checkout payment gateway (an example of token-based validation)
 
-PayPal: Express Checkout is an Off site *redirect* payment gateway. Its API documentation describes how the `[GetExpressCheckoutDetails]` method can be used to validate the token for an order. Let's look at how that implemented within the [Commerce PayPal module].
+PayPal: Express Checkout is an Off-site *redirect* payment gateway. Its API documentation describes how the `[GetExpressCheckoutDetails]` method can be used to validate the token for an order. Let's look at how that implemented within the [Commerce PayPal module].
 
 When the checkout redirect form is built and a request is sent to PayPal, a timestamped *TOKEN* value is returned by PayPal and stored with the order data:
 
@@ -51,7 +51,7 @@ if ($paypal_response['ACK'] == 'Failure') {
 }
 ```
 
-The validation procedure used by the `onNotify()` method is slightly different in that the `Request` from PayPal (or some other source) *is* processed. Essentially, though, the concept is the same: when a `Request` is received by the `onNotify()` method, the Express checkout payment gateway responds back to PayPal with information to be used by PayPal for IPN validation. Once verified, PayPal will respond with the actual IPN request data which can then be safely processed by the `onNotify()` method. For more information, see the [Handling an IPN documentation](../03.handling-ipn)
+The validation procedure used by the `onNotify()` method is slightly different in that the `Request` from PayPal (or some other source) *is* processed. Essentially, though, the concept is the same: when a `Request` is received by the `onNotify()` method, the Express checkout payment gateway responds back to PayPal with information to be used by PayPal for IPN validation. Once verified, PayPal will respond with the actual IPN request data which can then be safely processed by the `onNotify()` method. For more information, see the [Handling an IPN documentation](../04.handling-ipn)
 
 
 ### Ingenico payment gateway (an example of SHA signature/passphrase validation)

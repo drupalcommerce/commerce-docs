@@ -31,10 +31,10 @@ You may also want to log the request or other message, especially if the request
 
 The `onNotify()` method should return a [Symfony Response] or NULL to return an empty HTTP 200 response.
 
-### Off site payment gateways and IPNs
-All off site payment gateways implement the `SupportsNotificationsInterface` interface. Generally, off site payment gateways will create payments in the `onReturn()` method. However, if the payment provider supports IPNs, then creating the payment in `onNotify()` rather than in `onReturn()` is preferred, since it is guaranteed to be called even if the customer does not return to the site.
+### Off-site payment gateways and IPNs
+All off-site payment gateways implement the `SupportsNotificationsInterface` interface. Generally, off-site payment gateways will create payments in the `onReturn()` method. However, if the payment provider supports IPNs, then creating the payment in `onNotify()` rather than in `onReturn()` is preferred, since it is guaranteed to be called even if the customer does not return to the site.
 
-### Examples of IPN handling by actual off site payment gateways
+### Examples of IPN handling by actual off-site payment gateways
 
 #### [PayPlug payment gateway]
 The PayPlug payment gateway module has a straightforward implementation of the `onNotify()` method, which is used to create the payment. First, the Request is validated, using a library provided by PayPlug:
@@ -72,7 +72,7 @@ return new JsonResponse();
 ```
 
 #### [Ingenico payment gateway]
-The Ingenico payment gateway is an example of an off site payment gateway that creates the payment *before* the plugin form performs the redirect. So the payment is created in neither `onReturn()` nor `onNotify()`. The Drupal Commerce *payment ID* is provided to the payment provider so that the existing payment can be loaded in `onReturn()` and `onNotify()`:
+The Ingenico payment gateway is an example of an off-site payment gateway that creates the payment *before* the plugin form performs the redirect. So the payment is created in neither `onReturn()` nor `onNotify()`. The Drupal Commerce *payment ID* is provided to the payment provider so that the existing payment can be loaded in `onReturn()` and `onNotify()`:
 
 ```php
 $payment = $this->entityTypeManager->getStorage('commerce_payment')->load($request->query->get('PAYMENT_ID'));
@@ -89,7 +89,7 @@ if (!empty($this->configuration['api_logging']['response'])) {
 }
 ```
 
-Next, the response is verified using SHA signature/passphrase validation, as described in the [Security considerations documentation](../04.security-considerations). If the response received from the payment provider is invalid or unsuccessful, the payment state is set to *failed* and an exception is thrown.
+Next, the response is verified using SHA signature/passphrase validation, as described in the [Security considerations documentation](../03.off-site-gateways/03.security-considerations). If the response received from the payment provider is invalid or unsuccessful, the payment state is set to *failed* and an exception is thrown.
 
 ```php
 $payment->set('state', 'failed');
@@ -157,7 +157,7 @@ if (isset($paypal_response['INVALID'])) {
 return $ipn_data;
 ```
 
-See the [Security considerations documentation](../04.security-considerations) for additional information on how PayPal uses token-based validation for requests sent to the payment gateway.
+See the [Security considerations documentation](../05.security-considerations) for additional information on how PayPal uses token-based validation for requests sent to the payment gateway.
 
 #### Configuring the notification URL for your payment gateway
 By default, your Drupal Commerce site can accept payment gateway requests at `/payment/notify/PAYMENT_GATEWAY_ID`, where PAYMENT_GATEWAY_ID is the id defined by the payment gateway's annotation. For example, *PayPal: Express checkout* accepts notifications at `/payment/notify/paypal_express_checkout`. You will need to read the documentation for your specific payment gateway to figure how to enable IPN/notification messages and how to configure the URL.

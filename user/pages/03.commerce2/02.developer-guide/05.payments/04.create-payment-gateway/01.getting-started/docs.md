@@ -14,9 +14,10 @@ For a developer interested in implementing a new payment gateway module, this do
 
 ### Step 1: Create a new module
 
-The first thing you will need to do is create a new module with a YAML file that includes the `commerce_payment` dependency. For more information, see the [Drupal 8 documentation on creating custom modules]. For the Commerce QuickPay module, this file is named `commerce_quickpay.info.yml` and looks like this:
+The first thing you will need to do is create a new module with a YAML file that includes the `commerce_payment` dependency. For more information, see the [Drupal 8 documentation on creating custom modules]. For the [Commerce QuickPay module], this file is named `commerce_quickpay.info.yml` and looks like this:
 
 ```yml
+
 name: Commerce QuickPay
 type: module
 description: Provides Commerce integration for the QuickPay Gateway.
@@ -26,7 +27,7 @@ dependencies:
   - commerce:commerce_payment
 ```
 
-If your payment gateway depends on a vendor-supplied library, you will also need to include a `composer.json` file with a pointer to its repository. Here is an example `composer.json` file from the[Commerce Worldpay module], which includes the `worldpay/worldpay-lib-php` library:
+If your payment gateway depends on a vendor-supplied library, you will also need to include a `composer.json` file with a pointer to its repository. Here is an example `composer.json` file from the [Commerce Worldpay module], which includes the `worldpay/worldpay-lib-php` library:
 
 ```yml
 {
@@ -191,7 +192,7 @@ Finally, to save the settings values entered by administrative users, we need to
 ```
 
 ---
-After completing these initial steps for creating your custom payment gateway module, you can continue with the documentation for either [On site gateways](../on-site-gateways) or [Off site gateways](../off-site-gateways).
+After completing these initial steps for creating your custom payment gateway module, you can continue with the documentation for either [On-site gateways](../on-site-gateways) or [Off-site gateways](../off-site-gateways).
 
 [Commerce QuickPay module]: https://www.drupal.org/project/commerce_quickpay_gateway
 [Commerce Worldpay module]: https://www.drupal.org/project/commerce_worldpay

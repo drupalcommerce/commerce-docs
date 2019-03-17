@@ -4,162 +4,149 @@ taxonomy:
     category: docs
 ---
 
-This documentation will explain how to set up an off-site payment gateway in an iFrame. Off-site payments in iFrames work similarly to off-site payments by redirect. The difference is that in the **Checkout** process, the "off-site" portion is handled within an embedded iframe and does not take the customer to the third party payment gateways website. As described in the [Creating payment gateways documentation](../docs.md), you'll start by creating a custom module, configuration schema, payment plugin, and configuration form methods.
+This documentation page will explain how to set up the iFrame portion of an off-site (iFrame) payment gateway. If you have not already read the [Off-site payment gateways](../../docs.md) documentation, start there for an overview and initial steps. Also, for an introduction to the Drupal Javascript API, see:
+* [Drupal 8 documentation on JavaScript API overview]
+* [Acquia tutorial topic: Add a custom variable to Drupal.Settings]
 
->This documentation was written while developing the [Commerce Rave module], so in all the examples you should replace **commerce_rave** or **rave** with the id of your module.
+Off-site payments in iFrames work similarly to off-site payments by redirect. The difference is that in the **Checkout** process, the "off-site" portion is handled within an embedded iFrame and does not take the customer to the third party payment gateway's website. This happens when the customer clicks the *Pay and complete purchase* button during checkout:
+![Pay and complete purchase](../../../images/create-payment-gateway-4.png)
 
-### Configuration
-In addition to the standard configuration, we need to add some Javascript specific to our *Rave* payment gateway, for the iFrame checkout. We'll put our Javascript code in a file named `commerce_rave.form.js` located in a folder named `js`. We'll discuss the implementation of `commerce_rave.form.js` later in this guide.
+To build this functionality, you will need to implement JavaScript for your iFrame, create an *Offsite payment* plugin form, and attach your iFrame JavaScript to that form. The *Offsite payment* plugin form will be responsible for providing the iFrame with all necessary data about the payment, order, customer, and gateway configuration, according to your payment provider's API specifications.
 
-Next, we'll create a file named `commerce_rave.libraries.yml` to define a *rave* library and detail its assets and dependencies. We need the `drupalSettings` library in order to pass necessary *transaction data* from the payment form to the iFrame. For more information, see the [Drupal 8 documentation on adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 module]. Here is the full definition of our *rave* library:
+### Creating an *Offsite payment* plugin form
+Just as in an [Off-site *redirect* payment gateway](../01.off-site-redirect), you will need to create an *Offsite payment* plugin form. When a payment gateway implements the `OffsitePaymentGatewayInterface` interface, this plugin form is embedded into the *Payment process* checkout pane. To implement this form, you will need to:
+1. Extend the base off-site payment form.
+2. Add your payment form to your payment gateway plugin annotation.
+3. Implement the `buildConfigurationForm()` method for your payment form.
+
+#### 1. Extend the base off-site payment form
+Your plugin form should extend `PaymentGatewayFormBase`, like this:
+
+```php
+<?php
+
+namespace Drupal\my_custom_gateway\PluginForm;
+
+use Drupal\commerce_payment\Exception\PaymentGatewayException;
+use Drupal\commerce_payment\PluginForm\PaymentOffsiteForm as BasePaymentOffsiteForm;
+use Drupal\Core\Form\FormStateInterface;
+
+class MyCustomPaymentForm extends BasePaymentOffsiteForm {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+    $form = parent::buildConfigurationForm($form, $form_state);
+
+     ... your custom code here ...
+
+  }
+
+}
+```
+
+The base form's `buildConfigurationForm()` method checks that the required `$form['#return_url']` and `$form['#cancel_url']` values are present, which you may need to include in the data passed to your iFrame JavaScript.
+
+#### 2. Add your payment form to the gateway plugin annotation
+In the `@CommercePaymentGateway` ***annotation*** at the start of your off-site payment gateway plugin, you need to specify the class for your custom ***offsite-payment*** plugin form:
+
+```php
+ *    forms = {
+ *     "offsite-payment" = "Drupal\my_custom_gateway\PluginForm\MyCustomPaymentForm",
+ *   },
+```
+
+#### 3. Implement the `buildConfigurationForm()` method
+We only need to implement one method, `buildConfigurationForm()`, for the payment form plugin class. This method is responsible for building the array of data needed for the embedded iFrame. This data may come from multiple sources such as:
+* your custom payment gateway configuration
+* the payment entity
+* the order and its billing profile
+* form data (the *return* and *cancel* url values)
+
+For example:
+```php
+/** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
+$payment = $this->entity;
+
+/** @var \Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayInterface $payment_gateway_plugin */
+$payment_gateway_plugin = $payment->getPaymentGateway()->getPlugin();
+$configuration = $payment_gateway_plugin->getConfiguration();
+
+// Payment gateway configuration data.
+$data['version'] = 'v10';
+$data['merchant_id'] = $configuration['merchant_id'];
+$data['agreement_id'] = $configuration['agreement_id'];
+$data['language'] = $configuration['language'];
+
+// Payment data.
+$data['currency'] = $payment->getAmount()->getCurrencyCode();
+$data['total'] => $payment->getAmount()->getNumber();
+$data['variables[payment_gateway]'] = $payment->getPaymentGatewayId();
+$data['variables[order]'] = $payment->getOrderId();
+
+// Order and billing address.
+$order = $payment->getOrder();
+$billing_address = $order->getBillingProfile()->get('address');
+$data['name'] = $billing_address->->getGivenName() . ' ' $billing_address->getFamilyName();
+$data['city'] = $billing_address->getLocality();
+$data['state'] = $billing_address->getAdministrativeArea()
+
+// Form url values.
+$data['continueurl'] = $form['#return_url'];
+$data['cancelurl'] = $form['#cancel_url'];
+```
+
+Once we've computed all the necessary *data* items, we'll attach them to the form using ***drupalSettings***. Then, using ***drupalSettings***, we will retrieve the data in our JavaScript file and use it to initialize the iFrame.
+
+```php
+// Optionally use serialization and/or hashing for your data, 
+// if specified by your payment provider's API. For example:
+$data = json_encode($data);
+
+$form['#attached']['library'][] = 'my_payment_gateway/iframe_file_name';
+$form['#attached']['drupalSettings']['my_custom_module'] $data;
+```
+
+Your `buildConfigurationForm()` method should also build whatever form you want your customers to see. This may include form elements such as a message, submit button, and cancel button. If you are unfamiliar with building forms in Drupal 8, the [Drupal 8 Form API reference] may be helpful.
+
+### Implementing the iFrame JavaScript
+Your custom JavaScript file should be created within the `js` directory of your custom module. You'll also need to create a libraries YAML file named `my_custom_gateway.libraries.yml` to include your JavaScript and its dependencies. For example, if your JavaScript file name is `my_custom_gateway.checkout.js`, then include it in your module's libraries like this:
 
 ```yaml
-rave:
+checkout:
   version: VERSION
   js:
-    js/commerce_rave.form.js: {}
+    js/my_custom_gateway.checkout.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
     - core/drupal
     - core/drupalSettings
 ```
-*In the actual implementation for the Commerce Rave module, additional libraries provided by *Rave* are also added to the module.*
+If your payment provider provides additional required libraries, you should also include those here.
 
-### Checkout
-Since this is an iFrame checkout, when the user clicks on **Pay and complete purchase**, the page will not redirect. Instead, an iFrame will be displayed on the page which is specific to the payment processor. After
-the customer's payment information is collected, the customer is returned to the site.
+Next, we'll create our JavaScript file, `my_custom_gateway.checkout.js` and add the necessary code for iFrame initialization.
 
-We will handle checkout in the `iFrameCheckoutForm` class, which resides in `src/PluginForm/iFrameCheckoutForm.php` and extends the `commerce_payment\PluginForm\PaymentOffsiteForm` class. In the `iFrameCheckoutForm` class, we'll implement the *buildConfigurationForm()*, *buildRedirectForm()*, and *processRedirectForm()* methods.
+First, using ***drupalSettings*** we retrieve the data that was attached to the form in `buildConfigurationForm()`, as described above. After that, your implementation will vary based on your payment provider's API specifications. For example implementations, you might want to look at the [Cashpresso] or [Rave] Drupal Commerce payment gateway modules, both of which use the Off-site (iFrame) method.
 
-#### The buildConfigurationForm() method
-The *buildConfigurationForm()* method is a standard Drupal form builder which we've simplified here for this example. Typically, the payment processor will require a *redirect* url where it sends the payment response to; for *Rave*, this is specified as *redirect_url*. We've also included *version*, *private_key*, *api_key*, and *payment_amount* data items. In the actual implementation, there are many additional fields specific to the payment processor.
-
-Once we've computed all the necessary *data* items, we'll attach them to the form using ***drupalSettings***. This will reside in a *transactionData* key. Then, using ***drupalSettings***, we will retrieve *transactionData* in our JavaScript file (*commerce_rave.form.js*) and use it to initialize the iFrame.
-
-
-```php
-  public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
-    $form = parent::buildConfigurationForm($form, $form_state);
-    $configuration = $this->getConfiguration();
-
-    /** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
-    $payment = $this->entity;
-
-    $form['#attached']['library'][] = 'commerce_rave/rave';
-
-    $data = [
-      'version' => 'v10',
-      'private_key' => $configuration['private_key'],
-      'api_key' => $configuration['api_key'],
-      'payment_amount' => $payment->getAmount()->getNumber(),
-      'redirect_url' => $form['#return_url']
-    ];
-
-    $form = $this->buildRedirectForm($form, $form_state, '', $data, '');
-
-    $form['#attached']['drupalSettings']['rave']['transactionData'] = json_encode($data);
-
-    return $form;
-  }
-```
-
-#### The buildRedirectForm() method
-In *buildRedirectForm()*, we configure a message to show above the payment button, and add *processRedirectForm* as a form processor:
-
-```php
-  public function buildRedirectForm(array $form, FormStateInterface $form_state, $redirect_url, array $data, $redirect_method = BasePaymentOffsiteForm::REDIRECT_GET) {
-    $helpMessage = t('Please wait while the payment server loads. If nothing happens within 10 seconds, please click on the button below.');
-
-    $form['commerce_message'] = [
-      '#markup' => '<div class="checkout-help">' . $helpMessage . '</div>',
-      '#weight' => -10,
-      '#process' => [
-        [get_class($this), 'processRedirectForm'],
-      ],
-    ];
-
-    return $form;
-  }
-```
-
-#### The processRedirectForm() method
-In *processRedirectForm()*, we add a class to the form (`payment-iframe-form`) which we'll target in our JavaScript library:
-
-```php
-  public static function processRedirectForm(array $element, FormStateInterface $form_state, array &$complete_form) {
-    $complete_form['#attributes']['class'][] = 'payment-iframe-form';
-
-    // The form actions are hidden by default, but needed in this case.
-    $complete_form['actions']['#access'] = TRUE;
-    foreach (Element::children($complete_form['actions']) as $element_name) {
-      $complete_form['actions'][$element_name]['#access'] = TRUE;
-    }
-
-    return $element;
-  }
-```
-
-### Custom JavaScript for iFrame initialization and submission
-
-Next, we'll create our JS file, `js/commerce_rave.form.js` and add the necessary code for iFrame initialization.
-
-First, using ***drupalSettings*** we retrieve the transaction data that was attached to the form in *buildConfigurationForm()*, as described above.
-
-```javascript
-var options = drupalSettings.rave.transactionData;
-```
-
-Next, we'll select the payment form and attach an action to its ***submit*** event.
-This event will be configured according to the specific payment platform we're integrating.
-For example, for **Rave**, a *getpaidSetup* function is provided in the official library which we'll call with transaction data:
-
-```javascript
-  var $paymentForm = $('.payment-iframe-form', context);
-
-  $paymentForm.on('submit', function () {
-    getpaidSetup(JSON.parse(options));
-
-    return false;
-  });
-```
-
-Finally, we configure the ***submit*** event to trigger automatically when the payment page is reached:
-
-```javascript
-$paymentForm.once('getPaid').trigger('submit');
-```
-
-The complete `commerce_rave.form.js` will look like this when we are done:
-
-```javascript
+```js
 (function ($, Drupal, drupalSettings) {
-
   'use strict';
 
-  Drupal.behaviors.raveForm = {
-    attach: function (context) {
-      var options = drupalSettings.rave.transactionData;
+  Drupal.behaviors.offsiteForm = {
+    var data = drupalSettings.my_custom_module;
 
-      var $paymentForm = $('.payment-iframe-form', context);
-
-      $paymentForm.on('submit', function () {
-        getpaidSetup(JSON.parse(options));
-
-        return false;
-      });
-
-      // Trigger form submission when user visits Payment page.
-      $paymentForm.once('getPaid').trigger('submit');
-    }
+    // Your custom JavaScript code.
   };
 
-})(jQuery, Drupal, drupalSettings);
+}(jQuery, Drupal, drupalSettings));
 ```
 
-That completes our **Checkout** configuration and implementation. Now we only need to handle the returning user.
-See the [Return from payment provider section](../03.off-site-redirect-gateways#return-from-payment-provider) of the off-site (redirect) documentation to handle returning users.
+After building your *Offsite payment* plugin form, continue with the [Return from payment provider](../03.return-from-payment-provider) documentation to learn how to handle the return from the payment provider.
 
-[Commerce Rave module]: https://drupal.org/project/commerce_rave
-[Drupal 8 documentation on adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 module]: https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module
-
+[Drupal 8 documentation on JavaScript API overview]: https://www.drupal.org/docs/8/api/javascript-api/javascript-api-overview
+[Acquia tutorial topic: Add a custom variable to Drupal.Settings]: https://docs.acquia.com/tutorials/fast-track-drupal-8-coding/add-custom-variable-drupalsettings/
+[Drupal 8 Form API reference]: https://api.drupal.org/api/drupal/elements/
+[Rave]: https://www.drupal.org/project/commerce_rave
+[Cashpresso]: https://www.drupal.org/project/commerce_cashpresso
