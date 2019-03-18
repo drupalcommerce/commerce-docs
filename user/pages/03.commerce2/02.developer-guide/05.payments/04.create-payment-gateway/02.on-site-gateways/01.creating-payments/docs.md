@@ -23,7 +23,7 @@ The payment entity that's passed in to this method should be a *new* payment, so
 
 `$this->assertPaymentState($payment, ['new']);`
 
-This new payment entity with have a payment method, amount, and an order assigned to it. Here are some helpful methods for retrieving information from the payment:
+This new payment entity will have a payment method, amount, and an order assigned to it. Here are some helpful methods for retrieving information from the payment:
 
 ```php
 $payment_method = $payment->getPaymentMethod();
