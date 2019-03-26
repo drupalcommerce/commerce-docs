@@ -1,5 +1,5 @@
 ---
-title: Capture and authorization
+title: Capture an authorization
 taxonomy:
     category: docs
 ---
