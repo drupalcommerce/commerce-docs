@@ -16,6 +16,6 @@ Click the **Capture** button from the operations popup to view the **Capture pay
 
 Update the **Amount** field as needed then click the **Capture** button to submit the form and transmit the capture request to the payment gateway.
 
-![capture payment post-capture](images/capture-payment-post-capture.png)
+![payments post-capture](images/payments-list-post-capture.png)
 
 If the capture request was successful a success message will be displayed on the order payments list page. Additionally, the payment state will be updated to **Completed**.
