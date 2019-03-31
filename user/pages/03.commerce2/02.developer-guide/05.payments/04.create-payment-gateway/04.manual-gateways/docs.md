@@ -1,5 +1,5 @@
 ---
-title: Handling an IPN
+title: Manual payment gateways
 taxonomy:
     category: docs
 ---
