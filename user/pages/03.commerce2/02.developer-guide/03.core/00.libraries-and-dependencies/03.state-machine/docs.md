@@ -69,7 +69,7 @@ Transitions can be further restricted by [guards], which are implemented as tagg
 mymodule.fulfillment_guard:
         class: Drupal\mymodule\Guard\FulfillmentGuard
         tags:
-          - { name: state_machine.guard, group: order }
+          - { name: state_machine.guard, group: commerce_order }
 ```
 
 The group argument allows the guard factory to only instantiate the guards relevant
