@@ -126,8 +126,8 @@ Here is the full list of properties for Commerce Payment Gateway annotation prop
 | forms    | An array of form classes, keyed by operation. For example, the *Manual* payment gateway has as its *forms* property:<br /><code>  forms = {<br />&nbsp;&nbsp;"add-payment" = "Drupal\commerce_payment\PluginForm\ManualPaymentAddForm",<br />&nbsp;&nbsp;"receive-payment" = "Drupal\commerce_payment\PluginForm\PaymentReceiveForm",<br />},</code> |
  | js_library | The JavaScript library ID. |
  | payment_type | The payment type used by the payment gateway, a string. If no payment type is provided, the default value is *payment_default*. |
- | payment_method_types | An array of the payment method types handled by the payment gateway. If no payment method types are provided, a *credit_card* default type is provided. Other types can be things like *paypal*, or *paypal_credit*. |
- | default_payment_method_type | The default payment method type, a string. If no default type is provided, the first payment method type is used as the default. |
+ | payment_method_types | An array of the payment method types handled by the payment gateway. If no payment method types are provided, a *credit_card* default type is provided. Other types can be things like *paypal*, or *paypal_credit*. (This property is only used for on-site gateways.) |
+ | default_payment_method_type | The default payment method type, a string. If no default type is provided, the first payment method type is used as the default. (This property is only used for on-site gateways.) |
  | credit_card_types | An array of credit card types handled by the payment gateway. If no credit card types are provided, the default list of credit card types is provided by the `getTypes()` method in the `Drupal\commerce_payment\CreditCard` class: *visa*, *mastercard*, *maestro*, *amex*, *dinersclub*, *discover*, *jcb*, and *unionpay*. |
 
 
@@ -191,6 +191,32 @@ Finally, to save the settings values entered by administrative users, we need to
 ```
 
 ---
+### Additional considerations
+#### Handling global API keys 
+Certain SDKs still require an API key to be set globally using a static method call. Gateways such as [Stripe] do this in `__construct()`. If your custom gateway needs to set a global API key value in its `__construct()` method, then you will also need to set the global API key value in a `__wakeup()` method.
+
+Since Commerce 2.12 payment gateway plugins are serialized and stored in the form cache. When the gateway is unserialized, `__construct()` doesn't run, so the API key isn't set. However, the `__wakeup()` method is called when the gateway is unserialized, so the API key can be re-set here.
+
+For example:
+```php
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager, PaymentTypeManager $payment_type_manager, PaymentMethodTypeManager $payment_method_type_manager, TimeInterface $time) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_type_manager, $payment_type_manager, $payment_method_type_manager, $time);
+
+    \Payjp\Payjp::setApiKey($this->configuration['secret_key']);
+  }
+
+  /**
+    * Sets the API key after the plugin is unserialized.
+    */
+  public function __wakeup() {
+    \Payjp\Payjp::setApiKey($this->configuration['secret_key']);
+  }
+```
+
+---
 After completing these initial steps for creating your custom payment gateway module, you can continue with the documentation for either [On-site gateways](../on-site-gateways) or [Off-site gateways](../off-site-gateways).
 
 [Commerce QuickPay module]: https://www.drupal.org/project/commerce_quickpay_gateway
@@ -201,3 +227,5 @@ After completing these initial steps for creating your custom payment gateway mo
 [Drupal 8 documentation on Annotations-base plugins]: https://www.drupal.org/docs/8/api/plugin-api/annotations-based-plugins
 [Drupal 8 Form API reference]: https://api.drupal.org/api/drupal/elements/
 [Add a composer.json file section]: https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file
+[Stripe]: https://www.drupal.org/project/commerce_stripe
+
