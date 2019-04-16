@@ -165,6 +165,7 @@ taxonomy:
     // Look up while filtering by Attribute
     $productAttributeId = \Drupal::entityTypeManager()
           ->getStorage('commerce_product_attribute_value')
+          ->getQuery()
           ->condition('attribute', 'attribute_machine_name')
           ->condition('field_value', field_value)
           ->execute();
