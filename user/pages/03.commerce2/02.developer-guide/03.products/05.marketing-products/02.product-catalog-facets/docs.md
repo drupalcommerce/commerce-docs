@@ -39,6 +39,8 @@ We're going to build upon the Product search view we created for the [Basic prod
 3. Click the *Page 2* link next to *Display name* to change the display name to "Product catalog".
 4. In the Page settings section, click the *No path is set* link next to *Path* to set the path to "product-catalog".
 5. In the Pager section, change the Items per page to "12".
+6. In the *Advanced* section, under *Other*, change the *Caching* setting to "Search API (tag-based)". Otherwise, facets break:
+![Add new views page display](../../images/product-catalog-14.png)
 
 **Customize the product catalog display**
 >For these steps, make sure that you select *This page (override)* before applying changes. Also, see [Configure the Product Brand View fields](../../04.displaying-products/05.multiple-products#configure-the-product-brand-view-fields) in the Multi-product displays documentation for a more detailed description, with screenshots, of the configuration options we're applying here.
