@@ -12,12 +12,12 @@ Below are many of the topics related to Drupal Commerce Checkout.
 	
 
 
-<li><a href="">Checkout Form builder</a></li>
-<li><a href="">Checkout Completion Rules</a></li>
-<li><a href="">Checkout Order Status Updates</a></li>
-<li><a href="">Checkout Single vs. Multiple Page</a></li>
-<li><a href="">Checkout: Anonymous vs. Authenticated</a></li>
-<li><a href="">Drupal Commerce Extra Panes</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/checkout-process/checkout-form-builder">Checkout Form builder</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/checkout-process/checkout-completion-rules">Checkout Completion Rules</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/checkout-process/checkout-order-status-updates">Checkout Order Status Updates</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/checkout-process/checkout-single-vs-multiple-page">Checkout Single vs. Multiple Page</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/checkout-process/checkout-anonymous-vs-authenticated">Checkout: Anonymous vs. Authenticated</a></li>
+<li><a href="https://docs.drupalcommerce.org/commerce1/user-guide/checkout-process/drupal-commerce-extra-panes">Drupal Commerce Extra Panes</a></li>
 
 
 </ul>
