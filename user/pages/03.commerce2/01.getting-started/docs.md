@@ -19,7 +19,7 @@ Ready to start developing and working with Drupal Commerce?
 
 ### Looking for a demo?
 
-There are several Drupal Commerce 2 demo sites available.
+There are several Drupal Commerce 2 demo sites available. (Links no longer work 4/2019)
 
 * [Braintree demo](https://braintree.commercekickstart.com/), using Braintree Hosted Fields for payment.
 * [PayPal demo](https://paypal.commercekickstart.com/), using PayPal Express Checkout for payment.
