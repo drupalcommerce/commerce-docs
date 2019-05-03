@@ -6,6 +6,7 @@ logo_text: ''
 body_classes: ''
 content_padding: true
 twofa_enabled: true
+log_viewer_files: ['grav', 'email']
 sidebar:
   activate: tab
   hover_delay: 100
@@ -20,6 +21,7 @@ widgets:
   dashboard-pages: true
 pages:
   show_parents: both
+  show_modular: true
 session:
   timeout: 1800
 warnings:

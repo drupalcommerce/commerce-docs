@@ -1,3 +1,99 @@
+# 3.0.1
+## 04/17/2019
+
+1. [](#improved)
+    * Extra checks for page visibility [#166](https://github.com/getgrav/grav-plugin-login/issues/166)
+
+# 3.0.0
+## 04/11/2019
+
+1. [](#new)
+    * Added **2-Factor Authentication** support for front-end (2FA)
+    * New CLI command to `lookup` users 
+    * Check requirements to use new `lookup` command
+    * Added support for the new `Flex User` object
+1. [](#improved)
+    * Use `$grav['accounts']` instead of `$grav['users']`
+    * Update all Login classes to rely on `PageInterface` instead of `Page` class
+    * Updated typehints from `User` to `UserInterface`
+    * Use `$grav['users']` collection instead of deprecated static calls
+    * Invalidate cache when modifying users from CLI
+    * Updated code to PHP 7.1 features
+1. [](#bugfix)
+    * Fix login on registration (FlexUsers)      
+
+# v2.8.4
+## 03/20/2019
+
+1. [](#improved)  
+  * Enable "brute force" protection by default [#195](https://github.com/getgrav/grav-plugin-login/pulls/195)
+  * UPdated various language translations
+1. [](#bugfix)
+  * Set security timeouts in blueprints to use `minutes` rather than `seconds` [#194](https://github.com/getgrav/grav-plugin-login/issues/194)
+  * Send "notification" email to `to` address rather than `from` [#188](https://github.com/getgrav/grav-plugin-login/pulls/188)
+
+# v2.8.3
+## 01/25/2019
+  
+1. [](#new)
+  * Wrap data in `onUserLoginRegisterData` event in object to allow reference  
+1. [](#improved)  
+  * IP pseudonymization for rate limiter [#196](https://github.com/getgrav/grav-plugin-login/pull/196)
+  * Made some error lang strings more generic to relfect ability to change username/password requirements
+1. [](#bugfix)
+  * Fix redirectLangSafe in login controller [#192](https://github.com/getgrav/grav-plugin-login/pull/192)      
+
+# v2.8.2
+## 12/14/2018
+  
+1. [](#new)  
+  * Fire `onUserLoginRegisteredUser()` event to allow manipulation of User object after registration
+
+# v2.8.1
+## 12/13/2018
+
+1. [](#bugfix)
+  * Fix various redirects to use `lang-safe` variety for better multi-language support [#186]((https://github.com/getgrav/grav-plugin-login/issues/186))
+  * Ensure only defined `user_registration.fields` are allowed in registration and profile forms
+
+# v2.8.0
+## 11/12/2018
+
+1. [](#new)
+    * Store remember me triplets into `user://data/rememberme` instead of storing them into the cache
+    * Ability to register + authorize but require accounts to be manually enabled [#180](https://github.com/getgrav/grav-plugin-login/issues/180)
+1. [](#improved)
+    * If login on registration or activation has been turned on, use login redirect if override is not set
+    * Don’t set default templates for `register` and `unauthorized`, use overridable templates [#179](https://github.com/getgrav/grav-plugin-login/issues/179)
+    * Updated `de.yaml` [#175](https://github.com/getgrav/grav-plugin-login/pull/175)
+    * Updated `ru.yaml` [#176](https://github.com/getgrav/grav-plugin-login/pull/176)
+1. [](#bugfix)
+    * Fixed broken remember me functionality
+    * Fixed client side validation in login forms
+    * Fix uppercase and Unicode username handling [#177](https://github.com/getgrav/grav-plugin-login/pull/177)
+
+# v2.7.3
+## 06/20/2018
+
+1. [](#bugfix)
+    * Fixed regression with `redirect_after_login` setting [#164](https://github.com/getgrav/grav-plugin-login/issues/164)
+
+# v2.7.2
+## 06/11/2018
+
+1. [](#new)
+    * Norwegian translation added [#163](https://github.com/getgrav/grav-plugin-login/issues/163)
+1. [](#bugfix)
+    * Fixed issue with `redirect_after_login` being ignored [#164](https://github.com/getgrav/grav-plugin-login/issues/164)
+    * CLI commands `change-user-state` and `change-password` were ignoring desired username [#161](https://github.com/getgrav/grav-plugin-login/issues/161)
+
+# v2.7.1
+## 06/03/2018
+
+1. [](#bugfix)
+    * Removed extra unnecessary username check [#159](https://github.com/getgrav/grav-plugin-login/issues/159)
+    * CLI command `add-user` ignores desired username [#157](https://github.com/getgrav/grav-plugin-login/issues/157)
+
 # v2.7.0
 ## 05/11/2018
 

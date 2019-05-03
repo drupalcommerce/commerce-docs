@@ -1,6 +1,6 @@
 # Grav Problems Plugin
 
-![Problems](assets/readme_1.png)
+![Problems](assets/readme_1.jpg)
 
 `Problems` is a [Grav](http://github.com/getgrav/grav) Plugin and allows to detect issues.
 
@@ -26,7 +26,7 @@ You should now have all the plugin files under
 
     /your/site/grav/user/plugins/problems
 
->> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
+> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
 
 # Usage
 
@@ -34,28 +34,35 @@ You should now have all the plugin files under
 
 `Problems` checks for the following common issues:
 
-| Check                                   | Description                                                                                               |
-| :----------------------------------     | :-------------------------------------------------------------------------------------------------------- |
-| Apache `mod_rewrite`                    | Checks to ensure `mod_rewrite` is enabled if you are running an Apache server.                            |
-| PHP Version                             | Checks to make sure the PHP version being run by the server meets or exceeds Grav's minimum requirements. |
-| PHP GD (Image Manipulation Library)     | Checks to make sure that PHP GD is installed.                                                             |
-| PHP Curl (Data Transfer Library)        | Checks to make sure that PHP Curl is installed.                                                           |
-| PHP OpenSSL (Secure Sockets Library)    | Checks to make sure that PHP OpenSSL is installed.                                                        |
-| PHP Mbstring (Multibyte String Library) | Checks to make sure that PHP Mbstring is installed.                                                       |
-| .htaccess                               | Checks to make sure that there is an `.htaccess` file in Grav's root directory.                           |
-| `bin/*` executable                      | Checks that all the files in the `bin/` folder are exectuable.                                            |
-| Cache                                   | Checks the `/cache` folder's existence and verifies that it is writeable.                                 |
-| Logs                                    | Checks the `/logs` folder's existence and verifies that it is writeable.                                  |
-| Images                                  | Checks the `/images` folder's existence and verifies that it is writeable.                                |
-| Assets                                  | Checks the `/assets` folder's existence and verifies that it is writeable.                                |
-| System                                  | Checks the `/system` folder's existence.                                                                  |
-| Data                                    | Checks the `/user/data` folder's existence and verifies that it is writeable.                             |
-| Pages                                   | Checks the `/user/images` folder's existence.                                                             |
-| Config                                  | Checks the `/user/config` folder's existence.                                                             |
-| Error                                   | Checks to make sure the **Error** plugin is installed in `/user/plugins/error`.                           |
-| Plugins                                 | Checks the `/user/plugins` folder's existence.                                                            |
-| Themes                                  | Checks the `/user/themes` folder's existence.                                                             |
-| Vendor                                  | Checks the `/vendor` folder's existence.                                                                  |
+| Check           | Description                                                                       |
+| :-------------- | :-------------------------------------------------------------------------------- |
+| Apache          | `mod_rewrite` is enabled if you are running an Apache server.                     |
+| PHP Version     | PHP version being run by the server meets or exceeds Grav's minimum requirements. |
+| PHP Modules     | PHP GD library is installed.                                                      |
+|                 | PHP Curl library is installed.                                                    |
+|                 | PHP Ctype library is installed                                                    |
+|                 | PHP Dom is library installed                                                      |
+|                 | PHP OpenSSL library is installed                                                  |
+|                 | PHP XML library is installed                                                      |
+|                 | PHP Zip library is installed                                                      |
+|                 | PHP Exif library is installed if Exif support is enabled                          |
+|                 | PHP OpenSSL library is installed.                                                 |
+|                 | PHP Mbstring library is installed.                                                |
+| Essential Files | `.htaccess` file in Grav's root directory.                                        |
+|                 | Checks that all the files in the `bin/` folder are exectuable.                    |
+|                 | `/cache` folder's existence and verifies that it is writeable.                    |
+|                 | `/logs` folder's existence and verifies that it is writeable.                     |
+|                 | `/images` folder's existence and verifies that it is writeable.                   |
+|                 | `/assets` folder's existence and verifies that it is writeable.                   |
+|                 | `/system` folder's existence.                                                     |
+|                 | `/tmp` folder's existence.                                                        |
+|                 | `/user/data` folder's existence and verifies that it is writeable.                |
+|                 | `/user/images` folder's existence.                                                |
+|                 | `/user/config` folder's existence.                                                |
+|                 | **Error** plugin is installed in `/user/plugins/error`.                           |
+|                 | `/user/plugins` folder's existence.                                               |
+|                 | `/user/themes` folder's existence.                                                |
+|                 | `/vendor` folder's existence.                                                     |
 
 If an issue is discovered, you will be greeted with a page that lists these checks and whether or not your install passed or failed them. Green checks mean it passed, and a red x indicates that the there is something amiss with the item.
 
@@ -65,25 +72,19 @@ If a change is caught and the cache is refreshed, the plugin will loop through i
 
 `Problems` gets also triggered if any fatal exception is caught.
 
-# Updating
+# CLI Command
 
-As development for the Problems plugin continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating Problems is easy, and can be done through Grav's GPM system, as well as manually.
+Problems 2.0 comes with a handy CLI command so you can run the checks at any time
 
-## GPM Update (Preferred)
+```bash
+bin/plugin problems check
+```
 
-The simplest way to update this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
+You should see some output like this:
 
-    bin/gpm update problems
 
-This command will check your Grav install to see if your Problems plugin is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The plugin will automatically update and clear Grav's cache.
+![](assets/cli.png)
 
-## Manual Update
+# Extending Plugins
 
-Manually updating Problems is pretty simple. Here is what you will need to do to get this done:
-
-* Delete the `your/site/user/plugins/problems` directory.
-* Download the new version of the Problems plugin from either [GitHub](https://github.com/getgrav/grav-plugin-problems) or [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
-* Unzip the zip file in `your/site/user/plugins` and rename the resulting folder to `problems`.
-* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
-
-> Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/plugins`) will remain intact.
+You can also extend the problems plugin via the `onProblemsInitialized()` event.  The event includes an array of Problems.  Simply create your own Problems class that extends the `Grav\Plugin\Problems\Base\Problem` class and add it to the array.

@@ -1,44 +1,37 @@
 <?php
+
 /**
- * @package    Grav.Console
+ * @package    Grav\Console\Cli
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
 namespace Grav\Console\Cli;
 
 use Grav\Console\ConsoleCommand;
+use RocketTheme\Toolbox\File\YamlFile;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Yaml\Yaml;
 
 class InstallCommand extends ConsoleCommand
 {
-    /**
-     * @var
-     */
+    /** @var array */
     protected $config;
-    /**
-     * @var
-     */
+
+    /** @var array */
     protected $local_config;
-    /**
-     * @var
-     */
+
+    /** @var string */
     protected $destination;
-    /**
-     * @var
-     */
+
+    /** @var string */
     protected $user_path;
 
-    /**
-     *
-     */
     protected function configure()
     {
         $this
-            ->setName("install")
+            ->setName('install')
             ->addOption(
                 'symlink',
                 's',
@@ -50,17 +43,14 @@ class InstallCommand extends ConsoleCommand
                 InputArgument::OPTIONAL,
                 'Where to install the required bits (default to current project)'
             )
-            ->setDescription("Installs the dependencies needed by Grav. Optionally can create symbolic links")
+            ->setDescription('Installs the dependencies needed by Grav. Optionally can create symbolic links')
             ->setHelp('The <info>install</info> command installs the dependencies needed by Grav. Optionally can create symbolic links');
     }
 
-    /**
-     * @return int|null|void
-     */
     protected function serve()
     {
         $dependencies_file = '.dependencies';
-        $this->destination = ($this->input->getArgument('destination')) ? $this->input->getArgument('destination') : ROOT_DIR;
+        $this->destination = $this->input->getArgument('destination') ?: ROOT_DIR;
 
         // fix trailing slash
         $this->destination = rtrim($this->destination, DS) . DS;
@@ -71,19 +61,22 @@ class InstallCommand extends ConsoleCommand
 
         // Look for dependencies file in ROOT and USER dir
         if (file_exists($this->user_path . $dependencies_file)) {
-            $this->config = Yaml::parse(file_get_contents($this->user_path . $dependencies_file));
+            $file = YamlFile::instance($this->user_path . $dependencies_file);
         } elseif (file_exists($this->destination . $dependencies_file)) {
-            $this->config = Yaml::parse(file_get_contents($this->destination . $dependencies_file));
+            $file = YamlFile::instance($this->destination . $dependencies_file);
         } else {
             $this->output->writeln('<red>ERROR</red> Missing .dependencies file in <cyan>user/</cyan> folder');
             if ($this->input->getArgument('destination')) {
-                $this->output->writeln('<yellow>HINT</yellow> <info>Are you trying to install a plugin or a theme? Make sure you use <cyan>bin/gpm install <something></cyan>, not <cyan>bin/grav install</cyan>. This command is only used to install Grav skeletons.');    
+                $this->output->writeln('<yellow>HINT</yellow> <info>Are you trying to install a plugin or a theme? Make sure you use <cyan>bin/gpm install <something></cyan>, not <cyan>bin/grav install</cyan>. This command is only used to install Grav skeletons.');
             } else {
-                $this->output->writeln('<yellow>HINT</yellow> <info>Are you trying to install Grav? Grav is already installed. You need to run this command only if you download a skeleton from GitHub directly.');    
+                $this->output->writeln('<yellow>HINT</yellow> <info>Are you trying to install Grav? Grav is already installed. You need to run this command only if you download a skeleton from GitHub directly.');
             }
-            
+
             return;
         }
+
+        $this->config = $file->content();
+        $file->free();
 
         // If yaml config, process
         if ($this->config) {
@@ -153,10 +146,22 @@ class InstallCommand extends ConsoleCommand
 
         exec('cd ' . $this->destination);
         foreach ($this->config['links'] as $repo => $data) {
-            $from = $this->local_config[$data['scm'] . '_repos'] . $data['src'];
+            $repos = (array) $this->local_config[$data['scm'] . '_repos'];
+            $from = false;
             $to = $this->destination . $data['path'];
 
-            if (file_exists($from)) {
+            foreach ($repos as $repo) {
+                $path = $repo . $data['src'];
+                if (file_exists($path)) {
+                    $from = $path;
+                    continue;
+                }
+            }
+
+            if (!$from) {
+                $this->output->writeln('<red>source for ' . $data['src'] . ' does not exists, skipping...</red>');
+                $this->output->writeln('');
+            } else {
                 if (!file_exists($to)) {
                     symlink($from, $to);
                     $this->output->writeln('<green>SUCCESS</green> symlinked <magenta>' . $data['src'] . '</magenta> -> <cyan>' . $data['path'] . '</cyan>');
@@ -165,11 +170,7 @@ class InstallCommand extends ConsoleCommand
                     $this->output->writeln('<red>destination: ' . $to . ' already exists, skipping...</red>');
                     $this->output->writeln('');
                 }
-            } else {
-                $this->output->writeln('<red>source: ' . $from . ' does not exists, skipping...</red>');
-                $this->output->writeln('');
             }
-
         }
     }
 }

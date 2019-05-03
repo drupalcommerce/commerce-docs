@@ -1,8 +1,9 @@
 <?php
+
 /**
  * @package    Grav\Framework\ContentBlock
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -60,6 +61,17 @@ interface ContentBlockInterface extends \Serializable
      * @param array $serialized
      */
     public function build(array $serialized);
+
+    /**
+     * @param string $checksum
+     * @return $this
+     */
+    public function setChecksum($checksum);
+
+    /**
+     * @return string
+     */
+    public function getChecksum();
 
     /**
      * @param string $content
