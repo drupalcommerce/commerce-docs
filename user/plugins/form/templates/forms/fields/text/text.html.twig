@@ -3,28 +3,23 @@
 {% block prepend %}
 {% if field.prepend %}
     <div class="form-input-addon form-input-prepend">
-        {% if grav.twig.twig.filters['tu'] is defined %}
-            {{- field.prepend|tu|raw -}}
-        {% else %}
-            {{- field.prepend|t|raw -}}
-        {% endif %}
+        {{- field.prepend|t|raw -}}
     </div>
 {% endif %}
 {% endblock %}
 
 {% block input_attributes %}
     type="text"
+    {% if field.size %}size="{{ field.size }}"{% endif %}
+    {% if field.minlength is defined or field.validate.min is defined %}minlength="{{ field.minlength | default(field.validate.min) }}"{% endif %}
+    {% if field.maxlength is defined or field.validate.max is defined %}maxlength="{{ field.maxlength | default(field.validate.max) }}"{% endif %}
     {{ parent() }}
 {% endblock %}
 
 {% block append %}
     {% if field.append %}
         <div class="form-input-addon form-input-append">
-            {% if grav.twig.twig.filters['tu'] is defined %}
-                {{- field.append|tu|raw -}}
-            {% else %}
-                {{- field.append|t|raw -}}
-            {% endif %}
+            {{- field.append|t|raw -}}
         </div>
     {% endif %}
 {% endblock %}

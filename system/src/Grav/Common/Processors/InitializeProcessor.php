@@ -1,44 +1,80 @@
 <?php
+
 /**
- * @package    Grav.Common.Processors
+ * @package    Grav\Common\Processors
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
 namespace Grav\Common\Processors;
 
-class InitializeProcessor extends ProcessorBase implements ProcessorInterface
+use Grav\Common\Config\Config;
+use Grav\Common\Uri;
+use Grav\Common\Utils;
+use Grav\Framework\Session\Exceptions\SessionException;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+
+class InitializeProcessor extends ProcessorBase
 {
     public $id = 'init';
     public $title = 'Initialize';
 
-    public function process()
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler) : ResponseInterface
     {
-        $this->container['config']->debug();
+        $this->startTimer();
+
+        /** @var Config $config */
+        $config = $this->container['config'];
+        $config->debug();
 
         // Use output buffering to prevent headers from being sent too early.
         ob_start();
-        if ($this->container['config']->get('system.cache.gzip')) {
+        if ($config->get('system.cache.gzip') && !@ob_start('ob_gzhandler')) {
             // Enable zip/deflate with a fallback in case of if browser does not support compressing.
-            if (!@ob_start("ob_gzhandler")) {
-                ob_start();
-            }
+            ob_start();
         }
 
         // Initialize the timezone.
-        if ($this->container['config']->get('system.timezone')) {
-            date_default_timezone_set($this->container['config']->get('system.timezone'));
+        $timezone = $config->get('system.timezone');
+        if ($timezone) {
+            date_default_timezone_set($timezone);
         }
 
         // FIXME: Initialize session should happen later after plugins have been loaded. This is a workaround to fix session issues in AWS.
-        if ($this->container['config']->get('system.session.initialize', 1) && isset($this->container['session'])) {
-            $this->container['session']->init();
+        if (isset($this->container['session']) && $config->get('system.session.initialize', true)) {
+            // TODO: remove in 2.0.
+            $this->container['accounts'];
+
+            try {
+                $this->container['session']->init();
+            } catch (SessionException $e) {
+                $this->container['session']->init();
+                $message = 'Session corruption detected, restarting session...';
+                $this->addMessage($message);
+                $this->container['messages']->add($message, 'error');
+            }
         }
 
-        // Initialize uri.
-        $this->container['uri']->init();
+        /** @var Uri $uri */
+        $uri = $this->container['uri'];
+        $uri->init();
+
+        // Redirect pages with trailing slash if configured to do so.
+        $path = $uri->path() ?: '/';
+        if ($path !== '/'
+            && $config->get('system.pages.redirect_trailing_slash', false)
+            && Utils::endsWith($path, '/')) {
+
+            $redirect = (string) $uri::getCurrentRoute()->toString();
+            $this->container->redirect($redirect);
+        }
 
         $this->container->setLocale();
+        $this->stopTimer();
+
+        return $handler->handle($request);
     }
 }

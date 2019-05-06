@@ -1,5 +1,5 @@
 name: Shortcode Core
-version: 2.7.1
+version: 4.1.1
 description: "This plugin provides the core functionality for shortcode plugins"
 icon: code
 author:
@@ -13,7 +13,7 @@ bugs: https://github.com/getgrav/grav-plugin-shortcode-core/issues
 license: MIT
 
 dependencies:
-    - { name: grav, version: '~1.1' }
+    - { name: grav, version: '>=1.5.10' }
 
 form:
   validation: strict
@@ -43,7 +43,19 @@ form:
 
     active_admin:
       type: toggle
-      label: Activated in admin
+      label: Activated in Admin
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    admin_pages_only:
+      type: toggle
+      label: Admin Real-Pages Only
+      help: When activate, only process real-pages
       highlight: 1
       default: 1
       options:
@@ -87,3 +99,15 @@ form:
       label: Fontawesome URL
       help: You can change the location of fontawesome by changing this URL
       size: large
+
+    fontawesome.v5:
+      type: toggle
+      label: Use Fontawesome Version 5
+      help: Allows usage of the 'fab', 'fas' and other new font families of Fontawesome 5.
+      highlight: 0
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

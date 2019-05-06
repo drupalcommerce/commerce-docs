@@ -1,5 +1,12 @@
+# v1.5.3
+## 03/30/2019
+
+1. [](#improved)
+    * Updated `anchors.js` to version 4.2.0
+    * Improved documentation
+
 # v1.5.2
-## 09/28/2016
+## 09/28/2017
 
 1. [](#improved)
     * Updated `anchors.js` to version 4.1.0

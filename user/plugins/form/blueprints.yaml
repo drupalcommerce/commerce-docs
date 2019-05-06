@@ -1,5 +1,6 @@
 name: Form
-version: 2.14.1
+version: 3.0.2
+testing: false
 description: Enables the forms handling
 icon: check-square
 author:
@@ -12,7 +13,7 @@ bugs: https://github.com/getgrav/grav-plugin-form/issues
 license: MIT
 
 dependencies:
-    - { name: grav, version: '>=1.3.9' }
+  - { name: grav, version: '>=1.6.0' }
 
 form:
   validation: strict
@@ -168,6 +169,22 @@ form:
       title: PLUGIN_FORM.RECAPTCHA
 
       fields:
+        recaptcha.version:
+          type: select
+          label: Version
+          default: 2-checkbox
+          options:
+            2-checkbox: v2 - Checkbox
+            2-invisible: v2 - Invisible
+            3: v3 - Latest
+        recaptcha.theme:
+          type: select
+          label: Theme
+          default: light
+          options:
+            light: Light Theme
+            dark: Dark Theme
+          recaptcha.site_key:
         recaptcha.site_key:
           type: text
           label: PLUGIN_FORM.RECAPTCHA_SITE_KEY

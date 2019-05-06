@@ -74,7 +74,8 @@ export default class PageMedia extends FilesField {
     }
 
     fetchMedia() {
-        const body = { uri: this.getURI() };
+        const order = this.container.closest('.form-field').find('[name="data[header][media_order]"]').val();
+        const body = { uri: this.getURI(), order };
         let url = this.urls.fetch;
 
         request(url, { method: 'post', body }, (response) => {
@@ -100,7 +101,7 @@ export default class PageMedia extends FilesField {
         formData.delete('task');
         */
 
-        formData.append('name', this.options.dotNotation);
+        formData.append('name', this.options.dotNotation || file.name);
         formData.append('admin-nonce', config.admin_nonce);
         formData.append('uri', this.getURI());
     }

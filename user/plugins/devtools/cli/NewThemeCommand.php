@@ -49,6 +49,12 @@ class NewThemeCommand extends DevToolsCommand
                 'The name/username of the developer'
             )
             ->addOption(
+                'githubid',
+                'gh',
+                InputOption::VALUE_OPTIONAL,
+                'The developer\'s GitHub ID'
+            )
+            ->addOption(
                 'email',
                 'e',
                 InputOption::VALUE_OPTIONAL,
@@ -77,7 +83,8 @@ class NewThemeCommand extends DevToolsCommand
             'description'   => $this->input->getOption('description'),
             'author'        => [
                 'name'      => $this->input->getOption('developer'),
-                'email'     => $this->input->getOption('email')
+                'email'     => $this->input->getOption('email'),
+                'githubid'  => $this->input->getOption('githubid'),
             ]
         ];
 
@@ -114,6 +121,15 @@ class NewThemeCommand extends DevToolsCommand
             $this->component['author']['name'] = $helper->ask($this->input, $this->output, $question);
         }
 
+        if (!$this->options['author']['githubid']) {
+            $question = new Question('Enter <yellow>GitHub ID</yellow> (can be blank): ');
+            $question->setValidator(function ($value) {
+                return $this->validate('githubid', $value);
+            });
+
+            $this->component['author']['githubid'] = $helper->ask($this->input, $this->output, $question);
+        }
+
         if (!$this->options['author']['email']) {
             $question = new Question('Enter <yellow>Developer Email</yellow>: ');
             $question->setValidator(function ($value) {
@@ -125,11 +141,11 @@ class NewThemeCommand extends DevToolsCommand
 
         $question = new ChoiceQuestion(
             'Please choose an option',
-            array('pure-blank' => 'Basic Theme using Pure.css', 'inheritence' => 'Inherit from another theme', 'copy' => 'Copy another theme')
+            array('pure-blank' => 'Basic Theme using Pure.css', 'inheritance' => 'Inherit from another theme', 'copy' => 'Copy another theme')
         );
         $this->component['template'] = $helper->ask($this->input, $this->output, $question);
 
-        if ($this->component['template'] == 'inheritence') {
+        if ($this->component['template'] == 'inheritance') {
             $themes = $this->gpm->getInstalledThemes();
             $installedThemes = [];
             foreach($themes as $key => $theme) {

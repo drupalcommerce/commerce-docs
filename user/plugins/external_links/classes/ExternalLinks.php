@@ -42,14 +42,19 @@ class ExternalLinks
     public function render($content, $options = [], $page = null)
     {
         // Get all <a> tags and process them
-        $content = preg_replace_callback('~<a[^>]*>.*?</a>~i',
+        $content = preg_replace_callback('~<a(?:\s[^>]*)?>.*?</a>~i',
             function($match) use ($options, $page) {
                 // Load PHP built-in DOMDocument class
                 if (($dom = $this->loadDOMDocument($match[0])) === null) {
                     return $match[0];
                 }
 
-                $a = $dom->getElementsByTagName('a')->item(0);
+                // Check that there is really a link tag
+                $a = $dom->getElementsByTagName('a');
+                if ($a->length == 0) {
+                    return $match[0];
+                }
+                $a = $a->item(0);
 
                 // Process links with non-empty href attribute
                 $href = $a->getAttribute('href');

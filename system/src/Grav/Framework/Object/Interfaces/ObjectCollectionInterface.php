@@ -1,20 +1,22 @@
 <?php
+
 /**
  * @package    Grav\Framework\Object
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
 namespace Grav\Framework\Object\Interfaces;
 
+use Doctrine\Common\Collections\Selectable;
 use Grav\Framework\Collection\CollectionInterface;
 
 /**
  * ObjectCollection Interface
  * @package Grav\Framework\Collection
  */
-interface ObjectCollectionInterface extends CollectionInterface, ObjectInterface
+interface ObjectCollectionInterface extends CollectionInterface, Selectable, ObjectInterface
 {
     /**
      * Create a copy from this collection by cloning all objects in the collection.
@@ -33,13 +35,6 @@ interface ObjectCollectionInterface extends CollectionInterface, ObjectInterface
      * @return array
      */
     public function getObjectKeys();
-
-    /**
-     * @param string $property      Object property to be fetched.
-     * @param mixed $default        Default value if not set.
-     * @return array                Property value.
-     */
-    public function getProperty($property, $default = null);
 
     /**
      * @param string $name          Method name.
@@ -63,4 +58,17 @@ interface ObjectCollectionInterface extends CollectionInterface, ObjectInterface
      * @return static[]
      */
     public function collectionGroup($property);
+
+    /**
+     * @param array $ordering
+     * @return ObjectCollectionInterface
+     */
+    public function orderBy(array $ordering);
+
+    /**
+     * @param int $start
+     * @param int|null $limit
+     * @return ObjectCollectionInterface
+     */
+    public function limit($start, $limit = null);
 }

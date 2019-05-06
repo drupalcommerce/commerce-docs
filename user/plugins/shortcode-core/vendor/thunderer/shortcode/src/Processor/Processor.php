@@ -23,7 +23,8 @@ final class Processor implements ProcessorInterface
     /** @var EventContainerInterface */
     private $eventContainer;
 
-    private $recursionDepth = null; // infinite recursion
+    /** @var int|null */
+    private $recursionDepth; // infinite recursion
     private $maxIterations = 1; // one iteration
     private $autoProcessContent = true; // automatically process shortcode content
 
@@ -68,7 +69,7 @@ final class Processor implements ProcessorInterface
 
         $handlers = $this->eventContainer->getListeners($name);
         foreach($handlers as $handler) {
-            call_user_func_array($handler, array($event));
+            $handler($event);
         }
 
         return $event;
@@ -90,22 +91,22 @@ final class Processor implements ProcessorInterface
             ? mb_strpos($parent->getShortcodeText(), $shortcodes[0]->getText(), null, 'utf-8') - $shortcodes[0]->getOffset() + $parent->getOffset()
             : 0;
         foreach ($shortcodes as $shortcode) {
-            $hasNamePosition = array_key_exists($shortcode->getName(), $context->namePosition);
+            $name = $shortcode->getName();
+            $hasNamePosition = array_key_exists($name, $context->namePosition);
 
             $context->baseOffset = $baseOffset + $shortcode->getOffset();
             $context->position++;
-            $context->namePosition[$shortcode->getName()] = $hasNamePosition ? $context->namePosition[$shortcode->getName()] + 1 : 1;
+            $context->namePosition[$name] = $hasNamePosition ? $context->namePosition[$name] + 1 : 1;
             $context->shortcodeText = $shortcode->getText();
             $context->offset = $shortcode->getOffset();
             $context->shortcode = $shortcode;
             $context->textContent = $shortcode->getContent();
 
-            $handler = $this->handlers->get($shortcode->getName());
+            $handler = $this->handlers->get($name);
             $replace = $this->processHandler($shortcode, $context, $handler);
 
             $replaces[] = new ReplacedShortcode($shortcode, $replace);
         }
-        $replaces = array_filter($replaces);
 
         $applyEvent = new ReplaceShortcodesEvent($text, $replaces, $parent);
         $this->dispatchEvent(Events::REPLACE_SHORTCODES, $applyEvent);
@@ -115,13 +116,16 @@ final class Processor implements ProcessorInterface
 
     private function applyReplaces($text, array $replaces)
     {
-        return array_reduce(array_reverse($replaces), function($state, ReplacedShortcode $s) {
+        /** @var ReplacedShortcode $s */
+        foreach(array_reverse($replaces) as $s) {
             $offset = $s->getOffset();
             $length = mb_strlen($s->getText(), 'utf-8');
-            $textLength = mb_strlen($state, 'utf-8');
+            $textLength = mb_strlen($text, 'utf-8');
 
-            return mb_substr($state, 0, $offset, 'utf-8').$s->getReplacement().mb_substr($state, $offset + $length, $textLength, 'utf-8');
-        }, $text);
+            $text = mb_substr($text, 0, $offset, 'utf-8').$s->getReplacement().mb_substr($text, $offset + $length, $textLength, 'utf-8');
+        }
+
+        return $text;
     }
 
     private function processHandler(ParsedShortcodeInterface $parsed, ProcessorContext $context, $handler)
@@ -131,7 +135,7 @@ final class Processor implements ProcessorInterface
         $processed = $processed->withContent($content);
 
         if($handler) {
-            return call_user_func_array($handler, array($processed));
+            return $handler($processed);
         }
 
         $state = $parsed->getText();
@@ -141,7 +145,7 @@ final class Processor implements ProcessorInterface
         return mb_substr($state, 0, $offset, 'utf-8').$processed->getContent().mb_substr($state, $offset + $length, mb_strlen($state, 'utf-8'), 'utf-8');
     }
 
-    private function processRecursion(ParsedShortcodeInterface $shortcode, ProcessorContext $context)
+    private function processRecursion(ProcessedShortcode $shortcode, ProcessorContext $context)
     {
         if ($this->autoProcessContent && null !== $shortcode->getContent()) {
             $context->recursionLevel++;
