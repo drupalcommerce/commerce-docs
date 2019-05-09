@@ -105,7 +105,7 @@ Once we've computed all the necessary *data* items, we'll attach them to the for
 $data = json_encode($data);
 
 $form['#attached']['library'][] = 'my_payment_gateway/iframe_file_name';
-$form['#attached']['drupalSettings']['my_custom_module'] $data;
+$form['#attached']['drupalSettings']['my_custom_module'] = $data;
 ```
 
 Your `buildConfigurationForm()` method should also build whatever form you want your customers to see. This may include form elements such as a message, submit button, and cancel button. If you are unfamiliar with building forms in Drupal 8, the [Drupal 8 Form API reference] may be helpful.
