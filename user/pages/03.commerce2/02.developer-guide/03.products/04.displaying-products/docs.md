@@ -28,5 +28,5 @@ Learn techniques for displaying products on your site.
 - Learn how to use the Drupal Core Image module to create a custom image style for products.
 - Use the Image delta formatter module to create a custom view mode for product variations.
 
-#### [Code recipes](07.code-recipes)
+#### [Code recipes](10.code-recipes)
 - Various techniques and code snippets for customizing product displays and the add to cart form.
