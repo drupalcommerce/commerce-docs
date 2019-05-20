@@ -17,6 +17,10 @@ If you want to write custom code to programatically manage payments, you can use
  - [Setting the payment gateway for an order](#setting-the-payment-gateway-for-an-order)
  - [Adding a refunded amount to an existing payment](#adding-a-refunded-amount-to-an-existing-payment)
 - [**Filter payment gateways available for an order**](#filter-payment-gateways-available-for-an-order)
+- **Alter plugin definitions:**
+ - [Payment type](#altering-a-payment-type-definition)
+ - [Payment method type](#altering-a-payment-method-type-definition)
+ - [Payment gateway](#altering-a-payment-gateway-definition)
 
 ### Creating a payment gateway
 Payment gateways are configuration entities that store the configuration for payment gateway plugins. The configuration keys will vary based on the payment gateway definition. The `Drupal\commerce_payment\Plugin\Commerce\PaymentGatewayBase` class defines `display_label`, `mode`, and `payment_method_types`. In this example, we've also added an `api_key` key.
@@ -216,5 +220,49 @@ class FilterPaymentGatewaysSubscriber implements EventSubscriberInterface {
     $event->setPaymentGateways($payment_gateways);
   }
 
+}
+```
+
+### Altering a payment type definition
+In this example, we swap out the existing manual workflow for a custom one. The custom workflow should be defined in the `mymodule.workflows.yml`, where *mymodule* is the name of your custom module.  See `commerce_payment.workflows.yml` in the *Commerce payment* module as an example. This approach could be use to, for example, change the labels that are displayed for the payment states.
+
+```php
+/**
+ * Implements hook_commerce_payment_type_info_alter().
+ */
+function mymodule_commerce_payment_type_info_alter(array &$info) {
+  if (isset($info['payment_manual'])) {
+    $info['payment_manual']['workflow'] = 'mymodule_payment_manual';
+  }
+}
+```
+
+### Altering a payment method type definition
+In this example, we swap out the existing class for the *Credit card* payment method type with a custom one. This approach could be used to customize the implementations of any of the `PaymentMethodTypeInterface` methods or the `buildFieldDefinitions` method.
+
+```php
+/**
+ * Implements hook_commerce_payment_method_type_info_alter().
+ */
+function mymodule_commerce_payment_method_type_info_alter(array &$info) {
+  if (isset($info['credit_card'])) {
+    $info['credit_card']['class'] = \Drupal\mymodule\Plugin\Commerce\PaymentMethodType\CreditCard::class;
+    $info['credit_card']['provider'] = 'mymodule';
+  }
+}
+```
+
+### Altering a payment gateway definition
+In this example, we alter the *Manual* payment gateway plugin class as well as its plugin label.
+```php
+/**
+ * Implements hook_commerce_payment_gateway_info_alter().
+ */
+function mymodule_commerce_payment_gateway_info_alter(array &$info) {
+  if (isset($info['manual'])) {
+    $info['manual']['class'] = \Drupal\mymodule\Plugin\Commerce\PaymentGateway\Manual::class;
+    $info['manual']['provider'] = 'mymodule';
+    $info['manual']['label'] = t('Bill me');
+  }
 }
 ```
