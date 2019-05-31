@@ -81,7 +81,7 @@ Out of the box, the Commerce Payment module provides two **payment types**: `pay
 | workflow   | The payment workflow, default is `payment_default`; *Manual* payment types use `payment_manual` |
 
 ##### Creating payments
-Payments are created during checkout when a customer confirms his order and can be created manually through the administrative UI. See also the [Code recipes documentation](../code-recipes) for an example of creating a payment programatically. For *Manual* and *On-site* payment gateway plugins, payments are created by the `createPayment()` method. For *Off-site* payment gateway plugins, payments are typically created in the `onReturn()` method or in the `onNotify()` method, if the gateway supports asynchronous notifications (IPNs).
+Payments are created during checkout when a customer confirms his order and can be created manually through the administrative UI. See the [Code recipes documentation](../code-recipes) for an example of creating a payment programatically. For *Manual* and *On-site* payment gateway plugins, payments are created by the `createPayment()` method. For *Off-site* payment gateway plugins, payments are typically created in the `onReturn()` method or in the `onNotify()` method, if the gateway supports asynchronous notifications (IPNs).
 
 ##### Saving payments
 - When a payment is saved, the payment gateway mode is automatically set, based on the current mode for its payment gateways's plugin.
