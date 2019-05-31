@@ -17,6 +17,11 @@ If you want to write custom code to programatically manage payments, you can use
  - [Setting the payment gateway for an order](#setting-the-payment-gateway-for-an-order)
  - [Adding a refunded amount to an existing payment](#adding-a-refunded-amount-to-an-existing-payment)
 - [**Filter payment gateways available for an order**](#filter-payment-gateways-available-for-an-order)
+- **Alter plugin definitions:**
+ - [Payment type](#altering-a-payment-type-definition)
+ - [Payment method type](#altering-a-payment-method-type-definition)
+ - [Payment gateway](#altering-a-payment-gateway-definition)
+- [**Manage credit cards**](#manage-credit-cards)
 
 ### Creating a payment gateway
 Payment gateways are configuration entities that store the configuration for payment gateway plugins. The configuration keys will vary based on the payment gateway definition. The `Drupal\commerce_payment\Plugin\Commerce\PaymentGatewayBase` class defines `display_label`, `mode`, and `payment_method_types`. In this example, we've also added an `api_key` key.
@@ -123,19 +128,42 @@ $payment->save();
 ```
 
 ### Loading a payment gateway
+#### Load a payment gateway by its id
 ```php
 // Loading is based off of the primary key [String] that was defined when creating it.
 $payment_gateway = \Drupal\commerce_payment\Entity\PaymentGateway::load('manual');
 ```
 
+#### Load the default payment gateway for a user
+This method is used primarily when adding payment methods from the user pages.
+Thus, only payment gateways which support storing payment methods are considered.
+```php
+/** @var \Drupal\commerce_payment\Entity\PaymentGatewayInterface $payment_gateway */
+/** @var \Drupal\user\UserInterface $user */
+$payment_gateway = \Drupal::entityTypeManager()
+  ->getStorage('commerce_payment_gateway')
+  ->loadForUser($user);
+```
+
+#### Load all eligible payment gateways for an order
+```php
+/** @var \Drupal\commerce_payment\Entity\PaymentGatewayInterface $payment_gateway */
+/** @var \Drupal\commerce_order\Entity\OrderInterface $order */
+$payment_gateways = \Drupal::entityTypeManager()
+  ->getStorage('commerce_payment_gateway')
+  ->loadMultipleForOrder($order);
+```
+
 ###Loading a payment method
+#### Load a payment method by its id
 ```php
 // Loading is based off of the primary key [Integer]
 //   1 would be the first one saved, 2 the next, etc.
 $payment_method = \Drupal\commerce_payment\Entity\PaymentMethod::load(1);
 ```
 
-Example: load user's reusable payment methods that have not yet expired for a given payment gateway, filtered by country.
+#### Load a user's resusable payment methods for the given payment gateway
+Only reusable payment methods that have not yet expired are returned. Filtering by country is optional. In this example, only payment methods with billing profiles from the United States or France will be returned.
 ```php
 /** @var \Drupal\commerce_payment\Entity\PaymentGatewayInterface $payment_gateway */
 /** @var \Drupal\commerce_payment\Entity\PaymentGatewayInterface $user */
@@ -145,11 +173,28 @@ $payment_methods = \Drupal::entityTypeManager()
 ```
 
 ###Loading a payment
+#### Load a payment by its id
 ```php
 // Loading is based off of the primary key [Integer]
 //   1 would be the first one saved, 2 the next, etc.
 $payment = \Drupal\commerce_payment\Entity\Payment::load(1);
 
+```
+
+#### Load a payment by its remote id
+```php
+/** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
+$payment = \Drupal::entityTypeManager()
+  ->getStorage('commerce_payment')
+  ->loadByRemoteId('remote-id-code-123');
+```
+
+#### Load all payments for an order
+```php
+/** @var \Drupal\commerce_order\Entity\OrderInterface $order */
+$payments = \Drupal::entityTypeManager()
+  ->getStorage('commerce_payment')
+  ->loadMultipleByOrder($order);
 ```
 
 ### Setting the payment gateway for an order
@@ -217,4 +262,97 @@ class FilterPaymentGatewaysSubscriber implements EventSubscriberInterface {
   }
 
 }
+```
+
+### Altering a payment type definition
+In this example, we swap out the existing manual workflow for a custom one. The custom workflow should be defined in the `mymodule.workflows.yml`, where *mymodule* is the name of your custom module.  See `commerce_payment.workflows.yml` in the *Commerce payment* module as an example. This approach could be use to, for example, change the labels that are displayed for the payment states.
+
+```php
+/**
+ * Implements hook_commerce_payment_type_info_alter().
+ */
+function mymodule_commerce_payment_type_info_alter(array &$info) {
+  if (isset($info['payment_manual'])) {
+    $info['payment_manual']['workflow'] = 'mymodule_payment_manual';
+  }
+}
+```
+
+### Altering a payment method type definition
+In this example, we swap out the existing class for the *Credit card* payment method type with a custom one. This approach could be used to customize the implementations of any of the `PaymentMethodTypeInterface` methods or the `buildFieldDefinitions` method.
+
+```php
+/**
+ * Implements hook_commerce_payment_method_type_info_alter().
+ */
+function mymodule_commerce_payment_method_type_info_alter(array &$info) {
+  if (isset($info['credit_card'])) {
+    $info['credit_card']['class'] = \Drupal\mymodule\Plugin\Commerce\PaymentMethodType\CreditCard::class;
+    $info['credit_card']['provider'] = 'mymodule';
+  }
+}
+```
+
+### Altering a payment gateway definition
+In this example, we alter the *Manual* payment gateway plugin class as well as its plugin label.
+```php
+/**
+ * Implements hook_commerce_payment_gateway_info_alter().
+ */
+function mymodule_commerce_payment_gateway_info_alter(array &$info) {
+  if (isset($info['manual'])) {
+    $info['manual']['class'] = \Drupal\mymodule\Plugin\Commerce\PaymentGateway\Manual::class;
+    $info['manual']['provider'] = 'mymodule';
+    $info['manual']['label'] = t('Bill me');
+  }
+}
+```
+
+### Manage credit cards
+The Commerce Payment module defines a `CreditCardType` object and a `CreditCard` class that provides logic for listing card types and validating card details.
+
+#### Credit card type properties and getter methods
+| Property        | Description |
+| --------------- | ----------- |
+| id              | Credit card type id, a string |
+| label           | Name of the credit card type |
+| numberPrefixes  | An array of credit card type number prefixes |
+| numberLengths   | An array of credit card type number lengths, default is `[16]` |
+| securityCodeLength | The credit card type security code length, an integer |
+| usesLuhn        | Whether the credit cart type uses Luhn validation |
+
+- `public function getId();`
+- `public function getLabel();`
+- `public function getNumberPrefixes();`
+- `public function getNumberLengths();`
+- `public function getSecurityCodeLength();`
+- `public function usesLuhn();`
+
+#### Using credit card helper methods
+```php
+use Drupal\commerce_payment\CreditCard;
+
+/** @var \Drupal\commerce_payment\CreditCardType[] $credit_card_types */
+$credit_card_types = CreditCard::getTypes();
+
+/** @var \Drupal\commerce_payment\CreditCardType $credit_card_type */
+$credit_card_type = CreditCard::getType('visa');
+
+// Get an array of credit card type labels, keyed by id.
+$credit_card_options = CreditCard::getTypeLabels();
+
+// Detect the credit card type based on the number.
+/** @var \Drupal\commerce_payment\CreditCardType $credit_card_type */
+$credit_card_type = CreditCard::detectType('4111111111111111');
+
+// Validate the given credit card number.
+/** @var \Drupal\commerce_payment\CreditCardType $credit_card_type */
+$is_valid = CreditCard::validateNumber('4111111111111111', $credit_card_type);
+
+// Validate the given credit card expiration date.
+$is_valid = CreditCard::validateExpirationDate(10, 2020);
+
+// Validate the given credit card security code.
+/** @var \Drupal\commerce_payment\CreditCardType $credit_card_type */
+$is_valid = CreditCard::validateSecurityCode('993', $credit_card_type);
 ```
