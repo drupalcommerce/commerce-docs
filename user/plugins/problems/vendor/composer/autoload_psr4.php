@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Grav\\Plugin\\Console\\' => array($baseDir . '/cli'),
     'Grav\\Plugin\\' => array($baseDir . '/classes'),
 );

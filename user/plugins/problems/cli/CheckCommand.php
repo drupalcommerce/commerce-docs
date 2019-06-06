@@ -1,13 +1,13 @@
 <?php
+
 namespace Grav\Plugin\Console;
 
-use Grav\Common\Grav;
 use Grav\Console\ConsoleCommand;
+use Grav\Plugin\Problems\Base\Problem;
 use Grav\Plugin\Problems\Base\ProblemChecker;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Helper\TableCell;
 use Symfony\Component\Console\Helper\TableSeparator;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
@@ -17,14 +17,11 @@ use Symfony\Component\Console\Style\SymfonyStyle;
  */
 class CheckCommand extends ConsoleCommand
 {
-    /**
-     *
-     */
     protected function configure()
     {
         $this
-            ->setName("check")
-            ->setDescription("Check Problems")
+            ->setName('check')
+            ->setDescription('Check Problems')
             ->setHelp('The <info>problems command</info> allows you display any potential problems with your Grav setup')
         ;
     }
@@ -34,10 +31,9 @@ class CheckCommand extends ConsoleCommand
      */
     protected function serve()
     {
-        /** @var use new SymfonyStyle helper $io */
         $io = new SymfonyStyle($this->input, $this->output);
 
-        $plugin_dir = realpath(__DIR__ . '/..');
+        $plugin_dir = realpath(dirname(__DIR__));
         $problems_dir = $plugin_dir . '/classes/Problems';
 
         require $plugin_dir . '/vendor/autoload.php';
@@ -54,13 +50,14 @@ class CheckCommand extends ConsoleCommand
         $headers = ['ID', 'Status', 'Level', 'Message'];
         $rows = [];
 
+        /** @var Problem $problem */
         foreach ($problems as $problem) {
             $rows[] = new TableSeparator();
 
             $rows[] = [
-                $problem->getStatus() ? $problem->getID() : '<red>' . $problem->getId() . '</red>' ,
+                $problem->getStatus() ? $problem->getId() : '<red>' . $problem->getId() . '</red>' ,
                 $problem->getStatus() ? '<green>success</green>' : '<red>error</red>',
-                $problem->getLevel() == 'critical' ? '<red>' . $problem->getLevel() . '</red>' : '<yellow>' .$problem->getLevel() . '</yellow>',
+                $problem->getLevel() === 'critical' ? '<red>' . $problem->getLevel() . '</red>' : '<yellow>' .$problem->getLevel() . '</yellow>',
                 strip_tags($problem->getMsg()),
             ];
 

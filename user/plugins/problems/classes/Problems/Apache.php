@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Problems;
 
 use Grav\Plugin\Problems\Base\Problem;
@@ -18,7 +19,7 @@ class Apache extends Problem
     public function process()
     {
         // Perform some Apache checks
-        if (strpos(php_sapi_name(), 'apache') !== false && function_exists('apache_get_modules')) {
+        if (function_exists('apache_get_modules') && strpos(PHP_SAPI, 'apache') !== false) {
 
             $require_apache_modules = ['mod_rewrite'];
             $apache_modules = apache_get_modules();
@@ -26,8 +27,8 @@ class Apache extends Problem
             $apache_errors = [];
             $apache_success = [];
 
-            foreach ((array) $require_apache_modules as $module) {
-                if (in_array($module, $apache_modules)) {
+            foreach ($require_apache_modules as $module) {
+                if (in_array($module, $apache_modules, true)) {
                     $apache_success[$module] = 'module required but not enabled';
                 } else {
                     $apache_errors[$module] = 'module is not installed or enabled';
