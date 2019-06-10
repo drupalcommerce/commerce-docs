@@ -2,6 +2,7 @@ en:
   PLUGIN_ERROR:
     ERROR: "Error"
     ERROR_MESSAGE: "Woops. Looks like this page doesn't exist."
+    ROUTE_404: "404 Route"
 de:
   PLUGIN_ERROR:
     ERROR: "Fehler"
@@ -26,6 +27,12 @@ ru:
   PLUGIN_ERROR:
     ERROR: "Ошибка"
     ERROR_MESSAGE: "Упс. Похоже, этой страницы не существует."
+    ROUTE_404: "Маршрут 404"
+uk:
+  PLUGIN_ERROR:
+    ERROR: "Помилка"
+    ERROR_MESSAGE: "Упс. Схоже, цієї сторінки не існує."
+    ROUTE_404: "Маршрут 404"
 da:
   PLUGIN_ERROR:
     ERROR: "Fejl"

@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Problems\Base;
 
 class Problem implements \JsonSerializable
@@ -16,38 +17,38 @@ class Problem implements \JsonSerializable
     protected $help;
     protected $class;
 
-    public function __contstruct($data = null)
+    public function load($data)
     {
-        if (!is_null($data)) {
-           $this->load($data);
-        }
-    }
-
-    public function load($data) {
         $this->set_object_vars($data);
     }
     
-    public function process() {
+    public function process()
+    {
         return $this;
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getOrder() {
+    public function getOrder()
+    {
         return $this->order;
     }
 
-    public function getLevel() {
+    public function getLevel()
+    {
         return $this->level;
     }
 
-    public function getStatus() {
+    public function getStatus()
+    {
         return $this->status;
     }
 
-    public function getMsg() {
+    public function getMsg()
+    {
         return $this->msg;
     }
 
@@ -76,10 +77,11 @@ class Problem implements \JsonSerializable
         $this->toArray();
     }
 
-    protected function set_object_vars($object, array $vars) {
-        $has = get_object_vars($object);
+    protected function set_object_vars(array $vars)
+    {
+        $has = get_object_vars($this);
         foreach ($has as $name => $oldValue) {
-            $object->$name = isset($vars[$name]) ? $vars[$name] : NULL;
+            $this->{$name} = isset($vars[$name]) ? $vars[$name] : NULL;
         }
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Problems\Base;
 
 use Grav\Common\Cache;
@@ -23,14 +24,19 @@ class ProblemChecker
     public function load()
     {
         if ($this->statusFileExists()) {
-            $json = file_get_contents($this->status_file);
+            $json = file_get_contents($this->status_file) ?: '';
             $data = json_decode($json, true);
+            if (!is_array($data)) {
+                return false;
+            }
 
             foreach ($data as $problem) {
                 $class = $problem['class'];
                 $this->problems[] = new $class($problem);
             }
         }
+
+        return true;
     }
 
     public function getStatusFile()
@@ -51,8 +57,9 @@ class ProblemChecker
         file_put_contents($this->status_file, $json);
     }
 
-    public function check($problems_dir)
+    public function check($problems_dir = null)
     {
+        $problems_dir = $problems_dir ?: dirname(__DIR__);
         $problems = [];
         $problems_found = false;
 
@@ -71,6 +78,8 @@ class ProblemChecker
 
         // Get the problems in order
         usort($problems, function($a, $b) {
+            /** @var Problem $a */
+            /** @var Problem $b */
             return $b->getOrder() - $a->getOrder();
         });
 
@@ -97,6 +106,8 @@ class ProblemChecker
 
         // Put the failed ones first
         usort($problems, function($a, $b) {
+            /** @var Problem $a */
+            /** @var Problem $b */
             return $a->getStatus() - $b->getStatus();
         });
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Problems;
 
 use Grav\Plugin\Problems\Base\Problem;

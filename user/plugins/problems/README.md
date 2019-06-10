@@ -1,5 +1,7 @@
 # Grav Problems Plugin
 
+[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
+
 ![Problems](assets/readme_1.jpg)
 
 `Problems` is a [Grav](http://github.com/getgrav/grav) Plugin and allows to detect issues.

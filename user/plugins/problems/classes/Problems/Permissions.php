@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Problems;
 
 use Grav\Plugin\Problems\Base\Problem;
@@ -19,7 +20,7 @@ class Permissions extends Problem
     {
         umask($umask = umask(022));
 
-        $msg = "Your default file umask is <strong>%s</strong> which %s";
+        $msg = 'Your default file umask is <strong>%s</strong> which %s';
 
         if (($umask & 2) !== 2) {
             $this->msg = sprintf($msg, decoct($umask), 'is potentially dangerous');
