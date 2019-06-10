@@ -1,56 +1,51 @@
-# ![](https://avatars1.githubusercontent.com/u/8237355?v=2&s=50) Grav
+# Drupal Commerce Documentation
 
-[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/cfd20465-d0f8-4a0a-8444-467f5b5f16ad/mini.png)](https://insight.sensiolabs.com/projects/cfd20465-d0f8-4a0a-8444-467f5b5f16ad)
-[![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
- [![Build Status](https://travis-ci.org/getgrav/grav.svg?branch=develop)](https://travis-ci.org/getgrav/grav) [![OpenCollective](https://opencollective.com/grav/backers/badge.svg)](#backers) [![OpenCollective](https://opencollective.com/grav/sponsors/badge.svg)](#sponsors)
+**Contents:**
+- [How to contribute to this documentation](#how-to-contribute-to-this-documentation)
+  - [Before your first contribution](#before-your-first-contribution)
+  - [Fast online contribution](#fast-online-contribution)
+  - [Local setup](#local-setup)
 
-Grav is a **Fast**, **Simple**, and **Flexible**, file-based Web-platform.  There is **Zero** installation required.  Just extract the ZIP archive, and you are already up and running.  It follows similar principles to other flat-file CMS platforms, but has a different design philosophy than most. Grav comes with a powerful **Package Management System** to allow for simple installation and upgrading of plugins and themes, as well as simple updating of Grav itself.
+## How to contribute to this documentation
 
-The underlying architecture of Grav is designed to use well-established and _best-in-class_ technologies to ensure that Grav is simple to use and easy to extend. Some of these key technologies include:
+### Before your first contribution
 
-* [Twig Templating](https://twig.sensiolabs.org/): for powerful control of the user interface
-* [Markdown](https://en.wikipedia.org/wiki/Markdown): for easy content creation
-* [YAML](https://yaml.org): for simple configuration
-* [Parsedown](https://parsedown.org/): for fast Markdown and Markdown Extra support
-* [Doctrine Cache](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html): layer for performance
-* [Pimple Dependency Injection Container](https://pimple.sensiolabs.org/): for extensibility and maintainability
-* [Symfony Event Dispatcher](https://symfony.com/doc/current/components/event_dispatcher/introduction.html): for plugin event handling
-* [Symfony Console](https://symfony.com/doc/current/components/console/introduction.html): for CLI interface
-* [Gregwar Image Library](https://github.com/Gregwar/Image): for dynamic image manipulation
+**Before contributing**, you should consider the following:
+- The documentation is written using [reStructuredText](http://docutils.sourceforge.net/rst.html) markup language. If you are not familiar with this format, read [this article](https://symfony.com/doc/current/contributing/documentation/format.html) for a quick overview of its basic features.
+- The documentation is hosted on [GitHub](https://github.com). You'll need a free GitHub user account to contribute to the documentation.
+- The documentation is published under a [Creative Commons BY-SA 4.0 License](https://github.com/drupalcommerce/commerce-docs/blob/master/LICENSE) and all your contributions will implicitly adhere to that license.
 
-# Requirements
+### Fast online contribution
 
-- PHP 7.1.3 or higher. Check the [required modules list](https://learn.getgrav.org/basics/requirements#php-requirements)
-- Check the [Apache](https://learn.getgrav.org/basics/requirements#apache-requirements) or [IIS](https://learn.getgrav.org/basics/requirements#iis-requirements) requirements
+If you're making a relatively small change - like fixing a typo or rewording something - the easiest way to contribute is directly on GitHub! You can do this while you're reading this documentation.
 
-# QuickStart
+1. Click on the **Edit on GitHub** button on the upper right corner and you'll be redirected to GitHub: ![GitHub edit](./images/contributing/github-edit.png)
+2. Click the **edit icon** to edit the documentation: ![GitHub icon edit](./images/contributing/github-doc-icon-edit.png)
+3. You will be asked to fork the repo, click **Fork this repository and propose changes**: ![GitHub doc fork](./images/contributing/github-doc-fork.png)
+4. Edit the contents, describe your changes and click on the **Propose file change** button: ![GitHub doc propose change](./images/contributing/github-doc-propose-change.png)
+5. GitHub will now create a branch and a commit for your changes (forking the repository first if this is your first contribution) and it will also display a preview of your changes: ![GitHub doc create pull request](./images/contributing/github-doc-create-pr.png)If everything is correct, click on the **Create pull request** button.
+6. GitHub will display a new page where you can do some last-minute changes to your pull request before creating it. For simple contributions, you can safely ignore these options and just click on the **Create pull request** button again.
 
-These are the options to get Grav:
+**Congratulations!** You just created a pull request to the official Drupal Commerce documentation! The community will now review your pull request and (possibly) suggest tweaks.
 
-### Downloading a Grav Package
+But if you want to contribute heavily, we recommend you doing a local setup of the documentation.
 
-You can download a **ready-built** package from the [Downloads page on https://getgrav.org](https://getgrav.org/downloads)
+### Local setup
+1. Run composer install 
+7. In the terminal generate user for admin panel `bin/plugin login newuser`
+8. Add credentials 
+![Adding Credentials](admin_grav.png)
+9. Login `php -S localhost:8000 system/router.php`
 
-### With Composer
+### Edit using Visual Code Studio
+You can download Visual Code Studio and add the [reStructured Text](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext) plugin to have an editor with built in previews available.
 
-You can create a new project with the latest **stable** Grav release with the following command:
+### Edit and review manually
+1. Execute `./build.sh`, this will generate documentation HTML inside `_build/html`.
+2. Now you can view the documentation locally, execute `php -S localhost:8000 -t _build/html` , and visit [http://localhost:8000/](http://localhost:8000/) from your browser.
 
-```
-$ composer create-project getgrav/grav ~/webroot/grav
-```
-
-### From GitHub
-
-1. Clone the Grav repository from [https://github.com/getgrav/grav]() to a folder in the webroot of your server, e.g. `~/webroot/grav`. Launch a **terminal** or **console** and navigate to the webroot folder:
-   ```
-   $ cd ~/webroot
-   $ git clone https://github.com/getgrav/grav.git
-   ```
-
-2. Install the **plugin** and **theme dependencies** by using the [Grav CLI application](https://learn.getgrav.org/advanced/grav-cli) `bin/grav`:
-   ```
-   $ cd ~/webroot/grav
+That's it!
+/grav
    $ bin/grav install
    ```
 
