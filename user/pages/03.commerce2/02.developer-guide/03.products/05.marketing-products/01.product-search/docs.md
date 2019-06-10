@@ -90,10 +90,11 @@ Next, we'll set up a basic search page for our indexed data using Views and the 
 ##### Step 2: Configure the products search view
 1. In the Fields section, remove the *Product datasource: Body >> Processed text* field.
 2. In the Fields section, add and configure the *Product datasource: Title* field.
-  * Select the *Summary or trimmed* formmater.
-  * Enter "300" for the *Trimmed limit*
-3. In the Fields section, add and configure the *Product datasource: Body* field.
+  * Select the *Plain Text* formatter.
   * Select the *Link to the Product* option.
+3. In the Fields section, add and configure the *Product datasource: Body* field.
+  * Select the *Summary or trimmed* formatter.
+  * Enter "300" for the *Trimmed limit*
 4. In the Filter criteria section, add and configure the *Fulltext search* item:
  - Select *Expose this filter to visitors, and allow them to change it*.
  - Enter "Search products" for the *Label*.
