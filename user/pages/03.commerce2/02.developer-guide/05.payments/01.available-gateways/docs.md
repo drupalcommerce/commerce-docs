@@ -336,6 +336,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | This module integrates the Ingenico payment gateway with Drupal Commerce. Ingenico is the new name for Ogone one of the leading European payment solutions. |
 | **Type** | On site / Off site |
 [/ui-accordion-item]
+[ui-accordion-item title="Instamojo"]
+| | [Instamojo] |
+| --- | --- |
+| **Description** | Integrates Instamojo Gateway with Drupal Commerce. |
+| **Type** | Off site |
+| **Currencies** | INR |
+| **Countries** | India (and international payments on a case-to-case basis) |
+[/ui-accordion-item]
 [ui-accordion-item title="iTransact"]
 | | [iTransact] |
 | --- | --- |
@@ -836,6 +844,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Square]: https://www.drupal.org/project/commerce_square
 [Paymill]: https://www.drupal.org/project/commerce_paymill
 [Ingenico]: https://www.drupal.org/project/commerce_ingenico
+[Instamojo]: https://www.drupal.org/project/commerce_instamojo
 [Paytrail]: https://www.drupal.org/project/commerce_paytrail
 [Payplug]: https://www.drupal.org/project/commerce_payplug
 [PayU Money]: https://www.drupal.org/project/commerce_payumoney
