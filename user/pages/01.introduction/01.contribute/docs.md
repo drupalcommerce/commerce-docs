@@ -27,7 +27,7 @@ issue,  go through [the open issues], pick one you like and **assign it to you**
 don't have permission to assign, then simply inform by commenting.
 
 If you need help choosing an issue or working on one, join the Commerce 2.x office hours.
-They are held every wednesday at 3PM GMT+1 on the *#drupal-commerce* [IRC channel].
+They are held every wednesday at 5PM GMT+1 on the *#commerce* [Drupal Slack channel].
 
 ## Formatting help
 
@@ -137,7 +137,7 @@ That’s it! Happy contributing!
 
 [gravCMS]: https://getgrav.org/
 [the open issues]: https://github.com/drupalcommerce/commerce-docs/issues
-[IRC channel]: https://www.drupal.org/irc
+[Drupal Slack channel]: https://www.drupal.org/slack
 [create a pull request]: https://help.github.com/articles/using-pull-requests#initiating-the-pull-request
 [Drupal Commerce]: https://drupalcommerce.org
 [slack-invite]: http://drupalslack.herokuapp.com
