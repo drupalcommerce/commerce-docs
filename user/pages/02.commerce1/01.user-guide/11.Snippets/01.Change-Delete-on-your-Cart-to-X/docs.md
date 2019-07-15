@@ -8,7 +8,6 @@ taxonomy:
 /**
 * Implements hook_form_alter().
 * Designed to be added to your template.php in your custom theme.
-* Originally posted by Jonne in #drupal-commerce
 */
 function themename_form_alter(&$form, $form_state, $form_id) {
   switch ($form_id)  {

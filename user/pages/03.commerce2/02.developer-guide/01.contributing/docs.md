@@ -11,7 +11,7 @@ Commerce uses GitHub for code and drupal.org for tracking issues. To choose an
 issue, go through [the open issues], pick one you like and **assign it to you**.
 
 If you need help choosing an issue or working on one, join the Commerce 2.x office hours.
-They are held every wednesday at 3PM GMT+1 on the *#drupal-commerce* [IRC channel].
+They are held every Wednesday at 5PM GMT+1 on the *#commerce* [Drupal Slack channel].
 
 **Tip:** You can also view the issue queue as a [kanban board].
 
@@ -69,6 +69,6 @@ git push -f fork 2276369-fix-product-form-notice
 That’s it! Happy contributing!
 
 [the open issues]: https://www.drupal.org/project/issues/search/commerce?assigned=&submitted=&project_issue_followers=&status%5B0%5D=Open&version%5B0%5D=8.x&issue_tags_op=%3D&issue_tags=&text=&&&&order=field_issue_priority&sort=desc
-[IRC channel]: https://www.drupal.org/irc
+[Drupal Slack channel]: https://www.drupal.org/slack
 [kanban board]: https://contribkanban.com/board/commerce2x
 [create a pull request]: https://help.github.com/articles/using-pull-requests#initiating-the-pull-request
