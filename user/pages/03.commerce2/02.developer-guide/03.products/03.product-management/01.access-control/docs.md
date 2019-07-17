@@ -10,7 +10,11 @@ Administrative users with product management responsibilities will need the `Use
 
 ![Commerce Product Permissions](../../images/product-permissions.jpg)
 
-In the above image, six permissions prefixed with *Default:* have been highlighted. Drupal Commerce provides bundle-level granularity for its Product permissions. In other words, each product type has its own set of create / delete / update / view permissions. So it's possible to have different product managers for different product types. All users with product management responsibilties will also need the `Access the product overview page` permission so that they can access the Products page at `/admin/commerce/products`.
+In the above image, six permissions prefixed with *Default:* have been highlighted. Drupal Commerce provides bundle-level granularity for its Product permissions. In other words, each product type has its own set of create / delete / update / view permissions. So it's possible to have different product managers for different product types.
+
+All users with product management responsibilties will also need the `Access the product overview page` permission so that they can access the Products page at `/admin/commerce/products`.
+
+Additionally, since every product must be assigned to one or more stores, users will not be able to *create* products unless they have the `View stores` permission. Granting this permission will not give users access to the store admin pages.
 
 ---
 In the next section, we'll look at how you can customize the forms used for creating and editing product-related data.
