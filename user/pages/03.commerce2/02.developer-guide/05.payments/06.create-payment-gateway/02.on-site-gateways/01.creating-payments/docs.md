@@ -80,7 +80,9 @@ catch (\PaymentGatewayAPI\Exception $e) {
 ```
 
 #### Exception handling
-If an exception is thrown by `createPayment`, that error message is hidden from the customer, for security reasons. Here is the code in `Drupal\commerce_payment\Plugin\Commerce\CheckoutPane\PaymentProcess` that handles the `createPayment` exceptions:
+If an exception thrown by `createPayment` is an instance of `DeclineException` or `PaymentGatewayException` (or of a class that extends one of them), the error message is hidden from the customer for security reasons.  (These two exception classes are in the `Drupal\commerce_payment\Exception` namespace.)  Note that any other exception thrown **will not be handled at all and will likely result in a blank screen or other undesirable outcome.**
+
+Here is the code in `Drupal\commerce_payment\Plugin\Commerce\CheckoutPane\PaymentProcess` that handles the `createPayment` exceptions:
 
 ```php
 catch (DeclineException $e) {
