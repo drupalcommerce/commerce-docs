@@ -4,7 +4,7 @@ taxonomy:
 category: docs
 ---
 
-Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **114 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../install-configure-gateways) documentation for information on configuration.
+Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **123 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../install-configure-gateways) documentation for information on configuration.
 
 If you don't see a payment provider you want for your project, Drupal Commerce provides a framework for implementing your own online payment gateways. See the [Creating payment gateways](../create-payment-gateway) documentation for more information. 
 
@@ -72,7 +72,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [/ui-accordion]
 
 
-##### 107 Additional payment gateways
+##### 116 Additional payment gateways
 [ui-accordion independent=true open=-1]
 [ui-accordion-item title="Adyen"]
 |  | [Adyen] |
@@ -103,6 +103,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | --- | --- |
 | **Description** | This payment gateway will support Indian and international credit card, Debit card and internet banking system with safe and secure. |
 | **Type** | Off site |
+[/ui-accordion-item]
+[ui-accordion-item title="Atos SIPS"]
+|  | [Atos SIPS] |
+| --- | --- |
+| **Description** | Provides support for Atos SIPS payment gateway. |
+| **Type** | Off site |
+| **Currencies** | INR, EUR, USD, GPB  |
+| **Countries** |  France, Benelux, Germany, UK, Spain, India and other Asian countries. | 
 [/ui-accordion-item]
 [ui-accordion-item title="Bambora"]
 |  | [Bambora] |
@@ -138,6 +146,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | --- | --- |
 | **Description** | Extends commerce_braintree module to leverage the Braintree marketplace transactions API. |
 | **Type** | On site |
+[/ui-accordion-item]
+[ui-accordion-item title="Bluesnap"]
+|  | [Bluesnap] |
+|:--- |:--- |
+| **Description** | Provides Drupal Commerce integration with the BlueSnap Payment Platform. |
+| **Type** | On site |
+| **Currencies** | 100+ currencies. Availability may vary depending on your country of domicile. [See supported currencies.](https://support.bluesnap.com/docs/currencies) |
+| **Countries** | 100+ countries. [See supported countries.](https://support.bluesnap.com/docs/countries) | 
 [/ui-accordion-item]
 [ui-accordion-item title="BTCPay"]
 |  | [BTCPay] |
@@ -316,6 +332,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | iATS Payments integration for the Drupal Commerce |
 | **Type** | On site |
 [/ui-accordion-item]
+[ui-accordion-item title="iDEAL"]
+|  | [iDEAL] |
+| --- | --- |
+| **Description** | An online payment method that enables consumers to pay online through their own bank. |
+| **Type** | Off site |
+| **Currencies** |  EUR |
+| **Countries** |  Primarily the Netherlands. Accepted by web shops in over 60 countries. |
+[/ui-accordion-item]
 [ui-accordion-item title="IDPay"]
 |  | [IDPay] |
 | --- | --- |
@@ -351,6 +375,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Type** | On site |
 | **Currencies** | USD |
 | **Countries** | USD |
+[/ui-accordion-item]
+[ui-accordion-item title="Iyzipay"]
+|  | [Iyzipay] |
+| --- | --- |
+| **Description** | Iyzipay is an Iyzico product to modernize credit card payments, make the credit card payments mechanisms easy for the individuals and companies. Iyzipay supports amex, dinersclub, discover, jcb, maestro, mastercard, visa, troy and visa electron types. |
+| **Type** | On site |
+| **Currencies** |  TRY, USD, EUR, GBP and IRR |
+| **Countries** |  Turkey and others. |
 [/ui-accordion-item]
 [ui-accordion-item title="Klarna Checkout"]
 |  | [Klarna Checkout] |
@@ -554,6 +586,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | Provides payment gateway for Drupal Commerce. |
 | **Type** | Off site|
 [/ui-accordion-item]
+[ui-accordion-item title="Paystack"]
+|  | [Paystack] |
+| --- | --- |
+| **Description** | This module integrates Paystack into Drupal Commerce payment. |
+| **Type** | Off site|
+| **Currencies** | NGN and multiple currencies. |
+| **Countries** | Nigeria and supports businesses operating in Africa for international customers. |
+[/ui-accordion-item]
 [ui-accordion-item title="PayTabs"]
 |  | [PayTabs] |
 | --- | --- |
@@ -697,6 +737,22 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | Commerce support for Spanish banks that use Sermepa/Redsys systems.  |
 | **Type** | Off site |
 [/ui-accordion-item]
+[ui-accordion-item title="Sezzle pay"]
+|  | [Sezzle pay] |
+| --- | --- |
+| **Description** | This module integrates Commerce Sezzle pay with Drupal Commerce, providing a tokenized payment gateway. |
+| **Type** | Off site |
+| **Currencies** | Sezzle performs an FX conversion to settle your payments. |
+| **Countries** | Available for North American and international merchants, for North American customers. |
+[/ui-accordion-item]
+[ui-accordion-item title="Single Euro Payments Area (SEPA)"]
+|  | [Single Euro Payments Area (SEPA)] |
+| --- | --- |
+| **Description** | This module provides a simple SEPA (Single Euro Payments Area) payment method with IBAN validation for Drupal Commerce. |
+| **Type** | Manual |
+| **Currencies** | EUR |
+| **Countries** | European Union |
+[/ui-accordion-item]
 [ui-accordion-item title="Smartpay"]
 | | [Smartpay] |
 | --- | --- |
@@ -760,22 +816,26 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | USAePay credit card gateway for Commerce using SOAP. |
 | **Type** | On site |
 [/ui-accordion-item]
-
 [ui-accordion-item title="Verifone"]
 |  | [Verifone] |
 | --- | --- |
 | **Description** | Provides Commerce integration for Verifone Payments. |
 | **Type** | Off site|
-| **Countries** | 240 countries |
 | **Currencies** | 100 currencies |
+| **Countries** | 240 countries |
 [/ui-accordion-item]
-
 [ui-accordion-item title="Vipps"]
 |  | [Vipps] |
 | --- | --- |
 | **Description** | Vipps is a Norwegian payment application designed for smartphones developed by DNB. |
 | **Type** | Off site |
 | **Countries** | Norway |
+[/ui-accordion-item]
+[ui-accordion-item title="vPay"]
+|  | [vPay] |
+| --- | --- |
+| **Description** | The Commerce vPay module implements vPay payment processing service (www.vpaynow.com) for Drupal Commerce 2.x. |
+| **Type** | Off site |
 [/ui-accordion-item]
 [ui-accordion-item title="Wayforpay"]
 |  | [Wayforpay] |
@@ -788,6 +848,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | --- | --- |
 | **Description** | This module provides the Webpay.by payment integration for Drupal Commerce 2 on Drupal 8. |
 | **Type** | Off site|
+[/ui-accordion-item]
+[ui-accordion-item title="WebPayPlus (MIT)"]
+|  | [WebPayPlus (MIT)] |
+| --- | --- |
+| **Description** | This module enables the compatibility with WebPayPlus payment platform. |
+| **Type** | Off site|
+| **Currencies** | CLP |
+| **Countries** | Chile |
 [/ui-accordion-item]
 [ui-accordion-item title="WeChat Pay"]
 |  | [WeChat Pay] |
@@ -825,8 +893,10 @@ If you create your own payment gateway module or find one that's not in this lis
 
 [Adyen]: https://www.drupal.org/project/commerce_adyen
 [Affirm]:https://www.drupal.org/project/commerce_affirm
+[Atos SIPS]: https://www.drupal.org/project/commerce_atos_sips
 [Bambora]:https://www.drupal.org/project/commerce_bambora
 [Barion Payment]: https://www.drupal.org/project/commerce_barion_payment
+[Bluesnap]: https://www.drupal.org/project/commerce_bluesnap
 [BTCPay]: https://www.drupal.org/project/commerce_btcpay
 [CIB Bank]: https://www.drupal.org/project/commerce_cib
 [Credomatic]: https://www.drupal.org/project/commerce_credomatic
@@ -865,6 +935,8 @@ If you create your own payment gateway module or find one that's not in this lis
 [Razorpay Payment Integration]: https://www.drupal.org/project/commerce_razorpay
 [Paytm]: https://www.drupal.org/project/commercepaytm
 [Sermepa]: https://www.drupal.org/project/commerce_sermepa
+[Sezzle pay]: https://www.drupal.org/project/commerce_sezzle_pay
+[Single Euro Payments Area (SEPA)]: https://www.drupal.org/project/commerce_sepa
 [Bitpayir]: https://www.drupal.org/project/commerce_bitpayir
 [PayONE]: https://www.drupal.org/project/commerce_payone
 [Klarna Checkout]: https://www.drupal.org/project/commerce_klarna_checkout
@@ -905,6 +977,8 @@ If you create your own payment gateway module or find one that's not in this lis
 [Euplatesc]: https://www.drupal.org/project/commerce_euplatesc
 [Global Payments (Realex)]: https://www.drupal.org/project/commerce_globalpayments
 [Iats]: https://www.drupal.org/project/commerce_iats
+[iDEAL]: https://www.drupal.org/project/commerce_ideal
+[Iyzipay]: https://www.drupal.org/project/iyzipay
 [Moyasar]: https://www.drupal.org/project/commerce_moyasar
 [Pagseguro]: https://www.drupal.org/project/commerce_pagseguro
 [Pagseguro Transp]: https://www.drupal.org/project/commerce_pagseguro_transp
@@ -916,6 +990,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Trustpay]: https://www.drupal.org/project/trustpay
 [TurtleCoin]: https://www.drupal.org/project/commerce_turtlecoin
 [Vipps]: https://www.drupal.org/project/commerce_vipps
+[vPay]: https://www.drupal.org/project/commerce_vpay
 [Wayforpay]: https://www.drupal.org/project/commerce_wayforpay
 [Xem]: https://www.drupal.org/project/commerce_xem
 [Fondy]: https://www.drupal.org/project/commerce_fondy
@@ -925,6 +1000,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Sberbank Acquiring]: https://www.drupal.org/project/commerce_sberbank_acquiring
 [Worldpay]: https://www.drupal.org/project/commerce_worldpay
 [Webpay.by]: https://www.drupal.org/project/commerce_webpay_by
+[WebPayPlus (MIT)]: https://www.drupal.org/project/commerce_webpayplus
 [Forte]: https://www.drupal.org/project/commerce_forte
 [HyperPay]: https://www.drupal.org/project/commerce_hyperpay
 [Klarna Payments]: https://www.drupal.org/project/commerce_klarna_payments
@@ -932,6 +1008,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Nets Payment Gateway]: https://www.drupal.org/project/commerce_nets
 [Open Payment Platform]: https://www.drupal.org/project/commerce_opp
 [Pays.cz]: https://www.drupal.org/project/commerce_payscz
+[Paystack]: https://www.drupal.org/project/commerce_paystack
 [PayU Webcheckout]: https://www.drupal.org/project/commerce_payu_webcheckout
 [Postfinance]: https://www.drupal.org/project/commerce_postfinance
 [Privatbank payparts]: https://www.drupal.org/project/commerce_privatbank_payparts
