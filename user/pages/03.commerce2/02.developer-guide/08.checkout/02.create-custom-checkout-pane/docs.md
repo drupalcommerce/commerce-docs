@@ -18,7 +18,7 @@ execute this command from docroot:
 drupal generate:module  \
   --module="My checkout pane" \
   --machine-name="my_checkout_pane" \
-  --module-path="/modules/custom" \
+  --module-path="modules/custom" \
   --description="My checkout pane" \
   --core="8.x" \
   --package="Custom" \
