@@ -22,8 +22,7 @@ drupal generate:module  \
   --description="My checkout pane" \
   --core="8.x" \
   --package="Custom" \
-  --composer \
-  --dependencies="commerce:commerce_checkout"
+  --composer
 ```
 
 Now create the plugin using this command:
