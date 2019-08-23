@@ -1,8 +1,9 @@
 <?php
+
 /**
- * @package    Grav.Common.Page
+ * @package    Grav\Common\Page
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -12,9 +13,16 @@ use Grav\Common\File\CompiledYamlFile;
 use Grav\Common\Grav;
 use Grav\Common\Data\Data;
 use Grav\Common\Data\Blueprint;
+use Grav\Common\Media\Interfaces\MediaObjectInterface;
 use Grav\Common\Utils;
 
-class Medium extends Data implements RenderableInterface
+/**
+ * Class Medium
+ * @package Grav\Common\Page\Medium
+ *
+ * @property string $mime
+ */
+class Medium extends Data implements RenderableInterface, MediaObjectInterface
 {
     use ParsedownHtmlTrait;
 
@@ -31,7 +39,7 @@ class Medium extends Data implements RenderableInterface
     /**
      * @var array
      */
-    protected $thumbnailTypes = [ 'page', 'default' ];
+    protected $thumbnailTypes = ['page', 'default'];
 
     protected $thumbnailType = null;
 
@@ -56,6 +64,13 @@ class Medium extends Data implements RenderableInterface
     protected $metadata = [];
 
     /**
+     * @var array
+     */
+    protected $medium_querystring = [];
+
+    protected $timestamp;
+
+    /**
      * Construct.
      *
      * @param array $items
@@ -66,11 +81,16 @@ class Medium extends Data implements RenderableInterface
         parent::__construct($items, $blueprint);
 
         if (Grav::instance()['config']->get('system.media.enable_media_timestamp', true)) {
-            $this->querystring('&' . Grav::instance()['cache']->getKey());
+            $this->timestamp = Grav::instance()['cache']->getKey();
         }
 
         $this->def('mime', 'application/octet-stream');
         $this->reset();
+    }
+
+    public function __clone()
+    {
+        // Allows future compatibility as parent::__clone() works.
     }
 
     /**
@@ -80,7 +100,7 @@ class Medium extends Data implements RenderableInterface
      */
     public function copy()
     {
-        return clone($this);
+        return clone $this;
     }
 
     /**
@@ -108,6 +128,49 @@ class Medium extends Data implements RenderableInterface
     }
 
     /**
+     * Get file modification time for the medium.
+     *
+     * @return int|null
+     */
+    public function modified()
+    {
+        $path = $this->get('filepath');
+
+        if (!file_exists($path)) {
+            return null;
+        }
+
+        return filemtime($path) ?: null;
+    }
+
+    /**
+     * @return int
+     */
+    public function size()
+    {
+        $path = $this->get('filepath');
+
+        if (!file_exists($path)) {
+            return 0;
+        }
+
+        return filesize($path) ?: 0;
+    }
+
+    /**
+     * Set querystring to file modification timestamp (or value provided as a parameter).
+     *
+     * @param string|int|null $timestamp
+     * @return $this
+     */
+    public function setTimestamp($timestamp = null)
+    {
+        $this->timestamp = (string)($timestamp ?? $this->modified());
+
+        return $this;
+    }
+
+    /**
      * Returns an array containing just the metadata
      *
      * @return array
@@ -120,7 +183,7 @@ class Medium extends Data implements RenderableInterface
     /**
      * Add meta file for the medium.
      *
-     * @param $filepath
+     * @param string $filepath
      */
     public function addMetaFile($filepath)
     {
@@ -131,7 +194,7 @@ class Medium extends Data implements RenderableInterface
     /**
      * Add alternative Medium to this Medium.
      *
-     * @param $ratio
+     * @param int|float $ratio
      * @param Medium $alternative
      */
     public function addAlternative($ratio, Medium $alternative)
@@ -179,11 +242,18 @@ class Medium extends Data implements RenderableInterface
      */
     public function relativePath($reset = true)
     {
+        $output = preg_replace('|^' . preg_quote(GRAV_ROOT, '|') . '|', '', $this->get('filepath'));
+
+        $locator = Grav::instance()['locator'];
+        if ($locator->isStream($output)) {
+            $output = $locator->findResource($output, false);
+        }
+
         if ($reset) {
             $this->reset();
         }
 
-        return str_replace(GRAV_ROOT, '', $this->get('filepath'));
+        return str_replace(GRAV_ROOT, '', $output);
     }
 
     /**
@@ -194,46 +264,71 @@ class Medium extends Data implements RenderableInterface
      */
     public function url($reset = true)
     {
-        $output = preg_replace('|^' . preg_quote(GRAV_ROOT) . '|', '', $this->get('filepath'));
+        $output = preg_replace('|^' . preg_quote(GRAV_ROOT, '|') . '|', '', $this->get('filepath'));
+
+        $locator = Grav::instance()['locator'];
+        if ($locator->isStream($output)) {
+            $output = $locator->findResource($output, false);
+        }
 
         if ($reset) {
             $this->reset();
         }
 
-        return trim(Grav::instance()['base_url'] . '/' . ltrim($output . $this->querystring() . $this->urlHash(), '/'), '\\');
+        return trim(Grav::instance()['base_url'] . '/' . $this->urlQuerystring($output), '\\');
     }
 
     /**
      * Get/set querystring for the file's url
      *
      * @param  string  $querystring
-     * @param  boolean $withQuestionmark
+     * @param  bool $withQuestionmark
      * @return string
      */
     public function querystring($querystring = null, $withQuestionmark = true)
     {
-        if (!is_null($querystring)) {
-            $this->set('querystring', ltrim($querystring, '?&'));
-
+        if (null !== $querystring) {
+            $this->medium_querystring[] = ltrim($querystring, '?&');
             foreach ($this->alternatives as $alt) {
                 $alt->querystring($querystring, $withQuestionmark);
             }
         }
 
-        $querystring = $this->get('querystring', '');
-
-        if ($withQuestionmark && !empty($querystring)) {
-            return '?' . $querystring;
-        } else {
-            return $querystring;
+        if (empty($this->medium_querystring)) {
+            return '';
         }
+
+        // join the strings
+        $querystring = implode('&', $this->medium_querystring);
+        // explode all strings
+        $query_parts = explode('&', $querystring);
+        // Join them again now ensure the elements are unique
+        $querystring = implode('&', array_unique($query_parts));
+
+        return $withQuestionmark ? ('?' . $querystring) : $querystring;
+    }
+
+    /**
+     * Get the URL with full querystring
+     *
+     * @param string $url
+     * @return string
+     */
+    public function urlQuerystring($url)
+    {
+        $querystring = $this->querystring();
+        if (isset($this->timestamp) && !Utils::contains($querystring, $this->timestamp)) {
+            $querystring = empty($querystring) ? ('?' . $this->timestamp) : ($querystring . '&' . $this->timestamp);
+        }
+
+        return ltrim($url . $querystring . $this->urlHash(), '/');
     }
 
     /**
      * Get/set hash for the file's url
      *
      * @param  string  $hash
-     * @param  boolean $withHash
+     * @param  bool $withHash
      * @return string
      */
     public function urlHash($hash = null, $withHash = true)
@@ -244,11 +339,7 @@ class Medium extends Data implements RenderableInterface
 
         $hash = $this->get('urlHash', '');
 
-        if ($withHash && !empty($hash)) {
-            return '#' . $hash;
-        } else {
-            return $hash;
-        }
+        return $withHash && !empty($hash) ? '#' . $hash : $hash;
     }
 
     /**
@@ -258,7 +349,7 @@ class Medium extends Data implements RenderableInterface
      * @param  string  $alt
      * @param  string  $class
      * @param  string  $id
-     * @param  boolean $reset
+     * @param  bool $reset
      * @return array
      */
     public function parsedownElement($title = null, $alt = null, $class = null, $id = null, $reset = true)
@@ -322,6 +413,8 @@ class Medium extends Data implements RenderableInterface
             case 'source':
                 $element = $this->sourceParsedownElement($attributes, false);
                 break;
+            default:
+                $element = [];
         }
 
         if ($reset) {
@@ -337,7 +430,7 @@ class Medium extends Data implements RenderableInterface
      * Parsedown element for source display mode
      *
      * @param  array $attributes
-     * @param  boolean $reset
+     * @param  bool $reset
      * @return array
      */
     protected function sourceParsedownElement(array $attributes, $reset = true)
@@ -349,7 +442,7 @@ class Medium extends Data implements RenderableInterface
      * Parsedown element for text display mode
      *
      * @param  array $attributes
-     * @param  boolean $reset
+     * @param  bool $reset
      * @return array
      */
     protected function textParsedownElement(array $attributes, $reset = true)
@@ -424,7 +517,7 @@ class Medium extends Data implements RenderableInterface
      */
     public function thumbnail($type = 'auto')
     {
-        if ($type !== 'auto' && !in_array($type, $this->thumbnailTypes)) {
+        if ($type !== 'auto' && !\in_array($type, $this->thumbnailTypes, true)) {
             return $this;
         }
 
@@ -441,7 +534,7 @@ class Medium extends Data implements RenderableInterface
     /**
      * Turn the current Medium into a Link
      *
-     * @param  boolean $reset
+     * @param  bool $reset
      * @param  array  $attributes
      * @return Link
      */
@@ -465,7 +558,7 @@ class Medium extends Data implements RenderableInterface
      *
      * @param  int  $width
      * @param  int  $height
-     * @param  boolean $reset
+     * @param  bool $reset
      * @return Link
      */
     public function lightbox($width = null, $height = null, $reset = true)
@@ -490,7 +583,7 @@ class Medium extends Data implements RenderableInterface
     {
         $classes = func_get_args();
         if (!empty($classes)) {
-            $this->attributes['class'] = implode(',', (array)$classes);
+            $this->attributes['class'] = implode(',', $classes);
         }
 
         return $this;
@@ -500,7 +593,7 @@ class Medium extends Data implements RenderableInterface
      * Add an id to the element from Markdown or Twig
      * Example: ![Example](myimg.png?id=primary-img)
      *
-     * @param $id
+     * @param string $id
      * @return $this
      */
     public function id($id)
@@ -535,7 +628,7 @@ class Medium extends Data implements RenderableInterface
     public function __call($method, $args)
     {
         $qs = $method;
-        if (count($args) > 1 || (count($args) == 1 && !empty($args[0]))) {
+        if (\count($args) > 1 || (\count($args) === 1 && !empty($args[0]))) {
             $qs .= '=' . implode(',', array_map(function ($a) {
                 if (is_array($a)) {
                     $a = '[' . implode(',', $a) . ']';

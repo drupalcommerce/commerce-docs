@@ -14,28 +14,31 @@ use Thunder\Shortcode\Syntax\Syntax;
 /**
  * @author Tomasz Kowalczyk <tomasz@kowalczyk.cc>
  */
-final class ParserTest extends \PHPUnit_Framework_TestCase
+final class ParserTest extends AbstractTestCase
 {
     /**
      * @param ParserInterface $parser
      * @param string $code
-     * @param ParsedShortcode[] $tested
+     * @param ParsedShortcode[] $expected
      *
      * @dataProvider provideShortcodes
      */
-    public function testParser(ParserInterface $parser, $code, array $tested)
+    public function testParser(ParserInterface $parser, $code, array $expected)
     {
-        $parsed = $parser->parse($code);
+        $this->assertShortcodes($parser->parse($code), $expected);
+    }
 
-        $count = count($tested);
-        $this->assertCount($count, $parsed, 'counts');
+    private function assertShortcodes(array $actual, array $expected)
+    {
+        $count = count($actual);
+        static::assertCount($count, $expected, 'counts');
         for ($i = 0; $i < $count; $i++) {
-            $this->assertSame($tested[$i]->getName(), $parsed[$i]->getName(), 'name');
-            $this->assertSame($tested[$i]->getParameters(), $parsed[$i]->getParameters(), 'parameters');
-            $this->assertSame($tested[$i]->getContent(), $parsed[$i]->getContent(), 'content');
-            $this->assertSame($tested[$i]->getText(), $parsed[$i]->getText(), 'text');
-            $this->assertSame($tested[$i]->getOffset(), $parsed[$i]->getOffset(), 'offset');
-            $this->assertSame($tested[$i]->getBbCode(), $parsed[$i]->getBbCode(), 'bbCode');
+            static::assertSame($actual[$i]->getName(), $expected[$i]->getName(), 'name');
+            static::assertSame($actual[$i]->getParameters(), $expected[$i]->getParameters(), 'parameters');
+            static::assertSame($actual[$i]->getContent(), $expected[$i]->getContent(), 'content');
+            static::assertSame($actual[$i]->getText(), $expected[$i]->getText(), 'text');
+            static::assertSame($actual[$i]->getOffset(), $expected[$i]->getOffset(), 'offset');
+            static::assertSame($actual[$i]->getBbCode(), $expected[$i]->getBbCode(), 'bbCode');
         }
     }
 
@@ -114,7 +117,7 @@ final class ParserTest extends \PHPUnit_Framework_TestCase
 
             // multiple shortcodes
             array($s, 'Lorem [ipsum] random [code-code arg=val] which is here', array(
-                new ParsedShortcode(new Shortcode('ipsum', array(), null), '[ipsum]', 6, array('name' => 1)),
+                new ParsedShortcode(new Shortcode('ipsum', array(), null), '[ipsum]', 6),
                 new ParsedShortcode(new Shortcode('code-code', array('arg' => 'val'), null), '[code-code arg=val]', 21),
             )),
             array($s, 'x [aa] x [aa] x', array(
@@ -213,6 +216,22 @@ final class ParserTest extends \PHPUnit_Framework_TestCase
             array($s, '[x=#F00 one=#F00 two="#F00"]', array(
                 new ParsedShortcode(new Shortcode('x', array('one' => '#F00', 'two' => '#F00'), null, '#F00'), '[x=#F00 one=#F00 two="#F00"]', 0),
             )),
+            array($s, '[*] [* xyz arg=val]', array(
+                new ParsedShortcode(new Shortcode('*', array(), null, null), '[*]', 0),
+                new ParsedShortcode(new Shortcode('*', array('xyz' => null, 'arg' => 'val'), null, null), '[* xyz arg=val]', 4),
+            )),
+            array($s, '[*=bb x=y]cnt[/*]', array(
+                new ParsedShortcode(new Shortcode('*', array('x' => 'y'), 'cnt', 'bb'), '[*=bb x=y]cnt[/*]', 0),
+            )),
+            array($s, '[ [] ] [x] [ ] [/x] ] [] [ [y] ] [] [ [z] [/#] [/z] [ [] ] [/] [/y] ] [z] [ [/ [/] /] ] [/z]', array(
+                new ParsedShortcode(new Shortcode('x', array(), ' [ ] ', null), '[x] [ ] [/x]', 7),
+                new ParsedShortcode(new Shortcode('y', array(), ' ] [] [ [z] [/#] [/z] [ [] ] [/] ', null), '[y] ] [] [ [z] [/#] [/z] [ [] ] [/] [/y]', 27),
+                new ParsedShortcode(new Shortcode('z', array(), ' [ [/ [/] /] ] ', null), '[z] [ [/ [/] /] ] [/z]', 70),
+            )),
+            // falsy string values
+            array($s, '[a=0 b=0]0[/a]', array(
+                new ParsedShortcode(new Shortcode('a', array('b' => '0'), '0', '0'), '[a=0 b=0]0[/a]', 0),
+            )),
         );
 
         /**
@@ -227,19 +246,34 @@ final class ParserTest extends \PHPUnit_Framework_TestCase
          *
          * Tests cases from array above with identifiers in the array below must be skipped.
          */
-        $wordpressSkip = array(3, 6, 16, 21, 22, 23, 25, 32, 33, 34, 46, 47);
+        $wordpressSkip = array(3, 6, 16, 21, 22, 23, 25, 32, 33, 34, 46, 47, 49, 51);
         $result = array();
         foreach($tests as $key => $test) {
             $syntax = array_shift($test);
 
             $result[] = array_merge(array(new RegexParser($syntax)), $test);
             $result[] = array_merge(array(new RegularParser($syntax)), $test);
-            if(!in_array($key, $wordpressSkip)) {
+            if(!in_array($key, $wordpressSkip, true)) {
                 $result[] = array_merge(array(new WordpressParser()), $test);
             }
         }
 
         return $result;
+    }
+
+    public function testIssue77()
+    {
+        $parser = new RegularParser();
+
+        $this->assertShortcodes($parser->parse('[a][x][/x][x k="v][/x][y]x[/y]'), array(
+            new ParsedShortcode(new Shortcode('a', array(), null, null), '[a]', 0),
+            new ParsedShortcode(new Shortcode('x', array(), '', null), '[x][/x]', 3),
+            new ParsedShortcode(new Shortcode('y', array(), 'x', null), '[y]x[/y]', 22),
+        ));
+
+        $this->assertShortcodes($parser->parse('[a k="v][x][/x]'), array(
+            new ParsedShortcode(new Shortcode('x', array(), '', null), '[x][/x]', 8),
+        ));
     }
 
     public function testWordPress()
@@ -275,13 +309,13 @@ final class ParserTest extends \PHPUnit_Framework_TestCase
 
     public function testWordpressInvalidNamesException()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->willThrowException('InvalidArgumentException');
         WordpressParser::createFromNames(array('string', new \stdClass()));
     }
 
     public function testInstances()
     {
-        $this->assertInstanceOf('Thunder\Shortcode\Parser\WordPressParser', new WordpressParser());
-        $this->assertInstanceOf('Thunder\Shortcode\Parser\RegularParser', new RegularParser());
+        static::assertInstanceOf('Thunder\Shortcode\Parser\WordPressParser', new WordpressParser());
+        static::assertInstanceOf('Thunder\Shortcode\Parser\RegularParser', new RegularParser());
     }
 }

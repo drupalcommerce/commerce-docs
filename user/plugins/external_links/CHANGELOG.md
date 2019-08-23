@@ -1,3 +1,9 @@
+# v1.6.1
+## 07/12/2018
+
+3. [](#bugfix)
+  * Fixed parsing tags other than links [#24](https://github.com/Sommerregen/grav-plugin-external-links/pull/24) (Fix loading of a href element)
+
 # v1.6.0
 ## 02/22/2018
 

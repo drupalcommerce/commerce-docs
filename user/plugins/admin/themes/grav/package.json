@@ -5,15 +5,15 @@
   "repository": "https://github.com/getgrav/grav-admin",
   "main": "app/main.js",
   "scripts": {
-    "watch": "webpack --watch --progress --colors --config webpack.conf.js",
-    "dev": "webpack --progress --colors --config webpack.conf.js",
-    "prod": "NODE_ENV=production webpack -p --config webpack.conf.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "gulp watch",
+    "js": "gulp js",
+    "css": "gulp css",
+    "watch-js": "gulp watch-js",
+    "watch-css": "gulp watch-css"
   },
   "author": "RocketTheme, LLC",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "chartist": "0.11.0",
     "codemirror": "^5.30.0",
     "cookies-js": "^1.2.3",
@@ -22,11 +22,13 @@
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "es6-map": "^0.1.5",
     "es6-promise": "^4.1.1",
+    "exif-js": "^2.3.0",
     "gemini-scrollbar": "^1.5.2",
     "immutable": "^3.8.1",
     "immutablediff": "^0.4.4",
     "js-yaml": "^3.10.0",
     "mout": "^1.0.0",
+    "popper.js": "^1.14.4",
     "rangetouch": "^1.0.5",
     "remodal": "^1.1.1",
     "selectize": "^0.12.4",
@@ -34,7 +36,8 @@
     "speakingurl": "^14.0.1",
     "toastr": "^2.1.2",
     "watchjs": "0.0.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "yarn": "^1.15.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

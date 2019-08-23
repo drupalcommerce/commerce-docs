@@ -121,8 +121,8 @@ If the dependency is required by another package, it will not be removed.
 * [Managing Your Drupal Project with Composer](https://glamanate.com/blog/managing-your-drupal-project-composer), or the [slides version](https://docs.google.com/presentation/d/1PK9q2dBkGHfyEO76bEVpqS61wTgA0LGbru2PECiwUnk/edit?usp=sharing)
 * [Drupal Commerce Composer project template](https://github.com/drupalcommerce/project-base)
 * [Drupal Composer project template](https://github.com/drupal-composer/drupal-project)
-* [Platform.sh Drupal 8 + Composer template example](https://github.com/platformsh/platformsh-example-drupal8)
-* [Amazee Labs Composer recipes](https://www.amazeelabs.com/en/blog/drupalcomposerrecipes)
+* [Platform.sh Drupal 8 + Composer template example](https://github.com/platformsh/template-drupal8)
+* [Amazee Labs Composer recipes](https://www.amazeelabs.com/en/journal/drupal-composer-recipes)
 * [Using Drupal + Composer project templates with Pantheon sites](https://pantheon.io/blog/using-composer-relocated-document-root-pantheon)
 * [Using Composer - Drupal.org](https://www.drupal.org/docs/develop/using-composer)
 

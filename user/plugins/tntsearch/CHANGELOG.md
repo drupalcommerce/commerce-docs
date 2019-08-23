@@ -1,3 +1,47 @@
+# v3.0.0
+## 04/14/2018
+
+1. [](#new)
+    * Added new Grav Scheduler integration
+    * Added new Multi-Language Support
+1. [](#improved)
+    * Switched to latest TNTSearch version 2.0 (PHP 7.1+)
+    * Added a new `onFlexObjecSave()` event
+    * Simplified indexing logic
+    * Code cleanup
+    * Minor CSS improvements for search field
+    * Implemented a unified indexer process that always uses the CLI command for consistency
+    * Use Grav YAML handler
+1. [](#bugfix)
+    * Use custom search object in query [#63](https://github.com/trilbymedia/grav-plugin-tntsearch/issues/63)  
+    * Fixed issue with Ajax results escaping
+    * Fixed issues when updating search index  
+    * Set the db index file as a property of `GravTNTSearch` to allow for better overriding
+    * Put better type checking around `onTNTSearchIndex()` example that indexes `page.header.author`
+   
+# v2.0.4
+## 09/21/2018
+
+1. [](#new)
+    * Added new `tntsearch: index: true|false` page header option to skip specific pages
+1. [](#bugfix)
+    * Skip indexing of pages with `redirect` set in page header [#21](https://github.com/trilbymedia/grav-plugin-tntsearch/issues/21)
+
+# v2.0.3
+## 08/16/2018
+
+1. [](#new)
+    * New option to allow disabling of page events, manual updates will be required to pick up changes
+1. [](#bugfix)
+    * Don't remove the X button if `built_in_css` is `false`
+
+# v2.0.2
+## 07/20/2018
+
+1. [](#bugfix)
+    * Ensure that credentials are passed in when searching via `fetch`
+    * Compressed JS for better performance
+
 # v2.0.1
 ## 05/21/2018
 

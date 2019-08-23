@@ -12,11 +12,11 @@ import { Filter as MediaFilter, Instance as MediaFilterInstance} from './media';
 import toastr from './utils/toastr';
 import request from './utils/request';
 import './utils/2fa';
+import './tools';
 
 // bootstrap jQuery extensions
-import 'bootstrap/js/transition';
-import 'bootstrap/js/dropdown';
-import 'bootstrap/js/collapse';
+import './utils/bootstrap-transition';
+import './utils/bootstrap-collapse';
 
 // tabs memory
 import './utils/tabs-memory';

@@ -5,9 +5,8 @@
 {% block body %}
 <body id="admin-login-wrapper">
     <section id="admin-login" class="login-box-shadow {{ classes }}">
-        <h1>
-            {{ title }}
-        </h1>
+
+        {% include 'partials/login-logo.html.twig' %}
 
         {% include 'partials/messages.html.twig' %}
 
@@ -15,7 +14,7 @@
 
         {% block integration %}{% endblock %}
 
-        {% set redirect = redirect ?: uri.route(false) %}
+        {% set redirect = redirect ?: uri.path ~ uri.params ~ (uri.query ? '?' ~ uri.query : '') %}
 
         <form method="post" action="{{ base_url_relative }}">
             <div class="padding">

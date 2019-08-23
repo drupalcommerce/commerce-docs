@@ -1,6 +1,23 @@
 import $ from 'jquery';
 import 'selectize';
 import '../../utils/selectize-required-fix';
+import '../../utils/selectize-option-click';
+
+const PagesRoute = {
+    option: function(item, escape) {
+        const label = escape(item.text).split(' ');
+        const arrows = label.shift();
+        const slug = label.shift();
+
+        return `<div class="selectize-route-option">
+            <span class="text-grey">${arrows}</span>
+            <span>
+                <span class="text-update">${slug.replace('(', '/').replace(')', '')}</span>
+                <span>${label.join(' ')}</span>
+            </span>
+        </div>`;
+    }
+};
 
 export default class SelectizeField {
     constructor(options = {}) {
@@ -19,10 +36,13 @@ export default class SelectizeField {
         let data = (isInput ? element.closest('[data-grav-selectize]') : element).data('grav-selectize') || {};
         let field = (isInput ? element : element.find('input, select'));
 
+        if (field.attr('name') === 'data[route]') {
+            data = $.extend({}, data, { render: PagesRoute });
+        }
+
         if (!field.length || field.get(0).selectize) { return; }
-        field.selectize($.extend({}, data, {
-            plugins: ['required-fix']
-        }));
+        const plugins = $.merge(data.plugins ? data.plugins : [], ['required-fix']);
+        field.selectize($.extend({}, data, { plugins }));
 
         this.elements.push(field.data('selectize'));
     }

@@ -15,7 +15,7 @@ Click the *Add payment gateway* button to create a payment gateway. By default, 
 
 ![Payment gateway configuration](../images/getting-started-02.png)
 
-If you would like to configure your site to use an actual gateway for a real Payment Provider, see the [Installing and Configure a Payment Gateway](../02.install-configure-gateways) documentation.
+If you would like to configure your site to use an actual gateway for a real Payment Provider, see the [Installing and Configure a Payment Gateway](../install-configure-gateways) documentation.
 
 ### Configuring your payment gateway
 Enter a *Name* and *Machine name* for your payment gateway. The name you enter will only be used internally, for identification by administrative users. The machine name will be automatically set based on the name you enter, but you can change it now if you want. Once the payment gateway has been created, you won't be able to change its machine name.
