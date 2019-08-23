@@ -1,5 +1,5 @@
 name: Anchors
-version: 1.5.2
+version: 1.5.3
 description: "This plugin provides automatic header anchors via the [anchorjs](http://bryanbraun.github.io/anchorjs) jQuery plugin."
 icon: anchor
 author:

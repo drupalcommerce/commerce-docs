@@ -1,8 +1,8 @@
 <?php
 namespace Grav\Plugin;
 
+use Composer\Autoload\ClassLoader;
 use Grav\Common\Plugin;
-use Grav\Common\Grav;
 use Grav\Common\Page\Page;
 use Grav\Common\Page\Pages;
 use Grav\Common\Page\Types;
@@ -16,10 +16,29 @@ class ErrorPlugin extends Plugin
     public static function getSubscribedEvents()
     {
         return [
-            'onPageNotFound' => ['onPageNotFound', 0],
-            'onGetPageTemplates' => ['onGetPageTemplates', 0],
-            'onTwigTemplatePaths' => ['onTwigTemplatePaths', -10]
+            'onCliInitialize' => [
+                ['autoload', 100000],
+            ],
+            'onPageNotFound' => [
+                ['onPageNotFound', 0]
+            ],
+            'onGetPageTemplates' => [
+                ['onGetPageTemplates', 0]
+            ],
+            'onTwigTemplatePaths' => [
+                ['onTwigTemplatePaths', -10]
+            ]
         ];
+    }
+
+    /**
+     * [onPluginsInitialized:100000] Composer autoload.
+     *
+     * @return ClassLoader
+     */
+    public function autoload()
+    {
+        return require __DIR__ . '/vendor/autoload.php';
     }
 
     /**

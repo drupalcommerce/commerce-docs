@@ -26,7 +26,7 @@ The following is an overview of the process:
 
 ## Configure the order refresh threshold
 
-Each order type can configure it's refresh threshold. For instance, a regular customer order type might be fine at an hourly refresh interval. On the other hand, a wholesaler order type may need a more constant refresh, such as every minute, due to pricing logic.
+Each order type can configure its refresh threshold. For instance, a regular customer order type might be fine at an hourly refresh interval. On the other hand, a wholesaler order type may need a more constant refresh, such as every minute, due to pricing logic.
 
 By default order types refresh every five minutes. This can be modified by editing the order type.
 

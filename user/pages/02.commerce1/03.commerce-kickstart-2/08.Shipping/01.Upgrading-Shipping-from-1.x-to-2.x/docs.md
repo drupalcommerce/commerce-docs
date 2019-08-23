@@ -20,4 +20,6 @@ Please note that because of the drastic differences in this module's API and poi
 
 Additionally, the names of some fields, Rules conditions / actions, and price component types defined by the module have changed. If you have referenced these things from other Views, Rules, or custom code, you must update them when you migrate to Commerce Shipping 2.x.
 
-We fully stand behind the migration and are happy to assist you if you have any difficulties. You can find us in the Commerce Shipping issue queue or in the #drupal-commerce on IRC.
+We fully stand behind the migration and are happy to assist you if you have any difficulties. You can find us in the Commerce Shipping issue queue or in the *#commerce* [Drupal Slack channel].
+
+[Drupal Slack channel]: https://www.drupal.org/slack

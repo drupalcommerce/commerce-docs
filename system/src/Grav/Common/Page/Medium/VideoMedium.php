@@ -1,8 +1,9 @@
 <?php
+
 /**
- * @package    Grav.Common.Page
+ * @package    Grav\Common\Page
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -16,7 +17,7 @@ class VideoMedium extends Medium
      * Parsedown element for source display mode
      *
      * @param  array $attributes
-     * @param  boolean $reset
+     * @param  bool $reset
      * @return array
      */
     protected function sourceParsedownElement(array $attributes, $reset = true)
@@ -50,7 +51,7 @@ class VideoMedium extends Medium
     /**
      * Allows to set the video's poster image
      *
-     * @param $urlImage
+     * @param string $urlImage
      * @return $this
      */
     public function poster($urlImage)
@@ -85,10 +86,61 @@ class VideoMedium extends Medium
      */
     public function autoplay($status = false)
     {
-        if($status) {
-            $this->attributes['autoplay'] = true;
+        if ($status) {
+            $this->attributes['autoplay'] = '';
         } else {
             unset($this->attributes['autoplay']);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Allows ability to set the preload option
+     *
+     * @param null $status
+     * @return $this
+     */
+    public function preload($status = null)
+    {
+        if ($status) {
+            $this->attributes['preload'] = $status;
+        } else {
+            unset($this->attributes['preload']);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Allows to set the playsinline attribute
+     *
+     * @param bool $status
+     * @return $this
+     */
+    public function playsinline($status = false)
+    {
+        if($status) {
+            $this->attributes['playsinline'] = true;
+        } else {
+            unset($this->attributes['playsinline']);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Allows to set the muted attribute
+     *
+     * @param bool $status
+     * @return $this
+     */
+    public function muted($status = false)
+    {
+        if($status) {
+            $this->attributes['muted'] = true;
+        } else {
+            unset($this->attributes['muted']);
         }
 
         return $this;

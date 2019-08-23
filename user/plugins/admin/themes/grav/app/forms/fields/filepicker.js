@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import { config } from 'grav-config';
+import { config, uri_params } from 'grav-config';
 import request from '../../utils/request';
 
-const insertTextAt = (string, index, text) => [string.slice(0, index), text, string.slice(index)].join('');
+// const insertTextAt = (string, index, text) => [string.slice(0, index), text, string.slice(index)].join('');
 
 export default class FilePickerField {
 
@@ -45,10 +45,11 @@ export default class FilePickerField {
             let parent = field.closest('[data-grav-filepicker]');
             let name = parent.data('name');
             let value = parent.data('value');
+            let params = JSON.stringify(uri_params || '{}');
 
             request(url, {
                 method: 'post',
-                body: { name }
+                body: { name, params }
             }, (response) => {
                 if (typeof response.files === 'undefined') {
                     return;
@@ -78,14 +79,12 @@ export default class FilePickerField {
         let renderOption = function renderOption(item, escape) {
             let image = '';
             if (imagesPreview && folder && (!item.status || item.status === 'available') && item.name.match(/\.(jpg|jpeg|png|gif)$/i)) {
-                const fallback2x = insertTextAt(`${config.base_url_relative}/../${folder}/${item.name}`, -4, '@2x');
-                const fallback3x = insertTextAt(`${config.base_url_relative}/../${folder}/${item.name}`, -4, '@3x');
+                // const fallback2x = insertTextAt(`${config.base_url_relative}/../${folder}/${item.name}`, -4, '@2x');
+                // const fallback3x = insertTextAt(`${config.base_url_relative}/../${folder}/${item.name}`, -4, '@3x');
                 const source = thumbs[item.name] || `${config.base_url_relative}/../${folder}/${item.name}`;
 
-                image = `
-                    <img class="filepicker-field-image"
-                         src="${source}"
-                         onerror="if(this.src==='${fallback2x}'){this.src='${fallback3x}';this.onerror='';}else{this.src='${fallback2x}'}" />`;
+                // onerror="if(this.src==='${fallback2x}'){this.src='${fallback3x}';}else{this.src='${fallback2x}'}"
+                image = `<img class="filepicker-field-image" src="${source}" />`;
             }
 
             return `<div>

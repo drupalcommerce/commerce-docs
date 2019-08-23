@@ -1,8 +1,9 @@
 <?php
+
 /**
  * @package    Grav\Framework\Collection
  *
- * @copyright  Copyright (C) 2015 - 2018 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (C) 2015 - 2019 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -24,11 +25,6 @@ class ArrayCollection extends BaseArrayCollection implements CollectionInterface
      */
     public function reverse()
     {
-        // TODO: remove when PHP 5.6 is minimum (with doctrine/collections v1.4).
-        if (!method_exists($this, 'createFrom')) {
-            return new static(array_reverse($this->toArray()));
-        }
-
         return $this->createFrom(array_reverse($this->toArray()));
     }
 
@@ -42,11 +38,6 @@ class ArrayCollection extends BaseArrayCollection implements CollectionInterface
         $keys = $this->getKeys();
         shuffle($keys);
 
-        // TODO: remove when PHP 5.6 is minimum (with doctrine/collections v1.4).
-        if (!method_exists($this, 'createFrom')) {
-            return new static(array_replace(array_flip($keys), $this->toArray()));
-        }
-
         return $this->createFrom(array_replace(array_flip($keys), $this->toArray()));
     }
 
@@ -59,6 +50,37 @@ class ArrayCollection extends BaseArrayCollection implements CollectionInterface
     public function chunk($size)
     {
         return array_chunk($this->toArray(), $size, true);
+    }
+
+    /**
+     * Select items from collection.
+     *
+     * Collection is returned in the order of $keys given to the function.
+     *
+     * @param array $keys
+     * @return static
+     */
+    public function select(array $keys)
+    {
+        $list = [];
+        foreach ($keys as $key) {
+            if ($this->containsKey($key)) {
+                $list[$key] = $this->get($key);
+            }
+        }
+
+        return $this->createFrom($list);
+    }
+
+    /**
+     * Un-select items from collection.
+     *
+     * @param array $keys
+     * @return static
+     */
+    public function unselect(array $keys)
+    {
+        return $this->select(array_diff($this->getKeys(), $keys));
     }
 
     /**

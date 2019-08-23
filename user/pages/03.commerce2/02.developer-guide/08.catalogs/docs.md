@@ -1,5 +1,5 @@
 ---
 title: Catalog and product pages
-taxonomy:
-    category: docs
+visible: false
+redirect: '/commerce2/developer-guide/products[301]'
 ---
