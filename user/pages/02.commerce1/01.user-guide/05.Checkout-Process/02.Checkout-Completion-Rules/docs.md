@@ -13,7 +13,8 @@ taxonomy:
     <li>Send an order notification e-mail to the customer.</li>
 </ul>
 <p>You are free to customize these defaults rules, disable them entirely, and add your own rules to address your business logic pertaining to what must happen on checkout completion. Note that payment may not have been completed at this time; it may still be pending or it may have been submitted as an authorization awaiting a later capture.</p>
-<p>If you have business logic that depends on payment being completed, you should add rules to the When an order is first paid in full event instead.</p>
+<h3>Important Note: Beware giving away products for free</h3>
+<p>If you have business logic that depends on payment being completed, you should add rules to the <em>When an order is first paid in full</em> event instead. It is a common Drupal Commerce configuration mistake to fulfill the order at the point of checkout completion which can lead to giving the product away for free. Malicious users may figure out how to trigger order completion without paying. Instead, assign rules that deliver the product to the event <em>When an order is first paid in full</em>.</p>
 <h2>Excercise: Fulfillment Email</h2>
 <p>To demonstrate the Checkout Rules, we've created an exercise that will send an email to our fulfillment shop once the payment is complete. This is a particularly interesting case because we will not use the event that Commerce picks for us by default. All is explained in the captions.</p>
 <div class="screenshot screenshot-caption">
