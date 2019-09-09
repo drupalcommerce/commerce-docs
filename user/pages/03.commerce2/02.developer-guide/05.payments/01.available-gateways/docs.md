@@ -4,7 +4,7 @@ taxonomy:
 category: docs
 ---
 
-Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **124 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../install-configure-gateways) documentation for information on configuration.
+Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **125 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../install-configure-gateways) documentation for information on configuration.
 
 If you don't see a payment provider you want for your project, Drupal Commerce provides a framework for implementing your own online payment gateways. See the [Creating payment gateways](../create-payment-gateway) documentation for more information. 
 
@@ -72,7 +72,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [/ui-accordion]
 
 
-##### 117 Additional payment gateways
+##### 118 Additional payment gateways
 [ui-accordion independent=true open=-1]
 [ui-accordion-item title="Adyen"]
 |  | [Adyen] |
@@ -528,6 +528,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Currencies** | JPY https://pay.jp/ |
 | **Countries** | Japan / https://pay.jp/  |
 [/ui-accordion-item]
+[ui-accordion-item title="PayDirect FPX"]
+|  | [PayDirect FPX] |
+| --- | --- |
+| **Description** | Enables online payment using credit or debit cards (Visa and Mastercard) and online banking (for Malaysian banks). |
+| **Type** | Off site |
+| **Currencies** | RM |
+| **Countries** | Malaysia |
+[/ui-accordion-item]
 [ui-accordion-item title="Payeezy"]
 |  | [Payeezy] |
 | --- | --- |
@@ -949,6 +957,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Klarna Checkout]: https://www.drupal.org/project/commerce_klarna_checkout
 [commerce_suomenverkkomaksut]: https://drupal.org/project/commerce_suomenverkkomaksut
 [Payeezy]: https://www.drupal.org/project/commerce_payeezy
+[PayDirect FPX]: https://www.drupal.org/project/paydirectfpx
 [PayFort]: https://www.drupal.org/project/commerce_payfort
 [Omise]: https://www.drupal.org/project/commerce_omise
 [Pasargad]: https://www.drupal.org/project/commerce_pasargad
