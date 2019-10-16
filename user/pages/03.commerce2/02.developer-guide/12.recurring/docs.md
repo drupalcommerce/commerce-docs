@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Subscriptions and recurring billing in Commerce 2.x are created and managed via the Commerce Recurring module. It supports a wide variety of types of subscriptions, payment plans, proration, etc. Out-of-the-box, the Commerce Recurring module provides rolling and fixed billing schedules that are either prepaid or postpaid. However, the module can be easily extended with custom plugins. Some sample use cases include...
+Subscriptions and recurring billing in Commerce 2.x are created and managed via the Commerce Recurring (https://www.drupal.org/project/commerce_recurring) module. It supports a wide variety of types of subscriptions, payment plans, proration, etc. Out-of-the-box, the Commerce Recurring module provides rolling and fixed billing schedules that are either prepaid or postpaid. However, the module can be easily extended with custom plugins. Some sample use cases include...
 
 | Use Case | Billing schedule | Proration? |
 | -------- | ---------------- |----------- |
