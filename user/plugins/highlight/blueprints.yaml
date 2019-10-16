@@ -1,5 +1,5 @@
 name: Highlight
-version: 1.4.0
+version: 1.4.1
 description: "This plugin provides code highlighting functionality via the [Highlight.js](https://highlightjs.org/) jQuery plugin."
 icon: code
 author:
@@ -11,6 +11,9 @@ demo: http://learn.getgrav.org
 keywords: highlight, plugin, code
 bugs: https://github.com/getgrav/grav-plugin-highlight/issues
 license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.4' }
 
 form:
   validation: strict
@@ -89,8 +92,8 @@ form:
         hybrid: Hybrid
         idea: Idea
         ir-black: IR-Black
-        kimbie-dark: Kimbie Dark
-        kimbie-light: Kimbie Light
+        kimbie.dark: Kimbie Dark
+        kimbie.light: Kimbie Light
         magula: Magula
         mono-blue: Mono Blue
         monokai-sublime: Monokai Sublime
@@ -100,8 +103,8 @@ form:
         paraiso-light: Paraiso Light
         pojoaque: Pojoaque
         purebasic: Purebasic
-        qtcreator-dark: Qt Creator Dark
-        qtcreator-light: Qt Creator Light
+        qtcreator_dark: Qt Creator Dark
+        qtcreator_light: Qt Creator Light
         rainbow: Rainbow
         routeros: Routeros
         school-book: School Book

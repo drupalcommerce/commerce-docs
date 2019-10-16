@@ -1,3 +1,42 @@
+# v4.1.6
+## 10/03/2019
+
+1. [](#improved)
+    * Support markdown in `Figure` shortcode caption attribute
+    * FlexObjects compatibility: changed references to `Page` class to use `PageInterface`
+    * Reworked the `shortcode` twig var to use a class/method approach for better compatibility in modular/page formats
+1. [](#bugfix)
+    * Fix issue with `[language]` when `include_default_lang: false` [#76](https://github.com/getgrav/grav-plugin-shortcode-core/issues/76)
+
+# v4.1.5
+## 09/05/2019
+
+1. [](#improved)
+    * Run `onContentProcessed()` event after all other plugins [#75](https://github.com/getgrav/grav-plugin-shortcode-core/issues/75)
+
+# v4.1.4
+## 08/11/2019
+
+1. [](#new)
+    * Added a new `[details][/details]` shortcode [#72](https://github.com/getgrav/grav-plugin-shortcode-core/pull/72)
+1. [](#improved)
+  * Fixed regression issue introduced in v1.4.3 [#73](https://github.com/getgrav/grav-plugin-shortcode-core/issues/73)
+
+# v4.1.3
+## 08/09/2019
+
+1. [](#improved)
+  * Fix for shortcode objects not being available. For example `[section][/section]` not working previously without `process: twig: true`
+  * `README.md` improvements 
+
+# v4.1.2
+## 06/22/2019
+
+1. [](#new)
+  * Added new `h#` tags for `h1` through `h6` supporting `class` and `id` attributes
+1. [](#improved)
+  * Make `ShortcodeManager::setStates()` more flexible to accept any type of object  
+
 # v4.1.1
 ## 04/23/2019
 

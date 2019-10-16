@@ -19,6 +19,7 @@ Simply copy the `user/plugins/markdown-notices/markdown-notices.yaml` into `user
 ```
 enabled: true
 built_in_css: true
+base_classes: 'notices'
 level_classes: [yellow, red, blue, green]
 ```
 
@@ -46,7 +47,7 @@ You will output the following HTML
 </div>
 ```
 
-The `yellow` class is determined by the `level_classes` in the configuration.  You can customize this as you need.
+The `notices` class determined by the `base_classes` and `yellow` class is determined by the `level_classes` in the configuration. You can customize this as you need.
 
 ```
 !! Lorem ipsum dolor sit amet, **consectetur adipiscing** elit. Mauris feugiat quam erat, ut iaculis diam posuere nec.
