@@ -88,7 +88,7 @@ $data['language'] = $configuration['language'];
 
 // Payment data.
 $data['currency'] = $payment->getAmount()->getCurrencyCode();
-$data['total'] => $payment->getAmount()->getNumber();
+$data['total'] = $payment->getAmount()->getNumber();
 $data['variables[payment_gateway]'] = $payment->getPaymentGatewayId();
 $data['variables[order]'] = $payment->getOrderId();
 
