@@ -3,6 +3,7 @@ namespace Grav\Plugin;
 
 use Composer\Autoload\ClassLoader;
 use Grav\Common\Data\ValidationException;
+use Grav\Common\Debugger;
 use Grav\Common\Filesystem\Folder;
 use Grav\Common\Grav;
 use Grav\Common\Page\Interfaces\PageInterface;
@@ -14,8 +15,10 @@ use Grav\Common\Utils;
 use Grav\Common\Uri;
 use Grav\Common\Yaml;
 use Grav\Framework\Form\Interfaces\FormInterface;
+use Grav\Framework\Route\Route;
 use Grav\Plugin\Form\Form;
 use Grav\Plugin\Form\Forms;
+use ReCaptcha\ReCaptcha;
 use RocketTheme\Toolbox\File\JsonFile;
 use RocketTheme\Toolbox\File\YamlFile;
 use RocketTheme\Toolbox\File\File;
@@ -40,6 +43,9 @@ class FormPlugin extends Plugin
 
     /** @var array */
     protected $flat_forms = [];
+
+    /** @var array */
+    protected $active_forms = [];
 
     /** @var array */
     protected $json_response = [];
@@ -89,7 +95,7 @@ class FormPlugin extends Plugin
     public function onPluginsInitialized()
     {
         // Backwards compatibility for plugins that use forms.
-        class_alias(Form::class, 'Grav\Plugin\Form');
+        class_alias(Form::class, \Grav\Plugin\Form::class);
 
         $this->grav['forms'] = function () {
             $forms = new Forms();
@@ -277,6 +283,40 @@ class FormPlugin extends Plugin
                     }
                 }
             }
+        } else {
+            // There is no active form to be posted.
+            // Check all the forms for the current page; we are looking for forms with remember state turned on with random unique id.
+
+            /** @var Route $route */
+            $route = $this->grav['route'];
+            $pageForms = $this->forms[$route->getRoute()] ?? [];
+
+            foreach ($pageForms as $formName => $form) {
+                if ($form->get('remember_redirect')) {
+                    // Found one; we need to check if unique id is set.
+                    $formParam = $form->get('uniqueid_param', 'fid');
+                    $uniqueId = $route->getGravParam($formParam);
+
+                    if ($uniqueId && preg_match('/[a-z\d]+/', $uniqueId)) {
+                        // URL contains unique id, initialize the current form.
+                        $form->setUniqueId($uniqueId);
+                        $form->initialize();
+
+                        /** @var Forms $forms */
+                        $forms = $this->grav['forms'];
+                        $forms->setActiveForm($form);
+
+                        break;
+                    }
+
+                    // Append unique id to the URL and redirect.
+                    $route = $route->withGravParam($formParam, $form->getUniqueId());
+                    $page->redirect((string)$route->toString());
+
+                    // TODO: Do we want to add support for multiple forms with remembered state?
+                    break;
+                }
+            }
         }
     }
 
@@ -358,7 +398,7 @@ class FormPlugin extends Plugin
                 $hostname = $uri->host();
                 $ip = Uri::ip();
 
-                $recaptcha = new \ReCaptcha\ReCaptcha($secret);
+                $recaptcha = new ReCaptcha($secret);
 
                 // get captcha version
                 $captcha_version = $captcha_config['version'] ?? 2;
@@ -386,7 +426,7 @@ class FormPlugin extends Plugin
                     foreach ($fields as $field) {
                         $type = $field['type'] ?? 'text';
                         $field_message = $field['recaptcha_not_validated'] ?? null;
-                        if ($type == 'captcha' && $field_message) {
+                        if ($type === 'captcha' && $field_message) {
                             $message =  $field_message;
                             break;
                         }
@@ -453,7 +493,9 @@ class FormPlugin extends Plugin
                 break;
             case 'reset':
                 if (Utils::isPositive($params)) {
+                    $message = $form->message;
                     $form->reset();
+                    $form->message = $message;
                 }
                 break;
             case 'display':
@@ -497,6 +539,7 @@ class FormPlugin extends Plugin
                 $postfix = $params['filepostfix'] ?? '';
                 $ext = !empty($params['extension']) ? '.' . trim($params['extension'], '.') : '.txt';
                 $filename = $params['filename'] ?? '';
+                $folder = !empty($params['folder']) ? $params['folder'] : $form->getName();
                 $operation = $params['operation'] ?? 'create';
 
                 if (!$filename) {
@@ -517,8 +560,8 @@ class FormPlugin extends Plugin
                 $filename = $twig->processString($filename, $vars);
 
                 $locator = $this->grav['locator'];
-                $path = $locator->findResource('user://data', true);
-                $dir = $path . DS . $form->getName();
+                $path = $locator->findResource('user-data://', true);
+                $dir = $path . DS . $folder;
                 $fullFileName = $dir. DS . $filename;
 
                 if (!empty($params['raw']) || !empty($params['template'])) {
@@ -710,7 +753,7 @@ class FormPlugin extends Plugin
             if (!empty($this->forms[$page_route])) {
                 $forms = $this->forms[$page_route];
                 $first_form = reset($forms) ?: null;
-                $form_name = $first_form['name'] ?? null;
+                return $first_form;
             } else {
                 //No form on this route. Try looking up in the current page first
                 /** @var Forms $forms */
@@ -829,7 +872,23 @@ class FormPlugin extends Plugin
      */
     protected function getFormByName($form_name)
     {
-        return $this->flat_forms[$form_name] ?? null;
+        $form = $this->active_forms[$form_name] ?? null;
+        if (!$form) {
+            $form = $this->flat_forms[$form_name] ?? null;
+
+            if (!$form) {
+                return null;
+            }
+
+            // Reset form to change the cached unique id and to fire onFormInitialized event.
+            $form->setUniqueId('');
+            $form->reset();
+
+            // Register form to the active forms to get the same instance back next time.
+            $this->active_forms[$form_name] = $form;
+        }
+
+        return $form;
     }
 
     /**
@@ -970,6 +1029,10 @@ class FormPlugin extends Plugin
         } catch (\Exception $e) {
             // Couldn't fetch cached forms.
             $forms = null;
+
+            /** @var Debugger $debugger */
+            $debugger = Grav::instance()['debugger'];
+            $debugger->addMessage(sprintf('Unserializing cached forms failed: %s', $e->getMessage()), 'error');
         }
 
         if (!\is_array($forms)) {

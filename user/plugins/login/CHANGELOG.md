@@ -1,3 +1,18 @@
+# 3.0.4
+## 10/03/2019
+
+1. [](#bugfix)
+    * Fixed bad redirect after login on multi-language site [#217](https://github.com/getgrav/grav-plugin-login/issues/217)
+    * Fixed basic login not obeying `redirect_after_login` option
+    * Provide default `redirect_after_activation` option [#225](https://github.com/getgrav/grav-plugin-login/issues/225)
+
+# 3.0.3
+## 07/01/2019
+
+1. [](#bugfix)
+  * Fix for not redirecting to secure page after login [#199](https://github.com/getgrav/grav-plugin-login/issues/199)
+  * Fixed `bin/plugin login new-user` ACL when using Flex Users
+
 # 3.0.2
 ## 05/09/2019
 

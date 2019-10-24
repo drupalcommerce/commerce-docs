@@ -15,9 +15,11 @@ use Grav\Common\Data\ValidationException;
 use Grav\Common\Form\FormFlash;
 use Grav\Common\Grav;
 use Grav\Common\Twig\Twig;
+use Grav\Common\User\Interfaces\UserInterface;
 use Grav\Common\Utils;
 use Grav\Framework\ContentBlock\HtmlBlock;
 use Grav\Framework\Form\Interfaces\FormInterface;
+use Grav\Framework\Session\SessionInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UploadedFileInterface;
 use Twig\Error\LoaderError;
@@ -296,12 +298,12 @@ trait FormTrait
 
     public function getButtons(): array
     {
-        return $this->getBlueprint()['form']['buttons'] ?? [];
+        return $this->getBlueprint()->get('form/buttons') ?? [];
     }
 
     public function getTasks(): array
     {
-        return $this->getBlueprint()['form']['tasks'] ?? [];
+        return $this->getBlueprint()->get('form/tasks') ?? [];
     }
 
     abstract public function getBlueprint(): Blueprint;
@@ -336,33 +338,54 @@ trait FormTrait
     public function getFlash(): FormFlash
     {
         if (null === $this->flash) {
-            /** @var Grav $grav */
             $grav = Grav::instance();
-            $id = null;
-
-            $user = $grav['user'] ?? null;
-            if (isset($user)) {
-                $rememberState = $this->getBlueprint()->get('form/remember_state');
-                if ($rememberState === 'user') {
-                    $id = $user->username;
-                }
-            }
-
-            // Session Required for flash form
-            $session = $grav['session'] ?? null;
-            if (isset($session)) {
-                // By default store flash by the session id.
-                if (null === $id) {
-                    $id = $session->getId();
-                }
+            $config = [
+                'session_id' => $this->getSessionId(),
+                'unique_id' => $this->getUniqueId(),
+                'form_name' => $this->getName(),
+                'folder' => $this->getFlashFolder()
+            ];
 
 
-                $this->flash = new FormFlash($id, $this->getUniqueId(), $this->getName());
-                $this->flash->setUrl($grav['uri']->url)->setUser($user);
-            }
+            $this->flash = new FormFlash($config);
+            $this->flash->setUrl($grav['uri']->url)->setUser($grav['user'] ?? null);
         }
 
         return $this->flash;
+    }
+
+    /**
+     * Get all available form flash objects for this form.
+     *
+     * @return FormFlash[]
+     */
+    public function getAllFlashes(): array
+    {
+        $folder = $this->getFlashFolder();
+        if (!$folder || !is_dir($folder)) {
+            return [];
+        }
+
+        $name = $this->getName();
+
+        $list = [];
+        /** @var \SplFileInfo $file */
+        foreach (new \FilesystemIterator($folder) as $file) {
+            $uniqueId = $file->getFilename();
+            $config = [
+                'session_id' => $this->getSessionId(),
+                'unique_id' => $uniqueId,
+                'form_name' => $name,
+                'folder' => $this->getFlashFolder()
+            ];
+            $flash = new FormFlash($config);
+            if ($flash->exists() && $flash->getFormName() === $name) {
+                $list[] = $flash;
+            }
+        }
+
+        return $list;
+
     }
 
     /**
@@ -389,9 +412,49 @@ trait FormTrait
         return $block;
     }
 
+    protected function getSessionId(): string
+    {
+        /** @var Grav $grav */
+        $grav = Grav::instance();
+
+        /** @var SessionInterface $session */
+        $session = $grav['session'] ?? null;
+
+        return $session ? ($session->getId() ?? '') : '';
+    }
+
     protected function unsetFlash(): void
     {
         $this->flash = null;
+    }
+
+    protected function getFlashFolder(): ?string
+    {
+        $grav = Grav::instance();
+
+        /** @var UserInterface $user */
+        $user = $grav['user'] ?? null;
+        $userExists = $user && $user->exists();
+        $username = $userExists ? $user->username : null;
+        $mediaFolder = $userExists ? $user->getMediaFolder() : null;
+        $session = $grav['session'] ?? null;
+        $sessionId = $session ? $session->getId() : null;
+
+        // Fill template token keys/value pairs.
+        $dataMap = [
+            '[FORM_NAME]' => $this->getName(),
+            '[SESSIONID]' => $sessionId ?? '!!',
+            '[USERNAME]' => $username ?? '!!',
+            '[USERNAME_OR_SESSIONID]' => $username ?? $sessionId ?? '!!',
+            '[ACCOUNT]' => $mediaFolder ?? '!!'
+        ];
+
+        $flashFolder = $this->getBlueprint()->get('form/flash_folder', 'tmp://forms/[SESSIONID]');
+
+        $path = str_replace(array_keys($dataMap), array_values($dataMap), $flashFolder);
+
+        // Make sure we only return valid paths.
+        return strpos($path, '!!') === false ? rtrim($path, '/') : null;
     }
 
     /**
@@ -577,7 +640,7 @@ trait FormTrait
         foreach ($data as $key => &$value) {
             if (\is_array($value)) {
                 $value = $this->jsonDecode($value);
-            } elseif ($value === '') {
+            } elseif (trim($value) === '') {
                 unset($data[$key]);
             } else {
                 $value = json_decode($value, true);
