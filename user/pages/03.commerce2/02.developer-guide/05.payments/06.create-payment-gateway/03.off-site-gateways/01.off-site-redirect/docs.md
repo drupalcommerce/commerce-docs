@@ -128,7 +128,7 @@ The last parameter we need to pass into `buildRedirectForm()` is the actual `$re
       $form_state,
       'https://payment.my_payment_provider.net',
       $data,
-      PaymentOffsiteForm::REDIRECT_POST
+      $this::REDIRECT_POST
     );
   }
 }
