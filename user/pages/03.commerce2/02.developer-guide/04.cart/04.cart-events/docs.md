@@ -4,32 +4,32 @@ taxonomy:
     category: docs
 ---
 
-Drupal Commerce's cart system provides a full range of events for your custom functionality and modules to react to.
+If you want to customize the Cart functionality of your site, Drupal Commerce provides a full range of "events" for your custom functionality and contrib modules to react to. See also, [Commerce Without Rules]((https://docs.drupalcommerce.org/commerce2/developer-guide/adapting-from-1x/commerce-without-rules)).
 
 The events use Drupal's standard [Symphony based event system](https://www.drupal.org/docs/8/creating-custom-modules/subscribe-to-and-dispatch-events#s-event-systems-overview). So a solid understanding of that is useful. Events are defined in `\Drupal\commerce_cart\Event\CartEvents`.
 
 Events provided:
 - `CartEvents::CART_EMPTY`: Fired after emptying the cart.
-- `CartEvents::CART_ENTITY_ADD`: Fired after adding a purchaseable entity to the cart.
-- `CartEvents::CART_ORDER_ITEM_UPDATE`: Fired after an order item.
+- `CartEvents::CART_ENTITY_ADD`: Fired after adding a purchasable entity to the cart.
+- `CartEvents::CART_ORDER_ITEM_UPDATE`: Fired after updating an order item.
 - `CartEvents::CART_ORDER_ITEM_REMOVE`: Fired after removing an order item form the cart.
-- `CartEvents::CART_ITEM_COMPARISON_FIELDS`: Fired when altering the list of comparison fields.
+- `CartEvents::CART_ITEM_COMPARISON_FIELDS`: Fired when altering the list of comparison fields - comparison fields is how Drupal commerce determines when you add an item to the cart if it can be combined with an existing item.
 
 ## Basic Example
 
-This adds a related product when a specified product is added. A reference field - ala commerce_pado is probably better under most situations.
+This adds a related product when a specified product is added. For the purpose of this example, we used a hardcoded entity ID of a specific Product Variation. Under most situations dynamic IDs that an administrator can configure per product/variation will allow more control. See also, [Commerce Product Add-on](https://www.drupal.org/project/commerce_pado) contrib module.
 
 `modulename.services.yml`
 ```yaml
 services:
   modulename.event_subscriber:
-    class: Drupal\modulename\EventSubscriber\EventSubscriber
+    class: Drupal\modulename\EventSubscriber\CartEventSubscriber
     arguments: ['@messenger', '@commerce_cart.cart_manager']
     tags:
       - { name: event_subscriber }
 ```
 
-`EventSubscriber.php`
+`CartEventSubscriber.php`
 ```php
 <?php
 
@@ -46,7 +46,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 /**
  * Cart Event Subscriber.
  */
-class EventSubscriber implements EventSubscriberInterface {
+class CartEventSubscriber implements EventSubscriberInterface {
 
   /**
    * The messenger.
