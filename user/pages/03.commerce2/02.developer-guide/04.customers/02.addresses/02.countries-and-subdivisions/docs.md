@@ -38,7 +38,7 @@ class LimitCountriesEventSubscriber implements EventSubscriberInterface {
 Don't forget to include this event subscriber in your custom module's `services.yml` file and rebuild caches.
 
 #### How do I set the default country for customers?
-*Default country* is a setting for the default *Address* widget. To set the default country for customers, you need to configure the *Form display* for the *Customer* profile type. This administration page is located at `/admin/config/people/profiles/manage/customer/form-display`. Click on the gear for the Address field to alter the setting:
+*Default country* is a field setting for *Address* fields. To set the default country for customers, you need to configure the *Address* field for the *Customer* profile type. This administration page is located at `/admin/config/people/profile-types/manage/customer/fields/profile.customer.address`. Select the default country from the list of options:
 
 ![Admin ui for default country](../../images/address-countries-1.png)
 
