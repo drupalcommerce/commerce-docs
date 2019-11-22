@@ -6,10 +6,17 @@ taxonomy:
 
 ** Important: You must use Composer to update Drupal Core, Drupal Commerce, and all contributed modules. Otherwise, your site will break. Also, you should always back up your site before starting an update procedure. See [Concept: Data Backups documentation] in the Drupal 8 User Guide for more information. **
 
-To update to the newest version of Drupal Commerce, you will need to
-update with Composer.
+To update to the newest version of Drupal Commerce, you will need to update with Composer.
 
-Run the following command. Until [Change submodule metadata to use '*' instead of 'self.version'](https://www.drupal.org/project/project_composer/issues/2948861) is fixed, this lengthy command is needed.
+Due to the way Drupal.org manages package information, you need to run one of the following commands. Until [Change submodule metadata to use '*' instead of 'self.version'](https://www.drupal.org/project/project_composer/issues/2948861) is fixed, this is needed.
+
+To update Drupal Commerce and all contributed projects extending Drupal Commerce:
+
+```bash
+composer update --with-dependencies drupal/commerce*
+```
+
+If you want to *only* upgrade Drupal Commerce, run this command:
 
 ```bash
 composer update --with-dependencies drupal/commerce drupal/commerce_price drupal/commerce_product drupal/commerce_order drupal/commerce_payment drupal/commerce_payment_example drupal/commerce_checkout drupal/commerce_tax drupal/commerce_cart drupal/commerce_log drupal/commerce_store drupal/commerce_promotion drupal/commerce_number_pattern
