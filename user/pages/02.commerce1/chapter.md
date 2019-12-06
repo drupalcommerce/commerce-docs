@@ -6,10 +6,6 @@ taxonomy:
 
 # Commerce 1.x
 
-For Drupal Commerce 1.x on over to [DrupalCommerce.org]. 
-
-On the site you will find a nice overview of the original 1.x build and links to all the relevant user guides. Linked below for your convenience as well.
-
 -  [User Guide] - A site builder guide with lots of screenshots that
    covers installation, order management, product creation, and a myriad
    of other topics.
