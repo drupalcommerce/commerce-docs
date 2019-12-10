@@ -13,7 +13,7 @@ Due to the way Drupal.org manages package information, you need to run one of th
 To update Drupal Commerce and all contributed projects extending Drupal Commerce:
 
 ```bash
-composer update --with-dependencies drupal/commerce*
+composer update --with-dependencies "drupal/commerce*"
 ```
 
 If you want to *only* upgrade Drupal Commerce, run this command:
