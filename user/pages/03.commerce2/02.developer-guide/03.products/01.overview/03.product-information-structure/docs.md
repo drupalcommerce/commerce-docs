@@ -154,7 +154,7 @@ The following diagram illustrates the relationships amoung product attributes, p
 ![Product Information Structure](../../images/attribute_entity_relationships.png)
 
 ##### Product attribute field manager service
-**ProductAttributeFieldManager** is a service the manages attribute fields. Attribute fields are the entity reference fields that store values of a specific attribute on the product variation. See `Drupal\commerce_product\ProductAttributeFieldManagerInterface` for information on the methods provided by this service. For product variation entities, it is used by several *getter* method related to product attributes:
+**ProductAttributeFieldManager** is a service that manages attribute fields. Attribute fields are the entity reference fields that store values of a specific attribute on the product variation. See `Drupal\commerce_product\ProductAttributeFieldManagerInterface` for information on the methods provided by this service. For product variation entities, it is used by several *getter* method related to product attributes:
 - `getAttributeFieldNames()` gets the names of the variation's attribute fields.
 - `getAttributeValueIds()` gets the variation's attribute value IDs, keyed by field name.
 - `getAttributeValueId($field_name)` gets the variation's attribute value ID for the given field name.

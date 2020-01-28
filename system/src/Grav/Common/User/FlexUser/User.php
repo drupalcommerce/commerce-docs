@@ -9,6 +9,7 @@
 
 namespace Grav\Common\User\FlexUser;
 
+use Grav\Common\Data\Blueprint;
 use Grav\Common\Grav;
 use Grav\Common\Media\Interfaces\MediaCollectionInterface;
 use Grav\Common\Page\Media;
@@ -21,6 +22,7 @@ use Grav\Framework\File\Formatter\JsonFormatter;
 use Grav\Framework\File\Formatter\YamlFormatter;
 use Grav\Framework\Flex\FlexDirectory;
 use Grav\Framework\Flex\FlexObject;
+use Grav\Framework\Flex\Storage\FileStorage;
 use Grav\Framework\Flex\Traits\FlexAuthorizeTrait;
 use Grav\Framework\Flex\Traits\FlexMediaTrait;
 use Grav\Framework\Form\FormFlashFile;
@@ -382,6 +384,31 @@ class User extends FlexObject implements UserInterface, MediaManipulationInterfa
     }
 
     /**
+     * @param string $name
+     * @return Blueprint
+     */
+    public function getBlueprint(string $name = '')
+    {
+        $blueprint = clone parent::getBlueprint($name);
+
+        $blueprint->addDynamicHandler('flex', function (array &$field, $property, array &$call) {
+            $params = (array)$call['params'];
+            $method = array_shift($params);
+
+            if (method_exists($this, $method)) {
+                $value = $this->{$method}(...$params);
+                if (\is_array($value) && isset($field[$property]) && \is_array($field[$property])) {
+                    $field[$property] = array_merge_recursive($field[$property], $value);
+                } else {
+                    $field[$property] = $value;
+                }
+            }
+        });
+
+        return $blueprint->init();
+    }
+
+    /**
      * Return unmodified data as raw string.
      *
      * NOTE: This function only returns data which has been saved to the storage.
@@ -420,6 +447,15 @@ class User extends FlexObject implements UserInterface, MediaManipulationInterfa
      */
     public function save()
     {
+        // TODO: We may want to handle this in the storage layer in the future.
+        $key = $this->getStorageKey();
+        if (!$key || strpos($key, '@@')) {
+            $storage = $this->getFlexDirectory()->getStorage();
+            if ($storage instanceof FileStorage) {
+                $this->setStorageKey($this->getKey());
+            }
+        }
+
         $password = $this->getProperty('password');
         if (null !== $password) {
             $this->unsetProperty('password');
@@ -429,6 +465,20 @@ class User extends FlexObject implements UserInterface, MediaManipulationInterfa
         }
 
         return parent::save();
+    }
+
+    public function isAuthorized(string $action, string $scope = null, UserInterface $user = null): bool
+    {
+        if (null === $user) {
+            /** @var UserInterface $user */
+            $user = Grav::instance()['user'] ?? null;
+        }
+
+        if ($user instanceof User && $user->getStorageKey() === $this->getStorageKey()) {
+            return true;
+        }
+
+        return parent::isAuthorized($action, $scope, $user);
     }
 
     /**

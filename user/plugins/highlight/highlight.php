@@ -1,9 +1,8 @@
 <?php
 namespace Grav\Plugin;
 
-use \Grav\Common\Plugin;
-use \Grav\Common\Grav;
-use \Grav\Common\Page\Page;
+use Grav\Common\Plugin;
+use Grav\Common\Page\Interfaces\PageInterface;
 
 class HighlightPlugin extends Plugin
 {
@@ -29,7 +28,7 @@ class HighlightPlugin extends Plugin
 
         $defaults = (array) $this->config->get('plugins.highlight');
 
-        /** @var Page $page */
+        /** @var PageInterface $page */
         $page = $this->grav['page'];
         if (isset($page->header()->highlight)) {
             $this->config->set('plugins.highlight', array_merge($defaults, $page->header()->highlight));

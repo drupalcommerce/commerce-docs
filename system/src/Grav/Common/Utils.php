@@ -13,6 +13,7 @@ use Grav\Common\Helpers\Truncator;
 use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Markdown\Parsedown;
 use Grav\Common\Markdown\ParsedownExtra;
+use Grav\Common\Page\Markdown\Excerpts;
 use RocketTheme\Toolbox\Event\Event;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
 
@@ -27,55 +28,103 @@ abstract class Utils
     /**
      * Simple helper method to make getting a Grav URL easier
      *
-     * @param string $input
+     * @param string|object $input
      * @param bool $domain
+     * @param bool $fail_gracefully
      * @return bool|null|string
      */
-    public static function url($input, $domain = false)
+    public static function url($input, $domain = false, $fail_gracefully = false)
     {
-        if (!trim((string)$input)) {
-            $input = '/';
+        if ((!is_string($input) && !method_exists($input, '__toString')) || !trim($input)) {
+            if ($fail_gracefully) {
+                $input = '/';
+            } else {
+                return false;
+            }
         }
 
-        if (Grav::instance()['config']->get('system.absolute_urls', false)) {
-            $domain = true;
-        }
+        $input = (string)$input;
 
-        if (Grav::instance()['uri']->isExternal($input)) {
+        if (Uri::isExternal($input)) {
             return $input;
         }
 
+        $grav = Grav::instance();
+
         /** @var Uri $uri */
-        $uri = Grav::instance()['uri'];
+        $uri = $grav['uri'];
 
-        $root = $uri->rootUrl();
-        $input = Utils::replaceFirstOccurrence($root, '', $input);
-
-        $input = ltrim((string)$input, '/');
-
-        if (Utils::contains((string)$input, '://')) {
+        if (static::contains((string)$input, '://')) {
             /** @var UniformResourceLocator $locator */
-            $locator = Grav::instance()['locator'];
+            $locator = $grav['locator'];
 
             $parts = Uri::parseUrl($input);
 
-            if ($parts) {
-                $resource = $locator->findResource("{$parts['scheme']}://{$parts['host']}{$parts['path']}", false);
+            if (is_array($parts)) {
+                // Make sure we always have scheme, host, port and path.
+                $scheme = $parts['scheme'] ?? '';
+                $host = $parts['host'] ?? '';
+                $port = $parts['port'] ?? '';
+                $path = $parts['path'] ?? '';
 
-                if (isset($parts['query'])) {
-                    $resource = $resource . '?' . $parts['query'];
+                if ($scheme && !$port) {
+                    // If URL has a scheme, we need to check if it's one of Grav streams.
+                    if (!$locator->schemeExists($scheme)) {
+                        // If scheme does not exists as a stream, assume it's external.
+                        return str_replace(' ', '%20', $input);
+                    }
+
+                    // Attempt to find the resource (because of parse_url() we need to put host back to path).
+                    $resource = $locator->findResource("{$scheme}://{$host}{$path}", false);
+
+                    if ($resource === false) {
+                        if (!$fail_gracefully) {
+                            return false;
+                        }
+
+                        // Return location where the file would be if it was saved.
+                        $resource = $locator->findResource("{$scheme}://{$host}{$path}", false, true);
+                    }
+
+                } elseif ($host || $port) {
+                    // If URL doesn't have scheme but has host or port, it is external.
+                    return str_replace(' ', '%20', $input);
                 }
+
+                if (!empty($resource)) {
+                    // Add query string back.
+                    if (isset($parts['query'])) {
+                        $resource .= '?' . $parts['query'];
+                    }
+
+                    // Add fragment back.
+                    if (isset($parts['fragment'])) {
+                        $resource .= '#' . $parts['fragment'];
+                    }
+                }
+
             } else {
                 // Not a valid URL (can still be a stream).
                 $resource = $locator->findResource($input, false);
             }
 
-
         } else {
+            $root = $uri->rootUrl();
+
+            if (static::startsWith($input, $root)) {
+                $input = static::replaceFirstOccurrence($root, '', $input);
+            }
+
+            $input = ltrim($input, '/');
+
             $resource = $input;
         }
 
+        if (!$fail_gracefully && $resource === false) {
+            return false;
+        }
 
+        $domain = $domain ?: $grav['config']->get('system.absolute_urls', false);
 
         return rtrim($uri->rootUrl($domain), '/') . '/' . ($resource ?? '');
     }
@@ -272,6 +321,35 @@ abstract class Utils
     public static function mergeObjects($obj1, $obj2)
     {
         return (object)array_merge((array)$obj1, (array)$obj2);
+    }
+
+    /**
+     * Lowercase an entire array. Useful when combined with `in_array()`
+     *
+     * @param array $a
+     * @return array|false
+     */
+    public static function arrayLower(Array $a)
+    {
+        return array_map('mb_strtolower', $a);
+    }
+
+    /**
+     * Simple function to remove item/s in an array by value
+     *
+     * @param $search array
+     * @param $value string|array
+     * @return array
+     */
+    public static function arrayRemoveValue(Array $search, $value)
+    {
+        foreach ((array) $value as $val) {
+            $key = array_search($val, $search);
+            if ($key !== false) {
+                unset($search[$key]);
+            }
+        }
+        return $search;
     }
 
     /**
@@ -974,20 +1052,16 @@ abstract class Utils
      *
      * @param string $string The path
      *
-     * @return bool
+     * @return bool|string Either false or the language
      *
      */
     public static function pathPrefixedByLangCode($string)
     {
-        if (strlen($string) <= 3) {
-            return false;
-        }
-
         $languages_enabled = Grav::instance()['config']->get('system.languages.supported', []);
         $parts = explode('/', trim($string, '/'));
 
         if (count($parts) > 0 && in_array($parts[0], $languages_enabled)) {
-            return true;
+            return $parts[0];
         }
 
         return false;
@@ -1060,12 +1134,9 @@ abstract class Utils
      */
     private static function generateNonceString($action, $previousTick = false)
     {
-        $username = '';
-        if (isset(Grav::instance()['user'])) {
-            $user = Grav::instance()['user'];
-            $username = $user->username;
-        }
+        $grav = Grav::instance();
 
+        $username = isset($grav['user']) ? $grav['user']->username : '';
         $token = session_id();
         $i = self::nonceTick();
 
@@ -1073,7 +1144,7 @@ abstract class Utils
             $i--;
         }
 
-        return ($i . '|' . $action . '|' . $username . '|' . $token . '|' . Grav::instance()['config']->get('security.salt'));
+        return ($i . '|' . $action . '|' . $username . '|' . $token . '|' . $grav['config']->get('security.salt'));
     }
 
     /**
@@ -1287,7 +1358,7 @@ abstract class Utils
     }
 
     /**
-     * Get's path based on a token
+     * Get path based on a token
      *
      * @param string $path
      * @param PageInterface|null $page
@@ -1396,7 +1467,7 @@ abstract class Utils
         $pow = min($pow, count($units) - 1);
 
         // Uncomment one of the following alternatives
-         $bytes /= pow(1024, $pow);
+        $bytes /= 1024 ** $pow;
         // $bytes /= (1 << (10 * $pow));
 
         return round($bytes, $precision) . ' ' . $units[$pow];
@@ -1455,19 +1526,28 @@ abstract class Utils
      *
      * @param string $string
      *
-     * @param bool $block  Block or Line processing
+     * @param bool $block Block or Line processing
+     * @param null $page
      * @return string
+     * @throws \Exception
      */
-    public static function processMarkdown($string, $block = true)
+    public static function processMarkdown($string, $block = true, $page = null)
     {
-        $page     = Grav::instance()['page'] ?? null;
-        $defaults = Grav::instance()['config']->get('system.pages.markdown');
+        $grav = Grav::instance();
+        $page     = $page ?? $grav['page'] ?? null;
+        $defaults = [
+            'markdown' => $grav['config']->get('system.pages.markdown', []),
+            'images' => $grav['config']->get('system.images', [])
+        ];
+        $extra = $defaults['markdown']['extra'] ?? false;
+
+        $excerpts = new Excerpts($page, $defaults);
 
         // Initialize the preferred variant of Parsedown
-        if ($defaults['extra']) {
-            $parsedown = new ParsedownExtra($page, $defaults);
+        if ($extra) {
+            $parsedown = new ParsedownExtra($excerpts);
         } else {
-            $parsedown = new Parsedown($page, $defaults);
+            $parsedown = new Parsedown($excerpts);
         }
 
         if ($block) {
@@ -1486,12 +1566,11 @@ abstract class Utils
      * @param int $prefix
      *
      * @return string
-     * @throws \InvalidArgumentException if provided an invalid IP
      */
     public static function getSubnet($ip, $prefix = 64)
     {
         if (!filter_var($ip, FILTER_VALIDATE_IP)) {
-            throw new \InvalidArgumentException('Invalid IP: ' . $ip);
+            return $ip;
         }
 
         // Packed representation of IP
@@ -1517,5 +1596,24 @@ abstract class Utils
         $subnet = inet_ntop($ip & $mask);
 
         return $subnet;
+    }
+
+    /**
+     * Wrapper to ensure html, htm in the front of the supported page types
+     *
+     * @param array|null $defaults
+     * @return array|mixed
+     */
+    public static function getSupportPageTypes(array $defaults = null)
+    {
+        $types = Grav::instance()['config']->get('system.pages.types', $defaults);
+
+        // remove html/htm
+        $types = static::arrayRemoveValue($types, ['html', 'htm']);
+
+        // put them back at the front
+        $types = array_merge(['html', 'htm'], $types);
+
+        return $types;
     }
 }

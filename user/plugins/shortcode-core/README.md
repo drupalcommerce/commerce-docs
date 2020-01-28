@@ -158,17 +158,23 @@ or
 [/div]
 ```
 
+#### Headers
+
+Allows you to add `id` and `class` attributes to HTML `h1` through `h6` tags:
+
+```
+[h1 class="major"]This is my title[/h1]
+```
 
 #### Span
 
-Allows you to wrap markdown in an HTML `span` tag that supports both `id` and `classes` attributes
+Allows you to wrap markdown in an HTML `span` tag that supports both `id` and `class` attributes
 
 ```
 [span class="text-center"]
 This text is **centered** aligned
 [/span]
 ```
-
 
 #### Columns
 
@@ -387,6 +393,26 @@ Genie dahin einem ein gib geben allen.
 [fa icon=fa-circle-o-notch extras=fa-spin,fa-3x,fa-fw,margin-bottom /] The full monty! - [See FontAwesome Examples](https://fortawesome.github.io/Font-Awesome/examples/)
 ```
 
+#### Details/Summary
+
+The `<details>` element provides a simple show/hide behaviour without JavaScript, and can optionally contain a `<summary>` element that is always shown. Clicking on the summary text toggles the visibility of the content, and when a summary is not provided, it defaults to "Details". The element can be used to provide extra details, or can be combined into an accordion-like structure.
+
+```
+[details]
+Lorem ipsum dolor sit amet...
+[/details]
+
+[details="Summary text"]
+Lorem ipsum dolor sit amet...
+[/details]
+
+[details summary="Summary text" class="accordion"]
+Lorem ipsum dolor sit amet...
+[/details]
+```
+
+**Note:** The show/hide behaviour is not supported in IE 11 or Edge 18, and the element will be permanently open. You can check the current status of browser compatibility at [Can I Use](https://caniuse.com/#search=details).
+
 ## Using Shortcodes in Twig
 
 You can now use shortcodes in Twig templates and process them with the `|shortcodes` filter. For example:
@@ -396,15 +422,114 @@ You can now use shortcodes in Twig templates and process them with the `|shortco
 {{ twig_text|shortcodes }}
 ```
 
-## Developing Shortcode Plugins
+## Custom Shortcodes
 
-The **Shortcode Core** plugin is developed on the back of the [Thunderer Advanced Shortcode Engine](https://github.com/thunderer/Shortcode) and as such loads the libraries and classes required to build third party shortcode plugins.  Also we introduce a new event called `onShortcodeHandlers()` that allows a 3rd party plugin to create and add their own custom handlers.  These are then all processed by the core plugin in one shot.
+### Simple Way
+
+First, configure a directory from which custom shortcodes are loaded. Edit `user/config/plugins/shortcode-core.yaml` like follows (create it if it does not exist):
+
+```yaml
+custom_shortcodes: '/user/custom/shortcodes'
+```
+
+To add a custom shortcode, create a PHP file that defines a new shortcode class. For example, to create a shortcode for ~~strikethrough~~ text, save the following code as `user/custom/shortcodes/StrikeShortcode.php`:
+
+```php
+<?php
+namespace Grav\Plugin\Shortcodes;
+
+use Thunder\Shortcode\Shortcode\ShortcodeInterface;
+
+class StrikeShortcode extends Shortcode
+{
+    public function init()
+    {
+        $this->shortcode->getHandlers()->add('strike', function(ShortcodeInterface $sc) {
+            return '<del>'.$sc->getContent().'</del>';
+        });
+    }
+}
+```
+
+Note that the class name (`StrikeShortcode`) must match the file name for the shortcode to work.
+
+`[strike]text[/strike]` should now produce strikethrough text.
+
+### As a Custom Plugin
+
+The more flexible approach is to create a custom plugin.
+
+The **Shortcode Core** plugin is developed on the back of the [Thunderer Advanced Shortcode Engine](https://github.com/thunderer/Shortcode) and as such loads the libraries and classes required to build third party shortcode plugins.
+
+We introduced a new event called `onShortcodeHandlers()` that allows a 3rd party plugin to create and add their own custom handlers.  These are then all processed by the core plugin in one shot.
+
+```php
+    public static function getSubscribedEvents()
+    {
+        return [
+            'onShortcodeHandlers' => ['onShortcodeHandlers', 0]
+        ];
+    }
+```
+
+Then you just need to listen to the event:
+
+```php
+    public function onShortcodeHandlers()
+    {
+        $this->grav['shortcode']->registerAllShortcodes(__DIR__.'/shortcodes');
+    }
+```
+
+Lastly create your shortcode in the `user/plugins/my-plugin/shortcodes/` folder, in this example we created a simple `[red][/red]` shortcode as `RedShortcode.php`:
+
+```php
+<?php
+namespace Grav\Plugin\Shortcodes;
+
+use Thunder\Shortcode\Shortcode\ShortcodeInterface;
+
+class RedShortcode extends Shortcode
+{
+    public function init()
+    {
+        $this->shortcode->getHandlers()->add('red', function(ShortcodeInterface $sc) {
+            return '<span style="color:red;">'.$sc->getContent().'</span>';
+        });
+    }
+}
+```
 
 > If you have not already done so, I suggest reading the [Grav Plugin Tutorial](http://learn.getgrav.org/plugins/plugin-tutorial) first to gain a full understanding of what you need to develop a Grav plugin.
 
-The best way to see how to create a new shortcode-based plugin is to look at the **Shortcode UI** plugin that extends the **Shortcode Core** by adding more shortcodes.  It also makes use of Twig to handle processing and has some more advanced shortcode techniques.
+The best way to see how to create a new shortcode-based plugins is to look at the **Shortcode UI** plugin that extends the **Shortcode Core** by adding more shortcodes.  It also makes use of Twig to handle processing and has some more advanced shortcode techniques.
 
 * Core Plugin: https://github.com/getgrav/grav-plugin-shortcode-ui/blob/develop/shortcode-ui.php
 * Tabs Shortcode Example: https://github.com/getgrav/grav-plugin-shortcode-ui/blob/develop/shortcodes/TabsShortcode.php
 * Color Shortcode Example: https://github.com/getgrav/grav-plugin-shortcode-core/blob/develop/shortcodes/ColorShortcode.php
 * Section Shortcode Example: https://github.com/getgrav/grav-plugin-shortcode-core/blob/develop/shortcodes/SectionShortcode.php
+* Section Prism Highlight Example: https://github.com/trilbymedia/grav-plugin-prism-highlight/blob/develop/shortcodes/PrismShortcode.php
+
+## Processing Shortcodes Before or After Markdown processing
+
+There are basically two ways of processing a shortcode:
+
+1. After markdown is processed
+2. Before markdown is processed
+
+These two approaches are important because, for the most part, shortcodes make more sense when they can 'wrap' markdown, so they process **after** markdown.
+
+For example a `[div][/div]` shortcode would be useless if it ran before markdown is processed because it would add the relevant HTML `<div></div>` tags, and then the markdown parser would promptly **skip** all markdown processing between those divs because it won't process markdown **inside** HTML. So this shortcode and most others run after markdown processing has already occurred using this approach:
+
+```php
+$this->shortcode->getHandlers()->add('div', function(ShortcodeInterface $sc) { ... }
+```
+Notice the `getHandlers()` call is the standard way to add a handler.
+
+However, there are situations when you need to process the shortcode **before** the markdown processing to ensure markdown **is skipped**, like in the example of a code block. This is why in the [Prism Highlighter](https://github.com/trilbymedia/grav-plugin-prism-highlight) plugin, we use this approach to defining the shortcode:
+
+```php
+$this->shortcode->getRawHandlers()->add('prism', function(ProcessedShortcode $sc) { ... }
+```
+
+The difference here is it uses `getRawHandlers()` to ensure the handler is processed to the content in the _raw_ state.

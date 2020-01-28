@@ -83,7 +83,7 @@ A validator is provided that ensures that the specified state is valid (exists
 in the workflow and is in the allowed transitions).
 
 [module on drupal.org]: https://www.drupal.org/project/state_machine
-[Workflow]: https://github.com/bojanz/state_machine/blob/8.x-1.x/src/Plugin/Workflow/WorkflowInterface.php
-[WorkflowGroup]: https://github.com/bojanz/state_machine/blob/8.x-1.x/src/Plugin/WorkflowGroup/WorkflowGroupInterface.php
-[guards]: https://github.com/bojanz/state_machine/blob/8.x-1.x/src/Guard/GuardInterface.php
-[StateItem]: https://github.com/bojanz/state_machine/blob/8.x-1.x/src/Plugin/Field/FieldType/StateItem.php
+[Workflow]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Plugin/Workflow/WorkflowInterface.php
+[WorkflowGroup]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Plugin/WorkflowGroup/WorkflowGroupInterface.php
+[guards]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Guard/GuardInterface.php
+[StateItem]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Plugin/Field/FieldType/StateItem.php

@@ -78,6 +78,7 @@ Here is the complete list of service tags for all Resolvers provided by Drupal C
 | OrderType    | commerce_order.order_type_resolver |
 | Price        | commerce_price.price_resolver |
 | Store        | commerce_store.store_resolver |
+| TaxRate      | commerce_tax.tax_rate_resolver |
 
 #### Resolver interfaces
 Every type of Resolver defines its own interface.  Each Resolver interface defines a single method: `resolve()`. This is the method that returns the "answer" we're trying to find. Different types of Resolvers will require different parameters. For example, a Checkout flow resolver requires an *Order* entity; a Tax rate resolver requires a *Tax zone* entity, an *Order item* entity, and a *Customer profile* entity. Also, different types of resolvers will return different types of values with their `resolve()` methods. For example, a *Country* resolver returns a `\Drupal\commerce\Country` object; a *Locale* resolver returns a ` \Drupal\commerce\Locale` object. If a particular Resolver cannot provide a result, it returns `NULL`. When that happens, the next Resolver in the chain will be called.

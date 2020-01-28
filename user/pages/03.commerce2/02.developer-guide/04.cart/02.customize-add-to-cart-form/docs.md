@@ -1,5 +1,5 @@
 ---
-title: Customizing the add to cart form
+title: Customizing the shopping cart
 taxonomy:
     category: docs
 ---

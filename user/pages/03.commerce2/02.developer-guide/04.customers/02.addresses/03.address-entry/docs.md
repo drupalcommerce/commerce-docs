@@ -92,6 +92,9 @@ function mymodule_customize_address($element, $form_state) {
 ![Customized street address](../../images/address-entry-2.png)
 
 ### Setting initial values for address field properties
+**Note: onInitialValues is deprectated and no longer fires since version 1.5** 
+@see the [AddressEvents](https://git.drupalcode.org/project/address/blob/8.x-1.x/src/Event/AddressEvents.php) documentation. 
+
 The *Address* module provides an event that can be used to set initial values for address field properties. In this example, we'll create an event subscriber to set the default country to *Australia*, the suburb to *New South Wales*, and the city to *Sydney*.
 
 ![Australia initial values](../../images/address-entry-5.png)
