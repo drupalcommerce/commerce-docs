@@ -14,7 +14,7 @@ There are two kinds of payment gateways that payment providers use: *On-site* an
 * **On-site:** You can think of on-site payment as having the credit card field on your website. The software is specifically designed to not let you store that information, only to send it to a payment provider. The customer never leaves your site during the payment processing.
 * **Off-site:** In this form of payment, you send your customers, with order details, off to another site that will process the transactions and then send them back (hopefully) to your site to complete the checkout process. You provide the payment provider the url for the return page on your site.
 
-For a list of payment gateways currently supported by Drupal Commerce, see the [Available payment gateways documentation](05.available-gateways).
+For a list of payment gateways currently supported by Drupal Commerce, see the [Available payment gateways documentation](available-gateways).
 
 The Drupal Commerce payment module also supports a third type of payment gateway: **Manual**. A *manual* payment gateway is one which does *not* interface with a payment provider. Instead, they can be used to allow payments made "in the real world". For example, a *manual* payment gateway could be created to provide a "Bill Me" option for pre-authorized customers. Those customers could complete their orders without paying and then pay by cash, check, bank transfer, etc. after receiving an invoice for the order.
 
