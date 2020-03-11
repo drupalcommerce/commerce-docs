@@ -6,7 +6,7 @@ taxonomy:
 
 ! We need help filling out this section! Feel free to follow the *edit this page* link and contribute.
 
-Breif tutorial on showing quantity, full explaination of customizing add to cart next page
+Brief tutorial on showing quantity, full explanation of customizing add to cart next page.
 
 
 Previously we learned how to create a product catalog.

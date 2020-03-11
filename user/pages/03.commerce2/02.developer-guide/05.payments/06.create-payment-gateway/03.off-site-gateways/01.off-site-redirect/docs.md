@@ -88,14 +88,14 @@ $data['language'] = $configuration['language'];
 
 // Payment data.
 $data['currency'] = $payment->getAmount()->getCurrencyCode();
-$data['total'] => $payment->getAmount()->getNumber();
+$data['total'] = $payment->getAmount()->getNumber();
 $data['variables[payment_gateway]'] = $payment->getPaymentGatewayId();
 $data['variables[order]'] = $payment->getOrderId();
 
 // Order and billing address.
 $order = $payment->getOrder();
 $billing_address = $order->getBillingProfile()->get('address');
-$data['name'] = $billing_address->->getGivenName() . ' ' $billing_address->getFamilyName();
+$data['name'] = $billing_address->getGivenName() . ' ' . $billing_address->getFamilyName();
 $data['city'] = $billing_address->getLocality();
 $data['state'] = $billing_address->getAdministrativeArea()
 
@@ -128,7 +128,7 @@ The last parameter we need to pass into `buildRedirectForm()` is the actual `$re
       $form_state,
       'https://payment.my_payment_provider.net',
       $data,
-      PaymentOffsiteForm::REDIRECT_POST
+      self::REDIRECT_POST
     );
   }
 }

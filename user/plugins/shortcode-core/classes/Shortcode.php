@@ -2,14 +2,24 @@
 
 namespace Grav\Plugin\Shortcodes;
 
+use Grav\Common\Config\Config;
 use Grav\Common\Grav;
+use Grav\Common\Twig\Twig;
+use Grav\Plugin\ShortcodeManager;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
 class Shortcode
 {
+    /** @var ShortcodeManager */
     protected $shortcode;
+
+    /** @var Grav  */
     protected $grav;
+
+    /** @var Config */
     protected $config;
+
+    /** @var Twig */
     protected $twig;
 
     /**
@@ -28,7 +38,7 @@ class Shortcode
      */
     public function init()
     {
-        $this->shortcode->handlers->add('u', function(ShortcodeInterface $shortcode) {
+        $this->shortcode->getHandlers()->add('u', function(ShortcodeInterface $shortcode) {
             return $shortcode->getContent();
         });
     }
@@ -48,9 +58,9 @@ class Shortcode
         return $this->config->get('plugins.shortcode-core.parser');
     }
 
-    public function getBbCode($sc)
+    public function getBbCode(ShortcodeInterface $sc, $default = null)
     {
-        $code = null;
+        $code = $default;
 
         if ($this->getParser() === 'wordpress') {
             $params = $sc->getParameters();
@@ -61,6 +71,7 @@ class Shortcode
         } else {
             $code = $sc->getBbCode();
         }
+
         return $code;
     }
 

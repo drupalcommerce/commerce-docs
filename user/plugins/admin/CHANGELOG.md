@@ -1,3 +1,53 @@
+# v1.9.10
+## 09/19/2019
+
+1. [](#bugfix)
+    * Fixed `Badly encoded JSON data` warning when uploading files [grav#2663](https://github.com/getgrav/grav/issues/2663)
+
+# v1.9.9
+## 08/21/2019
+
+1. [](#bugfix)
+    * Fixed regression with files in admin not allowing types other than images [#1737](https://github.com/getgrav/grav-plugin-admin/issues/1737)
+    * Fixed preview link for non-images files in **Page Media** [#1727](https://github.com/getgrav/grav-plugin-admin/issues/1727)
+
+# v1.9.8
+## 08/11/2019
+
+1. [](#improved)
+    * Better support for `array` field into `list` field
+    * Attach `_list_index` to fields within list items so that the index/key is available
+1. [](#bugfix)
+    * Fixed 2FA regenerate for Flex Users
+    * Added missing closing </li> in language loops
+    * Fixed issue with nested `list` fields both utilizing the custom `key` functionality
+    * Fixed issue with `array` field nested in `list` that were losing their index order when the list reordered
+    * Fixed file form field failing resolution checks in certain circumstances
+    * Fixed issue with deleting files in config based YAML files
+    
+# v1.9.7
+## 06/21/2019
+
+1. [](#bugfix)
+    * Fixed issue with charts in dashboard where label would cut off [#1700](https://github.com/getgrav/grav-plugin-admin/issues/1700)
+    * Resetting a user's password clears the user's site access [grav#2528](https://github.com/getgrav/grav/issues/2528) 
+    * Fixed issue with permissions toggle [#1702](https://github.com/getgrav/grav-plugin-admin/issues/1702)
+
+# v1.9.6
+## 06/15/2019
+
+1. [](#bugfix)
+    * Fixed regression issue with `parents_levels` defaulting to `2`
+
+# v1.9.5
+## 06/14/2019
+
+1. [](#improved)
+    * Display error message if GPM class fails to initialize
+    * Better append/prepend logic that was breaking some layouts
+    * Default `backups` to an array if used outside of tools
+    * PSR 7 fixes
+
 # v1.9.4
 ## 05/09/2019
 
