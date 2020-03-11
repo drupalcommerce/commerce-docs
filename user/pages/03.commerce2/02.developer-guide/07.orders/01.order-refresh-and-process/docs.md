@@ -39,10 +39,47 @@ The order refresh process uses tagged services to identify services which should
 The following is an example for a module's `*.services.yml` file.
 
 ```
-  # Order refresh process to apply taxes.
+  # Order refresh process to apply a bonus adjustment to orders.
   # We set the priority very low so it calculates last.
-  commerce_demo.order_process.taxes:
-    class: Drupal\commerce_demo\OrderProcessor\ApplyTaxAdjustments
+  example_module.bonus_order_processor:
+    class: Drupal\example_module\OrderProcessor\BonusOrderProcessor
     tags:
       - { name: commerce_order.order_processor, priority: -300 }
+```
+
+```php
+<?php
+
+namespace Drupal\example_module\OrderProcessor;
+
+use Drupal\commerce_order\Adjustment;
+use Drupal\commerce_order\Entity\OrderInterface;
+use Drupal\commerce_order\OrderProcessorInterface;
+
+/**
+ * Applies a 5% discount per high quanity item because it is Thursday.
+ */
+class BonusOrderProcessor implements OrderProcessorInterface {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function process(OrderInterface $order) {
+    if (date('w') == 5) {
+      foreach ($order->getItems() as $order_item) {
+        if ($order_item->getQuantity() > 4) {
+          $adjustment_amount = $order_item->getTotalPrice()->multiply('0.05');
+          $order_item->addAdjustment(new Adjustment([
+            'type' => 'custom',
+            'label' => t('Thursday bonus'),
+            'amount' => $adjustment_amount->multiply('-1'),
+            'percentage' => '0.05',
+          ]));
+        }
+      }
+    }
+  }
+
+}
+
 ```
