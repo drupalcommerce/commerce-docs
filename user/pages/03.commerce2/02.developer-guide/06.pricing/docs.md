@@ -1,23 +1,24 @@
 ---
-title: Pricing
+title: Prices and currencies
 taxonomy:
     category: docs
 ---
 
->Summary TBD of the pricing documentation section.
+> Introductory text TBD
 
-#### [Overview](01.overview)
+#### [Prices](01.prices)
+- Price object and methods
+- Price Rounder service
+- Price field type
+
+#### [Currencies](02.currencies)
 - TBD
 
-#### [Prices and currencies](02.prices-and-currencies)
-- TBD
+#### [Formatting prices](03.formatting-prices)
+- Formatters: OrderTotalSummary, PriceCalculated
+- PriceCalculator service: price a purchasable entity would have if is was in an order
+- commerce-price-plain template
 
-#### [Order refresh](03.order-refresh)
-- TBD
-
-#### [Promotions](04.promotions)
-- TBD
-
-#### [Fees](05.fees)
-- TBD
-
+#### [Price resolvers](04.price-resolvers)
+- Explain pattern of chain resolvers.
+- Price resolving is base price; order refresh allows adding adjustments.
