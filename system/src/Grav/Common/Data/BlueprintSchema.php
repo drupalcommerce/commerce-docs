@@ -136,7 +136,7 @@ class BlueprintSchema extends BlueprintSchemaBase implements ExportInterface
     {
         $messages = $this->checkRequired($data, $rules);
 
-        foreach ($data as $key => $field) {
+        foreach ($data as $key => $child) {
             $val = $rules[$key] ?? $rules['*'] ?? null;
             $rule = \is_string($val) ? $this->items[$val] : null;
 
@@ -147,10 +147,10 @@ class BlueprintSchema extends BlueprintSchemaBase implements ExportInterface
                     continue;
                 }
 
-                $messages += Validation::validate($field, $rule);
-            } elseif (\is_array($field) && \is_array($val)) {
+                $messages += Validation::validate($child, $rule);
+            } elseif (\is_array($child) && \is_array($val)) {
                 // Array has been defined in blueprints.
-                $messages += $this->validateArray($field, $val);
+                $messages += $this->validateArray($child, $val);
             } elseif (isset($rules['validation']) && $rules['validation'] === 'strict') {
                 // Undefined/extra item.
                 throw new \RuntimeException(sprintf('%s is not defined in blueprints', $key));

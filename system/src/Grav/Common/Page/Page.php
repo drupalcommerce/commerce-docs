@@ -529,9 +529,9 @@ class Page implements PageInterface
             $headers['Last-Modified'] = $last_modified_date;
         }
 
-        // Calculate ETag based on the raw file
+        // Ask Grav to calculate ETag from the final content.
         if ($this->eTag()) {
-            $headers['ETag'] = '"' . md5($this->raw() . $this->modified()).'"';
+            $headers['ETag'] = '1';
         }
 
         // Set Vary: Accept-Encoding header
@@ -608,12 +608,12 @@ class Page implements PageInterface
                 return $content;
             }
 
-            return mb_strimwidth($content, 0, $size, '...', 'utf-8');
+            return mb_strimwidth($content, 0, $size, '...', 'UTF-8');
         }
 
         $summary = Utils::truncateHtml($content, $size);
 
-        return html_entity_decode($summary);
+        return html_entity_decode($summary, ENT_COMPAT | ENT_HTML401, 'UTF-8');
     }
 
     /**
@@ -659,7 +659,7 @@ class Page implements PageInterface
             // Load cached content
             /** @var Cache $cache */
             $cache = Grav::instance()['cache'];
-            $cache_id = md5('page' . $this->id());
+            $cache_id = md5('page' . $this->getCacheKey());
             $content_obj = $cache->fetch($cache_id);
 
             if (is_array($content_obj)) {
@@ -865,7 +865,7 @@ class Page implements PageInterface
     public function cachePageContent()
     {
         $cache = Grav::instance()['cache'];
-        $cache_id = md5('page' . $this->id());
+        $cache_id = md5('page' . $this->getCacheKey());
         $cache->save($cache_id, ['content' => $this->content, 'content_meta' => $this->content_meta]);
     }
 
@@ -1200,7 +1200,7 @@ class Page implements PageInterface
     /**
      * @return string
      */
-    protected function getCacheKey()
+    public function getCacheKey(): string
     {
         return $this->id();
     }
@@ -1694,9 +1694,9 @@ class Page implements PageInterface
             $metadata['generator'] = 'GravCMS';
 
             // Get initial metadata for the page
-            $metadata = array_merge($metadata, Grav::instance()['config']->get('site.metadata'));
+            $metadata = array_merge($metadata, Grav::instance()['config']->get('site.metadata', []));
 
-            if (isset($this->header->metadata)) {
+            if (isset($this->header->metadata) && is_array($this->header->metadata)) {
                 // Merge any site.metadata settings in with page metadata
                 $metadata = array_merge($metadata, $this->header->metadata);
             }
@@ -2009,6 +2009,10 @@ class Page implements PageInterface
      */
     public function id($var = null)
     {
+        if (null === $this->id) {
+            // We need to set unique id to avoid potential cache conflicts between pages.
+            $var = time() . md5($this->filePath());
+        }
         if ($var !== null) {
             // store unique per language
             $active_lang = Grav::instance()['language']->getLanguage() ?: '';
@@ -2824,7 +2828,7 @@ class Page implements PageInterface
         if ($pagination) {
             $params = $collection->params();
 
-            $limit = $params['limit'] ?? 0;
+            $limit = (int)($params['limit'] ?? 0);
             $start = !empty($params['pagination']) ? ($uri->currentPage() - 1) * $limit : 0;
 
             if ($limit && $collection->count() > $limit) {
