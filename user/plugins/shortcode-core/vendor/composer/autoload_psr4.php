@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Thunder\\Shortcode\\' => array($vendorDir . '/thunderer/shortcode/src'),
-    'Grav\\Plugin\\ShortcodeCore' => array($baseDir . '/classes'),
+    'Grav\\Plugin\\Shortcodes\\' => array($baseDir . '/classes/shortcodes'),
+    'Grav\\Plugin\\ShortcodeCore\\' => array($baseDir . '/classes/plugin'),
 );
