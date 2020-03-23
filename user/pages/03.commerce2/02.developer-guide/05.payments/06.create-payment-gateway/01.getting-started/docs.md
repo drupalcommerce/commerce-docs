@@ -152,7 +152,7 @@ Use the *defaultConfiguration()* method to return default values, corresponding 
 ```
 
 #### The buildConfigurationForm() method
-The *buildConfigurationForm* method is a standard Drupal form builder. To display the fields in the plugin congiguration form, add them as Form API fields in your buildConfigurationForm method. For *Commerce QuickPay*, we can use simple *textfield* elements for each of the settings. If you are unfamiliar with building forms in Drupal 8, the [Drupal 8 Form API reference] may be helpful.
+The *buildConfigurationForm* method is a standard Drupal form builder. To display the fields in the plugin configuration form, add them as Form API fields in your buildConfigurationForm method. For *Commerce QuickPay*, we can use simple *textfield* elements for each of the settings. If you are unfamiliar with building forms in Drupal 8, the [Drupal 8 Form API reference] may be helpful.
 
 ```php
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
