@@ -61,7 +61,7 @@ There are two widget options for the Purchased entity field:
 
 ![Add to cart form mode](../../images/add-to-cart-ui-5.jpg)
 
-Both widgets allow custom modules to apply their own filtering to the list of available product variations by subscribing to the `ProductEvents::FILTER_VARIATIONS` event. For more information on writing event subscribers in Drupal 8, [Drupal 8 Event Subscribers - the successor to alter hooks] and [Drupal 8: Hooks, Events, and Event Subscribers] are good introductory articles. The [Code Receipes](../10.code-recipes) section of the Products documentation also contains an example.
+Both widgets allow custom modules to apply their own filtering to the list of available product variations by subscribing to the `ProductEvents::FILTER_VARIATIONS` event. For more information on writing event subscribers in Drupal 8, [Drupal 8 Event Subscribers - the successor to alter hooks] and [Drupal 8: Hooks, Events, and Event Subscribers] are good introductory articles. The [Code Recipes](../10.code-recipes) section of the Products documentation also contains an example.
 
 ### Add the Add to cart form to a custom content type page
 
