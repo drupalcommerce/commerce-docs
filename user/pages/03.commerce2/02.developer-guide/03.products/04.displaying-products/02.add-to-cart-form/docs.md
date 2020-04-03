@@ -25,7 +25,7 @@ The *Add to cart form* is implemented as a variant of the Order item content ent
 
 > If you do not know which Order item type is used for your Product type, you can identify it by following these steps:
 1. Navigate to the Product types listing at `/admin/commerce/config/product-types`
-2. (after Issue #2911346 fixed) Click the product variation type link for your product type.
+2. Click the product variation type link for your product type.
 3. On the product variation type Edit form, identify the Order item type.
 
 Once you've identified the correct Order item type for your Product type, navigate to the *Manage form display* configuration form for that type and then select the *Add to cart* form display option.
