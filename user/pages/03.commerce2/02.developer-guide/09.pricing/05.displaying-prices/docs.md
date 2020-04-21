@@ -60,7 +60,7 @@ The Calculated price formatter uses the `PriceCalculator` service provided by th
 
 The Commerce Price module also provides the `commerce_price_format` Twig filter which renders a given Price value object based on its currency definition. Here is an example of using the Twig filter by utilizing the `inline_template` element type.
 
-```
+```php
 $element['price'] = [
   '#type' => 'inline_template',
   '#template' => '{{ price|commerce_price_format }}',
@@ -73,3 +73,18 @@ $element['price'] = [
 This would render as $10.25.
 
 This Twig filter can be used on both [Price value objects](../prices) and arrays with `number` and `currency_code` keys. It uses the [Currency formatter service](../formatting-prices) to render the Price based on its currency definition.
+
+## Rendering prices without Twig.
+
+The [Currency formatter service](../formatting-prices) can also be used independently to get a localized formatted price string for any [Price object](../prices). Here is an example for displaying, "The price is $5.95":
+
+```php
+$currency_formatter = \Drupal::service('commerce_price.currency_formatter');
+/** @var \Drupal\commerce_price\Price $price */
+$price = new Price('5.95', 'USD');
+$formatted_price = $currency_formatter->format($price->getNumber(), $price->getCurrencyCode());
+
+$price_output = t('The price is @amount', [
+	'@amount' => $formatted_price,
+]);
+```

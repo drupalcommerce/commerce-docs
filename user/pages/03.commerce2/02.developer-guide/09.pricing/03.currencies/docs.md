@@ -24,7 +24,7 @@ NumberFormatter and provide currency, country, language data.
 
 ![Currency Landing Page](../images/currency-landingpage.png)
 
-###Currency entity
+### Currency entity
 The Drupal Commerce Price module provides a configuration entity for storing currency definitions. A *Currency* entity has the following properties:
 
 | Property | Description | Example |
