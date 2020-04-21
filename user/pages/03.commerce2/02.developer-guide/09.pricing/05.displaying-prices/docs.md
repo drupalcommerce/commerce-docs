@@ -88,3 +88,17 @@ $price_output = t('The price is @amount', [
 	'@amount' => $formatted_price,
 ]);
 ```
+
+For advanced customization, you can set an array of additional options for the `format()` method. For example, the `minimum_fraction_digits` and `maximum_fraction_digits` options can be used to override the currency's standard number of fraction digits. For the complete list of options, see [CommerceGuys\Intl\Formatter\CurrencyFormatterInterface].
+
+In this example, we modify the previous example to display, "The price is 5.9500", with 4 fraction digits and no currency symbol:
+
+```php
+$formatted_price = $currency_formatter->format($price->getNumber(), $price->getCurrencyCode(), [
+  'minimum_fraction_digits' => 4,
+  'maximum_fraction_digits' => 4,
+  'currency_display' => 'none',
+]);
+```
+
+[CommerceGuys\Intl\Formatter\CurrencyFormatterInterface]: https://github.com/commerceguys/intl/blob/master/src/Formatter/CurrencyFormatterInterface.php
