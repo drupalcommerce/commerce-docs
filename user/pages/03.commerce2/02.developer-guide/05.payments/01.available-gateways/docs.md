@@ -295,8 +295,8 @@ If you create your own payment gateway module or find one that's not in this lis
 | --- | --- |
 | **Description** | ePayco is a Colombian payment gateway that Integrate ePayco Off-site payments, Set-up global gateway settings, Alter payment data dinamically 
 | **Type** | Off site |
-| **Currencies** | Bulgaria |
-| **Countries** | BGN |
+| **Currencies** | COP, USD |
+| **Countries** | Colombia |
 [/ui-accordion-item]
 [ui-accordion-item title="eProcessing Network (EPN)"]
 |  | [eProcessing Network (EPN)] |
