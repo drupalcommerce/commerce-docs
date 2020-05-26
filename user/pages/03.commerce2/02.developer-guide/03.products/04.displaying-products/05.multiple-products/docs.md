@@ -63,7 +63,7 @@ If you're not familiar with the Add to Cart form, see the [Add to cart form docu
 ![Variations image field configuration](../../images/multi-product-display-8.jpg)
 
 #### Add a filter for the product brand
-At this point, our view is set up to show *all* products that are published/active. We need add a filter to allow users to filter by product brand. To do that, use the *Filter criteria* section of the View administration page.
+At this point, our view is set up to show *all* products that are published/active. We need to add a filter to allow users to filter by product brand. To do that, use the *Filter criteria* section of the View administration page.
 
 **Add the Brand filter**
 1. Click the *Add* button next to *Filter criteria*.
