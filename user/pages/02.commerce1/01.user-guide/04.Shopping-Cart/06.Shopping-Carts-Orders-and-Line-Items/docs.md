@@ -128,5 +128,5 @@ field empty, don't actually type "NULL" :-)"</p>
 
 <h2>Related Assets</h2>
 <p>Are you looking for how to modify the cart block? Checkout our entire article
-on <a href="/commerce1/user-guide/modifying-shopping-cart-using-views">modifying the Shopping Cart block using views</a>.</p>
+on <a href="/commerce1/user-guide/shopping-cart/modifying-the-shopping-cart-using-views">modifying the Shopping Cart block using views</a>.</p>
 </div>
