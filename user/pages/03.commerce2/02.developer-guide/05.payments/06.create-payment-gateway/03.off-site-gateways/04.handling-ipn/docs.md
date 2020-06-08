@@ -27,6 +27,8 @@ public function onNotify(Request $request);
 #### What does the `onNotify()` method do?
 The `onNotify()` method processes the notification request. It can create new payments or update existing payments. Typically, it will update the state of a payment based on the information in the request. If the state is set to *completed*, the amount of the payment will be included in the "total paid amount" for the order. The `onNotify()` method does not need to (*and should not*) touch the parent order. When the payment is saved in the `onNotify()` method, the total paid amount for the order will be automatically updated, based on all payments associated with the order.
 
+If the payment is declined, the payment gateway should ***not*** create a payment entity. The only time a declined payment should be created is if the payment gateway utilizes async payments – like ACH or authorizations which take 24 hours to clear. Payment entities should be created only if the payment is successful or pending.
+
 You may also want to log the request or other message, especially if the request was invalid.
 
 The `onNotify()` method should return a [Symfony Response] or NULL to return an empty HTTP 200 response.
