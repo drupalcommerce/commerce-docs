@@ -37,7 +37,7 @@ Example: `commerce_order.workflows.yml`:
 ```yaml
 order_default_validation:
   id: order_default_validation
-  group: order
+  group: commerce_order
   label: 'Default, with validation'
   states:
     draft:
