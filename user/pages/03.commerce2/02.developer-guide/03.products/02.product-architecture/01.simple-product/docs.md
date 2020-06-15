@@ -107,4 +107,4 @@ In the next section, we'll look at creating a more complex product type, with pr
 [Commerce shipping module]: https://www.drupal.org/project/commerce_shipping
 [Image module]: https://www.drupal.org/docs/8/core/modules/image
 [Working with images]: https://www.drupal.org/docs/8/core/modules/image/working-with-images
-[Image Media Type Manage Fields Tab]: http://webtech.training.oregonstate.edu/osu-drupal-8/technical-manual/working-structure/media-entity/image-media-type/image-media-type-manage-fields-tab
+[Image Media Type Manage Fields Tab]: https://webtech.training.oregonstate.edu/osu-drupal-8/technical-manual/working-structure/media-types/image-media-type/image-media-type-manage-fields-tab
