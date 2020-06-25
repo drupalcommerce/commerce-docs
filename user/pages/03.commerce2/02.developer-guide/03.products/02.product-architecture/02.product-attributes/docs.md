@@ -77,6 +77,9 @@ Now that we've created the *Color* attribute, we can add an additional field by 
 3. Enter "Color" for the Label.
 4. Click the *Save and continue* button.
 
+Note: you'll need to install the [Color Field module] for the Color field type.
+
+
 ![Add color field](../../images/clothing-product-type-5.jpg)
 
 On the *Field settings* configuration page, leave the default values are fine. On the *Color settings for Color* page, enable the *Required field* option and disable the *Record opacity* option. After saving the changes, you can return to Edit the page again, to set the default value for the color to "#000000".
@@ -98,3 +101,4 @@ Click the *Save* button to complete the configuration for the *Color* product at
 In the next section, we'll look at creating product categories.
 
 [Color module]: https://www.drupal.org/project/color_field
+[Color Field module]: https://www.drupal.org/project/color_field
