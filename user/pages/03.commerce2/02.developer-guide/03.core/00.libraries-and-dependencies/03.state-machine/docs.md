@@ -4,9 +4,9 @@ taxonomy:
     category: docs
 ---
 
-See Also: [module on drupal.org]
+See Also: [State machine module on drupal.org]
 
-Provides code-driven workflow functionality.
+The State Machine module provides code-driven workflow functionality.
 
 A workflow is a set of states and transitions that an entity goes through during
 its lifecycle. A transition represents a one-way link between two states and has its
@@ -16,74 +16,25 @@ workflows, each in its own state field. An order might have checkout and payment
 workflows. A node might have legal and marketing workflows. Workflow groups are
 used to group workflows used for the same purpose (e.g. payment workflows).
 
-## Architecture
+#### [Architecture](01.architecture)
+- Provides a technical overview of the State Machine module's architecture.
 
-[Workflow] and [WorkflowGroup] are plugins defined in YAML, similar to
-menu links.
+#### [Working with State fields](02.state-fields)
+- Learn how State fields are used within Drupal Commerce.
+- Learn how to create custom State fields, workflows, and workflow groups.
+- Includes example for a custom Order item fulfillment State field.
 
-Example: `commerce_order.workflow_groups.yml`:
+#### [State transition Guards](03.state-transition-guards)
+ - Guards can be used to add business logic constraints to State transitions.
+ - Includes example code for an Order fulfillment workflow Guard.
 
-```yaml
-order:
-  label: Order
-  entity_type: commerce_order
-```
+#### [State transition event subscribers](03.state-transition-event-subscribers)
+ - Learn about the different types of Events provided by the State machine module.
+ - Includes example code for reacting to the transitions of a custom Order item fulfillment field.
 
-Groups can also override the default workflow class, for more advanced
-use cases.
+#### [Code recipes](10.code-recipes)
+- Alter existing workflows.
+- Get State field values.
+- Apply State transitions programatically.
 
-Example: `commerce_order.workflows.yml`:
-
-```yaml
-order_default_validation:
-  id: order_default_validation
-  group: commerce_order
-  label: 'Default, with validation'
-  states:
-    draft:
-      label: Draft
-    validation:
-      label: Validation
-    completed:
-      label: Completed
-    canceled:
-      label: Canceled
-  transitions:
-    place:
-      label: 'Place order'
-      from: [draft]
-      to:   validation
-    validate:
-      label: 'Validate order'
-      from: [validation]
-      to: completed
-    cancel:
-      label: 'Cancel order'
-      from: [draft, validation]
-      to:   canceled
-```
-
-Transitions can be further restricted by [guards], which are implemented as tagged services:
-
-```yaml
-mymodule.fulfillment_guard:
-        class: Drupal\mymodule\Guard\FulfillmentGuard
-        tags:
-          - { name: state_machine.guard, group: commerce_order }
-```
-
-The group argument allows the guard factory to only instantiate the guards relevant
-to a specific workflow group.
-
-The current state is stored in a [StateItem] field. A field setting specifies
-the used workflow, or a value callback that allows the workflow to be resolved
-at runtime (checkout workflow based on the used plugin, etc.).
-
-A validator is provided that ensures that the specified state is valid (exists
-in the workflow and is in the allowed transitions).
-
-[module on drupal.org]: https://www.drupal.org/project/state_machine
-[Workflow]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Plugin/Workflow/WorkflowInterface.php
-[WorkflowGroup]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Plugin/WorkflowGroup/WorkflowGroupInterface.php
-[guards]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Guard/GuardInterface.php
-[StateItem]: https://git.drupalcode.org/project/state_machine/blob/8.x-1.x/src/Plugin/Field/FieldType/StateItem.php
+[State machine module on drupal.org]: https://www.drupal.org/project/state_machine
