@@ -295,8 +295,8 @@ If you create your own payment gateway module or find one that's not in this lis
 | --- | --- |
 | **Description** | ePayco is a Colombian payment gateway that Integrate ePayco Off-site payments, Set-up global gateway settings, Alter payment data dinamically 
 | **Type** | Off site |
-| **Currencies** | Bulgaria |
-| **Countries** | BGN |
+| **Currencies** | COP, USD |
+| **Countries** | Colombia |
 [/ui-accordion-item]
 [ui-accordion-item title="eProcessing Network (EPN)"]
 |  | [eProcessing Network (EPN)] |
@@ -1077,7 +1077,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [DIBS integration]: https://www.drupal.org/project/commerce_dibs
 [DPS]: https://www.drupal.org/project/commerce_dps
 [Elavon]: https://www.drupal.org/project/commerce_elavon
-[ePayco]: https://www.drupal.org/project/commerce_epayco
+[ePayco]: https://www.drupal.org/project/epayco
 [GoCardless]: https://www.drupal.org/project/commerce_gocardless
 [Liqpay Gateway]: https://www.drupal.org/project/commerce_liqpay_gateway
 [MultiSafepay]: https://www.drupal.org/project/commerce_multisafepay

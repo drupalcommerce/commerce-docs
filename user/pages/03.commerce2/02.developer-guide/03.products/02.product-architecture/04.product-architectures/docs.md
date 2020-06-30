@@ -9,7 +9,7 @@ This page provides a general overview of some of the most commonly used types of
 - [Virtual products](#virtual-vs-physical-products)
 - [Physical products](#physical-product-configuration)
 - [Configurable / customizable products](#configurable-customizable-products)
-- [Downlodable products / files](#downloadable-products-files)
+- [Downloadable products / files](#downloadable-products-files)
 - [Subscriptions](#subscriptions)
 - [Product bundles](#product-bundles)
 - [Unique / none-of-the-above architectures](#purchasable-entities)
@@ -23,7 +23,7 @@ If you have virtual products, no special configuration is necessary. Drupal Comm
 If you have physical products, then you will need to extend Drupal Commerce with the [Commerce Shipping module]. (See the [Extending Drupal Commerce](../../../02.install-update/06.extending) documentation to add Commerce shipping to your project.)
 
 #### Physical product configuration
-Afer installing Commerce Shipping, navigate to the *Product variation types* page at `/admin/commerce/config/product-variation-types` and click the *Edit* button next to the name of your physical product variation type.
+After installing Commerce Shipping, navigate to the *Product variation types* page at `/admin/commerce/config/product-variation-types` and click the *Edit* button next to the name of your physical product variation type.
 
 You will see that two ***traits*** have been added to the configuration form for the product type:
 - Has dimensions
@@ -65,7 +65,7 @@ For subscription products, we recommend the [Commerce Recurring Framework module
 For product bundles, we recommend the [Commerce Product Bundle module]. The port to Drupal 8 is currently in progress. See the [Drupal 8 (Commerce 2) Version] issue for additional information:
 
 ### Purchasable entities
-When it comes to product architectures, there is no one true answer. That’s why it’s important for Drupal Commerce to support any number of product architectures. Do you need a Commerce solution that uses a completely unique architecture? Perhaps there's just no way to make the "products/variations/attributes" structure provided by the Product module fit your needs. If so, you can develop a completely custom product architecture but still benefit from the rest of the Drupal Commerce ecosystem of modules (cart, checkout, order, payment, etc.).
+When it comes to product architectures, there is no one true answer. That is why Drupal Commerce needs to support any number of product architectures. Do you need a Commerce solution that uses a unique architecture? Perhaps there's just no way to make the "products/variations/attributes" structure provided by the Product module fits your needs. If so, you can develop a completely custom product architecture but still benefit from the rest of the Drupal Commerce ecosystem of modules (cart, checkout, order, payment, etc.).
 
 The key to Drupal's product architecture flexibility is the concept of a ***purchasable entity***. Product variations are one example of purchasable entities. Every product variation (and every purchasable entity) in Drupal Commerce has 4 key properties:
 

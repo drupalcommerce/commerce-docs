@@ -14,7 +14,7 @@ If you've set up [products](../../03.products/01.overview) for your Drupal Comme
 
 But what if your products need to have different prices in different situations? Perhaps you have one set of prices for wholesale customers, another for regular customers, and yet another for some sort of "preferred" customers. Or maybe you have multiple stores, each with their own set of prices. If you have complex pricing needs like these, then you will need to create a custom *Price resolver*.
 
-> Todo: link to documentation page on price resolvers
+See the [Price resolvers](../../pricing/price-resolvers) documentation for additional information and example code.
 
 #### Store resolvers
 In Drupal Commerce, every order belongs to a specific [store](../../06.stores). A simple site may have only a single store, so all orders belong to that store. But if you have multiple stores, then Drupal Commerce needs a way to figure out which store to use for a particular cart or order. By default, it will always choose whichever store you've set as the *Default*. Here, the *Default* store has been set as the default store:
