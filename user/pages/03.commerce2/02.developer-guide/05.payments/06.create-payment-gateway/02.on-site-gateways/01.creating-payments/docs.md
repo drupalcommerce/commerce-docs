@@ -16,7 +16,9 @@ This method is responsible for:
 * gathering all necessary information from the payment, payment method, and order
 * performing verifications, throwing exceptions as needed
 * performing the API request(s), throwing exceptions as needed
-* creating and saving information to the Drupal Commerce payment
+* creating and saving information to the Drupal Commerce payment entity
+
+A payment entity should not be created if the payment is declined. Payment entities should be created only if the payment is successful or pending.
 
 #### Gathering information
 The payment entity that's passed in to this method should be a *new* payment, so you will generally want to start with an assertion:
@@ -108,3 +110,5 @@ $payment->setRemoteId($response->transaction->id);
 $payment->setExpiresTime(strtotime('+5 days'));
 $payment->save();
 ```
+
+If the payment is declined, the payment gateway should ***not*** create a payment entity. The only time a declined payment should be created is if the payment gateway utilizes async payments – like ACH or authorizations which take 24 hours to clear.

@@ -29,6 +29,8 @@ public function onCancel(OrderInterface $order, Request $request) {
 }
 ```
 
+Payment gateways should not create payment entities for canceled payments.
+
 ### Handling payment submission
 When the user returns from the payment provider, we need to validate that the payment actually succeeded. Just as in payment cancellation processing, you will typically provide the url for the return request in the `buildConfigurationForm` method of the off-site plugin form. Actual implementations will vary based on the payment gateway api. This is example code from the [Ingenico payment gateway] module:
 
@@ -92,6 +94,8 @@ $logger->info('Payment information saved successfully. Transaction reference: ' 
 ```
 
 The payment provider you are integrating with might have different ways to complete a payment. For example, in the example above, the payment `state` was set to *authorization*. For other payment gateways, you may want to set the `state` to *completed*.
+
+If the payment is declined, the payment gateway should ***not*** create a payment entity. The only time a declined payment should be created is if the payment gateway utilizes async payments – like ACH or authorizations which take 24 hours to clear. Payment entities should be created only if the payment is successful or pending.
 
 
 [Rave payment gateway]: https://www.drupal.org/project/commerce_rave
