@@ -6,9 +6,9 @@ taxonomy:
 
 ### Log entities
 
-Logs are content entities that are generated programatically. Each is associated with a specific source entity. There is no user interface for creating or managing logs. Logs are rendered using simple [Inline templates]. Log entities store references to the templates and parameter values for those templates.
+Logs are content entities that are generated programatically. Each is associated with a specific Commerce entity source. There is no user interface for creating or managing logs. Logs are rendered using simple [Inline templates]. Log entities store references to the templates and parameter values for those templates.
 
-See `Drupal\commerce_log\Entity\LogInterface` for the getter/setter methods that can be used for its base fields:
+See `Drupal\commerce_log\Entity\LogInterface` for the getter/setter methods that can be used for each of its base fields:
 
 | Base field         | Description |
 | ------------------ | ----------- |
@@ -34,14 +34,16 @@ public function onCartEntityAdd(CartEntityAddEvent $event) {
 }
 ```
 
-The `$source` content entity is the cart, a `commerce_order` entity. The `$template_id` is `cart_entity_added`. And the label for the item being added is passed in to the `generate()` method as an optional extra parameter. `$this->logStorage` is a variable that is set when the event subscriber is constructed. If you are unfamiliar with Drupal Event Subscrbers, Drupal.org provides [Subscribe to and dispatch events] documentation within its [Creating custom modules] guide.
+The `$source` content entity is the cart, a `commerce_order` entity. The `$template_id` is `cart_entity_added`. And the label for the item being added is passed in to the `generate()` method as an optional extra parameter. `$this->logStorage` is a variable that was set when the event subscriber was constructed. If you are unfamiliar with Drupal Event Subscrbers, Drupal.org provides [Subscribe to and dispatch events] documentation within its [Creating custom modules] guide.
 
-Let's look at the components of the `generate()` functionality in more detail.
+Let's look at the components of the `generate()` method in more detail.
 
 #### Source entity
 We pass the `cart` entity into the generate function, which uses it to set the `source_entity_id` and `source_entity_type` field values for the Log entity. The Source entity Id will be the unique order Id of the cart, and the Source entity type will be set to `commerce_order`. We are able to get the Cart entity from the event, `Drupal\commerce_cart\Event\CartEntityAddEvent` in this case. That event provides the `getCart()` and `getOrderItem()` methods (as well as `getEntity()` and `getQuantity()`).
 
 The Cart module provides a reference for all available Cart events in `Drupal\commerce_cart\Event\CartEvents`. Similar event definitions are also available in the Commerce Order, Payment, Price, Product, Promotion, Store, and Tax modules. Also, the [State machine module](../../core/state-machine) provides workflow transition events.
+
+Logs are internal entities, always managed and viewed in the context of their source entity. The source entity access is used when possible. A log can be updated or deleted if the source entity can be updated. There are currently no limitations imposed on log creation.
 
 #### Log template
 In the example above, `cart_entity_added` is the Id of a template provided by the Commerce Log module in `commerce_log.commerce_log_templates.yml`. Here's the start of that file:
@@ -88,9 +90,12 @@ The template string must be safe for translation. It includes html entities and 
 In the `onCartEntityAdd()` method above, we pass in `$event->getOrderItem()->label()` as the value for this parameter. That text will be displayed in the log entries.
 
 ### Displaying logs
-Log view builder
-In views
-Access control
+The `Drupal\commerce_log\LogViewBuilder` class renders log entities using [inline templates]. The parameter values provided when the logs are generated are passed to the inline template. Additionally, templates have access to the source entity. For example, an Order log template could include the order number like this: `{{ order.getOrderNumber }}`.
+
+Log entities can be displayed using Views. For example, the "Order activity" section of the Order admin view page is a Block display of the Activity view.
+
+View access for a log is based on the access for its source entity. A log can be viewed if the source entity can be viewed.
+
 
 [Inline templates]: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21InlineTemplate.php/class/InlineTemplate/8.9.x
 [Subscribe to and dispatch events]: https://www.drupal.org/docs/creating-custom-modules/subscribe-to-and-dispatch-events
@@ -98,3 +103,4 @@ Access control
 [An Introduction to YAML]: https://drupalize.me/videos/introduction-yaml?p=3291
 [Introduction to YAML in Drupal 8]: https://befused.com/drupal/yaml
 [Twig]: https://www.drupal.org/docs/theming-drupal/twig-in-drupal
+[inline templates]: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21InlineTemplate.php/class/InlineTemplate/8.2.x
