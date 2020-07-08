@@ -83,6 +83,8 @@ class OrderItemFulfillmentSubscriber implements EventSubscriberInterface {
 }
 ```
 
+Example code for logging an order item transition can be found in the [Code recipes](../../../../activity-logs/code-recipes) section of the [Activity logs documentation](../../../../activity-logs).
+
 #### Transition-specific state transition events
 The pattern for workflow group-specific events is "{$workflow_group_id}.{$transition_id}.{$phase}". These transition-specific state transition events can be extremely useful for powering business logic in Drupal Commerce applications. 
 

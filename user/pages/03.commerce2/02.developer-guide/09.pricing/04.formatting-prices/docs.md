@@ -77,8 +77,8 @@ class NumberFormatDefinitionEventSubscriber implements EventSubscriberInterface 
     $definition = $event->getDefinition();
 
     if ($definition['locale'] == 'de') {
-	    $defintion['decimal_separator'] = '.';
-	    $definition['grouping_separator' = ',';
+	    $definition['decimal_separator'] = ',';
+	    $definition['grouping_separator'] = '.';
 	    $event->setDefinition($definition);
     }
   }
