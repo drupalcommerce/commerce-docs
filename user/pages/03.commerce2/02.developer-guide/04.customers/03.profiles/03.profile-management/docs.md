@@ -27,9 +27,11 @@ These permissions should only be granted to users with administrative access to 
 
 ##### *Profile* permissions
 - Access the profile entities overview page
-- Administer profile entities
-- Andminister profile types
-- View profile entities
+- Administer profile types
+- Administer profiles
+- View any profiles
+- View own profiles
+- View own unpublished profiles
 - And a set of permissions for each profile type:
  - Create profile entities
  - Delete any profile
@@ -39,10 +41,11 @@ These permissions should only be granted to users with administrative access to 
  - View any profile
  - View own profile
 
+
  Typically, you will want to allow your *Authenticated Users* (customers) to create profile entities and delete/update/view their own *Customer* profile entities. The rest of the permissions are more appropriate for administrative users.
 
 ### Field permissions module
-If you need to limit access to certain *fields* for the *customer* profile or any other type of profile, the [Field permissions] contrib module can provide that functionality. For example, suppose each of your customers is assigned to a specific regional sales representative. You would like customers to be able to *view* their sales representatives, but only administrative users should be allowed to make sales representative assignments. Also, you want to include the *sales representative* field with your order data so that it can be tracked in sales reports. So, we want this field to be part of the *Customer* profile.
+If you need to limit access to certain *fields* for the *customer* profile or any other type of profile, you may be able to utilize display and form view modes to display/hide specific profile fields. If you need more sophisticated access control, the [Field permissions] contrib module can provide that functionality. For example, suppose each of your customers is assigned to a specific regional sales representative. You would like customers to be able to *view* their sales representatives, but only administrative users should be allowed to make sales representative assignments. Also, you want to include the *sales representative* field with your order data so that it can be tracked in sales reports. So, we want this field to be part of the *Customer* profile.
 
 #### Customization example: *sales representative* field
 1. Add and install the *Field permissions* module. (See the [Extending documentation](../../../02.install-update/06.extending) for instructions.)
@@ -66,7 +69,7 @@ When you view the *Profiles* listing page at `/admin/people/profiles`, you'll se
 
 Once a customer account has been located, you can access his or her profiles from the *Edit* administrative page. You'll see a tab at the top of the page for each of your profile types. Here we see tabs for three profile types: *Contact information*, *Address book* (for *Customer* profiles), and *My custom profile type*. You can manage profiles on behalf of customers via these tabs.
 
-![Manage customer profiles](../../images/profile-management-4.png)
+![Manage customer profiles](../../images/profile-overview-1.png)
 
 #### Customize the labels for customer profile tabs
 The label for the *Customer* profile tab is *Address book*. It has been customized by the Drupal Commerce *Order* module. You can customize labels for any profile type by implementing `hook_local_tasks_alter()` in a custom module, like this:

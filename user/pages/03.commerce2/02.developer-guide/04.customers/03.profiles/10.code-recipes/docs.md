@@ -13,6 +13,7 @@ If you want to write custom code to programatically create or manage profiles, y
  - [Profiles](#loading-profiles)
 - **Implement:**
  - [ProfileLabelSubscriber](#profilelabelsubscriber)
+ - [Profile inline form alterations](#altering-profile-inline-forms)
 
 ### Creating profile types
 ```php
@@ -196,3 +197,35 @@ services:
     tags:
       - { name: event_subscriber }
 ```
+
+### Altering profile inline forms
+Checkout panes and billing and shipping profile widgets use inline forms to render profile forms using specific form displays. These forms can be altered using the `hook_commerce_inline_form_alter` and `hook_commerce_inline_form_PLUGIN_ID_alter` hooks. For example, the Commerce shipping module implements the plugin-id specific version of the hook to attach the "Billing same as shipping" element to the `customer_profile` inline form:
+
+```php
+function commerce_shipping_commerce_inline_form_customer_profile_alter(array &$inline_form, FormStateInterface $form_state, array &$complete_form) {
+  // Attach the "Billing same as shipping" element.
+  $profile_field_copy = \Drupal::service('commerce_shipping.profile_field_copy');
+  if ($profile_field_copy->supportsForm($inline_form, $form_state)) {
+    $profile_field_copy->alterForm($inline_form, $form_state);
+  }
+}
+```
+
+When using the more generic form of the hook, you can use the `#inline_form` attribute of the inline form to identify a specific plugin and the `#profile_scope` attribute to identify the form mode, like this:
+
+```php
+function hook_commerce_inline_form_alter(array &$inline_form, FormStateInterface $form_state, array &$complete_form) {
+  /** @var \Drupal\commerce\Plugin\Commerce\InlineForm\InlineFormInterface $plugin */
+  $plugin = $inline_form['#inline_form'];
+  if ($plugin->getPluginId() == 'customer_profile') {
+    if ($inline_form['#profile_scope'] == 'billing' && !isset($inline_form['rendered'])) {
+      // Modify the billing profile when in "form" mode.
+      $inline_form['address']['widget'][0]['#type'] = 'fieldset';
+      // Individual address elements (e.g. "address_line1") can only
+      // be accessed from an #after_build callback.
+      $inline_form['address']['widget'][0]['address']['#after_build'][] = 'your_callback';
+    }
+  }
+}
+```
+

@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-If you are evaluating Drupal Commerce as a potential ecommerce solution, this section will help you decide whether Drupal Commerce can meet your needs with respect to how you can organize your customer-related information. If you are a site builder or developer, step-by-step instructions and explanations will help you get started with setting up customers, profiles, and addresses in your Drupal Commerce site.
+This documentation section describes how you can organize customer-related information within a Drupal Commerce site. For many Drupal sites, [integration with a third party application], such as HubSpot or Salesforce, provides additional functionality. Step-by-step instructions and explanations will help you set up and manage customers, profiles, and addresses. 
 
 #### [Overview](01.overview)
 - Learn how to manage your customer data using the three customer-related modules required by Drupal Commerce:
@@ -31,3 +31,4 @@ If you are evaluating Drupal Commerce as a potential ecommerce solution, this se
 [User]: https://www.drupal.org/docs/8/core/modules/user
 [Profile]: https://www.drupal.org/project/profile
 [Address]: https://www.drupal.org/project/address
+[integration with a third party application]: https://medium.com/@ayushjn/drupal-8-and-third-party-integrations-ac7a2ba3e23
