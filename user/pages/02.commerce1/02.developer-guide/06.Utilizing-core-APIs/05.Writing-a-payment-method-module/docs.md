@@ -17,14 +17,14 @@ It is quite likely that additional actions may be available to be performed on p
 The responsibilities of a payment method module include the following main points:
 
 <ol>
-<li>Defining the payment method via hook_commerce_payment_method_info(). This hook is <a href="/developer-guide/core-architecture/info-hooks/payment-info-hooks">documented in the specification</a> and allows you to define the titles and display name for the payment method along with various callback functions used to integrate with the payment system.</li>
+<li>Defining the payment method via hook_commerce_payment_method_info(). This hook is <a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/info-hooks/payment-info-hooks">documented in the specification</a> and allows you to define the titles and display name for the payment method along with various callback functions used to integrate with the payment system.</li>
 <li>Defining your callback functions to add a settings form to the payment method's rules, collect the necessary information on the checkout and administrative payment forms, and accommodate the redirection process for off-site payment methods (see below).</li>
 <li>Integrating with the payment service to actually process payments, validate payment notifications, and otherwise interact with the available APIs.</li>
 <li>Defining menu items for additional payment transaction operations and providing the forms and API integration necessary to perform the operations.</li>
 <li>Regular maintenance to ensure the module remains up to date with changes in the payment service's API, changes in Drupal Commerce, and security reports. Payment method modules should be managed through drupal.org's project hosting infrastructure where they benefit from version control, issue tracking, and community feedback and security oversight.</li>
 </ol>
 
-For more information and examples of these, refer to the <a href="http://www.drupalcommerce.org/specification/info-hooks/payment">Payment info hook documentation</a> and the proof-of-concept modules <a href="http://drupal.org/project/commerce_authnet">Commerce Authorize.Net</a> and <a href="http://drupal.org/project/commerce_paypal">Commerce PayPal</a>.  Refer to the <a href="http://www.drupalcommerce.org/faq/payment-methods">payment method FAQ</a> for other modules that are developed or in development supporting different types of payment services and representing different countries.
+For more information and examples of these, refer to the <a href="https://docs.drupalcommerce.org/commerce1/developer-guide/core-architecture/info-hooks/payment-info-hooks">Payment info hook documentation</a> and the proof-of-concept modules <a href="http://drupal.org/project/commerce_authnet">Commerce Authorize.Net</a> and <a href="http://drupal.org/project/commerce_paypal">Commerce PayPal</a>.  Refer to the <a href="https://web.archive.org/web/20150618020813/https://drupalcommerce.org/faq/payment-methods">payment method FAQ (wayback machine link)</a> for other modules that are developed or in development supporting different types of payment services and representing different countries.
 
 <h2>Special notes for off-site payment methods</h2>
 
