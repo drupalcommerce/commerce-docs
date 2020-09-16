@@ -134,7 +134,7 @@ class OrderItemFulfillmentSubscriber implements EventSubscriberInterface {
    */
   public function __construct(InventoryManagerInterface $inventory_manager, EntityTypeManagerInterface $entity_type_manager) {
     $this->inventoryManager = $inventory_manager;  	
-    $this->entityTypeManager = $entity_type_manager;
+    $this->logStorage = $entity_type_manager->getStorage('commerce_log');
   }
 
   /**
