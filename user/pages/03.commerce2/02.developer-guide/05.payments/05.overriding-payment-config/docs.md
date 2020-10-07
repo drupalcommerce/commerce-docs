@@ -34,6 +34,9 @@ With the information that we have obtained, it is straightforward to override th
 
 Once you've set them, these will be the settings that will be used when a customer chooses to pay using this payment gateway. Note that due to how configuration management works in Drupal 8, the admin pages such as the payment gateway's Edit page or the configuration export page used above will still display the values of the settings defined in the code as exported configuration or in the database.
 
+NB, if you are checking with `drush cget` be sure to use the `--include-overridden` flag to show variables that are overriden. in the example above this would be 
+```drush cget --include-overridden commerce_payment.commerce_payment_gateway.paypal_express_checkout``` 
+
 ## How to Test if It Works
 
 To ensure that the correct settings are being used, we can make a test by checking out a test order. In the PayPal example above, the test credentials can be linked to an account that has a different name than the production account. PayPal will be also indicating that an account is a sandbox account by appending the word Test after its name. When the user is redirected to PayPal, the page's title should read "Test Store" without the overrides, and simply "Store" with the overrides.
