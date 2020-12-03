@@ -13,7 +13,7 @@ Events provided:
 - `CartEvents::CART_ENTITY_ADD`: Fired after adding a purchasable entity to the cart.
 - `CartEvents::CART_ORDER_ITEM_UPDATE`: Fired after updating an order item.
 - `CartEvents::CART_ORDER_ITEM_REMOVE`: Fired after removing an order item form the cart.
-- `CartEvents::CART_ITEM_COMPARISON_FIELDS`: Fired when altering the list of comparison fields - comparison fields is how Drupal commerce determines when you add an item to the cart if it can be combined with an existing item.
+- `CartEvents::ORDER_ITEM_COMPARISON_FIELDS`: Fired when altering the list of comparison fields - comparison fields is how Drupal commerce determines when you add an item to the cart if it can be combined with an existing item.
 
 ## Basic Example
 
