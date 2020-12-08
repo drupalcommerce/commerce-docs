@@ -536,6 +536,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Currencies** | Source: https://www.omise.co/multi-currency |
 | **Countries** | Source: https://www.omise.co/multi-currency |
 [/ui-accordion-item]
+[ui-accordion-item title="Omnikassa"]
+| | [Omnikassa] |
+| --- | --- |
+| **Description** | Provides a payment provider for Rabo Omnikassa, a payment platform provided by the Rabobank in the Netherlands. |
+| **Type** | Off site |
+| **Currencies** | EUR, USD, CHF, GBP, CAD, JPY, AUD, NOK, SEK, DKK |
+| **Countries** | Netherlands |
+[/ui-accordion-item]
 [ui-accordion-item title="OnePAY.VN"]
 | | [OnePAY.VN] |
 | --- | --- |
@@ -1077,6 +1085,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [PayFort]: https://www.drupal.org/project/commerce_payfort
 [PEI]: https://www.drupal.org/project/commerce_pei
 [Omise]: https://www.drupal.org/project/commerce_omise
+[Omnikassa]: https://www.drupal.org/project/commerce_omnikassa
 [Pasargad]: https://www.drupal.org/project/commerce_pasargad
 [Zarinpal]: https://www.drupal.org/project/commerce_zarinpal
 [Amazon Pay]: https://www.drupal.org/project/commerce_amazon_lpa
