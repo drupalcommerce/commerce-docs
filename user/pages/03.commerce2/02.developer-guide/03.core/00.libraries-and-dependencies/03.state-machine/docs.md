@@ -28,7 +28,7 @@ used to group workflows used for the same purpose (e.g. payment workflows).
  - Guards can be used to add business logic constraints to State transitions.
  - Includes example code for an Order fulfillment workflow Guard.
 
-#### [State transition event subscribers](03.state-transition-event-subscribers)
+#### [State transition event subscribers](04.state-transition-event-subscribers)
  - Learn about the different types of Events provided by the State machine module.
  - Includes example code for reacting to the transitions of a custom Order item fulfillment field.
 
