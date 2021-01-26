@@ -8,7 +8,7 @@ Order receipt emails are powered through Twig templates. There is no user interf
 
 The order receipt email, which customers receive, is controlled through the `commerce_order_receipt` theme hook. The following information is available to the theme hook
 
-* The order, as `order_entity`
+* The order, as `order_entity` (see [method definitions](https://git.drupalcode.org/project/commerce/-/blob/8.x-2.x/modules/order/src/Entity/OrderInterface.php))
 * Billing information, as `billing_information`
 * Shipping information, as `shipping_information`
 * Payment method information as `payment_method`
