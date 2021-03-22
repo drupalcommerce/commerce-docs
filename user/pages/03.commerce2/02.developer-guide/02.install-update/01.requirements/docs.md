@@ -27,7 +27,7 @@ taxonomy:
  php_packages_extra:
    - php7.1-bcmath
  ```
- - If you are having issues related to the bcmatch extension, the [Drupal VM documentation] provides useful information.
+ - If you are having issues related to the bcmath extension, the [Drupal VM documentation] provides useful information.
 
 ### Links and resources
 * [Best Practice Drupal Development](https://drupalize.me/tutorial/best-practice-drupal-development)
