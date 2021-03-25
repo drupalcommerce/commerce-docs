@@ -95,6 +95,8 @@ class Pages
 
     protected $initialized = false;
 
+    protected $active_lang;
+
     /**
      * @var Types
      */
@@ -143,7 +145,7 @@ class Pages
      */
     public function baseRoute($lang = null)
     {
-        $key = $lang ?: 'default';
+        $key = $lang ?: $this->active_lang ?: 'default';
 
         if (!isset($this->baseRoute[$key])) {
             /** @var Language $language */
@@ -234,6 +236,16 @@ class Pages
     public function setCheckMethod($method)
     {
         $this->check_method = strtolower($method);
+    }
+
+    /**
+     * Reset pages (used in search indexing etc).
+     */
+    public function reset()
+    {
+        $this->initialized = false;
+
+        $this->init();
     }
 
     /**
@@ -958,6 +970,9 @@ class Pages
 
         $pages_dir = $locator->findResource('page://');
 
+        // Set active language
+        $this->active_lang = $language->getActive();
+
         if ($config->get('system.cache.enabled')) {
             /** @var Cache $cache */
             $cache = $this->grav['cache'];
@@ -982,17 +997,19 @@ class Pages
 
             $this->pages_cache_id = md5($pages_dir . $hash . $language->getActive() . $config->checksum());
 
-            list($this->instances, $this->routes, $this->children, $taxonomy_map, $this->sort) = $cache->fetch($this->pages_cache_id);
-            if (!$this->instances) {
+            $cached = $cache->fetch($this->pages_cache_id);
+            if ($cached) {
+                $this->grav['debugger']->addMessage('Page cache hit.');
+
+                list($this->instances, $this->routes, $this->children, $taxonomy_map, $this->sort) = $cached;
+
+                // If pages was found in cache, set the taxonomy
+                $taxonomy->taxonomy($taxonomy_map);
+            } else {
                 $this->grav['debugger']->addMessage('Page cache missed, rebuilding pages..');
 
                 // recurse pages and cache result
                 $this->resetPages($pages_dir);
-
-            } else {
-                // If pages was found in cache, set the taxonomy
-                $this->grav['debugger']->addMessage('Page cache hit.');
-                $taxonomy->taxonomy($taxonomy_map);
             }
         } else {
             $this->recurse($pages_dir);
@@ -1261,14 +1278,13 @@ class Pages
     {
         $list = [];
         $header_default = null;
-        $header_query = null;
+        $header_query = [];
 
         // do this header query work only once
         if (strpos($order_by, 'header.') === 0) {
-            $header_query = explode('|', str_replace('header.', '', $order_by));
-            if (isset($header_query[1])) {
-                $header_default = $header_query[1];
-            }
+            $query = explode('|', str_replace('header.', '', $order_by), 2);
+            $header_query = array_shift($query) ?? '';
+            $header_default = array_shift($query);
         }
 
         foreach ($pages as $key => $info) {
@@ -1306,11 +1322,17 @@ class Pages
                 case 'folder':
                     $list[$key] = $child->folder();
                     break;
-                case (is_string($header_query[0])):
-                    $child_header = new Header((array)$child->header());
-                    $header_value = $child_header->get($header_query[0]);
+                case 'manual':
+                case 'default':
+                default:
+                if (is_string($header_query)) {
+                    $child_header = $child->header();
+                    if (!$child_header instanceof Header) {
+                        $child_header = new Header((array)$child_header);
+                    }
+                    $header_value = $child_header->get($header_query);
                     if (is_array($header_value)) {
-                        $list[$key] = implode(',',$header_value);
+                        $list[$key] = implode(',', $header_value);
                     } elseif ($header_value) {
                         $list[$key] = $header_value;
                     } else {
@@ -1318,11 +1340,9 @@ class Pages
                     }
                     $sort_flags = $sort_flags ?: SORT_REGULAR;
                     break;
-                case 'manual':
-                case 'default':
-                default:
-                    $list[$key] = $key;
-                    $sort_flags = $sort_flags ?: SORT_REGULAR;
+                }
+                $list[$key] = $key;
+                $sort_flags = $sort_flags ?: SORT_REGULAR;
             }
         }
 

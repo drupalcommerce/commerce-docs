@@ -12,6 +12,7 @@ namespace Grav\Plugin\Login;
 use Birke\Rememberme\Cookie;
 use Grav\Common\Config\Config;
 use Grav\Common\Data\Data;
+use Grav\Common\Debugger;
 use Grav\Common\Grav;
 use Grav\Common\Language\Language;
 use Grav\Common\Page\Interfaces\PageInterface;
@@ -32,6 +33,8 @@ use Grav\Plugin\Login\TwoFactorAuth\TwoFactorAuth;
  */
 class Login
 {
+    public const DEBUG = 0;
+
     /** @var Grav */
     protected $grav;
 
@@ -74,6 +77,17 @@ class Login
     }
 
     /**
+     * @param string $message
+     * @param array $data
+     */
+    public static function addDebugMessage(string $message, $data = [])
+    {
+        /** @var Debugger $debugger */
+        $debugger = Grav::instance()['debugger'];
+        $debugger->addMessage($message, 'debug', $data);
+    }
+
+    /**
      * Login user.
      *
      * @param array $credentials    Login credentials, eg: ['username' => '', 'password' => '']
@@ -95,6 +109,7 @@ class Login
         $grav->fireEvent('onUserLoginAuthenticate', $event);
 
         if ($event->isSuccess()) {
+            static::DEBUG && static::addDebugMessage('Login onUserLoginAuthenticate: success', $event);
 
             // Make sure that event didn't mess up with the user authorization.
             $user = $event->getUser();
@@ -107,6 +122,8 @@ class Login
         }
 
         if ($event->isSuccess()) {
+            static::DEBUG && static::addDebugMessage('Login onUserLoginAuthorize: success', $event);
+
             // User has been logged in, let plugins know.
             $event = new UserLoginEvent($event->toArray());
             $grav->fireEvent('onUserLogin', $event);
@@ -117,6 +134,8 @@ class Login
             $user->authorized = !$event->isDelayed();
 
         } else {
+            static::DEBUG && static::addDebugMessage('Login failed', $event);
+
             // Allow plugins to log errors or do other tasks on failure.
             $event = new UserLoginEvent($event->toArray());
             $grav->fireEvent('onUserLoginFailure', $event);
@@ -284,7 +303,7 @@ class Login
                 $pwd_regex = '/' . $config->get('system.pwd_regex') . '/';
 
                 if (!\is_string($value) || !preg_match($pwd_regex, $value)) {
-                    throw new \RuntimeException('Password does not pass them minimum requirements');
+                    throw new \RuntimeException('Password does not pass the minimum requirements');
                 }
 
                 break;
@@ -565,7 +584,11 @@ class Login
 
         // Continue to the page if user is authorized to access the page.
         foreach ($rules as $rule => $value) {
-            if (\is_array($value)) {
+            if (is_int($rule)) {
+                if ($user->authorize($value) === true) {
+                    return true;
+                }
+            } elseif (\is_array($value)) {
                 foreach ($value as $nested_rule => $nested_value) {
                     if ($user->authorize($rule . '.' . $nested_rule) === Utils::isPositive($nested_value)) {
                         return true;
@@ -646,5 +669,4 @@ class Login
     {
         return $this->provider_login_templates;
     }
-
 }

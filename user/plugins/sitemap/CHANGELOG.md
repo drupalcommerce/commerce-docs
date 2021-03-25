@@ -1,3 +1,18 @@
+# v1.9.4
+## 10/19/2019
+
+1. [](#bugfix)
+    * Fixed a regression issue that caused sitemap not to work 'unless' you had an existing `sitemap` page [#65](https://github.com/getgrav/grav-plugin-sitemap/issues/65)
+
+# v1.9.3
+## 10/18/2019
+
+1. [](#improved)
+    * Support existing `sitemap` HTML page to be used in place of XSL version
+    * Remove `/` from end of home URLS [#58](https://github.com/getgrav/grav-plugin-sitemap/pull/58)
+    * Include translated pages only [#57](https://github.com/getgrav/grav-plugin-sitemap/pull/57)
+    * Make sure `modular` pages are not included in configuration [#56](https://github.com/getgrav/grav-plugin-sitemap/pull/56)
+
 # v1.9.2
 ## 05/09/2019
 

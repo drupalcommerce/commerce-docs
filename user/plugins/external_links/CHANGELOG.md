@@ -1,3 +1,10 @@
+# v1.6.2
+## 10/28/2019
+
+1. [](#improved)
+  * FlexObjects compatibility: change references to `Page` class to use `PageInterface`
+  * Updated Grav requirements to 1.6 or greater (thanks to [@mahagr](https://github.com/mahagr) for the heads-up)
+
 # v1.6.1
 ## 07/12/2018
 

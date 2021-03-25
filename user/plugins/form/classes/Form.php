@@ -11,6 +11,7 @@ use Grav\Common\Grav;
 use Grav\Common\Inflector;
 use Grav\Common\Language\Language;
 use Grav\Common\Page\Interfaces\PageInterface;
+use Grav\Common\Security;
 use Grav\Common\Uri;
 use Grav\Common\Utils;
 use Grav\Framework\Filesystem\Filesystem;
@@ -35,7 +36,8 @@ use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
  * @property-read Data $data
  * @property-read array $files
  * @property-read Data $value
- * @property-read array $errors
+ * @property array $errors
+ * @property array $upload_errors
  * @property-read array $fields
  * @property-read Blueprint $blueprint
  * @property-read PageInterface $page
@@ -133,7 +135,7 @@ class Form implements FormInterface, \ArrayAccess
         }
 
         // If we're on a modular page, find the real page.
-        while ($page && $page->modular()) {
+        while ($page && $page->modularTwig()) {
             $header = $page->header();
             $header->never_cache_twig = true;
             $page = $page->parent();
@@ -652,6 +654,11 @@ class Form implements FormInterface, \ArrayAccess
         $upload['file']['name'] = $filename;
         $upload['file']['path'] = $path;
 
+        // Special Sanitization for SVG
+        if (method_exists('Grav\Common\Security', 'sanitizeSVG') && Utils::contains($mime, 'svg', false)) {
+            Security::sanitizeSVG($upload['file']['tmp_name']);
+        }
+
         // We need to store the file into flash object or it will not be available upon save later on.
         $flash = $this->getFlash();
         $flash->setUrl($url)->setUser($grav['user'] ?? null);
@@ -854,7 +861,7 @@ class Form implements FormInterface, \ArrayAccess
 
     /**
      * @return string
-     * @deprecated 3.0 Use $this->getName() instead
+     * @deprecated 3.0 Use $form->getName() instead
      */
     public function name(): string
     {
@@ -863,7 +870,7 @@ class Form implements FormInterface, \ArrayAccess
 
     /**
      * @return array
-     * @deprecated 3.0 Use $this->getFields() instead
+     * @deprecated 3.0 Use $form->getFields() instead
      */
     public function fields(): array
     {
@@ -872,7 +879,7 @@ class Form implements FormInterface, \ArrayAccess
 
     /**
      * @return PageInterface
-     * @deprecated 3.0 Use $this->getPage() instead
+     * @deprecated 3.0 Use $form->getPage() instead
      */
     public function page(): PageInterface
     {
@@ -882,7 +889,7 @@ class Form implements FormInterface, \ArrayAccess
     /**
      * Backwards compatibility
      *
-     * @deprecated 3.0
+     * @deprecated 3.0 Calling $form->filter() is not needed anymore (does nothing)
      */
     public function filter(): void
     {
@@ -995,7 +1002,7 @@ class Form implements FormInterface, \ArrayAccess
 
     public function getPagePathFromToken($path)
     {
-        return Utils::getPagePathFromToken($path, $this->page());
+        return Utils::getPagePathFromToken($path, $this->getPage());
     }
 
     /**

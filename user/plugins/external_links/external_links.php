@@ -20,7 +20,7 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
-use Grav\Common\Page\Page;
+use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Data\Blueprints;
 
 use RocketTheme\Toolbox\Event\Event;
@@ -189,7 +189,7 @@ class ExternalLinksPlugin extends Plugin
      * @return boolean       Returns true if page has already been
      *                       compiled yet, false otherwise
      */
-    protected function compileOnce(Page $page)
+    protected function compileOnce(PageInterface $page)
     {
         static $processed = [];
 

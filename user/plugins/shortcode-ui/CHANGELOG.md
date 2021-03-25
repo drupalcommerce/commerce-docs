@@ -1,3 +1,19 @@
+# v2.4.1
+## 02/14/2020
+
+1. [](#new)
+    * Updated code for shortcode-core plugin v4.2.1
+
+# v2.4.0
+## 02/11/2020
+
+1. [](#new)
+    * Pass phpstan level 1 tests
+    * Requires shortcode-core plugin v4.2.0
+    * Twig 2.0 compatibility
+1. [](#improved)
+    * Code cleanup
+
 # v2.3.0
 ## 02/06/2019
 

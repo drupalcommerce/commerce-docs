@@ -1,3 +1,24 @@
+# v1.3.1
+## 02/24/2020
+
+1. [](#improved)
+    * Set `validation: loose` in plugin blueprints by default
+    * Add Grav 1.6 dependency to all new plugins and themes
+
+# v1.3.0
+## 02/13/2020
+
+1. [](#improved)
+    * Added composer-based autoloader to the `new-plugin` command
+
+# v1.2.4
+## 11/06/2019
+
+1. [](#improved)
+    * Added the ability to use devtools without an online connection to GPM
+1. [](#bugfix)
+    * Regression fix for missing `theme_config` in pure-blank [#45](https://github.com/getgrav/grav-plugin-devtools/issues/45)
+
 # v1.2.3
 ## 06/20/2019
 
