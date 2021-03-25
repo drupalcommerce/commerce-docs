@@ -30,3 +30,7 @@ Want to see a demo of what you can do with Drupal Commerce 2 on your own? You ca
 demonstration products and more. Find it at [mglaman/commerce_demo]
 
 [mglaman/commerce_demo]: https://github.com/mglaman/commerce_demo
+
+### Looking for an overview?
+
+Read [A Comprehensive Overview for Drupal Developers and Technical Managers](https://www.acromedia.com/drupal-commerce-2)
