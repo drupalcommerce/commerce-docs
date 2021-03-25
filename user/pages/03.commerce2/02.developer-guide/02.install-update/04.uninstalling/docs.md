@@ -29,7 +29,7 @@ Click the `Remove stores` link.
 Once all content has been removed, you can start uninstalling the commerce
 modules. You will only be able to uninstall a few at a time because of
 dependencies. For example, you will not be able to uninstall the base Commerce
-module until all other commerce modules are installed. Note: if you have
+module until all other commerce modules are uninstalled. Note: if you have
 extended your Drupal Commerce site with any modules that are dependent upon
 Commerce, those modules will also need to be uninstalled before you are able
 to uninstall Commerce.
@@ -40,7 +40,7 @@ uninstall additional modules.
 
 ![uninstall_commerce](../images/04.uninstall-commerce.jpg)
 
-Since the Commerce base module provides a field type, it cannot be uninstalled together with the other modules. This is a known Drupal limitation. You will be blocked from uninstalling Commerce and a see a "Fields pending deletion" message. You can delete the field in question by running Cron. You can run Cron through the Admin UI by navigating to Configuration > System > Cron.
+Since the Commerce base module provides a field type, it cannot be uninstalled together with the other modules. This is a known Drupal limitation. You will be blocked from uninstalling Commerce and see a "Fields pending deletion" message. You can delete the field in question by running Cron. You can run Cron through the Admin UI by navigating to Configuration > System > Cron.
 
 Once all Commerce modules have been uninstalled, use Composer to remove the
 Commerce dependency from your project.
