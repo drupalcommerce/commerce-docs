@@ -826,6 +826,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Currencies** | Over 100 currencies |
 | **Countries** | Over 30 countries (Europe)  |
 [/ui-accordion-item]
+[ui-accordion-item title="SagePay"]
+|  | [SagePay] |
+| --- | --- |
+| **Description** | SagePay integration for the Drupal Commerce 2.x payment and checkout system. |
+| **Type** | On site |
+| **Currencies** | Supports around 160 currencies |
+| **Countries** | Available for companies based in Europe  |
+[/ui-accordion-item]
 [ui-accordion-item title="Saman Gateway"]
 |  | [Saman Gateway] |
 | --- | --- |
@@ -1129,6 +1137,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Red Dot Payment]: https://www.drupal.org/project/commerce_reddotpayment
 [Realex]: https://www.drupal.org/project/commerce_realex
 [Saferpay]: https://www.drupal.org/project/commerce_saferpay
+[SagePay]: https://www.drupal.org/project/commerce_sage
 [Trustpay]: https://www.drupal.org/project/trustpay
 [TurtleCoin]: https://www.drupal.org/project/commerce_turtlecoin
 [Vipps]: https://www.drupal.org/project/commerce_vipps
