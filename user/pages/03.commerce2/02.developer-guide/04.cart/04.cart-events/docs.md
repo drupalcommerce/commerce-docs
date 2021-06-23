@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-If you want to customize the Cart functionality of your site, Drupal Commerce provides a full range of "events" for your custom functionality and contrib modules to react to. See also, [Commerce Without Rules]((https://docs.drupalcommerce.org/commerce2/developer-guide/adapting-from-1x/commerce-without-rules)).
+If you want to customize the Cart functionality of your site, Drupal Commerce provides a full range of "events" for your custom functionality and contrib modules to react to. See also, [Commerce Without Rules](https://docs.drupalcommerce.org/commerce2/developer-guide/adapting-from-1x/commerce-without-rules).
 
 The events use Drupal's standard [Symphony based event system](https://www.drupal.org/docs/8/creating-custom-modules/subscribe-to-and-dispatch-events#s-event-systems-overview). So a solid understanding of that is useful. Events are defined in `\Drupal\commerce_cart\Event\CartEvents`.
 
