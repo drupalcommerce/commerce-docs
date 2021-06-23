@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-Before you beging adding products to your Drupal Commerce store, it is important to understand the product structure. Let us go through an example.
+Before you begin adding products to your Drupal Commerce store, it is important to understand the product structure. Let us go through an example.
 
 Let us say that your store sells t-shirts. Your t-shirts come in various sizes; such as small, medium, large, and extra large. Each shirt has a graphic but can come in different colors. Each graphic t-shirt is its own product but has its variations of colors available.
 
