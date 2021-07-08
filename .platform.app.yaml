@@ -1,6 +1,6 @@
 name: docs
 type: php:7.2
-disk: 1024
+disk: 2048
 web:
     locations:
         "/":
