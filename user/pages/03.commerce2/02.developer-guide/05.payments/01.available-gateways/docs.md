@@ -467,6 +467,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | Provides payment gateway for MANGOPAY. |
 | **Type** | Off site |
 [/ui-accordion-item]
+[ui-accordion-item title="maxiPago"]
+|  | [maxiPago] |
+| --- | --- |
+| **Description** | Integrates Brazilian maxiPago payment services. |
+| **Type** | On site |
+| **Currencies** | All major currencies |
+| **Countries** | Brazil |
+[/ui-accordion-item]
 [ui-accordion-item title="Midtrans"]
 |  | [Midtrans] |
 | --- | --- |
@@ -1156,6 +1164,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [HyperPay]: https://www.drupal.org/project/commerce_hyperpay
 [Klarna Payments]: https://www.drupal.org/project/commerce_klarna_payments
 [MANGOPAY Direct PayIn]: https://www.drupal.org/project/commerce_mangopay_dpi
+[maxiPago]: https://www.drupal.org/project/commerce_maxipago
 [Midtrans]: https://www.drupal.org/project/commerce_midtrans
 [MultiSafepay payments]: https://www.drupal.org/project/commerce_multisafepay_payments
 [Nets Payment Gateway]: https://www.drupal.org/project/commerce_nets
