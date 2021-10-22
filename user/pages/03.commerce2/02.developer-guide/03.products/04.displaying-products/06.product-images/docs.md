@@ -58,6 +58,8 @@ See the [Multi-product displays documentation](../05.multiple-products) for an e
 
 The *Single image* view mode will now be an option for displaying product variations.
 
+#### Single media
+The [Single media](https://www.drupal.org/project/single_media) is very similar to previous one, but provides field formatter for **media** fields that are configured for multiple images.
 
 ### Links and resources
 * Drupal 8 User Guide documentation on [Concept: Image Styles]
