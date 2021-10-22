@@ -19,7 +19,7 @@ If you want to manage State fields and transitions programatically, you can use 
 ### Alter existing workflows
 If your State field can be configured through the admin UI, then you can usually just create your own custom workflow for use with the State field. See the examples in the [State fields](../state-fields) documentation.
 
-The workflows for Payment states are not as easily altered, since they are managed entirely by code. Payment gateways define their Payment types in the gateway plugin annotation, and Payment types define the workflow for the Payment State field in their annotations. So there is no admin UI that allows you to change the workflow for Payments. Intead, you can use a hook provided by the State machine module.
+The workflows for Payment states are not as easily altered, since they are managed entirely by code. Payment gateways define their Payment types in the gateway plugin annotation, and Payment types define the workflow for the Payment State field in their annotations. So there is no admin UI that allows you to change the workflow for Payments. Instead, you can use a hook provided by the State machine module.
 
 Here is an example for changing the label for a Payment State, using `hook_workflows_alter(array &$workflows)`.
 

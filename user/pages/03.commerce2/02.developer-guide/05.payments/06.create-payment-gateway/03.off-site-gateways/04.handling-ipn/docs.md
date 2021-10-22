@@ -162,7 +162,7 @@ return $ipn_data;
 See the [Security considerations documentation](../05.security-considerations) for additional information on how PayPal uses token-based validation for requests sent to the payment gateway.
 
 #### Configuring the notification URL for your payment gateway
-By default, your Drupal Commerce site can accept payment gateway requests at `/payment/notify/PAYMENT_GATEWAY_ID`, where PAYMENT_GATEWAY_ID is the id defined by the payment gateway's annotation. For example, *PayPal: Express checkout* accepts notifications at `/payment/notify/paypal_express_checkout`. You will need to read the documentation for your specific payment gateway to figure how to enable IPN/notification messages and how to configure the URL.
+By default, your Drupal Commerce site can accept payment gateway requests at `/payment/notify/PAYMENT_GATEWAY_ID`, where PAYMENT_GATEWAY_ID is the id defined by the payment gateway unique machine name defined when configuring the Payment Gateway. For example, *PayPal: Express checkout* accepts notifications at `/payment/notify/paypal_express_checkout`. You will need to read the documentation for your specific payment gateway to figure how to enable IPN/notification messages and how to configure the URL.
 
 If you would like to alter the URL for notifications, you can [implement a Route Subscriber] for the `commerce_payment.notify` route.
 

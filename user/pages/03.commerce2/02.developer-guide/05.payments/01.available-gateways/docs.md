@@ -4,7 +4,7 @@ taxonomy:
 category: docs
 ---
 
-Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **138 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../install-configure-gateways) documentation for information on configuration.
+Drupal Commerce can be integrated with payment providers from all over the world. This page provides a list of the **139 contributed payment gateway modules** that currently exist. See the documentation on [Extending Drupal Commerce](../../02.install-update/06.extending) for information on adding one or more of these modules to your Drupal Commerce project and the [Install and Configure a Payment Gateway](../install-configure-gateways) documentation for information on configuration.
 
 If you don't see a payment provider you want for your project, Drupal Commerce provides a framework for implementing your own online payment gateways. See the [Creating payment gateways](../create-payment-gateway) documentation for more information. 
 
@@ -72,7 +72,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [/ui-accordion]
 
 
-##### 131 Additional payment gateways
+##### 132 Additional payment gateways
 [ui-accordion independent=true open=-1]
 [ui-accordion-item title="Adyen"]
 |  | [Adyen] |
@@ -127,6 +127,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Type** | Off site |
 | **Currencies** | EUR |
 | **Countries** |  Nordic countries (Sweden, Finland, Denmark, Iceland perhaps) | 
+[/ui-accordion-item]
+[ui-accordion-item title="Banca Intesa"]
+|  | [Banca Intesa] |
+|:--- |:--- |
+| **Description** | Provides Commerce integration with Banca Intesa Serbia payment services. |
+| **Type** | Off site |
+| **Currencies** | RSD |
+| **Countries** |  Serbia |
 [/ui-accordion-item] 
 [ui-accordion-item title="Banklink payment gateway (multiple banks)"]
 |  | [Banklink payment gateway (multiple banks)] |
@@ -459,6 +467,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | Provides payment gateway for MANGOPAY. |
 | **Type** | Off site |
 [/ui-accordion-item]
+[ui-accordion-item title="maxiPago"]
+|  | [maxiPago] |
+| --- | --- |
+| **Description** | Integrates Brazilian maxiPago payment services. |
+| **Type** | On site |
+| **Currencies** | All major currencies |
+| **Countries** | Brazil |
+[/ui-accordion-item]
 [ui-accordion-item title="Midtrans"]
 |  | [Midtrans] |
 | --- | --- |
@@ -527,6 +543,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Type** | On site |
 | **Currencies** | Source: https://www.omise.co/multi-currency |
 | **Countries** | Source: https://www.omise.co/multi-currency |
+[/ui-accordion-item]
+[ui-accordion-item title="Omnikassa"]
+| | [Omnikassa] |
+| --- | --- |
+| **Description** | Provides a payment provider for Rabo Omnikassa, a payment platform provided by the Rabobank in the Netherlands. |
+| **Type** | Off site |
+| **Currencies** | EUR, USD, CHF, GBP, CAD, JPY, AUD, NOK, SEK, DKK |
+| **Countries** | Netherlands |
 [/ui-accordion-item]
 [ui-accordion-item title="OnePAY.VN"]
 | | [OnePAY.VN] |
@@ -810,6 +834,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Currencies** | Over 100 currencies |
 | **Countries** | Over 30 countries (Europe)  |
 [/ui-accordion-item]
+[ui-accordion-item title="SagePay"]
+|  | [SagePay] |
+| --- | --- |
+| **Description** | SagePay integration for the Drupal Commerce 2.x payment and checkout system. |
+| **Type** | On site |
+| **Currencies** | Supports around 160 currencies |
+| **Countries** | Available for companies based in Europe  |
+[/ui-accordion-item]
 [ui-accordion-item title="Saman Gateway"]
 |  | [Saman Gateway] |
 | --- | --- |
@@ -1009,6 +1041,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Atos SIPS]: https://www.drupal.org/project/commerce_atos_sips
 [Bambora]: https://www.drupal.org/project/commerce_bambora
 [Bambora Europe]: https://www.drupal.org/project/commerce_bambora_europe
+[Banca Intesa]: https://www.drupal.org/project/commerce_banca_intesa
 [Barion Payment]: https://www.drupal.org/project/commerce_barion_payment
 [Bluesnap]: https://www.drupal.org/project/commerce_bluesnap
 [BTCPay]: https://www.drupal.org/project/commerce_btcpay
@@ -1068,6 +1101,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [PayFort]: https://www.drupal.org/project/commerce_payfort
 [PEI]: https://www.drupal.org/project/commerce_pei
 [Omise]: https://www.drupal.org/project/commerce_omise
+[Omnikassa]: https://www.drupal.org/project/commerce_omnikassa
 [Pasargad]: https://www.drupal.org/project/commerce_pasargad
 [Zarinpal]: https://www.drupal.org/project/commerce_zarinpal
 [Amazon Pay]: https://www.drupal.org/project/commerce_amazon_lpa
@@ -1111,6 +1145,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Red Dot Payment]: https://www.drupal.org/project/commerce_reddotpayment
 [Realex]: https://www.drupal.org/project/commerce_realex
 [Saferpay]: https://www.drupal.org/project/commerce_saferpay
+[SagePay]: https://www.drupal.org/project/commerce_sage
 [Trustpay]: https://www.drupal.org/project/trustpay
 [TurtleCoin]: https://www.drupal.org/project/commerce_turtlecoin
 [Vipps]: https://www.drupal.org/project/commerce_vipps
@@ -1129,6 +1164,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [HyperPay]: https://www.drupal.org/project/commerce_hyperpay
 [Klarna Payments]: https://www.drupal.org/project/commerce_klarna_payments
 [MANGOPAY Direct PayIn]: https://www.drupal.org/project/commerce_mangopay_dpi
+[maxiPago]: https://www.drupal.org/project/commerce_maxipago
 [Midtrans]: https://www.drupal.org/project/commerce_midtrans
 [MultiSafepay payments]: https://www.drupal.org/project/commerce_multisafepay_payments
 [Nets Payment Gateway]: https://www.drupal.org/project/commerce_nets

@@ -4,25 +4,19 @@ taxonomy:
     category: docs
 ---
 
-See Also: [Module on Drupal.org] | [Drupal 8 Issue]
+See Also: [Profile module on Drupal.org]
 
-Provides the profile entity type used to collect customer information.
+The Profile module provides the profile entity type used to collect customer information.
 In Commerce 1.x, we called these entities “Customer Profiles” and for
 Commerce 2.x we have moved to where the community has extended user
-profiles to include fieldable entity bundles. Customer profiles in
-Commerce 2.x will be entities and orders will link to revisions,
-avoiding the duplication we had in Commerce 1.x.
+profiles to include fieldable entity bundles.
 
-![Profile Landing Page](profile2-landing-page.png)
-
-The Profile module provides a fieldable entity, that allows
-administrators to define different sets of fields for user profiles,
+The fieldable Profile entity allows administrators to define different sets of fields for user profiles,
 which are then displayed in the My Account section. This permits users
-of a site to share more information about themselves, and can help
+of a site to share more information about themselves and can help
 community-based sites organize users around specific information.
 
-You can pull the latest from the repository on [Drupal.org].
+Additional documentation on [Profiles](../../../customers/profiles) and how they are used within Drupal Commerce is provided within the [Customers](../../../customers) section of this guide.
 
-[Module on Drupal.org]: https://www.drupal.org/project/profile
-[Drupal 8 Issue]: https://www.drupal.org/node/2598342
-[Drupal.org]: https://www.drupal.org/project/profile
+
+[Profile module on Drupal.org]: https://www.drupal.org/project/profile

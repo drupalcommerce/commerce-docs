@@ -18,7 +18,7 @@ All that is fairly straightforward, but we have a problem. We cannot set a "Work
 
 ![Configure state field workgroup](../images/custom-state-fields-2.png)
 
-It is not possible to create a workflow through the admin UI, so we need to add its definition using a custom module. See the Drupal.org [Creating custom modules] documentation if you need help getting started. In this example, we'll assume we've created a custom module named `mymodule`.
+It is not possible to create a workflow through the admin UI, so we need to add its definition using a custom module. See the Drupal.org [Creating custom modules] documentation if you need help getting started. In this example, we'll assume we've created and installed a custom module named `mymodule`.
 
 We need to create both a custom workflow and a workflow group for our order item State field. [Workflow] and [WorkflowGroup] are plugins defined in YAML, similar to [menu links].
 

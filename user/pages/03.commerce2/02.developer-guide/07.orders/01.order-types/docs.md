@@ -28,7 +28,7 @@ process.](../03.order-processing)
 The cart module allows each order type to control the default view used
 when rendering carts in the cart block or cart form.
 
-[Order type checkout settings](../images/order-types-checkout.png)
+![Order type checkout settings](../images/order-types-checkout.png)
 
 You can use a different checkout flow for each order type. In this case
 you would have a physical order use a multiple step checkout flow that

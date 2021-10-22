@@ -71,7 +71,8 @@ Here is an example that you can modify according to your requirements.
       /**
        * Sends the email.
        *
-       * @param \Drupal\state_machine\Event\WorkflowTransitionEvent $event-       *   The transition event.
+       * @param \Drupal\state_machine\Event\WorkflowTransitionEvent $event
+       *   The transition event.
        */
       public function sendEmail(WorkflowTransitionEvent $event) {
         // Create the email.
@@ -83,10 +84,10 @@ Here is an example that you can modify according to your requirements.
             'Regarding your order [#@number]',
             ['@number' => $order->getOrderNumber()]
           ),
-          'body' => $this->t(
+          'body' => ['#markup' => $this->t(
             'Your order with #@number that you have placed with us has been processed and is awaiting fulfillment.',
             ['@number' => $order->getOrderNumber()]
-          ),
+          )],
         ];
 
         // Set the language that will be used in translations.
@@ -98,7 +99,7 @@ Here is an example that you can modify according to your requirements.
         }
 
         // Send the email.
-        $this->mailManager->mail('commerce_order', 'receipt', $to, $langcode, $params);
+        $this->mailManager->mail('commerce', 'receipt', $to, $langcode, $params);
       }
 
     }
