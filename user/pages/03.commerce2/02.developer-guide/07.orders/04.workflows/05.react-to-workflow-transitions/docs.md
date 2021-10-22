@@ -71,7 +71,8 @@ Here is an example that you can modify according to your requirements.
       /**
        * Sends the email.
        *
-       * @param \Drupal\state_machine\Event\WorkflowTransitionEvent $event-       *   The transition event.
+       * @param \Drupal\state_machine\Event\WorkflowTransitionEvent $event
+       *   The transition event.
        */
       public function sendEmail(WorkflowTransitionEvent $event) {
         // Create the email.
