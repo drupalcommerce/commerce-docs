@@ -270,6 +270,13 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | Mellat is Iranian commerce solution. |
 | **Type** | Off site |
 [/ui-accordion-item]
+[ui-accordion-item title="Easy checkout&payment"]
+|  | [Easy checkout&payment] |
+| --- | --- |
+| **Description** | The Easy module allows online merchants across Europe to accept payments from cards and from the most popular alternative payment methods. |
+| **Type** | Off site |
+| **Currencies** | DKK,EUR,GBP,NOK,SEK,USD |
+[/ui-accordion-item]
 [ui-accordion-item title="EasyPaybg"]
 |  | [EasyPaybg] |
 | --- | --- |
@@ -1110,6 +1117,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [China Payments]: https://www.drupal.org/project/commerce_cnpay
 [DIBS integration]: https://www.drupal.org/project/commerce_dibs
 [DPS]: https://www.drupal.org/project/commerce_dps
+[Easy checkout&payment]: https://www.drupal.org/project/commerce_easy
 [Elavon]: https://www.drupal.org/project/commerce_elavon
 [ePayco]: https://www.drupal.org/project/epayco
 [GoCardless]: https://www.drupal.org/project/commerce_gocardless
