@@ -79,8 +79,8 @@ Like [Prices](../prices), Adjustments are not standalone entities; rather, they 
 |-------------|------------|---------|
 | type        | The string ID of an adjustment type, as defined in a `commerce_addjustment_types.yml` configuration file. | `'custom'` |
 | label       | The adjustment label. | `'20% off'` |
-| amount      | The adjustment value, a `Price` object with number and currency. | `new Price('-12.00', 'USD')` |
-| percentage  | If the adjustment was calculated from a percentage, it is the percentage as a decimal, stored as a string. Otherwise, it is null. | `'0.2'` |
+| amount      | The adjustment value, a `Price` object with number and currency. When adjustments are applied to orders or order items, this amount is added to (if positive) or subtracted from (if negative) the order total price. | `new Price('-12.00', 'USD')` |
+| percentage  | If the adjustment was calculated from a percentage, it is the percentage as a decimal, stored as a string. Otherwise, it is null. Note that the percentage value is purely informational. It has no effect on any pricing calculations. See [Displaying adjustments](#displaying-adjustments) for a usage example. | `'0.2'` |
 | sourceId    | A string ID value that references the source object, if known. For example, the ID of a promotion entity is set for a discount adjustment. See [Combining adjustments](#combining-adjustments) for additional information on how Adjustments are combined based on source ID value. When Adjustments are added through the admin UI, the default value for sourceId is `'custom'`. | `'23'` |
 | included    | Whether the adjustment is included in the base price. The default value is FALSE. | `TRUE` |
 | locked      | Whether the adjustment is locked. The default value is FALSE. Locked adjustments are not automatically removed during the [Order refresh process](../../orders/order-refresh-and-process). Unlocked adjustments are removed so that they can be recalculated by order processors. When an Adjustment is added through the admin UI, it is automatically locked. | `FALSE` |
@@ -229,6 +229,23 @@ The Commerce Order module provides a `commerce_adjustment` field type to store A
 Adjustments are usually added to entities by [Order processors](../../orders/order-refresh-and-process) or other custom code. Additionally, a default *Adjustment field widget* is available for manual entry of adjustments through the admin UI. Administrative users can specify the Adjustment type, Label, Amount, and whether the adjustment should be included in the base price. The `sourceId` for the manually added Adjustment is automatically set to `custom`, and the Adjustment is `locked` so that it does not get removed during the Order refresh process.
 
 ![Adjustments admin UI](../images/adjustments-2.png)
+
+### Displaying adjustments
+The Commerce Order module provides an Order Total Summary (`commerce_order_total_summary`) field formatter for displaying an order total price field as a summary that includes the subtotal, adjustments, and order total price.
+
+![Order summary display](../images/adjustments-3.png)
+
+Note that "included" adjustments are not displayed to the customer. The one exception is taxes, which need to be shown for legal reasons. This field formatter uses the `commerce-order-total-summary.html.twig` template, which can be overridden to customize the display of adjustments. All properties of adjustments are available for display. By default, only the adjustment "label" and "amount" (formatted as a price) are displayed. If you have adjustments with "perentage" values, you can add them to the template like this:
+
+| Twig | Output example (for 9.75% adjustment) |
+| ---- | ------ |
+|`{{ adjustment.percentage }}` | 0.0975 |
+|`{{ adjustment.percentage * 100 }}%` | 9.75% |
+
+Customized order summary display example output:
+![Customized order summary display](../images/adjustments-4.png)
+
+Adjustments are also displayed in the order receipt email which uses the template `commerce-order-receipt.html.twig` and can be customized in the same way.
 
 
 [Commerce Invoice]: https://www.drupal.org/project/commerce_invoice
