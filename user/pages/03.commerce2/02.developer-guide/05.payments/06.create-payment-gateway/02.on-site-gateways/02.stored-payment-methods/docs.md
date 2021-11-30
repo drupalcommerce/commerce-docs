@@ -15,14 +15,14 @@ This documentation page describes the methods defined by these interfaces and pr
 
 
 ### Creating payment methods
-The first method defined by `SupportsStoredPaymentMethodsInterface` is `createPaymentMethod`:
+The first method defined by `SupportsStoredPaymentMethodsInterface` is `createPayment`:
 
-`public function createPaymentMethod(PaymentMethodInterface $payment_method, array $payment_details);`
+`public function createPayment(PaymentInterface $payment, $capture = TRUE);`
 
 This method is called during the checkout process, when the *Payment Information* form is submitted. It is responsible for validating payment details, updating information on the remote payment gateway as needed, and saving payment method details locally.
 
 #### Customizing the payment method add form
-When a payment gateway implements the `SupportsStoredPaymentMethodsInterface` interface, the `PaymentMethodAddForm` is used for collecting all information required for creating the payment method. You can create your own payment method add form by extending `Drupal\commerce_payment\PluginForm\PaymentMethodAddForm` with your own `Drupal\my_custom_gateway\PluginForm\PaymentMethodAddForm` class. In your payment gateway plugin annotation, you will need to include your custom form as the `add-payment-method` form. For example, the [Commerce Braintree module] has a custom payment method add form for its Hosted Fields payment gateway:
+When a payment gateway implements the `SupportsStoredPaymentMethodsInterface` interface, the `PaymentMethodAddForm` is used for collecting all information required for creating the payment method. You can create your own payment method add form by extending `Drupal\commerce_payment\PluginForm\PaymentMethodAddForm` with your own `Drupal\my_custom_gateway\PluginForm\PaymentMethodAddForm` class. In your payment gateway plugin annotation, you will need to include your custom form as the `add-payment-method` form. For example, the [Commerce Braintree] module has a custom payment method add form for its Hosted Fields payment gateway:
 
 ```php
 /**
