@@ -21,12 +21,9 @@ Ready to start developing and working with Drupal Commerce?
 
 There are several Drupal Commerce 2 demo sites available.
 
-* [Braintree demo](https://braintree.commercekickstart.com/), using Braintree Hosted Fields for payment.
-* [PayPal demo](https://paypal.commercekickstart.com/), using PayPal Express Checkout for payment.
-* [Square demo](https://square.commercekickstart.com/), using Square Payment Form for payment.
-* [Authorize.net demo](https://authnet.commercekickstart.com/), using Authorize.net for payment.
+* [PayPal demo](https://commerce.demo.centarro.io/), using PayPal Express Checkout for payment.
+* [Braintree demo](https://braintree.demo.centarro.io/), using Braintree Hosted Fields for payment.
+* [Square demo](https://square.demo.centarro.io), using Square Payment Form for payment.
+* [Authorize.net demo](https://authnet.demo.centarro.io), using Authorize.net for payment.
 
-Want to see a demo of what you can do with Drupal Commerce 2 on your own? You can check out the demo module that will import
-demonstration products and more. Find it at [mglaman/commerce_demo]
-
-[mglaman/commerce_demo]: https://github.com/mglaman/commerce_demo
+Additionally, you can use the Drupal Commerce Demo button on the homepage of [Simplytest](https://simplytest.me) to build the full demo store in a temporary web environment. Log in as the administrative user using admin / admin to test all that Commerce Core has to offer out of the box.
