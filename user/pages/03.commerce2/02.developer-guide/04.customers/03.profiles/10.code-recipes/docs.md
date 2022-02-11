@@ -106,7 +106,7 @@ $anonymous_profile = \Drupal\profile\Entity\Profile::create(['type' => 'customer
 $anonymous_profile->save();
 ```
 
-### Loading product types
+### Loading profile types
 ```php
 // Loading is based off of the primary identifier [String] that was defined when creating it.
 $profile_type = \Drupal\profile\Entity\ProfileType::load('my_custom_profile_type');
