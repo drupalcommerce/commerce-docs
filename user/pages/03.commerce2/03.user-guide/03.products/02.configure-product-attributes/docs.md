@@ -107,3 +107,5 @@ these steps:
 3. Un-select the "required" checkbox to make the attribute optional.
 
 ![Un-select the required checkbox](attribute_optional.png)
+
+! Even if your Product doesn't have color, size or other variations, Commerce needs a valid Product Variation Type. That is why during the Product type creation the option Product variation type field creates a new Variation type. It is needed so an SKU number and price can be entered. Otherwise creating a Product page will result in an error because the variation cannot be found.
