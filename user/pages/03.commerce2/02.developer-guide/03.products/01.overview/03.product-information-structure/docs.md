@@ -39,7 +39,7 @@ A **product variation** is a content entity that has a product variation type as
 | title        | The product variation title, required |
 | price        | The variation price, required |
 | list_price    | The variation list price |
-| status       | Whether th variation is active, boolean |
+| status       | Whether the variation is active, boolean |
 | type         | Id of the product variation type bundle |
 | path         | Optional URL alias for the product display page |
 | uid          | The product variation author |
