@@ -13,22 +13,22 @@ Due to the way Drupal.org manages package information, you need to run one of th
 To update Drupal Commerce and all contributed projects extending Drupal Commerce:
 
 ```bash
-composer update --with-dependencies "drupal/commerce*"
+composer update --with-all-dependencies "drupal/commerce*"
 ```
 
 If you want to *only* upgrade Drupal Commerce, run this command:
 
 ```bash
-composer update --with-dependencies drupal/commerce drupal/commerce_price drupal/commerce_product drupal/commerce_order drupal/commerce_payment drupal/commerce_payment_example drupal/commerce_checkout drupal/commerce_tax drupal/commerce_cart drupal/commerce_log drupal/commerce_store drupal/commerce_promotion drupal/commerce_number_pattern
+composer update --with-all-dependencies drupal/commerce drupal/commerce_price drupal/commerce_product drupal/commerce_order drupal/commerce_payment drupal/commerce_payment_example drupal/commerce_checkout drupal/commerce_tax drupal/commerce_cart drupal/commerce_log drupal/commerce_store drupal/commerce_promotion drupal/commerce_number_pattern
 ```
 
 Once the Drupal.org infrastructure issue is resolved, the command will be
 
 ```bash
-composer update drupal/commerce --with-dependencies
+composer update drupal/commerce --with-all-dependencies
 ```
 
-Please note the `--with-dependencies` option. Without this option
+Please note the `--with-all-dependencies` option. Without this option
 specified, any needed, contributed projects and libraries will not
 update. Only the Drupal Commerce module will be updated.
 
