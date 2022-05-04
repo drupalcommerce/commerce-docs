@@ -85,6 +85,15 @@ You can add the Add to cart form to a custom content type by adding an *Entity r
 
 ![Rendered product with add to cart form](../../images/add-to-cart-ui-8.jpg)
 
+### Allow Price Overrides
+
+It is possible to allow the customer to override the price of an item being added to the cart by enabling the "Unit Price" field on the "Add to cart" display mode of the Order item type used.
+
+This will result one of two outcomes based on the "Require confirmation before overriding the unit price" configuration of the "Unit Price" widget setting.
+
+1. When confirmation **is required**: an "Override the unit price" toggle will appear above the "Add to cart" button that will show an editable price field when toggled on.
+2. When confirmation is **NOT** required: An editable price field will show above the "Add to cart" button
+
 ---
 In the next section, we'll look at configuration options for displaying a product's attributes, such as *Color* and *Size*.
 
