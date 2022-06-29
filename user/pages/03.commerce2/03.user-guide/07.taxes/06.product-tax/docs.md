@@ -52,8 +52,3 @@ When viewing the cart, we can see the three different levels of tax applied.
 All prices displayed are inclusive of VAT.
 
 ![View cart](view-cart.png)
-
-
-
-
-
