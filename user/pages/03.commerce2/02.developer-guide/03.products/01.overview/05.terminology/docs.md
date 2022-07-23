@@ -8,7 +8,7 @@ The following is an introduction to terminology used in Drupal Commerce products
 
 | Term  | What does it mean? |
 |----------------------------|
-| <nobr>Add to cart form</nobr> | While not strictly a *term*, you'll find, "add to cart form" mentioned throughout the product documentation. When developing your Drupal Commerce site, you'll genreally want to include the add to cart form on pages of your site that display products. The add to cart form allows customers to select a specific variation of a product and add that item to their shopping cart. |
+| <nobr>Add to cart form</nobr> | While not strictly a *term*, you'll find, "add to cart form" mentioned throughout the product documentation. When developing your Drupal Commerce site, you'll generally want to include the add to cart form on pages of your site that display products. The add to cart form allows customers to select a specific variation of a product and add that item to their shopping cart. |
 | Attribute | A product attribute is something about the product which creates a unique choice. For clothing this would be the color and size. A subscription may have monthly or annual billing options. |
 | Attribute value | A product attribute value is one distinct choice for an attribute. For example, attribute values for a *color* attribute might be red, blue, yellow, and green. |
 | Product | The actual product, such as a sweatshirt or the book "Moby Dick", which contains all of its variations. Every product has at least one variation. |
