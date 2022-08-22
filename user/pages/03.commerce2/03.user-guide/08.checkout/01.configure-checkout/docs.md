@@ -18,9 +18,9 @@ Content of panes is split in this 7 parts, but it can be modular, so you can dra
 
 * Login - offers option for users to login or continue as guest, enables guest checkout
 * Order information - the initial form used to collect basic order details
-* Review - a review of all the order details with the pane for submitting paymen
+* Review - a review of all the order details with the pane for submitting payment
 * Payment -  used to select Transaction Mode - Authorize and capture or Authorize only
-* Complete -  the final landing page showing the checkout completion message.
+* Complete -  the final landing page showing the checkout completion message
 * Sidebar - order summary and coupon redemptions
 * Disabled - Panes that you want to disable
 
