@@ -285,6 +285,14 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Currencies** | BGN |
 | **Countries** | Bulgaria |
 [/ui-accordion-item]
+[ui-accordion-item title="EasyTransac"]
+|  | [EasyTransac] |
+| --- | --- |
+| **Description** | Provides integration between Drupal Commerce and EasyTransac payments solutions. |
+| **Type** | Off site |
+| **Currencies** | GBP, EUR, USD, SEK, AUD, NZD, DKK and CAD |
+| **Countries** | All countries except : Iran, North Korea, Myanmar, Afghanistan, Angola, Guyana, Iraq, Laos, Papua New Guinea, Vanuatu, Syria, Yemen, Bosnia, Uganda, Botswana, Brunei, Gibraltar, Guatemala, Guernsey, Marshall Islands, British Virgin Islands, Jersey, Liechtenstein, Montserrat, Nauru, Nive and Panama |
+[/ui-accordion-item]
 [ui-accordion-item title="ECPay"]
 |  | [ECPay] |
 | --- | --- |
@@ -1118,6 +1126,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [DIBS integration]: https://www.drupal.org/project/commerce_dibs
 [DPS]: https://www.drupal.org/project/commerce_dps
 [Easy checkout&payment]: https://www.drupal.org/project/commerce_easy
+[EasyTransac]: https://www.drupal.org/project/commerce_easytransac
 [Elavon]: https://www.drupal.org/project/commerce_elavon
 [ePayco]: https://www.drupal.org/project/epayco
 [GoCardless]: https://www.drupal.org/project/commerce_gocardless
