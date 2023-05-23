@@ -34,7 +34,7 @@ The number format repository service constructs a `CommerceGuys\Intl\NumberForma
 | Decimal separator | decimal_separator | The decimal separator. The default is `'.'`. | `','` |
 | Grouping separator | grouping_separator | The grouping separator. The default is `','`. | `' '` |
 | Plus sign | plus_sign | The plus sign. The default is `'+'`. | `'‎+‎'` |
-| Minus sign | minus_sign | The minus sign. The default is `'+'`. | `'‎-‎'` |
+| Minus sign | minus_sign | The minus sign. The default is `'-'`. | `'‎-‎'` |
 | Percent sign | percent_sign | The percent sign. The default is `'%'`. | `'٪؜'` |
 
 The number format definitions are specified directly in the `CommerceGuys\Intl\NumberFormat\NumberFormatRepository::getDefinitions()` method. For example, here is the definition for for the default 'en' locale:
