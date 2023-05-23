@@ -26,7 +26,7 @@
         "p3k/picofeed": "@stable"
     },
     "require-dev": {
-        "codeception/codeception": "^2.4",
+        "codeception/codeception": "^3.1",
         "fzaninotto/faker": "^1.8",
         "symfony/yaml": "~4.1",
         "symfony/console": "~4.1",
