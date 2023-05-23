@@ -44,7 +44,7 @@ An important aspect of product architecture with respect to stock management is 
 
 In contrast, suppose you sell custom t-shirts that can be ordered in *any* customer-specified color and/or design, and you only track inventory based on Size (Small, Medium, Large, etc.) In this case, you would want *Size* as a product attribute, but *Color* would not be a product attribute. Instead, you would want to add a custom *Color* field that customers can use at the time they order an item to specify the t-shirt color.
 
-The Drupal 8 version for the [Commerce Stock module] is currently being ported to Drupal 8. It is not yet ready for use on a live site.
+The Drupal 7 version for the [Commerce Stock module] is currently being ported to Drupal 8. It is not yet ready for use on a live site.
 
 ### Configurable / customizable products
 A configurable product is one for which a customer can specify unique information for a product. For example, a product that can be monogrammed with a name or initials is a configurable product. Product attributes, like *color* or *size* can only be used when the list of all possible values is known and set in advance. For example, the values for *size* for an item of clothing might be "S", "M", "L", and "XL".
