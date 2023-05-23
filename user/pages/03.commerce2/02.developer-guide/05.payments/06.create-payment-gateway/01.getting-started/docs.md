@@ -20,8 +20,8 @@ The first thing you will need to do is create a new module with a YAML file that
 name: Commerce QuickPay
 type: module
 description: Provides Commerce integration for the QuickPay Gateway.
-core: 8.x
 package: Commerce (contrib)
+core_version_requirement: ^9 || ^10
 dependencies:
   - commerce:commerce_payment
 ```
