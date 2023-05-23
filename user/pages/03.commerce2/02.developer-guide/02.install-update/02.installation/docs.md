@@ -56,37 +56,9 @@ Be sure to [review requirements](../01.requirements) before starting the install
 
 These instructions assume you are working with an existing site. See the Drupal.org documentation on [Installing Drupal 8] if you do not have an existing site.
 
-1. Download and install the [Ludwig module].
+Up-to-date Ludwig instructions can be found on the following page [Drupal Commerce + Ludwig installation guide]
 
-2. Download [Commerce] and the following 6 required modules. Do not install the modules yet.
-- [Address]
-- [Entity API]
-- [Entity Reference Revisions]
-- [Inline Entity Form]
-- [Profile]
-- [State Machine]
-
-3. Ludwig generates a listing of libraries required by those modules. The Packages page at `admin/reports/packages` provides a download link for each missing library along with the paths where they should be placed.
-
-![Ludwig user interface](../images/ludwig-ui.jpg)
-
-4. Download the libraries, then clear the cache to make them available. For example, download commerceguys/addressing and place it in `modules/contrib/address/lib/commerceguys-addressing/v1.0.0`. You should see the STATUS for each required package change from "Missing" to "Installed". Alternatively, if you are comfortable with the command line, you can use Drupal Console or Drush commands.
-
- **Drupal Console**
- - ludwig:list: List all managed packages.
- - ludwig:download: Download missing packages.
-
- **Drush**
- - ludwig-download: Download missing packages.
-
-
-5. Install Commerce and the 6 required modules.
-
-> Whenever Commerce needs to be updated, all 7 modules need to be downloaded again, and then all of their libraries need to be downloaded again as well.
-
----
-In subsequent sections of the [Installation and updates documentation](../), it is assumed that you are using Composer to manage your site.
-
+ [Drupal Commerce + Ludwig installation guide]: https://www.drupal.org/docs/contributed-modules/ludwig/drupal-commerce-ludwig-installation-guide
  [Drupal Console]: https://drupalconsole.com
  [project-base README]: https://github.com/drupalcommerce/project-base/blob/8.x/README.md
  [PHPUnit]: https://www.drupal.org/docs/8/phpunit/running-phpunit-tests
