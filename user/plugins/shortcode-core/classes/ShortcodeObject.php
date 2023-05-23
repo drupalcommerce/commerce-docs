@@ -1,33 +1,7 @@
 <?php
 
-namespace Grav\Plugin\Shortcodes;
+// This file is for older Grav versions (needed during plugin update).
 
-class ShortCodeObject
-{
-    protected $obj_name;
-    protected $obj_object;
-
-    public function __construct($name, $object)
-    {
-        $this->obj_name = $name;
-        $this->obj_object = $object;
-    }
-
-    public function __toString()
-    {
-        return $this->obj_object;
-    }
-
-    public function name()
-    {
-        return $this->obj_name;
-    }
-
-    public function object()
-    {
-        return $this->obj_object;
-    }
-
-
-
+if (!class_exists(\Grav\Plugin\ShortcodeCore\ShortcodeObject::class, false)) {
+    require_once __DIR__ . '/shortcodes/ShortcodeObject.php';
 }

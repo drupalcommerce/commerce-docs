@@ -4,6 +4,8 @@
 
 > This plugin adds small icons to external and mailto links, informing users the link will take them to a new site or open their email client.
 
+**Note:** [hibbitts-design/grav-plugin-external-links](https://github.com/hibbitts-design/grav-plugin-external-links) is the new master repository for this plugin (see [getgrav/grav#2711](https://github.com/getgrav/grav/issues/2711)). Thanks to [@Sommerregen](https://github.com/Sommerregen) for originally developing this Plugin!
+
 ##### Table of Contents:
 
 * [About](#about)
