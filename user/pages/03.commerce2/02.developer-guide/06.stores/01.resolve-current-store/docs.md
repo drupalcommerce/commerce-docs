@@ -4,11 +4,11 @@ taxonomy:
     category: docs
 ---
 
-The first store created in Commerce is saved as the default store in `commerce_store.settings.yml`. This is used in `\Drupal\commerce_store\Resolver\DefaultStoreResolver` to load the site's default store..
+The first store created in Commerce is saved as the default store in `commerce_store.settings.yml`. This is used in `\Drupal\commerce_store\Resolver\DefaultStoreResolver` to load the site's default store.
 
 In order to load a different store we must create a new StoreResolver. In this example, use a store ID set in a cookie to load the relevant store.
 
-Copy DefaultStoreResolver to your module (in `/src/Resolver/`) and rename to CookieStoreResolver.
+Copy DefaultStoreResolver to your module (in `/src/Resolver/`) and rename it to CookieStoreResolver.
 Change the code in `resolve()` to load the store ID from the cookie and return it.
 
 ```php
