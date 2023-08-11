@@ -45,10 +45,10 @@ Be sure to [review requirements](../01.requirements) before starting the install
 
  #### Enable Commerce
 
- The instructions below use [Drupal Console]
+ The instructions below use [Drush](https://www.drush.org)
 
  ```bash
- drupal module:install commerce_product commerce_checkout commerce_cart
+ drush pm:install commerce_product commerce_checkout commerce_cart
  ```
 
 ## Alternative installation instructions for Ludwig users
