@@ -729,6 +729,12 @@ If you create your own payment gateway module or find one that's not in this lis
 | **Description** | Integrate paytm payment gateway with drupal commerce. |
 | **Type** | Off site |
 [/ui-accordion-item]
+[ui-accordion-item title="PhonePe"]
+|  | [PhonePe] |
+| --- | --- |
+| **Description** | Integrate PhonePe payment gateway with drupal commerce. |
+| **Type** | Off site |
+[/ui-accordion-item]
 [ui-accordion-item title="Paytrail"]
 |  | [Paytrail] |
 | --- | --- |
@@ -1095,6 +1101,7 @@ If you create your own payment gateway module or find one that's not in this lis
 [Banklink payment gateway (multiple banks)]: https://www.drupal.org/project/commerce_banklink
 [Razorpay Payment Integration]: https://www.drupal.org/project/commerce_razorpay
 [Paytm]: https://www.drupal.org/project/commercepaytm
+[PhonePe]: https://www.drupal.org/project/phonepay_payment
 [Sermepa]: https://www.drupal.org/project/commerce_sermepa
 [Sezzle pay]: https://www.drupal.org/project/commerce_sezzle_pay
 [SimplePay by OTP]: https://www.drupal.org/project/commerce_otpsp
